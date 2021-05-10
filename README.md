@@ -31,6 +31,6 @@
 ## Other
 * [Electron](https://github.com/DevDooly/TIL/blob/main/other/Electron.md) / 수정중...
 * [Python Reinstall 후 서버 장애
-](https://github.com/DevDooly/TIL/blob/main/other/Editing%20Python%20Reinstall%20%ED%9B%84%20%EC%84%9C%EB%B2%84%20%EC%9E%A5%EC%95%A0.md)
+](https://github.com/DevDooly/TIL/blob/main/other/Python%20Reinstall%20%ED%9B%84%20%EC%84%9C%EB%B2%84%20%EC%9E%A5%EC%95%A0.md)
 * [JWT](https://github.com/DevDooly/TIL/blob/main/other/JWT.md) / 수정중...
 * [고가용성](https://github.com/DevDooly/TIL/blob/main/other/%EA%B3%A0%EA%B0%80%EC%9A%A9%EC%84%B1.md)
