@@ -6,8 +6,9 @@
 ### Web
 * [Ajax 그리고 CSR, SSR](https://github.com/DevDooly/TIL/blob/main/web/Ajax%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20CSR%2C%20SSR.md)
 
-### RabbitMQ
-* [설치](https://github.com/DevDooly/TIL/blob/main/RabbitMQ/%EC%84%A4%EC%B9%98.md)
+### MessageBroker
+#### RabbitMQ
+* [설치](https://github.com/DevDooly/TIL/blob/main/MessageBroker/RabbitMQ/%EC%84%A4%EC%B9%98.md)
 
 ### Other
 * [Python Reinstall 후 서버 장애
