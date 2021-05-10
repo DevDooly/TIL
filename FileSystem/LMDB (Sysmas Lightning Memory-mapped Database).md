@@ -1,4 +1,4 @@
-# Editing LMDB (Sysmas Lightning Memory mapped Database)
+# LMDB (Sysmas Lightning Memory mapped Database)
 
 Key-Value 형식의 데이터베이스 라이브러리다.
 
