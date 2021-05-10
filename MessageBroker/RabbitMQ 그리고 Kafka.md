@@ -1,4 +1,4 @@
-# Editing RabbitMQ 그리고 Kafka
+# RabbitMQ 그리고 Kafka
 
 컴퓨터의 기본적인 자료구조인 큐(queue)를 활용한 메시지 브로커 소프트웨어.
 
