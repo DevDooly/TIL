@@ -47,3 +47,36 @@ Table('users', MetaData(),
             Column('fullname', String(), table=<users>),
             Column('nickname', String(), table=<users>), schema=None)
 ```
+
+```
+# Create Table Example
+
+from sqlalchemy import MetaData, Integer, String, Table, Column, text
+from sqlalchemy.dialects.mysql import TIMESTAMP
+
+def create_table(db_url):
+    from sqlalchemy import create_engine
+    engine = create_engine(db_url)
+    metaData = MetaData()
+    Table('cctv_images', metaData,
+          Column('id', Integer, primary_key=True, autoincrement=True),
+          Column('separator1', String(50),
+          Column('separator2', String(50),
+          Column('tag', String(50),
+          Column('extention', String(50),
+          Column(
+                 'created_date',
+                 TIMESTAMP,
+                 server_default=text(
+                     "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+                 ),
+          Column(
+                 'updated_date',
+                 TIMESTAMP,
+                 server_default=text(
+                     "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+                 )
+          )
+
+    metaData.create_all(engine)
+```
