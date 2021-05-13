@@ -1,5 +1,5 @@
 # SQL Naming Conventions
-기본적으로 snake_case 를 따른다.
+기본적으로 snake_case 규칙을 따른다.
 ## Create Database
 ```
 CREATE DATABASE 'database_name';
@@ -7,6 +7,8 @@ CREATE DATABASE 'database_name';
 
 ## Create Table
 ### Table Name
+* 단수 이름을 사용한다
+* snake_case 규칙을 따른다 
 ```
 CREATE TABLE table_name {
     column_name column_type,
