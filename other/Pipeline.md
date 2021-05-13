@@ -20,3 +20,4 @@ $ find .mtime +30 | xargs mv -i {} {}.bak
 
 ### References
 * https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8_(%EC%BB%B4%ED%93%A8%ED%8C%85)
+* https://ko.wikipedia.org/wiki/Xargs
