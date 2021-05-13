@@ -17,6 +17,7 @@
 * [ChartJS 한글화](https://github.com/DevDooly/ChartJsDoc)
 ---
 ## Database
+* [Naming Convention](https://github.com/DevDooly/TIL/blob/main/Database/SQL%20Naming%20Convention.md)
 ### MongoDB
 * [설치방법](https://github.com/DevDooly/TIL/tree/main/Database/MongoDB)
 
