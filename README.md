@@ -34,11 +34,11 @@
 * [LMDB](https://github.com/DevDooly/TIL/blob/main/FileSystem/LMDB%20(Sysmas%20Lightning%20Memory-mapped%20Database).md) / 수정중...
 ---
 ## Python
-* [AIOHTTP vs Flask](https://github.com/DevDooly/TIL/blob/main/python/AIOHTTP%20vs%20Flask.md)
-* [SQLAlchemy](https://github.com/DevDooly/TIL/blob/main/python/SQLAlchemy.md)
+* [AIOHTTP vs Flask](https://github.com/DevDooly/TIL/blob/main/Python/AIOHTTP%20vs%20Flask.md)
+* [SQLAlchemy](https://github.com/DevDooly/TIL/blob/main/Python/SQLAlchemy.md)
 ---
 ## Web
-* [Ajax 그리고 CSR, SSR](https://github.com/DevDooly/TIL/blob/main/web/Ajax%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20CSR%2C%20SSR.md)
+* [Ajax 그리고 CSR, SSR](https://github.com/DevDooly/TIL/blob/main/Web/Ajax%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20CSR%2C%20SSR.md)
 ---
 ## MessageBroker
 * [RabbitMQ 그리고 Kafka](https://github.com/DevDooly/TIL/blob/main/MessageBroker/RabbitMQ%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Kafka.md)
@@ -50,10 +50,10 @@
 * [libuv](https://github.com/DevDooly/TIL/blob/main/NodeJs/libuv.md) / 수정중...
 ---
 ## Other
-* [Electron](https://github.com/DevDooly/TIL/blob/main/other/Electron.md) / 수정중...
+* [Electron](https://github.com/DevDooly/TIL/blob/main/Other/Electron.md) / 수정중...
 * [Python Reinstall 후 서버 장애
-](https://github.com/DevDooly/TIL/blob/main/other/Python%20Reinstall%20%ED%9B%84%20%EC%84%9C%EB%B2%84%20%EC%9E%A5%EC%95%A0.md)
-* [JWT](https://github.com/DevDooly/TIL/blob/main/other/JWT.md) / 수정중...
-* [고가용성](https://github.com/DevDooly/TIL/blob/main/other/%EA%B3%A0%EA%B0%80%EC%9A%A9%EC%84%B1.md)
-* [Pipeline](https://github.com/DevDooly/TIL/blob/main/other/Pipeline.md)
+](https://github.com/DevDooly/TIL/blob/main/Other/Python%20Reinstall%20%ED%9B%84%20%EC%84%9C%EB%B2%84%20%EC%9E%A5%EC%95%A0.md)
+* [JWT](https://github.com/DevDooly/TIL/blob/main/Other/JWT.md) / 수정중...
+* [고가용성](https://github.com/DevDooly/TIL/blob/main/Other/%EA%B3%A0%EA%B0%80%EC%9A%A9%EC%84%B1.md)
+* [Pipeline](https://github.com/DevDooly/TIL/blob/main/Other/Pipeline.md)
 ---
