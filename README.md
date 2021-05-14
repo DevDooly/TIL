@@ -35,6 +35,7 @@
 * [LMDB](https://github.com/DevDooly/TIL/blob/main/FileSystem/LMDB%20(Sysmas%20Lightning%20Memory-mapped%20Database).md) / 수정중...
 ---
 ## Python
+* [Python 모듈 디자인](https://github.com/DevDooly/TIL/blob/main/Python/Designing%20Modules%20in%20Python.md)
 * [AIOHTTP vs Flask](https://github.com/DevDooly/TIL/blob/main/Python/AIOHTTP%20vs%20Flask.md)
 * [SQLAlchemy](https://github.com/DevDooly/TIL/blob/main/Python/SQLAlchemy.md)
 ---
