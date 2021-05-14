@@ -14,7 +14,7 @@ class SmsClient:
 </pre>
 위 처럼 send_sms 를 사용할때는 phone_number, message 두 매개변수 외에는 알 필요가 없다.
 
-**실제 사용 예시**
+**실제 사용 예시**  
 <pre>
 # In orders.py
 from django.conf import settings
@@ -29,7 +29,7 @@ sms_client.send_sms(phone_number, message)
   이는 orders.py 가 사용되는 모든 소스에서 설정값을 입력해야함을 의미한다.
 2. 나중에 생성자가 바뀐다면 SmsClient 가 사용되는 모든 소스를 수정해야 한다.
 
-**해결방법**
+**해결방법**  
 SmsClient 모듈에서 객체를 만드는 것.
 <pre>
 # In sms.py:
@@ -51,6 +51,6 @@ from sms import sms_client
 sms_client.send_sms(phone_number, message)
 </pre>
 
-**더 자세한 내용은 출처를 참고하거나, 추후 내용을 추가하겠음..**
+**더 자세한 내용은 출처를 참고하거나, 추후 내용을 추가하겠음..**  
 ## References 
 * https://hashedin.com/blog/designing-modules-in-python-ebook/
