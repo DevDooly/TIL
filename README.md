@@ -40,7 +40,7 @@
 * [AIOHTTP vs Flask](https://github.com/DevDooly/TIL/blob/main/Python/AIOHTTP%20vs%20Flask.md)
 * [SQLAlchemy](https://github.com/DevDooly/TIL/blob/main/Python/SQLAlchemy.md)
 ---
-## [Unix](https://github.com/DevDooly/TIL/tree/main/Unix)
+## Unix [:link:](https://github.com/DevDooly/TIL/tree/main/Unix)
 ---
 ## Web
 ### Framework
