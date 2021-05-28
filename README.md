@@ -1,5 +1,5 @@
 # Today I Learned(TIL) Wiki
-* 1 day 1 more commit
+* 하루에 커밋 하나 이상
 
 ## 목차
 - [오픈소스 번역프로젝트](#오픈소스-번역프로젝트)
