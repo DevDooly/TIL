@@ -41,6 +41,8 @@
 * [LMDB](https://github.com/DevDooly/TIL/blob/main/FileSystem/LMDB%20(Sysmas%20Lightning%20Memory-mapped%20Database).md) / 수정중...
 ---
 ## Git
+* [Pull Request Vs Merge Request](https://github.com/DevDooly/TIL/blob/main/Git/Pull%20Request%20vs%20Merge%20Request.md)
+* [Options: Recursive](https://github.com/DevDooly/TIL/blob/main/Git/submodules_recursive%20Clone.md)
 ---
 ## Markdown
 * [Languages Supported by Github Flavored Markdown](https://github.com/DevDooly/TIL/blob/main/Markdown/Languages%20Supported%20by%20Github%20Flavored%20Markdown.md)
