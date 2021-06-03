@@ -5,6 +5,7 @@
 * socketserver
 * SQLAlchemy
 * orjson
+* Socket Programming
 
 ## Tools
 * Celery 
