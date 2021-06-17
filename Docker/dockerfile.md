@@ -47,3 +47,15 @@ Or
 ```Dockerfile
 FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
 ```
+
+FROM 명령어는 빌드 단계를 초기화하고 후속 명령어를 위한 기본 이미지를 설정한다.</br>
+ARG 는 Dockerfile 에서 FROM 앞에 올수있는 유일한 명령어이다.</br>
+
+```Dockerfile
+ARG  CODE_VERSION=latest
+FROM base:${CODE_VERSION}
+CMD  /code/run-app
+
+FROM extras:${CODE_VERSION}
+CMD  /code/run-extras
+```
