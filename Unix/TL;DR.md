@@ -1,4 +1,4 @@
-# TL;DR Project
+# TL;DR Project ( too long; didn't read )
 
 가독성이 좋지 않은 man 페이지를 대체하기 위한 프로젝트.
 
