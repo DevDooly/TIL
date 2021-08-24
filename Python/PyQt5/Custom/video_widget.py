@@ -6,10 +6,10 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import QImage, QPixmap, QIcon
 
 
-class VideoLabel(QLabel):
+class VideoWidget(QLabel):
 
     def __init__(self, url):
-        super(VideoLabel, self).__init__()
+        super(VideoWidget, self).__init__()
         self.setAutoFillBackground(True)
         self.setScaledContents(True)
         self.setStyleSheet("background-color: #000000;")
