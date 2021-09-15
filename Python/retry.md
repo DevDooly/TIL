@@ -82,7 +82,8 @@ def retry_call(f, fargs=None, fkwargs=None, exceptions=Exception, tries=-1, dela
     :returns: the result of the f function.
     """
 ```
-이것은 함수와 인수를 매개변수로 사용한다는 점을 제외하면 데코레이터와 매우 유사합니다. 그 뒤에 있는 사용 사례는 재시도 인수를 동적으로 조정할 수 있다는 것입니다.
+함수와 인수를 매개변수로 사용한다는 점을 제외하면 데코레이터와 매우 유사합니다.  
+아래의 예시는 재시도 횟수를 동적으로 조정할 수 있다는 것입니다.
 
 ```python
 import requests
