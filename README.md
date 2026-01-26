@@ -33,6 +33,10 @@
     * [Redis](Database/Redis/README.md)
     * [MongoDB](Database/MongoDB/README.md)
     * [SQL Naming Convention](Database/SQL%20Naming%20Convention.md)
+## Database
+    * [Naming Convention](https://github.com/DevDooly/TIL/blob/main/Database/SQL%20Naming%20Convention.md)
+    * [비관적 락과 낙관적 락](https://github.com/DevDooly/TIL/blob/main/Database/Locking_Strategy.md)
+
 * **Git**
     * [Tips](Git/Tips.md)
     * [Submodules](Git/submodules_recursive%20Clone.md)
