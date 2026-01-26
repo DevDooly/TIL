@@ -1,7 +1,8 @@
 # Today I Learned(TIL) Wiki
 * 하루에 커밋 하나 이상
 
-## 목차
+##  목차
+- [Architecture](#architecture)
 - [오픈소스 번역프로젝트](#오픈소스-번역프로젝트)
 - [Database](#database)
   - [MongoDB](#mongodb)
@@ -22,6 +23,10 @@
 - [Unix](#unix)
 - [Web](#web)
   - [Framework](#framework) 
+
+## Architecture
+* [TIL 저장소 구조 개선 가이드](Architecture/TIL_Structure_Guide.md)
+---
 ## 오픈소스 번역프로젝트
 * [ChartJS 한글화](https://github.com/DevDooly/ChartJsDoc)
 ---
