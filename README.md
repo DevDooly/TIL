@@ -53,7 +53,6 @@
     * [LMDB](CS/FileSystem/LMDB%20(Sysmas%20Lightning%20Memory-mapped%20Database).md)
 
 ### 📚 Others
-* **[Mindset (회고 및 다짐)](Mindset/README.md)**
 * **Finance**
     * [부동산 상식](Other/Finance/) (LTV, DTI, 종부세)
 * **Dictionary**
