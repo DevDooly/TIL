@@ -42,6 +42,9 @@
 - [**Real Estate**](#real-estate)
 - [**Mindset**](#mindset)
 
+### 📂 8. Architecture Cookbook (External)
+- [**GitHub Repository**](https://github.com/DevDooly/architecture-cookbook)
+
 ---
 
 ## Language
