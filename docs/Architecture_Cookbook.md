@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
-  - toc
----
-
 # Redirecting to Architecture Cookbook...
 
 <meta http-equiv="refresh" content="0; url=https://github.com/DevDooly/architecture-cookbook" />
