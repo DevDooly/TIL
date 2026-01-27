@@ -6,7 +6,7 @@
 ## 목차 (Table of Contents)
 
 ### 📂 1. Language (언어 및 프레임워크)
-- [**Java & Spring**](#java--spring)
+- [**Java**](#java)
 - [**Python**](#python)
 - [**Node.js**](#nodejs)
 
@@ -44,24 +44,24 @@
 
 ## Language
 
-### Java & Spring
+### Java
 * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
-* [Spring README](Language/Java/Spring/README.md)
+* [Spring](Language/Java/Spring.md)
 
 ### Python
-* [Python README](Language/Python/README.md)
+* [Python Overview](Language/Python.md)
 * [Decorator](Language/Python/Study/Decorator.md)
 * [Comprehension](Language/Python/Comprehension.md)
 * [Asyncio](Language/Python/Lib/asyncio.md)
 * [Celery](Language/Python/Celery.md)
-* [PyQt5 README](Language/Python/PyQt5/README.md)
+* [PyQt5](Language/Python/PyQt5.md)
 * [SQLAlchemy](Language/Python/SQLAlchemy.md)
 * [Refactoring](Language/Python/Refactoring.md)
 * [Keras](Language/Python/Library/Keras.md)
 * [문제 해결: Python Reinstall 후 서버 장애](Language/Python/Troubleshooting/Python_Reinstall_Server_Failure.md)
 
 ### Node.js
-* [NodeJs README](Language/NodeJs/README.md)
+* [Node.js Overview](Language/NodeJs.md)
 * [libuv](Language/NodeJs/libuv.md)
 * [Yarn Berry](Language/NodeJs/Yarn%20Berry.md)
 
@@ -73,13 +73,13 @@
 * [Shadow DOM](Web/Concepts/shadow%20DOM.md)
 * [WebRTC](Web/Concepts/WebRTC.md)
 * [Electron](Web/Framework/Electron.md)
-* [Vue.js README](Web/Framework/Vuejs/README.md)
+* [Vue.js](Web/Framework/Vuejs.md)
 
 ---
 
 ## Infrastructure
 ### Linux
-* [Linux README](Infrastructure/Linux/README.md)
+* [Linux Overview](Infrastructure/Linux.md)
 * [Crontab](Infrastructure/Linux/crontab.md)
 * [Logrotate](Infrastructure/Linux/Logrotate.md)
 * [Stdin, stdout, stderr](Infrastructure/Linux/Stdin,%20stdout,%20stderr.md)
@@ -87,18 +87,18 @@
 * [Mount OneDrive on Ubuntu](Infrastructure/Linux/Tips/Mount%20OneDrive%20on%20Ubuntu.md)
 
 ### Docker
-* [Docker README](Infrastructure/Docker/README.md)
+* [Docker Overview](Infrastructure/Docker.md)
 * [Dockerfile](Infrastructure/Docker/dockerfile.md)
 * [Troubleshooting: No space left on device](Infrastructure/Docker/no%20space%20left%20on%20device.md)
 
 ### Network
-* [Network README](Infrastructure/Network/README.md)
+* [Network Overview](Infrastructure/Network.md)
 * [OSI 7 Layer](Infrastructure/Network/OSI%207%20Layer.md)
 * [Socket](Infrastructure/Network/Socket.md)
 * [RPC](Infrastructure/Network/RPC.md)
 
 ### Message Broker
-* [RabbitMQ README](Infrastructure/MessageBroker/RabbitMQ/README.md)
+* [RabbitMQ](Infrastructure/MessageBroker/RabbitMQ.md)
 * [RabbitMQ 그리고 Kafka](Infrastructure/MessageBroker/RabbitMQ%20그리고%20Kafka.md)
 * [AMQP](Infrastructure/MessageBroker/AMQP.md)
 
@@ -107,23 +107,23 @@
 ## Data
 ### Database
 * [SQL Naming Convention](Data/Database/SQL%20Naming%20Convention.md)
-* [Redis README](Data/Database/Redis/README.md)
-* [MongoDB README](Data/Database/MongoDB/README.md)
+* [Redis](Data/Database/Redis.md)
+* [MongoDB](Data/Database/MongoDB.md)
 * [이미지 저장 및 관리](Data/Database/Image_Storage_Management.md)
 * [ELK Stack](Data/ELK.md)
 
 ### FileSystem
-* [FileSystem](Data/FileSystem/FileSystem.md)
+* [FileSystem](Data/FileSystem.md)
 * [HDF5](Data/FileSystem/HDF5.md)
 
 ### Hadoop
-* [Hadoop README](Data/Hadoop/README.md)
+* [Hadoop](Data/Hadoop.md)
 
 ---
 
 ## Computer Science
 ### Operating System
-* [OS README](ComputerScience/OperatingSystem/README.md)
+* [OS Overview](ComputerScience/OperatingSystem.md)
 * [프로세스 제어 블록](ComputerScience/OperatingSystem/Process_Control_Block.md)
 * [Endianness](ComputerScience/OperatingSystem/Endianness.md)
 
@@ -148,7 +148,7 @@
 * [Pull Request vs Merge Request](Tools/Git/Pull%20Request%20vs%20Merge%20Request.md)
 
 ### IDE
-* [Intellij README](Tools/IDE/Intellij/README.md)
+* [Intellij](Tools/IDE/Intellij.md)
 
 ### Productivity
 * [FFmpeg](Tools/OpenSource/FFmpeg.md)
@@ -167,5 +167,5 @@
 * [종부세](Life/RealEstate/종부세.md)
 
 ### Mindset
-* [마음가짐 README](Life/Mindset/README.md)
+* [Mindset](Life/Mindset.md)
 
