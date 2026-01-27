@@ -49,13 +49,13 @@ plugins:
   - search
 
 # 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
-nav:
-  - TIL (Today I Learned): index.md
-  - Language: Language/
-  - Web: Web/
-  - Infrastructure: Infrastructure/
-  - Data: Data/
-  - Computer Science: ComputerScience/
-  - Tools: Tools/
-  - Life: Life/
-  - Architecture Cookbook: Architecture_Cookbook.md
+# nav:
+#   - TIL (Today I Learned): index.md
+#   - Language: Language/
+#   - Web: Web/
+#   - Infrastructure: Infrastructure/
+#   - Data: Data/
+#   - Computer Science: ComputerScience/
+#   - Tools: Tools/
+#   - Life: Life/
+#   - Architecture Cookbook: Architecture_Cookbook.md
