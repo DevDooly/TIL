@@ -45,127 +45,127 @@
 ## Language
 
 ### Java
-* [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
-* [Spring](docs/Language/Java/Spring.md)
+* [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
+* [Spring](Language/Java/Spring.md)
 
 ### Python
-* [Python Overview](docs/Language/Python.md)
-* [Decorator](docs/Language/Python/Study/Decorator.md)
-* [Comprehension](docs/Language/Python/Comprehension.md)
-* [Asyncio](docs/Language/Python/Lib/asyncio.md)
-* [Celery](docs/Language/Python/Celery.md)
-* [PyQt5](docs/Language/Python/PyQt5.md)
-* [SQLAlchemy](docs/Language/Python/SQLAlchemy.md)
-* [Refactoring](docs/Language/Python/Refactoring.md)
-* [Keras](docs/Language/Python/Library/Keras.md)
-* [문제 해결: Python Reinstall 후 서버 장애](docs/Language/Python/Troubleshooting/Python_Reinstall_Server_Failure.md)
+* [Python Overview](Language/Python.md)
+* [Decorator](Language/Python/Study/Decorator.md)
+* [Comprehension](Language/Python/Comprehension.md)
+* [Asyncio](Language/Python/Lib/asyncio.md)
+* [Celery](Language/Python/Celery.md)
+* [PyQt5](Language/Python/PyQt5.md)
+* [SQLAlchemy](Language/Python/SQLAlchemy.md)
+* [Refactoring](Language/Python/Refactoring.md)
+* [Keras](Language/Python/Library/Keras.md)
+* [문제 해결: Python Reinstall 후 서버 장애](Language/Python/Troubleshooting/Python_Reinstall_Server_Failure.md)
 
 ### Node.js
-* [Node.js Overview](docs/Language/NodeJs.md)
-* [libuv](docs/Language/NodeJs/libuv.md)
-* [Yarn Berry](docs/Language/NodeJs/Yarn%20Berry.md)
+* [Node.js Overview](Language/NodeJs.md)
+* [libuv](Language/NodeJs/libuv.md)
+* [Yarn Berry](Language/NodeJs/Yarn%20Berry.md)
 
 ---
 
 ## Web
 ### Web Concepts
-* [Ajax 그리고 CSR, SSR](docs/Web/Concepts/Ajax%20그리고%20CSR,%20SSR.md)
-* [Shadow DOM](docs/Web/Concepts/shadow%20DOM.md)
-* [WebRTC](docs/Web/Concepts/WebRTC.md)
-* [Electron](docs/Web/Framework/Electron.md)
-* [Vue.js](docs/Web/Framework/Vuejs.md)
+* [Ajax 그리고 CSR, SSR](Web/Concepts/Ajax%20그리고%20CSR,%20SSR.md)
+* [Shadow DOM](Web/Concepts/shadow%20DOM.md)
+* [WebRTC](Web/Concepts/WebRTC.md)
+* [Electron](Web/Framework/Electron.md)
+* [Vue.js](Web/Framework/Vuejs.md)
 
 ---
 
 ## Infrastructure
 ### Linux
-* [Linux Overview](docs/Infrastructure/Linux.md)
-* [Crontab](docs/Infrastructure/Linux/crontab.md)
-* [Logrotate](docs/Infrastructure/Linux/Logrotate.md)
-* [Stdin, stdout, stderr](docs/Infrastructure/Linux/Stdin,%20stdout,%20stderr.md)
-* [POSIX](docs/Infrastructure/Linux/POSIX.md)
-* [Mount OneDrive on Ubuntu](docs/Infrastructure/Linux/Tips/Mount%20OneDrive%20on%20Ubuntu.md)
+* [Linux Overview](Infrastructure/Linux.md)
+* [Crontab](Infrastructure/Linux/crontab.md)
+* [Logrotate](Infrastructure/Linux/Logrotate.md)
+* [Stdin, stdout, stderr](Infrastructure/Linux/Stdin,%20stdout,%20stderr.md)
+* [POSIX](Infrastructure/Linux/POSIX.md)
+* [Mount OneDrive on Ubuntu](Infrastructure/Linux/Tips/Mount%20OneDrive%20on%20Ubuntu.md)
 
 ### Docker
-* [Docker Overview](docs/Infrastructure/Docker.md)
-* [Dockerfile](docs/Infrastructure/Docker/dockerfile.md)
-* [Troubleshooting: No space left on device](docs/Infrastructure/Docker/no%20space%20left%20on%20device.md)
+* [Docker Overview](Infrastructure/Docker.md)
+* [Dockerfile](Infrastructure/Docker/dockerfile.md)
+* [Troubleshooting: No space left on device](Infrastructure/Docker/no%20space%20left%20on%20device.md)
 
 ### Network
-* [Network Overview](docs/Infrastructure/Network.md)
-* [OSI 7 Layer](docs/Infrastructure/Network/OSI%207%20Layer.md)
-* [Socket](docs/Infrastructure/Network/Socket.md)
-* [RPC](docs/Infrastructure/Network/RPC.md)
+* [Network Overview](Infrastructure/Network.md)
+* [OSI 7 Layer](Infrastructure/Network/OSI%207%20Layer.md)
+* [Socket](Infrastructure/Network/Socket.md)
+* [RPC](Infrastructure/Network/RPC.md)
 
 ### Message Broker
-* [RabbitMQ](docs/Infrastructure/MessageBroker/RabbitMQ.md)
-* [RabbitMQ 그리고 Kafka](docs/Infrastructure/MessageBroker/RabbitMQ%20그리고%20Kafka.md)
-* [AMQP](docs/Infrastructure/MessageBroker/AMQP.md)
+* [RabbitMQ](Infrastructure/MessageBroker/RabbitMQ.md)
+* [RabbitMQ 그리고 Kafka](Infrastructure/MessageBroker/RabbitMQ%20그리고%20Kafka.md)
+* [AMQP](Infrastructure/MessageBroker/AMQP.md)
 
 ---
 
 ## Data
 ### Database
-* [SQL Naming Convention](docs/Data/Database/SQL%20Naming%20Convention.md)
-* [Redis](docs/Data/Database/Redis.md)
-* [MongoDB](docs/Data/Database/MongoDB.md)
-* [이미지 저장 및 관리](docs/Data/Database/Image_Storage_Management.md)
-* [ELK Stack](docs/Data/ELK.md)
+* [SQL Naming Convention](Data/Database/SQL%20Naming%20Convention.md)
+* [Redis](Data/Database/Redis.md)
+* [MongoDB](Data/Database/MongoDB.md)
+* [이미지 저장 및 관리](Data/Database/Image_Storage_Management.md)
+* [ELK Stack](Data/ELK.md)
 
 ### FileSystem
-* [FileSystem](docs/Data/FileSystem.md)
-* [HDF5](docs/Data/FileSystem/HDF5.md)
+* [FileSystem](Data/FileSystem.md)
+* [HDF5](Data/FileSystem/HDF5.md)
 
 ### Hadoop
-* [Hadoop](docs/Data/Hadoop.md)
+* [Hadoop](Data/Hadoop.md)
 
 ---
 
 ## Computer Science
 ### Operating System
-* [OS Overview](docs/ComputerScience/OperatingSystem.md)
-* [프로세스 제어 블록](docs/ComputerScience/OperatingSystem/Process_Control_Block.md)
-* [Endianness](docs/ComputerScience/OperatingSystem/Endianness.md)
+* [OS Overview](ComputerScience/OperatingSystem.md)
+* [프로세스 제어 블록](ComputerScience/OperatingSystem/Process_Control_Block.md)
+* [Endianness](ComputerScience/OperatingSystem/Endianness.md)
 
 ### Design Pattern
-* [State Pattern](docs/ComputerScience/DesignPattern/StatePattern.md)
+* [State Pattern](ComputerScience/DesignPattern/StatePattern.md)
 
 ### Security & Auth
-* [JWT](docs/ComputerScience/Security/JWT.md)
-* [OIDC](docs/ComputerScience/Security/OIDC.md)
-* [Bug Bounty](docs/ComputerScience/Security/BugBounty.md)
+* [JWT](ComputerScience/Security/JWT.md)
+* [OIDC](ComputerScience/Security/OIDC.md)
+* [Bug Bounty](ComputerScience/Security/BugBounty.md)
 
 ### Architecture
-* [High Availability (고가용성)](docs/ComputerScience/Architecture/High_Availability.md)
-* [Pipeline](docs/ComputerScience/Architecture/Pipeline.md)
+* [High Availability (고가용성)](ComputerScience/Architecture/High_Availability.md)
+* [Pipeline](ComputerScience/Architecture/Pipeline.md)
 
 ---
 
 ## Tools
 ### Git
-* [Git Tips](docs/Tools/Git/Tips.md)
-* [Tag](docs/Tools/Git/Tag.md)
-* [Pull Request vs Merge Request](docs/Tools/Git/Pull%20Request%20vs%20Merge%20Request.md)
+* [Git Tips](Tools/Git/Tips.md)
+* [Tag](Tools/Git/Tag.md)
+* [Pull Request vs Merge Request](Tools/Git/Pull%20Request%20vs%20Merge%20Request.md)
 
 ### IDE
-* [Intellij](docs/Tools/IDE/Intellij.md)
+* [Intellij](Tools/IDE/Intellij.md)
 
 ### Productivity
-* [FFmpeg](docs/Tools/OpenSource/FFmpeg.md)
-* [Zapier](docs/Tools/Productivity/zapier.md)
-* [Markdown Languages](docs/Tools/Markdown/Languages%20Supported%20by%20Github%20Flavored%20Markdown.md)
-* [BDD](docs/Tools/Methodology/BDD.md)
+* [FFmpeg](Tools/OpenSource/FFmpeg.md)
+* [Zapier](Tools/Productivity/zapier.md)
+* [Markdown Languages](Tools/Markdown/Languages%20Supported%20by%20Github%20Flavored%20Markdown.md)
+* [BDD](Tools/Methodology/BDD.md)
 
 ---
 
 ## Life
 ### Career
-* [Reference Check](docs/Life/Career/Reference%20Check.md)
+* [Reference Check](Life/Career/Reference%20Check.md)
 
 ### Real Estate
-* [LTV, DTI, DSR](docs/Life/RealEstate/LTV,%20DTI,%20DSR.md)
-* [종부세](docs/Life/RealEstate/종부세.md)
+* [LTV, DTI, DSR](Life/RealEstate/LTV,%20DTI,%20DSR.md)
+* [종부세](Life/RealEstate/종부세.md)
 
 ### Mindset
-* [Mindset](docs/Life/Mindset.md)
+* [Mindset](Life/Mindset.md)
 

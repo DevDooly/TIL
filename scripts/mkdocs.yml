@@ -3,7 +3,7 @@ site_url: http://devdooly.iptime.org:8000
 repo_url: https://github.com/devdooly/til
 edit_uri: edit/main/docs/
 
-# 📌 404 방지 핵심 설정 (URL 뒤에 .html 붙임)
+# 📌 404 에러 방지 핵심 설정 (URL을 .html로 고정)
 use_directory_urls: false
 
 theme:
@@ -16,14 +16,14 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: 다크 모드로 전환
+        name: 다크 모드 전환
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-night
-        name: 라이트 모드로 전환
+        name: 라이트 모드 전환
   features:
     - navigation.expand
     - navigation.indexes
@@ -48,9 +48,9 @@ markdown_extensions:
 plugins:
   - search
 
-# 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
+# 📌 네비게이션 설정 (docs 폴더 내부 기준)
 nav:
-  - Home: index.md  # (중요) ../README.md 가 아니라 docs 내부의 index.md를 가리킴
+  - Home: index.md
   - Language: Language/
   - Web: Web/
   - Infrastructure: Infrastructure/
