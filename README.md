@@ -32,15 +32,14 @@
 * **Database**
     * [Redis](Database/Redis/README.md)
     * [MongoDB](Database/MongoDB/README.md)
-    * [SQL Naming Convention](Database/SQL%20Naming%20Convention.md)
-## Database
-    * [Naming Convention](https://github.com/DevDooly/TIL/blob/main/Database/SQL%20Naming%20Convention.md)
-    * [HTTPS 인증 문제 해결 (Remote URL 변경)](Git/Change_Remote_URL_HTTPS_to_SSH.md)
-    * [비관적 락과 낙관적 락](https://github.com/DevDooly/TIL/blob/main/Database/Locking_Strategy.md)
+    * [SQL Naming Convention](Database/SQL_Naming_Convention.md)
+    * [Naming Convention](Database/SQL_Naming_Convention.md)
+    * [비관적 락과 낙관적 락](Database/Locking_Strategy.md)
 
 * **Git**
     * [Tips](Git/Tips.md)
     * [Submodules](Git/submodules_recursive%20Clone.md)
+    * [HTTPS 인증 문제 해결 (Remote URL 변경)](Git/Change_Remote_URL_HTTPS_to_SSH.md)
 * **IDE & Tools**
     * [IntelliJ](IDE/Intellij/README.md)
     * [Sentry](Tools/sentry.md)
