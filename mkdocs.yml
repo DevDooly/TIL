@@ -4,7 +4,7 @@ repo_url: https://github.com/devdooly/til
 edit_uri: edit/main/docs/
 
 # 📌 404 방지 핵심 설정 (URL 뒤에 .html 붙임)
-use_directory_urls: false
+use_directory_urls: true
 
 theme:
   name: material
