@@ -1,7 +1,7 @@
 # TIL (Today I Learned)
 > 배운 내용을 정리하는 저장소입니다.
 
-* [📂 TIL Structure Guide](TIL/TIL_Structure_Guide.md)
+* [📂 TIL Structure Guide](TIL/index.md)
 
 ---
 
