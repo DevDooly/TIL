@@ -25,7 +25,7 @@ theme:
         icon: material/weather-night
         name: 라이트 모드로 전환
   features:
-    - navigation.expand
+    # - navigation.expand
     - navigation.indexes
     - navigation.top
     - navigation.tracking
@@ -49,13 +49,13 @@ plugins:
   - search
 
 # 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
-nav:
-  - Home: index.md  # (중요) ../README.md 가 아니라 docs 내부의 index.md를 가리킴
-  - Language: Language/
-  - Web: Web/
-  - Infrastructure: Infrastructure/
-  - Data: Data/
-  - Computer Science: ComputerScience/
-  - Tools: Tools/
-  - Life: Life/
-  - Archive: Archive/
+# nav:
+#   - Home: index.md  # (중요) ../README.md 가 아니라 docs 내부의 index.md를 가리킴
+#   - Language: Language/
+#   - Web: Web/
+#   - Infrastructure: Infrastructure/
+#   - Data: Data/
+#   - Computer Science: ComputerScience/
+#   - Tools: Tools/
+#   - Life: Life/
+#   - Archive: Archive/

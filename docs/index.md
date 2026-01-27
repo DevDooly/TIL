@@ -46,7 +46,7 @@
 
 ### Java
 * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
-* [Spring](Language/Java/Spring.md)
+<!-- * [Spring](Language/Java/Spring.md) --> (File missing)
 
 ### Python
 * [Python Overview](Language/Python.md)
@@ -79,7 +79,7 @@
 
 ## Infrastructure
 ### Linux
-* [Linux Overview](Infrastructure/Linux.md)
+* [Linux Overview](Infrastructure/Linux/README.md)
 * [Crontab](Infrastructure/Linux/crontab.md)
 * [Logrotate](Infrastructure/Linux/Logrotate.md)
 * [Stdin, stdout, stderr](Infrastructure/Linux/Stdin,%20stdout,%20stderr.md)
@@ -87,18 +87,18 @@
 * [Mount OneDrive on Ubuntu](Infrastructure/Linux/Tips/Mount%20OneDrive%20on%20Ubuntu.md)
 
 ### Docker
-* [Docker Overview](Infrastructure/Docker.md)
+* [Docker Overview](Infrastructure/Docker/README.md)
 * [Dockerfile](Infrastructure/Docker/dockerfile.md)
 * [Troubleshooting: No space left on device](Infrastructure/Docker/no%20space%20left%20on%20device.md)
 
-### Network
+<!-- ### Network (Directory missing)
 * [Network Overview](Infrastructure/Network.md)
 * [OSI 7 Layer](Infrastructure/Network/OSI%207%20Layer.md)
 * [Socket](Infrastructure/Network/Socket.md)
-* [RPC](Infrastructure/Network/RPC.md)
+* [RPC](Infrastructure/Network/RPC.md) -->
 
 ### Message Broker
-* [RabbitMQ](Infrastructure/MessageBroker/RabbitMQ.md)
+* [RabbitMQ](Infrastructure/MessageBroker/RabbitMQ/README.md)
 * [RabbitMQ 그리고 Kafka](Infrastructure/MessageBroker/RabbitMQ%20그리고%20Kafka.md)
 * [AMQP](Infrastructure/MessageBroker/AMQP.md)
 
@@ -106,25 +106,25 @@
 
 ## Data
 ### Database
-* [SQL Naming Convention](Data/Database/SQL%20Naming%20Convention.md)
+* [SQL Naming Convention](Data/Database/SQL_Naming_Convention.md)
 * [Redis](Data/Database/Redis.md)
 * [MongoDB](Data/Database/MongoDB.md)
 * [이미지 저장 및 관리](Data/Database/Image_Storage_Management.md)
 * [ELK Stack](Data/ELK.md)
 
 ### FileSystem
-* [FileSystem](Data/FileSystem.md)
-* [HDF5](Data/FileSystem/HDF5.md)
+<!-- * [FileSystem](Data/FileSystem.md) --> (Moved to CS)
+* [HDF5](ComputerScience/FileSystem/HDF5.md)
 
 ### Hadoop
-* [Hadoop](Data/Hadoop.md)
+<!-- * [Hadoop](Data/Hadoop.md) --> (Directory missing)
 
 ---
 
 ## Computer Science
 ### Operating System
-* [OS Overview](ComputerScience/OperatingSystem.md)
-* [프로세스 제어 블록](ComputerScience/OperatingSystem/Process_Control_Block.md)
+<!-- * [OS Overview](ComputerScience/OperatingSystem.md) --> (File missing)
+<!-- * [프로세스 제어 블록](ComputerScience/OperatingSystem/Process_Control_Block.md) --> (File missing)
 * [Endianness](ComputerScience/OperatingSystem/Endianness.md)
 
 ### Design Pattern
@@ -133,7 +133,7 @@
 ### Security & Auth
 * [JWT](ComputerScience/Security/JWT.md)
 * [OIDC](ComputerScience/Security/OIDC.md)
-* [Bug Bounty](ComputerScience/Security/BugBounty.md)
+<!-- * [Bug Bounty](ComputerScience/Security/BugBounty.md) --> (File missing)
 
 ### Architecture
 * [High Availability (고가용성)](ComputerScience/Architecture/High_Availability.md)
@@ -162,10 +162,10 @@
 ### Career
 * [Reference Check](Life/Career/Reference%20Check.md)
 
-### Real Estate
+<!-- ### Real Estate (Directory missing)
 * [LTV, DTI, DSR](Life/RealEstate/LTV,%20DTI,%20DSR.md)
-* [종부세](Life/RealEstate/종부세.md)
+* [종부세](Life/RealEstate/종부세.md) -->
 
 ### Mindset
-* [Mindset](Life/Mindset.md)
+<!-- * [Mindset](Life/Mindset.md) --> (File missing)
 
