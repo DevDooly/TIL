@@ -1,41 +1,46 @@
-# TL;DR Project ( too long; didn't read )
+# TL;DR (Too Long; Didn't Read)
 
-가독성이 좋지 않은 man 페이지를 대체하기 위한 프로젝트.
+**tldr-pages**는 복잡하고 긴 `man` 페이지 대신, 자주 사용하는 옵션과 실용적인 예제 위주로 명령어를 요약해 주는 커뮤니티 프로젝트입니다.
 
-## Installation
-```Shell
-$ sudo npm install -g tldr
+## 1. 설치
+
+```bash
+# Node.js (npm)
+npm install -g tldr
+
+# macOS (Homebrew)
+brew install tldr
+
+# Python (pip)
+pip install tldr
 ```
 
-## Usage
-```Shell
-$ tldr
+## 2. 사용법
 
-Usage: tldr command [options]
+```bash
+# tar 명령어 사용법 보기
+tldr tar
 
-Simplified and community-driven man pages
-
-Options:
-
-  -V, --version            output the version number
-
-  -l, --list               List all commands for the chosen platform in the cache
-
-  -a, --list-all           List all commands in the cache
-
-  -1, --single-column      List single command per line (use with options -l or -a)
-
-  -r, --random             Show a random command
-
-  -e, --random-example     Show a random example
-
-  -f, --render [file]      Render a specific markdown [file]
-
-  -m, --markdown           Output in markdown format
-
-  -o, --os [type]          Override the operating system [linux, osx, sunos]
-
+# git checkout 예제 보기
+tldr git checkout
 ```
 
-## References
-* https://tldr.ostera.io/
+## 3. 예시 출력 (tar)
+```text
+  tar
+
+  Archiving utility.
+  Often combined with a compression method, such as gzip or bzip2.
+
+  - Create an archive from files:
+    tar cf target.tar file1 file2 file3
+
+  - Create a gzipped archive:
+    tar czf target.tar.gz file1 file2 file3
+
+  - Extract a (compressed) archive into the current directory:
+    tar xf source.tar[.gz|.bz2|.xz]
+```
+
+## 참고
+*   [tldr-pages 공식 사이트](https://tldr.sh/)
