@@ -1,17 +1,24 @@
 # Fluentd
 
-Fluentd 는 데이터 소스(HTTP, TCP, ... )를 통해 데이터를 받아올 수 있는 로그 수집기다.</br>
+**Fluentd**는 데이터 수집을 통합하기 위한 오픈 소스 **데이터 수집기(Log Collector)**입니다. 다양한 소스에서 나오는 로그와 데이터를 JSON 형식으로 통일하여 수집하고, 분석 도구나 저장소로 전달하는 역할을 합니다.
 
-## Event
-Fluentd 가 읽어들인 데이터는 tag, time, recore 로 구성된 이벤트로 처리된다.
+## 1. 주요 특징
 
-* tag: 이벹르를 어디로 보낼지 결정하기 위한 구분값
-* time: 이벤트가 발생한 시간
-* record: 데이터 (Json)
+*   **JSON 기반 데이터 통일:** 로그를 구조화된 JSON 데이터로 처리하여 수집과 출력을 쉽게 연결합니다.
+*   **플러그인 구조:** 1,000개 이상의 플러그인을 지원하여 어떠한 입력 소스(HTTP, Tail, Syslog)나 출력 목적지(S3, Elasticsearch, Kafka)와도 연동이 가능합니다.
+*   **신뢰성:** 버퍼링(Memory/File)과 재시도(Retry) 메커니즘을 갖춰 데이터 유실을 방지합니다.
 
-## Fluent-Bit
-Fluentd forwarder 의 경량화 버전
+## 2. 데이터 처리 단계 (Pipeline)
 
-## Refereces
- - https://www.fluentd.org/architecture
- - https://jonnung.dev/system/2018/04/06/fluentd-log-collector-part1/
+Fluentd는 설정 파일에서 다음과 같은 단계를 정의하여 데이터를 처리합니다.
+
+1.  **Input (`<source>`):** 어디서 데이터를 가져올 것인가 (예: 로그 파일, 포트 등).
+2.  **Filter (`<filter>`):** 가져온 데이터를 가공하거나 필터링할 것인가.
+3.  **Output (`<match>`):** 가공된 데이터를 어디로 보낼 것인가 (예: DB, S3 등).
+
+## 3. 관련 도구
+
+*   **Fluent Bit:** Fluentd의 초경량 버전입니다. 리소스가 제한된 환경(임베디드, 컨테이너 에이전트)에 최적화되어 있으며 C언어로 작성되었습니다. 보통 서버마다 Fluent Bit를 설치하여 데이터를 수집하고, 중앙의 Fluentd 서버로 모아서 처리하는 구조를 많이 사용합니다.
+
+## 참고
+*   [Fluentd 공식 아키텍처 가이드](https://www.fluentd.org/architecture)
