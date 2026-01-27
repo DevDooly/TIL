@@ -1,10 +1,9 @@
 site_name: My TIL Wiki
-site_url: http://localhost:8000
+site_url: http://devdooly.iptime.org:8000
 repo_url: https://github.com/devdooly/til  # 👈 본인의 저장소 주소로 꼭 변경하세요!
 edit_uri: edit/main/docs/                # GitHub 웹 편집 버튼이 docs 폴더를 향하도록 설정
 
 # 📌 핵심: 설정 파일 위치(wiki) 기준, 상위 폴더의 docs를 문서 소스로 지정
-docs_dir: ../docs
 
 theme:
   name: material
