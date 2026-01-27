@@ -1,38 +1,37 @@
-# LMDB (Sysmas Lightning Memory mapped Database)
+# LMDB (Lightning Memory-Mapped Database)
 
-Key-Value 형식의 데이터베이스 라이브러리다.
+**LMDB**는 Symas Corp에서 개발한 초고속, 초소형 임베디드 Key-Value 데이터베이스 라이브러리입니다. OpenLDAP 프로젝트를 위해 처음 개발되었으며, 메모리 매핑(Memory-mapped) 파일을 사용하여 디스크 기반 데이터베이스의 영속성(Persistence)과 인메모리 데이터베이스의 읽기 성능을 동시에 제공합니다.
 
-다른 키-값 데이터베이스와 달리 쓰기 트랜잭션을 보장하지 않는다.
+## 1. 핵심 특징
 
-AN ULTRA-FAST, ULTRA-COMPACT, CRASH-PROOF KEY-VALUE EMBEDDED DATA STORE.
-Symas LMDB is an extraordinarily fast, memory-efficient database we developed for the OpenLDAP Project. With memory-mapped files, it has the read performance of a pure in-memory database while retaining the persistence of standard disk-based databases.
-Bottom line, with only 32KB of object code, LMDB may seem tiny. But it’s the right 32KB. Compact and efficient are two sides of a coin; that’s part of what makes LMDB so powerful.
+*   **메모리 매핑 (Memory-Mapped):** 파일을 메모리 주소 공간에 직접 매핑(`mmap`)하여, OS가 파일을 메모리처럼 다루게 합니다. 이로 인해 불필요한 데이터 복사(Zero-copy) 없이 매우 빠른 조회가 가능합니다.
+*   **Key-Value 구조:** 단순한 키-값 쌍으로 데이터를 저장하며, 키는 B+tree 구조로 정렬되어 저장됩니다. (범위 검색 지원)
+*   **트랜잭션 지원 (ACID):** 완전한 ACID(원자성, 일관성, 고립성, 지속성)를 준수하며, MVCC(Multi-Version Concurrency Control)를 통해 읽기 작업과 쓰기 작업이 서로를 차단하지 않습니다(Lock-free readers).
+*   **매우 가벼움:** 핵심 라이브러리 크기가 매우 작으며(약 32KB), 별도의 데몬이나 서버 프로세스 없이 애플리케이션 내에 라이브러리 형태로 임베딩되어 작동합니다.
+*   **유지보수가 필요 없음:** 로그 파일 관리나 압축(Compaction), 가비지 컬렉션 등의 유지보수 작업이 필요 없습니다.
 
-EXPLORE CAPABILITIES
-Ordered-map interface
-keys are always sorted; range lookups are supported
-Fully-transactional
-full ACID semantics with MVCC
-Reader/writer transactions
-readers don’t block writers; writers don’t block readers
-Fully serialized writers
-writes are always deadlock-free
-Extremely cheap read transactions
-can be performed using no mallocs or any other blocking calls
-Multi-thread and multi-process concurrency supported
-Environments may be opened by multiple processes on the same host
-Multiple sub-databases may be created
-transactions cover all sub-databases
-Memory-mapped
-allows for zero-copy lookup and iteration
-Maintenance-free
-no external process or background cleanup or compaction required
-Crash-proof
-no logs or crash recovery procedures required
-No application-level caching
-LMDB fully exploits the operating system’s buffer cache
-32KB of object code and 6KLOC of C
-fits in CPU L1 cache for maximum performance
+## 2. 장점 및 활용 분야
 
-https://symas.com/lmdb/
+### 장점
+*   **압도적인 읽기 성능:** 데이터가 메모리에 캐싱되어 있다면 메모리 접근 속도만큼 빠릅니다. AI 학습 데이터 로딩 등 읽기 위주의 작업에서 탁월한 성능을 보입니다.
+*   **안정성:** 시스템이 비정상 종료(Crash)되더라도 데이터 손상을 방지하는 구조로 설계되어 있습니다.
+*   **동시성:** 여러 프로세스에서 동시에 같은 DB 파일을 열어서 읽을 수 있습니다.
 
+### 단점
+*   **쓰기 성능:** 읽기에 최적화되어 있어 쓰기 성능은 상대적으로 느릴 수 있습니다. (Copy-on-write 방식 사용)
+*   **파일 크기:** 할당된 맵 크기만큼 가상 메모리를 차지하며, 데이터 구조 특성상 실제 데이터보다 파일 크기가 커질 수 있습니다.
+
+### 활용 분야
+*   **AI/Deep Learning:** 수백만 개의 이미지나 텍스트 데이터를 빠르게 읽어와야 하는 학습 데이터셋 저장용 (예: PyTorch, Caffe 등에서 LMDB를 데이터 소스로 많이 사용함)
+*   **LDAP 디렉토리 서비스:** 원래 목적인 OpenLDAP의 백엔드
+*   **캐싱 시스템:** 로컬 파일 기반의 고성능 캐시가 필요할 때
+
+## 3. 요약 (영어 원문 요약)
+
+*   **Ultra-Fast, Ultra-Compact:** 매우 빠르고 작습니다.
+*   **Crash-Proof:** 충돌에 강합니다.
+*   **Memory-Mapped:** `malloc`이나 복잡한 버퍼 관리 없이 OS의 페이지 캐시를 그대로 활용합니다.
+*   **No Tuning Required:** 복잡한 튜닝 없이도 높은 성능을 냅니다.
+
+## 참고
+*   [Symas LMDB 공식 사이트](https://symas.com/lmdb/)
