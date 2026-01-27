@@ -29,3 +29,35 @@ ModuleNotFoundError: No module named 'mkdocs_awesome_pages_plugin'
 ```
 
 `requirements.txt` 파일에는 사용 중인 모든 플러그인이 명시되어 있어야 함 (예: `mkdocs-awesome-pages-plugin`).
+
+---
+
+# Awesome Pages Plugin: NavEntryNotFound 에러
+
+## 현상
+배포 혹은 빌드 시 다음과 같은 에러가 발생하며 중단됨:
+
+```
+mkdocs_awesome_pages_plugin.navigation.NavEntryNotFound: Nav entry "Node.js" not found. [Language/.pages]
+```
+
+## 원인
+`mkdocs-awesome-pages-plugin`을 사용할 때, `.pages` 파일의 `nav` 목록에 있는 항목이 실제 파일 시스템의 파일명이나 디렉토리명과 일치하지 않을 때 발생함.
+
+예를 들어, 실제 디렉토리명은 `NodeJs`인데 `.pages` 파일에는 `Node.js`라고 적혀 있는 경우.
+
+## 해결 방법
+`.pages` 파일의 `nav` 항목을 실제 파일/디렉토리 이름과 정확히 일치하게 수정해야 함.
+
+**수정 전 (.pages):**
+```yaml
+nav:
+  - Node.js
+```
+
+**수정 후 (.pages):**
+```yaml
+nav:
+  - NodeJs
+```
+
