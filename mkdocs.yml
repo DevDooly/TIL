@@ -47,6 +47,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - awesome-pages
 
 # 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
 # nav:
