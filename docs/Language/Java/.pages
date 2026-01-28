@@ -1,0 +1,10 @@
+title: Java
+nav:
+  - Index: README.md
+  - Basic & Style:
+      - Style Guide: Google_Java_Style_Guide.md
+  - JVM Internals:
+      - Memory Structure: Memory.md
+      - Garbage Collection: Garbage_Collection.md
+  - Frameworks:
+      - Spring Ecosystem: Spring
