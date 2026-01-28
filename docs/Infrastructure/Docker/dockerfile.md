@@ -66,3 +66,37 @@ WORKDIR /app
 ```dockerfile
 EXPOSE 8080
 ```
+
+## 4. 예제 (Example)
+
+다음은 Python Flask 애플리케이션을 위한 실용적인 `Dockerfile` 예제입니다.
+
+```dockerfile
+# 1. 베이스 이미지 설정 (경량화된 alpine 버전 사용)
+FROM python:3.9-slim
+
+# 2. 메타데이터 설정
+LABEL maintainer="devdooly"
+LABEL description="My TIL Python App"
+
+# 3. 환경 변수 설정
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# 4. 작업 디렉토리 생성 및 설정
+WORKDIR /app
+
+# 5. 의존성 파일 복사 및 설치
+# 레이어 캐싱을 위해 소스 코드보다 먼저 복사합니다.
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 6. 소스 코드 복사
+COPY . .
+
+# 7. 실행 포트 명시
+EXPOSE 5000
+
+# 8. 컨테이너 실행 명령어
+CMD ["python", "app.py"]
+```
