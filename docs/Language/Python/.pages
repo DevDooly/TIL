@@ -1,0 +1,30 @@
+title: Python
+nav:
+  - Index: README.md
+  - Core Concepts:
+      - Comprehension: Comprehension.md
+      - Static Method: 정적메소드.md
+      - Meta Class: 메타클래스.md
+      - Designing Modules: Designing Modules in Python.md
+      - Refactoring: Refactoring.md
+  - Network & Web:
+      - Socket Programming: Socket Programming.md
+      - AIOHTTP vs Flask: AIOHTTP vs Flask.md
+      - Celery: Celery.md
+  - Libraries:
+      - SQLAlchemy: SQLAlchemy.md
+      - orjson: orjson.md
+      - Tokenizer: tokenizer.md
+      - Retry: retry.md
+  - GUI:
+      - PyQt5: PyQt5.md
+      - PyQt5 Dir: PyQt5
+      - PySide6: PySide6
+  - Submodules:
+      - Lib: Lib
+      - Library: Library
+      - pika: pika
+      - sys: sys
+  - Study & Troubleshooting:
+      - Study: Study
+      - Troubleshooting: Troubleshooting
