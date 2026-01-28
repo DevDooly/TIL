@@ -41,21 +41,21 @@ Java 7까지 존재하던 **PermGen(Permanent Generation)** 영역이 Java 8부�
 
 ```mermaid
 graph TD
-    subgraph Shared [Shared Area (GC Target)]
-        Heap[Heap Area<br/>(Eden, Survivor, Old)]
-        Method[Method Area / Metaspace<br/>(Class Info, Static Vars)]
+    subgraph Shared ["Shared Area (GC Target)"]
+        Heap["Heap Area<br/>(Eden, Survivor, Old)"]
+        Method["Method Area / Metaspace<br/>(Class Info, Static Vars)"]
     end
 
-    subgraph Thread1 [Thread 1]
-        Stack1[JVM Stack<br/>(Frames)]
-        PC1[PC Register]
-        Native1[Native Method Stack]
+    subgraph Thread1 ["Thread 1"]
+        Stack1["JVM Stack<br/>(Frames)"]
+        PC1["PC Register"]
+        Native1["Native Method Stack"]
     end
 
-    subgraph Thread2 [Thread 2]
-        Stack2[JVM Stack<br/>(Frames)]
-        PC2[PC Register]
-        Native2[Native Method Stack]
+    subgraph Thread2 ["Thread 2"]
+        Stack2["JVM Stack<br/>(Frames)"]
+        PC2["PC Register"]
+        Native2["Native Method Stack"]
     end
 
     Thread1 -.-> Shared

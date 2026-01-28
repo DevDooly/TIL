@@ -7,16 +7,16 @@ GC는 객체가 유효한 참조를 가지고 있는지 판단하기 위해 **Re
 
 ```mermaid
 graph LR
-    subgraph RootSet [Root Set]
-        StackVar[Local Variables]
-        StaticVar[Static Variables]
+    subgraph RootSet ["Root Set"]
+        StackVar["Local Variables"]
+        StaticVar["Static Variables"]
     end
 
-    Obj1((Object 1))
-    Obj2((Object 2))
-    Obj3((Object 3))
-    Garbage1((Garbage 1))
-    Garbage2((Garbage 2))
+    Obj1(("Object 1"))
+    Obj2(("Object 2"))
+    Obj3(("Object 3"))
+    Garbage1(("Garbage 1"))
+    Garbage2(("Garbage 2"))
 
     StackVar --> Obj1
     StaticVar --> Obj2
@@ -44,14 +44,14 @@ graph LR
 
 ```mermaid
 graph LR
-    subgraph Young [Young Generation]
-        Eden[Eden]
-        S0[Survivor 0]
-        S1[Survivor 1]
+    subgraph Young ["Young Generation"]
+        Eden["Eden"]
+        S0["Survivor 0"]
+        S1["Survivor 1"]
     end
 
-    subgraph Old [Old Generation]
-        OldSpace[Old Space]
+    subgraph Old ["Old Generation"]
+        OldSpace["Old Space"]
     end
 
     Eden -- Minor GC --> S0
