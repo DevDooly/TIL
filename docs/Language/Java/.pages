@@ -6,5 +6,5 @@ nav:
   - JVM Internals:
       - Memory Structure: Memory.md
       - Garbage Collection: Garbage_Collection.md
-  - Frameworks:
-      - Spring Ecosystem: Spring
+  - Spring Boot:
+      - Spring Boot: SpringBoot
