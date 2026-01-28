@@ -29,26 +29,26 @@ WebFlux는 [Project Reactor](https://projectreactor.io/)를 기반으로 하며,
 ```mermaid
 graph TD
     subgraph MVC ["Spring MVC (Blocking)"]
-        Req1[Request 1] --> Thread1[Thread 1]
-        Thread1 --> Block1[Blocking Wait<br/>(DB/API)]
-        Block1 --> Res1[Response 1]
+        Req1["Request 1"] --> Thread1["Thread 1"]
+        Thread1 --> Block1["Blocking Wait<br/>(DB/API)"]
+        Block1 --> Res1["Response 1"]
         
-        Req2[Request 2] --> Thread2[Thread 2]
-        Thread2 --> Block2[Blocking Wait]
-        Block2 --> Res2[Response 2]
+        Req2["Request 2"] --> Thread2["Thread 2"]
+        Thread2 --> Block2["Blocking Wait"]
+        Block2 --> Res2["Response 2"]
     end
 
     subgraph WebFlux ["Spring WebFlux (Non-blocking)"]
-        EventLoop((Event Loop))
+        EventLoop(("Event Loop"))
         
-        ReqA[Request A] --> EventLoop
-        ReqB[Request B] --> EventLoop
+        ReqA["Request A"] --> EventLoop
+        ReqB["Request B"] --> EventLoop
         
-        EventLoop -- "Register Callback" --> AsyncOp[Async Operation<br/>(DB/API)]
+        EventLoop -- "Register Callback" --> AsyncOp["Async Operation<br/>(DB/API)"]
         AsyncOp -- "Callback / Event" --> EventLoop
         
-        EventLoop --> ResA[Response A]
-        EventLoop --> ResB[Response B]
+        EventLoop --> ResA["Response A"]
+        EventLoop --> ResB["Response B"]
     end
     
     style MVC fill:#fff3e0,stroke:#e65100
