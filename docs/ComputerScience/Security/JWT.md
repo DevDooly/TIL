@@ -1,48 +1,95 @@
-# JWT (JSON Web Token)
+# JWT (JSON Web Token) 및 인증 방식 비교
 
-**JWT(JSON Web Token)**는 당사자(클라이언트와 서버 등) 간에 정보를 JSON 객체로 안전하게 전송하기 위한 개방형 표준(RFC 7519)입니다. 이 정보는 디지털 서명이 되어 있으므로(Verified) 신뢰할 수 있습니다. 주로 **인증(Authentication)**과 **정보 교환**에 사용됩니다.
+**JWT(JSON Web Token)**는 당사자 간에 정보를 JSON 객체로 안전하게 전송하기 위한 개방형 표준(RFC 7519)입니다. 주로 **Stateless(무상태)** 인증 방식에 사용됩니다.
 
-## 1. 구조 (Structure)
-JWT는 점(`.`)으로 구분된 세 부분으로 구성됩니다.
-`xxxxx.yyyyy.zzzzz` (Header.Payload.Signature)
+이 문서에서는 JWT의 구조뿐만 아니라, 전통적인 **Cookie & Session** 방식과의 차이점을 중심으로 설명합니다.
 
-### 1.1 Header (헤더)
-토큰의 타입(`JWT`)과 해싱 알고리즘(`HS256`, `RSA` 등) 정보를 담습니다.
-```json
-{
-  "alg": "HS256",
-  "typ": "JWT"
-}
+## 1. 기본 개념: Cookie & Session
+
+웹 HTTP 프로토콜은 본래 **Stateless(무상태)** 프로토콜이므로, 이전 요청자가 누구인지 기억하지 못합니다. 이를 보완하기 위해 쿠키와 세션을 사용합니다.
+
+### 1.1 Cookie (쿠키)
+*   **정의:** 클라이언트(브라우저) 로컬에 저장되는 Key-Value 형태의 작은 데이터 파일입니다.
+*   **특징:**
+    *   서버가 Response 헤더(`Set-Cookie`)에 담아 보내면 브라우저가 저장합니다.
+    *   이후 요청 시마다 Request 헤더(`Cookie`)에 자동으로 담겨 서버로 전송됩니다.
+    *   보안에 취약할 수 있습니다(탈취, 변조 가능).
+
+### 1.2 Session (세션)
+*   **정의:** 민감한 정보는 서버 측에 저장하고, 클라이언트에게는 그 정보에 접근할 수 있는 **식별자(Session ID)**만 쿠키로 부여하는 방식입니다.
+*   **특징:**
+    *   사용자 정보가 서버 메모리나 DB에 저장되므로 보안성이 쿠키보다 높습니다.
+    *   **Stateful:** 서버가 사용자의 상태를 계속 저장하고 있어야 합니다.
+
+---
+
+## 2. JWT (JSON Web Token)
+
+### 2.1 구조 (Structure)
+`Header.Payload.Signature` (xxxxx.yyyyy.zzzzz)
+
+1.  **Header:** 토큰 타입(`JWT`)과 해싱 알고리즘(`HS256` 등).
+2.  **Payload:** 실제 데이터(Claims). 유저 ID, 유효기간 등. **(암호화되지 않음! 민감 정보 금지)**
+3.  **Signature:** 헤더+페이로드+비밀키를 조합한 서명값. (변조 방지)
+
+### 2.2 동작 원리 (Stateless)
+서버는 별도의 세션 저장소를 두지 않고, JWT 자체를 검증(Verify)하는 것만으로 사용자를 식별합니다.
+
+---
+
+## 3. JWT vs Session 방식 비교
+
+### 3.1 비교표
+
+| 특징 | Session / Cookie | JWT (Token-based) |
+| :--- | :--- | :--- |
+| **저장 위치** | 사용자 정보는 **서버**에 저장 (Session ID만 클라이언트에) | 사용자 정보(Payload)가 토큰에 포함되어 **클라이언트**에 저장 |
+| **서버 부하** | 사용자 수만큼 서버 메모리/DB 사용량 증가 | 서명 검증 연산(CPU)만 필요, 별도 저장소 불필요 |
+| **확장성 (Scale-out)** | 여러 서버 간 세션 동기화(Clustering) 또는 Redis 필요 | **Stateless**하므로 서버를 늘려도 별도 처리가 필요 없음 |
+| **보안** | Session ID 탈취 시 위험 (서버에서 강제 만료 가능) | Access Token 탈취 시 위험 (유효기간 만료 전까지 통제 어려움) |
+| **데이터 크기** | 작음 (Session ID만 전송) | 큼 (Payload에 정보가 많을수록 커짐) |
+
+### 3.2 아키텍처 비교 다이어그램
+
+```mermaid
+graph TD
+    subgraph SessionBased ["Session Based (Stateful)"]
+        Client1["Client (Browser)"]
+        Server1["Server"]
+        Store[("Session Store<br/>(Memory/Redis)")]
+
+        Client1 -- "1. Login" --> Server1
+        Server1 -- "2. Create Session" --> Store
+        Store -- "3. Session ID" --> Server1
+        Server1 -- "4. Response (Set-Cookie: JSESSIONID)" --> Client1
+        
+        Client1 -- "5. Request (Cookie: JSESSIONID)" --> Server1
+        Server1 -- "6. Validate ID" --> Store
+    end
+
+    subgraph JWTBased ["JWT Based (Stateless)"]
+        Client2["Client (App/Web)"]
+        Server2["Server"]
+
+        Client2 -- "1. Login" --> Server2
+        Server2 -- "2. Create Token (Sign)" --> Server2
+        Server2 -- "3. Response (Body: Token)" --> Client2
+        
+        Client2 -- "4. Request (Auth: Bearer Token)" --> Server2
+        Server2 -- "5. Validate Signature (No DB Access)" --> Server2
+    end
+    
+    style SessionBased fill:#fff3e0,stroke:#e65100
+    style JWTBased fill:#e1f5fe,stroke:#01579b
+    style Store fill:#ffccbc,stroke:#d84315
 ```
 
-### 1.2 Payload (페이로드)
-실제 전달하려는 데이터(Claims)를 담습니다. 사용자 ID, 유효기간, 권한 등이 포함됩니다.
-*   **주의:** 페이로드는 암호화된 것이 아니라 Base64로 인코딩된 것이므로, 비밀번호 같은 민감 정보를 담으면 안 됩니다.
-```json
-{
-  "sub": "1234567890",
-  "name": "John Doe",
-  "iat": 1516239022
-}
-```
+## 4. 결론: 언제 무엇을 쓸까?
 
-### 1.3 Signature (서명)
-헤더와 페이로드가 변조되지 않았음을 검증하는 부분입니다. 헤더와 페이로드를 인코딩한 값과, 서버만 알고 있는 **비밀 키(Secret Key)**를 이용해 생성합니다.
-
-## 2. 인증 방식 (Flow)
-1.  사용자가 로그인(ID/PW 전송)을 합니다.
-2.  서버는 계정을 확인하고, 비밀 키를 사용해 JWT를 생성(발급)하여 클라이언트에게 줍니다.
-3.  클라이언트는 JWT를 로컬 스토리지 등에 저장합니다.
-4.  이후 클라이언트가 서버에 요청할 때마다 HTTP 헤더(`Authorization: Bearer <token>`)에 JWT를 실어 보냅니다.
-5.  서버는 JWT의 서명을 검증하여 유효하면 요청을 처리합니다.
-
-## 3. 장단점
-
-### 장점
-*   **Stateless:** 서버가 세션 상태를 유지할 필요가 없어 서버 확장이 용이합니다(Scale-out 유리).
-*   **가벼움:** HTTP 헤더에 싣기 부담 없는 크기입니다.
-*   **유연성:** 다양한 플랫폼(Web, Mobile)에서 공통적으로 사용할 수 있습니다.
-
-### 단점
-*   **한 번 발급되면 통제 불가:** 유효기간이 만료되기 전까지는 탈취당해도 서버에서 강제로 정지시키기 어렵습니다. (이를 보완하기 위해 Access Token 수명을 짧게 하고 Refresh Token을 병행 사용)
-*   **Payload 크기:** 너무 많은 정보를 담으면 트래픽이 증가합니다.
+*   **Session 방식 추천:**
+    *   로그인 유저 수가 적거나, 단일 서버 환경인 경우.
+    *   보안이 매우 중요하여 즉각적인 강제 로그아웃 기능이 필요한 경우.
+*   **JWT 방식 추천:**
+    *   **MSA (Microservices Architecture)** 환경 (서버 간 세션 공유가 힘듦).
+    *   모바일 앱과 웹을 동시에 지원해야 하는 경우.
+    *   서버 확장(Scale-out)이 잦은 대용량 트래픽 서비스.
