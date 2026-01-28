@@ -4,8 +4,34 @@
 
 ## 1. GC의 기본 원리: Reachability
 GC는 객체가 유효한 참조를 가지고 있는지 판단하기 위해 **Reachability**라는 개념을 사용합니다.
-*   **Reachable:** Root Set(스택의 지역 변수, static 변수 등)으로부터 참조 사슬이 이어져 있는 객체.
-*   **Unreachable:** 참조가 끊겨 더 이상 접근할 수 없는 객체. -> **GC 대상**
+
+```mermaid
+graph LR
+    subgraph RootSet [Root Set]
+        StackVar[Local Variables]
+        StaticVar[Static Variables]
+    end
+
+    Obj1((Object 1))
+    Obj2((Object 2))
+    Obj3((Object 3))
+    Garbage1((Garbage 1))
+    Garbage2((Garbage 2))
+
+    StackVar --> Obj1
+    StaticVar --> Obj2
+    Obj1 --> Obj3
+
+    style RootSet fill:#f9f,stroke:#333
+    style Obj1 fill:#9f9,stroke:#333
+    style Obj2 fill:#9f9,stroke:#333
+    style Obj3 fill:#9f9,stroke:#333
+    style Garbage1 fill:#faa,stroke:#333
+    style Garbage2 fill:#faa,stroke:#333
+```
+
+*   **Reachable:** Root Set(스택의 지역 변수, static 변수 등)으로부터 참조 사슬이 이어져 있는 객체. (녹색)
+*   **Unreachable:** 참조가 끊겨 더 이상 접근할 수 없는 객체. -> **GC 대상** (붉은색)
 
 ## 2. GC 동작 과정 (Mark and Sweep)
 대부분의 GC 알고리즘은 기본적인 과정을 따릅니다.
@@ -15,6 +41,29 @@ GC는 객체가 유효한 참조를 가지고 있는지 판단하기 위해 **Re
 
 ## 3. Heap 구조와 Generational GC
 객체의 수명 특성(Weak Generational Hypothesis)을 반영하여 힙을 두 영역으로 나눕니다.
+
+```mermaid
+graph LR
+    subgraph Young [Young Generation]
+        Eden[Eden]
+        S0[Survivor 0]
+        S1[Survivor 1]
+    end
+
+    subgraph Old [Old Generation]
+        OldSpace[Old Space]
+    end
+
+    Eden -- Minor GC --> S0
+    S0 -- Minor GC --> S1
+    S1 -- Minor GC --> S0
+    S0 -- Promotion --> OldSpace
+    S1 -- Promotion --> OldSpace
+    
+    style Young fill:#e1f5fe,stroke:#01579b
+    style Old fill:#fff3e0,stroke:#e65100
+```
+
 > "대부분의 객체는 금방 접근 불가능 상태(Unreachable)가 된다."
 
 ### 3.1 Young Generation

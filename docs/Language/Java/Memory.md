@@ -37,14 +37,31 @@ Java 7까지 존재하던 **PermGen(Permanent Generation)** 영역이 Java 8부�
 *   **PermGen:** Heap 영역의 일부로, 크기가 제한적이어 `OutOfMemoryError: PermGen space` 오류가 자주 발생했습니다.
 *   **Metaspace:** Native Memory(OS 관리 메모리)를 사용하므로, OS가 허용하는 한 유연하게 크기가 조정됩니다.
 
-## 3. 요약 다이어그램
-```text
-[ Thread 1 ]      [ Thread 2 ]
-  | Stack |         | Stack |
-  |  PC   |         |  PC   |
-  +-------+         +-------+
-      \                 /
-       \               /
-    [     Heap Area     ]  <-- GC Target
-    [   Method Area     ]  <-- Shared
+## 3. 요약 다이어그램 (JVM Runtime Data Areas)
+
+```mermaid
+graph TD
+    subgraph Shared [Shared Area (GC Target)]
+        Heap[Heap Area<br/>(Eden, Survivor, Old)]
+        Method[Method Area / Metaspace<br/>(Class Info, Static Vars)]
+    end
+
+    subgraph Thread1 [Thread 1]
+        Stack1[JVM Stack<br/>(Frames)]
+        PC1[PC Register]
+        Native1[Native Method Stack]
+    end
+
+    subgraph Thread2 [Thread 2]
+        Stack2[JVM Stack<br/>(Frames)]
+        PC2[PC Register]
+        Native2[Native Method Stack]
+    end
+
+    Thread1 -.-> Shared
+    Thread2 -.-> Shared
+    
+    style Shared fill:#f9f,stroke:#333,stroke-width:2px
+    style Heap fill:#ff9,stroke:#333
+    style Method fill:#9ff,stroke:#333
 ```
