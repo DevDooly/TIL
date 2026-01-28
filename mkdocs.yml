@@ -53,6 +53,10 @@ plugins:
   - search
   - awesome-pages
 
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+
 # 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
 # nav:
 #   - TIL (Today I Learned): index.md
