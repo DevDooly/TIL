@@ -35,6 +35,56 @@
 ### 2.2 동작 원리 (Stateless)
 서버는 별도의 세션 저장소를 두지 않고, JWT 자체를 검증(Verify)하는 것만으로 사용자를 식별합니다.
 
+### 2.3 내부 동작 상세 (서명 생성 및 검증 예시)
+
+JWT의 핵심은 **서명(Signature)**을 통해 데이터의 무결성을 보장하는 것입니다. 서버는 자신이 가진 `Secret Key`로 서명을 생성하고, 나중에 돌아온 토큰의 서명이 자신이 만든 것과 일치하는지 확인합니다.
+
+#### 1) 토큰 생성 과정 (Signing)
+
+**Step 1: Header & Payload 정의**
+```json
+// Header
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+// Payload
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+```
+
+**Step 2: Base64Url 인코딩**
+JSON을 문자열로 변환 후 Base64Url로 인코딩합니다.
+*   Encoded Header = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9`
+*   Encoded Payload = `eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ`
+
+**Step 3: Signature 생성**
+인코딩된 두 값을 점(`.`)으로 연결하고, 서버의 비밀키(`your-256-bit-secret`)를 사용하여 해싱합니다.
+
+```java
+// 슈도 코드 (Pseudo-code)
+data = "eyJhbG..." + "." + "eyJzdWI..."; // Header + . + Payload
+signature = HMACSHA256(data, "your-256-bit-secret");
+encodedSignature = Base64UrlEncode(signature);
+```
+
+**Step 4: 최종 JWT 조합**
+`Header` + `.` + `Payload` + `.` + `Signature`
+
+#### 2) 토큰 검증 과정 (Verification)
+
+클라이언트로부터 토큰을 받은 서버는 다음 과정을 수행합니다.
+
+1.  토큰을 `.`으로 분리하여 Header와 Payload를 얻습니다.
+2.  서버가 가진 **동일한 비밀키**를 사용하여, 받은 Header와 Payload로 서명을 다시 계산해봅니다.
+3.  **계산된 서명** == **토큰에 포함된 서명** 인지 확인합니다.
+    *   **일치:** 서버가 발급한 토큰이 맞으며, 중간에 내용이 변조되지 않았음이 증명됩니다.
+    *   **불일치:** 해커가 Payload를 조작했거나(서명이 달라짐), 비밀키를 모르는 상태에서 위조한 토큰입니다.
+
 ---
 
 ## 3. JWT vs Session 방식 비교
