@@ -65,3 +65,79 @@ graph TD
     *   단순한 CRUD 애플리케이션 (개발 복잡도가 높음).
     *   블로킹 라이브러리(JDBC 등)를 반드시 써야 하는 경우 (성능 이점 감소).
     *   팀원들이 리액티브 프로그래밍에 익숙하지 않은 경우.
+
+## 5. 구현 방식 및 예제
+
+Spring WebFlux는 두 가지 프로그래밍 모델을 지원합니다.
+
+### 5.1 Annotated Controller (기존 MVC 스타일)
+Spring MVC와 동일한 어노테이션(`@RestController`, `@GetMapping` 등)을 사용하되, 반환 타입이 `Mono` 또는 `Flux`입니다.
+
+```java
+@RestController
+@RequestMapping("/users")
+public class UserController {
+
+    private final UserRepository userRepository;
+
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    // 단일 데이터 조회 (0 or 1)
+    @GetMapping("/{id}")
+    public Mono<User> getUser(@PathVariable String id) {
+        return userRepository.findById(id);
+    }
+
+    // 다건 데이터 조회 (0 to N)
+    @GetMapping
+    public Flux<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+    
+    // 스트리밍 예제 (Server-Sent Events)
+    @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<User> streamUsers() {
+        return userRepository.findAll()
+                .delayElements(Duration.ofMillis(100)); // 0.1초마다 데이터 전송 시뮬레이션
+    }
+}
+```
+
+### 5.2 Functional Endpoints (함수형 스타일)
+Java 8 람다식을 활용하여 라우팅과 요청 처리를 분리하는 방식입니다. `RouterFunction`과 `HandlerFunction`을 사용합니다.
+
+```java
+@Configuration
+public class UserRouter {
+
+    @Bean
+    public RouterFunction<ServerResponse> route(UserHandler handler) {
+        return RouterFunctions
+                .route(GET("/users/{id}"), handler::getUser)
+                .andRoute(GET("/users"), handler::getAllUsers);
+    }
+}
+
+@Component
+public class UserHandler {
+
+    private final UserRepository userRepository;
+
+    public UserHandler(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public Mono<ServerResponse> getUser(ServerRequest request) {
+        String id = request.pathVariable("id");
+        return userRepository.findById(id)
+                .flatMap(user -> ServerResponse.ok().bodyValue(user))
+                .switchIfEmpty(ServerResponse.notFound().build());
+    }
+
+    public Mono<ServerResponse> getAllUsers(ServerRequest request) {
+        return ServerResponse.ok().body(userRepository.findAll(), User.class);
+    }
+}
+```

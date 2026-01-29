@@ -6,7 +6,4 @@ nav:
       - DI & IoC: DI_IoC.md
       - Bean Lifecycle: Bean_Lifecycle.md
       - AOP: AOP.md
-  - Web Development (MVC):
-      - Spring MVC: SpringMVC.md
-  - Reactive Programming:
-      - Spring WebFlux: WebFlux.md
+  - Web Development: Web/
