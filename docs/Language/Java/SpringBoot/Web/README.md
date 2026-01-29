@@ -6,6 +6,7 @@ Spring Boot를 활용한 웹 개발은 크게 두 가지 기술 스택으로 나
 *   전통적인 서블릿 기반의 웹 프레임워크입니다.
 *   Blocking I/O 모델을 사용하며, 요청당 하나의 스레드(Thread-per-Request)를 할당합니다.
 *   안정성이 높고 디버깅이 쉬워 대부분의 엔터프라이즈 애플리케이션에서 사용됩니다.
+*   **[Filter vs Interceptor](Filter_vs_Interceptor.md)**: 공통 로직 처리를 위한 필터와 인터셉터의 차이 이해
 
 ## 2. Spring WebFlux (Reactive Stack)
 *   Spring 5.0부터 도입된 리액티브 웹 프레임워크입니다.
