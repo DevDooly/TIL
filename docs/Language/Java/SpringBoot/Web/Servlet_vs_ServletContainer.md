@@ -41,14 +41,8 @@
 ```mermaid
 graph TD
     Client["Client (Browser)"] -- HTTP Request --> Container["Servlet Container (Tomcat)"]
-    
-    subgraph Container
-        Thread["Worker Thread"]
-        Servlet["Servlet (Controller)"]
-    end
-    
-    Container -- Create Request/Response Objects --> Thread
-    Thread -- service() call --> Servlet
+    Container -- Create Request/Response --> Thread["Worker Thread"]
+    Thread -- service() --> Servlet["Servlet (Controller)"]
     Servlet -- Process Logic --> Servlet
     Servlet -- Return Response --> Thread
     Thread -- HTTP Response --> Client
