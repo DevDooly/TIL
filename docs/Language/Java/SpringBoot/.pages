@@ -6,4 +6,4 @@ nav:
       - DI & IoC: DI_IoC.md
       - Bean Lifecycle: Bean_Lifecycle.md
       - AOP: AOP.md
-  - Web Development: Web/
+  - Web

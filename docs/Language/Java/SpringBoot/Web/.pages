@@ -1,6 +1,6 @@
 title: Web Development (MVC & WebFlux)
 nav:
-  - README.md
-  - SpringMVC.md
-  - Filter_vs_Interceptor.md
-  - SpringWebFlux.md
+  - Overview: README.md
+  - Spring MVC: SpringMVC.md
+  - Filter vs Interceptor: Filter_vs_Interceptor.md
+  - Spring WebFlux: SpringWebFlux.md
