@@ -6,5 +6,5 @@ nav:
       - DI & IoC: DI_IoC.md
       - Bean Lifecycle: Bean_Lifecycle.md
       - AOP: AOP.md
-  - Web: Web/
-  - Data JPA: JPA/
+  - Web: Web
+  - Data JPA: JPA
