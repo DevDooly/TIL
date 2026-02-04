@@ -104,3 +104,49 @@ Pipeline 설정을 Jenkins 웹 UI에 직접 적지 않고, 프로젝트 소스 �
 4. **Script Path:** `Jenkinsfile` 입력.
 
 이렇게 설정하면 **코드 변경 시 빌드 절차도 함께 버전 관리**가 되며, 파이프라인 변경이 필요할 때 Jenkins UI에 접속할 필요 없이 코드만 수정하면 됩니다.
+
+---
+
+## 4. Monorepo 환경에서의 빌드 전략
+
+하나의 리포지토리에 여러 프로젝트(예: `backend`, `frontend`)가 공존하는 Monorepo 환경에서는 **변경된 프로젝트만 선별적으로 빌드**하는 것이 중요합니다.
+
+### `when { changeset }` 활용
+
+Jenkins Pipeline의 `when` 지시어와 `changeset` 조건을 사용하면 특정 경로의 파일이 변경되었을 때만 스테이지를 실행할 수 있습니다.
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('Backend Build') {
+            // backend 디렉토리 하위의 파일이 변경되었을 때만 실행
+            when {
+                changeset 'backend/**'
+            }
+            steps {
+                dir('backend') { // 작업 디렉토리 변경
+                    sh './gradlew build'
+                }
+            }
+        }
+
+        stage('Frontend Build') {
+            // frontend 디렉토리 하위의 파일이 변경되었을 때만 실행
+            when {
+                changeset 'frontend/**'
+            }
+            steps {
+                dir('frontend') {
+                    sh 'npm install && npm run build'
+                }
+            }
+        }
+    }
+}
+```
+
+### 주의사항
+- `changeset`은 SCM에서 가져온 변경 내역(changelog)을 기반으로 작동하므로, **Pipeline script from SCM** 방식으로 설정해야 정확하게 동작합니다.
+- 첫 빌드이거나 강제로 전체 빌드가 필요한 경우를 대비해 `when { anyOf { changeset '...'; expression { params.FORCE_BUILD } } }`와 같이 파라미터를 조합해서 사용하는 것이 좋습니다.
