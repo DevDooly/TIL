@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-05 08:48 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
 | 2026-02-05 08:47 | [Installation](docs/Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
 | 2026-02-05 08:44 | [README](docs/Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 | 2026-02-04 15:03 | [BDD](docs/ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
 | 2026-02-04 15:03 | [BDD](docs/Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
 | 2026-02-04 14:57 | [Change Remote URL HTTPS to SSH](docs/Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Pull Request vs Merge Request](docs/Tools/Git/Pull%20Request%20vs%20Merge%20Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -112,6 +112,7 @@
 * [**Overview**](docs/Infrastructure/README.md)
 * **ArgoCD**
   * [**Overview**](docs/Infrastructure/ArgoCD/README.md)
+  * [ArgoCD 실전 사용 예시 (App of Apps)](docs/Infrastructure/ArgoCD/Examples.md)
   * [ArgoCD 설치 가이드](docs/Infrastructure/ArgoCD/Installation.md)
   * [ArgoCD 사용 방법](docs/Infrastructure/ArgoCD/Usage.md)
 * **Docker**

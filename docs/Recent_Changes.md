@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-05 08:48 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
 | 2026-02-05 08:47 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
 | 2026-02-05 08:44 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 | 2026-02-04 15:03 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
@@ -53,4 +54,3 @@
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/AOP.md](Language/Java/SpringBoot/AOP.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/Bean_Lifecycle.md](Language/Java/SpringBoot/Bean_Lifecycle.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/DI_IoC.md](Language/Java/SpringBoot/DI_IoC.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
-| 2026-01-28 15:30 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
