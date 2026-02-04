@@ -110,6 +110,8 @@
 
 ## Infrastructure
 * [**Overview**](docs/Infrastructure/README.md)
+* **ArgoCD**
+  * [**Overview**](docs/Infrastructure/ArgoCD/README.md)
 * **Docker**
   * [**Overview**](docs/Infrastructure/Docker/README.md)
   * [Dockerfile](docs/Infrastructure/Docker/dockerfile.md)
