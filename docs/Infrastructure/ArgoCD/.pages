@@ -2,3 +2,4 @@ title: ArgoCD
 nav:
   - Introduction: README.md
   - Installation: Installation.md
+  - Usage: Usage.md
