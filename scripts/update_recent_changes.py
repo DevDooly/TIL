@@ -4,9 +4,20 @@ import re
 
 RECENT_CHANGES_FILE = "docs/Recent_Changes.md"
 README_FILE = "README.md"
+DOCS_DIR = "docs"
+
+# 대분류 표시 순서
+CATEGORY_ORDER = [
+    "Language",
+    "Web",
+    "Infrastructure",
+    "Data",
+    "ComputerScience",
+    "Tools",
+    "Life"
+]
 
 def get_git_log(limit=50):
-    # 최근 n개 커밋을 조회
     cmd = [
         "git", "log", "-n", str(limit),
         "--name-only",
@@ -31,9 +42,7 @@ def parse_log(lines, max_items=50):
             current_date = parts[1]
             current_message = parts[2]
         else:
-            # 파일 경로 라인
             file_path = line
-            # docs/ 폴더 내의 md 파일만 대상으로 함 (Recent_Changes.md 제외)
             if file_path.startswith("docs/") and file_path.endswith(".md") and "Recent_Changes.md" not in file_path:
                 parsed_items.append({
                     "date": current_date,
@@ -51,7 +60,7 @@ def update_recent_changes_md(items):
     content += "| :--- | :--- | :--- |\n"
     
     for item in items:
-        link_path = item['file_path'][5:] # docs/ 제거
+        link_path = item['file_path'][5:] 
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
         content += f"| {item['date']} | [{link_path}]({link_path}) | {safe_msg} |\n"
             
@@ -59,8 +68,7 @@ def update_recent_changes_md(items):
         f.write(content)
     print(f"Successfully generated {RECENT_CHANGES_FILE}")
 
-def update_readme_md(items, max_display=10):
-    # README에는 상위 n개만 표시
+def update_readme_recent(items, max_display=6):
     display_items = items[:max_display]
     
     new_content = "\n"
@@ -68,50 +76,147 @@ def update_readme_md(items, max_display=10):
     new_content += "| :--- | :--- | :--- |\n"
     
     for item in display_items:
-        # README에서는 docs/ 부터 전체 경로 사용하거나 상대 경로 조정 필요
-        # README.md 위치 기준 docs/는 올바른 상대 경로임
         link_path = item['file_path']
         display_name = os.path.basename(link_path).replace(".md", "").replace("_", " ")
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
         
-        # 커밋 메시지가 너무 길면 자르기
         if len(safe_msg) > 50:
             safe_msg = safe_msg[:50] + "..."
             
         new_content += f"| {item['date']} | [{display_name}]({link_path}) | {safe_msg} |\n"
     new_content += "\n"
 
+    update_file_section(README_FILE, "RECENT_CHANGES", new_content)
+
+def get_markdown_title(filepath):
     try:
-        with open(README_FILE, "r", encoding="utf-8") as f:
-            readme_content = f.read()
+        with open(filepath, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.strip().startswith('# '):
+                    return line.strip()[2:].strip()
+    except:
+        pass
+    return os.path.basename(filepath).replace(".md", "").replace("_", " ")
+
+def generate_toc_content():
+    content = ""
+    
+    # 1. 상단 요약 링크 생성
+    content += "### 📂 Categories\n"
+    for cat in CATEGORY_ORDER:
+        content += f"- [**{cat}**](#{cat.lower()})\n"
+    
+    # 순회하지 않은 나머지 디렉토리들도 요약에 추가할지 여부는 선택사항이나, 여기서는 주요 카테고리만.
+    content += "\n---\n\n"
+
+    # 2. 상세 트리 생성
+    # 주요 순서대로 먼저 처리
+    existing_dirs = set()
+    
+    for category in CATEGORY_ORDER:
+        dir_path = os.path.join(DOCS_DIR, category)
+        if os.path.exists(dir_path) and os.path.isdir(dir_path):
+            existing_dirs.add(category)
+            content += f"## {category}\n"
+            content += build_directory_tree(dir_path, level=0)
+            content += "\n"
+            
+    # 정의되지 않은 나머지 디렉토리 처리
+    for item in sorted(os.listdir(DOCS_DIR)):
+        if item in existing_dirs or item.startswith('.') or item == "assets" or item == "javascripts" or item == "search" or item == "stylesheets":
+            continue
         
-        # 정규표현식으로 마커 사이 교체
-        pattern = r"(<!-- RECENT_CHANGES_START -->)(.*?)(<!-- RECENT_CHANGES_END -->)"
+        dir_path = os.path.join(DOCS_DIR, item)
+        if os.path.isdir(dir_path):
+            content += f"## {item}\n"
+            content += build_directory_tree(dir_path, level=0)
+            content += "\n"
+            
+    return content
+
+def build_directory_tree(root_path, level):
+    text = ""
+    indent = "  " * level
+    
+    items = sorted(os.listdir(root_path))
+    
+    # 파일과 디렉토리 분리
+    files = []
+    dirs = []
+    
+    for item in items:
+        if item.startswith('.') or item == "assets":
+            continue
+            
+        full_path = os.path.join(root_path, item)
+        if os.path.isdir(full_path):
+            dirs.append(item)
+        elif item.endswith(".md") and item != "README.md" and item != ".pages":
+            files.append(item)
+            
+    # 파일 먼저 출력 (README 제외)
+    # 해당 디렉토리의 README.md가 있다면 그것을 섹션 설명이나 대표 링크로 쓸 수도 있지만,
+    # 여기서는 파일 목록에 포함하지 않거나 별도 처리.
+    # 보통 목차에서는 개별 문서 링크가 중요하므로 README.md는 제외하거나 'Overview'로 표시.
+    
+    # README.md 확인
+    readme_path = os.path.join(root_path, "README.md")
+    if os.path.exists(readme_path):
+        title = get_markdown_title(readme_path)
+        # 상대 경로 계산
+        rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
+        text += f"{indent}* [**Overview**]({rel_path})\n"
+
+    for f in files:
+        full_path = os.path.join(root_path, f)
+        title = get_markdown_title(full_path)
+        rel_path = os.path.relpath(full_path, os.path.dirname(README_FILE))
+        text += f"{indent}* [{title}]({rel_path})\n"
         
-        # re.DOTALL: .이 개행 문자를 포함하도록 설정
-        if re.search(pattern, readme_content, re.DOTALL):
+    for d in dirs:
+        text += f"{indent}* **{d}**\n"
+        text += build_directory_tree(os.path.join(root_path, d), level + 1)
+        
+    return text
+
+def update_file_section(filepath, marker_name, new_content):
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+        
+        start_marker = f"<!-- {marker_name}_START -->"
+        end_marker = f"<!-- {marker_name}_END -->"
+        
+        pattern = f"({start_marker})(.*?)({end_marker})"
+        
+        if re.search(pattern, content, re.DOTALL):
             updated_content = re.sub(
                 pattern, 
                 f"\\1{new_content}\\3", 
-                readme_content, 
+                content, 
                 flags=re.DOTALL
             )
             
-            with open(README_FILE, "w", encoding="utf-8") as f:
+            with open(filepath, "w", encoding="utf-8") as f:
                 f.write(updated_content)
-            print(f"Successfully updated {README_FILE}")
+            print(f"Successfully updated section {marker_name} in {filepath}")
         else:
-            print(f"Warning: Markers not found in {README_FILE}")
+            print(f"Warning: Markers {marker_name} not found in {filepath}")
             
     except FileNotFoundError:
-        print(f"Error: {README_FILE} not found.")
+        print(f"Error: {filepath} not found.")
 
 def main():
-    lines = get_git_log(100) # 충분히 가져옴
-    items = parse_log(lines, 50) # 최대 50개 파싱
+    # 1. Recent Changes 처리
+    lines = get_git_log(100)
+    items = parse_log(lines, 50)
     
     update_recent_changes_md(items)
-    update_readme_md(items, 10) # README에는 10개만
+    update_readme_recent(items, 6) # 6개로 제한
+    
+    # 2. TOC 처리
+    toc_content = generate_toc_content()
+    update_file_section(README_FILE, "TOC", "\n" + toc_content)
 
 if __name__ == "__main__":
     main()
