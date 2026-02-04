@@ -85,5 +85,14 @@ push           -- update remote refs along with associated objects
 
 사용 가능한 모든 명령을 표시하려면 `git` + `Tab` 을 사용한다.
 
+## Common Terminology
+
+### Pull Request vs Merge Request
+기본적으로 이 두 용어는 **브랜치의 변경 사항을 다른 브랜치(주로 main/master)에 병합해달라고 요청하는 것**으로, 본질적으로 동일한 개념이다.
+
+- **Pull Request (PR):** GitHub, Bitbucket 등에서 사용하는 용어. "내 변경 사항을 당신의 저장소로 당겨가세요(Pull)"라는 의미.
+- **Merge Request (MR):** GitLab에서 사용하는 용어. "내 변경 사항을 병합(Merge)해주세요"라는 의미.
+
 ## References
 * https://about.gitlab.com/blog/2020/04/07/15-git-tips-improve-workflow/
+
