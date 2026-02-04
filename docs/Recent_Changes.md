@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-05 08:44 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 | 2026-02-04 15:03 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
 | 2026-02-04 15:03 | [Tools/Methodology/BDD.md](Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
 | 2026-02-04 14:57 | [Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md](Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
@@ -53,4 +54,3 @@
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/DI_IoC.md](Language/Java/SpringBoot/DI_IoC.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
 | 2026-01-28 15:30 | [Language/Java/SpringBoot/SpringBoot_Intro.md](Language/Java/SpringBoot/SpringBoot_Intro.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
-| 2026-01-28 15:24 | [Language/NodeJs.md](Language/NodeJs.md) | 네비게이션 중복 수정 및 Java 폴더 구조 개편 |
