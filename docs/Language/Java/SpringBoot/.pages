@@ -7,4 +7,6 @@ nav:
       - Bean Lifecycle: Bean_Lifecycle.md
       - AOP: AOP.md
   - Web: Web/
-  - Data JPA: JPA/
+  - Data JPA:
+      - Overview: JPA/README.md
+      - Persistence Context: JPA/Persistence_Context.md
