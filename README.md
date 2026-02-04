@@ -3,6 +3,26 @@
 
 ---
 
+## 🕒 최근 변경 사항 (Recent Changes)
+<!-- RECENT_CHANGES_START -->
+| 날짜 | 문서 | 설명 |
+| :--- | :--- | :--- |
+| 2026-02-04 15:03 | [BDD](docs/ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
+| 2026-02-04 15:03 | [BDD](docs/Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
+| 2026-02-04 14:57 | [Change Remote URL HTTPS to SSH](docs/Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Pull Request vs Merge Request](docs/Tools/Git/Pull Request vs Merge Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Remote Settings](docs/Tools/Git/Remote_Settings.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Submodules](docs/Tools/Git/Submodules.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Tips](docs/Tools/Git/Tips.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [submodules recursive Clone](docs/Tools/Git/submodules_recursive Clone.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:51 | [Monorepo vs Polyrepo](docs/Tools/Git/Monorepo_vs_Polyrepo.md) | feat(docs): Monorepo vs Polyrepo 비교 문서 추가 |
+| 2026-02-04 14:17 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo 빌드 전략 예제 추가 |
+
+<!-- RECENT_CHANGES_END -->
+[👉 전체 변경 로그 보기](docs/Recent_Changes.md)
+
+---
+
 ## 목차 (Table of Contents)
 
 ### 📂 1. Language (언어 및 프레임워크)
