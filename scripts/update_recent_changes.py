@@ -1,6 +1,7 @@
 import subprocess
 import os
 import re
+import urllib.parse
 
 RECENT_CHANGES_FILE = "docs/Recent_Changes.md"
 README_FILE = "README.md"
@@ -61,8 +62,11 @@ def update_recent_changes_md(items):
     
     for item in items:
         link_path = item['file_path'][5:] 
+        # URL encode and ensure forward slashes
+        encoded_path = urllib.parse.quote(link_path.replace(os.sep, '/'))
+        
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
-        content += f"| {item['date']} | [{link_path}]({link_path}) | {safe_msg} |\n"
+        content += f"| {item['date']} | [{link_path}]({encoded_path}) | {safe_msg} |\n"
             
     with open(RECENT_CHANGES_FILE, "w", encoding="utf-8") as f:
         f.write(content)
@@ -78,12 +82,16 @@ def update_readme_recent(items, max_display=6):
     for item in display_items:
         link_path = item['file_path']
         display_name = os.path.basename(link_path).replace(".md", "").replace("_", " ")
+        
+        # URL encode and ensure forward slashes
+        encoded_path = urllib.parse.quote(link_path.replace(os.sep, '/'))
+        
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
         
         if len(safe_msg) > 50:
             safe_msg = safe_msg[:50] + "..."
             
-        new_content += f"| {item['date']} | [{display_name}]({link_path}) | {safe_msg} |\n"
+        new_content += f"| {item['date']} | [{display_name}]({encoded_path}) | {safe_msg} |\n"
     new_content += "\n"
 
     update_file_section(README_FILE, "RECENT_CHANGES", new_content)
@@ -156,7 +164,7 @@ def build_directory_tree(root_path, level):
             
     # 파일 먼저 출력 (README 제외)
     # 해당 디렉토리의 README.md가 있다면 그것을 섹션 설명이나 대표 링크로 쓸 수도 있지만,
-    # 여기서는 파일 목록에 포함하지 않거나 별도 처리.
+    # 여기서는 파일 목록에 포함하지 않거나 별도 처리. 
     # 보통 목차에서는 개별 문서 링크가 중요하므로 README.md는 제외하거나 'Overview'로 표시.
     
     # README.md 확인
@@ -165,20 +173,23 @@ def build_directory_tree(root_path, level):
         title = get_markdown_title(readme_path)
         # 상대 경로 계산
         rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [**Overview**]({rel_path})\n"
+        # URL encode and ensure forward slashes
+        encoded_path = urllib.parse.quote(rel_path.replace(os.sep, '/'))
+        text += f"{indent}* [**Overview**]({encoded_path})\n"
 
     for f in files:
         full_path = os.path.join(root_path, f)
         title = get_markdown_title(full_path)
         rel_path = os.path.relpath(full_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [{title}]({rel_path})\n"
+        # URL encode and ensure forward slashes
+        encoded_path = urllib.parse.quote(rel_path.replace(os.sep, '/'))
+        text += f"{indent}* [{title}]({encoded_path})\n"
         
     for d in dirs:
         text += f"{indent}* **{d}**\n"
         text += build_directory_tree(os.path.join(root_path, d), level + 1)
         
     return text
-
 def update_file_section(filepath, marker_name, new_content):
     try:
         with open(filepath, "r", encoding="utf-8") as f:

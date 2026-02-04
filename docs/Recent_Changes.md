@@ -7,11 +7,11 @@
 | 2026-02-04 15:03 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
 | 2026-02-04 15:03 | [Tools/Methodology/BDD.md](Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
 | 2026-02-04 14:57 | [Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md](Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/Pull Request vs Merge Request.md](Tools/Git/Pull Request vs Merge Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Tools/Git/Pull Request vs Merge Request.md](Tools/Git/Pull%20Request%20vs%20Merge%20Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/Remote_Settings.md](Tools/Git/Remote_Settings.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/Submodules.md](Tools/Git/Submodules.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/Tips.md](Tools/Git/Tips.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/submodules_recursive Clone.md](Tools/Git/submodules_recursive Clone.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
+| 2026-02-04 14:57 | [Tools/Git/submodules_recursive Clone.md](Tools/Git/submodules_recursive%20Clone.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:51 | [Tools/Git/Monorepo_vs_Polyrepo.md](Tools/Git/Monorepo_vs_Polyrepo.md) | feat(docs): Monorepo vs Polyrepo 비교 문서 추가 |
 | 2026-02-04 14:17 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo 빌드 전략 예제 추가 |
 | 2026-02-04 14:07 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | feat(docs): Jenkins 설치 가이드 분리 및 K8s 설치 방법 추가 |
