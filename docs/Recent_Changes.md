@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:13 | [Language/Java/Versions/README.md](Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
 | 2026-02-05 09:38 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |
 | 2026-02-05 08:49 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | feat(docs): ArgoCD 실전 예제(App of Apps) 문서 추가 |
 | 2026-02-05 08:48 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
@@ -53,4 +54,3 @@
 | 2026-01-28 19:26 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | Spring WebFlux 문서 추가 |
 | 2026-01-28 19:26 | [Language/Java/SpringBoot/WebFlux.md](Language/Java/SpringBoot/WebFlux.md) | Spring WebFlux 문서 추가 |
 | 2026-01-28 15:30 | [Language/Java/README.md](Language/Java/README.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |
-| 2026-01-28 15:30 | [Language/Java/SpringBoot/AOP.md](Language/Java/SpringBoot/AOP.md) | Spring -&gt; SpringBoot 폴더명 변경 및 구조 개선 |

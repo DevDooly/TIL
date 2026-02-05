@@ -1,3 +1,4 @@
 title: Java Version History
 nav:
   - Overview: README.md
+  - Java 8 (Lambda & Stream): Java8.md
