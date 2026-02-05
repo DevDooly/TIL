@@ -1,11 +1,11 @@
 title: Java
 nav:
-  - Index: README.md
-  - Versions
-  - Functional Programming: Functional/
-  - Basic & Style:
-      - Style Guide: Google_Java_Style_Guide.md
-  - JVM Internals:
-      - Memory Structure: Memory.md
-      - Garbage Collection: Garbage_Collection.md
-  - SpringBoot
+- Index: README.md
+- Versions
+- Functional Programming: Functional
+- Basic & Style:
+  - Style Guide: Google_Java_Style_Guide.md
+- JVM Internals:
+  - Memory Structure: Memory.md
+  - Garbage Collection: Garbage_Collection.md
+- SpringBoot
