@@ -1,7 +1,7 @@
 title: Java
 nav:
   - Index: README.md
-  - Versions: Versions/
+  - Versions
   - Basic & Style:
       - Style Guide: Google_Java_Style_Guide.md
   - JVM Internals:
