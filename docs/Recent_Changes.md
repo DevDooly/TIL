@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:15 | [Language/Java/Versions/Java11.md](Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
+| 2026-02-06 08:15 | [Language/Java/Versions/Java17.md](Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
+| 2026-02-06 08:15 | [Language/Java/Versions/Java21.md](Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:14 | [Language/Java/Versions/Java8.md](Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |
 | 2026-02-06 08:13 | [Language/Java/Versions/README.md](Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
 | 2026-02-05 09:38 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |
@@ -51,6 +54,3 @@
 | 2026-01-29 17:40 | [Language/Java/SpringBoot/SpringMVC.md](Language/Java/SpringBoot/SpringMVC.md) | Spring MVC 패턴 문서 추가 |
 | 2026-01-29 08:15 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | JWT 내부 동작 원리(서명 생성/검증) 상세 추가 |
 | 2026-01-29 08:11 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | JWT 및 Session/Cookie 비교 문서 업데이트 |
-| 2026-01-28 19:27 | [Language/Java/SpringBoot/WebFlux.md](Language/Java/SpringBoot/WebFlux.md) | WebFlux 문서 Mermaid 문법 오류 수정 |
-| 2026-01-28 19:26 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | Spring WebFlux 문서 추가 |
-| 2026-01-28 19:26 | [Language/Java/SpringBoot/WebFlux.md](Language/Java/SpringBoot/WebFlux.md) | Spring WebFlux 문서 추가 |

@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:15 | [Java11](docs/Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
+| 2026-02-06 08:15 | [Java17](docs/Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
+| 2026-02-06 08:15 | [Java21](docs/Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:14 | [Java8](docs/Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |
 | 2026-02-06 08:13 | [README](docs/Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
 | 2026-02-05 09:38 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |
-| 2026-02-05 08:49 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | feat(docs): ArgoCD 실전 예제(App of Apps) 문서 추가 |
-| 2026-02-05 08:48 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
-| 2026-02-05 08:47 | [Installation](docs/Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -39,6 +39,11 @@
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
+  * **Functional**
+    * [**Overview**](docs/Language/Java/Functional/README.md)
+    * [Lambda Expressions (람다 표현식)](docs/Language/Java/Functional/Lambda.md)
+    * [Optional](docs/Language/Java/Functional/Optional.md)
+    * [Stream API](docs/Language/Java/Functional/Stream.md)
   * **SpringBoot**
     * [**Overview**](docs/Language/Java/SpringBoot/README.md)
     * [Aspect-Oriented Programming (AOP)](docs/Language/Java/SpringBoot/AOP.md)

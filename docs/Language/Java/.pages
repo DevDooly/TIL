@@ -2,6 +2,7 @@ title: Java
 nav:
   - Index: README.md
   - Versions
+  - Functional Programming: Functional/
   - Basic & Style:
       - Style Guide: Google_Java_Style_Guide.md
   - JVM Internals:
