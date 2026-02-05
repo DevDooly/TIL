@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:14 | [Java8](docs/Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |
 | 2026-02-06 08:13 | [README](docs/Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
 | 2026-02-05 09:38 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |
 | 2026-02-05 08:49 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | feat(docs): ArgoCD 실전 예제(App of Apps) 문서 추가 |
 | 2026-02-05 08:48 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
 | 2026-02-05 08:47 | [Installation](docs/Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
-| 2026-02-05 08:44 | [README](docs/Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -56,6 +56,9 @@
       * [Spring WebFlux (Reactive Stack)](docs/Language/Java/SpringBoot/Web/SpringWebFlux.md)
   * **Versions**
     * [**Overview**](docs/Language/Java/Versions/README.md)
+    * [Java 11: The Cloud Native LTS Standard](docs/Language/Java/Versions/Java11.md)
+    * [Java 17: Modernization and Productivity](docs/Language/Java/Versions/Java17.md)
+    * [Java 21: Next-Gen Concurrency and Performance](docs/Language/Java/Versions/Java21.md)
     * [Java 8: Modern Java의 시작](docs/Language/Java/Versions/Java8.md)
 * **NodeJs**
   * [**Overview**](docs/Language/NodeJs/README.md)

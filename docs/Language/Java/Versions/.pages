@@ -2,3 +2,6 @@ title: Java Version History
 nav:
   - Overview: README.md
   - Java 8 (Lambda & Stream): Java8.md
+  - Java 11 (Standard LTS): Java11.md
+  - Java 17 (Records & Sealed): Java17.md
+  - Java 21 (Virtual Threads): Java21.md
