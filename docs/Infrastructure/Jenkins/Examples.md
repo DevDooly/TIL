@@ -115,6 +115,7 @@ Pipeline 설정을 Jenkins 웹 UI에 직접 적지 않고, 프로젝트 소스 �
 
 Jenkins Pipeline의 `when` 지시어와 `changeset` 조건을 사용하면 특정 경로의 파일이 변경되었을 때만 스테이지를 실행할 수 있습니다.
 
+**Gradle 기반 멀티 모듈 예제:**
 ```groovy
 pipeline {
     agent any
@@ -140,6 +141,47 @@ pipeline {
             steps {
                 dir('frontend') {
                     sh 'npm install && npm run build'
+                }
+            }
+        }
+    }
+}
+```
+
+### Maven 기반 Spring Boot (Monorepo) 예제
+
+Monorepo에 여러 Spring Boot 서비스가 있고, **Maven**을 사용하는 경우의 예시입니다. `mvn -pl` 옵션을 사용하면 특정 모듈만 빌드할 수도 있습니다.
+
+```groovy
+pipeline {
+    agent any
+
+    tools {
+        maven 'maven-3.8'
+        jdk 'openjdk-17'
+    }
+
+    stages {
+        stage('Service A Build') {
+            when {
+                changeset 'services/service-a/**'
+            }
+            steps {
+                dir('services/service-a') {
+                    // Maven Wrapper 사용 시: ./mvnw clean package
+                    // Maven Tool 사용 시: mvn clean package
+                    sh 'mvn clean package -DskipTests' 
+                }
+            }
+        }
+
+        stage('Service B Build') {
+            when {
+                changeset 'services/service-b/**'
+            }
+            steps {
+                dir('services/service-b') {
+                    sh 'mvn clean package -DskipTests'
                 }
             }
         }

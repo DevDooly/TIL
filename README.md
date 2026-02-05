@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-05 08:49 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | feat(docs): ArgoCD 실전 예제(App of Apps) 문서 추가 |
 | 2026-02-05 08:48 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
 | 2026-02-05 08:47 | [Installation](docs/Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
 | 2026-02-05 08:44 | [README](docs/Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 | 2026-02-04 15:03 | [BDD](docs/ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
 | 2026-02-04 15:03 | [BDD](docs/Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/So... |
-| 2026-02-04 14:57 | [Change Remote URL HTTPS to SSH](docs/Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
