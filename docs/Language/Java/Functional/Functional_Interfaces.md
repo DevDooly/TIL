@@ -63,8 +63,9 @@ System.out.println(lengthMapper.apply("Java")); // 4
 
 ## 3. 그 외 다양한 인터페이스
 
-### Operator (연산자)
+### 3.1 Operator (연산자)
 `Function`의 특수한 형태로, 입력과 출력의 타입이 동일한 경우입니다.
+
 - **UnaryOperator&lt;T&gt;:** `T -> T` (단항 연산)
 - **BinaryOperator&lt;T&gt;:** `(T, T) -> T` (이항 연산)
 
@@ -72,8 +73,9 @@ System.out.println(lengthMapper.apply("Java")); // 4
 UnaryOperator<Integer> square = n -> n * n;
 ```
 
-### Two-Arity (인자가 2개인 경우)
+### 3.2 Two-Arity (인자가 2개인 경우)
 접두사 `Bi`가 붙습니다.
+
 - **BiPredicate&lt;T, U&gt;:** `(T, U) -> boolean`
 - **BiConsumer&lt;T, U&gt;:** `(T, U) -> void`
 - **BiFunction&lt;T, U, R&gt;:** `(T, U) -> R`
@@ -82,7 +84,7 @@ UnaryOperator<Integer> square = n -> n * n;
 BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
 ```
 
-### Primitive Specializations (기본형 특화)
+### 3.3 Primitive Specializations (기본형 특화)
 박싱/언박싱 오버헤드를 줄이기 위해 기본형(int, long, double)을 직접 다루는 인터페이스들입니다.
 - `IntPredicate`, `LongConsumer`, `DoubleFunction` 등
 
