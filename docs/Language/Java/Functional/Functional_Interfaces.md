@@ -23,7 +23,7 @@ public interface MyFunctionalInterface {
 
 Java에서는 자주 사용되는 함수형 인터페이스를 표준 라이브러리로 제공합니다.
 
-### 2.1 Predicate\<T\>
+### 2.1 Predicate&lt;T&gt;
 - **설명:** 입력을 받아 조건을 검사하고 `boolean`을 반환합니다.
 - **메서드:** `boolean test(T t)`
 
@@ -32,7 +32,7 @@ Predicate<String> isEmpty = s -> s.isEmpty();
 System.out.println(isEmpty.test("")); // true
 ```
 
-### 2.2 Consumer\<T\>
+### 2.2 Consumer&lt;T&gt;
 - **설명:** 입력을 받아서 소비하고, 반환값은 없습니다. (Side-effect 발생)
 - **메서드:** `void accept(T t)`
 
@@ -41,7 +41,7 @@ Consumer<String> printer = s -> System.out.println(s);
 printer.accept("Hello"); // Hello 출력
 ```
 
-### 2.3 Supplier\<T\>
+### 2.3 Supplier&lt;T&gt;
 - **설명:** 입력 없이 값을 반환(공급)합니다. Lazy Evaluation에 자주 사용됩니다.
 - **메서드:** `T get()`
 
@@ -50,7 +50,7 @@ Supplier<Double> random = () -> Math.random();
 System.out.println(random.get());
 ```
 
-### 2.4 Function\<T, R\>
+### 2.4 Function&lt;T, R&gt;
 - **설명:** 입력(T)을 받아 출력(R)으로 매핑(변환)합니다.
 - **메서드:** `R apply(T t)`
 
@@ -65,8 +65,8 @@ System.out.println(lengthMapper.apply("Java")); // 4
 
 ### Operator (연산자)
 `Function`의 특수한 형태로, 입력과 출력의 타입이 동일한 경우입니다.
-- **UnaryOperator\<T\>:** `T -> T` (단항 연산)
-- **BinaryOperator\<T\>:** `(T, T) -> T` (이항 연산)
+- **UnaryOperator&lt;T&gt;:** `T -> T` (단항 연산)
+- **BinaryOperator&lt;T&gt;:** `(T, T) -> T` (이항 연산)
 
 ```java
 UnaryOperator<Integer> square = n -> n * n;
@@ -74,9 +74,9 @@ UnaryOperator<Integer> square = n -> n * n;
 
 ### Two-Arity (인자가 2개인 경우)
 접두사 `Bi`가 붙습니다.
-- **BiPredicate\<T, U\>:** `(T, U) -> boolean`
-- **BiConsumer\<T, U\>:** `(T, U) -> void`
-- **BiFunction\<T, U, R\>:** `(T, U) -> R`
+- **BiPredicate&lt;T, U&gt;:** `(T, U) -> boolean`
+- **BiConsumer&lt;T, U&gt;:** `(T, U) -> void`
+- **BiFunction&lt;T, U, R&gt;:** `(T, U) -> R`
 
 ```java
 BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
