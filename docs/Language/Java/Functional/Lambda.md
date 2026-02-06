@@ -35,10 +35,10 @@ Comparator<Integer> comparator = (a, b) -> a.compareTo(b);
 
 | 인터페이스 | 추상 메서드 | 설명 | 예제 |
 | :--- | :--- | :--- | :--- |
-| **Predicate<T>** | `boolean test(T t)` | 조건을 검사하여 `true`/`false` 반환 | `t -> t > 0` |
-| **Consumer<T>** | `void accept(T t)` | 입력을 받아 소비 (반환값 없음) | `t -> System.out.println(t)` |
-| **Supplier<T>** | `T get()` | 입력 없이 값을 반환 (공급) | `() -> "Hello"` |
-| **Function<T, R>** | `R apply(T t)` | 입력을 받아 다른 타입으로 변환 | `t -> t.length()` |
+| **Predicate&lt;T&gt;** | `boolean test(T t)` | 조건을 검사하여 `true`/`false` 반환 | `t -> t > 0` |
+| **Consumer&lt;T&gt;** | `void accept(T t)` | 입력을 받아 소비 (반환값 없음) | `t -> System.out.println(t)` |
+| **Supplier&lt;T&gt;** | `T get()` | 입력 없이 값을 반환 (공급) | `() -> "Hello"` |
+| **Function&lt;T, R&gt;** | `R apply(T t)` | 입력을 받아 다른 타입으로 변환 | `t -> t.length()` |
 
 ---
 
