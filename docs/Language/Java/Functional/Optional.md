@@ -1,6 +1,6 @@
 # Optional
 
-**Optional<T>**은 null이 될 수 있는 객체를 감싸는 Wrapper 클래스입니다. Java 8에서 도입되었으며, 지긋지긋한 `NullPointerException` (NPE)을 방지하고 null 체크 로직을 표준화하기 위해 만들어졌습니다.
+**Optional&lt;T&gt;**은 null이 될 수 있는 객체를 감싸는 Wrapper 클래스입니다. Java 8에서 도입되었으며, 지긋지긋한 `NullPointerException` (NPE)을 방지하고 null 체크 로직을 표준화하기 위해 만들어졌습니다.
 
 ## 1. Optional 생성
 
