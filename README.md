@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:52 | [Lambda](docs/Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [Optional](docs/Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [README](docs/Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [Stream](docs/Language/Java/Functional/Stream.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:15 | [Java11](docs/Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:15 | [Java17](docs/Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
-| 2026-02-06 08:15 | [Java21](docs/Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
-| 2026-02-06 08:14 | [Java8](docs/Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |
-| 2026-02-06 08:13 | [README](docs/Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
-| 2026-02-05 09:38 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -41,6 +41,7 @@
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
   * **Functional**
     * [**Overview**](docs/Language/Java/Functional/README.md)
+    * [Functional Interfaces (함수형 인터페이스)](docs/Language/Java/Functional/Functional_Interfaces.md)
     * [Lambda Expressions (람다 표현식)](docs/Language/Java/Functional/Lambda.md)
     * [Optional](docs/Language/Java/Functional/Optional.md)
     * [Stream API](docs/Language/Java/Functional/Stream.md)

@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-06 08:52 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [Language/Java/Functional/README.md](Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
+| 2026-02-06 08:52 | [Language/Java/Functional/Stream.md](Language/Java/Functional/Stream.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:15 | [Language/Java/Versions/Java11.md](Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:15 | [Language/Java/Versions/Java17.md](Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:15 | [Language/Java/Versions/Java21.md](Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
@@ -50,7 +54,3 @@
 | 2026-01-30 08:52 | [Language/Java/SpringBoot/Web/SpringWebFlux.md](Language/Java/SpringBoot/Web/SpringWebFlux.md) | docs: Spring Web 구조 재편성 및 WebFlux 예제 추가 |
 | 2026-01-30 08:48 | [Tools/Terminal/README.md](Tools/Terminal/README.md) | docs: tmux 사용법 추가 및 Terminal 도구 카테고리 생성 |
 | 2026-01-30 08:48 | [Tools/Terminal/Tmux.md](Tools/Terminal/Tmux.md) | docs: tmux 사용법 추가 및 Terminal 도구 카테고리 생성 |
-| 2026-01-29 17:40 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | Spring MVC 패턴 문서 추가 |
-| 2026-01-29 17:40 | [Language/Java/SpringBoot/SpringMVC.md](Language/Java/SpringBoot/SpringMVC.md) | Spring MVC 패턴 문서 추가 |
-| 2026-01-29 08:15 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | JWT 내부 동작 원리(서명 생성/검증) 상세 추가 |
-| 2026-01-29 08:11 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | JWT 및 Session/Cookie 비교 문서 업데이트 |

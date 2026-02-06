@@ -2,5 +2,6 @@ title: Functional Programming (Stream & Lambda)
 nav:
   - Overview: README.md
   - Lambda & Interface: Lambda.md
+  - Functional Interfaces: Functional_Interfaces.md
   - Stream API: Stream.md
   - Optional: Optional.md
