@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-06 10:50 | [Functional Interfaces](docs/Language/Java/Functional/Functional_Interfaces.md) | feat(docs): Java Functional Interfaces 상세 문서 추가 |
 | 2026-02-06 08:52 | [Lambda](docs/Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Optional](docs/Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [README](docs/Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Stream](docs/Language/Java/Functional/Stream.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:15 | [Java11](docs/Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
-| 2026-02-06 08:15 | [Java17](docs/Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)

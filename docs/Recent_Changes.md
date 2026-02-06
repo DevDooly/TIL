@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-06 10:50 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | feat(docs): Java Functional Interfaces 상세 문서 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/README.md](Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
@@ -53,4 +54,3 @@
 | 2026-01-30 08:52 | [Language/Java/SpringBoot/Web/SpringMVC.md](Language/Java/SpringBoot/Web/SpringMVC.md) | docs: Spring Web 구조 재편성 및 WebFlux 예제 추가 |
 | 2026-01-30 08:52 | [Language/Java/SpringBoot/Web/SpringWebFlux.md](Language/Java/SpringBoot/Web/SpringWebFlux.md) | docs: Spring Web 구조 재편성 및 WebFlux 예제 추가 |
 | 2026-01-30 08:48 | [Tools/Terminal/README.md](Tools/Terminal/README.md) | docs: tmux 사용법 추가 및 Terminal 도구 카테고리 생성 |
-| 2026-01-30 08:48 | [Tools/Terminal/Tmux.md](Tools/Terminal/Tmux.md) | docs: tmux 사용법 추가 및 Terminal 도구 카테고리 생성 |
