@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-09 15:16 | [AI/OpenClaw.md](AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-09 15:16 | [AI/OpenCode.md](AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-09 15:16 | [AI/README.md](AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-06 14:10 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 리스트 렌더링 문제 해결 |
 | 2026-02-06 13:55 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | fix(docs): Lambda.md 테이블 내 제네릭 타입 표기 수정 (재시도) |
 | 2026-02-06 13:47 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | fix(docs): Functional 문서 전반의 제네릭 타입 렌더링 오류 수정 |
 | 2026-02-06 13:44 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 문서 제네릭 타입 표기 재수정 |
@@ -50,7 +54,3 @@
 | 2026-01-30 08:57 | [ComputerScience/README.md](ComputerScience/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
 | 2026-01-30 08:57 | [Data/README.md](Data/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
 | 2026-01-30 08:57 | [Infrastructure/README.md](Infrastructure/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
-| 2026-01-30 08:57 | [Tools/README.md](Tools/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
-| 2026-01-30 08:57 | [Web/README.md](Web/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
-| 2026-01-30 08:55 | [Language/Java/README.md](Language/Java/README.md) | docs: Java 폴더 목차 스타일 변경 (Python 폴더와 통일) |
-| 2026-01-30 08:52 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | docs: Spring Web 구조 재편성 및 WebFlux 예제 추가 |

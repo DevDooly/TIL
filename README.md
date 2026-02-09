@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-09 15:16 | [OpenClaw](docs/AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-09 15:16 | [OpenCode](docs/AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-09 15:16 | [README](docs/AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
+| 2026-02-06 14:10 | [Functional Interfaces](docs/Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 리스트 렌더링 문제 해결 |
 | 2026-02-06 13:55 | [Lambda](docs/Language/Java/Functional/Lambda.md) | fix(docs): Lambda.md 테이블 내 제네릭 타입 표기 수정 (재시도) |
 | 2026-02-06 13:47 | [Optional](docs/Language/Java/Functional/Optional.md) | fix(docs): Functional 문서 전반의 제네릭 타입 렌더링 오류 수정 |
-| 2026-02-06 13:44 | [Functional Interfaces](docs/Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 문서 제네릭 타입 표기 재수정 |
-| 2026-02-06 10:50 | [Functional Interfaces](docs/Language/Java/Functional/Functional_Interfaces.md) | feat(docs): Java Functional Interfaces 상세 문서 추가 |
-| 2026-02-06 08:52 | [Lambda](docs/Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
-| 2026-02-06 08:52 | [Optional](docs/Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -236,6 +236,11 @@
 * [Development Trends](docs/Life/Trends.md)
 * **Career**
   * [Reference Check(평판 조회)](docs/Life/Career/Reference%20Check.md)
+
+## AI
+* [**Overview**](docs/AI/README.md)
+* [OpenClaw](docs/AI/OpenClaw.md)
+* [OpenCode](docs/AI/OpenCode.md)
 
 <!-- TOC_END -->
 
