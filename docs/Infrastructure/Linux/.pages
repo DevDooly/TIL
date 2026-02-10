@@ -1,6 +1,7 @@
 title: Linux
 nav:
   - Index: README.md
+  - Initial Setup: Initial_Setup.md
   - Concepts:
       - POSIX: POSIX.md
       - I/O Streams: Stdin, stdout, stderr.md

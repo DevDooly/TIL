@@ -142,6 +142,7 @@
   * [Jenkins 사용 방법](docs/Infrastructure/Jenkins/Usage.md)
 * **Linux**
   * [**Overview**](docs/Infrastructure/Linux/README.md)
+  * [Ubuntu Server 초기 셋팅 가이드](docs/Infrastructure/Linux/Initial_Setup.md)
   * [Logrotate (로그로테이트)](docs/Infrastructure/Linux/Logrotate.md)
   * [POSIX (Portable Operating System Interface)](docs/Infrastructure/Linux/POSIX.md)
   * [Single Quote vs Double Quote (Bash)](docs/Infrastructure/Linux/Single%20Quotation%20vs%20Double%20Quotation%20in%20bash.md)
