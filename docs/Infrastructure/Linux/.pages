@@ -8,6 +8,7 @@ nav:
   - Commands & Tools:
       - Crontab: crontab.md
       - Logrotate: Logrotate.md
+      - Fail2Ban: Fail2Ban.md
       - Quotes: Single Quotation vs Double Quotation in bash.md
   - Tips: Tips
   - Etc: TL;DR.md

@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-10 14:42 | [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
+| 2026-02-10 14:42 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
+| 2026-02-10 14:40 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
 | 2026-02-09 15:16 | [OpenClaw](docs/AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 | 2026-02-09 15:16 | [OpenCode](docs/AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 | 2026-02-09 15:16 | [README](docs/AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
-| 2026-02-06 14:10 | [Functional Interfaces](docs/Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 리스트 렌더링 문제 해결 |
-| 2026-02-06 13:55 | [Lambda](docs/Language/Java/Functional/Lambda.md) | fix(docs): Lambda.md 테이블 내 제네릭 타입 표기 수정 (재시도) |
-| 2026-02-06 13:47 | [Optional](docs/Language/Java/Functional/Optional.md) | fix(docs): Functional 문서 전반의 제네릭 타입 렌더링 오류 수정 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -142,6 +142,7 @@
   * [Jenkins 사용 방법](docs/Infrastructure/Jenkins/Usage.md)
 * **Linux**
   * [**Overview**](docs/Infrastructure/Linux/README.md)
+  * [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md)
   * [Ubuntu Server 초기 셋팅 가이드](docs/Infrastructure/Linux/Initial_Setup.md)
   * [Logrotate (로그로테이트)](docs/Infrastructure/Linux/Logrotate.md)
   * [POSIX (Portable Operating System Interface)](docs/Infrastructure/Linux/POSIX.md)

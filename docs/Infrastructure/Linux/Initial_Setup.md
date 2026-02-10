@@ -159,3 +159,11 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```bash
 sudo apt install -y net-tools htop curl wget vim git unzip
 ```
+
+---
+
+## 8. 보안 강화 (Fail2Ban)
+
+로그인 실패가 반복되는 IP를 자동으로 차단하여 무차별 대입 공격(Brute Force)을 방어하려면 **Fail2Ban**을 설치하는 것이 좋습니다.
+
+👉 [**Fail2Ban 설치 및 설정 가이드 바로가기**](Fail2Ban.md)

@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-10 14:42 | [Infrastructure/Linux/Fail2Ban.md](Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
+| 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
+| 2026-02-10 14:40 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
 | 2026-02-09 15:16 | [AI/OpenClaw.md](AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 | 2026-02-09 15:16 | [AI/OpenCode.md](AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 | 2026-02-09 15:16 | [AI/README.md](AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
@@ -51,6 +54,3 @@
 | 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md](Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md) | feat: Servlet vs Servlet Container 문서 추가 |
 | 2026-01-30 08:58 | [Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md](Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md) | docs: Spring Boot Filter vs Interceptor 설명 및 예제 추가 |
 | 2026-01-30 08:58 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | docs: Spring Boot Filter vs Interceptor 설명 및 예제 추가 |
-| 2026-01-30 08:57 | [ComputerScience/README.md](ComputerScience/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
-| 2026-01-30 08:57 | [Data/README.md](Data/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
-| 2026-01-30 08:57 | [Infrastructure/README.md](Infrastructure/README.md) | docs: 모든 주요 카테고리의 README 목차 스타일을 Python 스타일로 통일 |
