@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
 | 2026-02-12 17:04 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [AI/README.md](AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [Tools/README.md](Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
@@ -53,4 +54,3 @@
 | 2026-02-04 13:49 | [Infrastructure/Jenkins/README.md](Infrastructure/Jenkins/README.md) | feat(docs): Jenkins 소개 문서 추가 |
 | 2026-02-04 10:47 | [Language/Java/SpringBoot/JPA/README.md](Language/Java/SpringBoot/JPA/README.md) | fix: JPA 섹션 인덱스 페이지(README.md) 추가로 404 해결 |
 | 2026-02-01 22:06 | [Language/Java/SpringBoot/JPA/Persistence_Context.md](Language/Java/SpringBoot/JPA/Persistence_Context.md) | docs: 더티 체킹 상세 설명 보강 및 네비게이션 최신화 |
-| 2026-01-31 23:50 | [Language/Java/SpringBoot/JPA/Persistence_Context.md](Language/Java/SpringBoot/JPA/Persistence_Context.md) | feat: Spring Boot 학습 로드맵 및 JPA 영속성 컨텍스트 문서 추가 |
