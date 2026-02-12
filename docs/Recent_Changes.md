@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-12 16:08 | [Infrastructure/OracleCloud/README.md](Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Fail2Ban.md](Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:40 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | feat: Servlet vs Servlet Container 문서 추가 |
 | 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md](Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md) | feat: Servlet vs Servlet Container 문서 추가 |
 | 2026-01-30 08:58 | [Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md](Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md) | docs: Spring Boot Filter vs Interceptor 설명 및 예제 추가 |
-| 2026-01-30 08:58 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | docs: Spring Boot Filter vs Interceptor 설명 및 예제 추가 |

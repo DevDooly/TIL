@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-12 16:08 | [README](docs/Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
 | 2026-02-10 14:42 | [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:42 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:40 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
 | 2026-02-09 15:16 | [OpenClaw](docs/AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 | 2026-02-09 15:16 | [OpenCode](docs/AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
-| 2026-02-09 15:16 | [README](docs/AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
