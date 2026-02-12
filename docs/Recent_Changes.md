@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-12 17:04 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
+| 2026-02-12 17:04 | [AI/README.md](AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
+| 2026-02-12 17:04 | [Tools/README.md](Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 16:57 | [Tools/Gemini_CLI.md](Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:57 | [Tools/README.md](Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:08 | [Infrastructure/OracleCloud/README.md](Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
@@ -51,6 +54,3 @@
 | 2026-02-04 10:47 | [Language/Java/SpringBoot/JPA/README.md](Language/Java/SpringBoot/JPA/README.md) | fix: JPA 섹션 인덱스 페이지(README.md) 추가로 404 해결 |
 | 2026-02-01 22:06 | [Language/Java/SpringBoot/JPA/Persistence_Context.md](Language/Java/SpringBoot/JPA/Persistence_Context.md) | docs: 더티 체킹 상세 설명 보강 및 네비게이션 최신화 |
 | 2026-01-31 23:50 | [Language/Java/SpringBoot/JPA/Persistence_Context.md](Language/Java/SpringBoot/JPA/Persistence_Context.md) | feat: Spring Boot 학습 로드맵 및 JPA 영속성 컨텍스트 문서 추가 |
-| 2026-01-31 23:50 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | feat: Spring Boot 학습 로드맵 및 JPA 영속성 컨텍스트 문서 추가 |
-| 2026-01-30 15:20 | [Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md](Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md) | fix: Mermaid 다이어그램 렌더링 오류 수정 |
-| 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | feat: Servlet vs Servlet Container 문서 추가 |

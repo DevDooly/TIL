@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-12 17:04 | [Gemini CLI](docs/AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
+| 2026-02-12 17:04 | [README](docs/AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
+| 2026-02-12 17:04 | [README](docs/Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 16:57 | [Gemini CLI](docs/Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:57 | [README](docs/Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:08 | [README](docs/Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
-| 2026-02-10 14:42 | [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
-| 2026-02-10 14:42 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
-| 2026-02-10 14:40 | [Initial Setup](docs/Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
