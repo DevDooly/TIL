@@ -21,6 +21,3 @@
 
 ### Multimedia
 *   **[Open Source](OpenSource/FFmpeg.md)**: FFmpeg 등 멀티미디어 처리 오픈소스
-
-### AI Tools
-*   **[Gemini CLI](Gemini_CLI.md)**: 터미널 기반 대화형 AI 에이전트 Gemini CLI 사용법 및 팁

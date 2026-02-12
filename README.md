@@ -210,7 +210,6 @@
 
 ## Tools
 * [**Overview**](docs/Tools/README.md)
-* [Gemini CLI](docs/Tools/Gemini_CLI.md)
 * **Git**
   * [Monorepo vs Polyrepo](docs/Tools/Git/Monorepo_vs_Polyrepo.md)
   * [Git Remote Settings (원격 저장소 관리)](docs/Tools/Git/Remote_Settings.md)
@@ -244,6 +243,7 @@
 
 ## AI
 * [**Overview**](docs/AI/README.md)
+* [Gemini CLI](docs/AI/Gemini_CLI.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
 
