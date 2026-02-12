@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-12 18:14 | [README](docs/AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
+| 2026-02-12 18:14 | [n8n](docs/AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 17:07 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
 | 2026-02-12 17:04 | [Gemini CLI](docs/AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [README](docs/AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [README](docs/Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
-| 2026-02-12 16:57 | [Gemini CLI](docs/Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
-| 2026-02-12 16:57 | [README](docs/Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)

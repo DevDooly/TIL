@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-12 18:14 | [AI/README.md](AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
+| 2026-02-12 18:14 | [AI/n8n.md](AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
 | 2026-02-12 17:04 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [AI/README.md](AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
@@ -52,5 +54,3 @@
 | 2026-02-04 13:53 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | feat(docs): Jenkins 사용 방법 문서 추가 |
 | 2026-02-04 13:52 | [Infrastructure/Jenkins/Installation.md](Infrastructure/Jenkins/Installation.md) | feat(docs): Jenkins 설치 가이드 추가 |
 | 2026-02-04 13:49 | [Infrastructure/Jenkins/README.md](Infrastructure/Jenkins/README.md) | feat(docs): Jenkins 소개 문서 추가 |
-| 2026-02-04 10:47 | [Language/Java/SpringBoot/JPA/README.md](Language/Java/SpringBoot/JPA/README.md) | fix: JPA 섹션 인덱스 페이지(README.md) 추가로 404 해결 |
-| 2026-02-01 22:06 | [Language/Java/SpringBoot/JPA/Persistence_Context.md](Language/Java/SpringBoot/JPA/Persistence_Context.md) | docs: 더티 체킹 상세 설명 보강 및 네비게이션 최신화 |
