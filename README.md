@@ -246,6 +246,7 @@
 * [Gemini CLI](docs/AI/Gemini_CLI.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
+* [n8n (Nodemation)](docs/AI/n8n.md)
 
 <!-- TOC_END -->
 
