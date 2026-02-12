@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-12 16:57 | [Tools/Gemini_CLI.md](Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
+| 2026-02-12 16:57 | [Tools/README.md](Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:08 | [Infrastructure/OracleCloud/README.md](Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Fail2Ban.md](Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
@@ -52,5 +54,3 @@
 | 2026-01-31 23:50 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | feat: Spring Boot 학습 로드맵 및 JPA 영속성 컨텍스트 문서 추가 |
 | 2026-01-30 15:20 | [Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md](Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md) | fix: Mermaid 다이어그램 렌더링 오류 수정 |
 | 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/README.md](Language/Java/SpringBoot/Web/README.md) | feat: Servlet vs Servlet Container 문서 추가 |
-| 2026-01-30 15:00 | [Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md](Language/Java/SpringBoot/Web/Servlet_vs_ServletContainer.md) | feat: Servlet vs Servlet Container 문서 추가 |
-| 2026-01-30 08:58 | [Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md](Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md) | docs: Spring Boot Filter vs Interceptor 설명 및 예제 추가 |
