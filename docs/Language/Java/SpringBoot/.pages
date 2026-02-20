@@ -1,10 +1,10 @@
 title: Spring Boot
 nav:
-  - Index: README.md
-  - Introduction: SpringBoot_Intro.md
-  - Core Concepts:
-      - DI & IoC: DI_IoC.md
-      - Bean Lifecycle: Bean_Lifecycle.md
-      - AOP: AOP.md
-  - Web: Web
-  - Data JPA: JPA
+- Overview: README.md
+- SpringBoot Intro: SpringBoot_Intro.md
+- DI & IoC: DI_IoC.md
+- AOP: AOP.md
+- Bean Lifecycle: Bean_Lifecycle.md
+- OAuth2 Implementation: OAuth2_Implementation.md
+- JPA: JPA
+- Web: Web

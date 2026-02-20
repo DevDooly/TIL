@@ -4,4 +4,5 @@
 
 ## 목차
 1.  **[JWT (JSON Web Token)](JWT.md)**: 무상태(Stateless) 인증을 위한 토큰 표준
-2.  **[OIDC (OpenID Connect)](OIDC.md)**: OAuth 2.0 기반의 사용자 인증 표준 (소셜 로그인 등)
+2.  **[OAuth 2.0](OAuth2.md)**: 리소스 접근 권한을 위임하는 개방형 표준 프로토콜
+3.  **[OIDC (OpenID Connect)](OIDC.md)**: OAuth 2.0 기반의 사용자 인증 표준 (소셜 로그인 등)

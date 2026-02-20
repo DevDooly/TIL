@@ -50,6 +50,7 @@
     * [Aspect-Oriented Programming (AOP)](docs/Language/Java/SpringBoot/AOP.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
+    * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
     * **JPA**
       * [**Overview**](docs/Language/Java/SpringBoot/JPA/README.md)
@@ -204,6 +205,7 @@
 * **Security**
   * [**Overview**](docs/ComputerScience/Security/README.md)
   * [JWT (JSON Web Token) 및 인증 방식 비교](docs/ComputerScience/Security/JWT.md)
+  * [OAuth 2.0 (Open Authorization 2.0)](docs/ComputerScience/Security/OAuth2.md)
   * [OIDC (OpenID Connect)](docs/ComputerScience/Security/OIDC.md)
 * **SoftwareEngineering**
   * [Behavior-Driven Development (BDD)](docs/ComputerScience/SoftwareEngineering/BDD.md)
