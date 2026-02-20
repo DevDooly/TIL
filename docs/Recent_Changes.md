@@ -4,6 +4,11 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-20 09:58 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
+| 2026-02-20 09:58 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
+| 2026-02-20 09:58 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
+| 2026-02-20 09:58 | [Language/Java/SpringBoot/OAuth2_Implementation.md](Language/Java/SpringBoot/OAuth2_Implementation.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
+| 2026-02-20 09:58 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-12 18:14 | [AI/README.md](AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 18:14 | [AI/n8n.md](AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
@@ -49,8 +54,3 @@
 | 2026-02-04 14:51 | [Tools/Git/Monorepo_vs_Polyrepo.md](Tools/Git/Monorepo_vs_Polyrepo.md) | feat(docs): Monorepo vs Polyrepo 비교 문서 추가 |
 | 2026-02-04 14:17 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo 빌드 전략 예제 추가 |
 | 2026-02-04 14:07 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | feat(docs): Jenkins 설치 가이드 분리 및 K8s 설치 방법 추가 |
-| 2026-02-04 14:07 | [Infrastructure/Jenkins/Installation_K8s.md](Infrastructure/Jenkins/Installation_K8s.md) | feat(docs): Jenkins 설치 가이드 분리 및 K8s 설치 방법 추가 |
-| 2026-02-04 13:53 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins 사용 예제(Pipeline) 문서 추가 |
-| 2026-02-04 13:53 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | feat(docs): Jenkins 사용 방법 문서 추가 |
-| 2026-02-04 13:52 | [Infrastructure/Jenkins/Installation.md](Infrastructure/Jenkins/Installation.md) | feat(docs): Jenkins 설치 가이드 추가 |
-| 2026-02-04 13:49 | [Infrastructure/Jenkins/README.md](Infrastructure/Jenkins/README.md) | feat(docs): Jenkins 소개 문서 추가 |
