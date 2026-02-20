@@ -8,19 +8,21 @@
 - **Sync First**: 작업을 시작하기 전에 반드시 원격 저장소의 변경 사항을 가져와야 합니다.
   - Command: `git pull`
 
-### 2. Pre-Commit Validation (필수)
-변경 사항을 커밋하기 전에, **반드시** 다음 스크립트들을 순서대로 실행하여 문서의 일관성과 무결성을 확보해야 합니다.
-
-1. **최근 변경 사항 업데이트**: `docs/Recent_Changes.md` 및 `README.md`를 갱신합니다.
-   - Command: `python3 scripts/update_recent_changes.py`
-2. **페이지 유효성 검사**: MkDocs의 `.pages` 설정을 검증하고 수정합니다.
-   - Command: `python3 scripts/validate_pages.py`
+### 2. Pre-Commit Validation & Update
+`update_recent_changes.py` 스크립트는 **Git Log**를 기반으로 동작하므로, 변경 사항이 커밋된 후에만 인식할 수 있습니다. 따라서 다음 순서를 따르세요.
 
 **Commit Sequence:**
-1. 콘텐츠(문서) 수정 또는 생성.
-2. 위 스크립트 실행.
-3. 콘텐츠 변경 사항과 스크립트에 의해 자동 업데이트된 파일들(`docs/Recent_Changes.md`, `README.md`, `.pages` 등)을 함께 Staging.
-4. Commit 및 Push.
+1. **콘텐츠 커밋**: 문서 변경 사항을 먼저 커밋합니다.
+   - `git add <files>`
+   - `git commit -m "docs: ..."`
+2. **스크립트 실행**: 변경 내역을 반영하고 유효성을 검사합니다.
+   - `python3 scripts/update_recent_changes.py`
+   - `python3 scripts/validate_pages.py`
+3. **Amend Commit**: 스크립트에 의해 변경된 파일(`Recent_Changes.md` 등)을 이전 커밋에 합칩니다.
+   - `git add .`
+   - `git commit --amend --no-edit`
+4. **Push**: 최종 결과물을 원격 저장소에 반영합니다.
+   - `git push`
 
 ### 3. Documentation Standards
 - **Language**: 문서는 **한국어**로 작성하는 것을 원칙으로 합니다.
