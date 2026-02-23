@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-23 10:34 | [Ollama](docs/AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
 | 2026-02-20 09:58 | [OpenClaw](docs/AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [OAuth2](docs/ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [README](docs/ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [README](docs/Language/Java/SpringBoot/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-12 18:14 | [README](docs/AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -246,6 +246,7 @@
 ## AI
 * [**Overview**](docs/AI/README.md)
 * [Gemini CLI](docs/AI/Gemini_CLI.md)
+* [Ollama](docs/AI/Ollama.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
 * [n8n (Nodemation)](docs/AI/n8n.md)
