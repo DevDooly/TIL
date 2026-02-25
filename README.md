@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-25 15:03 | [README](docs/History/README.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
+| 2026-02-25 15:03 | [Taiwan](docs/History/Taiwan.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
 | 2026-02-25 13:33 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: 현재 PC 사양 맞춤형 Ollama 설치 및 API 설정 가이드 추가 |
 | 2026-02-23 10:34 | [Ollama](docs/AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
 | 2026-02-20 09:58 | [OpenClaw](docs/AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [OAuth2](docs/ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [README](docs/ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -251,6 +251,10 @@
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
 * [n8n (Nodemation)](docs/AI/n8n.md)
+
+## History
+* [**Overview**](docs/History/README.md)
+* [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
 
 <!-- TOC_END -->
 
