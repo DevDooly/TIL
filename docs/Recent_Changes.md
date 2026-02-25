@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-25 15:12 | [History/Taiwan.md](History/Taiwan.md) | docs: 대만 역사 문서 마크다운 리스트 포맷(개행) 수정 |
 | 2026-02-25 15:03 | [History/README.md](History/README.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
 | 2026-02-25 15:03 | [History/Taiwan.md](History/Taiwan.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
 | 2026-02-25 13:33 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 현재 PC 사양 맞춤형 Ollama 설치 및 API 설정 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-04 14:57 | [Tools/Git/Pull Request vs Merge Request.md](Tools/Git/Pull%20Request%20vs%20Merge%20Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/Remote_Settings.md](Tools/Git/Remote_Settings.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/Submodules.md](Tools/Git/Submodules.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/Tips.md](Tools/Git/Tips.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
