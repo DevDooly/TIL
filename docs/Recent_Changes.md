@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-25 13:33 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 현재 PC 사양 맞춤형 Ollama 설치 및 API 설정 가이드 추가 |
 | 2026-02-23 10:34 | [AI/Ollama.md](AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
 | 2026-02-20 09:58 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-04 14:57 | [Tools/Git/Tips.md](Tools/Git/Tips.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:57 | [Tools/Git/submodules_recursive Clone.md](Tools/Git/submodules_recursive%20Clone.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
 | 2026-02-04 14:51 | [Tools/Git/Monorepo_vs_Polyrepo.md](Tools/Git/Monorepo_vs_Polyrepo.md) | feat(docs): Monorepo vs Polyrepo 비교 문서 추가 |
-| 2026-02-04 14:17 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo 빌드 전략 예제 추가 |

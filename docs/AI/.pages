@@ -6,3 +6,4 @@ nav:
   - Gemini CLI: Gemini_CLI.md
   - n8n: n8n.md
   - Ollama: Ollama.md
+  - Ollama Local Setup: Ollama_Local_Environment_Setup.md
