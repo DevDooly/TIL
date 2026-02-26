@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-26 14:12 | [README](docs/Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Kavalan Distillery](docs/Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [README](docs/Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Tips](docs/Travel/Taiwan/Tips.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-25 15:12 | [Taiwan](docs/History/Taiwan.md) | docs: 대만 역사 문서 마크다운 리스트 포맷(개행) 수정 |
 | 2026-02-25 15:03 | [README](docs/History/README.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
-| 2026-02-25 15:03 | [Taiwan](docs/History/Taiwan.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
-| 2026-02-25 13:33 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: 현재 PC 사양 맞춤형 Ollama 설치 및 API 설정 가이드 추가 |
-| 2026-02-23 10:34 | [Ollama](docs/AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
-| 2026-02-20 09:58 | [OpenClaw](docs/AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -255,6 +255,13 @@
 ## History
 * [**Overview**](docs/History/README.md)
 * [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
+
+## Travel
+* [**Overview**](docs/Travel/README.md)
+* **Taiwan**
+  * [**Overview**](docs/Travel/Taiwan/README.md)
+  * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)
+  * [💡 대만 여행 팁 (Travel Tips)](docs/Travel/Taiwan/Tips.md)
 
 <!-- TOC_END -->
 

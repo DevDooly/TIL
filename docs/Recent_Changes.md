@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-26 14:12 | [Travel/README.md](Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Travel/Taiwan/Kavalan_Distillery.md](Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Travel/Taiwan/README.md](Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Travel/Taiwan/Tips.md](Travel/Taiwan/Tips.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-25 15:12 | [History/Taiwan.md](History/Taiwan.md) | docs: 대만 역사 문서 마크다운 리스트 포맷(개행) 수정 |
 | 2026-02-25 15:03 | [History/README.md](History/README.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
 | 2026-02-25 15:03 | [History/Taiwan.md](History/Taiwan.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
@@ -50,7 +54,3 @@
 | 2026-02-05 08:44 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |
 | 2026-02-04 15:03 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
 | 2026-02-04 15:03 | [Tools/Methodology/BDD.md](Tools/Methodology/BDD.md) | refactor(docs): BDD 문서를 Tools에서 ComputerScience/SoftwareEngineering으로 이동 및 내용 보강 |
-| 2026-02-04 14:57 | [Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md](Tools/Git/Change_Remote_URL_HTTPS_to_SSH.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/Pull Request vs Merge Request.md](Tools/Git/Pull%20Request%20vs%20Merge%20Request.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/Remote_Settings.md](Tools/Git/Remote_Settings.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
-| 2026-02-04 14:57 | [Tools/Git/Submodules.md](Tools/Git/Submodules.md) | refactor(docs): Git 관련 문서 정리 및 통합 |
