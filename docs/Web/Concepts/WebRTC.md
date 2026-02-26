@@ -41,6 +41,7 @@ Google Chrome (Android) since version 54
 정책이 설정되지 않았거나 빈 문자열 또는 유효하지 않은 포트 범위로 설정된 경우 WebRTC는 사용 가능한 로컬 UDP 포트를 사용하도록 허용됩니다.
 
 **Supported features**</br>
+
 * Dynamic Policy Refresh: No
 * Per Profile: Yes
 **Data type**</br>
@@ -67,4 +68,5 @@ WebRtcUdpPortRange
 <pre>
 10000-11999
 </pre>
+
 * https://cloud.google.com/docs/chrome-enterprise/policies/?policy#WebRtcUdpPortRange

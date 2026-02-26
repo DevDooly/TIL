@@ -24,6 +24,7 @@ EntityManager em = emf.createEntityManager();
 ### 3.1 1차 캐시 (First Level Cache)
 
 영속성 컨텍스트는 내부에 캐시(Map<Key, Value>)를 가지고 있습니다.
+
 *   **Key**: DB PK (Primary Key)
 *   **Value**: 엔티티 객체
 
@@ -34,6 +35,7 @@ em.persist(member);
 // 1차 캐시에서 조회 (DB 조회 X)
 Member findMember = em.find(Member.class, "member1");
 ```
+
 *   DB를 거치지 않고 메모리에서 바로 조회하므로 성능상 이점이 있습니다.
 *   단, 트랜잭션 단위의 캐시이므로 트랜잭션이 끝나면 사라집니다 (OSIV 제외).
 
@@ -51,6 +53,7 @@ System.out.println(a == b); // true
 ### 3.3 트랜잭션을 지원하는 쓰기 지연 (Transactional Write-Behind)
 
 엔티티를 저장(`persist`)해도 즉시 INSERT SQL을 날리지 않습니다.
+
 1.  1차 캐시에 저장하고, **쓰기 지연 SQL 저장소**에 쿼리를 쌓아둡니다.
 2.  `transaction.commit()` 시점에 쌓여있던 SQL을 DB에 한 번에 보냅니다 (`flush`).
 

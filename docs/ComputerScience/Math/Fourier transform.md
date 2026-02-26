@@ -12,6 +12,7 @@
 $$
 F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i\omega t} dt
 $$
+
 *   $f(t)$: 시간 도메인의 신호
 *   $F(\omega)$: 주파수 도메인의 신호 (푸리에 변환 결과)
 

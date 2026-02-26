@@ -16,18 +16,21 @@
 # 예시: 로그 파일에서 'Error'가 포함된 라인을 찾아, 개수를 세기
 cat application.log | grep "Error" | wc -l
 ```
+
 *   `cat`: 파일 읽기
 *   `grep`: 필터링 (Transformation)
 *   `wc`: 집계 (Aggregation)
 
 ### 3.2. 데이터 파이프라인 (Data Pipeline / ETL)
 데이터 엔지니어링 분야에서 다양한 소스의 데이터를 수집, 변환하여 저장소로 옮기는 과정을 말한다.
+
 *   **ETL (Extract, Transform, Load)**: 추출 -> 변환 -> 적재의 전통적인 방식.
 *   **ELT (Extract, Load, Transform)**: 일단 데이터를 적재(Data Lake 등)한 후, 필요에 따라 변환하는 방식.
 *   **도구**: Apache Airflow, Kafka Connect, AWS Glue 등.
 
 ### 3.3. CI/CD 파이프라인 (DevOps)
 소프트웨어 개발 프로세스를 자동화한 파이프라인이다. 코드가 작성되어 배포되기까지의 과정을 단계별로 정의한다.
+
 1.  **Build**: 코드 컴파일 및 패키징
 2.  **Test**: 단위 테스트, 통합 테스트 자동 수행
 3.  **Deploy**: 스테이징 또는 프로덕션 환경에 배포
@@ -40,10 +43,12 @@ cat application.log | grep "Error" | wc -l
 
 ### 4.1. Fan-out (확산)
 하나의 입력이 여러 개의 파이프라인으로 분기되는 형태이다.
+
 *   예: 결제 완료 이벤트가 발생하면 -> 1) 사용자에게 메일 발송, 2) 배송 시스템에 요청, 3) 통계 데이터 저장.
 
 ### 4.2. Fan-in (수렴)
 여러 경로에서 처리된 데이터가 하나의 단계로 모이는 형태이다.
+
 *   예: 여러 서버의 로그를 하나의 중앙 로그 저장소(ELK 등)로 수집.
 
 ## 5. 결론

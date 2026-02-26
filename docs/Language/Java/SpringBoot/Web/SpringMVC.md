@@ -50,6 +50,7 @@ sequenceDiagram
 
 ### 3.2 Service & Repository (Layered Architecture)
 MVC는 주로 프레젠테이션 계층(Controller)을 담당하며, 실제 비즈니스 로직과 데이터 접근은 계층을 분리하여 관리합니다.
+
 *   **Controller:** 요청 매핑, 파라미터 검증.
 *   **Service:** 비즈니스 로직 구현, 트랜잭션 처리.
 *   **Repository:** DB 접근 (DAO).

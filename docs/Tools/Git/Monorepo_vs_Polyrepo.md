@@ -31,6 +31,7 @@ Google, Facebook(Meta), Microsoft, Twitter 등 대규모 테크 기업들이 채
 
 ### 🛠️ 대표적인 도구 (Build Systems)
 단순히 폴더만 모아둔다고 Monorepo가 아닙니다. 효율적인 관리를 위한 도구가 필수적입니다.
+
 *   **JavaScript/TypeScript:** Turborepo, Nx, Lerna, Yarn Workspaces
 *   **General:** Bazel (Google), Buck (Facebook), Gradle (Java/Kotlin)
 
@@ -73,11 +74,13 @@ Google, Facebook(Meta), Microsoft, Twitter 등 대규모 테크 기업들이 채
 | **적합한 조직** | 강한 협업과 코드 공유가 필요한 조직 | 팀 간 독립성이 중요하고 느슨하게 결합된 조직 |
 
 **언제 Monorepo를 선택해야 할까요?**
+
 *   프로젝트 간 코드 공유가 빈번할 때 (예: 프론트엔드와 백엔드가 타입을 공유, 여러 앱이 UI 컴포넌트 공유)
 *   대규모 리팩토링이 자주 발생할 때
 *   팀 전체가 동일한 툴체인과 스타일을 유지하고 싶을 때
 
 **언제 Polyrepo를 선택해야 할까요?**
+
 *   서비스 간 결합도가 매우 낮고 완전히 독립적으로 배포될 때
 *   팀별로 사용하는 기술 스택이 완전히 다를 때
 *   강력한 보안 격리가 필요할 때

@@ -9,6 +9,7 @@
 
 ## 2. Plug'n'Play (PnP)
 Yarn Berry는 `node_modules` 폴더를 생성하지 않습니다. 대신 **`.pnp.cjs`** 라는 파일에 패키지의 위치와 의존성 정보를 매핑하여 저장합니다.
+
 *   **Zip 아카이브:** 패키지들을 압축 파일(`.zip`) 형태로 캐시(`bucket`)에 저장하여 용량을 줄이고 로딩 속도를 높입니다.
 *   **Zero-Install:** 의존성 파일(Zip)까지 git에 포함시켜, `yarn install` 없이 바로 프로젝트를 실행할 수 있게 하는 전략도 가능합니다.
 

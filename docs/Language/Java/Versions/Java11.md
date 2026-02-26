@@ -15,6 +15,7 @@ List<String> list = new ArrayList<>();
 var message = "Hello, Java 11"; // String으로 추론
 var list = new ArrayList<String>(); // ArrayList<String>으로 추론
 ```
+
 - **주의:** 지역 변수에만 사용할 수 있으며, 가독성을 해치지 않는 선에서 사용하는 것이 권장됩니다.
 
 ---

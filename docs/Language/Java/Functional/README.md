@@ -17,6 +17,7 @@ Java 8부터 도입된 **함수형 프로그래밍(Functional Programming)** 패
 
 ### 4. Functional Interfaces
 추상 메서드가 하나만 있는 인터페이스로, 람다식의 타겟 타입이 됩니다.
+
 - `Predicate<T>`: 조건 검사 (boolean 반환)
 - `Function<T, R>`: 입력 -> 출력 변환
 - `Consumer<T>`: 입력 소비 (리턴 없음)

@@ -6,6 +6,7 @@
 
 
 <code>v-model</code> 은 내부적으로 서로 다른 속성을 사용하고 서로 다른 입력요소에 대해 서로 다른 이벤트를 전송합니다
+
 * text 와 textarea 태그는 <code>value</code> 속성과 <code>input</code> 이벤트를 사용합니다.
 * 체크박스들과 라디오버튼들은 <code>checked</code> 속성과 <code>change</code> 이벤트를 사용합니다.
 * Select 태그는 <code>value</code> 를 prop으로, <code>change</code> 를 이벤트로 사용합니다.

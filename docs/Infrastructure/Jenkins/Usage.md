@@ -58,6 +58,7 @@ Freestyle Project를 사용하여 간단한 빌드를 테스트해봅시다.
    ```bash
    echo "Hello, Jenkins!"
    ```
+
 5. 하단 **[저장]** 클릭.
 6. 프로젝트 화면 좌측의 **[지금 빌드 (Build Now)]** 클릭.
 7. 아래 **Build History**에 `#1`이 나타나면 클릭 후 **[Console Output]**을 확인합니다.

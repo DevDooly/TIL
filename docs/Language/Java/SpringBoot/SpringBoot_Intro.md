@@ -11,10 +11,12 @@
 
 ### 2.1 Auto Configuration (자동 설정)
 `@EnableAutoConfiguration` 또는 `@SpringBootApplication` 어노테이션을 통해, 클래스패스에 있는 라이브러리를 감지하고 자동으로 빈(Bean)을 등록하고 설정을 구성합니다.
+
 *   예: `spring-boot-starter-web`이 있으면 자동으로 내장 Tomcat과 Spring MVC를 설정합니다.
 
 ### 2.2 Starter Dependencies
 프로젝트에 필요한 의존성들을 그룹화하여 제공합니다. 버전 호환성을 신경 쓸 필요 없이 스타터 하나만 추가하면 관련 라이브러리들이 모두 포함됩니다.
+
 *   `spring-boot-starter-web`: RESTful, Spring MVC 개발용
 *   `spring-boot-starter-data-jpa`: JPA, Hibernate 개발용
 *   `spring-boot-starter-test`: JUnit, Mockito 등 테스트 도구 모음

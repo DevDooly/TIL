@@ -82,5 +82,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 이제 브라우저에서 `https://localhost:8080` 으로 접속할 수 있습니다.
+
 - **ID:** admin
 - **Password:** 위에서 확인한 비밀번호

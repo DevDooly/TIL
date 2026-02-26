@@ -19,6 +19,7 @@ public class User {
 ```java
 public record User(String name, int age) { }
 ```
+
 - 컴파일 시 생성자, Getter, `equals`, `hashCode`, `toString`이 자동으로 생성됩니다.
 
 ---
@@ -76,4 +77,5 @@ String json = """
 ## 5. Strong Encapsulation of JDK Internals
 
 JDK 내부 API(`sun.misc.Unsafe` 등)에 대한 접근이 기본적으로 차단되었습니다. 이는 보안을 강화하고 Java 런타임의 안정성을 높이는 조치입니다.
+
 - 기존에 내부 API를 무단으로 사용하던 라이브러리들은 Java 17 마이그레이션 시 업데이트가 필요할 수 있습니다.

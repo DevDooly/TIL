@@ -6,6 +6,7 @@
 
 ### 1.1 공통 관심사 (Cross-cutting Concern)
 여러 로직에서 공통적으로 사용되는 기능입니다.
+
 *   예: 로그(Logging), 보안(Security), 트랜잭션(Transaction), 성능 측정 등.
 
 ### 1.2 주요 용어
@@ -20,6 +21,7 @@
 ## 2. AOP 동작 원리 (Proxy Pattern)
 
 스프링 AOP는 **프록시(Proxy)** 기반으로 동작합니다.
+
 1.  클라이언트가 Target 객체를 호출하면, 실제로는 Proxy 객체가 호출됩니다.
 2.  Proxy는 부가 기능(Advice)을 실행하고, 실제 Target 메소드를 호출(`proceed()`)합니다.
 3.  Target 메소드 실행 후 다시 Proxy로 제어권이 돌아와 후처리를 수행합니다.

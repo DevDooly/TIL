@@ -16,6 +16,7 @@
    - `git add <files>`
    - `git commit -m "docs: ..."`
 2. **스크립트 실행**: 변경 내역을 반영하고 유효성을 검사합니다.
+   - `python3 scripts/validate_markdown_lists.py`
    - `python3 scripts/update_recent_changes.py`
    - `python3 scripts/validate_pages.py`
 3. **Amend Commit**: 스크립트에 의해 변경된 파일(`Recent_Changes.md` 등)을 이전 커밋에 합칩니다.

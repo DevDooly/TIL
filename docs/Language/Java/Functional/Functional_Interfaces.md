@@ -86,6 +86,7 @@ BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
 
 ### 3.3 Primitive Specializations (기본형 특화)
 박싱/언박싱 오버헤드를 줄이기 위해 기본형(int, long, double)을 직접 다루는 인터페이스들입니다.
+
 - `IntPredicate`, `LongConsumer`, `DoubleFunction` 등
 
 ```java
