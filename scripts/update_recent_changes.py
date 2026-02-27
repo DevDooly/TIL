@@ -43,6 +43,10 @@ def parse_log(lines, max_items=50):
             current_date = parts[1]
             current_message = parts[2]
         else:
+            # chore 커밋은 최근 변경 사항 목록에서 제외
+            if current_message.startswith("chore:"):
+                continue
+                
             file_path = line
             if file_path.startswith("docs/") and file_path.endswith(".md") and "Recent_Changes.md" not in file_path:
                 parsed_items.append({

@@ -9,10 +9,10 @@
 | :--- | :--- | :--- |
 | 2026-02-27 16:36 | [README](docs/RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-27 16:36 | [Tax 85sqm Rules](docs/RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
-| 2026-02-26 14:18 | [OpenClaw](docs/AI/OpenClaw.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
-| 2026-02-26 14:18 | [OpenCode](docs/AI/OpenCode.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
-| 2026-02-26 14:18 | [High Availability](docs/ComputerScience/Architecture/High_Availability.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
-| 2026-02-26 14:18 | [Pipeline](docs/ComputerScience/Architecture/Pipeline.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
+| 2026-02-26 14:12 | [README](docs/Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Kavalan Distillery](docs/Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [README](docs/Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
+| 2026-02-26 14:12 | [Tips](docs/Travel/Taiwan/Tips.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
