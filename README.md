@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-02-27 16:36 | [README](docs/RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
+| 2026-02-27 16:36 | [Tax 85sqm Rules](docs/RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-26 14:18 | [OpenClaw](docs/AI/OpenClaw.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 | 2026-02-26 14:18 | [OpenCode](docs/AI/OpenCode.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 | 2026-02-26 14:18 | [High Availability](docs/ComputerScience/Architecture/High_Availability.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 | 2026-02-26 14:18 | [Pipeline](docs/ComputerScience/Architecture/Pipeline.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
-| 2026-02-26 14:18 | [Fourier transform](docs/ComputerScience/Math/Fourier%20transform.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
-| 2026-02-26 14:18 | [Socket](docs/ComputerScience/Network/Socket.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -255,6 +255,10 @@
 ## History
 * [**Overview**](docs/History/README.md)
 * [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
+
+## RealEstate
+* [**Overview**](docs/RealEstate/README.md)
+* [📏 국민평형(전용 85㎡) 초과 시 달라지는 세금 및 규제](docs/RealEstate/Tax_85sqm_Rules.md)
 
 ## Travel
 * [**Overview**](docs/Travel/README.md)

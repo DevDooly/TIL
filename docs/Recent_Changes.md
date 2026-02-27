@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-02-27 16:36 | [RealEstate/README.md](RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
+| 2026-02-27 16:36 | [RealEstate/Tax_85sqm_Rules.md](RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-26 14:18 | [AI/OpenClaw.md](AI/OpenClaw.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 | 2026-02-26 14:18 | [AI/OpenCode.md](AI/OpenCode.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
 | 2026-02-26 14:18 | [ComputerScience/Architecture/High_Availability.md](ComputerScience/Architecture/High_Availability.md) | chore: 마크다운 리스트 개행 누락 일괄 수정 및 검증 스크립트 추가 |
@@ -52,5 +54,3 @@
 | 2026-02-23 10:34 | [AI/Ollama.md](AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
 | 2026-02-20 09:58 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [Language/Java/SpringBoot/OAuth2_Implementation.md](Language/Java/SpringBoot/OAuth2_Implementation.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
