@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-05 12:49 | [Language/Java/SpringBoot/BeanPostProcessor.md](Language/Java/SpringBoot/BeanPostProcessor.md) | docs: Spring Boot BeanPostProcessor(빈 후처리기) 개념 및 예제 추가 |
 | 2026-02-27 16:36 | [RealEstate/README.md](RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-27 16:36 | [RealEstate/Tax_85sqm_Rules.md](RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-26 14:12 | [Travel/README.md](Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-05 08:49 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | feat(docs): ArgoCD 실전 예제(App of Apps) 문서 추가 |
 | 2026-02-05 08:48 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | feat(docs): ArgoCD 사용 방법 문서 추가 |
 | 2026-02-05 08:47 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | feat(docs): ArgoCD 설치 가이드 추가 |
-| 2026-02-05 08:44 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | feat(docs): ArgoCD 소개 문서 추가 |

@@ -5,6 +5,7 @@ nav:
 - DI & IoC: DI_IoC.md
 - AOP: AOP.md
 - Bean Lifecycle: Bean_Lifecycle.md
+- BeanPostProcessor: BeanPostProcessor.md
 - OAuth2 Implementation: OAuth2_Implementation.md
 - JPA: JPA
 - Web: Web
