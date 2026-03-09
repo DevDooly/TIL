@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-09 10:18 | [Versioning](docs/ComputerScience/SoftwareEngineering/Versioning.md) | docs: 소프트웨어 버저닝(SemVer, CalVer 등) 문서 추가 |
 | 2026-03-05 12:49 | [BeanPostProcessor](docs/Language/Java/SpringBoot/BeanPostProcessor.md) | docs: Spring Boot BeanPostProcessor(빈 후처리기) 개념 및 예... |
 | 2026-02-27 16:36 | [README](docs/RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-27 16:36 | [Tax 85sqm Rules](docs/RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-26 14:12 | [README](docs/Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-26 14:12 | [Kavalan Distillery](docs/Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
-| 2026-02-26 14:12 | [README](docs/Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -210,6 +210,7 @@
   * [OIDC (OpenID Connect)](docs/ComputerScience/Security/OIDC.md)
 * **SoftwareEngineering**
   * [Behavior-Driven Development (BDD)](docs/ComputerScience/SoftwareEngineering/BDD.md)
+  * [소프트웨어 버저닝 (Software Versioning)](docs/ComputerScience/SoftwareEngineering/Versioning.md)
 
 ## Tools
 * [**Overview**](docs/Tools/README.md)

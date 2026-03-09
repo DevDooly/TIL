@@ -1,3 +1,4 @@
 title: Software Engineering (소프트웨어 공학)
 nav:
   - BDD (Behavior-Driven Development): BDD.md
+  - 소프트웨어 버저닝 (Versioning): Versioning.md
