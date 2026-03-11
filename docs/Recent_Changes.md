@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-11 09:55 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO 객체의 모든 버전을 일괄 영구 삭제하는 응용 예제(deleteAllVersions) 추가 |
 | 2026-03-11 09:47 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 업데이트 (bucket, objectName 인자 사용 방식 추가) |
 | 2026-03-11 09:44 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 추가 (버저닝 객체 삭제 및 조회) |
 | 2026-03-11 09:38 | [Infrastructure/MinIO/README.md](Infrastructure/MinIO/README.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-06 08:15 | [Language/Java/Versions/Java11.md](Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:15 | [Language/Java/Versions/Java17.md](Language/Java/Versions/Java17.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:15 | [Language/Java/Versions/Java21.md](Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
-| 2026-02-06 08:14 | [Language/Java/Versions/Java8.md](Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |

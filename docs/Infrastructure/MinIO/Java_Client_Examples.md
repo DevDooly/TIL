@@ -101,6 +101,61 @@ public void deleteMultipleVersions(String bucketName, List<DeleteObject> objects
 }
 ```
 
+### 2.4 특정 객체의 모든 버전 완전 삭제 (Hard Delete All Versions)
+앞서 설명한 `listObjects`로 대상 파일의 모든 버전 ID를 수집한 뒤, `removeObjects`를 통해 한 번에 영구 삭제하는 응용 예제입니다.
+
+```java
+import io.minio.ListObjectsArgs;
+import io.minio.RemoveObjectsArgs;
+import io.minio.Result;
+import io.minio.messages.DeleteError;
+import io.minio.messages.DeleteObject;
+import io.minio.messages.Item;
+import java.util.LinkedList;
+import java.util.List;
+
+public void deleteAllVersions(String bucketName, String objectName) throws Exception {
+    List<DeleteObject> objectsToDelete = new LinkedList<>();
+
+    // 1. 해당 객체의 모든 버전 조회
+    Iterable<Result<Item>> results = minioClient.listObjects(
+            ListObjectsArgs.builder()
+                    .bucket(bucketName)
+                    .prefix(objectName)
+                    .includeVersions(true)
+                    .build()
+    );
+
+    // 2. 삭제 리스트에 담기
+    for (Result<Item> result : results) {
+        Item item = result.get();
+        if (item.objectName().equals(objectName)) {
+            objectsToDelete.add(new DeleteObject(item.objectName(), item.versionId()));
+        }
+    }
+
+    if (objectsToDelete.isEmpty()) {
+        System.out.println(objectName + " 객체가 존재하지 않습니다.");
+        return;
+    }
+
+    // 3. 일괄 삭제 실행
+    Iterable<Result<DeleteError>> deleteResults = minioClient.removeObjects(
+            RemoveObjectsArgs.builder()
+                    .bucket(bucketName)
+                    .objects(objectsToDelete)
+                    .build()
+    );
+
+    for (Result<DeleteError> errorResult : deleteResults) {
+        DeleteError error = errorResult.get();
+        System.out.println("삭제 실패: " + error.objectName() + " (버전: " + error.versionId() + ") / " + error.message());
+    }
+    
+    System.out.println(objectName + " 객체의 모든 버전(" + objectsToDelete.size() + "개)이 영구 삭제되었습니다.");
+}
+```
+
 ---
 
 ## 3. 기타 유용한 기능 (버저닝 관련)
