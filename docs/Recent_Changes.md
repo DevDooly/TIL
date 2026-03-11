@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-11 09:44 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 추가 (버저닝 객체 삭제 및 조회) |
 | 2026-03-11 09:38 | [Infrastructure/MinIO/README.md](Infrastructure/MinIO/README.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
 | 2026-03-11 09:38 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
 | 2026-03-09 10:18 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: 소프트웨어 버저닝(SemVer, CalVer 등) 문서 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-06 08:15 | [Language/Java/Versions/Java21.md](Language/Java/Versions/Java21.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
 | 2026-02-06 08:14 | [Language/Java/Versions/Java8.md](Language/Java/Versions/Java8.md) | feat(docs): Java 8 주요 특징 정리 문서 추가 |
 | 2026-02-06 08:13 | [Language/Java/Versions/README.md](Language/Java/Versions/README.md) | feat(docs): Java 버전별 히스토리 및 특징 요약 문서 추가 |
-| 2026-02-05 09:38 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | feat(docs): Jenkins Monorepo Maven 빌드 예제 추가 |

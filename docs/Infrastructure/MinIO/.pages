@@ -2,3 +2,4 @@ title: MinIO
 nav:
   - Overview: README.md
   - 버저닝 (Versioning): Versioning.md
+  - Java Client 예제: Java_Client_Examples.md
