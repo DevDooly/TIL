@@ -4,6 +4,7 @@ nav:
   - General:
       - SQL Naming Convention: SQL_Naming_Convention.md
   - Specific Databases:
+      - Oracle (LOB Segment): Oracle_LOB_Segment.md
       - Redis: Redis.md
       - MongoDB: MongoDB.md
   - Management & Strategy:

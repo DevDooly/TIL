@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-12 14:46 | [Oracle LOB Segment](docs/Data/Database/Oracle_LOB_Segment.md) | docs: Oracle LOB Segment 개념 및 ORA-01692 에러 조치 방법 추... |
 | 2026-03-11 13:54 | [MinIO Client mc](docs/Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client (mc) Linux 설치 및 기본/버저닝 명령어 가이드 ... |
 | 2026-03-11 09:55 | [Java Client Examples](docs/Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO 객체의 모든 버전을 일괄 영구 삭제하는 응용 예제(deleteAllV... |
 | 2026-03-11 09:47 | [Java Client Examples](docs/Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 업데이트 (bucket, objectNam... |
 | 2026-03-11 09:44 | [Java Client Examples](docs/Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 추가 (버저닝 객체 삭제 및 조회) |
 | 2026-03-11 09:38 | [README](docs/Infrastructure/MinIO/README.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
-| 2026-03-11 09:38 | [Versioning](docs/Infrastructure/MinIO/Versioning.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -179,6 +179,7 @@
   * [이미지 저장 및 관리 전략](docs/Data/Database/Image_Storage_Management.md)
   * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
+  * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
   * [Redis (Remote Dictionary Server)](docs/Data/Database/Redis.md)
   * [SQL Naming Convention (SQL 명명 규칙)](docs/Data/Database/SQL_Naming_Convention.md)
   * [Fluentd](docs/Data/Database/fluentd.md)
