@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-17 08:47 | [Infrastructure/Kubernetes/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
+| 2026-03-17 08:47 | [Infrastructure/Kubernetes/Cluster_Architecture.md](Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:44 | [Infrastructure/Kubernetes/README.md](Infrastructure/Kubernetes/README.md) | docs: Kubernetes(CKA) 카테고리 신설 및 학습 목차 작성 |
 | 2026-03-16 13:20 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 수명 주기 관리(Lifecycle) 설명 및 사용 예제 추가 |
 | 2026-03-12 14:46 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: Oracle LOB Segment 개념 및 ORA-01692 에러 조치 방법 추가 |
@@ -52,5 +54,3 @@
 | 2026-02-06 13:44 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 문서 제네릭 타입 표기 재수정 |
 | 2026-02-06 10:50 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | feat(docs): Java Functional Interfaces 상세 문서 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
-| 2026-02-06 08:52 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
-| 2026-02-06 08:52 | [Language/Java/Functional/README.md](Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
