@@ -9,3 +9,4 @@ nav:
   - MessageBroker
   - Hadoop
   - MinIO
+  - Kubernetes
