@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-16 13:20 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 수명 주기 관리(Lifecycle) 설명 및 사용 예제 추가 |
 | 2026-03-12 14:46 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: Oracle LOB Segment 개념 및 ORA-01692 에러 조치 방법 추가 |
 | 2026-03-11 13:54 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client (mc) Linux 설치 및 기본/버저닝 명령어 가이드 추가 |
 | 2026-03-11 09:55 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO 객체의 모든 버전을 일괄 영구 삭제하는 응용 예제(deleteAllVersions) 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-06 08:52 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/README.md](Language/Java/Functional/README.md) | feat(docs): Java Functional Programming 섹션 추가 |
 | 2026-02-06 08:52 | [Language/Java/Functional/Stream.md](Language/Java/Functional/Stream.md) | feat(docs): Java Functional Programming 섹션 추가 |
-| 2026-02-06 08:15 | [Language/Java/Versions/Java11.md](Language/Java/Versions/Java11.md) | feat(docs): Java 주요 버전별(11, 17, 21) 상세 문서 추가 |
