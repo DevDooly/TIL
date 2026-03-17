@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-17 14:13 | [RBAC Authorization](docs/Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA RBAC 문서 상세화 (User, ServiceAccount, Clust... |
 | 2026-03-17 09:29 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 09:29 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 09:29 | [RBAC Authorization](docs/Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 08:47 | [CKA Exam Tips](docs/Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:47 | [Cluster Architecture](docs/Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
-| 2026-03-17 08:44 | [README](docs/Infrastructure/Kubernetes/README.md) | docs: Kubernetes(CKA) 카테고리 신설 및 학습 목차 작성 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
