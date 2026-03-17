@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-17 09:29 | [Infrastructure/Kubernetes/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
+| 2026-03-17 09:29 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
+| 2026-03-17 09:29 | [Infrastructure/Kubernetes/RBAC_Authorization.md](Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 08:47 | [Infrastructure/Kubernetes/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:47 | [Infrastructure/Kubernetes/Cluster_Architecture.md](Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:44 | [Infrastructure/Kubernetes/README.md](Infrastructure/Kubernetes/README.md) | docs: Kubernetes(CKA) 카테고리 신설 및 학습 목차 작성 |
@@ -51,6 +54,3 @@
 | 2026-02-06 14:10 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 리스트 렌더링 문제 해결 |
 | 2026-02-06 13:55 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | fix(docs): Lambda.md 테이블 내 제네릭 타입 표기 수정 (재시도) |
 | 2026-02-06 13:47 | [Language/Java/Functional/Optional.md](Language/Java/Functional/Optional.md) | fix(docs): Functional 문서 전반의 제네릭 타입 렌더링 오류 수정 |
-| 2026-02-06 13:44 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 문서 제네릭 타입 표기 재수정 |
-| 2026-02-06 10:50 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | feat(docs): Java Functional Interfaces 상세 문서 추가 |
-| 2026-02-06 08:52 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | feat(docs): Java Functional Programming 섹션 추가 |
