@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
+| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Resource_Limits.md](Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
+| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Scheduling.md](Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
+| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Workloads.md](Infrastructure/Kubernetes/Workloads.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
 | 2026-03-17 14:13 | [Infrastructure/Kubernetes/RBAC_Authorization.md](Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA RBAC 문서 상세화 (User, ServiceAccount, ClusterRole 예시 추가) |
 | 2026-03-17 09:29 | [Infrastructure/Kubernetes/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 09:29 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
@@ -50,7 +54,3 @@
 | 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:40 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
 | 2026-02-09 15:16 | [AI/OpenClaw.md](AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
-| 2026-02-09 15:16 | [AI/OpenCode.md](AI/OpenCode.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
-| 2026-02-09 15:16 | [AI/README.md](AI/README.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |
-| 2026-02-06 14:10 | [Language/Java/Functional/Functional_Interfaces.md](Language/Java/Functional/Functional_Interfaces.md) | fix(docs): Functional Interfaces 리스트 렌더링 문제 해결 |
-| 2026-02-06 13:55 | [Language/Java/Functional/Lambda.md](Language/Java/Functional/Lambda.md) | fix(docs): Lambda.md 테이블 내 제네릭 타입 표기 수정 (재시도) |

@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-17 14:24 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
+| 2026-03-17 14:24 | [Resource Limits](docs/Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
+| 2026-03-17 14:24 | [Scheduling](docs/Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
+| 2026-03-17 14:24 | [Workloads](docs/Infrastructure/Kubernetes/Workloads.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
 | 2026-03-17 14:13 | [RBAC Authorization](docs/Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA RBAC 문서 상세화 (User, ServiceAccount, Clust... |
 | 2026-03-17 09:29 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
-| 2026-03-17 09:29 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
-| 2026-03-17 09:29 | [RBAC Authorization](docs/Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
-| 2026-03-17 08:47 | [CKA Exam Tips](docs/Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
-| 2026-03-17 08:47 | [Cluster Architecture](docs/Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -149,6 +149,9 @@
   * [1.2 ETCD 백업(Backup) 및 복원(Restore)](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md)
   * [1.1 Kubeadm 클러스터 설치 및 업그레이드](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md)
   * [1.3 RBAC (Role-Based Access Control)](docs/Infrastructure/Kubernetes/RBAC_Authorization.md)
+  * [2.3 리소스 제한 (Requests & Limits)](docs/Infrastructure/Kubernetes/Resource_Limits.md)
+  * [2.2 스케줄링 제어 (Scheduling)](docs/Infrastructure/Kubernetes/Scheduling.md)
+  * [2.1 워크로드 (Pod, Deployment, DaemonSet 등)](docs/Infrastructure/Kubernetes/Workloads.md)
 * **Linux**
   * [**Overview**](docs/Infrastructure/Linux/README.md)
   * [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md)

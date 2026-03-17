@@ -30,6 +30,7 @@ kubeadm join <control-plane-host>:<port> --token <token> --discovery-token-ca-ce
     ```bash
     apt-get install -y --allow-change-held-packages kubeadm=1.x.x-00
     ```
+
 3.  **업그레이드 계획 확인**: `kubeadm upgrade plan`
 4.  **업그레이드 적용**: `kubeadm upgrade apply v1.x.x`
 5.  **kubelet & kubectl 업그레이드**:
