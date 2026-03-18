@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-18 15:56 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
+| 2026-03-18 15:56 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
+| 2026-03-18 15:56 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
 | 2026-03-18 15:04 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-18 15:04 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-17 14:24 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
-| 2026-03-17 14:24 | [Resource Limits](docs/Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
-| 2026-03-17 14:24 | [Scheduling](docs/Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
-| 2026-03-17 14:24 | [Workloads](docs/Infrastructure/Kubernetes/Workloads.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -171,6 +171,7 @@
   * **Kafka**
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
+    * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
   * **RabbitMQ**
     * [**Overview**](docs/Infrastructure/MessageBroker/RabbitMQ/README.md)
     * [Editing RabbitMQ handle big message](docs/Infrastructure/MessageBroker/RabbitMQ/Editing%20RabbitMQ%20handle%20big%20message.md)

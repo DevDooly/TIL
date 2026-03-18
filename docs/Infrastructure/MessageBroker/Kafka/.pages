@@ -2,3 +2,4 @@ title: Kafka
 nav:
   - Overview: README.md
   - Offset 제어 (Java): Consumer_Offset_Control.md
+  - Spring Kafka 테스트: Spring_Kafka_Test.md

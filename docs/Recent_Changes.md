@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
+| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
+| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
 | 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
@@ -51,6 +54,3 @@
 | 2026-02-12 17:04 | [Tools/README.md](Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 16:57 | [Tools/Gemini_CLI.md](Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
 | 2026-02-12 16:57 | [Tools/README.md](Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
-| 2026-02-12 16:08 | [Infrastructure/OracleCloud/README.md](Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
-| 2026-02-10 14:42 | [Infrastructure/Linux/Fail2Ban.md](Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
-| 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
