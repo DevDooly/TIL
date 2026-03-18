@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
+| 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Resource_Limits.md](Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Scheduling.md](Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
@@ -52,5 +54,3 @@
 | 2026-02-12 16:08 | [Infrastructure/OracleCloud/README.md](Infrastructure/OracleCloud/README.md) | feat(docs): Oracle Cloud Free Tier 가이드 추가 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Fail2Ban.md](Infrastructure/Linux/Fail2Ban.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
 | 2026-02-10 14:42 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Fail2Ban 가이드 추가 및 초기 설정 문서 연동 |
-| 2026-02-10 14:40 | [Infrastructure/Linux/Initial_Setup.md](Infrastructure/Linux/Initial_Setup.md) | feat(docs): Ubuntu Server 초기 셋팅 가이드 추가 |
-| 2026-02-09 15:16 | [AI/OpenClaw.md](AI/OpenClaw.md) | feat(docs): AI 카테고리 신설 및 OpenCode, OpenClaw 문서 추가 |

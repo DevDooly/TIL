@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-18 15:04 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
+| 2026-03-18 15:04 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-17 14:24 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
 | 2026-03-17 14:24 | [Resource Limits](docs/Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
 | 2026-03-17 14:24 | [Scheduling](docs/Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
 | 2026-03-17 14:24 | [Workloads](docs/Infrastructure/Kubernetes/Workloads.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약... |
-| 2026-03-17 14:13 | [RBAC Authorization](docs/Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA RBAC 문서 상세화 (User, ServiceAccount, Clust... |
-| 2026-03-17 09:29 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -168,6 +168,9 @@
   * [**Overview**](docs/Infrastructure/MessageBroker/README.md)
   * [AMQP (Advanced Message Queuing Protocol)](docs/Infrastructure/MessageBroker/AMQP.md)
   * [RabbitMQ vs Kafka](docs/Infrastructure/MessageBroker/RabbitMQ%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Kafka.md)
+  * **Kafka**
+    * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
+    * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
   * **RabbitMQ**
     * [**Overview**](docs/Infrastructure/MessageBroker/RabbitMQ/README.md)
     * [Editing RabbitMQ handle big message](docs/Infrastructure/MessageBroker/RabbitMQ/Editing%20RabbitMQ%20handle%20big%20message.md)
