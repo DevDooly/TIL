@@ -32,7 +32,8 @@ def validate_markdown_lists():
                         
                     # 현재 줄이 리스트 항목인지 확인
                     if list_pattern.match(line):
-                        # 이전 줄이 비어있지 않고, 이전 줄도 리스트가 아니고, 헤더(#)도 아니고, 인용구(>)도 아니면 경고
+                        # 이전 줄이 비어있지 않고, 리스트도 아니고, 헤더도 아니고, 인용구도 아니면 경고
+                        # 특히 ``` 로 끝나는 코드 블록 뒤에는 반드시 개행이 필요함
                         if prev_line and not list_pattern.match(prev_line) and not prev_line.startswith('#') and not prev_line.startswith('>'):
                             # HTML 주석이나 특정 마크다운 구분선은 예외 처리
                             if prev_line.startswith('<!--') or prev_line == '---':
@@ -45,7 +46,7 @@ def validate_markdown_lists():
                             issues_found = True
 
     if issues_found:
-        print("🚨 Markdown 리스트 포맷 에러가 발견되었습니다. 수정 후 다시 커밋해주세요.")
+        print("🚨 Markdown 리스트 포맷 에러가 발견되었습니다. scripts/auto_fix_markdown_lists.py 를 실행하거나 수동 수정 후 다시 커밋해주세요.")
         exit(1)
     else:
         print("✅ 모든 Markdown 파일의 리스트 포맷이 올바릅니다.")

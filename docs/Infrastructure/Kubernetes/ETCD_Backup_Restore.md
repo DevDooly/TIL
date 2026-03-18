@@ -35,9 +35,9 @@ ETCDCTL_API=3 etcdctl \
 ### 2.2 정적 파드(Static Pod) 설정 변경
 복원된 데이터 디렉토리를 실제 etcd 파드가 바라보게 하려면 `/etc/kubernetes/manifests/etcd.yaml` 파일을 수정해야 합니다.
 
-1.  `volumes` 섹션의 `hostPath` 수정
-2.  `volumeMounts` 섹션의 경로 확인
-3.  수정 후 `kubelet`이 자동으로 파드를 재시작할 때까지 대기합니다.
+1. `volumes` 섹션의 `hostPath` 수정
+2. `volumeMounts` 섹션의 경로 확인
+3. 수정 후 `kubelet`이 자동으로 파드를 재시작할 때까지 대기합니다.
 
 ---
 

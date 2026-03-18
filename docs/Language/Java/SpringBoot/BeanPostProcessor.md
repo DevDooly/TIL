@@ -23,8 +23,8 @@ default Object postProcessBeforeInitialization(Object bean, String beanName) thr
 }
 ```
 
-*   **시점**: 빈 생성자와 의존성 주입이 완료된 후, 초기화 콜백(`@PostConstruct`, `InitializingBean.afterPropertiesSet` 등)이 **호출되기 직전**에 실행됩니다.
-*   **용도**: 초기화 전에 빈의 상태를 확인하거나 프로퍼티를 변경할 때 주로 사용됩니다.
+* **시점**: 빈 생성자와 의존성 주입이 완료된 후, 초기화 콜백(`@PostConstruct`, `InitializingBean.afterPropertiesSet` 등)이 **호출되기 직전**에 실행됩니다.
+* **용도**: 초기화 전에 빈의 상태를 확인하거나 프로퍼티를 변경할 때 주로 사용됩니다.
 
 ### 2.2 `postProcessAfterInitialization`
 ```java
@@ -33,8 +33,8 @@ default Object postProcessAfterInitialization(Object bean, String beanName) thro
 }
 ```
 
-*   **시점**: 빈의 초기화 콜백이 모두 **완료된 직후**에 실행됩니다.
-*   **용도**: **AOP의 핵심**입니다. 이 시점에 생성된 실제 원본 빈(Target)을 감싸는 **프록시(Proxy) 객체를 생성하여 반환**하면, 스프링 컨테이너에는 원본 빈 대신 프록시 객체가 빈으로 등록됩니다.
+* **시점**: 빈의 초기화 콜백이 모두 **완료된 직후**에 실행됩니다.
+* **용도**: **AOP의 핵심**입니다. 이 시점에 생성된 실제 원본 빈(Target)을 감싸는 **프록시(Proxy) 객체를 생성하여 반환**하면, 스프링 컨테이너에는 원본 빈 대신 프록시 객체가 빈으로 등록됩니다.
 
 > 💡 **참고**: 두 메서드 모두 반환값(`return`)이 중요합니다. 여기서 반환한 객체가 최종적으로 스프링 컨테이너에 빈으로 등록됩니다. `null`을 반환하면 다음 후처리기가 실행되지 않고 해당 빈의 초기화 작업이 중단될 수 있으므로, 조작할 필요가 없는 빈이라도 그대로 `return bean;` 을 해주어야 합니다.
 
@@ -44,13 +44,13 @@ default Object postProcessAfterInitialization(Object bean, String beanName) thro
 
 Spring AOP가 동작하는 원리가 바로 이 빈 후처리기, 그 중에서도 **`AnnotationAwareAspectJAutoProxyCreator`**라는 특수한 빈 후처리기 덕분입니다.
 
-1.  스프링 컨테이너는 등록된 모든 빈 후처리기를 찾습니다.
-2.  일반적인 빈들이 생성되고 초기화 단계에 돌입합니다.
-3.  `postProcessAfterInitialization` 단계에서 `AutoProxyCreator`가 동작합니다.
-4.  이 빈 후처리기는 컨테이너 내의 모든 어드바이저(Advisor: Pointcut + Advice)를 조회합니다.
-5.  현재 생성된 빈이 Pointcut의 대상이 되는지(즉, AOP 적용 대상인지) 확인합니다.
-6.  대상이 맞다면, 원본 객체 대신 **프록시 객체를 생성하여 반환**합니다. 대상이 아니라면 원본 객체를 그대로 반환합니다.
-7.  결과적으로 컨테이너에는 (AOP 대상인 경우) 프록시 객체가 빈으로 등록되어, 클라이언트가 빈을 호출할 때 프록시를 거쳐 부가 기능(Advice)이 실행됩니다.
+1. 스프링 컨테이너는 등록된 모든 빈 후처리기를 찾습니다.
+2. 일반적인 빈들이 생성되고 초기화 단계에 돌입합니다.
+3. `postProcessAfterInitialization` 단계에서 `AutoProxyCreator`가 동작합니다.
+4. 이 빈 후처리기는 컨테이너 내의 모든 어드바이저(Advisor: Pointcut + Advice)를 조회합니다.
+5. 현재 생성된 빈이 Pointcut의 대상이 되는지(즉, AOP 적용 대상인지) 확인합니다.
+6. 대상이 맞다면, 원본 객체 대신 **프록시 객체를 생성하여 반환**합니다. 대상이 아니라면 원본 객체를 그대로 반환합니다.
+7. 결과적으로 컨테이너에는 (AOP 대상인 경우) 프록시 객체가 빈으로 등록되어, 클라이언트가 빈을 호출할 때 프록시를 거쳐 부가 기능(Advice)이 실행됩니다.
 
 ---
 

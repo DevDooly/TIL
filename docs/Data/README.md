@@ -5,7 +5,7 @@
 ## 목차
 
 ### Storage & Database
-*   **[Database](Database/README.md)**: RDBMS 및 NoSQL (Redis, MongoDB), 락(Locking) 전략 및 관리
+* **[Database](Database/README.md)**: RDBMS 및 NoSQL (Redis, MongoDB), 락(Locking) 전략 및 관리
 
 ### Logging & Analysis
-*   **[ELK Stack](ELK.md)**: Elasticsearch, Logstash, Kibana를 활용한 로그 통합 분석
+* **[ELK Stack](ELK.md)**: Elasticsearch, Logstash, Kibana를 활용한 로그 통합 분석

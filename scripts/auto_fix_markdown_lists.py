@@ -4,7 +4,9 @@ import re
 DOCS_DIR = "docs"
 
 def fix_markdown_lists():
-    list_pattern = re.compile(r'^(\s*)([-*]|\d+\.)\s+')
+    # 리스트 패턴: 시작부분에 - 또는 * 또는 숫자. 이 있고 그 뒤에 하나 이상의 공백이 있는 경우
+    # 캡처 그룹: 1(인덴트), 2(마커), 3(마커 뒤 공백들)
+    list_pattern = re.compile(r'^(\s*)([-*]|\d+\.)(\s+)(.*)')
     files_fixed = 0
     
     for root, _, files in os.walk(DOCS_DIR):
@@ -23,6 +25,7 @@ def fix_markdown_lists():
                     line = lines[i]
                     stripped_line = line.strip()
                     
+                    # 코드 블록 진입/탈출 확인
                     if stripped_line.startswith("```"):
                         in_code_block = not in_code_block
                         new_lines.append(line)
@@ -32,14 +35,26 @@ def fix_markdown_lists():
                         new_lines.append(line)
                         continue
                         
-                    # 1번째 줄 이후부터 검사
-                    if i > 0 and list_pattern.match(stripped_line):
-                        prev_line = lines[i-1].strip()
-                        # 이전 줄이 비어있지 않고, 리스트도 아니고, 헤더도 아니고, 인용구도 아니면 빈 줄 추가
-                        if prev_line and not list_pattern.match(prev_line) and not prev_line.startswith('#') and not prev_line.startswith('>'):
-                            if not prev_line.startswith('<!--') and prev_line != '---':
-                                new_lines.append('\n')
-                                file_modified = True
+                    match = list_pattern.match(line)
+                    if match:
+                        indent = match.group(1)
+                        marker = match.group(2)
+                        spacing = match.group(3)
+                        content = match.group(4)
+                        
+                        # 1. 이전 줄 확인 및 개행 추가
+                        if i > 0:
+                            prev_line = lines[i-1].strip()
+                            if prev_line and not list_pattern.match(prev_line) and not prev_line.startswith('#') and not prev_line.startswith('>'):
+                                if not prev_line.startswith('<!--') and prev_line != '---':
+                                    new_lines.append('\n')
+                                    file_modified = True
+                        
+                        # 2. 공백 표준화 (* 뒤에 공백 1개로 통일)
+                        # 단, 인덴트가 있는 서브리스트는 인덴트 유지
+                        if spacing != ' ':
+                            line = f"{indent}{marker} {content}\n"
+                            file_modified = True
                     
                     new_lines.append(line)
                 
