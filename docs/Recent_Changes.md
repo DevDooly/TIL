@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-18 16:55 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 예제 보완 (KafkaTestUtils 없이 순수 Client API 활용) |
 | 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
 | 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
 | 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-12 17:04 | [AI/README.md](AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 17:04 | [Tools/README.md](Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
 | 2026-02-12 16:57 | [Tools/Gemini_CLI.md](Tools/Gemini_CLI.md) | docs: Gemini CLI 사용법 문서 추가 |
-| 2026-02-12 16:57 | [Tools/README.md](Tools/README.md) | docs: Gemini CLI 사용법 문서 추가 |
