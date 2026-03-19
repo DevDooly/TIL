@@ -8,9 +8,9 @@ NAS 간에 수백만 개의 파일을 전송해야 할 때, 특히 운영 중인
 
 `cp`나 `mv` 명령어는 대량 파일 작업 시 네트워크 단절이나 시스템 중단에 취약하며, 현재 진행 상태를 알기 어렵습니다. 반면 **rsync**는 다음과 같은 장점이 있습니다.
 
-*   **증분 전송**: 변경된 부분이나 누락된 파일만 골라서 전송 가능 (중단 후 재시작 시 매우 유리).
-*   **부하 조절**: 대역폭 제한(`--bwlimit`) 및 I/O 우선순위 조절 가능.
-*   **무결성 검사**: 체크섬을 통해 데이터가 정확히 복사되었는지 확인 가능.
+* **증분 전송**: 변경된 부분이나 누락된 파일만 골라서 전송 가능 (중단 후 재시작 시 매우 유리).
+* **부하 조절**: 대역폭 제한(`--bwlimit`) 및 I/O 우선순위 조절 가능.
+* **무결성 검사**: 체크섬을 통해 데이터가 정확히 복사되었는지 확인 가능.
 
 ---
 
@@ -26,47 +26,67 @@ ionice -c 3 rsync -avh --bwlimit=10000 --info=progress2 /A/20260318 /B/
 
 ### 2.2 주요 옵션 설명
 
-*   **`ionice -c 3`**: 이 프로세스의 I/O 우선순위를 'Idle'로 설정합니다. 다른 프로세스가 디스크를 쓰지 않을 때만 작업을 수행하므로 운영 중인 서비스에 미치는 영향을 최소화합니다.
-*   **`-a` (archive)**: 권한, 심볼릭 링크, 수정 시간 등 모든 속성을 유지하며 복사합니다.
-*   **`--bwlimit=10000`**: 전송 대역폭을 초당 10,000KB(약 10MB/s)로 제한합니다. 네트워크 및 디스크 I/O가 폭주하는 것을 방지합니다.
-*   **`--info=progress2`**: 개별 파일 목록 대신 **전체 진행률, 전송 속도, 예상 소요 시간**을 한 줄로 요약해서 보여줍니다. 대량 파일 작업 시 로그가 지저분해지는 것을 방지합니다.
-*   **`/A/20260318` vs `/A/20260318/`**:
-    *   끝에 슬래시(`/`)가 **없으면**: `20260318` 폴더 **자체**를 복사합니다. (결과: `/B/20260318/...`)
-    *   끝에 슬래시(`/`)가 **있으면**: 폴더 **내부의 내용물**만 복사합니다. (결과: `/B/...`)
+* **`ionice -c 3`**: 이 프로세스의 I/O 우선순위를 'Idle'로 설정합니다. 다른 프로세스가 디스크를 쓰지 않을 때만 작업을 수행하므로 운영 중인 서비스에 미치는 영향을 최소화합니다.
+* **`-a` (archive)**: 권한, 심볼릭 링크, 수정 시간 등 모든 속성을 유지하며 복사합니다.
+* **`--bwlimit=10000`**: 전송 대역폭을 초당 10,000KB(약 10MB/s)로 제한합니다. 네트워크 및 디스크 I/O가 폭주하는 것을 방지합니다.
+* **`--info=progress2`**: 개별 파일 목록 대신 **전체 진행률, 전송 속도, 예상 소요 시간**을 한 줄로 요약해서 보여줍니다. 대량 파일 작업 시 로그가 지저분해지는 것을 방지합니다.
+* **`/A/20260318` vs `/A/20260318/`**:
+    * 끝에 슬래시(`/`)가 **없으면**: `20260318` 폴더 **자체**를 복사합니다. (결과: `/B/20260318/...`)
+    * 끝에 슬래시(`/`)가 **있으면**: 폴더 **내부의 내용물**만 복사합니다. (결과: `/B/...`)
 
 ---
 
-## 3. 안정적인 작업을 위한 추천 스크립트 (Background)
+## 3. 실전 전송 스크립트 (`run.sh`)
 
-100만 개 이상의 파일을 옮길 때는 터미널이 끊길 수 있으므로 `nohup` 환경에서 백그라운드로 실행하는 것이 필수적입니다.
+100만 개 이상의 대량 파일을 안전하게 옮기기 위한 쉘 스크립트입니다. 스크립트 내부에서 `nohup`을 쓰지 않고, 실행 시 `nohup`으로 감싸서 돌리는 것이 프로세스 관리에 더 유리합니다.
 
 ```bash
 #!/bin/bash
 
+# [설정] 원본 및 대상 경로 (끝에 슬래시 제외)
 SOURCE="/A/20260318"
 DEST="/B"
+LOG_FILE="rsync_transfer.log"
 
-# 1. 대상 디렉토리 존재 확인
+# 1. 원본 디렉토리 존재 확인
 if [ ! -d "$SOURCE" ]; then
-    echo "Source directory $SOURCE does not exist."
+    echo "ERROR: Source directory $SOURCE does not exist."
     exit 1
 fi
 
-# 2. 전송 실행 (Background 추천)
-# --partial: 전송 중단 시 부분 전송된 파일을 보존
-# --append-verify: 중단된 지점부터 데이터를 이어서 전송
-# --inplace: 임시 파일을 만들지 않고 직접 덮어씀
-echo "Starting file transfer in background..."
+echo "Transfer started at: $(date)"
+echo "Source: $SOURCE"
+echo "Destination: $DEST"
 
-nohup ionice -c 3 nice -n 19 rsync -ah \
+# 2. rsync 실행
+# ionice -c 3: I/O 우선순위 최하위(Idle)
+# nice -n 19: CPU 우선순위 최하위
+# --info=progress2: 전체 진행률 요약 출력
+# --append-verify: 중단된 지점부터 데이터 이어받기
+ionice -c 3 nice -n 19 rsync -ah \
     --partial \
     --append-verify \
     --inplace \
     --info=progress2 \
     --bwlimit=20000 \
-    "$SOURCE" "$DEST" > rsync_transfer.log 2>&1 &
+    "$SOURCE" "$DEST"
 
-echo "Transfer started in background. Check 'rsync_transfer.log' for progress."
+echo "Transfer finished at: $(date)"
+```
+
+### 3.1 실행 방법 (Background)
+
+스크립트에 실행 권한을 준 뒤, `nohup`을 사용하여 백그라운드에서 실행합니다.
+
+```bash
+# 1. 실행 권한 부여
+chmod +x run.sh
+
+# 2. 백그라운드 실행
+nohup ./run.sh > rsync_transfer.log 2>&1 &
+
+# 3. 진행 상황 확인
+tail -f rsync_transfer.log
 ```
 
 ---

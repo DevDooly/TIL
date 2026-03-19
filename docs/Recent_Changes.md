@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-19 14:52 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 스크립트 구조 개선 (nohup ./run.sh & 대응) |
 | 2026-03-19 14:48 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정) |
 | 2026-03-19 14:31 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
 | 2026-03-19 13:58 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송(rsync) 및 I/O 부하 최적화 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-02-12 18:14 | [AI/README.md](AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 18:14 | [AI/n8n.md](AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
-| 2026-02-12 17:04 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
