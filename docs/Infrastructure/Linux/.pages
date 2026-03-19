@@ -10,5 +10,6 @@ nav:
       - Logrotate: Logrotate.md
       - Fail2Ban: Fail2Ban.md
       - Quotes: Single Quotation vs Double Quotation in bash.md
+  - TL;DR: TL;DR.md
+  - 대량 파일 전송 (rsync): Large_File_Transfer.md
   - Tips: Tips
-  - Etc: TL;DR.md
