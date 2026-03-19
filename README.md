@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-19 14:48 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정... |
+| 2026-03-19 14:31 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
 | 2026-03-19 13:58 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송(rsync) 및 I/O 부하 최적화 가이드 추가 |
 | 2026-03-18 16:55 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 예제 보완 (KafkaTestUtils 없이 순수... |
 | 2026-03-18 15:56 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
 | 2026-03-18 15:56 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
-| 2026-03-18 15:56 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
-| 2026-03-18 15:04 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)

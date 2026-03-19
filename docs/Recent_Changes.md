@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-19 14:48 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정) |
+| 2026-03-19 14:31 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
 | 2026-03-19 13:58 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송(rsync) 및 I/O 부하 최적화 가이드 추가 |
 | 2026-03-18 16:55 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 예제 보완 (KafkaTestUtils 없이 순수 Client API 활용) |
 | 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
@@ -52,5 +54,3 @@
 | 2026-02-12 18:14 | [AI/n8n.md](AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
 | 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |
 | 2026-02-12 17:04 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
-| 2026-02-12 17:04 | [AI/README.md](AI/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
-| 2026-02-12 17:04 | [Tools/README.md](Tools/README.md) | refactor: Gemini CLI 문서 위치 이동 (Tools -&gt; AI) |
