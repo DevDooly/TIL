@@ -2,7 +2,7 @@
 
 기존의 코드에 여러가지 기능을 추가하는 파이썬 구문
 
-```decorator.py```
+`decorator.py`
 
 ```python
 def outer_function(msg):

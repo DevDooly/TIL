@@ -104,5 +104,3 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 위 명령어로 확인한 비밀번호를 입력하면 플러그인 설치 화면으로 넘어갑니다. 보통 **"Install suggested plugins"**를 선택하여 기본 플러그인들을 설치하는 것이 좋습니다.
-
-```

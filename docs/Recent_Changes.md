@@ -4,6 +4,11 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-23 14:25 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 현대사와 국제 정세 섹션 신설 및 미국-이란 갈등 분석 문서 추가 |
+| 2026-03-20 08:55 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 디렉토리 병합(Merge) 가이드 추가 |
+| 2026-03-20 08:53 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 용량 불일치 트러블슈팅 가이드 추가 |
+| 2026-03-19 16:09 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 시 시스템 부하 분석 가이드 추가 |
+| 2026-03-19 15:38 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 전송 성능 최적화 가이드 추가 (-W, ionice 튜닝) |
 | 2026-03-19 14:52 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 스크립트 구조 개선 (nohup ./run.sh & 대응) |
 | 2026-03-19 14:48 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정) |
 | 2026-03-19 14:31 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
@@ -49,8 +54,3 @@
 | 2026-02-20 09:58 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
 | 2026-02-20 09:58 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [Language/Java/SpringBoot/OAuth2_Implementation.md](Language/Java/SpringBoot/OAuth2_Implementation.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [Language/Java/SpringBoot/README.md](Language/Java/SpringBoot/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-12 18:14 | [AI/README.md](AI/README.md) | docs: AI 자동화 도구 n8n 문서 추가 |
-| 2026-02-12 18:14 | [AI/n8n.md](AI/n8n.md) | docs: AI 자동화 도구 n8n 문서 추가 |
-| 2026-02-12 17:07 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Gemini CLI 상세 가이드 문서 업데이트 |

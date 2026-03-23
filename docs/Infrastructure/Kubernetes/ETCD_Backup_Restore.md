@@ -45,5 +45,3 @@ ETCDCTL_API=3 etcdctl \
 ```bash
 ETCDCTL_API=3 etcdctl --write-out=table snapshot status /opt/snapshot-pre-boot.db
 ```
-
-```
