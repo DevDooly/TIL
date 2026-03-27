@@ -4,6 +4,12 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-27 16:17 | [AI/TurboQuant.md](AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
+| 2026-03-23 14:30 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Infrastructure/Kubernetes/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Language/Python/Study/Decorator.md](Language/Python/Study/Decorator.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 | 2026-03-23 14:25 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 현대사와 국제 정세 섹션 신설 및 미국-이란 갈등 분석 문서 추가 |
 | 2026-03-20 08:55 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 디렉토리 병합(Merge) 가이드 추가 |
 | 2026-03-20 08:53 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 용량 불일치 트러블슈팅 가이드 추가 |
@@ -48,9 +54,3 @@
 | 2026-02-26 14:12 | [Travel/Taiwan/Tips.md](Travel/Taiwan/Tips.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-25 15:12 | [History/Taiwan.md](History/Taiwan.md) | docs: 대만 역사 문서 마크다운 리스트 포맷(개행) 수정 |
 | 2026-02-25 15:03 | [History/README.md](History/README.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
-| 2026-02-25 15:03 | [History/Taiwan.md](History/Taiwan.md) | docs: 역사 카테고리 신설 및 대만 역사 추가 |
-| 2026-02-25 13:33 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 현재 PC 사양 맞춤형 Ollama 설치 및 API 설정 가이드 추가 |
-| 2026-02-23 10:34 | [AI/Ollama.md](AI/Ollama.md) | docs: Ollama 설치 및 사용법 정리 |
-| 2026-02-20 09:58 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |
-| 2026-02-20 09:58 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: OAuth2 개념 및 Spring Boot 구현 예제 추가 |

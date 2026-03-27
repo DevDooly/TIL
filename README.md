@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-03-19 14:52 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 스크립트 구조 개선 (nohup ./run.sh & 대응) |
-| 2026-03-19 14:48 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정... |
-| 2026-03-19 14:31 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
-| 2026-03-19 13:58 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송(rsync) 및 I/O 부하 최적화 가이드 추가 |
-| 2026-03-18 16:55 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 예제 보완 (KafkaTestUtils 없이 순수... |
-| 2026-03-18 15:56 | [Consumer Offset Control](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
+| 2026-03-27 16:17 | [TurboQuant](docs/AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
+| 2026-03-23 14:30 | [Installation Docker Linux](docs/Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
+| 2026-03-23 14:30 | [Decorator](docs/Language/Python/Study/Decorator.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -274,11 +274,14 @@
 * [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
+* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
 * [n8n (Nodemation)](docs/AI/n8n.md)
 
 ## History
 * [**Overview**](docs/History/README.md)
 * [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
+* **Modern_Issues**
+  * [미국-이란 갈등: 중동의 화약고 분석](docs/History/Modern_Issues/US_Iran_Conflict.md)
 
 ## RealEstate
 * [**Overview**](docs/RealEstate/README.md)
