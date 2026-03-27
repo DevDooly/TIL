@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-27 17:05 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
+| 2026-03-27 17:04 | [README](docs/Travel/README.md) | docs: 여행 메인 README에 중부 유럽 섹션 링크 추가 |
 | 2026-03-27 17:01 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
 | 2026-03-27 16:54 | [Overview](docs/Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
 | 2026-03-27 16:44 | [Plantar Fasciitis](docs/Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
 | 2026-03-27 16:17 | [TurboQuant](docs/AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
-| 2026-03-23 14:30 | [Installation Docker Linux](docs/Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
-| 2026-03-23 14:30 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)

@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-27 17:05 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
+| 2026-03-27 17:04 | [Travel/README.md](Travel/README.md) | docs: 여행 메인 README에 중부 유럽 섹션 링크 추가 |
 | 2026-03-27 17:01 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
 | 2026-03-27 16:54 | [Travel/Central_Europe/Overview.md](Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
 | 2026-03-27 16:44 | [Life/Health/Plantar_Fasciitis.md](Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
@@ -52,5 +54,3 @@
 | 2026-02-27 16:36 | [RealEstate/README.md](RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-27 16:36 | [RealEstate/Tax_85sqm_Rules.md](RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
 | 2026-02-26 14:12 | [Travel/README.md](Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
-| 2026-02-26 14:12 | [Travel/Taiwan/Kavalan_Distillery.md](Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
-| 2026-02-26 14:12 | [Travel/Taiwan/README.md](Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
