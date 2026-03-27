@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-27 16:54 | [Travel/Central_Europe/Overview.md](Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
 | 2026-03-27 16:44 | [Life/Health/Plantar_Fasciitis.md](Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
 | 2026-03-27 16:17 | [AI/TurboQuant.md](AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
 | 2026-03-23 14:30 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
@@ -53,4 +54,3 @@
 | 2026-02-26 14:12 | [Travel/Taiwan/Kavalan_Distillery.md](Travel/Taiwan/Kavalan_Distillery.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-26 14:12 | [Travel/Taiwan/README.md](Travel/Taiwan/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
 | 2026-02-26 14:12 | [Travel/Taiwan/Tips.md](Travel/Taiwan/Tips.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
-| 2026-02-25 15:12 | [History/Taiwan.md](History/Taiwan.md) | docs: 대만 역사 문서 마크다운 리스트 포맷(개행) 수정 |
