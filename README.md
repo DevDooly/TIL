@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-27 16:44 | [Plantar Fasciitis](docs/Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
 | 2026-03-27 16:17 | [TurboQuant](docs/AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
 | 2026-03-23 14:30 | [Installation Docker Linux](docs/Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 | 2026-03-23 14:30 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 | 2026-03-23 14:30 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 | 2026-03-23 14:30 | [Spring Kafka Test](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
-| 2026-03-23 14:30 | [Decorator](docs/Language/Python/Study/Decorator.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -266,6 +266,8 @@
 * [Development Trends](docs/Life/Trends.md)
 * **Career**
   * [Reference Check(평판 조회)](docs/Life/Career/Reference%20Check.md)
+* **Health**
+  * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
 
 ## AI
 * [**Overview**](docs/AI/README.md)
