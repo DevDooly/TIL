@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-27 17:01 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
 | 2026-03-27 16:54 | [Overview](docs/Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
 | 2026-03-27 16:44 | [Plantar Fasciitis](docs/Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
 | 2026-03-27 16:17 | [TurboQuant](docs/AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
 | 2026-03-23 14:30 | [Installation Docker Linux](docs/Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 | 2026-03-23 14:30 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
-| 2026-03-23 14:30 | [Large File Transfer](docs/Infrastructure/Linux/Large_File_Transfer.md) | docs: 마크다운 문법 및 리스트 포맷 오류 일괄 수정 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -293,6 +293,7 @@
 * [**Overview**](docs/Travel/README.md)
 * **Central_Europe**
   * [🏰 중부 유럽의 봄: 제국의 흔적을 걷는 10일간의 여정](docs/Travel/Central_Europe/Overview.md)
+  * [🇨🇿 프라하, 체코 (Prague): 중세 보헤미아의 낭만 (1-3일차)](docs/Travel/Central_Europe/Prague.md)
 * **Taiwan**
   * [**Overview**](docs/Travel/Taiwan/README.md)
   * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)
