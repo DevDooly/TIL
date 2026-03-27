@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-27 17:11 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
+| 2026-03-27 17:11 | [Salzburg](docs/Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
 | 2026-03-27 17:05 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
 | 2026-03-27 17:04 | [README](docs/Travel/README.md) | docs: 여행 메인 README에 중부 유럽 섹션 링크 추가 |
 | 2026-03-27 17:01 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
 | 2026-03-27 16:54 | [Overview](docs/Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
-| 2026-03-27 16:44 | [Plantar Fasciitis](docs/Life/Health/Plantar_Fasciitis.md) | docs: 족저근막염(Plantar Fasciitis) 원인 및 해결 방법 가이드 추가 |
-| 2026-03-27 16:17 | [TurboQuant](docs/AI/TurboQuant.md) | docs: 최신 AI 양자화 기술 TurboQuant 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -294,6 +294,7 @@
 * **Central_Europe**
   * [🏰 중부 유럽의 봄: 제국의 흔적을 걷는 10일간의 여정](docs/Travel/Central_Europe/Overview.md)
   * [🇨🇿 프라하, 체코 (Prague): 중세 보헤미아의 낭만 (1-3일차)](docs/Travel/Central_Europe/Prague.md)
+  * [🇦🇹 잘츠부르크, 오스트리아 (Salzburg): 알프스의 풍경과 모차르트 (3-5일차)](docs/Travel/Central_Europe/Salzburg.md)
 * **Taiwan**
   * [**Overview**](docs/Travel/Taiwan/README.md)
   * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)

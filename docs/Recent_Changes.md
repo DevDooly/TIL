@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-27 17:11 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
+| 2026-03-27 17:11 | [Travel/Central_Europe/Salzburg.md](Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
 | 2026-03-27 17:05 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
 | 2026-03-27 17:04 | [Travel/README.md](Travel/README.md) | docs: 여행 메인 README에 중부 유럽 섹션 링크 추가 |
 | 2026-03-27 17:01 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
@@ -52,5 +54,3 @@
 | 2026-03-09 10:18 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: 소프트웨어 버저닝(SemVer, CalVer 등) 문서 추가 |
 | 2026-03-05 12:49 | [Language/Java/SpringBoot/BeanPostProcessor.md](Language/Java/SpringBoot/BeanPostProcessor.md) | docs: Spring Boot BeanPostProcessor(빈 후처리기) 개념 및 예제 추가 |
 | 2026-02-27 16:36 | [RealEstate/README.md](RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
-| 2026-02-27 16:36 | [RealEstate/Tax_85sqm_Rules.md](RealEstate/Tax_85sqm_Rules.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |
-| 2026-02-26 14:12 | [Travel/README.md](Travel/README.md) | docs: 여행(Travel) 카테고리 신설 및 대만 여행 정보 추가 |
