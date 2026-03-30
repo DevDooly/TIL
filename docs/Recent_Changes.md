@@ -4,6 +4,12 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-30 13:31 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFKA-9965) 분석 문서 추가 |
+| 2026-03-30 13:31 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFKA-9965) 분석 문서 추가 |
+| 2026-03-30 08:44 | [Infrastructure/README.md](Infrastructure/README.md) | docs: Infrastructure 메인 목차 업데이트 (Kubernetes, Kafka, MinIO 추가) |
+| 2026-03-27 17:22 | [Travel/Central_Europe/Budapest.md](Travel/Central_Europe/Budapest.md) | docs: 동유럽 여행 7-9일차 부다페스트(Budapest) 가이드 추가 |
+| 2026-03-27 17:18 | [Travel/Central_Europe/Salzburg.md](Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
+| 2026-03-27 17:18 | [Travel/Central_Europe/Vienna.md](Travel/Central_Europe/Vienna.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
 | 2026-03-27 17:11 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
 | 2026-03-27 17:11 | [Travel/Central_Europe/Salzburg.md](Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
 | 2026-03-27 17:05 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
@@ -48,9 +54,3 @@
 | 2026-03-11 13:54 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client (mc) Linux 설치 및 기본/버저닝 명령어 가이드 추가 |
 | 2026-03-11 09:55 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO 객체의 모든 버전을 일괄 영구 삭제하는 응용 예제(deleteAllVersions) 추가 |
 | 2026-03-11 09:47 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 업데이트 (bucket, objectName 인자 사용 방식 추가) |
-| 2026-03-11 09:44 | [Infrastructure/MinIO/Java_Client_Examples.md](Infrastructure/MinIO/Java_Client_Examples.md) | docs: MinIO Java Client 예제 추가 (버저닝 객체 삭제 및 조회) |
-| 2026-03-11 09:38 | [Infrastructure/MinIO/README.md](Infrastructure/MinIO/README.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
-| 2026-03-11 09:38 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: MinIO 카테고리 신설 및 버저닝(Versioning) 기능 설명 추가 |
-| 2026-03-09 10:18 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: 소프트웨어 버저닝(SemVer, CalVer 등) 문서 추가 |
-| 2026-03-05 12:49 | [Language/Java/SpringBoot/BeanPostProcessor.md](Language/Java/SpringBoot/BeanPostProcessor.md) | docs: Spring Boot BeanPostProcessor(빈 후처리기) 개념 및 예제 추가 |
-| 2026-02-27 16:36 | [RealEstate/README.md](RealEstate/README.md) | docs: 부동산(RealEstate) 카테고리 신설 및 85㎡ 초과 세금/규제 문서 추가 |

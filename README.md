@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-03-27 17:11 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
-| 2026-03-27 17:11 | [Salzburg](docs/Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 3-5일차 잘츠부르크(Salzburg) 가이드 추가 |
-| 2026-03-27 17:05 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 프라하(Prague) 가이드 상세 내용 보충 및 마크다운 수정 |
-| 2026-03-27 17:04 | [README](docs/Travel/README.md) | docs: 여행 메인 README에 중부 유럽 섹션 링크 추가 |
-| 2026-03-27 17:01 | [Prague](docs/Travel/Central_Europe/Prague.md) | docs: 동유럽 여행 1-3일차 프라하(Prague) 가이드 추가 |
-| 2026-03-27 16:54 | [Overview](docs/Travel/Central_Europe/Overview.md) | docs: 동유럽 여행(5월) 섹션 신설 및 준비 가이드 작성 |
+| 2026-03-30 13:31 | [Producer Partitioner Issue](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFK... |
+| 2026-03-30 13:31 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFK... |
+| 2026-03-30 08:44 | [README](docs/Infrastructure/README.md) | docs: Infrastructure 메인 목차 업데이트 (Kubernetes, Kafka... |
+| 2026-03-27 17:22 | [Budapest](docs/Travel/Central_Europe/Budapest.md) | docs: 동유럽 여행 7-9일차 부다페스트(Budapest) 가이드 추가 |
+| 2026-03-27 17:18 | [Salzburg](docs/Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
+| 2026-03-27 17:18 | [Vienna](docs/Travel/Central_Europe/Vienna.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -172,6 +172,7 @@
   * **Kafka**
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
+    * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
     * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
   * **RabbitMQ**
     * [**Overview**](docs/Infrastructure/MessageBroker/RabbitMQ/README.md)
@@ -292,9 +293,11 @@
 ## Travel
 * [**Overview**](docs/Travel/README.md)
 * **Central_Europe**
+  * [🇭🇺 부다페스트, 헝가리 (Budapest): 도나우의 진주 (7-9일차)](docs/Travel/Central_Europe/Budapest.md)
   * [🏰 중부 유럽의 봄: 제국의 흔적을 걷는 10일간의 여정](docs/Travel/Central_Europe/Overview.md)
   * [🇨🇿 프라하, 체코 (Prague): 중세 보헤미아의 낭만 (1-3일차)](docs/Travel/Central_Europe/Prague.md)
   * [🇦🇹 잘츠부르크, 오스트리아 (Salzburg): 알프스의 풍경과 모차르트 (3-5일차)](docs/Travel/Central_Europe/Salzburg.md)
+  * [🇦🇹 비엔나, 오스트리아 (Vienna): 합스부르크의 영광과 예술 (5-7일차)](docs/Travel/Central_Europe/Vienna.md)
 * **Taiwan**
   * [**Overview**](docs/Travel/Taiwan/README.md)
   * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)

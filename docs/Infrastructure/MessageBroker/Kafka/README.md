@@ -7,6 +7,7 @@ Kafka는 실시간 데이터 파이프라인 및 스트리밍 애플리케이션
 1. **Kafka 개요 및 핵심 개념**: Topic, Partition, Offset의 이해
 2. **설치 및 환경 구성**: Docker를 이용한 Kafka 기동
 3. **Kafka Producer (Java)**: 효율적인 메시지 발행 전략
+   - [RoundRobinPartitioner 이슈 (KAFKA-9965)](Producer_Partitioner_Issue.md)
 4. **Kafka Consumer (Java)**: [특정 Offset 재소비 및 제어](Consumer_Offset_Control.md)
 5. **Spring Kafka**: 스프링 프레임워크와의 연동
    - [테스트 코드에서 단일 메시지 소비 예제](Spring_Kafka_Test.md)
