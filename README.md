@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-30 13:59 | [Producer Partitioner Policy](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka Producer 파티셔너(Partitioner) 정책 및 Java 설... |
+| 2026-03-30 13:59 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka Producer 파티셔너(Partitioner) 정책 및 Java 설... |
 | 2026-03-30 13:31 | [Producer Partitioner Issue](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFK... |
 | 2026-03-30 13:31 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFK... |
 | 2026-03-30 08:44 | [README](docs/Infrastructure/README.md) | docs: Infrastructure 메인 목차 업데이트 (Kubernetes, Kafka... |
 | 2026-03-27 17:22 | [Budapest](docs/Travel/Central_Europe/Budapest.md) | docs: 동유럽 여행 7-9일차 부다페스트(Budapest) 가이드 추가 |
-| 2026-03-27 17:18 | [Salzburg](docs/Travel/Central_Europe/Salzburg.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
-| 2026-03-27 17:18 | [Vienna](docs/Travel/Central_Europe/Vienna.md) | docs: 동유럽 여행 5-7일차 비엔나(Vienna) 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -173,6 +173,7 @@
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
     * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+    * [Kafka Producer: 파티셔너(Partitioner) 정책 및 설정](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
     * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
   * **RabbitMQ**
     * [**Overview**](docs/Infrastructure/MessageBroker/RabbitMQ/README.md)
