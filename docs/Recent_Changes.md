@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/Partition_Strategy.md](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
+| 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
+| 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
 | 2026-03-30 13:59 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka Producer 파티셔너(Partitioner) 정책 및 Java 설정 예제 추가 |
 | 2026-03-30 13:59 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka Producer 파티셔너(Partitioner) 정책 및 Java 설정 예제 추가 |
 | 2026-03-30 13:31 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: Kafka Producer RoundRobinPartitioner 이슈(KAFKA-9965) 분석 문서 추가 |
@@ -51,6 +54,3 @@
 | 2026-03-17 08:47 | [Infrastructure/Kubernetes/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:47 | [Infrastructure/Kubernetes/Cluster_Architecture.md](Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
 | 2026-03-17 08:44 | [Infrastructure/Kubernetes/README.md](Infrastructure/Kubernetes/README.md) | docs: Kubernetes(CKA) 카테고리 신설 및 학습 목차 작성 |
-| 2026-03-16 13:20 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 수명 주기 관리(Lifecycle) 설명 및 사용 예제 추가 |
-| 2026-03-12 14:46 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: Oracle LOB Segment 개념 및 ORA-01692 에러 조치 방법 추가 |
-| 2026-03-11 13:54 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client (mc) Linux 설치 및 기본/버저닝 명령어 가이드 추가 |

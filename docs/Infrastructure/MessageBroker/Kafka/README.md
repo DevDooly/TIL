@@ -5,6 +5,7 @@ Kafka는 실시간 데이터 파이프라인 및 스트리밍 애플리케이션
 ## 📌 학습 로드맵
 
 1. **Kafka 개요 및 핵심 개념**: Topic, Partition, Offset의 이해
+   - [파티션(Partition) 전략 및 개수 산정](Partition_Strategy.md)
 2. **설치 및 환경 구성**: Docker를 이용한 Kafka 기동
 3. **Kafka Producer (Java)**: 효율적인 메시지 발행 전략
    - [파티셔너(Partitioner) 정책 및 설정](Producer_Partitioner_Policy.md)
