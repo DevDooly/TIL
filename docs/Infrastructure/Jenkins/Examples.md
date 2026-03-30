@@ -190,5 +190,6 @@ pipeline {
 ```
 
 ### 주의사항
+
 - `changeset`은 SCM에서 가져온 변경 내역(changelog)을 기반으로 작동하므로, **Pipeline script from SCM** 방식으로 설정해야 정확하게 동작합니다.
 - 첫 빌드이거나 강제로 전체 빌드가 필요한 경우를 대비해 `when { anyOf { changeset '...'; expression { params.FORCE_BUILD } } }`와 같이 파라미터를 조합해서 사용하는 것이 좋습니다.

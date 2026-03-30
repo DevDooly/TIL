@@ -3,6 +3,7 @@
 **Spring Boot**는 Spring Framework 기반의 애플리케이션을 빠르고 쉽게 개발할 수 있도록 도와주는 도구입니다. "Spring Framework를 더 쉽게(Opinionated)" 사용할 수 있도록 복잡한 설정을 자동화하고, 자주 사용되는 의존성을 관리해줍니다.
 
 ## 1. Spring Boot의 핵심 목표
+
 * **빠른 개발 시작:** 복잡한 XML 설정 없이 바로 코딩을 시작할 수 있습니다.
 * **독립 실행 (Standalone):** 별도의 WAS(Tomcat, Jetty 등) 설치 없이, `java -jar` 명령어로 실행 가능한 JAR 파일을 생성합니다.
 * **Opinionated Defaults:** 자주 사용되는 라이브러리와 설정을 기본값으로 제공하여 설정의 피로를 줄입니다.

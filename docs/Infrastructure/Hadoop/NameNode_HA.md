@@ -39,6 +39,7 @@ Active NameNode와 Standby NameNode는 **JournalNode** 그룹을 공유합니다
     * Standby 측의 ZKFC가 이를 감지하고 Lock을 획득하여 자신의 NameNode를 Active로 승격시킵니다.
 
 ## 4. 참고 자료 및 모범 사례 (Best Practices)
+
 * **JournalNode 배치:** 각기 다른 물리적 머신 또는 랙(Rack)에 분산 배치하여 하드웨어 장애에 대비해야 합니다.
 * **Fencing:** Split-Brain 상황에서 기존 Active 노드가 멈추지 않고 오동작하여 데이터를 오염시키는 것을 막기 위해, SSH를 통해 기존 Active 노드를 강제 종료(Kill)하는 **STONITH (Shoot The Other Node In The Head)** 설정을 반드시 해야 합니다.
 * **Observer NameNode (Hadoop 3.0+):** 읽기 성능 향상을 위해 도입된 개념으로, Standby와 유사하지만 읽기 요청만을 처리하여 부하를 분산시킵니다. (HA 구성 원리는 유사함)

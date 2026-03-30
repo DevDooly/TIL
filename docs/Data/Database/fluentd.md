@@ -21,4 +21,5 @@ Fluentd는 설정 파일에서 다음과 같은 단계를 정의하여 데이터
 * **Fluent Bit:** Fluentd의 초경량 버전입니다. 리소스가 제한된 환경(임베디드, 컨테이너 에이전트)에 최적화되어 있으며 C언어로 작성되었습니다. 보통 서버마다 Fluent Bit를 설치하여 데이터를 수집하고, 중앙의 Fluentd 서버로 모아서 처리하는 구조를 많이 사용합니다.
 
 ## 참고
+
 * [Fluentd 공식 아키텍처 가이드](https://www.fluentd.org/architecture)

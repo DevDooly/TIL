@@ -9,6 +9,7 @@ Spring Boot 애플리케이션 개발 중, `spring-kafka-test` 라이브러리(K
 `application.yml`에 정의된 빈(Bean) 설정을 그대로 사용하기보다, 테스트 메서드 내에서 **직접 `KafkaConsumer`를 설정하고 생성**하여 제어하는 것이 가장 독립적이고 확실한 테스트 방법입니다.
 
 ### 핵심 로직
+
 1. 기존 서비스 컨슈머와 겹치지 않는 **고유한 Group ID** 할당.
 2. 테스트 메시지를 놓치지 않기 위해 **`auto.offset.reset`을 `earliest`**로 설정.
 3. 원하는 메시지를 찾을 때까지 **`poll()`** 수행 후 즉시 종료.

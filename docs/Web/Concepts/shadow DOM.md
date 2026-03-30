@@ -5,4 +5,5 @@ Shadow DOM API 는 이러한 캡슐화의 핵심이며, 숨겨지고 분리된 D
 현재 문서는 Shadow DOM 의 기본적인 사용을 다루고 있습니다.
 
 ## References
+
 * https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_shadow_DOM

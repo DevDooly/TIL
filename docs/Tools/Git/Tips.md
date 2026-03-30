@@ -94,5 +94,6 @@ push           -- update remote refs along with associated objects
 - **Merge Request (MR):** GitLab에서 사용하는 용어. "내 변경 사항을 병합(Merge)해주세요"라는 의미.
 
 ## References
+
 * https://about.gitlab.com/blog/2020/04/07/15-git-tips-improve-workflow/
 

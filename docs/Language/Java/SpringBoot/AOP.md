@@ -10,6 +10,7 @@
 * 예: 로그(Logging), 보안(Security), 트랜잭션(Transaction), 성능 측정 등.
 
 ### 1.2 주요 용어
+
 * **Target:** 부가 기능(Advice)을 적용할 대상 객체 (핵심 비즈니스 로직).
 * **Aspect:** 흩어진 관심사(공통 기능)를 모듈화한 것. (Advice + Pointcut)
 * **Advice:** 실질적인 부가 기능 로직 (What & When).

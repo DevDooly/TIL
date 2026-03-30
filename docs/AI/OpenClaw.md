@@ -44,5 +44,6 @@ OpenClaw는 시스템에 대한 강력한 권한을 가집니다.
 - **프라이버시:** 로컬 데이터는 외부로 유출되지 않도록 설정되어 있으나, 외부 API(LLM 등) 호출 시 전송되는 데이터에 대한 이해 필요.
 
 ## References
+
 - [OpenClaw GitHub](https://github.com/OpenClaw/OpenClaw)
 - [Official Documentation](https://docs.openclaw.ai)

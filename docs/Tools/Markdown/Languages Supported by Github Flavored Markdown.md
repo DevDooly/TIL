@@ -1,9 +1,11 @@
 # Languages Supported by Github Flavored Markdown.md
 
 ## Demo Page
+
 * https://highlightjs.org/static/demo/
 
 ## Language List
+
 * actionscript3
 * apache
 * applescript
@@ -59,4 +61,5 @@
 * yaml
 
 ## References
+
 * https://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/

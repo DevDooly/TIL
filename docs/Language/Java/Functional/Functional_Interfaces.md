@@ -24,6 +24,7 @@ public interface MyFunctionalInterface {
 Java에서는 자주 사용되는 함수형 인터페이스를 표준 라이브러리로 제공합니다.
 
 ### 2.1 Predicate&lt;T&gt;
+
 - **설명:** 입력을 받아 조건을 검사하고 `boolean`을 반환합니다.
 - **메서드:** `boolean test(T t)`
 
@@ -33,6 +34,7 @@ System.out.println(isEmpty.test("")); // true
 ```
 
 ### 2.2 Consumer&lt;T&gt;
+
 - **설명:** 입력을 받아서 소비하고, 반환값은 없습니다. (Side-effect 발생)
 - **메서드:** `void accept(T t)`
 
@@ -42,6 +44,7 @@ printer.accept("Hello"); // Hello 출력
 ```
 
 ### 2.3 Supplier&lt;T&gt;
+
 - **설명:** 입력 없이 값을 반환(공급)합니다. Lazy Evaluation에 자주 사용됩니다.
 - **메서드:** `T get()`
 
@@ -51,6 +54,7 @@ System.out.println(random.get());
 ```
 
 ### 2.4 Function&lt;T, R&gt;
+
 - **설명:** 입력(T)을 받아 출력(R)으로 매핑(변환)합니다.
 - **메서드:** `R apply(T t)`
 

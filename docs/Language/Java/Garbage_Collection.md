@@ -68,11 +68,13 @@ graph LR
 > "대부분의 객체는 금방 접근 불가능 상태(Unreachable)가 된다."
 
 ### 3.1 Young Generation
+
 * 새롭게 생성된 객체가 할당되는 곳입니다.
 * 대부분의 객체가 여기서 금방 사라지므로, 여기서 일어나는 GC를 **Minor GC**라고 합니다.
 * **구조:** Eden 영역 1개 + Survivor 영역 2개 (S0, S1)
 
 ### 3.2 Old Generation
+
 * Young 영역에서 오랫동안 살아남은 객체가 이동(Promotion)되는 곳입니다.
 * Young 영역보다 크기가 크며, 여기서 일어나는 GC를 **Major GC (Full GC)**라고 합니다.
 * Full GC는 비용이 크고 애플리케이션 멈춤(Stop-The-World) 시간이 깁니다.
@@ -80,23 +82,28 @@ graph LR
 ## 4. 주요 GC 알고리즘
 
 ### 4.1 Serial GC
+
 * 단일 스레드로 GC를 수행합니다.
 * Stop-The-World 시간이 길어 멀티 코어 환경에는 부적합합니다.
 
 ### 4.2 Parallel GC
+
 * Young 영역의 GC를 멀티 스레드로 수행합니다. (Java 8의 기본 GC)
 * throughput(처리량) 중심입니다.
 
 ### 4.3 CMS GC (Concurrent Mark Sweep)
+
 * 애플리케이션 스레드와 GC 스레드를 동시에 실행하여 Stop-The-World 시간을 최소화합니다.
 * 메모리 파편화 문제가 있어 Java 9부터 deprecated 되었습니다.
 
 ### 4.4 G1 GC (Garbage First)
+
 * 힙을 물리적으로 나누지 않고 **Region**이라는 논리적 단위로 쪼개어 관리합니다.
 * 가비지가 많은 Region을 우선적으로 청소합니다.
 * Java 9 이상의 기본 GC이며, 대용량 메모리에 적합하고 예측 가능한 일시 정지 시간을 제공합니다.
 
 ### 4.5 ZGC (Z Garbage Collector)
+
 * Java 15부터 정식 도입된 확장 가능한 저지연(Low Latency) GC입니다.
 * 대용량 힙(수 TB)에서도 Stop-The-World 시간을 10ms 이하로 보장하는 것을 목표로 합니다.
 

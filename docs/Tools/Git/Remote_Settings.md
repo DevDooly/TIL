@@ -30,6 +30,7 @@ git remote remove origin
 서버에서 `git push`를 할 때마다 사용자 이름과 비밀번호(또는 Token)를 요구하는 경우, 원격 저장소 연결 방식이 **HTTPS**로 설정되어 있을 확률이 높다. 이를 **SSH** 방식으로 변경하면 인증 절차를 자동화할 수 있다.
 
 ### 차이점
+
 - **HTTPS (`https://...`)**: 일반적인 웹 주소 사용. Push 시마다 인증 필요(Credential Helper 미사용 시).
 - **SSH (`git@...`)**: SSH Key 쌍을 이용해 인증. 설정 후에는 비밀번호 입력 없이 사용 가능.
 
@@ -57,4 +58,5 @@ git remote remove origin
 이제 `git push` 시 SSH 키를 통해 자동으로 인증된다.
 
 ## References
+
 * [GitHub Docs - Managing remote repositories](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)

@@ -7,6 +7,7 @@ ArgoCD에서 애플리케이션을 배포하고 관리하는 기본적인 방법
 ArgoCD에서 관리하는 배포 단위인 `Application`을 생성하는 방법입니다.
 
 ### 방법 A: 웹 UI 사용
+
 1. 좌측 상단 **[+ NEW APP]** 버튼 클릭.
 2. **General:**
    - Application Name: 앱 이름 (예: `guestbook`)
@@ -53,10 +54,12 @@ kubectl apply -f application.yaml
 ## 2. 동기화 (Sync) 이해하기
 
 ### Sync Status
+
 - **Synced:** Git과 클러스터 상태가 일치함.
 - **OutOfSync:** Git에 변경 사항이 있거나, 클러스터 상태가 변경되어 불일치함.
 
 ### Sync Policy
+
 - **Manual (수동):** 사용자가 직접 [SYNC] 버튼을 눌러야 배포됩니다. 운영 환경에서 승인 절차가 필요할 때 유용합니다.
 - **Automatic (자동):** Git에 커밋이 발생하면 ArgoCD가 감지하고 즉시 배포합니다.
   - `prune: true`: Git에서 파일이 삭제되면 클러스터 리소스도 삭제합니다. (기본값은 false)

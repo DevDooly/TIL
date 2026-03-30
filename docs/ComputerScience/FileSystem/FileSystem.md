@@ -13,15 +13,18 @@
 ## 2. 주요 파일 시스템 종류
 
 ### Windows
+
 * **FAT32 (File Allocation Table 32):** 호환성이 매우 좋아 Windows, Mac, Linux, 게임기 등 대부분의 기기에서 인식됩니다. 하지만 단일 파일 크기가 4GB로 제한되는 단점이 있습니다.
 * **NTFS (New Technology File System):** Windows의 표준 파일 시스템입니다. 대용량 파일 지원, 권한 관리, 압축, 암호화 등 고급 기능을 제공하지만, Mac에서는 기본적으로 읽기만 가능합니다.
 * **exFAT (Extended FAT):** FAT32의 4GB 파일 크기 제한을 없앤 버전입니다. Windows와 Mac 모두에서 읽기/쓰기가 가능하여 외장 하드나 USB 드라이브에 많이 사용됩니다.
 
 ### macOS
+
 * **HFS+ (Mac OS Extended):** 과거 macOS의 표준 파일 시스템이었습니다.
 * **APFS (Apple File System):** 최신 macOS, iOS, iPadOS 등을 위해 설계된 파일 시스템으로, SSD에 최적화되어 있으며 암호화와 복제(Cloning) 속도가 매우 빠릅니다.
 
 ### Linux
+
 * **ext4 (Fourth Extended Filesystem):** 리눅스의 가장 대표적인 표준 파일 시스템입니다. 안정적이고 성능이 우수하며 대용량 볼륨을 지원합니다.
 * **XFS:** 대용량 파일 처리에 매우 뛰어난 성능을 보이는 고성능 64비트 저널링 파일 시스템입니다.
 * **Btrfs:** 스냅샷, RAID 지원 등 고급 기능을 갖춘 차세대 리눅스 파일 시스템입니다.

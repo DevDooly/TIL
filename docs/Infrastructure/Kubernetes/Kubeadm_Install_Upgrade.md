@@ -25,6 +25,7 @@ kubeadm join <control-plane-host>:<port> --token <token> --discovery-token-ca-ce
 시험에서는 주로 '마스터 노드를 먼저 업그레이드하고 워커 노드를 업그레이드하라'는 지시가 내려집니다.
 
 ### 2.1 마스터 노드 업그레이드 순서
+
 1. **패키지 매니저 업데이트**: `apt update`
 2. **kubeadm 업그레이드**: 
     ```bash

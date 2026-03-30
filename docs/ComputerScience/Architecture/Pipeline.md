@@ -4,6 +4,7 @@
 파이프라인(Pipeline)은 데이터 처리의 단계(Step)들이 연쇄적으로 이어져 있는 구조를 말한다. 한 단계의 출력(Output)이 다음 단계의 입력(Input)으로 곧바로 연결되는 형태를 가지며, 이를 통해 **효율성**과 **자동화**를 달성할 수 있다.
 
 ## 2. 핵심 원리
+
 * **분할 정복(Divide and Conquer)**: 복잡한 작업을 작고 독립적인 단계들로 나눈다.
 * **병렬 처리(Parallelism)**: 각 단계가 독립적으로 수행될 수 있다면, 서로 다른 데이터를 동시에 처리하여 처리량(Throughput)을 높일 수 있다.
 * **스트리밍(Streaming)**: 데이터 전체가 처리되기를 기다리지 않고, 처리된 조각을 즉시 다음 단계로 넘긴다.
@@ -55,5 +56,6 @@ cat application.log | grep "Error" | wc -l
 파이프라인 아키텍처를 적용하면 **작업의 흐름이 명확**해지고 모듈화가 잘 되어 **유지보수와 확장**이 용이해진다. 하지만 단계가 많아질수록 복잡도가 증가하고 추적(Debugging)이 어려워질 수 있으므로, 적절한 모니터링과 오케스트레이션 도구의 도입이 필요하다.
 
 ### References
+
 * [Wikipedia - Pipeline (computing)](https://en.wikipedia.org/wiki/Pipeline_(computing))
 * [Wikipedia - Xargs](https://ko.wikipedia.org/wiki/Xargs)

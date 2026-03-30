@@ -7,10 +7,12 @@ RBAC은 **'누가(Subject)'**, **'어디서(Namespace)'**, **'어떤 권한(Verb
 ## 1. 핵심 리소스 구성
 
 ### 1.1 Role & ClusterRole (권한의 "내용" 정의)
+
 * **Role**: **특정 네임스페이스** 내에 존재하는 자원(Pod, Service, Secret 등)에 대한 권한을 정의합니다.
 * **ClusterRole**: **클러스터 전체** 수준의 자원(Node, PV 등)에 대한 권한을 정의하거나, 모든 네임스페이스에 걸쳐 특정 자원에 접근할 수 있는 권한을 정의합니다.
 
 ### 1.2 RoleBinding & ClusterRoleBinding (권한 "부여")
+
 * 만들어진 Role이나 ClusterRole을 실제 **사용자(User)**, **그룹(Group)**, 또는 **서비스 어카운트(ServiceAccount)**에 연결(Bind)해 주는 역할입니다.
 
 ---

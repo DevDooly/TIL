@@ -29,5 +29,6 @@
 | **LMDB / HDF5** | AI/데이터 분석용. 수백만 개의 작은 이미지나 대규모 데이터셋을 빠르게 읽어야 할 때 사용. |
 
 ## 참고
+
 * [The best database for storing images might not be a database at all](https://blog.couchbase.com/the-best-database-for-storing-images-might-not-be-a-database-at-all/)
 * [Three Ways of Storing and Accessing Lots of Images in Python](https://realpython.com/storing-images-in-python/)

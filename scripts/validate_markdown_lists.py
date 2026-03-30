@@ -5,52 +5,48 @@ DOCS_DIR = "docs"
 
 def validate_markdown():
     issues_found = False
-    
-    # 정규식: 리스트 시작 패턴 (- , * , 1.  등)
+    # 리스트 패턴: - 또는 * 또는 숫자. 뒤에 공백
     list_pattern = re.compile(r'^(\s*)([-*]|\d+\.)\s+')
     
     for root, _, files in os.walk(DOCS_DIR):
         for file in files:
             if file.endswith(".md"):
                 filepath = os.path.join(root, file)
-                
                 with open(filepath, 'r', encoding='utf-8') as f:
                     lines = f.readlines()
                 
                 code_block_open = False
-                code_block_line = 0
-                
                 for i in range(len(lines)):
                     line = lines[i]
                     stripped = line.strip()
                     
-                    # 1. 코드 블록 짝 맞춤 검사 (```)
                     if stripped.startswith("```"):
                         code_block_open = not code_block_open
-                        code_block_line = i + 1
                         continue
-                    
                     if code_block_open:
                         continue
                         
-                    # 2. 리스트 개행 검사 (코드 블록 밖에서만)
-                    if i > 0 and list_pattern.match(stripped):
+                    # 리스트 항목 발견
+                    if list_pattern.match(line):
+                        if i == 0: continue # 파일 첫 줄이 리스트면 통과
+                        
                         prev_line = lines[i-1].strip()
-                        # 이전 줄이 비어있지 않고, 리스트/헤더/인용구/주석/구분선이 아니면 에러
-                        if prev_line and not list_pattern.match(prev_line) and \
-                           not prev_line.startswith('#') and not prev_line.startswith('>') and \
-                           not prev_line.startswith('<!--') and prev_line != '---':
-                            
-                            print(f"❌ [Format Error] {filepath} (Line {i+1})")
-                            print(f"   개행 누락: 리스트 시작 전에 빈 줄이 필요합니다.")
-                            print(f"   Prev: {prev_line}")
-                            print(f"   Curr: {stripped}\n")
-                            issues_found = True
-                
-                # 파일 끝났는데 코드 블록이 열려 있는 경우
+                        # 이전 줄이 비어있지 않은 경우 체크
+                        if prev_line:
+                            # 이전 줄도 같은 레벨의 리스트면 통과
+                            if list_pattern.match(lines[i-1]):
+                                continue
+                            # 이전 줄이 리스트가 아닌데 비어있지 않으면 무조건 에러 (헤더 포함)
+                            # 마크다운 표준상 리스트 시작 전에는 빈 줄이 있어야 함
+                            if not prev_line.startswith('<!--') and prev_line != '---':
+                                print(f"❌ [Format Error] {filepath} (Line {i+1})")
+                                print(f"   리스트 시작 전에 반드시 빈 줄이 필요합니다.")
+                                print(f"   Prev: {prev_line}")
+                                print(f"   Curr: {stripped}\n")
+                                issues_found = True
+
                 if code_block_open:
-                    print(f"❌ [Syntax Error] {filepath} (Line {code_block_line})")
-                    print(f"   코드 블록(```)이 닫히지 않았습니다.\n")
+                    print(f"❌ [Syntax Error] {filepath}: 코드 블록이 닫히지 않았습니다.")
                     issues_found = True
 
     if issues_found:

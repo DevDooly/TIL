@@ -37,6 +37,7 @@
 | **성능** | 비교적 낮음 | 비교적 높음 |
 
 ## References
+
 * [SQLAlchemy - Transactions and Connection Management](https://docs.sqlalchemy.org/en/14/core/connections.html)
 * [Database Concurrency Control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
 

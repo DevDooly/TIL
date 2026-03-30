@@ -4,6 +4,7 @@
 Python의 소켓 모듈 은 Berkeley 소켓 API에 대한 인터페이스를 제공합니다.
 
 ## Socket API List
+
 * socket()
 * bind()
 * listen()
@@ -56,6 +57,7 @@ socket.socket ()을 사용하여 소켓 객체를 만들고 소켓 유형을 soc
 기본 프로토콜은 TCP (Transmission Control Protocol)입니다.
 
 ## References
+
 * https://realpython.com/python-sockets/
 * https://en.wikipedia.org/wiki/Berkeley_sockets
 * 

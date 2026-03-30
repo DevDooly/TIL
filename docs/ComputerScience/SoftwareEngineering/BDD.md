@@ -95,5 +95,6 @@ class AuthServiceTest {
 ---
 
 ## References
+
 - [Cucumber - BDD](https://cucumber.io/docs/bdd/)
 - [Martin Fowler - GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)

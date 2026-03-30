@@ -17,6 +17,7 @@ LOB 컬럼을 생성하면 Oracle은 내부적으로 다음 세 가지 요소를
     * LOB Segment 내에서 데이터의 특정 위치를 빠르게 찾기 위해 시스템이 자동으로 생성하고 관리하는 인덱스입니다.
 
 ### 1.2 In-Row vs Out-of-Row
+
 * **In-Row Storage**: LOB 데이터의 크기가 약 4,000 바이트(정확히는 3964 바이트) 이하일 경우, 별도의 LOB Segment를 쓰지 않고 일반 테이블 행(Row) 안에 직접 저장하여 성능을 높입니다. (기본 설정: `ENABLE STORAGE IN ROW`)
 * **Out-of-Row Storage**: 데이터가 4,000 바이트를 초과하면, 행 안에는 Locator만 남기고 실제 데이터는 **LOB Segment**로 이동시켜 저장합니다.
 

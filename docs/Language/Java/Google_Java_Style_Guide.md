@@ -26,6 +26,7 @@
 
 ## 4. 포맷팅 (Formatting)
 ### 중괄호 (Braces)
+
 * **K&R 스타일**을 따른다. 여는 중괄호(`{`)는 줄을 바꾸지 않고 바로 뒤에 붙인다.
 * `if`, `else`, `for`, `do`, `while` 문은 본문이 비어있거나 한 줄이라도 **반드시 중괄호를 사용**한다.
 
@@ -42,10 +43,12 @@ if (condition) doSomething();
 ```
 
 ### 들여쓰기 (Indentation)
+
 * **Space 2칸**을 사용한다. (Tab 문자 사용 금지)
 * 연속된 들여쓰기는 4칸, 6칸 식으로 2칸씩 늘어난다.
 
 ### 줄바꿈 (Line Wrapping)
+
 * 한 줄은 **100자(column)** 제한을 원칙으로 한다.
 * 줄바꿈 시 연산자 앞에서 끊는 것을 권장한다.
 
@@ -56,6 +59,7 @@ String longString = "This represents a very long string that "
 ```
 
 ## 5. 프로그래밍 관례 (Programming Practices)
+
 * **@Override**: 상위 클래스 메서드를 재정의할 때는 반드시 `@Override` 어노테이션을 붙인다.
 * **예외 처리**: `catch` 블록을 비워두지 않는다. 만약 비워야 한다면 이유를 주석으로 명시하거나 변수명을 `expected`로 짓는다.
 * **Static 멤버 접근**: 클래스 인스턴스가 아닌 **클래스 이름**으로 접근한다.
@@ -63,6 +67,7 @@ String longString = "This represents a very long string that "
     * `fooInstance.aStaticMethod();` (X)
 
 ## References
+
 * [Google Java Style Guide (Official)](https://google.github.io/styleguide/javaguide.html)
 * [Google Java Style Guide (Github)](https://github.com/google/styleguide)
 
