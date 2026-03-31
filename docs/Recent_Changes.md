@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-03-31 14:54 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: K8s 환경에서의 Java Virtual Thread 사용 분석 및 가이드 추가 |
+| 2026-03-30 14:21 | [Infrastructure/MessageBroker/Kafka/Partition_Strategy.md](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Partition_Strategy.md 마크다운 리스트 포맷 수동 수정 |
 | 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/Partition_Strategy.md](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
 | 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
 | 2026-03-30 14:13 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
@@ -52,5 +54,3 @@
 | 2026-03-17 09:29 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 09:29 | [Infrastructure/Kubernetes/RBAC_Authorization.md](Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
 | 2026-03-17 08:47 | [Infrastructure/Kubernetes/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA_Exam_Tips.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
-| 2026-03-17 08:47 | [Infrastructure/Kubernetes/Cluster_Architecture.md](Infrastructure/Kubernetes/Cluster_Architecture.md) | docs: CKA 시험 팁 및 클러스터 아키텍처 문서 추가 |
-| 2026-03-17 08:44 | [Infrastructure/Kubernetes/README.md](Infrastructure/Kubernetes/README.md) | docs: Kubernetes(CKA) 카테고리 신설 및 학습 목차 작성 |
