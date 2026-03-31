@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-03-31 15:22 | [Virtual Threads FTP Pinning](docs/Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: Java Virtual Threads 사용 시 FTP/SFTP Pinning 이... |
+| 2026-03-31 14:59 | [Virtual Threads in K8s](docs/Language/Java/Virtual_Threads_in_K8s.md) | docs: Virtual Threads Pinning 이슈 상세 예시 및 탐지 방법 추가 |
 | 2026-03-31 14:54 | [Virtual Threads in K8s](docs/Language/Java/Virtual_Threads_in_K8s.md) | docs: K8s 환경에서의 Java Virtual Thread 사용 분석 및 가이드 추가 |
 | 2026-03-30 14:21 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Partition_Strategy.md 마크다운 리스트 포맷 수동 수정 |
 | 2026-03-30 14:13 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
 | 2026-03-30 14:13 | [Producer Partitioner Policy](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
-| 2026-03-30 14:13 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
-| 2026-03-30 13:59 | [Producer Partitioner Policy](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka Producer 파티셔너(Partitioner) 정책 및 Java 설... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -39,6 +39,7 @@
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
+  * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
   * [K8s 환경에서의 Java Virtual Thread 사용 분석](docs/Language/Java/Virtual_Threads_in_K8s.md)
   * **Functional**
     * [**Overview**](docs/Language/Java/Functional/README.md)

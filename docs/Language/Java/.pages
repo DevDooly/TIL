@@ -9,4 +9,5 @@ nav:
   - Memory Structure: Memory.md
   - Garbage Collection: Garbage_Collection.md
   - Virtual Threads in K8s: Virtual_Threads_in_K8s.md
+  - Virtual Threads FTP Pinning: Virtual_Threads_FTP_Pinning.md
 - SpringBoot
