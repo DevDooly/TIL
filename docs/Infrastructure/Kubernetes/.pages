@@ -9,3 +9,4 @@ nav:
   - 2.1 워크로드 기초: Workloads.md
   - 2.2 스케줄링 제어: Scheduling.md
   - 2.3 리소스 제한: Resource_Limits.md
+  - Operator 패턴: Operator_Pattern.md

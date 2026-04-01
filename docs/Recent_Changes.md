@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-01 13:28 | [Infrastructure/Kubernetes/Operator_Pattern.md](Infrastructure/Kubernetes/Operator_Pattern.md) | docs: Kubernetes Operator 패턴 정의 및 작동 원리 가이드 추가 |
+| 2026-04-01 10:48 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 파티셔너 문서 수동 수정 및 마크다운 자동 수정 로직 전면 재작성 |
 | 2026-04-01 10:21 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
 | 2026-04-01 10:21 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
 | 2026-03-31 16:23 | [Infrastructure/MessageBroker/Kafka/Partition_Strategy.md](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
@@ -52,5 +54,3 @@
 | 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
-| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Resource_Limits.md](Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
-| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Scheduling.md](Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
