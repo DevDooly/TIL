@@ -28,17 +28,13 @@ def validate_markdown():
                         
                     # 리스트 항목 발견
                     if list_pattern.match(line):
-                        if i == 0: continue # 파일 첫 줄이 리스트면 통과
+                        if i == 0: continue
                         
                         prev_line = lines[i-1].strip()
-                        # 이전 줄이 비어있지 않은 경우 체크
-                        if prev_line:
-                            # 이전 줄도 같은 레벨의 리스트면 통과
-                            if list_pattern.match(lines[i-1]):
-                                continue
-                            # 이전 줄이 리스트가 아닌데 비어있지 않으면 무조건 에러 (헤더 포함)
-                            # 마크다운 표준상 리스트 시작 전에는 빈 줄이 있어야 함
-                            if not prev_line.startswith('<!--') and prev_line != '---':
+                        # 이전 줄이 비어있지 않고, 리스트 마커도 없는 경우 (순수 텍스트, 헤더, 표, 구분선 등)
+                        if prev_line and not list_pattern.match(lines[i-1]):
+                            # 예외: HTML 주석
+                            if not prev_line.startswith('<!--'):
                                 print(f"❌ [Format Error] {filepath} (Line {i+1})")
                                 print(f"   리스트 시작 전에 반드시 빈 줄이 필요합니다.")
                                 print(f"   Prev: {prev_line}")
@@ -50,7 +46,7 @@ def validate_markdown():
                     issues_found = True
 
     if issues_found:
-        print("🚨 Markdown 에러가 발견되었습니다. 수정 후 다시 커밋해주세요.")
+        print("🚨 Markdown 에러가 발견되었습니다. scripts/auto_fix_markdown_lists.py 를 실행하세요.")
         exit(1)
     else:
         print("✅ 모든 Markdown 파일의 포맷이 올바릅니다.")

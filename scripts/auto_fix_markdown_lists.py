@@ -4,7 +4,7 @@ import re
 DOCS_DIR = "docs"
 
 def fix_markdown_lists():
-    # 리스트 패턴: 시작부분에 - 또는 * 또는 숫자. 이 있고 그 뒤에 공백이 있는 경우
+    # 리스트 패턴: - 또는 * 또는 숫자. 뒤에 공백 (내용 캡처)
     list_pattern = re.compile(r'^(\s*)([-*]|\d+\.)\s+(.*)')
     files_fixed = 0
     
@@ -23,32 +23,31 @@ def fix_markdown_lists():
                     line = lines[i]
                     stripped = line.strip()
                     
-                    # 코드 블록 상태 체크
+                    # 1. 코드 블록 무시
                     if stripped.startswith("```"):
                         in_code_block = not in_code_block
                         new_lines.append(line)
                         continue
-                    
                     if in_code_block:
                         new_lines.append(line)
                         continue
                     
+                    # 2. 리스트 항목 감지
                     match = list_pattern.match(line)
                     if match:
-                        # 1. 이전 줄 체크 및 개행 강제화
+                        # 리스트의 첫 시작인지 확인 (이전 줄이 리스트가 아니면 시작임)
                         if i > 0 and len(new_lines) > 0:
                             prev_line = new_lines[-1]
                             prev_stripped = prev_line.strip()
                             
-                            # 이전 줄이 비어있지 않고, 리스트도 아니면 무조건 빈 줄 추가
-                            # (헤더, 구분선, 일반 텍스트 모두 포함)
+                            # 이전 줄이 존재하고, 리스트 마커가 없으며, 비어있지 않다면 무조건 개행 추가
                             if prev_stripped and not list_pattern.match(prev_line):
-                                # 단, 주석이나 구분선은 예외
-                                if not prev_stripped.startswith('<!--') and prev_stripped != '---':
+                                # 예외: HTML 주석은 개행 없이 붙여쓰는 경우 많음 (일단 주석만 허용)
+                                if not prev_stripped.startswith('<!--'):
                                     new_lines.append("\n")
                                     modified = True
                         
-                        # 2. 불렛 뒤 공백 1개로 표준화
+                        # 3. 불렛 뒤 공백 표준화 (1개)
                         indent = match.group(1)
                         marker = match.group(2)
                         content = match.group(3)
