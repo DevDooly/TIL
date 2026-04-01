@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-01 10:21 | [Partitioner Evolution and Imbalance](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
+| 2026-04-01 10:21 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
+| 2026-03-31 16:23 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
+| 2026-03-31 16:23 | [Virtual Threads FTP Pinning](docs/Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
 | 2026-03-31 15:22 | [Virtual Threads FTP Pinning](docs/Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: Java Virtual Threads 사용 시 FTP/SFTP Pinning 이... |
 | 2026-03-31 14:59 | [Virtual Threads in K8s](docs/Language/Java/Virtual_Threads_in_K8s.md) | docs: Virtual Threads Pinning 이슈 상세 예시 및 탐지 방법 추가 |
-| 2026-03-31 14:54 | [Virtual Threads in K8s](docs/Language/Java/Virtual_Threads_in_K8s.md) | docs: K8s 환경에서의 Java Virtual Thread 사용 분석 및 가이드 추가 |
-| 2026-03-30 14:21 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Partition_Strategy.md 마크다운 리스트 포맷 수동 수정 |
-| 2026-03-30 14:13 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
-| 2026-03-30 14:13 | [Producer Partitioner Policy](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: Kafka 파티션(Partition) 전략 및 개수 산정 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -175,6 +175,7 @@
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
     * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
+    * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
     * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
     * [Kafka Producer: 파티셔너(Partitioner) 정책 및 설정](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
     * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)

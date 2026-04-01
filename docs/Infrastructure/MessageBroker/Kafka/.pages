@@ -2,6 +2,8 @@ title: Kafka
 nav:
   - Overview: README.md
   - 파티션 전략 및 산정: Partition_Strategy.md
+  - 파티셔너 정책 및 설정: Producer_Partitioner_Policy.md
   - Partitioner 이슈 (KAFKA-9965): Producer_Partitioner_Issue.md
+  - 파티셔너 진화와 불균형 해결: Partitioner_Evolution_and_Imbalance.md
   - Offset 제어 (Java): Consumer_Offset_Control.md
   - Spring Kafka 테스트: Spring_Kafka_Test.md

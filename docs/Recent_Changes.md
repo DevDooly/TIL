@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-01 10:21 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
+| 2026-04-01 10:21 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
+| 2026-03-31 16:23 | [Infrastructure/MessageBroker/Kafka/Partition_Strategy.md](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
+| 2026-03-31 16:23 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
 | 2026-03-31 15:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: Java Virtual Threads 사용 시 FTP/SFTP Pinning 이슈 분석 및 가이드 추가 |
 | 2026-03-31 14:59 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: Virtual Threads Pinning 이슈 상세 예시 및 탐지 방법 추가 |
 | 2026-03-31 14:54 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: K8s 환경에서의 Java Virtual Thread 사용 분석 및 가이드 추가 |
@@ -50,7 +54,3 @@
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Resource_Limits.md](Infrastructure/Kubernetes/Resource_Limits.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
 | 2026-03-17 14:24 | [Infrastructure/Kubernetes/Scheduling.md](Infrastructure/Kubernetes/Scheduling.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
-| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Workloads.md](Infrastructure/Kubernetes/Workloads.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
-| 2026-03-17 14:13 | [Infrastructure/Kubernetes/RBAC_Authorization.md](Infrastructure/Kubernetes/RBAC_Authorization.md) | docs: CKA RBAC 문서 상세화 (User, ServiceAccount, ClusterRole 예시 추가) |
-| 2026-03-17 09:29 | [Infrastructure/Kubernetes/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/ETCD_Backup_Restore.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
-| 2026-03-17 09:29 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 1번 영역 (kubeadm, ETCD 백업, RBAC) 실전 지침 추가 |
