@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-01 13:28 | [Operator Pattern](docs/Infrastructure/Kubernetes/Operator_Pattern.md) | docs: Kubernetes Operator 패턴 정의 및 작동 원리 가이드 추가 |
-| 2026-04-01 10:48 | [Partitioner Evolution and Imbalance](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 파티셔너 문서 수동 수정 및 마크다운 자동 수정 로직 전면 재작성 |
-| 2026-04-01 10:21 | [Partitioner Evolution and Imbalance](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
-| 2026-04-01 10:21 | [README](docs/Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
-| 2026-03-31 16:23 | [Partition Strategy](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
-| 2026-03-31 16:23 | [Virtual Threads FTP Pinning](docs/Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: FTP Pinning 가이드 수정 및 마크다운 자동 수정 로직 강화 |
+| 2026-04-01 13:36 | [CKA Exam Tips](docs/Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Cluster Architecture](docs/Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [ETCD Backup Restore](docs/Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Kubeadm Install Upgrade](docs/Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [RBAC Authorization](docs/Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [README](docs/Infrastructure/Kubernetes/CKA/README.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -146,15 +146,17 @@
   * [Jenkins 사용 방법](docs/Infrastructure/Jenkins/Usage.md)
 * **Kubernetes**
   * [**Overview**](docs/Infrastructure/Kubernetes/README.md)
-  * [0. CKA 시험 개요 및 팁 (Exam Overview & Tips)](docs/Infrastructure/Kubernetes/CKA_Exam_Tips.md)
-  * [1. 클러스터 아키텍처 및 컴포넌트](docs/Infrastructure/Kubernetes/Cluster_Architecture.md)
-  * [1.2 ETCD 백업(Backup) 및 복원(Restore)](docs/Infrastructure/Kubernetes/ETCD_Backup_Restore.md)
-  * [1.1 Kubeadm 클러스터 설치 및 업그레이드](docs/Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md)
   * [🎡 Kubernetes Operator 패턴](docs/Infrastructure/Kubernetes/Operator_Pattern.md)
-  * [1.3 RBAC (Role-Based Access Control)](docs/Infrastructure/Kubernetes/RBAC_Authorization.md)
-  * [2.3 리소스 제한 (Requests & Limits)](docs/Infrastructure/Kubernetes/Resource_Limits.md)
-  * [2.2 스케줄링 제어 (Scheduling)](docs/Infrastructure/Kubernetes/Scheduling.md)
-  * [2.1 워크로드 (Pod, Deployment, DaemonSet 등)](docs/Infrastructure/Kubernetes/Workloads.md)
+  * **CKA**
+    * [**Overview**](docs/Infrastructure/Kubernetes/CKA/README.md)
+    * [0. CKA 시험 개요 및 팁 (Exam Overview & Tips)](docs/Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md)
+    * [1. 클러스터 아키텍처 및 컴포넌트](docs/Infrastructure/Kubernetes/CKA/Cluster_Architecture.md)
+    * [1.2 ETCD 백업(Backup) 및 복원(Restore)](docs/Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
+    * [1.1 Kubeadm 클러스터 설치 및 업그레이드](docs/Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md)
+    * [1.3 RBAC (Role-Based Access Control)](docs/Infrastructure/Kubernetes/CKA/RBAC_Authorization.md)
+    * [2.3 리소스 제한 (Requests & Limits)](docs/Infrastructure/Kubernetes/CKA/Resource_Limits.md)
+    * [2.2 스케줄링 제어 (Scheduling)](docs/Infrastructure/Kubernetes/CKA/Scheduling.md)
+    * [2.1 워크로드 (Pod, Deployment, DaemonSet 등)](docs/Infrastructure/Kubernetes/CKA/Workloads.md)
 * **Linux**
   * [**Overview**](docs/Infrastructure/Linux/README.md)
   * [Fail2Ban](docs/Infrastructure/Linux/Fail2Ban.md)

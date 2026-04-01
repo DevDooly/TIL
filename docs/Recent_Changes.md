@@ -4,6 +4,17 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/RBAC_Authorization.md](Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/README.md](Infrastructure/Kubernetes/CKA/README.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/Resource_Limits.md](Infrastructure/Kubernetes/CKA/Resource_Limits.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/Scheduling.md](Infrastructure/Kubernetes/CKA/Scheduling.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/CKA/Workloads.md](Infrastructure/Kubernetes/CKA/Workloads.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/Operator_Pattern.md](Infrastructure/Kubernetes/Operator_Pattern.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
+| 2026-04-01 13:36 | [Infrastructure/Kubernetes/README.md](Infrastructure/Kubernetes/README.md) | docs: Kubernetes 섹션 구조 개편 (일반 개념 및 CKA 준비 분리) |
 | 2026-04-01 13:28 | [Infrastructure/Kubernetes/Operator_Pattern.md](Infrastructure/Kubernetes/Operator_Pattern.md) | docs: Kubernetes Operator 패턴 정의 및 작동 원리 가이드 추가 |
 | 2026-04-01 10:48 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 파티셔너 문서 수동 수정 및 마크다운 자동 수정 로직 전면 재작성 |
 | 2026-04-01 10:21 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: Kafka 3.9/4.0 파티셔너 정책 진화 및 불균형 이슈 분석 문서 추가 |
@@ -43,14 +54,3 @@
 | 2026-03-20 08:53 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 용량 불일치 트러블슈팅 가이드 추가 |
 | 2026-03-19 16:09 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 시 시스템 부하 분석 가이드 추가 |
 | 2026-03-19 15:38 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 전송 성능 최적화 가이드 추가 (-W, ionice 튜닝) |
-| 2026-03-19 14:52 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 스크립트 구조 개선 (nohup ./run.sh & 대응) |
-| 2026-03-19 14:48 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송 가이드 업데이트 (진행률 요약 옵션 추가 및 마크다운 오류 수정) |
-| 2026-03-19 14:31 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: rsync 작업 중단 시 재개 및 nohup 백그라운드 실행 가이드 추가 |
-| 2026-03-19 13:58 | [Infrastructure/Linux/Large_File_Transfer.md](Infrastructure/Linux/Large_File_Transfer.md) | docs: 대량 파일 전송(rsync) 및 I/O 부하 최적화 가이드 추가 |
-| 2026-03-18 16:55 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 예제 보완 (KafkaTestUtils 없이 순수 Client API 활용) |
-| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
-| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
-| 2026-03-18 15:56 | [Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md) | docs: Spring Kafka 테스트 코드에서 단일 메시지 소비 예제 추가 |
-| 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
-| 2026-03-18 15:04 | [Infrastructure/MessageBroker/Kafka/README.md](Infrastructure/MessageBroker/Kafka/README.md) | docs: Kafka 섹션 신설 및 Java Consumer Offset 제어 가이드 추가 |
-| 2026-03-17 14:24 | [Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/Kubeadm_Install_Upgrade.md) | docs: CKA 2번 영역 (Workloads, Scheduling, Limits) 요약 추가 |
