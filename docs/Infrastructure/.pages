@@ -10,3 +10,4 @@ nav:
   - Hadoop
   - MinIO
   - Kubernetes
+  - Hazelcast

@@ -21,4 +21,8 @@
 
 ### Storage & Cloud
 
-*   **[MinIO](MinIO/README.md)**: S3 호환 오브젝트 스토리지 (Java Client, Lifecycle, Versioning)
+* **[MinIO](MinIO/README.md)**: S3 호환 오브젝트 스토리지 (Java Client, Lifecycle, Versioning)
+
+* **[Hazelcast](Hazelcast/README.md)**: 분산 인메모리 데이터 그리드 (IMDG, Distributed Cache)
+
+

@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-01 16:37 | [Infrastructure/Hazelcast/README.md](Infrastructure/Hazelcast/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
+| 2026-04-01 16:37 | [Infrastructure/README.md](Infrastructure/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
 | 2026-04-01 14:05 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
 | 2026-04-01 14:05 | [Templates/README.md](Templates/README.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
 | 2026-04-01 13:53 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
@@ -52,5 +54,3 @@
 | 2026-04-01 13:53 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Infrastructure/Docker/README.md](Infrastructure/Docker/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Infrastructure/Docker/dockerfile.md](Infrastructure/Docker/dockerfile.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |

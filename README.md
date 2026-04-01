@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-01 16:37 | [README](docs/Infrastructure/Hazelcast/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
+| 2026-04-01 16:37 | [README](docs/Infrastructure/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
 | 2026-04-01 14:05 | [Issue Report Template](docs/Templates/Issue_Report_Template.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
 | 2026-04-01 14:05 | [README](docs/Templates/README.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
 | 2026-04-01 13:53 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
 | 2026-04-01 13:53 | [Ollama](docs/AI/Ollama.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
-| 2026-04-01 13:53 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
-| 2026-04-01 13:53 | [OpenClaw](docs/AI/OpenClaw.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -138,6 +138,8 @@
 * **Hadoop**
   * [**Overview**](docs/Infrastructure/Hadoop/README.md)
   * [Hadoop NameNode High Availability (HA)](docs/Infrastructure/Hadoop/NameNode_HA.md)
+* **Hazelcast**
+  * [**Overview**](docs/Infrastructure/Hazelcast/README.md)
 * **Jenkins**
   * [**Overview**](docs/Infrastructure/Jenkins/README.md)
   * [Jenkins 사용 예시 (Pipeline)](docs/Infrastructure/Jenkins/Examples.md)
