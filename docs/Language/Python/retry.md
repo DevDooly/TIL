@@ -114,4 +114,4 @@ what_is_my_ip("conservative")
 
 ## References
 
-* https://pypi.org/project/retry/
+*   https://pypi.org/project/retry/

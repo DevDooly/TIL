@@ -4,4 +4,4 @@
 
 ## 목차
 
-1. **[State Pattern (상태 패턴)](StatePattern.md)**: 객체의 상태에 따라 행동을 동적으로 변경하는 패턴
+1.   **[State Pattern (상태 패턴)](StatePattern.md)**: 객체의 상태에 따라 행동을 동적으로 변경하는 패턴

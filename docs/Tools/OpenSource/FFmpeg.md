@@ -40,4 +40,4 @@ git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
 
 ## References
 
-* https://www.ffmpeg.org/
+*   https://www.ffmpeg.org/

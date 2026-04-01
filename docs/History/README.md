@@ -4,4 +4,4 @@
 
 ## 📌 주요 문서 목록
 
-* [대만의 역사 (History of Taiwan)](Taiwan.md): 복잡한 국제 관계와 다문화가 융합된 대만의 파란만장한 역사.
+*   [대만의 역사 (History of Taiwan)](Taiwan.md): 복잡한 국제 관계와 다문화가 융합된 대만의 파란만장한 역사.

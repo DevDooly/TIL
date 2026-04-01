@@ -41,5 +41,5 @@ crontab -r  # 설정된 모든 작업 삭제 (Remove)
 ## 3. 로그 확인
 Cron 작업이 실패했거나 실행 여부를 확인하려면 시스템 로그를 봐야 합니다.
 
-* Ubuntu: `/var/log/syslog` (grep CRON)
-* CentOS: `/var/log/cron`
+*   Ubuntu: `/var/log/syslog` (grep CRON)
+*   CentOS: `/var/log/cron`

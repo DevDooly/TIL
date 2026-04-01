@@ -7,50 +7,50 @@
 
 <code>v-model</code> 은 내부적으로 서로 다른 속성을 사용하고 서로 다른 입력요소에 대해 서로 다른 이벤트를 전송합니다
 
-* text 와 textarea 태그는 <code>value</code> 속성과 <code>input</code> 이벤트를 사용합니다.
-* 체크박스들과 라디오버튼들은 <code>checked</code> 속성과 <code>change</code> 이벤트를 사용합니다.
-* Select 태그는 <code>value</code> 를 prop으로, <code>change</code> 를 이벤트로 사용합니다.
+*   text 와 textarea 태그는 <code>value</code> 속성과 <code>input</code> 이벤트를 사용합니다.
+*   체크박스들과 라디오버튼들은 <code>checked</code> 속성과 <code>change</code> 이벤트를 사용합니다.
+*   Select 태그는 <code>value</code> 를 prop으로, <code>change</code> 를 이벤트로 사용합니다.
 
  [IME](https://ko.wikipedia.org/wiki/입력기)(중국어, 일본어, 한국어 등)가 필요한 언어의 경우 IME 중 `v-model`이 업데이트 되지 않습니다. 이러한 업데이트를 처리하려면 `input` 이벤트를 대신 사용하십시오.
 
 ### 연관된 ###
 
-* vuejs-watch
+*   vuejs-watch
 
 ### Reference ###
 
-* [Vue.js 폼 입력 바인딩](https://kr.vuejs.org/v2/guide/forms.html#%EA%B0%92-%EB%B0%94%EC%9D%B8%EB%94%A9%ED%95%98%EA%B8%B0)
+*   [Vue.js 폼 입력 바인딩](https://kr.vuejs.org/v2/guide/forms.html#%EA%B0%92-%EB%B0%94%EC%9D%B8%EB%94%A9%ED%95%98%EA%B8%B0)
 
 ## Library ##
 
-* vue-router
-* vue-cli
-* vuex
-* vuetify
-* vue-loader
-* vue-property-decorator
+*   vue-router
+*   vue-cli
+*   vuex
+*   vuetify
+*   vue-loader
+*   vue-property-decorator
 
 ## Test Tools ##
 
-* Jest
-* Cypress
+*   Jest
+*   Cypress
 
 ## Style ##
 
-* ESLint
-* Prettier
-* StyleGuide
+*   ESLint
+*   Prettier
+*   StyleGuide
 
 ## Plugins ##
 
-* rxjs
+*   rxjs
 
 ## Category ##
 
-* TypeScript
+*   TypeScript
 
 ## Reference ##
 
-* https://vuejs.org/
-* https://vuejs-kr.github.io/
-* https://kr.vuejs.org/v2/style-guide/index.html#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-B-%EA%B7%9C%EC%B9%99-%EB%A7%A4%EC%9A%B0-%EC%B6%94%EC%B2%9C%ED%95%A8-%EA%B0%80%EB%8F%85%EC%84%B1-%ED%96%A5%EC%83%81%EC%9D%84-%EC%9C%84%ED%95%A8
+*   https://vuejs.org/
+*   https://vuejs-kr.github.io/
+*   https://kr.vuejs.org/v2/style-guide/index.html#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-B-%EA%B7%9C%EC%B9%99-%EB%A7%A4%EC%9A%B0-%EC%B6%94%EC%B2%9C%ED%95%A8-%EA%B0%80%EB%8F%85%EC%84%B1-%ED%96%A5%EC%83%81%EC%9D%84-%EC%9C%84%ED%95%A8

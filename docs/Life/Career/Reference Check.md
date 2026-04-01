@@ -4,17 +4,17 @@
 
 ### 검증 항목
 
-* Work performance and achievements  
+*   Work performance and achievements  
 (후보자의 업무 역량 및 성과 평가)
 
-* Relationships with supervisors, colleagues and subordinates  
+*   Relationships with supervisors, colleagues and subordinates  
 (동료와의 관계)
 
-* Attitude to work  
+*   Attitude to work  
 (업무 태도)
 
-* Strong Points  
+*   Strong Points  
 (강점)
 
-* Weak Points  
+*   Weak Points  
 (약점)

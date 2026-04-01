@@ -68,4 +68,4 @@ def send_sms(self, phone_number, message):
 
 ## 참고
 
-* [Designing Modules in Python (HashedIn)](https://hashedin.com/blog/designing-modules-in-python-ebook/)
+*   [Designing Modules in Python (HashedIn)](https://hashedin.com/blog/designing-modules-in-python-ebook/)

@@ -4,5 +4,5 @@
 
 ## 📌 주요 문서
 
-* [대만 여행 팁 (Travel Tips)](Tips.md)
-* [카발란 증류소 (Kavalan Distillery) 투어](Kavalan_Distillery.md)
+*   [대만 여행 팁 (Travel Tips)](Tips.md)
+*   [카발란 증류소 (Kavalan Distillery) 투어](Kavalan_Distillery.md)

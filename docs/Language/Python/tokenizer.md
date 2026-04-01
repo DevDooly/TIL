@@ -20,4 +20,4 @@ $ tokenize input.txt output.txt
 
 ## References
 
-* https://pypi.org/project/tokenizer/
+*   https://pypi.org/project/tokenizer/

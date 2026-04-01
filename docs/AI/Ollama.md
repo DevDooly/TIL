@@ -52,7 +52,7 @@ ollama run mistral
 
 ### 작성 예시 (Mario 페르소나)
 
-1. `Modelfile` 생성:
+1.   `Modelfile` 생성:
 ```dockerfile
 FROM llama3
 
@@ -63,12 +63,12 @@ SYSTEM "You are Mario from Super Mario Bros. You answer everything as if you are
 PARAMETER temperature 0.8
 ```
 
-2. 모델 빌드:
+2.   모델 빌드:
 ```bash
 ollama create mario -f Modelfile
 ```
 
-3. 실행:
+3.   실행:
 ```bash
 ollama run mario
 >>> Hello!
@@ -107,9 +107,9 @@ curl http://localhost:11434/api/chat -d '{
 
 Ollama 라이브러리에서 다양한 모델을 찾을 수 있습니다.
 
-- **llama3**: Meta의 최신 오픈 모델 (8B, 70B)
-- **gemma**: Google의 경량화 모델 (2B, 7B)
-- **mistral**: 성능 좋은 7B 모델
-- **phi3**: Microsoft의 소형 모델 (3.8B)
+-   **llama3**: Meta의 최신 오픈 모델 (8B, 70B)
+-   **gemma**: Google의 경량화 모델 (2B, 7B)
+-   **mistral**: 성능 좋은 7B 모델
+-   **phi3**: Microsoft의 소형 모델 (3.8B)
 
 > **Tip**: 모델 뒤에 태그를 붙여 특정 버전을 받을 수 있습니다 (예: `llama3:70b`, `gemma:2b`).

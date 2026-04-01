@@ -10,5 +10,5 @@ $ npm init slidev
 
 ## References
 
-* https://sli.dev/
+*   https://sli.dev/
 

@@ -59,10 +59,10 @@ Optional.ofNullable(user)
 
 기존의 `java.util.Date`와 `Calendar`의 문제점(불변성 부족, 헷갈리는 월 인덱스 등)을 해결하기 위해 `java.time` 패키지가 새로 추가되었습니다.
 
-- **LocalDate:** 날짜 (예: 2023-10-01)
-- **LocalTime:** 시간 (예: 14:30:00)
-- **LocalDateTime:** 날짜 + 시간
-- **ZonedDateTime:** 타임존 포함
+-   **LocalDate:** 날짜 (예: 2023-10-01)
+-   **LocalTime:** 시간 (예: 14:30:00)
+-   **LocalDateTime:** 날짜 + 시간
+-   **ZonedDateTime:** 타임존 포함
 
 ```java
 LocalDate today = LocalDate.now();

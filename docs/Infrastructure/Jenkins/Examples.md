@@ -47,8 +47,8 @@ pipeline {
 
 실제 Java Spring Boot 프로젝트를 빌드하고 테스트 결과를 수집하는 파이프라인 예시입니다.
 
-1. **Pipeline Job 생성:** 'New Item' -> 'Pipeline' 선택.
-2. **Pipeline 설정:** 하단 'Pipeline' 섹션에서 'Pipeline script' 선택 후 아래 내용 입력.
+1.   **Pipeline Job 생성:** 'New Item' -> 'Pipeline' 선택.
+2.   **Pipeline 설정:** 하단 'Pipeline' 섹션에서 'Pipeline script' 선택 후 아래 내용 입력.
 
 ```groovy
 pipeline {
@@ -98,10 +98,10 @@ pipeline {
 
 Pipeline 설정을 Jenkins 웹 UI에 직접 적지 않고, 프로젝트 소스 코드 루트에 `Jenkinsfile`을 포함시켜 관리하는 것이 베스트 프랙티스입니다.
 
-1. 프로젝트 최상위 디렉토리에 `Jenkinsfile` 생성 및 위 코드 저장.
-2. Jenkins Job 설정의 Pipeline 섹션에서 **'Pipeline script from SCM'** 선택.
-3. **SCM:** Git 선택 및 저장소 URL 입력.
-4. **Script Path:** `Jenkinsfile` 입력.
+1.   프로젝트 최상위 디렉토리에 `Jenkinsfile` 생성 및 위 코드 저장.
+2.   Jenkins Job 설정의 Pipeline 섹션에서 **'Pipeline script from SCM'** 선택.
+3.   **SCM:** Git 선택 및 저장소 URL 입력.
+4.   **Script Path:** `Jenkinsfile` 입력.
 
 이렇게 설정하면 **코드 변경 시 빌드 절차도 함께 버전 관리**가 되며, 파이프라인 변경이 필요할 때 Jenkins UI에 접속할 필요 없이 코드만 수정하면 됩니다.
 
@@ -191,5 +191,5 @@ pipeline {
 
 ### 주의사항
 
-- `changeset`은 SCM에서 가져온 변경 내역(changelog)을 기반으로 작동하므로, **Pipeline script from SCM** 방식으로 설정해야 정확하게 동작합니다.
-- 첫 빌드이거나 강제로 전체 빌드가 필요한 경우를 대비해 `when { anyOf { changeset '...'; expression { params.FORCE_BUILD } } }`와 같이 파라미터를 조합해서 사용하는 것이 좋습니다.
+-   `changeset`은 SCM에서 가져온 변경 내역(changelog)을 기반으로 작동하므로, **Pipeline script from SCM** 방식으로 설정해야 정확하게 동작합니다.
+-   첫 빌드이거나 강제로 전체 빌드가 필요한 경우를 대비해 `when { anyOf { changeset '...'; expression { params.FORCE_BUILD } } }`와 같이 파라미터를 조합해서 사용하는 것이 좋습니다.

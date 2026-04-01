@@ -20,13 +20,14 @@ def validate_markdown():
                     line = lines[i]
                     stripped = line.strip()
                     
+                    # 1. 코드 블록 상태 체크
                     if stripped.startswith("```"):
                         code_block_open = not code_block_open
                         continue
                     if code_block_open:
                         continue
                         
-                    # 리스트 항목 발견
+                    # 2. 리스트 항목 발견
                     if list_pattern.match(line):
                         if i == 0: continue
                         
@@ -40,6 +41,11 @@ def validate_markdown():
                                 print(f"   Prev: {prev_line}")
                                 print(f"   Curr: {stripped}\n")
                                 issues_found = True
+                        
+                        # 3. 추가 검증: 불렛 뒤 공백이 3개인지 확인 (가독성 표준)
+                        # (필수는 아니지만 프로젝트의 일관성을 위해 체크)
+                        # if not re.match(r'^(\s*)([-*]|\d+\.)   ', line):
+                        #     pass 
 
                 if code_block_open:
                     print(f"❌ [Syntax Error] {filepath}: 코드 블록이 닫히지 않았습니다.")

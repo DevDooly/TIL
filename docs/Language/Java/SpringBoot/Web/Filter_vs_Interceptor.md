@@ -6,22 +6,22 @@ Spring Boot 애플리케이션에서 요청을 가로채서 공통된 로직(로
 
 필터는 **서블릿 컨테이너(Servlet Container)** 수준에서 실행됩니다. Spring Context 외부에 위치하며, DispatcherServlet에 요청이 전달되기 전과 후에 동작합니다.
 
-- **실행 위치**: 서블릿 컨테이너 (Tomcat 등)
-- **주요 용도**:
-    - 모든 요청에 대한 로깅 및 필터링
-    - 인코딩 변환 (UTF-8)
-    - XSS 방어
-    - 스프링과 무관한 전역적인 보안 처리 (Spring Security의 기반)
+-   **실행 위치**: 서블릿 컨테이너 (Tomcat 등)
+-   **주요 용도**:
+    -   모든 요청에 대한 로깅 및 필터링
+    -   인코딩 변환 (UTF-8)
+    -   XSS 방어
+    -   스프링과 무관한 전역적인 보안 처리 (Spring Security의 기반)
 
 ## 2. Interceptor (인터셉터)
 
 인터셉터는 **Spring MVC**가 제공하는 기술입니다. DispatcherServlet이 컨트롤러를 호출하기 전과 후에 요청을 가로챕니다. Spring Context 내부에서 실행되므로 모든 Bean에 접근할 수 있습니다.
 
-- **실행 위치**: Spring MVC (DispatcherServlet과 Controller 사이)
-- **주요 용도**:
-    - 세션 및 쿠키 체크 (로그인 여부)
-    - 세밀한 권한 체크
-    - 컨트롤러로 전달되는 데이터 가공
+-   **실행 위치**: Spring MVC (DispatcherServlet과 Controller 사이)
+-   **주요 용도**:
+    -   세션 및 쿠키 체크 (로그인 여부)
+    -   세밀한 권한 체크
+    -   컨트롤러로 전달되는 데이터 가공
 
 ---
 

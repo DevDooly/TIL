@@ -4,6 +4,6 @@
 
 ## 목차
 
-1. **[Python](Python/README.md)**: 문법, 라이브러리, 프레임워크 (Flask, Celery 등)
-2. **[Java](Java/README.md)**: Java 언어 및 스타일 가이드
-3. **[Node.js](NodeJs/README.md)**: 런타임 환경 및 패키지 매니저 (Yarn)
+1.   **[Python](Python/README.md)**: 문법, 라이브러리, 프레임워크 (Flask, Celery 등)
+2.   **[Java](Java/README.md)**: Java 언어 및 스타일 가이드
+3.   **[Node.js](NodeJs/README.md)**: 런타임 환경 및 패키지 매니저 (Yarn)

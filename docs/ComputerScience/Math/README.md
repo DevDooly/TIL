@@ -4,4 +4,4 @@
 
 ## 목차
 
-1. **[Fourier Transform (푸리에 변환)](Fourier%20transform.md)**: 시간 도메인의 신호를 주파수 도메인으로 변환하는 기법
+1.   **[Fourier Transform (푸리에 변환)](Fourier%20transform.md)**: 시간 도메인의 신호를 주파수 도메인으로 변환하는 기법
