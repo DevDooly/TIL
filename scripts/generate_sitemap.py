@@ -2,10 +2,10 @@ import os
 import yaml
 
 DOCS_DIR = "docs"
-INDEX_FILE = "docs/index.md"
+SITEMAP_FILE = "docs/Sitemap.md"
 PAGES_FILE = "docs/.pages"
 EXCLUDE_DIRS = {".pages", "javascripts", "stylesheets", "assets"}
-EXCLUDE_FILES = {"index.md", "Recent_Changes.md", ".pages"}
+EXCLUDE_FILES = {"index.md", "Recent_Changes.md", "Sitemap.md", ".pages"}
 
 def get_title(filepath):
     """파일의 첫 번째 H1 제목을 가져옴"""
@@ -45,7 +45,6 @@ def generate_sitemap():
     # 2. .pages 기반 순서 정렬
     nav_order = get_nav_order()
     
-    # 네비게이션에 정의된 순서대로 정렬하고, 정의되지 않은 항목은 뒤에 가나다순으로 붙임
     sorted_categories = []
     for nav_item in nav_order:
         if nav_item in existing_categories:
@@ -77,10 +76,10 @@ def generate_sitemap():
         
         content.append("\n")
 
-    with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+    with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.writelines(content)
     
-    print(f"✅ Successfully generated {INDEX_FILE} with custom order.")
+    print(f"✅ Successfully generated {SITEMAP_FILE}")
 
 if __name__ == "__main__":
     generate_sitemap()

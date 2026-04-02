@@ -20,7 +20,7 @@
    - `python3 scripts/update_recent_changes.py`
    - `python3 scripts/generate_sitemap.py`
    - `python3 scripts/validate_pages.py`
-3. **Amend Commit**: 스크립트에 의해 변경된 파일(`Recent_Changes.md`, `index.md` 등)을 이전 커밋에 합칩니다.
+3. **Amend Commit**: 스크립트에 의해 변경된 파일(`Recent_Changes.md`, `Sitemap.md` 등)을 이전 커밋에 합칩니다.
    - `git add .`
    - `git commit --amend --no-edit`
 4. **Push**: 최종 결과물을 원격 저장소에 반영합니다.
