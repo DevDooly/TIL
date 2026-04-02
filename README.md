@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-02 16:41 | [ThreadPoolTaskScheduler](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md) | docs: Spring ThreadPoolTaskScheduler 개념 및 설정 가이드 추... |
+| 2026-04-01 16:38 | [IMDB vs IMDG](docs/Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가... |
+| 2026-04-01 16:38 | [README](docs/Infrastructure/Hazelcast/README.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가... |
 | 2026-04-01 16:37 | [README](docs/Infrastructure/Hazelcast/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
 | 2026-04-01 16:37 | [README](docs/Infrastructure/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
 | 2026-04-01 14:05 | [Issue Report Template](docs/Templates/Issue_Report_Template.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
-| 2026-04-01 14:05 | [README](docs/Templates/README.md) | docs: 문서 양식(Templates) 카테고리 신설 및 기술 이슈 리포트 양식 추가 |
-| 2026-04-01 13:53 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
-| 2026-04-01 13:53 | [Ollama](docs/AI/Ollama.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -55,6 +55,7 @@
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
+    * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
     * **JPA**
       * [**Overview**](docs/Language/Java/SpringBoot/JPA/README.md)
       * [JPA Persistence Context (영속성 컨텍스트)](docs/Language/Java/SpringBoot/JPA/Persistence_Context.md)
@@ -140,6 +141,7 @@
   * [Hadoop NameNode High Availability (HA)](docs/Infrastructure/Hadoop/NameNode_HA.md)
 * **Hazelcast**
   * [**Overview**](docs/Infrastructure/Hazelcast/README.md)
+  * [인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG)](docs/Infrastructure/Hazelcast/IMDB_vs_IMDG.md)
 * **Jenkins**
   * [**Overview**](docs/Infrastructure/Jenkins/README.md)
   * [Jenkins 사용 예시 (Pipeline)](docs/Infrastructure/Jenkins/Examples.md)

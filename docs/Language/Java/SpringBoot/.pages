@@ -6,6 +6,7 @@ nav:
 - AOP: AOP.md
 - Bean Lifecycle: Bean_Lifecycle.md
 - BeanPostProcessor: BeanPostProcessor.md
+- ThreadPoolTaskScheduler: ThreadPoolTaskScheduler.md
 - OAuth2 Implementation: OAuth2_Implementation.md
 - JPA: JPA
 - Web: Web
