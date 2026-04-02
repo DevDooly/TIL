@@ -1,7 +1,9 @@
 import os
+import yaml
 
 DOCS_DIR = "docs"
 INDEX_FILE = "docs/index.md"
+PAGES_FILE = "docs/.pages"
 EXCLUDE_DIRS = {".pages", "javascripts", "stylesheets", "assets"}
 EXCLUDE_FILES = {"index.md", "Recent_Changes.md", ".pages"}
 
@@ -16,28 +18,56 @@ def get_title(filepath):
         pass
     return os.path.basename(filepath)
 
+def get_nav_order():
+    """docs/.pages 파일에서 네비게이션 순서를 가져옴"""
+    try:
+        with open(PAGES_FILE, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+            nav = data.get('nav', [])
+            order = []
+            for item in nav:
+                if isinstance(item, str):
+                    if item.endswith('.md'): continue
+                    order.append(item)
+                elif isinstance(item, dict):
+                    order.append(list(item.keys())[0])
+            return order
+    except Exception as e:
+        print(f"⚠️ Failed to read nav order: {e}")
+        return []
+
 def generate_sitemap():
     content = ["# 📚 TIL 전체 문서 목차\n", "\n", "모든 기술 지식을 한눈에 확인하고 바로 이동할 수 있습니다.\n", "\n"]
     
-    # 최상위 카테고리 (docs 바로 아래 디렉토리들)
-    categories = sorted([d for d in os.listdir(DOCS_DIR) if os.path.isdir(os.path.join(DOCS_DIR, d)) and d not in EXCLUDE_DIRS])
+    # 1. 실제 디렉토리 목록 수집
+    existing_categories = [d for d in os.listdir(DOCS_DIR) if os.path.isdir(os.path.join(DOCS_DIR, d)) and d not in EXCLUDE_DIRS]
     
-    for cat in categories:
+    # 2. .pages 기반 순서 정렬
+    nav_order = get_nav_order()
+    
+    # 네비게이션에 정의된 순서대로 정렬하고, 정의되지 않은 항목은 뒤에 가나다순으로 붙임
+    sorted_categories = []
+    for nav_item in nav_order:
+        if nav_item in existing_categories:
+            sorted_categories.append(nav_item)
+            existing_categories.remove(nav_item)
+    
+    sorted_categories.extend(sorted(existing_categories))
+    
+    # 3. 목차 생성
+    for cat in sorted_categories:
         content.append(f"## 📁 {cat}\n")
-        content.append("\n") # 헤더와 리스트 사이에 빈 줄 추가
+        content.append("\n")
         cat_path = os.path.join(DOCS_DIR, cat)
         
-        # 하위 파일 및 디렉토리 탐색
         for root, dirs, files in os.walk(cat_path):
             level = root.replace(DOCS_DIR, "").count(os.sep) - 1
             indent = "    " * level
             
-            # 현재 디렉토리 이름 표시 (최상위 카테고리 제외)
             if root != cat_path:
                 content.append(f"{indent}*   **{os.path.basename(root)}**\n")
                 indent += "    "
             
-            # 파일 목록 (가나다순 정렬)
             for file in sorted(files):
                 if file.endswith(".md") and file not in EXCLUDE_FILES:
                     file_path = os.path.join(root, file)
@@ -50,7 +80,7 @@ def generate_sitemap():
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
         f.writelines(content)
     
-    print(f"✅ Successfully generated {INDEX_FILE}")
+    print(f"✅ Successfully generated {INDEX_FILE} with custom order.")
 
 if __name__ == "__main__":
     generate_sitemap()
