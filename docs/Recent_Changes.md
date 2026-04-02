@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-02 17:14 | [index.md](index.md) | feat: 전체 문서 목차 자동 생성 스크립트 추가 및 index.md 개편 |
 | 2026-04-02 16:41 | [Language/Java/SpringBoot/ThreadPoolTaskScheduler.md](Language/Java/SpringBoot/ThreadPoolTaskScheduler.md) | docs: Spring ThreadPoolTaskScheduler 개념 및 설정 가이드 추가 |
 | 2026-04-01 16:38 | [Infrastructure/Hazelcast/IMDB_vs_IMDG.md](Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가이드 추가 |
 | 2026-04-01 16:38 | [Infrastructure/Hazelcast/README.md](Infrastructure/Hazelcast/README.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-01 13:53 | [Data/README.md](Data/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [History/README.md](History/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [History/Taiwan.md](History/Taiwan.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
