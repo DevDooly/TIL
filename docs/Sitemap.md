@@ -270,6 +270,10 @@
     *   **Career**
         *   [Reference Check(평판 조회)](Life/Career/Reference Check.md)
 
+## 📁 Troubleshooting
+
+*   [🛠️ 트러블슈팅 (Troubleshooting)](Troubleshooting/README.md)
+
 ## 📁 Templates
 
 *   [[양식] 기술 이슈 분석 및 리포트](Templates/Issue_Report_Template.md)

@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-03 09:26 | [README](docs/Troubleshooting/README.md) | docs: 트러블슈팅(Troubleshooting) 카테고리 신설 및 주요 이슈 링크 정리 |
+| 2026-04-02 17:34 | [Sitemap](docs/Sitemap.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
+| 2026-04-02 17:34 | [index](docs/index.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
+| 2026-04-02 17:28 | [index](docs/index.md) | feat: index.md 목차 순서를 .pages 설정과 동기화 |
 | 2026-04-02 17:14 | [index](docs/index.md) | feat: 전체 문서 목차 자동 생성 스크립트 추가 및 index.md 개편 |
 | 2026-04-02 16:41 | [ThreadPoolTaskScheduler](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md) | docs: Spring ThreadPoolTaskScheduler 개념 및 설정 가이드 추... |
-| 2026-04-01 16:38 | [IMDB vs IMDG](docs/Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가... |
-| 2026-04-01 16:38 | [README](docs/Infrastructure/Hazelcast/README.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가... |
-| 2026-04-01 16:37 | [README](docs/Infrastructure/Hazelcast/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
-| 2026-04-01 16:37 | [README](docs/Infrastructure/README.md) | docs: Hazelcast(IMDG) 섹션 신설 및 개요 문서 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -318,6 +318,9 @@
   * [**Overview**](docs/Travel/Taiwan/README.md)
   * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)
   * [💡 대만 여행 팁 (Travel Tips)](docs/Travel/Taiwan/Tips.md)
+
+## Troubleshooting
+* [**Overview**](docs/Troubleshooting/README.md)
 
 <!-- TOC_END -->
 

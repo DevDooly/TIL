@@ -4,6 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 09:26 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: 트러블슈팅(Troubleshooting) 카테고리 신설 및 주요 이슈 링크 정리 |
+| 2026-04-02 17:34 | [Sitemap.md](Sitemap.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
+| 2026-04-02 17:34 | [index.md](index.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
+| 2026-04-02 17:28 | [index.md](index.md) | feat: index.md 목차 순서를 .pages 설정과 동기화 |
 | 2026-04-02 17:14 | [index.md](index.md) | feat: 전체 문서 목차 자동 생성 스크립트 추가 및 index.md 개편 |
 | 2026-04-02 16:41 | [Language/Java/SpringBoot/ThreadPoolTaskScheduler.md](Language/Java/SpringBoot/ThreadPoolTaskScheduler.md) | docs: Spring ThreadPoolTaskScheduler 개념 및 설정 가이드 추가 |
 | 2026-04-01 16:38 | [Infrastructure/Hazelcast/IMDB_vs_IMDG.md](Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG) 비교 가이드 추가 |
@@ -50,7 +54,3 @@
 | 2026-04-01 13:53 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [Data/Database/SQL_Naming_Convention.md](Data/Database/SQL_Naming_Convention.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [Data/Database/fluentd.md](Data/Database/fluentd.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/ELK.md](Data/ELK.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/README.md](Data/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [History/README.md](History/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
