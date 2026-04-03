@@ -9,6 +9,7 @@
 *   **[Virtual Thread Pinning 이슈 (FTP/SFTP)](../Language/Java/Virtual_Threads_FTP_Pinning.md)**: 레거시 라이브러리의 `synchronized` 블록으로 인한 OS 스레드 고갈 문제.
 *   **[K8s 환경의 Virtual Thread 주의사항](../Language/Java/Virtual_Threads_in_K8s.md)**: CPU Throttling 및 메모리 팽창 이슈 분석.
 *   **[K8s Spring 프로파일 우선순위 이슈](../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)**: 환경 변수와 실행 인자 간의 설정 덮어쓰기 문제 및 `BeanPostProcessor`를 이용한 프로그래밍 방식의 해결책.
+*   **[로깅 설정 YAML to XML 전환 이슈](../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)**: 외부 SDK의 `logback.xml`과 `application.yml` 설정 충돌 해결 사례.
 
 ## 🎡 Infrastructure & Kafka
 

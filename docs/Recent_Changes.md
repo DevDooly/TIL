@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 10:35 | [Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추가 |
+| 2026-04-03 10:35 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추가 |
+| 2026-04-03 10:10 | [Sitemap.md](Sitemap.md) | feat: 트러블슈팅 목차 자동 수집 기능 추가 및 전체 목차 동기화 |
 | 2026-04-03 10:00 | [Sitemap.md](Sitemap.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
 | 2026-04-03 10:00 | [Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
 | 2026-04-03 10:00 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
@@ -51,6 +54,3 @@
 | 2026-04-01 13:53 | [ComputerScience/Math/Fourier transform.md](ComputerScience/Math/Fourier%20transform.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/Math/README.md](ComputerScience/Math/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/Network/OSI 7 Layer.md](ComputerScience/Network/OSI%207%20Layer.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Network/README.md](ComputerScience/Network/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Network/RPC.md](ComputerScience/Network/RPC.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |

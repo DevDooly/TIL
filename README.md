@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-03 10:35 | [Logging Config Migration YAML to XML](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추... |
+| 2026-04-03 10:35 | [README](docs/Troubleshooting/README.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추... |
+| 2026-04-03 10:10 | [Sitemap](docs/Sitemap.md) | feat: 트러블슈팅 목차 자동 수집 기능 추가 및 전체 목차 동기화 |
 | 2026-04-03 10:00 | [Sitemap](docs/Sitemap.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
 | 2026-04-03 10:00 | [Avro HashCode Field Naming Conflict](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
 | 2026-04-03 10:00 | [README](docs/Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
-| 2026-04-03 09:56 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop Tez Job 지연 트러블슈팅 페이지 마크다운 포맷 수정 |
-| 2026-04-03 09:51 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
-| 2026-04-03 09:51 | [Spring Profile Priority in K8s](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -58,6 +58,7 @@
     * [빈 후처리기 (BeanPostProcessor)](docs/Language/Java/SpringBoot/BeanPostProcessor.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
+    * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
     * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
@@ -259,6 +260,7 @@
   * [Virtual Thread Pinning 이슈 (FTP/SFTP)](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
   * [K8s 환경의 Virtual Thread 주의사항](docs/Language/Java/Virtual_Threads_in_K8s.md)
   * [K8s Spring 프로파일 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+  * [로깅 설정 YAML to XML 전환 이슈](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
   * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
   * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
