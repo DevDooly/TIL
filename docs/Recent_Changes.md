@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 09:51 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활용 고급 해결책 보충 |
+| 2026-04-03 09:51 | [Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활용 고급 해결책 보충 |
+| 2026-04-03 09:51 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활용 고급 해결책 보충 |
 | 2026-04-03 09:49 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러블슈팅 가이드 추가 |
 | 2026-04-03 09:49 | [Sitemap.md](Sitemap.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러블슈팅 가이드 추가 |
 | 2026-04-03 09:49 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러블슈팅 가이드 추가 |
@@ -51,6 +54,3 @@
 | 2026-04-01 13:53 | [ComputerScience/OperatingSystem/Endianness.md](ComputerScience/OperatingSystem/Endianness.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/README.md](ComputerScience/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Security/OIDC.md](ComputerScience/Security/OIDC.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
