@@ -4,8 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 10:49 | [Sitemap.md](Sitemap.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:49 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
-| 2026-04-03 10:49 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:38 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/Ollama.md](AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
@@ -15,42 +15,42 @@
 | 2026-04-03 10:38 | [AI/n8n.md](AI/n8n.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Architecture/High_Availability.md](ComputerScience/Architecture/High_Availability.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Architecture/Pipeline.md](ComputerScience/Architecture/Pipeline.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Architecture/README.md](ComputerScience/Architecture/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/DesignPattern/README.md](ComputerScience/DesignPattern/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/DesignPattern/StatePattern.md](ComputerScience/DesignPattern/StatePattern.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/FileSystem/FileSystem.md](ComputerScience/FileSystem/FileSystem.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/FileSystem/HDF5.md](ComputerScience/FileSystem/HDF5.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md](ComputerScience/FileSystem/LMDB%20%28Sysmas%20Lightning%20Memory-mapped%20Database%29.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Math/Fourier transform.md](ComputerScience/Math/Fourier%20transform.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Math/README.md](ComputerScience/Math/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/OSI 7 Layer.md](ComputerScience/Network/OSI%207%20Layer.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Network/README.md](ComputerScience/Network/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/RPC.md](ComputerScience/Network/RPC.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/Subnetwork.md](ComputerScience/Network/Subnetwork.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/OperatingSystem/Endianness.md](ComputerScience/OperatingSystem/Endianness.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/README.md](ComputerScience/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Security/OIDC.md](ComputerScience/Security/OIDC.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Security/README.md](ComputerScience/Security/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Image_Storage_Management.md](Data/Database/Image_Storage_Management.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/MongoDB.md](Data/Database/MongoDB.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Data/Database/README.md](Data/Database/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/SQL_Naming_Convention.md](Data/Database/SQL_Naming_Convention.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/fluentd.md](Data/Database/fluentd.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/ELK.md](Data/ELK.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Data/README.md](Data/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [History/README.md](History/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [History/Taiwan.md](History/Taiwan.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/ArgoCD/README.md](Infrastructure/ArgoCD/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Docker/README.md](Infrastructure/Docker/README.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Docker/dockerfile.md](Infrastructure/Docker/dockerfile.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Docker/no space left on device.md](Infrastructure/Docker/no%20space%20left%20on%20device.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hadoop/NameNode_HA.md](Infrastructure/Hadoop/NameNode_HA.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hazelcast/IMDB_vs_IMDG.md](Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_K8s.md](Infrastructure/Jenkins/Installation_K8s.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
