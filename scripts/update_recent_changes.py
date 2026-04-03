@@ -14,8 +14,13 @@ CATEGORY_ORDER = [
     "Infrastructure",
     "Data",
     "ComputerScience",
+    "Troubleshooting",
+    "AI",
     "Tools",
-    "Life"
+    "History",
+    "Travel",
+    "RealEstate",
+    "Templates"
 ]
 
 def get_git_log(limit=50):
@@ -118,11 +123,9 @@ def generate_toc_content():
     for cat in CATEGORY_ORDER:
         content += f"- [**{cat}**](#{cat.lower()})\n"
     
-    # 순회하지 않은 나머지 디렉토리들도 요약에 추가할지 여부는 선택사항이나, 여기서는 주요 카테고리만.
     content += "\n---\n\n"
 
     # 2. 상세 트리 생성
-    # 주요 순서대로 먼저 처리
     existing_dirs = set()
     
     for category in CATEGORY_ORDER:
@@ -130,12 +133,17 @@ def generate_toc_content():
         if os.path.exists(dir_path) and os.path.isdir(dir_path):
             existing_dirs.add(category)
             content += f"## {category}\n"
-            content += build_directory_tree(dir_path, level=0)
+            
+            # Troubleshooting 카테고리인 경우 특별 처리
+            if category == "Troubleshooting":
+                content += build_troubleshooting_tree(dir_path, is_readme=True)
+            else:
+                content += build_directory_tree(dir_path, level=0)
             content += "\n"
             
     # 정의되지 않은 나머지 디렉토리 처리
     for item in sorted(os.listdir(DOCS_DIR)):
-        if item in existing_dirs or item.startswith('.') or item == "assets" or item == "javascripts" or item == "search" or item == "stylesheets":
+        if item in existing_dirs or item.startswith('.') or item in ["assets", "javascripts", "search", "stylesheets"]:
             continue
         
         dir_path = os.path.join(DOCS_DIR, item)
@@ -146,13 +154,45 @@ def generate_toc_content():
             
     return content
 
+def build_troubleshooting_tree(dir_path, is_readme=True):
+    """Troubleshooting README.md에서 링크를 추출하여 목차 구성"""
+    text = ""
+    readme_path = os.path.join(dir_path, "README.md")
+    
+    # 1. 기본 README 링크
+    rel_readme = os.path.relpath(readme_path, os.path.dirname(README_FILE) if is_readme else DOCS_DIR)
+    encoded_readme = urllib.parse.quote(rel_readme.replace(os.sep, '/'))
+    text += f"* [**Overview**]({encoded_readme})\n"
+    
+    # 2. README.md 내용 분석하여 링크 추출
+    if os.path.exists(readme_path):
+        try:
+            with open(readme_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            for line in lines:
+                # [제목](경로) 형식 추출 (유연한 정규식)
+                match = re.search(r'\[(.*?)\]\((.*?\.md)\)', line)
+                if match:
+                    title = match.group(1)
+                    link = match.group(2)
+                    
+                    # 절대 경로로 변환 후 다시 상대 경로로 계산
+                    target_path = os.path.normpath(os.path.join(dir_path, link))
+                    rel_link = os.path.relpath(target_path, os.path.dirname(README_FILE) if is_readme else DOCS_DIR)
+                    encoded_link = urllib.parse.quote(rel_link.replace(os.sep, '/'))
+                    text += f"  * [{title}]({encoded_link})\n"
+        except Exception as e:
+            print(f"⚠️ Error parsing Troubleshooting README: {e}")
+            
+    return text
+
 def build_directory_tree(root_path, level):
     text = ""
     indent = "  " * level
     
     items = sorted(os.listdir(root_path))
     
-    # 파일과 디렉토리 분리
     files = []
     dirs = []
     
@@ -166,18 +206,10 @@ def build_directory_tree(root_path, level):
         elif item.endswith(".md") and item != "README.md" and item != ".pages":
             files.append(item)
             
-    # 파일 먼저 출력 (README 제외)
-    # 해당 디렉토리의 README.md가 있다면 그것을 섹션 설명이나 대표 링크로 쓸 수도 있지만,
-    # 여기서는 파일 목록에 포함하지 않거나 별도 처리. 
-    # 보통 목차에서는 개별 문서 링크가 중요하므로 README.md는 제외하거나 'Overview'로 표시.
-    
     # README.md 확인
     readme_path = os.path.join(root_path, "README.md")
     if os.path.exists(readme_path):
-        title = get_markdown_title(readme_path)
-        # 상대 경로 계산
         rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-        # URL encode and ensure forward slashes
         encoded_path = urllib.parse.quote(rel_path.replace(os.sep, '/'))
         text += f"{indent}* [**Overview**]({encoded_path})\n"
 
@@ -185,7 +217,6 @@ def build_directory_tree(root_path, level):
         full_path = os.path.join(root_path, f)
         title = get_markdown_title(full_path)
         rel_path = os.path.relpath(full_path, os.path.dirname(README_FILE))
-        # URL encode and ensure forward slashes
         encoded_path = urllib.parse.quote(rel_path.replace(os.sep, '/'))
         text += f"{indent}* [{title}]({encoded_path})\n"
         
@@ -194,6 +225,7 @@ def build_directory_tree(root_path, level):
         text += build_directory_tree(os.path.join(root_path, d), level + 1)
         
     return text
+
 def update_file_section(filepath, marker_name, new_content):
     try:
         with open(filepath, "r", encoding="utf-8") as f:
@@ -227,7 +259,7 @@ def main():
     items = parse_log(lines, 50)
     
     update_recent_changes_md(items)
-    update_readme_recent(items, 6) # 6개로 제한
+    update_readme_recent(items, 6) 
     
     # 2. TOC 처리
     toc_content = generate_toc_content()

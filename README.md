@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-03 10:00 | [Sitemap](docs/Sitemap.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
 | 2026-04-03 10:00 | [Avro HashCode Field Naming Conflict](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
 | 2026-04-03 10:00 | [README](docs/Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
 | 2026-04-03 09:56 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop Tez Job 지연 트러블슈팅 페이지 마크다운 포맷 수정 |
 | 2026-04-03 09:51 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
 | 2026-04-03 09:51 | [Spring Profile Priority in K8s](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
-| 2026-04-03 09:51 | [README](docs/Troubleshooting/README.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -27,8 +27,13 @@
 - [**Infrastructure**](#infrastructure)
 - [**Data**](#data)
 - [**ComputerScience**](#computerscience)
+- [**Troubleshooting**](#troubleshooting)
+- [**AI**](#ai)
 - [**Tools**](#tools)
-- [**Life**](#life)
+- [**History**](#history)
+- [**Travel**](#travel)
+- [**RealEstate**](#realestate)
+- [**Templates**](#templates)
 
 ---
 
@@ -249,6 +254,27 @@
   * [Behavior-Driven Development (BDD)](docs/ComputerScience/SoftwareEngineering/BDD.md)
   * [소프트웨어 버저닝 (Software Versioning)](docs/ComputerScience/SoftwareEngineering/Versioning.md)
 
+## Troubleshooting
+* [**Overview**](docs/Troubleshooting/README.md)
+  * [Virtual Thread Pinning 이슈 (FTP/SFTP)](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
+  * [K8s 환경의 Virtual Thread 주의사항](docs/Language/Java/Virtual_Threads_in_K8s.md)
+  * [K8s Spring 프로파일 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+  * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+  * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+  * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+  * [Oracle LOB Segment 공간 부족 (ORA-01692)](docs/Data/Database/Oracle_LOB_Segment.md)
+  * [Avro 필드명 'result' 사용 시 hashCode 충돌](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+
+## AI
+* [**Overview**](docs/AI/README.md)
+* [Gemini CLI](docs/AI/Gemini_CLI.md)
+* [Ollama](docs/AI/Ollama.md)
+* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
+* [OpenClaw](docs/AI/OpenClaw.md)
+* [OpenCode](docs/AI/OpenCode.md)
+* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
+* [n8n (Nodemation)](docs/AI/n8n.md)
+
 ## Tools
 * [**Overview**](docs/Tools/README.md)
 * **Git**
@@ -277,36 +303,11 @@
   * [**Overview**](docs/Tools/Terminal/README.md)
   * [Tmux (Terminal Multiplexer)](docs/Tools/Terminal/Tmux.md)
 
-## Life
-* [Development Trends](docs/Life/Trends.md)
-* **Career**
-  * [Reference Check(평판 조회)](docs/Life/Career/Reference%20Check.md)
-* **Health**
-  * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
-
-## AI
-* [**Overview**](docs/AI/README.md)
-* [Gemini CLI](docs/AI/Gemini_CLI.md)
-* [Ollama](docs/AI/Ollama.md)
-* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
-* [OpenClaw](docs/AI/OpenClaw.md)
-* [OpenCode](docs/AI/OpenCode.md)
-* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
-* [n8n (Nodemation)](docs/AI/n8n.md)
-
 ## History
 * [**Overview**](docs/History/README.md)
 * [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
 * **Modern_Issues**
   * [미국-이란 갈등: 중동의 화약고 분석](docs/History/Modern_Issues/US_Iran_Conflict.md)
-
-## RealEstate
-* [**Overview**](docs/RealEstate/README.md)
-* [📏 국민평형(전용 85㎡) 초과 시 달라지는 세금 및 규제](docs/RealEstate/Tax_85sqm_Rules.md)
-
-## Templates
-* [**Overview**](docs/Templates/README.md)
-* [[양식] 기술 이슈 분석 및 리포트](docs/Templates/Issue_Report_Template.md)
 
 ## Travel
 * [**Overview**](docs/Travel/README.md)
@@ -321,9 +322,20 @@
   * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)
   * [💡 대만 여행 팁 (Travel Tips)](docs/Travel/Taiwan/Tips.md)
 
-## Troubleshooting
-* [**Overview**](docs/Troubleshooting/README.md)
-* [Apache Avro: 필드명 'result' 사용 시 hashCode() 메서드 충돌 이슈](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+## RealEstate
+* [**Overview**](docs/RealEstate/README.md)
+* [📏 국민평형(전용 85㎡) 초과 시 달라지는 세금 및 규제](docs/RealEstate/Tax_85sqm_Rules.md)
+
+## Templates
+* [**Overview**](docs/Templates/README.md)
+* [[양식] 기술 이슈 분석 및 리포트](docs/Templates/Issue_Report_Template.md)
+
+## Life
+* [Development Trends](docs/Life/Trends.md)
+* **Career**
+  * [Reference Check(평판 조회)](docs/Life/Career/Reference%20Check.md)
+* **Health**
+  * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
 
 <!-- TOC_END -->
 

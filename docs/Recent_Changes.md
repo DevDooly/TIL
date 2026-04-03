@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 10:00 | [Sitemap.md](Sitemap.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
 | 2026-04-03 10:00 | [Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
 | 2026-04-03 10:00 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈 트러블슈팅 추가 |
 | 2026-04-03 09:56 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop Tez Job 지연 트러블슈팅 페이지 마크다운 포맷 수정 |
@@ -53,4 +54,3 @@
 | 2026-04-01 13:53 | [ComputerScience/Network/README.md](ComputerScience/Network/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/Network/RPC.md](ComputerScience/Network/RPC.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [ComputerScience/Network/Subnetwork.md](ComputerScience/Network/Subnetwork.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
