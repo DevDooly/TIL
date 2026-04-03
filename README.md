@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-03 09:49 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러... |
+| 2026-04-03 09:49 | [README](docs/Troubleshooting/README.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러... |
 | 2026-04-03 09:29 | [README](docs/Infrastructure/README.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
 | 2026-04-03 09:29 | [Spring Profile Priority in K8s](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
 | 2026-04-03 09:29 | [Sitemap](docs/Sitemap.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
 | 2026-04-03 09:29 | [Issue Report Template](docs/Templates/Issue_Report_Template.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
-| 2026-04-03 09:29 | [README](docs/Troubleshooting/README.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
-| 2026-04-03 09:29 | [index](docs/index.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -140,6 +140,7 @@
 * **Hadoop**
   * [**Overview**](docs/Infrastructure/Hadoop/README.md)
   * [Hadoop NameNode High Availability (HA)](docs/Infrastructure/Hadoop/NameNode_HA.md)
+  * [Hadoop/Tez: 특정 노드 네트워크 RX Error로 인한 작업 지연 이슈](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
 * **Hazelcast**
   * [**Overview**](docs/Infrastructure/Hazelcast/README.md)
   * [인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG)](docs/Infrastructure/Hazelcast/IMDB_vs_IMDG.md)

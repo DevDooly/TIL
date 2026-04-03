@@ -144,6 +144,7 @@
     *   **Hadoop**
         *   [Hadoop NameNode High Availability (HA)](Infrastructure/Hadoop/NameNode_HA.md)
         *   [Hadoop (Apache Hadoop)](Infrastructure/Hadoop/README.md)
+        *   [Hadoop/Tez: 특정 노드 네트워크 RX Error로 인한 작업 지연 이슈](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
     *   **OracleCloud**
         *   [Oracle Cloud Free Tier (오라클 클라우드 프리티어)](Infrastructure/OracleCloud/README.md)
     *   **Hazelcast**
