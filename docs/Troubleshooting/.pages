@@ -11,6 +11,7 @@ nav:
     - "Kafka Offset 불균형 문제": ../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md
     - "Hadoop/Tez 네트워크 RX 에러": ../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md
     - "대량 파일 전송 용량 불일치": ../Infrastructure/Linux/Large_File_Transfer.md
+    - "MinIO 버저닝 삭제 이슈": MinIO_Versioning_Deletion_Issue.md
   - "🗄️ Database":
     - "Oracle LOB Segment 공간 부족": ../Data/Database/Oracle_LOB_Segment.md
     - "Avro hashCode 충돌": Avro_HashCode_Field_Naming_Conflict.md

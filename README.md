@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-03 10:35 | [Logging Config Migration YAML to XML](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추... |
-| 2026-04-03 10:35 | [README](docs/Troubleshooting/README.md) | docs: Spring Boot 로깅 설정 YAML에서 XML로 전환 트러블슈팅 가이드 추... |
-| 2026-04-03 10:10 | [Sitemap](docs/Sitemap.md) | feat: 트러블슈팅 목차 자동 수집 기능 추가 및 전체 목차 동기화 |
-| 2026-04-03 10:00 | [Sitemap](docs/Sitemap.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
-| 2026-04-03 10:00 | [Avro HashCode Field Naming Conflict](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
-| 2026-04-03 10:00 | [README](docs/Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
+| 2026-04-03 10:49 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
+| 2026-04-03 10:49 | [README](docs/Troubleshooting/README.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
+| 2026-04-03 10:38 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Ollama](docs/AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [OpenClaw](docs/AI/OpenClaw.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -264,6 +264,7 @@
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
   * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
   * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+  * [MinIO 버저닝 활성화 후 삭제 지연 이슈](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
   * [Oracle LOB Segment 공간 부족 (ORA-01692)](docs/Data/Database/Oracle_LOB_Segment.md)
   * [Avro 필드명 'result' 사용 시 hashCode 충돌](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
 

@@ -283,6 +283,7 @@
     * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
     * [Kafka 최신 버전 Offset 불균형 문제](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
     * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+    * [MinIO 버저닝 활성화 후 삭제 지연 이슈](Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
     * [Oracle LOB Segment 공간 부족 (ORA-01692)](Data/Database/Oracle_LOB_Segment.md)
     * [Avro 필드명 'result' 사용 시 hashCode 충돌](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
 
