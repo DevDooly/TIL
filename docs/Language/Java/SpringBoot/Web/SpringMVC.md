@@ -4,9 +4,9 @@
 
 ## 1. MVC 패턴 구조
 
-*   **Model:** 애플리케이션의 정보(데이터)를 나타냅니다. (DTO, Domain Object 등)
-*   **View:** 사용자에게 보여주는 화면 인터페이스입니다. (Thymeleaf, JSP, JSON Response 등)
-*   **Controller:** 사용자의 요청을 받아 비즈니스 로직을 호출하고, 그 결과를 Model에 담아 View로 전달하는 중개자 역할을 합니다.
+* **Model:** 애플리케이션의 정보(데이터)를 나타냅니다. (DTO, Domain Object 등)
+* **View:** 사용자에게 보여주는 화면 인터페이스입니다. (Thymeleaf, JSP, JSON Response 등)
+* **Controller:** 사용자의 요청을 받아 비즈니스 로직을 호출하고, 그 결과를 Model에 담아 View로 전달하는 중개자 역할을 합니다.
 
 ## 2. 핵심 동작 원리: DispatcherServlet
 
@@ -46,21 +46,21 @@ sequenceDiagram
 
 ### 3.1 @Controller & @RestController
 
-*   `@Controller`: 주로 View(HTML)를 반환할 때 사용합니다.
-*   `@RestController`: `@Controller` + `@ResponseBody`. JSON/XML 형태의 데이터를 반환하는 RESTful API를 만들 때 사용합니다.
+* `@Controller`: 주로 View(HTML)를 반환할 때 사용합니다.
+* `@RestController`: `@Controller` + `@ResponseBody`. JSON/XML 형태의 데이터를 반환하는 RESTful API를 만들 때 사용합니다.
 
 ### 3.2 Service & Repository (Layered Architecture)
 MVC는 주로 프레젠테이션 계층(Controller)을 담당하며, 실제 비즈니스 로직과 데이터 접근은 계층을 분리하여 관리합니다.
 
-*   **Controller:** 요청 매핑, 파라미터 검증.
-*   **Service:** 비즈니스 로직 구현, 트랜잭션 처리.
-*   **Repository:** DB 접근 (DAO).
+* **Controller:** 요청 매핑, 파라미터 검증.
+* **Service:** 비즈니스 로직 구현, 트랜잭션 처리.
+* **Repository:** DB 접근 (DAO).
 
 ## 4. 자주 사용하는 어노테이션
 
-*   `@RequestMapping`: 요청 URL 매핑 (클래스/메소드 레벨).
-*   `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`: HTTP 메소드별 매핑.
-*   `@RequestParam`: 쿼리 파라미터 추출 (`?name=value`).
-*   `@PathVariable`: 경로 변수 추출 (`/users/{id}`).
-*   `@RequestBody`: HTTP 요청 바디(JSON)를 객체로 매핑.
-*   `@ResponseBody`: 객체를 HTTP 응답 바디(JSON)로 매핑.
+* `@RequestMapping`: 요청 URL 매핑 (클래스/메소드 레벨).
+* `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`: HTTP 메소드별 매핑.
+* `@RequestParam`: 쿼리 파라미터 추출 (`?name=value`).
+* `@PathVariable`: 경로 변수 추출 (`/users/{id}`).
+* `@RequestBody`: HTTP 요청 바디(JSON)를 객체로 매핑.
+* `@ResponseBody`: 객체를 HTTP 응답 바디(JSON)로 매핑.

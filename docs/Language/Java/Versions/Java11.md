@@ -16,7 +16,7 @@ var message = "Hello, Java 11"; // String으로 추론
 var list = new ArrayList<String>(); // ArrayList<String>으로 추론
 ```
 
--   **주의:** 지역 변수에만 사용할 수 있으며, 가독성을 해치지 않는 선에서 사용하는 것이 권장됩니다.
+- **주의:** 지역 변수에만 사용할 수 있으며, 가독성을 해치지 않는 선에서 사용하는 것이 권장됩니다.
 
 ---
 
@@ -46,14 +46,14 @@ client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 
 문자열 처리를 위한 유용한 메서드들이 추가되었습니다.
 
--   **String:**
-  -   `isBlank()`: 공백 문자열인지 확인
-  -   `lines()`: 줄 단위로 분리하여 스트림 반환
-  -   `strip()`: 앞뒤 공백 제거 (Unicode 공백 포함)
-  -   `repeat(n)`: 문자열 n번 반복
--   **Files:**
-  -   `writeString()`: 파일에 문자열 쓰기
-  -   `readString()`: 파일에서 문자열 읽기
+- **String:**
+  - `isBlank()`: 공백 문자열인지 확인
+  - `lines()`: 줄 단위로 분리하여 스트림 반환
+  - `strip()`: 앞뒤 공백 제거 (Unicode 공백 포함)
+  - `repeat(n)`: 문자열 n번 반복
+- **Files:**
+  - `writeString()`: 파일에 문자열 쓰기
+  - `readString()`: 파일에서 문자열 읽기
 
 ---
 
@@ -70,5 +70,5 @@ java HelloWorld.java
 
 ## 5. ZGC & Epsilon GC 도입
 
--   **ZGC (Z Garbage Collector):** 대용량 메모리(TB 단위)에서도 일시 정지 시간(Pause Time)을 10ms 이하로 유지하도록 설계된 저지연 GC입니다. (Java 11에서는 실험적 도입)
--   **Epsilon GC:** "아무것도 하지 않는" GC입니다. 성능 테스트나 수명이 매우 짧은 애플리케이션에 사용됩니다.
+- **ZGC (Z Garbage Collector):** 대용량 메모리(TB 단위)에서도 일시 정지 시간(Pause Time)을 10ms 이하로 유지하도록 설계된 저지연 GC입니다. (Java 11에서는 실험적 도입)
+- **Epsilon GC:** "아무것도 하지 않는" GC입니다. 성능 테스트나 수명이 매우 짧은 애플리케이션에 사용됩니다.

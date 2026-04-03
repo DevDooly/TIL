@@ -4,23 +4,23 @@
 
 ## 1. Spring Boot의 핵심 목표
 
-*   **빠른 개발 시작:** 복잡한 XML 설정 없이 바로 코딩을 시작할 수 있습니다.
-*   **독립 실행 (Standalone):** 별도의 WAS(Tomcat, Jetty 등) 설치 없이, `java -jar` 명령어로 실행 가능한 JAR 파일을 생성합니다.
-*   **Opinionated Defaults:** 자주 사용되는 라이브러리와 설정을 기본값으로 제공하여 설정의 피로를 줄입니다.
+* **빠른 개발 시작:** 복잡한 XML 설정 없이 바로 코딩을 시작할 수 있습니다.
+* **독립 실행 (Standalone):** 별도의 WAS(Tomcat, Jetty 등) 설치 없이, `java -jar` 명령어로 실행 가능한 JAR 파일을 생성합니다.
+* **Opinionated Defaults:** 자주 사용되는 라이브러리와 설정을 기본값으로 제공하여 설정의 피로를 줄입니다.
 
 ## 2. 주요 특징 (Key Features)
 
 ### 2.1 Auto Configuration (자동 설정)
 `@EnableAutoConfiguration` 또는 `@SpringBootApplication` 어노테이션을 통해, 클래스패스에 있는 라이브러리를 감지하고 자동으로 빈(Bean)을 등록하고 설정을 구성합니다.
 
-*   예: `spring-boot-starter-web`이 있으면 자동으로 내장 Tomcat과 Spring MVC를 설정합니다.
+* 예: `spring-boot-starter-web`이 있으면 자동으로 내장 Tomcat과 Spring MVC를 설정합니다.
 
 ### 2.2 Starter Dependencies
 프로젝트에 필요한 의존성들을 그룹화하여 제공합니다. 버전 호환성을 신경 쓸 필요 없이 스타터 하나만 추가하면 관련 라이브러리들이 모두 포함됩니다.
 
-*   `spring-boot-starter-web`: RESTful, Spring MVC 개발용
-*   `spring-boot-starter-data-jpa`: JPA, Hibernate 개발용
-*   `spring-boot-starter-test`: JUnit, Mockito 등 테스트 도구 모음
+* `spring-boot-starter-web`: RESTful, Spring MVC 개발용
+* `spring-boot-starter-data-jpa`: JPA, Hibernate 개발용
+* `spring-boot-starter-test`: JUnit, Mockito 등 테스트 도구 모음
 
 ### 2.3 Embedded Server (내장 서버)
 Tomcat, Jetty, Undertow 같은 웹 서버를 애플리케이션 내부에 포함하여 배포와 실행을 단순화합니다.

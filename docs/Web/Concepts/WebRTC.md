@@ -20,9 +20,9 @@
 이 말은 peer 들이 오직 이전에 연결한 적 있는 연결들만 허용한다는 것입니다.</br></br>
 TURN 은 연결된 모든 정보를 그 서버에 전달하는 것으로 Symmetric NAT 제한을 위회하는것을 의미합니다.</br>
 
-*   https://ko.wikipedia.org/wiki/WebRTC
-*   https://medium.com/@hyun.sang/webrtc-webrtc%EB%9E%80-43df68cbe511
-*   https://usinuniverse.bitbucket.io/blog/webrtc.html
+* https://ko.wikipedia.org/wiki/WebRTC
+* https://medium.com/@hyun.sang/webrtc-webrtc%EB%9E%80-43df68cbe511
+* https://usinuniverse.bitbucket.io/blog/webrtc.html
 
 # UDP Port Range #
 ## 브라우저 / 운영체제 별 포트범위 설정 ## 
@@ -42,8 +42,8 @@ Google Chrome (Android) since version 54
 
 **Supported features**</br>
 
-*   Dynamic Policy Refresh: No
-*   Per Profile: Yes
+* Dynamic Policy Refresh: No
+* Per Profile: Yes
 **Data type**</br>
 <pre>
 String
@@ -69,4 +69,4 @@ WebRtcUdpPortRange
 10000-11999
 </pre>
 
-*   https://cloud.google.com/docs/chrome-enterprise/policies/?policy#WebRtcUdpPortRange
+* https://cloud.google.com/docs/chrome-enterprise/policies/?policy#WebRtcUdpPortRange

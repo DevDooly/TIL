@@ -8,12 +8,12 @@ RBAC은 **'누가(Subject)'**, **'어디서(Namespace)'**, **'어떤 권한(Verb
 
 ### 1.1 Role & ClusterRole (권한의 "내용" 정의)
 
-*   **Role**: **특정 네임스페이스** 내에 존재하는 자원(Pod, Service, Secret 등)에 대한 권한을 정의합니다.
-*   **ClusterRole**: **클러스터 전체** 수준의 자원(Node, PV 등)에 대한 권한을 정의하거나, 모든 네임스페이스에 걸쳐 특정 자원에 접근할 수 있는 권한을 정의합니다.
+* **Role**: **특정 네임스페이스** 내에 존재하는 자원(Pod, Service, Secret 등)에 대한 권한을 정의합니다.
+* **ClusterRole**: **클러스터 전체** 수준의 자원(Node, PV 등)에 대한 권한을 정의하거나, 모든 네임스페이스에 걸쳐 특정 자원에 접근할 수 있는 권한을 정의합니다.
 
 ### 1.2 RoleBinding & ClusterRoleBinding (권한 "부여")
 
-*   만들어진 Role이나 ClusterRole을 실제 **사용자(User)**, **그룹(Group)**, 또는 **서비스 어카운트(ServiceAccount)**에 연결(Bind)해 주는 역할입니다.
+* 만들어진 Role이나 ClusterRole을 실제 **사용자(User)**, **그룹(Group)**, 또는 **서비스 어카운트(ServiceAccount)**에 연결(Bind)해 주는 역할입니다.
 
 ---
 
@@ -24,17 +24,17 @@ CKA 시험에서는 YAML 파일을 처음부터 작성하면 시간이 부족합
 ### 📝 시나리오 1: 특정 네임스페이스의 사용자 권한 부여
 **요구사항**: `dev` 네임스페이스에서 사용자 `john`이 Pod를 조회(get, list, watch)만 할 수 있도록 설정하시오.
 
-1.   **Role 생성**: `dev` 네임스페이스에 `pod-reader`라는 Role을 만듭니다.
+1. **Role 생성**: `dev` 네임스페이스에 `pod-reader`라는 Role을 만듭니다.
     ```bash
     kubectl create role pod-reader --verb=get,list,watch --resource=pods -n dev
     ```
 
-2.   **RoleBinding 생성**: 방금 만든 `pod-reader` Role을 사용자 `john`에게 연결합니다.
+2. **RoleBinding 생성**: 방금 만든 `pod-reader` Role을 사용자 `john`에게 연결합니다.
     ```bash
     kubectl create rolebinding john-pod-reader --role=pod-reader --user=john -n dev
     ```
 
-3.   **검증 (Can-I)**: `john`의 권한으로 조회가 가능한지 확인합니다.
+3. **검증 (Can-I)**: `john`의 권한으로 조회가 가능한지 확인합니다.
     ```bash
     # 성공해야 함 (yes)
     kubectl auth can-i get pods --as john -n dev
@@ -46,17 +46,17 @@ CKA 시험에서는 YAML 파일을 처음부터 작성하면 시간이 부족합
 ### 📝 시나리오 2: 서비스 어카운트(ServiceAccount)에 권한 부여
 **요구사항**: `app-team` 네임스페이스에 `backend-sa`라는 서비스 어카운트를 만들고, 이 계정이 Deployment를 생성, 삭제, 수정할 수 있는 권한을 부여하시오.
 
-1.   **ServiceAccount 생성**:
+1. **ServiceAccount 생성**:
     ```bash
     kubectl create sa backend-sa -n app-team
     ```
 
-2.   **Role 생성**: (복수 자원 지정 가능)
+2. **Role 생성**: (복수 자원 지정 가능)
     ```bash
     kubectl create role deploy-admin --verb=create,delete,update,patch --resource=deployments -n app-team
     ```
 
-3.   **RoleBinding 생성**: 이번에는 `--user`가 아닌 `--serviceaccount`를 사용합니다. (형식: `네임스페이스:SA이름`)
+3. **RoleBinding 생성**: 이번에는 `--user`가 아닌 `--serviceaccount`를 사용합니다. (형식: `네임스페이스:SA이름`)
     ```bash
     kubectl create rolebinding backend-sa-binding --role=deploy-admin --serviceaccount=app-team:backend-sa -n app-team
     ```
@@ -64,12 +64,12 @@ CKA 시험에서는 YAML 파일을 처음부터 작성하면 시간이 부족합
 ### 📝 시나리오 3: 클러스터 전체 권한 부여 (ClusterRole)
 **요구사항**: 사용자 `admin-user`가 클러스터 내의 모든 노드(Node) 목록을 조회할 수 있도록 설정하시오. (Node는 네임스페이스에 속하지 않는 클러스터 자원입니다.)
 
-1.   **ClusterRole 생성**: (`-n` 옵션이 들어가지 않습니다)
+1. **ClusterRole 생성**: (`-n` 옵션이 들어가지 않습니다)
     ```bash
     kubectl create clusterrole node-viewer --verb=get,list,watch --resource=nodes
     ```
 
-2.   **ClusterRoleBinding 생성**:
+2. **ClusterRoleBinding 생성**:
     ```bash
     kubectl create clusterrolebinding admin-node-binding --clusterrole=node-viewer --user=admin-user
     ```

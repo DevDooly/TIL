@@ -4,15 +4,15 @@
 
 ## 1. 현재 PC 사양 (System Specifications)
 
--   **OS**: Ubuntu 22.04.5 LTS
--   **CPU**: AMD Ryzen 7 5700U (8 코어 / 16 스레드)
--   **RAM**: 약 32GB (여유 21GB 이상)
--   **GPU**: AMD Radeon Graphics (내장 그래픽, Lucienne)
+- **OS**: Ubuntu 22.04.5 LTS
+- **CPU**: AMD Ryzen 7 5700U (8 코어 / 16 스레드)
+- **RAM**: 약 32GB (여유 21GB 이상)
+- **GPU**: AMD Radeon Graphics (내장 그래픽, Lucienne)
 
 ### 💡 사양 분석 및 구동 예상 성능
 
--   넉넉한 **32GB의 RAM** 덕분에 `llama3:8b`, `gemma:7b` 같은 중소형 모델은 물론, 필요하다면 `mixtral` 같은 큰 모델도 무난하게 메모리에 올려서 실행할 수 있습니다.
--   GPU가 AMD 내장 그래픽(APU)이므로, Ollama의 공식 AMD GPU 가속(ROCm)이 완벽하게 지원되지 않을 수 있습니다. 하지만 이 경우 Ollama가 자동으로 **CPU 모드**로 전환하여 실행합니다. 8코어 16스레드의 우수한 CPU와 고용량 RAM 조합이므로 CPU 모드에서도 나쁘지 않은 추론 속도를 기대할 수 있습니다.
+- 넉넉한 **32GB의 RAM** 덕분에 `llama3:8b`, `gemma:7b` 같은 중소형 모델은 물론, 필요하다면 `mixtral` 같은 큰 모델도 무난하게 메모리에 올려서 실행할 수 있습니다.
+- GPU가 AMD 내장 그래픽(APU)이므로, Ollama의 공식 AMD GPU 가속(ROCm)이 완벽하게 지원되지 않을 수 있습니다. 하지만 이 경우 Ollama가 자동으로 **CPU 모드**로 전환하여 실행합니다. 8코어 16스레드의 우수한 CPU와 고용량 RAM 조합이므로 CPU 모드에서도 나쁘지 않은 추론 속도를 기대할 수 있습니다.
 
 ---
 
@@ -40,18 +40,18 @@ Ollama는 보안상의 이유로 기본적으로 로컬호스트(`127.0.0.1:1143
 
 ### 설정 방법
 
-1.   **Systemd 서비스 설정 수정 모드 진입**
+1. **Systemd 서비스 설정 수정 모드 진입**
    터미널에서 아래 명령어를 실행하여 텍스트 편집기를 엽니다.
 
    ```bash
    sudo systemctl edit ollama.service
    ```
 
-2.   **환경변수 추가**
+2. **환경변수 추가**
    편집기가 열리면 빈 주석 공간(`### Anything between here and the comment below will become the new contents of the file`) 부분에 아래 내용을 추가합니다.
    
-   -   `OLLAMA_HOST="0.0.0.0"`: 모든 IP의 접속 허용.
-   -   `OLLAMA_ORIGINS="*"`: 웹 프론트엔드 등에서 오는 모든 CORS 요청 허용.
+   - `OLLAMA_HOST="0.0.0.0"`: 모든 IP의 접속 허용.
+   - `OLLAMA_ORIGINS="*"`: 웹 프론트엔드 등에서 오는 모든 CORS 요청 허용.
 
    ```ini
    [Service]
@@ -60,7 +60,7 @@ Ollama는 보안상의 이유로 기본적으로 로컬호스트(`127.0.0.1:1143
    ```
    저장 후 편집기를 종료합니다. (`nano` 편집기 기준: `Ctrl+O` -> `Enter` -> `Ctrl+X`)
 
-3.   **서비스 재시작 적용**
+3. **서비스 재시작 적용**
    변경된 설정을 시스템에 반영하고 Ollama 데몬 서비스를 재시작합니다.
 
    ```bash

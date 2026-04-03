@@ -10,8 +10,8 @@
 -define(MAX_MSG_SIZE, 536870912).
 ```
 
-*   출처 : https://github.com/rabbitmq/rabbitmq-common/blob/master/include/rabbit.hrl#L255
+* 출처 : https://github.com/rabbitmq/rabbitmq-common/blob/master/include/rabbit.hrl#L255
 
 ### Sending Images from sender to recieverin rabbitmq Python with Pika Part 8
 
-*   https://www.youtube.com/watch?v=QkorTB0ldwE
+* https://www.youtube.com/watch?v=QkorTB0ldwE

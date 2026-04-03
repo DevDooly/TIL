@@ -2,4 +2,4 @@
 
 ## Tools
 
-*   Qt Designer
+* Qt Designer

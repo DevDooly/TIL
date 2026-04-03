@@ -6,9 +6,9 @@
 
 ## 1. 핵심 특징
 
-*   **인터페이스 구현**: Spring의 `TaskScheduler`와 `TaskExecutor` 인터페이스를 모두 구현합니다. 즉, 작업을 즉시 실행할 수도 있고 예약 실행할 수도 있습니다.
-*   **표준 기술 기반**: 내부적으로 Java의 `ScheduledThreadPoolExecutor`를 사용합니다.
-*   **Spring 통합**: 빈(Bean)으로 등록하여 사용 시 Spring의 생명주기에 맞춰 안전하게 종료(Shutdown)되며, 에러 핸들러(`ErrorHandler`) 설정이 용이합니다.
+* **인터페이스 구현**: Spring의 `TaskScheduler`와 `TaskExecutor` 인터페이스를 모두 구현합니다. 즉, 작업을 즉시 실행할 수도 있고 예약 실행할 수도 있습니다.
+* **표준 기술 기반**: 내부적으로 Java의 `ScheduledThreadPoolExecutor`를 사용합니다.
+* **Spring 통합**: 빈(Bean)으로 등록하여 사용 시 Spring의 생명주기에 맞춰 안전하게 종료(Shutdown)되며, 에러 핸들러(`ErrorHandler`) 설정이 용이합니다.
 
 ---
 
@@ -85,6 +85,6 @@ taskScheduler.schedule(() -> {
 
 ## 5. 주의 사항 및 팁
 
-1.   **기본 설정의 한계**: Spring Boot에서 별도 설정 없이 `@Scheduled`를 사용하면 단일 스레드(`poolSize=1`)에서 동작합니다. 작업이 많을 경우 반드시 `ThreadPoolTaskScheduler`를 빈으로 등록하여 풀 사이즈를 조정해야 합니다.
-2.   **예외 처리**: 스케줄링 작업 내부에서 예외가 발생하여 밖으로 던져지면, 해당 작업의 다음 주기가 실행되지 않을 수 있습니다. 반드시 `try-catch`로 감싸거나 `ErrorHandler`를 설정하세요.
-3.   **가상 스레드 결합**: Java 21 이상이라면 `setThreadFactory`를 통해 가상 스레드(Virtual Threads)를 스케줄러에 적용하여 리소스를 더 효율적으로 관리할 수도 있습니다.
+1. **기본 설정의 한계**: Spring Boot에서 별도 설정 없이 `@Scheduled`를 사용하면 단일 스레드(`poolSize=1`)에서 동작합니다. 작업이 많을 경우 반드시 `ThreadPoolTaskScheduler`를 빈으로 등록하여 풀 사이즈를 조정해야 합니다.
+2. **예외 처리**: 스케줄링 작업 내부에서 예외가 발생하여 밖으로 던져지면, 해당 작업의 다음 주기가 실행되지 않을 수 있습니다. 반드시 `try-catch`로 감싸거나 `ErrorHandler`를 설정하세요.
+3. **가상 스레드 결합**: Java 21 이상이라면 `setThreadFactory`를 통해 가상 스레드(Virtual Threads)를 스케줄러에 적용하여 리소스를 더 효율적으로 관리할 수도 있습니다.

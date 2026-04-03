@@ -19,5 +19,5 @@ Chart.js 는 데이터 시각화를 위한 무료 오픈 소스 자바 스크립
 
 ## References ##
 
-*   https://www.chartjs.org/docs/latest/
-*   https://yeon22.github.io/Chartjs-kr/docs/latest/getting-started/usage.html
+* https://www.chartjs.org/docs/latest/
+* https://yeon22.github.io/Chartjs-kr/docs/latest/getting-started/usage.html

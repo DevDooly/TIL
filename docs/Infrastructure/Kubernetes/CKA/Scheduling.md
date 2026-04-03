@@ -27,8 +27,8 @@ spec:
 ## 2. Node Affinity & Anti-Affinity (상세한 제어)
 Node Selector보다 유연한 조건(In, NotIn, Exists 등)과 선호도(반드시 지켜야 함 vs 가능하면 지킴)를 설정할 수 있습니다.
 
-*   `requiredDuringSchedulingIgnoredDuringExecution`: **반드시** 조건을 만족하는 노드에만 배치 (Hard).
-*   `preferredDuringSchedulingIgnoredDuringExecution`: 조건을 만족하는 노드를 **선호**하지만, 없으면 다른 곳에 배치 (Soft).
+* `requiredDuringSchedulingIgnoredDuringExecution`: **반드시** 조건을 만족하는 노드에만 배치 (Hard).
+* `preferredDuringSchedulingIgnoredDuringExecution`: 조건을 만족하는 노드를 **선호**하지만, 없으면 다른 곳에 배치 (Soft).
 
 **예제 (disktype이 ssd 또는 nvme인 노드에만 배치):**
 ```yaml
@@ -59,8 +59,8 @@ kubectl taint nodes node01 app=blue:NoSchedule
 kubectl taint nodes node01 app=blue:NoSchedule-
 ```
 
-*   **NoSchedule**: Toleration이 없으면 스케줄링하지 않음 (기존 파드는 놔둠).
-*   **NoExecute**: Toleration이 없으면 스케줄링 안 함 + 기존에 돌고 있던 파드도 쫓아냄.
+* **NoSchedule**: Toleration이 없으면 스케줄링하지 않음 (기존 파드는 놔둠).
+* **NoExecute**: Toleration이 없으면 스케줄링 안 함 + 기존에 돌고 있던 파드도 쫓아냄.
 
 ### 3.2 파드에 Toleration 설정
 `node01`에 설정된 `app=blue:NoSchedule` Taint를 무시하고 배치될 수 있게 합니다.

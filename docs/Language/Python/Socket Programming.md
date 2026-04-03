@@ -5,15 +5,15 @@ Python의 소켓 모듈 은 Berkeley 소켓 API에 대한 인터페이스를 제
 
 ## Socket API List
 
-*   socket()
-*   bind()
-*   listen()
-*   accept()
-*   connect()
-*   connect_ex()
-*   send()
-*   recv()
-*   close()
+* socket()
+* bind()
+* listen()
+* accept()
+* connect()
+* connect_ex()
+* send()
+* recv()
+* close()
 
 ## Echo Server & Client Example
 echo-server.py
@@ -58,6 +58,6 @@ socket.socket ()을 사용하여 소켓 객체를 만들고 소켓 유형을 soc
 
 ## References
 
-*   https://realpython.com/python-sockets/
-*   https://en.wikipedia.org/wiki/Berkeley_sockets
-*   
+* https://realpython.com/python-sockets/
+* https://en.wikipedia.org/wiki/Berkeley_sockets
+* 

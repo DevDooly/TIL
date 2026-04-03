@@ -18,12 +18,12 @@ Spring Boot는 설정을 읽어올 때 정해진 **우선순위(Hierarchy)**가 
 
 우선순위가 높은 순서대로 나열하면 다음과 같습니다 (높을수록 아래 설정을 덮어씀):
 
-1.   **Command Line Arguments**: `--spring.profiles.active=prod`
-2.   **Java System Properties**: `-Dspring.profiles.active=prod`
-3.   **OS Environment Variables**: `SPRING_PROFILES_ACTIVE=prod`
-4.   **Application Properties (Jar 외부)**: `application-{profile}.yaml`
-5.   **Application Properties (Jar 내부)**: `application-{profile}.yaml`
-6.   **Default Properties**: `application.yaml`
+1. **Command Line Arguments**: `--spring.profiles.active=prod`
+2. **Java System Properties**: `-Dspring.profiles.active=prod`
+3. **OS Environment Variables**: `SPRING_PROFILES_ACTIVE=prod`
+4. **Application Properties (Jar 외부)**: `application-{profile}.yaml`
+5. **Application Properties (Jar 내부)**: `application-{profile}.yaml`
+6. **Default Properties**: `application.yaml`
 
 ---
 
@@ -31,13 +31,13 @@ Spring Boot는 설정을 읽어올 때 정해진 **우선순위(Hierarchy)**가 
 
 ### 3.1 Env Var vs Command Line
 
-*   **문제**: Dockerfile의 `ENTRYPOINT`에 `--spring.profiles.active=dev`를 고정해두고, K8s YAML의 `env` 섹션에서 `SPRING_PROFILES_ACTIVE=prod`를 주입하는 경우.
-*   **결과**: **Command Line Arguments가 우선순위가 더 높기 때문에** K8s에서 주입한 `prod`는 무시되고 `dev`로 실행됩니다.
+* **문제**: Dockerfile의 `ENTRYPOINT`에 `--spring.profiles.active=dev`를 고정해두고, K8s YAML의 `env` 섹션에서 `SPRING_PROFILES_ACTIVE=prod`를 주입하는 경우.
+* **결과**: **Command Line Arguments가 우선순위가 더 높기 때문에** K8s에서 주입한 `prod`는 무시되고 `dev`로 실행됩니다.
 
 ### 3.2 ConfigMap 마운트 위치에 따른 차이
 
-*   **상황**: ConfigMap을 파일로 마운트하여 `/config/application.yaml`에 위치시키는 경우.
-*   **결과**: 이는 'Jar 외부의 설정 파일'로 인식되어 'Jar 내부의 프로파일 전용 설정(`application-prod.yaml`)'보다 우선순위가 낮을 수 있습니다. (Spring Boot 2.4 미만 버전에서 특히 혼동됨)
+* **상황**: ConfigMap을 파일로 마운트하여 `/config/application.yaml`에 위치시키는 경우.
+* **결과**: 이는 'Jar 외부의 설정 파일'로 인식되어 'Jar 내부의 프로파일 전용 설정(`application-prod.yaml`)'보다 우선순위가 낮을 수 있습니다. (Spring Boot 2.4 미만 버전에서 특히 혼동됨)
 
 ---
 
@@ -95,12 +95,12 @@ public class ProfileSpecificSettingPostProcessor implements BeanPostProcessor, P
 }
 ```
 
-*   **`BeanPostProcessor`**: 빈의 초기화 단계에 개입하여 프로파일에 따른 커스텀 로직을 수행합니다.
-*   **`Ordered` / `PriorityOrdered`**: 여러 설정 로직이 충돌할 때, 이 프로세서가 실행될 정확한 순서를 보장하여 우선순위 역전을 방지합니다.
+* **`BeanPostProcessor`**: 빈의 초기화 단계에 개입하여 프로파일에 따른 커스텀 로직을 수행합니다.
+* **`Ordered` / `PriorityOrdered`**: 여러 설정 로직이 충돌할 때, 이 프로세서가 실행될 정확한 순서를 보장하여 우선순위 역전을 방지합니다.
 
 ---
 
 ## 5. 교훈
 
-*   K8s 환경에서는 **환경 변수(Env)**보다 **실행 인자(Args)**가 우선순위가 높음을 항상 인지해야 합니다.
-*   배포 로그 상단에 출력되는 `The following profiles are active: ...` 메시지를 반드시 확인하여 의도한 프로파일이 로드되었는지 검증해야 합니다.
+* K8s 환경에서는 **환경 변수(Env)**보다 **실행 인자(Args)**가 우선순위가 높음을 항상 인지해야 합니다.
+* 배포 로그 상단에 출력되는 `The following profiles are active: ...` 메시지를 반드시 확인하여 의도한 프로파일이 로드되었는지 검증해야 합니다.

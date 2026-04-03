@@ -31,25 +31,25 @@ git remote remove origin
 
 ### 차이점
 
--   **HTTPS (`https://...`)**: 일반적인 웹 주소 사용. Push 시마다 인증 필요(Credential Helper 미사용 시).
--   **SSH (`git@...`)**: SSH Key 쌍을 이용해 인증. 설정 후에는 비밀번호 입력 없이 사용 가능.
+- **HTTPS (`https://...`)**: 일반적인 웹 주소 사용. Push 시마다 인증 필요(Credential Helper 미사용 시).
+- **SSH (`git@...`)**: SSH Key 쌍을 이용해 인증. 설정 후에는 비밀번호 입력 없이 사용 가능.
 
 ### 변경 방법 (HTTPS -> SSH)
 
-1.   **현재 설정 확인**
+1. **현재 설정 확인**
    ```bash
    git remote -v
    # origin  https://github.com/DevDooly/TIL.git (fetch)
    ```
 
-2.   **URL 변경**
+2. **URL 변경**
    GitHub 저장소 페이지에서 SSH 주소를 복사한 후 아래 명령어를 실행한다.
    ```bash
    # git remote set-url [이름] [새로운 URL]
    git remote set-url origin git@github.com:DevDooly/TIL.git
    ```
 
-3.   **변경 확인**
+3. **변경 확인**
    ```bash
    git remote -v
    # origin  git@github.com:DevDooly/TIL.git (fetch)
@@ -59,4 +59,4 @@ git remote remove origin
 
 ## References
 
-*   [GitHub Docs - Managing remote repositories](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
+* [GitHub Docs - Managing remote repositories](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)

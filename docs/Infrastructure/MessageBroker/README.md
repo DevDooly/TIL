@@ -4,5 +4,5 @@
 
 ## 목차
 
-1.   **[AMQP (Advanced Message Queuing Protocol)](AMQP.md)**: 메시징 표준 프로토콜
-2.   **[RabbitMQ vs Kafka](RabbitMQ%20그리고%20Kafka.md)**: 대표적인 두 메시징 시스템의 비교 및 차이점
+1. **[AMQP (Advanced Message Queuing Protocol)](AMQP.md)**: 메시징 표준 프로토콜
+2. **[RabbitMQ vs Kafka](RabbitMQ%20그리고%20Kafka.md)**: 대표적인 두 메시징 시스템의 비교 및 차이점

@@ -44,12 +44,12 @@ git submodule update --remote
 
 서브모듈은 단순히 디렉토리 삭제만으로는 완전히 제거되지 않는다.
 
-1.   `.gitmodules` 파일에서 해당 서브모듈 항목 삭제
-2.   `.git/config` 파일에서 해당 서브모듈 항목 삭제
-3.   `git rm --cached [서브모듈 경로]` 실행
-4.   `rm -rf .git/modules/[서브모듈 경로]` 실행
-5.   `rm -rf [서브모듈 디렉토리]` 실행
+1. `.gitmodules` 파일에서 해당 서브모듈 항목 삭제
+2. `.git/config` 파일에서 해당 서브모듈 항목 삭제
+3. `git rm --cached [서브모듈 경로]` 실행
+4. `rm -rf .git/modules/[서브모듈 경로]` 실행
+5. `rm -rf [서브모듈 디렉토리]` 실행
 
 ## References
 
-*   [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+* [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

@@ -4,10 +4,10 @@ iterable 한 오브젝트를 생성하기위한 방법 중 하나.
 
 ## 종류
 
-*   List Comprehension (LC)
-*   Set Comprehension (SC)
-*   Dict Comprehension (DC)
-*   Generator Expression (GE)
+* List Comprehension (LC)
+* Set Comprehension (SC)
+* Dict Comprehension (DC)
+* Generator Expression (GE)
 
 ## List Comprehension (LC)
 List Comprehension 은 리스트를 쉽게 생성하기 위한 방법이다.  
@@ -28,5 +28,5 @@ norm_and_move = [(x / amount) + 1 for x in vals]
 
 ## References 
 
-*   https://mingrammer.com/introduce-comprehension-of-python/
-*   
+* https://mingrammer.com/introduce-comprehension-of-python/
+* 

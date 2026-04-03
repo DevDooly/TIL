@@ -44,4 +44,4 @@ tldr git checkout
 
 ## 참고
 
-*   [tldr-pages 공식 사이트](https://tldr.sh/)
+* [tldr-pages 공식 사이트](https://tldr.sh/)

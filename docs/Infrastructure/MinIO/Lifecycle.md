@@ -4,9 +4,9 @@ MinIO의 수명 주기 관리 기능은 버킷 내 객체들의 보관 기간을
 
 ## 1. 주요 기능
 
-*   **Expiration (삭제)**: 지정된 날짜나 기간이 지나면 객체를 자동으로 영구 삭제합니다.
-*   **Transition (이동)**: 비용 절감을 위해 오래된 데이터를 더 저렴한 스토리지 계층(Warm/Cold Storage)으로 이동시킵니다. (주로 원격 티어링 설정 필요)
-*   **Noncurrent Version Management**: 최신 버전이 아닌 과거 버전들만 타겟팅하여 삭제하거나 이동시킬 수 있습니다.
+* **Expiration (삭제)**: 지정된 날짜나 기간이 지나면 객체를 자동으로 영구 삭제합니다.
+* **Transition (이동)**: 비용 절감을 위해 오래된 데이터를 더 저렴한 스토리지 계층(Warm/Cold Storage)으로 이동시킵니다. (주로 원격 티어링 설정 필요)
+* **Noncurrent Version Management**: 최신 버전이 아닌 과거 버전들만 타겟팅하여 삭제하거나 이동시킬 수 있습니다.
 
 ---
 
@@ -90,5 +90,5 @@ public void setBucketLifecycle(String bucketName) throws Exception {
 
 ## 4. 활용 팁
 
-*   **삭제 마커 정리**: `mc ilm rule add` 시 `--expire-delete-marker` 옵션을 사용하면 데이터는 없고 마커만 남은 유령 객체들을 자동으로 청소할 수 있습니다.
-*   **Prefix 활용**: 모든 파일을 지우기보다 `temp/`, `cache/` 와 같이 임시 성격의 경로에만 짧은 Expiration 주기를 부여하는 것이 효율적입니다.
+* **삭제 마커 정리**: `mc ilm rule add` 시 `--expire-delete-marker` 옵션을 사용하면 데이터는 없고 마커만 남은 유령 객체들을 자동으로 청소할 수 있습니다.
+* **Prefix 활용**: 모든 파일을 지우기보다 `temp/`, `cache/` 와 같이 임시 성격의 경로에만 짧은 Expiration 주기를 부여하는 것이 효율적입니다.

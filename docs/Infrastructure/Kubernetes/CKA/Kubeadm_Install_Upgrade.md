@@ -26,15 +26,15 @@ kubeadm join <control-plane-host>:<port> --token <token> --discovery-token-ca-ce
 
 ### 2.1 마스터 노드 업그레이드 순서
 
-1.   **패키지 매니저 업데이트**: `apt update`
-2.   **kubeadm 업그레이드**: 
+1. **패키지 매니저 업데이트**: `apt update`
+2. **kubeadm 업그레이드**: 
     ```bash
     apt-get install -y --allow-change-held-packages kubeadm=1.x.x-00
     ```
 
-3.   **업그레이드 계획 확인**: `kubeadm upgrade plan`
-4.   **업그레이드 적용**: `kubeadm upgrade apply v1.x.x`
-5.   **kubelet & kubectl 업그레이드**:
+3. **업그레이드 계획 확인**: `kubeadm upgrade plan`
+4. **업그레이드 적용**: `kubeadm upgrade apply v1.x.x`
+5. **kubelet & kubectl 업그레이드**:
     ```bash
     apt-get install -y --allow-change-held-packages kubelet=1.x.x-00 kubectl=1.x.x-00
     systemctl daemon-reload
