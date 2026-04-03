@@ -274,6 +274,7 @@
 
 ## 📁 Troubleshooting
 
+*   [Apache Avro: 필드명 'result' 사용 시 hashCode() 메서드 충돌 이슈](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
 *   [🛠️ 트러블슈팅 (Troubleshooting)](Troubleshooting/README.md)
 
 ## 📁 Templates

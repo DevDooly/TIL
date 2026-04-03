@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-03 09:49 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러... |
-| 2026-04-03 09:49 | [README](docs/Troubleshooting/README.md) | docs: Hadoop 특정 노드 네트워크 RX Error로 인한 Tez Job 지연 트러... |
-| 2026-04-03 09:29 | [README](docs/Infrastructure/README.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
-| 2026-04-03 09:29 | [Spring Profile Priority in K8s](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
-| 2026-04-03 09:29 | [Sitemap](docs/Sitemap.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
-| 2026-04-03 09:29 | [Issue Report Template](docs/Templates/Issue_Report_Template.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 10:00 | [Avro HashCode Field Naming Conflict](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
+| 2026-04-03 10:00 | [README](docs/Troubleshooting/README.md) | docs: Apache Avro 필드명 'result' 사용 시 hashCode 충돌 이슈... |
+| 2026-04-03 09:56 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: Hadoop Tez Job 지연 트러블슈팅 페이지 마크다운 포맷 수정 |
+| 2026-04-03 09:51 | [Tez Job Slowness Network RX](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
+| 2026-04-03 09:51 | [Spring Profile Priority in K8s](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
+| 2026-04-03 09:51 | [README](docs/Troubleshooting/README.md) | docs: K8s Spring 프로파일 우선순위 이슈에 BeanPostProcessor 활... |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -323,6 +323,7 @@
 
 ## Troubleshooting
 * [**Overview**](docs/Troubleshooting/README.md)
+* [Apache Avro: 필드명 'result' 사용 시 hashCode() 메서드 충돌 이슈](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
 
 <!-- TOC_END -->
 

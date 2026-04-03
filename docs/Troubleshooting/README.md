@@ -25,6 +25,7 @@
 ## 🗄️ Database
 
 *   **[Oracle LOB Segment 공간 부족 (ORA-01692)](../Data/Database/Oracle_LOB_Segment.md)**: 대용량 데이터 저장 시 발생하는 LOB 세그먼트 오류 조치.
+*   **[Avro 필드명 'result' 사용 시 hashCode 충돌](../Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)**: Avro 자동 생성 코드의 지역 변수 이름 충돌 이슈 및 해결 방안.
 
 ---
 *💡 새로운 이슈가 해결될 때마다 이 목차에 추가하여 지식을 공유합니다.*
