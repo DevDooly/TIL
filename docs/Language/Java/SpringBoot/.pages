@@ -8,5 +8,6 @@ nav:
 - BeanPostProcessor: BeanPostProcessor.md
 - ThreadPoolTaskScheduler: ThreadPoolTaskScheduler.md
 - OAuth2 Implementation: OAuth2_Implementation.md
+- K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
 - JPA: JPA
 - Web: Web

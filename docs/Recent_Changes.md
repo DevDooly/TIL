@@ -4,6 +4,13 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-03 09:29 | [Infrastructure/README.md](Infrastructure/README.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:29 | [Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:29 | [Sitemap.md](Sitemap.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:29 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:29 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:29 | [index.md](index.md) | docs: K8s 환경에서의 Spring 프로파일 우선순위 이슈 분석 및 해결 가이드 추가 |
+| 2026-04-03 09:26 | [Sitemap.md](Sitemap.md) | docs: 트러블슈팅(Troubleshooting) 카테고리 신설 및 주요 이슈 링크 정리 |
 | 2026-04-03 09:26 | [Troubleshooting/README.md](Troubleshooting/README.md) | docs: 트러블슈팅(Troubleshooting) 카테고리 신설 및 주요 이슈 링크 정리 |
 | 2026-04-02 17:34 | [Sitemap.md](Sitemap.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
 | 2026-04-02 17:34 | [index.md](index.md) | docs: 메인 페이지(index.md) 복구 및 전체 목차를 Sitemap.md로 이동 |
@@ -47,10 +54,3 @@
 | 2026-04-01 13:53 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
 | 2026-04-01 13:53 | [Data/Database/Image_Storage_Management.md](Data/Database/Image_Storage_Management.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/MongoDB.md](Data/Database/MongoDB.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/README.md](Data/Database/README.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/SQL_Naming_Convention.md](Data/Database/SQL_Naming_Convention.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |
-| 2026-04-01 13:53 | [Data/Database/fluentd.md](Data/Database/fluentd.md) | docs: Kubernetes README 수정 및 마크다운 리스트 자동 포맷팅 로직 전면 리팩토링 |

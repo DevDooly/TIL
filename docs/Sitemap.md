@@ -32,6 +32,7 @@
             *   [Spring Boot OAuth2 Implementation](Language/Java/SpringBoot/OAuth2_Implementation.md)
             *   [Spring Boot](Language/Java/SpringBoot/README.md)
             *   [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
+            *   [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
             *   [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
             *   **JPA**
                 *   [JPA Persistence Context (영속성 컨텍스트)](Language/Java/SpringBoot/JPA/Persistence_Context.md)
