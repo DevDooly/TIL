@@ -65,6 +65,39 @@ spring:
     import: "optional:configtree:/etc/config/" # K8s ConfigMap 마운트 경로
 ```
 
+### 4.3 고급 해결책: 프로그래밍 방식의 설정 제어 (BeanPostProcessor & Ordered)
+설정 우선순위가 너무 복잡하여 휴먼 에러가 발생할 가능성이 높다면, **`BeanPostProcessor`**를 사용하여 특정 빈(Bean)의 속성을 프로파일에 따라 강제로 주입하거나 검증할 수 있습니다.
+
+#### 🛠 구현 예시: 프로파일별 Bean 속성 강제 교정
+```java
+@Component
+public class ProfileSpecificSettingPostProcessor implements BeanPostProcessor, PriorityOrdered {
+
+    @Autowired
+    private Environment env;
+
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        // 특정 프로파일(예: prod)에서 절대 허용하면 안 되는 설정을 강제로 교정하거나 검증
+        if (Arrays.asList(env.getActiveProfiles()).contains("prod")) {
+            if (bean instanceof DataSource) {
+                // 실 운영 환경에서 로컬/테스트 DB 연결 시도를 원천 차단하는 로직 등
+            }
+        }
+        return bean;
+    }
+
+    @Override
+    public int getOrder() {
+        // 우선순위를 가장 높게 설정하여 다른 설정보다 먼저 혹은 나중에 적용되도록 제어
+        return Ordered.HIGHEST_PRECEDENCE;
+    }
+}
+```
+
+*   **`BeanPostProcessor`**: 빈의 초기화 단계에 개입하여 프로파일에 따른 커스텀 로직을 수행합니다.
+*   **`Ordered` / `PriorityOrdered`**: 여러 설정 로직이 충돌할 때, 이 프로세서가 실행될 정확한 순서를 보장하여 우선순위 역전을 방지합니다.
+
 ---
 
 ## 5. 교훈
