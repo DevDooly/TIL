@@ -53,7 +53,7 @@ def parse_log(lines, max_items=50):
                 continue
                 
             file_path = line
-            if file_path.startswith("docs/") and file_path.endswith(".md") and "Recent_Changes.md" not in file_path and "README.md" not in file_path:
+            if file_path.startswith("docs/") and file_path.endswith(".md") and "Recent_Changes.md" not in file_path and "README.md" not in file_path and "Sitemap.md" not in file_path:
                 parsed_items.append({
                     "date": current_date,
                     "file_path": file_path,

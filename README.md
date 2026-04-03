@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-03 10:49 | [Sitemap](docs/Sitemap.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:49 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:38 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Ollama](docs/AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [OpenClaw](docs/AI/OpenClaw.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [OpenCode](docs/AI/OpenCode.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
