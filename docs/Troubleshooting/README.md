@@ -19,9 +19,9 @@
 
 * **[Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)**: 특정 노드의 하드웨어 결함으로 인한 전체 분산 처리 성능 저하.
 
-*   **[대량 파일 전송 용량 불일치 이슈](../Infrastructure/Linux/Large_File_Transfer.md#8-용량-불일치-트러블슈팅)**: rsync 복사 후 원본과 대상의 용량이 차이 나는 원인 분석.
+* **[대량 파일 전송 용량 불일치 이슈](../Infrastructure/Linux/Large_File_Transfer.md#8-용량-불일치-트러블슈팅)**: rsync 복사 후 원본과 대상의 용량이 차이 나는 원인 분석.
 
-*   **[MinIO 버저닝 활성화 후 삭제 지연 이슈](../Troubleshooting/MinIO_Versioning_Deletion_Issue.md)**: 삭제 마커로 인해 파일이 영구 삭제되지 않는 문제 및 버전별 삭제 처리 방법.
+* **[MinIO 버저닝 활성화 후 삭제 지연 이슈](../Troubleshooting/MinIO_Versioning_Deletion_Issue.md)**: 삭제 마커로 인해 파일이 영구 삭제되지 않는 문제 및 버전별 삭제 처리 방법.
 
 
 

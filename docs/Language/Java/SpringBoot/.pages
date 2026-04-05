@@ -10,5 +10,6 @@ nav:
 - OAuth2 Implementation: OAuth2_Implementation.md
 - K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
+- Spring Boot 3.4 정형 로깅 (ECS): Structured_Logging_SpringBoot_3_4.md
 - JPA: JPA
 - Web: Web
