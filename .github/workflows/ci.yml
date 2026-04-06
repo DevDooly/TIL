@@ -10,6 +10,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -39,5 +41,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Deploy to gh-pages branch
-        # mkdocs gh-deploy 명령어는 사이트를 빌드하고 gh-pages 브랜치에 푸시합니다.
         run: mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
