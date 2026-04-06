@@ -226,6 +226,8 @@
         * [RPC (Remote Procedure Call)](ComputerScience/Network/RPC.md)
         * [Socket (소켓)](ComputerScience/Network/Socket.md)
         * [Subnetwork (서브넷)](ComputerScience/Network/Subnetwork.md)
+        * **DNS**
+            * [DNS와 NameServer: 개념 이해 및 리눅스 설정 가이드](ComputerScience/Network/DNS/DNS_and_NameServer.md)
     * **OperatingSystem**
         * [Endianness (엔디언)](ComputerScience/OperatingSystem/Endianness.md)
 
