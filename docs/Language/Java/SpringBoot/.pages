@@ -11,6 +11,7 @@ nav:
 - K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
 - JPA: JPA
 - Testing: Testing
+- 가상 스레드: Kafka Pinning 이슈: Virtual_Thread_Pinning_Kafka.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
 
 - Web: Web

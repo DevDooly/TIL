@@ -37,6 +37,7 @@
             * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
             * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)
             * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
+            * [Java Virtual Thread: Kafka Consumer Pinning 이슈 분석](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
             * **JPA**
                 * [Spring Data JPA](Language/Java/SpringBoot/JPA/README.md)
                 * [JPA Persistence Context (영속성 컨텍스트)](Language/Java/SpringBoot/JPA/Persistence_Context.md)
@@ -284,6 +285,7 @@
 * [🛠️ 트러블슈팅 (Troubleshooting)](Troubleshooting/README.md)
     * [Virtual Thread Pinning 이슈 (FTP/SFTP)](Language/Java/Virtual_Threads_FTP_Pinning.md)
     * [K8s 환경의 Virtual Thread 주의사항](Language/Java/Virtual_Threads_in_K8s.md)
+    * [Kafka Consumer 가상 스레드 Pinning 이슈](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
     * [K8s Spring 프로파일 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
     * [로깅 설정 YAML to XML 전환 이슈](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
     * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)

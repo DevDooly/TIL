@@ -4,6 +4,7 @@ nav:
   - "☕ Java & Spring":
     - "Virtual Thread Pinning (FTP)": ../Language/Java/Virtual_Threads_FTP_Pinning.md
     - "K8s Virtual Thread 주의사항": ../Language/Java/Virtual_Threads_in_K8s.md
+    - "Kafka 가상 스레드 Pinning": ../Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md
     - "K8s Spring 프로파일 우선순위": ../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md
     - "로깅 설정 YAML to XML 전환": ../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md
   - "🎡 Infra & Kafka":
