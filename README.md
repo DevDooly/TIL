@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-06 09:19 | [temp](docs/Language/Java/SpringBoot/temp.md) | temp 삭제 |
+| 2026-04-06 08:56 | [Structured Logging SpringBoot 3 4](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ... |
+| 2026-04-06 08:56 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ... |
+| 2026-04-03 17:15 | [temp](docs/Language/Java/SpringBoot/temp.md) | 임시 |
 | 2026-04-03 10:49 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:38 | [Gemini CLI](docs/AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Ollama](docs/AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Ollama Local Environment Setup](docs/AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [OpenClaw](docs/AI/OpenClaw.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [OpenCode](docs/AI/OpenCode.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -62,6 +62,7 @@
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
     * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+    * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)
     * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
     * **JPA**
       * [**Overview**](docs/Language/Java/SpringBoot/JPA/README.md)

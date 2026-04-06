@@ -4,6 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-06 09:19 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | temp 삭제 |
+| 2026-04-06 08:56 | [Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
+| 2026-04-06 08:56 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
 | 2026-04-03 17:15 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | 임시 |
 | 2026-04-03 10:49 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:38 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
@@ -51,6 +54,3 @@
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_K8s.md](Infrastructure/Jenkins/Installation_K8s.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

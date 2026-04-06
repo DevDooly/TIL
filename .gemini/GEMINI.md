@@ -8,23 +8,15 @@
 - **Sync First**: 작업을 시작하기 전에 반드시 원격 저장소의 변경 사항을 가져와야 합니다.
   - Command: `git pull`
 
-### 2. Pre-Commit Validation & Update
-`update_recent_changes.py` 스크립트는 **Git Log**를 기반으로 동작하므로, 변경 사항이 커밋된 후에만 인식할 수 있습니다. 따라서 다음 순서를 따르세요.
+- For this project (TIL), use the following single-step command for all documentation updates:
+  './scripts/publish.sh "[Commit Message]"'
+  This script automatically handles:
+  1. Staging and initial commit.
+  2. Running all validation and maintenance scripts (Recent Changes, Sitemap, etc.).
+  3. Amending the commit with auto-generated updates.
+  4. Pushing to the remote repository.
+  This ensures the git log used by the scripts is always up to date and consistent.
 
-**Commit Sequence:**
-1. **콘텐츠 커밋**: 문서 변경 사항을 먼저 커밋합니다.
-   - `git add <files>`
-   - `git commit -m "docs: ..."`
-2. **스크립트 실행**: 변경 내역을 반영하고 유효성을 검사합니다.
-   - `python3 scripts/validate_markdown_lists.py`
-   - `python3 scripts/update_recent_changes.py`
-   - `python3 scripts/generate_sitemap.py`
-   - `python3 scripts/validate_pages.py`
-3. **Amend Commit**: 스크립트에 의해 변경된 파일(`Recent_Changes.md`, `Sitemap.md` 등)을 이전 커밋에 합칩니다.
-   - `git add .`
-   - `git commit --amend --no-edit`
-4. **Push**: 최종 결과물을 원격 저장소에 반영합니다.
-   - `git push`
 
 ### 3. Documentation Standards
 - **Language**: 문서는 **한국어**로 작성하는 것을 원칙으로 합니다.
