@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-06 09:29 | [Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Logback XML에서 logback-ecs-encoder 사용 가이드 추가 |
 | 2026-04-06 09:19 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | temp 삭제 |
 | 2026-04-06 08:56 | [Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
 | 2026-04-06 08:56 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_Docker_Linux.md](Infrastructure/Jenkins/Installation_Docker_Linux.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Jenkins/Installation_K8s.md](Infrastructure/Jenkins/Installation_K8s.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

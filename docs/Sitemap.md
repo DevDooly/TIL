@@ -31,6 +31,7 @@
             * [Spring Bean Lifecycle](Language/Java/SpringBoot/Bean_Lifecycle.md)
             * [Dependency Injection (DI) & Inversion of Control (IoC)](Language/Java/SpringBoot/DI_IoC.md)
             * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
+            * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
             * [Spring Boot OAuth2 Implementation](Language/Java/SpringBoot/OAuth2_Implementation.md)
             * [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
             * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
