@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-06 12:50 | [Logging ECS XML Encoder](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작... |
+| 2026-04-06 12:50 | [Mockito Guide](docs/Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작... |
 | 2026-04-06 09:29 | [Logging ECS XML Encoder](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Logback XML에서 logback-ecs-encoder 사용 가이드 추가 |
 | 2026-04-06 09:19 | [temp](docs/Language/Java/SpringBoot/temp.md) | temp 삭제 |
 | 2026-04-06 08:56 | [Structured Logging SpringBoot 3 4](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ... |
 | 2026-04-06 08:56 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ... |
-| 2026-04-03 17:15 | [temp](docs/Language/Java/SpringBoot/temp.md) | 임시 |
-| 2026-04-03 10:49 | [MinIO Versioning Deletion Issue](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -68,6 +68,8 @@
     * **JPA**
       * [**Overview**](docs/Language/Java/SpringBoot/JPA/README.md)
       * [JPA Persistence Context (영속성 컨텍스트)](docs/Language/Java/SpringBoot/JPA/Persistence_Context.md)
+    * **Testing**
+      * [Mockito: 단위 테스트를 위한 Mock 객체 활용 가이드](docs/Language/Java/SpringBoot/Testing/Mockito_Guide.md)
     * **Web**
       * [**Overview**](docs/Language/Java/SpringBoot/Web/README.md)
       * [Filter vs Interceptor](docs/Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md)

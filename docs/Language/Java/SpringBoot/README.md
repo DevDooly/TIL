@@ -12,6 +12,7 @@ Spring Boot 관련 학습 내용을 정리합니다.
 * **[Spring MVC](SpringMVC.md)**: DispatcherServlet을 중심으로 한 MVC 패턴 구조 및 요청 처리 흐름
 * **[Spring WebFlux](Web/SpringWebFlux.md)**: 리액티브 프로그래밍(Non-blocking I/O) 모델과 Mono/Flux 개념 이해
 * **[Spring Data JPA](JPA/Persistence_Context.md)**: 영속성 컨텍스트와 JPA의 핵심 동작 원리
+* **[Mockito 활용 가이드](Testing/Mockito_Guide.md)**: 단위 테스트를 위한 Mock 객체 생성 및 검증 방법
 
 ## 학습 예정 (To-Be Added)
 
@@ -31,7 +32,6 @@ Spring Boot 관련 학습 내용을 정리합니다.
 ### 3. Testing (테스트)
 
 * **Unit Test vs Integration Test**: `@SpringBootTest`와 `@WebMvcTest`, `@DataJpaTest`의 차이와 용도.
-* **Mockito**: Service 계층 테스트 시 Mock 객체 활용법.
 * **RestDocs**: 테스트 코드를 기반으로 API 문서 자동화.
 
 ### 4. Integration (인프라 연동)

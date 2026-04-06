@@ -40,6 +40,8 @@
             * **JPA**
                 * [Spring Data JPA](Language/Java/SpringBoot/JPA/README.md)
                 * [JPA Persistence Context (영속성 컨텍스트)](Language/Java/SpringBoot/JPA/Persistence_Context.md)
+            * **Testing**
+                * [Mockito: 단위 테스트를 위한 Mock 객체 활용 가이드](Language/Java/SpringBoot/Testing/Mockito_Guide.md)
             * **Web**
                 * [Spring Web Development](Language/Java/SpringBoot/Web/README.md)
                 * [Filter vs Interceptor](Language/Java/SpringBoot/Web/Filter_vs_Interceptor.md)

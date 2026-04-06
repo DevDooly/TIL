@@ -68,10 +68,10 @@ dependencies {
 
 ## 3. 주요 설정 파라미터
 
-*   **`serviceName`**: 로그를 생성하는 서비스의 이름입니다. Elastic 검색 시 필터링 용도로 사용됩니다.
-*   **`stackTraceAsArray`**: Stack Trace를 문자열이 아닌 JSON 배열 형태로 저장하여 가독성을 높입니다.
-*   **`includeMarkers`**: SLF4J Marker를 로그 필드에 포함할지 여부를 결정합니다.
-*   **`additionalField`**: 고정된 커스텀 필드를 추가할 때 사용합니다. (예: `environment=prod`)
+* **`serviceName`**: 로그를 생성하는 서비스의 이름입니다. Elastic 검색 시 필터링 용도로 사용됩니다.
+* **`stackTraceAsArray`**: Stack Trace를 문자열이 아닌 JSON 배열 형태로 저장하여 가독성을 높입니다.
+* **`includeMarkers`**: SLF4J Marker를 로그 필드에 포함할지 여부를 결정합니다.
+* **`additionalField`**: 고정된 커스텀 필드를 추가할 때 사용합니다. (예: `environment=prod`)
 
 ---
 
