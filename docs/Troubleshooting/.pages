@@ -1,6 +1,6 @@
 title: 트러블슈팅
 nav:
-  - Overview: README.md
+  - "Overview": README.md
   - "☕ Java & Spring":
     - "Virtual Thread Pinning (FTP)": ../Language/Java/Virtual_Threads_FTP_Pinning.md
     - "K8s Virtual Thread 주의사항": ../Language/Java/Virtual_Threads_in_K8s.md

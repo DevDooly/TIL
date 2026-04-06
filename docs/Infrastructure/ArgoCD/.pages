@@ -1,6 +1,6 @@
 title: ArgoCD
 nav:
-  - Introduction: README.md
-  - Installation: Installation.md
-  - Usage: Usage.md
-  - Examples: Examples.md
+  - "Introduction": README.md
+  - "Installation": Installation.md
+  - "Usage": Usage.md
+  - "Examples": Examples.md

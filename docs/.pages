@@ -1,7 +1,7 @@
 nav:
   - index.md
-  - 전체 목차 (Sitemap): Sitemap.md
-  - Recent Changes: Recent_Changes.md
+  - "전체 목차 (Sitemap)": Sitemap.md
+  - "Recent Changes": Recent_Changes.md
   - Language
   - Web
   - Infrastructure
@@ -11,7 +11,7 @@ nav:
   - Tools
   - Life
   - Architecture_Cookbook.md
-  - Troubleshooting: Troubleshooting
+  - "Troubleshooting": Troubleshooting
   - Templates
   - History
   - Travel

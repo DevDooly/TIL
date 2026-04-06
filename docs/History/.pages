@@ -1,5 +1,5 @@
 title: 역사
 nav:
-  - Overview: README.md
-  - Taiwan: Taiwan.md
-  - 현대사와 국제 정세: Modern_Issues
+  - "Overview": README.md
+  - "Taiwan": Taiwan.md
+  - "현대사와 국제 정세": Modern_Issues

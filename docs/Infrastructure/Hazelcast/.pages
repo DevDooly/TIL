@@ -1,4 +1,4 @@
 title: Hazelcast
 nav:
-  - Overview: README.md
-  - IMDB vs IMDG 비교: IMDB_vs_IMDG.md
+  - "Overview": README.md
+  - "IMDB vs IMDG 비교": IMDB_vs_IMDG.md

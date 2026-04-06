@@ -1,5 +1,5 @@
 title: Hadoop
 nav:
-  - Overview: README.md
-  - NameNode HA 구성: NameNode_HA.md
-  - 네트워크 RX 에러로 인한 성능 저하: Tez_Job_Slowness_Network_RX.md
+  - "Overview": README.md
+  - "NameNode HA 구성": NameNode_HA.md
+  - "네트워크 RX 에러로 인한 성능 저하": Tez_Job_Slowness_Network_RX.md

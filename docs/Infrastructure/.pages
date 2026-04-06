@@ -1,6 +1,6 @@
 title: Infrastructure
 nav:
-  - Overview: README.md
+  - "Overview": README.md
   - Linux
   - OracleCloud
   - ArgoCD

@@ -21,6 +21,7 @@ git commit -m "$MESSAGE"
 echo "⚙️ 2. 관리 스크립트 실행 중..."
 python3 scripts/auto_fix_markdown_lists.py
 python3 scripts/validate_markdown_lists.py
+python3 scripts/fix_pages_syntax.py
 python3 scripts/update_recent_changes.py
 python3 scripts/generate_sitemap.py
 python3 scripts/validate_pages.py
