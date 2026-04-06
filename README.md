@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-06 21:29 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: 로그 수집기(Logstash, Fluentd, Fluent-bit) 비교 및 F... |
 | 2026-04-06 17:14 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
 | 2026-04-06 17:09 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka 3.9 버전 및 JDK 24 관련 가상 스레드 Pinning 설명 보... |
 | 2026-04-06 17:07 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka Consumer 가상 스레드 Pinning 이슈 트러블슈팅 추가 |
 | 2026-04-06 14:14 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
 | 2026-04-06 14:10 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
-| 2026-04-06 14:10 | [Mockito Guide](docs/Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -216,6 +216,7 @@
 ## Data
 * [**Overview**](docs/Data/README.md)
 * [ELK Stack](docs/Data/ELK.md)
+* [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](docs/Data/Log_Collectors_Comparison.md)
 * **Database**
   * [**Overview**](docs/Data/Database/README.md)
   * [이미지 저장 및 관리 전략](docs/Data/Database/Image_Storage_Management.md)

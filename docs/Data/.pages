@@ -1,0 +1,7 @@
+title: Data
+nav:
+  - "Overview": README.md
+  - "Logging & Search": 
+      - "ELK Stack": ELK.md
+      - "로그 수집기 비교 (Fluent-bit)": Log_Collectors_Comparison.md
+  - "Database": Database
