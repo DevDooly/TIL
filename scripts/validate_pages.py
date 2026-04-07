@@ -48,15 +48,17 @@ def traverse_and_fix(data, base_dir):
     return modified
 
 def validate_path(base_dir, path):
-    """경로가 실제로 존재하는지 확인 (슬래시 시작시 docs 루트 기준)"""
+    """경로가 실제로 존재하는지 확인"""
     global EXIT_CODE
+    # 1. 절대 경로 (루트 기준) 처리
     if path.startswith("/"):
         full_path = os.path.join(DOCS_DIR, path[1:])
+    # 2. 상대 경로 및 일반 경로 처리
     else:
-        full_path = os.path.join(base_dir, path)
+        full_path = os.path.normpath(os.path.join(base_dir, path))
         
     if not os.path.exists(full_path):
-        print(f"❌ Error in {base_dir}: '{path}' does not exist.")
+        print(f"❌ Error in {base_dir}: '{path}' does not exist. (Full path: {full_path})")
         EXIT_CODE = 1
 
 def process_pages_file(filepath):
@@ -74,8 +76,6 @@ def process_pages_file(filepath):
         if traverse_and_fix(nav, base_dir):
             # 변경사항이 있으면 파일 저장
             with open(filepath, 'w', encoding='utf-8') as f:
-                # default_flow_style=False: 리스트를 블록 스타일로 유지
-                # allow_unicode=True: 한글 깨짐 방지
                 yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
             print(f"💾 Saved changes to {filepath}")
             
