@@ -48,17 +48,16 @@ def traverse_and_fix(data, base_dir):
     return modified
 
 def validate_path(base_dir, path):
-    """경로가 실제로 존재하는지 확인"""
+    """경로가 실제로 존재하는지 확인 (슬래시 시작시 docs 루트 기준)"""
     global EXIT_CODE
-    # 1. 절대 경로 (루트 기준) 처리
     if path.startswith("/"):
         full_path = os.path.join(DOCS_DIR, path[1:])
-    # 2. 상대 경로 및 일반 경로 처리
     else:
+        # normpath를 사용하여 ../ 등의 상대 경로를 계산된 실제 경로로 변환
         full_path = os.path.normpath(os.path.join(base_dir, path))
         
     if not os.path.exists(full_path):
-        print(f"❌ Error in {base_dir}: '{path}' does not exist. (Full path: {full_path})")
+        print(f"❌ Error in {base_dir}: '{path}' does not exist.")
         EXIT_CODE = 1
 
 def process_pages_file(filepath):
