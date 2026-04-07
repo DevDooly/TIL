@@ -1,7 +1,10 @@
 title: Computer Science (CS 기초)
 nav:
   - OperatingSystem
-  - DesignPattern
-  - SoftwareEngineering
+  - Network
   - Security
+  - DesignPattern
   - Architecture
+  - FileSystem
+  - Math
+  - SoftwareEngineering
