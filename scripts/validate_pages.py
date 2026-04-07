@@ -48,9 +48,13 @@ def traverse_and_fix(data, base_dir):
     return modified
 
 def validate_path(base_dir, path):
-    """경로가 실제로 존재하는지 확인"""
+    """경로가 실제로 존재하는지 확인 (슬래시 시작시 docs 루트 기준)"""
     global EXIT_CODE
-    full_path = os.path.join(base_dir, path)
+    if path.startswith("/"):
+        full_path = os.path.join(DOCS_DIR, path[1:])
+    else:
+        full_path = os.path.join(base_dir, path)
+        
     if not os.path.exists(full_path):
         print(f"❌ Error in {base_dir}: '{path}' does not exist.")
         EXIT_CODE = 1
