@@ -26,12 +26,9 @@ python3 scripts/update_recent_changes.py
 python3 scripts/generate_sitemap.py
 python3 scripts/validate_pages.py
 
-# 3. 스크립트에 의해 자동 갱신된 파일들 스테이징
-# README.md, Recent_Changes.md, Sitemap.md, .pages 등
-echo "📝 3. 자동 생성된 파일 동기화 중..."
-git add README.md docs/Recent_Changes.md docs/Sitemap.md docs/index.md
-# 각 디렉토리의 .pages 파일들도 포함
-find docs -name ".pages" -exec git add {} +
+# 3. 스크립트에 의해 자동 갱신된 파일들 스테이징 (마크다운 포맷팅 수정 포함)
+echo "📝 3. 자동 생성 및 수정된 파일 동기화 중..."
+git add .
 
 # 4. 이전 커밋에 합치기 (Amend)
 echo "🔨 4. 커밋 수정(Amend) 중..."
