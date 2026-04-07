@@ -52,8 +52,8 @@ def build_troubleshooting_tree(dir_path):
     
     # 1. 기본 README 링크
     rel_readme = os.path.relpath(readme_path, DOCS_DIR)
-    encoded_readme = urllib.parse.quote(rel_readme.replace(os.sep, '/'))
-    text += f"* [{get_title(readme_path)}]({encoded_readme})\n"
+    safe_readme = rel_readme.replace(os.sep, '/')
+    text += f"* [{get_title(readme_path)}]({safe_readme})\n"
     
     # 2. README.md 내용 분석하여 링크 추출
     if os.path.exists(readme_path):
@@ -69,8 +69,8 @@ def build_troubleshooting_tree(dir_path):
                         # 절대 경로로 변환 후 다시 상대 경로로 계산
                         target_path = os.path.normpath(os.path.join(dir_path, link))
                         rel_link = os.path.relpath(target_path, DOCS_DIR)
-                        encoded_link = urllib.parse.quote(rel_link.replace(os.sep, '/'))
-                        text += f"    * [{title}]({encoded_link})\n"
+                        safe_link = rel_link.replace(os.sep, '/')
+                        text += f"    * [{title}]({safe_link})\n"
         except Exception as e:
             print(f"⚠️ Error parsing Troubleshooting README for Sitemap: {e}")
             
@@ -116,8 +116,9 @@ def generate_sitemap():
                     if file.endswith(".md") and file not in EXCLUDE_FILES:
                         file_path = os.path.join(root, file)
                         rel_path = os.path.relpath(file_path, DOCS_DIR)
+                        safe_link = rel_path.replace(os.sep, '/')
                         title = get_title(file_path)
-                        content.append(f"{indent}* [{title}]({rel_path})\n")
+                        content.append(f"{indent}* [{title}]({safe_link})\n")
         
         content.append("\n")
 

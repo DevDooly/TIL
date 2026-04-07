@@ -76,9 +76,10 @@ def update_recent_changes_md(items):
     
     for item in items:
         link_path = item['file_path'][5:] 
-        encoded_path = urllib.parse.quote(link_path.replace(os.sep, '/'))
+        # MkDocs는 내부 링크 해결을 위해 파일 시스템의 실제 경로를 필요로 하므로 인코딩하지 않음
+        safe_link = link_path.replace(os.sep, '/')
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
-        content += f"| {item['date']} | [{link_path}]({encoded_path}) | {safe_msg} |\n"
+        content += f"| {item['date']} | [{link_path}]({safe_link}) | {safe_msg} |\n"
             
     with open(RECENT_CHANGES_FILE, "w", encoding="utf-8") as f:
         f.write(content)
@@ -94,13 +95,13 @@ def update_readme_recent(items, max_display=6):
     for item in display_items:
         link_path = item['file_path']
         display_name = os.path.basename(link_path).replace(".md", "").replace("_", " ")
-        encoded_path = urllib.parse.quote(link_path.replace(os.sep, '/'))
+        safe_link = link_path.replace(os.sep, '/')
         safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
         
         if len(safe_msg) > 50:
-            safe_msg = safe_msg[:50] + "..."
+            safe_msg = safe_msg[:50] + "... "
             
-        new_content += f"| {item['date']} | [{display_name}]({encoded_path}) | {safe_msg} |\n"
+        new_content += f"| {item['date']} | [{display_name}]({safe_link}) | {safe_msg} |\n"
     new_content += "\n"
 
     update_file_section(README_FILE, "RECENT_CHANGES", new_content)
@@ -167,8 +168,8 @@ def build_troubleshooting_tree(dir_path):
     text = ""
     readme_path = os.path.join(dir_path, "README.md")
     rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-    encoded_path = urllib.parse.quote(rel_path.replace(os.sep, '/'))
-    text += f"* [**Overview**]({encoded_path})\n"
+    safe_path = rel_path.replace(os.sep, '/')
+    text += f"* [**Overview**]({safe_path})\n"
     
     if os.path.exists(readme_path):
         try:
@@ -179,7 +180,7 @@ def build_troubleshooting_tree(dir_path):
                         title, link = match.group(1), match.group(2)
                         target_path = os.path.normpath(os.path.join(dir_path, link))
                         rel_link = os.path.relpath(target_path, os.path.dirname(README_FILE))
-                        text += f"  * [{title}]({urllib.parse.quote(rel_link.replace(os.sep, '/'))})\n"
+                        text += f"  * [{title}]({rel_link.replace(os.sep, '/')})\n"
         except: pass
     return text
 
@@ -197,12 +198,12 @@ def build_directory_tree(root_path, level):
     readme_path = os.path.join(root_path, "README.md")
     if os.path.exists(readme_path):
         rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [**Overview**]({urllib.parse.quote(rel_path.replace(os.sep, '/'))})\n"
+        text += f"{indent}* [**Overview**]({rel_path.replace(os.sep, '/')})\n"
 
     for f in files:
         full_path = os.path.join(root_path, f)
         rel_path = os.path.relpath(full_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [{get_markdown_title(full_path)}]({urllib.parse.quote(rel_path.replace(os.sep, '/'))})\n"
+        text += f"{indent}* [{get_markdown_title(full_path)}]({rel_path.replace(os.sep, '/')})\n"
     for d in dirs:
         text += f"{indent}* **{d}**\n"
         text += build_directory_tree(os.path.join(root_path, d), level + 1)
