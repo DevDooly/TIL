@@ -7,5 +7,4 @@ nav:
 - Communication:
   - Socket: Socket.md
   - RPC: RPC.md
-- Domain Name System:
-  - DNS & Name Server: DNS/DNS_and_NameServer.md
+- Domain Name System: DNS
