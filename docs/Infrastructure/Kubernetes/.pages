@@ -1,6 +1,6 @@
 title: Kubernetes
 nav:
-  - "Overview": README.md
-  - "일반 개념":
-    - "Operator 패턴": Operator_Pattern.md
-  - "CKA 시험 준비": CKA
+- Overview: README.md
+- 일반 개념:
+  - Operator 패턴: Operator_Pattern.md
+- CKA 시험 준비: CKA

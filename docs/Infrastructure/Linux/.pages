@@ -1,15 +1,15 @@
 title: Linux
 nav:
-  - "Index": README.md
-  - "Initial Setup": Initial_Setup.md
-  - "Concepts": 
-      - "POSIX": POSIX.md
-      - "I/O Streams": Stdin, stdout, stderr.md
-  - "Commands & Tools": 
-      - "Crontab": crontab.md
-      - "Logrotate": Logrotate.md
-      - "Fail2Ban": Fail2Ban.md
-      - "Quotes": Single Quotation vs Double Quotation in bash.md
-  - "TL;DR": TL;DR.md
-  - "대량 파일 전송 (rsync)": Large_File_Transfer.md
-  - "Tips": Tips
+- Index: README.md
+- Initial Setup: Initial_Setup.md
+- Concepts:
+  - POSIX: POSIX.md
+  - I/O Streams: Stdin, stdout, stderr.md
+- Commands & Tools:
+  - Crontab: crontab.md
+  - Logrotate: Logrotate.md
+  - Fail2Ban: Fail2Ban.md
+  - Quotes: Single Quotation vs Double Quotation in bash.md
+- TL;DR: TL;DR.md
+- 대량 파일 전송 (rsync): Large_File_Transfer.md
+- Tips: Tips

@@ -1,5 +1,5 @@
 title: 여행
 nav:
-  - "Overview": README.md
-  - "대만 (Taiwan)": Taiwan
-  - "중부 유럽 (5월)": Central_Europe
+- Overview: README.md
+- 대만 (Taiwan): Taiwan
+- 중부 유럽 (5월): Central_Europe

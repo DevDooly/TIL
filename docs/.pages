@@ -1,18 +1,18 @@
 nav:
-  - index.md
-  - "전체 목차 (Sitemap)": Sitemap.md
-  - "Recent Changes": Recent_Changes.md
-  - Language
-  - Web
-  - Infrastructure
-  - Data
-  - ComputerScience
-  - AI
-  - Tools
-  - Life
-  - Architecture_Cookbook.md
-  - "Troubleshooting": Troubleshooting
-  - Templates
-  - History
-  - Travel
-  - RealEstate
+- index.md
+- 전체 목차 (Sitemap): Sitemap.md
+- Recent Changes: Recent_Changes.md
+- Language
+- Web
+- Infrastructure
+- Data
+- ComputerScience
+- AI
+- Tools
+- Life
+- Architecture_Cookbook.md
+- Troubleshooting: Troubleshooting
+- Templates
+- History
+- Travel
+- RealEstate

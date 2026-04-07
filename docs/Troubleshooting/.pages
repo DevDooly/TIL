@@ -1,19 +1,19 @@
 title: 트러블슈팅
 nav:
-  - "Overview": README.md
-  - "☕ Java & Spring":
-    - "Virtual Thread Pinning (FTP)": ../Language/Java/Virtual_Threads_FTP_Pinning.md
-    - "K8s Virtual Thread 주의사항": ../Language/Java/Virtual_Threads_in_K8s.md
-    - "Kafka 가상 스레드 Pinning": ../Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md
-    - "JDBI 가상 스레드 Pinning 해결": ../Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md
-    - "K8s Spring 프로파일 우선순위": ../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md
-    - "로깅 설정 YAML to XML 전환": ../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md
-  - "🎡 Infra & Kafka":
-    - "Kafka RoundRobin 불균형 (KAFKA-9965)": ../Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md
-    - "Kafka Offset 불균형 문제": ../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md
-    - "Hadoop/Tez 네트워크 RX 에러": ../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md
-    - "대량 파일 전송 용량 불일치": ../Infrastructure/Linux/Large_File_Transfer.md
-    - "MinIO 버저닝 삭제 이슈": MinIO_Versioning_Deletion_Issue.md
-  - "🗄️ Database":
-    - "Oracle LOB Segment 공간 부족": ../Data/Database/Oracle_LOB_Segment.md
-    - "Avro hashCode 충돌": Avro_HashCode_Field_Naming_Conflict.md
+- Overview: README.md
+- ☕ Java & Spring:
+  - Virtual Thread Pinning (FTP): ../Language/Java/Virtual_Threads_FTP_Pinning.md
+  - K8s Virtual Thread 주의사항: ../Language/Java/Virtual_Threads_in_K8s.md
+  - Kafka 가상 스레드 Pinning: ../Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md
+  - JDBI 가상 스레드 Pinning 해결: ../Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md
+  - K8s Spring 프로파일 우선순위: ../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md
+  - 로깅 설정 YAML to XML 전환: ../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md
+- 🎡 Infra & Kafka:
+  - Kafka RoundRobin 불균형 (KAFKA-9965): ../Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md
+  - Kafka Offset 불균형 문제: ../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md
+  - Hadoop/Tez 네트워크 RX 에러: ../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md
+  - 대량 파일 전송 용량 불일치: ../Infrastructure/Linux/Large_File_Transfer.md
+  - MinIO 버저닝 삭제 이슈: MinIO_Versioning_Deletion_Issue.md
+- 🗄️ Database:
+  - Oracle LOB Segment 공간 부족: ../Data/Database/Oracle_LOB_Segment.md
+  - Avro hashCode 충돌: Avro_HashCode_Field_Naming_Conflict.md

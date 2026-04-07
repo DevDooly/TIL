@@ -1,7 +1,7 @@
 title: Jenkins
 nav:
-  - "Introduction": README.md
-  - "Installation (Docker & Linux)": Installation_Docker_Linux.md
-  - "Installation (Kubernetes)": Installation_K8s.md
-  - "Usage": Usage.md
-  - "Examples": Examples.md
+- Introduction: README.md
+- Installation (Docker & Linux): Installation_Docker_Linux.md
+- Installation (Kubernetes): Installation_K8s.md
+- Usage: Usage.md
+- Examples: Examples.md

@@ -1,11 +1,11 @@
 title: Network
 nav:
-  - "Index": README.md
-  - "Fundamentals": 
-      - "OSI 7 Layer": OSI 7 Layer.md
-      - "Subnetwork": Subnetwork.md
-  - "Communication": 
-      - "Socket": Socket.md
-      - "RPC": RPC.md
-  - "Domain Name System": 
-      - "DNS & Name Server": DNS/DNS_and_NameServer.md
+- Index: README.md
+- Fundamentals:
+  - OSI 7 Layer: OSI 7 Layer.md
+  - Subnetwork: Subnetwork.md
+- Communication:
+  - Socket: Socket.md
+  - RPC: RPC.md
+- Domain Name System:
+  - DNS & Name Server: DNS/DNS_and_NameServer.md

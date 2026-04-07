@@ -1,4 +1,4 @@
 title: Templates
 nav:
-  - "Overview": README.md
-  - "기술 이슈 분석 리포트": Issue_Report_Template.md
+- Overview: README.md
+- 기술 이슈 분석 리포트: Issue_Report_Template.md

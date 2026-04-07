@@ -1,4 +1,4 @@
 title: Data JPA
 nav:
-  - "Overview": README.md
-  - "Persistence Context": Persistence_Context.md
+- Overview: README.md
+- Persistence Context: Persistence_Context.md
