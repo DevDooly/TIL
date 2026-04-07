@@ -10,9 +10,10 @@ nav:
   - "OAuth2 Implementation": OAuth2_Implementation.md
   - "K8s 프로파일 우선순위 이슈": Spring_Profile_Priority_in_K8s.md
   - "JPA": JPA
-  - "Testing": Testing
-  - "가상 스레드: Kafka Pinning 이슈": Virtual_Thread_Pinning_Kafka.md
-  - "Spring Boot 3.4 정형 로깅 (ECS)": Structured_Logging_SpringBoot_3_4.md
+- "Testing": Testing
+- "가상 스레드: Kafka Pinning 이슈": Virtual_Thread_Pinning_Kafka.md
+- "가상 스레드: JDBI Pinning 해결 방법": JDBI_VT_Pinning_Solution.md
+- "Spring Boot 3.4 정형 로깅 (ECS)": Structured_Logging_SpringBoot_3_4.md
   - "로깅 설정 YAML to XML 전환": Logging_Config_Migration_YAML_to_XML.md
   - "Logback XML: ECS Encoder 활용": Logging_ECS_XML_Encoder.md
   - "Web": Web
