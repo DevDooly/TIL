@@ -7,12 +7,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-07 13:10 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
+| 2026-04-07 13:10 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
 | 2026-04-06 21:29 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: 로그 수집기(Logstash, Fluentd, Fluent-bit) 비교 및 F... |
 | 2026-04-06 17:14 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
 | 2026-04-06 17:09 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka 3.9 버전 및 JDK 24 관련 가상 스레드 Pinning 설명 보... |
 | 2026-04-06 17:07 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka Consumer 가상 스레드 Pinning 이슈 트러블슈팅 추가 |
-| 2026-04-06 14:14 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
-| 2026-04-06 14:10 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
@@ -41,6 +41,7 @@
 * [**Overview**](docs/Language/README.md)
 * **Java**
   * [**Overview**](docs/Language/Java/README.md)
+  * [Caffeine Cache: 고성능 Java 로컬 캐시 가이드](docs/Language/Java/Caffeine_Cache.md)
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
