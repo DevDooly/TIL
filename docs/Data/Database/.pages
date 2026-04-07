@@ -1,14 +1,16 @@
 title: Database
 nav:
   - "Index": README.md
-  - "General": 
+  - "General":
       - "SQL Naming Convention": SQL_Naming_Convention.md
-  - "Specific Databases": 
+  - "Tuning & Optimization":
+      - "JDBI FetchSize & Virtual Threads": JDBI_FetchSize_and_VirtualThreads.md
+  - "Specific Databases":
       - "Oracle (LOB Segment)": Oracle_LOB_Segment.md
       - "Redis": Redis.md
       - "MongoDB": MongoDB.md
-  - "Management & Strategy": 
+  - "Management & Strategy":
       - "Locking Strategy": Locking_Strategy.md
       - "Image Storage": Image_Storage_Management.md
-  - "Tools": 
+  - "Tools":
       - "Fluentd": fluentd.md

@@ -190,6 +190,7 @@
     * **Database**
         * [Database (데이터베이스)](Data/Database/README.md)
         * [이미지 저장 및 관리 전략](Data/Database/Image_Storage_Management.md)
+        * [JDBI: @FetchSize 옵션과 가상 스레드(Virtual Thread) 최적화](Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
         * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](Data/Database/Locking_Strategy.md)
         * [MongoDB](Data/Database/MongoDB.md)
         * [Oracle LOB Segment 및 ORA-01692 에러 조치](Data/Database/Oracle_LOB_Segment.md)

@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 | 2026-04-07 13:25 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 | 2026-04-07 13:10 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
 | 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [Infrastructure/Docker/no space left on device.md](Infrastructure/Docker/no%20space%20left%20on%20device.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Hadoop/NameNode_HA.md](Infrastructure/Hadoop/NameNode_HA.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Hazelcast/IMDB_vs_IMDG.md](Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
