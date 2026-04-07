@@ -49,10 +49,6 @@ def parse_log(lines, max_items=50):
             current_date = parts[1]
             current_message = parts[2]
         else:
-            # 관리용 커밋(chore, fix pages 등)은 제외
-            if current_message.startswith("chore:") or "fix: .pages" in current_message:
-                continue
-                
             file_path = line
             # docs 내의 마크다운 파일만 대상 (관리 파일 제외)
             if (file_path.startswith("docs/") and 
@@ -119,7 +115,7 @@ def update_file_section(filepath, marker_name, new_content):
         pattern = f"({start_marker})(.*?)({end_marker})"
         
         if re.search(pattern, content, re.DOTALL):
-            updated_content = re.sub(pattern, f"\1{new_content}\3", content, flags=re.DOTALL)
+            updated_content = re.sub(pattern, f"\\1{new_content}\\3", content, flags=re.DOTALL)
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(updated_content)
             print(f"Successfully updated section {marker_name} in {filepath}")

@@ -4,23 +4,26 @@
 ---
 
 ## 🕒 최근 변경 사항 (Recent Changes)
-
+
+<!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-07 15:19 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 하이브리드 모델 가이드 추가 |
+| 2026-04-07 14:51 | [JDBI FetchSize and VirtualThreads](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 | 2026-04-07 13:25 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 | 2026-04-07 13:10 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
 | 2026-04-06 17:14 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
 | 2026-04-06 14:14 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
-| 2026-04-06 14:10 | [Mockito Guide](docs/Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
-| 2026-04-06 12:50 | [Logging ECS XML Encoder](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작... |
 
-
+<!-- RECENT_CHANGES_END -->
+
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
 
 ---
 
 ## 목차 (Table of Contents)
-
+
+<!-- TOC_START -->
 ### 📂 Categories
 - [**Language**](#language)
 - [**Web**](#web)
@@ -59,6 +62,7 @@
     * [빈 후처리기 (BeanPostProcessor)](docs/Language/Java/SpringBoot/BeanPostProcessor.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
+    * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
     * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
     * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
@@ -221,6 +225,7 @@
 * **Database**
   * [**Overview**](docs/Data/Database/README.md)
   * [이미지 저장 및 관리 전략](docs/Data/Database/Image_Storage_Management.md)
+  * [JDBI: @FetchSize 옵션과 가상 스레드(Virtual Thread) 최적화](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
   * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
   * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
@@ -269,6 +274,7 @@
   * [Virtual Thread Pinning 이슈 (FTP/SFTP)](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
   * [K8s 환경의 Virtual Thread 주의사항](docs/Language/Java/Virtual_Threads_in_K8s.md)
   * [Kafka Consumer 가상 스레드 Pinning 이슈](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+  * [JDBI 가상 스레드 Pinning 해결 패턴](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
   * [K8s Spring 프로파일 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
   * [로깅 설정 YAML to XML 전환 이슈](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
@@ -350,5 +356,4 @@
 * **Health**
   * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
 
-
-
+<!-- TOC_END -->
