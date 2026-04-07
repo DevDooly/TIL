@@ -4,23 +4,23 @@
 ---
 
 ## 🕒 최근 변경 사항 (Recent Changes)
-<!-- RECENT_CHANGES_START -->
+
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-07 13:25 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 | 2026-04-07 13:10 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
-| 2026-04-07 13:10 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
-| 2026-04-06 21:29 | [Log Collectors Comparison](docs/Data/Log_Collectors_Comparison.md) | docs: 로그 수집기(Logstash, Fluentd, Fluent-bit) 비교 및 F... |
 | 2026-04-06 17:14 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
-| 2026-04-06 17:09 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka 3.9 버전 및 JDK 24 관련 가상 스레드 Pinning 설명 보... |
-| 2026-04-06 17:07 | [Virtual Thread Pinning Kafka](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka Consumer 가상 스레드 Pinning 이슈 트러블슈팅 추가 |
+| 2026-04-06 14:14 | [DNS and NameServer](docs/ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
+| 2026-04-06 14:10 | [Mockito Guide](docs/Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
+| 2026-04-06 12:50 | [Logging ECS XML Encoder](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작... |
 
-<!-- RECENT_CHANGES_END -->
+
 [👉 전체 변경 로그 보기](docs/Recent_Changes.md)
 
 ---
 
 ## 목차 (Table of Contents)
-<!-- TOC_START -->
+
 ### 📂 Categories
 - [**Language**](#language)
 - [**Web**](#web)
@@ -350,5 +350,5 @@
 * **Health**
   * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
 
-<!-- TOC_END -->
+
 

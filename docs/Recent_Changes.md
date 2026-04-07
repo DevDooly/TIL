@@ -1,26 +1,18 @@
 # 🕒 최근 변경 사항 (Recent Changes)
 
-최근 업데이트된 문서 목록입니다.
+최근 업데이트된 문서 목록입니다. (각 문서별 최신 수정 이력만 표시됩니다.)
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-07 13:25 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 | 2026-04-07 13:10 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
-| 2026-04-07 13:10 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
-| 2026-04-06 21:29 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: 로그 수집기(Logstash, Fluentd, Fluent-bit) 비교 및 Fluent-bit 선택 가이드 추가 |
 | 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
-| 2026-04-06 17:09 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka 3.9 버전 및 JDK 24 관련 가상 스레드 Pinning 설명 보완 |
-| 2026-04-06 17:07 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: Kafka Consumer 가상 스레드 Pinning 이슈 트러블슈팅 추가 |
 | 2026-04-06 14:14 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
-| 2026-04-06 14:10 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
 | 2026-04-06 14:10 | [Language/Java/SpringBoot/Testing/Mockito_Guide.md](Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
 | 2026-04-06 12:50 | [Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작성 |
-| 2026-04-06 12:50 | [Language/Java/SpringBoot/Testing/Mockito_Guide.md](Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작성 |
-| 2026-04-06 09:29 | [Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Logback XML에서 logback-ecs-encoder 사용 가이드 추가 |
 | 2026-04-06 09:19 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | temp 삭제 |
 | 2026-04-06 08:56 | [Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
 | 2026-04-06 08:56 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: Spring Boot 3.4 정형 로깅(Structured Logging) 및 ECS 연동 가이드 추가 |
-| 2026-04-03 17:15 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | 임시 |
-| 2026-04-03 10:49 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: MinIO 버저닝 활성화 시 파일 영구 삭제 불가 이슈 트러블슈팅 가이드 추가 |
 | 2026-04-03 10:38 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/Ollama.md](AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
@@ -54,3 +46,11 @@
 | 2026-04-03 10:38 | [Data/Database/fluentd.md](Data/Database/fluentd.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/ELK.md](Data/ELK.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [History/Taiwan.md](History/Taiwan.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Docker/dockerfile.md](Infrastructure/Docker/dockerfile.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Docker/no space left on device.md](Infrastructure/Docker/no%20space%20left%20on%20device.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hadoop/NameNode_HA.md](Infrastructure/Hadoop/NameNode_HA.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
+| 2026-04-03 10:38 | [Infrastructure/Hazelcast/IMDB_vs_IMDG.md](Infrastructure/Hazelcast/IMDB_vs_IMDG.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
