@@ -8,7 +8,6 @@ nav:
   - JDBI 가상 스레드 Pinning 해결: Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md
   - K8s Spring 프로파일 우선순위: Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md
     - "SLF4J addKeyValue ECS 지원": ../Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md
-    - "SLF4J ECS 로그 연동 가이드": ../Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md
     - "로깅 설정 YAML to XML 전환": ../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md
 - 🎡 Infra & Kafka:
   - Kafka RoundRobin 불균형 (KAFKA-9965): Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md

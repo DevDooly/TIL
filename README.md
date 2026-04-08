@@ -8,8 +8,8 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-08 10:40 | [ECS Logging KeyValuePairs](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | docs: SLF4J addKeyValue ECS 로그 연동 가이드 및 공식 레퍼런스 추가 |
-| 2026-04-08 10:27 | [Logging ECS KeyValue Support](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | docs: SLF4J addKeyValue ECS 로그 포함 가이드 추가 및 GitHub ...  |
+| 2026-04-08 10:48 | [ECS Logging KeyValuePairs](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
+| 2026-04-08 10:48 | [Logging ECS KeyValue Support](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
 | 2026-04-07 15:19 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 하이브리드 모델 가이드 추가 |
 | 2026-04-07 14:51 | [JDBI FetchSize and VirtualThreads](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 | 2026-04-07 13:25 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
@@ -62,10 +62,9 @@
     * [빈 후처리기 (BeanPostProcessor)](docs/Language/Java/SpringBoot/BeanPostProcessor.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
-    * [SLF4J addKeyValue와 Elastic ECS Encoder 연동 가이드](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md)
     * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
     * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
-    * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
+    * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
     * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
@@ -280,7 +279,6 @@
   * [K8s Spring 프로파일 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
   * [로깅 설정 YAML to XML 전환 이슈](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
   * [SLF4J addKeyValue를 ECS 로그에 포함하기](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
-  * [SLF4J addKeyValue ECS 로그 연동 가이드](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md)
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
   * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
   * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)

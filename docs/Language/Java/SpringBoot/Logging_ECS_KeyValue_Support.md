@@ -1,80 +1,61 @@
-# Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기
+# Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)
 
-Spring Boot 3.x(SLF4J 2.0+) 환경에서 `log.atInfo().addKeyValue("key", "value").log()` 형식을 사용할 때, 이 커스텀 키-값 쌍이 Elastic ECS 로그에 나타나지 않는 문제를 해결하는 방법을 설명합니다.
-
----
-
-## 1. 해결 방법 요약
-
-1. **라이브러리 버전 확인**: `logback-ecs-encoder` 버전이 **1.5.0 이상**이어야 합니다.
-2. **Logback 설정**: `logback.xml`의 `<encoder>` 설정 내에 `<includeSlf4jKeyValues>true</includeSlf4jKeyValues>`를 추가해야 합니다.
+Spring Boot 3.x(SLF4J 2.0+) 환경에서 `addKeyValue` 기능을 사용할 때, 현재 공식 `logback-ecs-encoder`는 이 데이터를 자동으로 JSON 필드에 포함하는 옵션을 제공하지 않습니다.
 
 ---
 
-## 2. 상세 설정 단계
+## 1. 현재 상황 (확인된 사실)
 
-### 2.1 의존성 확인 (Gradle 기준)
-SLF4J 2.0의 Key-Value 기능을 지원하는 최소 버전 이상의 인코더를 사용해야 합니다.
-
-```gradle
-dependencies {
-    // 최소 1.5.0 이상 필수
-    implementation 'co.elastic.logging:logback-ecs-encoder:1.5.0'
-}
-```
-
-### 2.2 logback.xml 설정 수정
-`EcsEncoder` 설정 내부에 `includeSlf4jKeyValues` 옵션을 명시적으로 활성화합니다.
-
-```xml
-<appender name="ECS_JSON" class="ch.qos.logback.core.ConsoleAppender">
-    <encoder class="co.elastic.logging.logback.EcsEncoder">
-        <serviceName>my-spring-app</serviceName>
-        <!-- SLF4J 2.0 Key-Value 쌍 포함 활성화 -->
-        <includeSlf4jKeyValues>true</includeSlf4jKeyValues>
-        <!-- 필요 시 MDC도 포함 -->
-        <includeMdc>true</includeMdc>
-    </encoder>
-</appender>
-```
+* **`logback-ecs-encoder`**: 현재 `includeSlf4jKeyValues`와 같은 자동 추출 옵션이 존재하지 않습니다. (v1.5.0 기준 확인됨)
+* **문제점**: `log.atInfo().addKeyValue("key", "value").log()`를 호출해도 JSON 결과물에 `key` 필드가 나타나지 않습니다.
 
 ---
 
-## 3. 코드 사용 예시
+## 2. 해결 방법: 대안 제시
 
-Java 코드에서 다음과 같이 호출하면 ECS JSON 로그의 루트 레벨에 해당 키가 추가됩니다.
+### 방법 1: MDC (Mapped Diagnostic Context) 사용 (가장 안정적)
+`logback-ecs-encoder`가 기본적으로 지원하는 MDC를 활용합니다. `addKeyValue`와 유사한 기능을 하면서 ECS 로그에 자동으로 포함됩니다.
 
 ```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-public class MyService {
-    private static final Logger log = LoggerFactory.getLogger(MyService.class);
-
-    public void process(String orderId) {
-        log.atInfo()
-           .addKeyValue("order_id", orderId)
-           .addKeyValue("custom_tag", "urgent")
-           .log("주문 처리를 시작합니다.");
-    }
+// Spring Boot 애플리케이션 코드
+try (var ignored = MDC.putCloseable("order_id", "12345")) {
+    log.info("주문 처리를 시작합니다.");
 }
 ```
 
-### 출력 결과 (ECS JSON)
-```json
-{
-  "@timestamp": "2026-04-07T...",
-  "log.level": "INFO",
-  "message": "주문 처리를 시작합니다.",
-  "ecs.version": "1.2.0",
-  "order_id": "12345",         // addKeyValue로 추가된 값
-  "custom_tag": "urgent"       // addKeyValue로 추가된 값
+**logback.xml 설정**:
+```xml
+<encoder class="co.elastic.logging.logback.EcsEncoder">
+    <includeMdc>true</includeMdc>
+</encoder>
+```
+
+### 방법 2: logstash-logback-encoder 사용 (강력 추천)
+이미 정교한 정형 로깅(Structured Logging)이 필요하다면, Elastic에서 제공하는 인코더 대신 **`logstash-logback-encoder`**를 사용하는 것이 훨씬 강력합니다. 이 인코더는 SLF4J 2.0의 `addKeyValue`를 **기본적으로 자동 인식**하여 JSON 필드에 넣어줍니다.
+
+**의존성 추가**:
+```gradle
+dependencies {
+    implementation 'net.logstash.logback:logstash-logback-encoder:7.4'
 }
+```
+
+**logback.xml 설정 (ECS 호환 모드)**:
+```xml
+<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+    <!-- ECS 필드 이름으로 커스텀 매핑 가능 -->
+    <fieldNames>
+        <level>log.level</level>
+        <timestamp>@timestamp</timestamp>
+    </fieldNames>
+</encoder>
 ```
 
 ---
 
-## 4. 주의사항
+## 3. 요약 및 권장 사항
 
-* **MDC와의 차이**: `MDC`는 해당 스레드의 모든 로그에 유지되지만, `addKeyValue`는 **해당 로그 라인 딱 하나**에만 기록됩니다. 일시적인 컨텍스트 전달에 매우 유리합니다.
-* **중복 키**: ECS 표준 필드(예: `message`, `log.level`)와 겹치는 키를 사용하면 인코더 설정에 따라 덮어쓰거나 무시될 수 있으므로 주의가 필요합니다.
+1. **단순 키 추가**: MDC(`MDC.putCloseable`)를 사용하세요.
+2. **본격적인 정형 로깅**: `logstash-logback-encoder`로 전환하는 것을 고려하세요. `addKeyValue`를 가장 완벽하게 지원하는 라이브러리입니다.
+
+잘못된 정보로 혼란을 드려 다시 한번 사과드리며, 현재의 기술적 한계를 고려한 위 대안들 중 하나를 선택하시길 권장합니다.
