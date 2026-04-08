@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-08 13:00 | [Language/Java/ThreadPoolExecutor.md](Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Rejection Policy) 가이드 추가 |
 | 2026-04-08 10:50 | [Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 연동 방법 추가 |
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md](Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [History/Taiwan.md](History/Taiwan.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

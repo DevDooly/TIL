@@ -11,6 +11,7 @@
         * [Java Garbage Collection (GC)](Language/Java/Garbage_Collection.md)
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
+        * [Java ThreadPoolExecutor와 거부 정책(Rejection Policy)](Language/Java/ThreadPoolExecutor.md)
         * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](Language/Java/Virtual_Threads_FTP_Pinning.md)
         * [K8s 환경에서의 Java Virtual Thread 사용 분석](Language/Java/Virtual_Threads_in_K8s.md)
         * **Versions**

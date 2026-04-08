@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-08 13:00 | [ThreadPoolExecutor](docs/Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Reject...  |
 | 2026-04-08 10:50 | [Logstash Logback Encoder Guide](docs/Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 ...  |
 | 2026-04-08 10:48 | [ECS Logging KeyValuePairs](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
 | 2026-04-08 10:48 | [Logging ECS KeyValue Support](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
 | 2026-04-07 15:19 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 하이브리드 모델 가이드 추가 |
 | 2026-04-07 14:51 | [JDBI FetchSize and VirtualThreads](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
-| 2026-04-07 13:25 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -48,6 +48,7 @@
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
+  * [Java ThreadPoolExecutor와 거부 정책(Rejection Policy)](docs/Language/Java/ThreadPoolExecutor.md)
   * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
   * [K8s 환경에서의 Java Virtual Thread 사용 분석](docs/Language/Java/Virtual_Threads_in_K8s.md)
   * **Functional**
