@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-08 10:40 | [Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md](Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | docs: SLF4J addKeyValue ECS 로그 연동 가이드 및 공식 레퍼런스 추가 |
 | 2026-04-08 10:27 | [Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | docs: SLF4J addKeyValue ECS 로그 포함 가이드 추가 및 GitHub Pages 경로 안정화 |
 | 2026-04-07 15:19 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 하이브리드 모델 가이드 추가 |
 | 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [Infrastructure/ArgoCD/Installation.md](Infrastructure/ArgoCD/Installation.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Infrastructure/Docker/dockerfile.md](Infrastructure/Docker/dockerfile.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Infrastructure/Docker/no space left on device.md](Infrastructure/Docker/no space left on device.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
