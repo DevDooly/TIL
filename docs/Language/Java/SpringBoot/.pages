@@ -15,6 +15,7 @@ nav:
 - '가상 스레드: JDBI Pinning 해결 방법': JDBI_VT_Pinning_Solution.md
 - Spring Boot 3.4 정형 로깅 (ECS): Structured_Logging_SpringBoot_3_4.md
 - SLF4J addKeyValue를 ECS 로그에 포함하기: Logging_ECS_KeyValue_Support.md
+- Logstash Logback Encoder 사용 가이드: Logstash_Logback_Encoder_Guide.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
 - 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md
 - Web: Web
