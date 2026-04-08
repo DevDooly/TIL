@@ -15,6 +15,12 @@
 
 * **[로깅 설정 YAML to XML 전환 이슈](../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)**: 외부 SDK의 `logback.xml`과 `application.yml` 설정 충돌 해결 사례.
 
+
+* **[SLF4J addKeyValue를 ECS 로그에 포함하기](../Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)**: 커스텀 키가 ECS JSON 로그에 나타나지 않는 문제 해결.
+
+
+
+
 ## 🎡 Infrastructure & Kafka
 
 * **[Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](../Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)**: 특정 파티션으로 메시지가 쏠리는 버그 분석.
