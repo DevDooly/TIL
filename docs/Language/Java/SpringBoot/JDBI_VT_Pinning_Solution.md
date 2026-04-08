@@ -63,7 +63,16 @@ public class UserService {
 
 ---
 
-## 3. 작동 원리 및 이점
+## 3. 주의사항: 거부 정책(Rejection Policy) 선택
+
+플랫폼 스레드 풀을 생성할 때 `RejectedExecutionHandler` 설정을 주의해야 합니다.
+
+* **AbortPolicy (추천)**: 풀이 가득 차면 예외를 발생시킵니다. 가상 스레드의 Pinning을 확실히 방지할 수 있습니다.
+* **CallerRunsPolicy (절대 금지)**: 풀이 가득 찼을 때 작업을 요청한 스레드가 직접 실행하게 하는 정책입니다. 가상 스레드 환경에서 이 정책을 쓰면 **가상 스레드가 직접 DB Blocking I/O를 수행하게 되어 Pinning 현상이 발생**합니다. 오프로딩의 목적이 사라지므로 절대 사용해서는 안 됩니다.
+
+---
+
+## 4. 작동 원리 및 이점
 
 1. **캐리어 스레드 보호**: 가상 스레드에서 `CompletableFuture.join()`이나 `get()`을 호출하여 대기할 때, 가상 스레드 스케줄러는 현재 캐리어 스레드를 다른 가상 스레드가 쓸 수 있도록 **Unmount** 시킵니다.
 2. **Pinning 회피**: 실제 `synchronized`가 걸릴 수 있는 JDBI 호출은 미리 정의된 **플랫폼 스레드 풀(`dbExecutor`)**에서 실행되므로, 가상 스레드의 캐리어 스레드 풀(ForkJoinPool)은 Pinning의 영향을 받지 않습니다.
