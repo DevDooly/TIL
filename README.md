@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-09 14:53 | [Check Virtual Thread](docs/Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드...  |
 | 2026-04-09 09:50 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder의 customFields vs global...  |
 | 2026-04-08 13:27 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecuto...  |
 | 2026-04-08 13:00 | [ThreadPoolExecutor](docs/Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Reject...  |
 | 2026-04-08 10:50 | [Logstash Logback Encoder Guide](docs/Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 ...  |
 | 2026-04-08 10:48 | [ECS Logging KeyValuePairs](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
-| 2026-04-08 10:48 | [Logging ECS KeyValue Support](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -45,6 +45,7 @@
 * **Java**
   * [**Overview**](docs/Language/Java/README.md)
   * [Caffeine Cache: 고성능 Java 로컬 캐시 가이드](docs/Language/Java/Caffeine_Cache.md)
+  * [Java/Spring Boot: 현재 스레드가 가상 스레드인지 확인하는 방법](docs/Language/Java/Check_Virtual_Thread.md)
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
