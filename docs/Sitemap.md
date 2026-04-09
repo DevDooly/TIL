@@ -33,6 +33,7 @@
             * [Spring Bean Lifecycle](Language/Java/SpringBoot/Bean_Lifecycle.md)
             * [Dependency Injection (DI) & Inversion of Control (IoC)](Language/Java/SpringBoot/DI_IoC.md)
             * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+            * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
             * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
             * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
             * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)

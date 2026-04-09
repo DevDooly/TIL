@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-09 09:25 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback LoggingEventCompositeJsonEncoder 및 s...  |
 | 2026-04-08 13:27 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecuto...  |
 | 2026-04-08 13:00 | [ThreadPoolExecutor](docs/Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Reject...  |
 | 2026-04-08 10:50 | [Logstash Logback Encoder Guide](docs/Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 ...  |
 | 2026-04-08 10:48 | [ECS Logging KeyValuePairs](docs/Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
 | 2026-04-08 10:48 | [Logging ECS KeyValue Support](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logsta...  |
-| 2026-04-07 14:51 | [JDBI FetchSize and VirtualThreads](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -64,6 +64,7 @@
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
     * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+    * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
     * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
     * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
     * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](docs/Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
