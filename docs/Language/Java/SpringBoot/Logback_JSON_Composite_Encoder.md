@@ -80,12 +80,49 @@ dependencies {
 
 1. **`<timestamp>`**: 로그 발생 시간을 추가합니다.
 2. **`<pattern>`**: **로그마다 내용이 바뀌는 동적 필드**를 정의할 때 사용합니다. Logback의 패턴 치환자(`%level`, `%message`)를 사용합니다.
-3. **`<customFields>`**: **모든 로그에 공통으로 들어가는 고정된 정적 필드**를 추가할 때 사용합니다. JSON 문자열 형태로 정의합니다.
+3. **`<customFields>` 또는 `<globalCustomFields>`**: **모든 로그에 공통으로 들어가는 고정된 정적 필드**를 추가할 때 사용합니다. 사용하는 인코더 클래스에 따라 태그 이름이 다를 수 있습니다.
 4. **`<stackTrace>`**: 예외 발생 시 상세 스택트레이스를 필드로 분리합니다.
 
 ---
 
-## 4. customFields vs pattern 상세 비교
+## 4. customFields vs globalCustomFields (인코더별 차이)
+
+라이브러리 내부적으로 정적 필드를 처리하는 방식은 인코더 타입에 따라 태그 이름이 달라지므로 주의해야 합니다.
+
+| 인코더 클래스 | 태그 이름 | 특징 |
+| :--- | :--- | :--- |
+| **LogstashEncoder** | `<customFields>` | 인코더의 직접 속성으로 설정 |
+| **LoggingEventCompositeJsonEncoder** | **`<globalCustomFields>`** | `providers` 내부의 하위 프로바이더로 설정 |
+
+### 4.1 LoggingEventCompositeJsonEncoder에서의 설정 (추천)
+복합 인코더를 쓸 때는 프로바이더 이름으로 `globalCustomFields`를 사용해야 합니다.
+
+```xml
+<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+    <providers>
+        <globalCustomFields>
+            <customFields>
+                {
+                  "service_id": "payment-api",
+                  "version": "v1.2.0"
+                }
+            </customFields>
+        </globalCustomFields>
+        <pattern>
+            <pattern>
+                { "msg": "%message" }
+            </pattern>
+        </pattern>
+    </providers>
+</encoder>
+```
+
+* **구조적 특징**: `<globalCustomFields>` 태그 안에 다시 `<customFields>` 태그를 써서 JSON 문자열을 감싸는 구조입니다.
+
+---
+
+## 5. customFields vs pattern 상세 비교
+
 
 | 구분 | customFields | pattern |
 | :--- | :--- | :--- |
