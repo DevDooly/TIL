@@ -75,27 +75,76 @@ dependencies {
 * `name`: Logback 설정 내에서 사용할 변수명을 지정합니다. (예: `${APP_NAME}`)
 * **주의**: 파일명이 `logback.xml`이 아닌 **`logback-spring.xml`**이어야 Spring의 설정을 정상적으로 읽어올 수 있습니다.
 
-### 3.2 `<providers>` 섹션
+### 3.2 <providers> 섹션
 `LoggingEventCompositeJsonEncoder`는 여러 `Provider`를 합쳐서 하나의 JSON 객체를 만듭니다.
 
-* `<timestamp>`: 로그 발생 시간을 추가합니다.
-* `<pattern>`: **가장 중요한 부분**입니다. 여기서 자유로운 JSON 구조를 정의할 수 있으며, Logback의 표준 패턴 문자열(`%level`, `%message`)과 앞서 정의한 `${변수}`를 섞어서 사용할 수 있습니다.
-* `<stackTrace>`: 에러 로그 시 예외 객체를 JSON 필드로 분리해서 깔끔하게 보여줍니다.
+1. **`<timestamp>`**: 로그 발생 시간을 추가합니다.
+2. **`<pattern>`**: **로그마다 내용이 바뀌는 동적 필드**를 정의할 때 사용합니다. Logback의 패턴 치환자(`%level`, `%message`)를 사용합니다.
+3. **`<customFields>`**: **모든 로그에 공통으로 들어가는 고정된 정적 필드**를 추가할 때 사용합니다. JSON 문자열 형태로 정의합니다.
+4. **`<stackTrace>`**: 예외 발생 시 상세 스택트레이스를 필드로 분리합니다.
 
 ---
 
-## 4. 왜 이 클래스가 좋은가요?
+## 4. customFields vs pattern 상세 비교
 
-단순한 `LogstashEncoder`보다 `LoggingEventCompositeJsonEncoder`가 유리한 점은 다음과 같습니다.
+| 구분 | customFields | pattern |
+| :--- | :--- | :--- |
+| **데이터 성격** | **정적 (Static)** | **동적 (Dynamic)** |
+| **사용 방식** | 순수 JSON 형태 문자열 | Logback 패턴 치환자 (`%...`) 사용 |
+| **주요 용도** | 서비스명, 버전, 호스트명, 리전 등 | 메시지, 레벨, 스레드명, 호출 클래스 등 |
+| **성능** | 파싱 오버헤드가 거의 없음 | 매 로그마다 패턴을 해석해야 함 |
 
-1. **필드명 제어**: 기본 필드명(`level`, `message` 등)을 인프라 표준(ECS 등)에 맞춰 자유롭게 바꿀 수 있습니다.
-2. **구조의 유연성**: 중첩된(Nested) JSON 구조도 `<pattern>` 내부에서 정의하여 내보낼 수 있습니다.
-3. **필터링**: 특정 조건에서만 특정 필드가 나타나도록 정교하게 제어할 수 있는 확장성을 제공합니다.
+### 4.1 customFields 활용 예시
+인프라 수준에서 부여되는 고정 정보들을 넣기에 최적입니다.
+
+```xml
+<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+    <providers>
+        <customFields>
+            {
+              "service_id": "payment-api",
+              "version": "v1.2.0",
+              "cloud_region": "ap-northeast-2"
+            }
+        </customFields>
+        <pattern>
+            <pattern>
+                { "msg": "%message" }
+            </pattern>
+        </pattern>
+    </providers>
+</encoder>
+```
+
+### 4.2 pattern 활용 예시
+로그 발생 시점의 컨텍스트 정보를 구조화할 때 사용합니다.
+
+```xml
+<pattern>
+    <pattern>
+        {
+          "level": "%level",
+          "trace_id": "%mdc{traceId:-none}",
+          "logger": "%logger"
+        }
+    </pattern>
+</pattern>
+```
 
 ---
 
-## 5. 요약
+## 5. 어떤 상황에 무엇을 쓸까?
 
-* `application.yml`의 값을 가져올 때는 `<springProperty>`를 사용하세요.
-* JSON 구조를 직접 설계하고 싶다면 `LoggingEventCompositeJsonEncoder` 내부의 `<pattern>` 프로바이더를 활용하세요.
-* 설정 파일은 반드시 `logback-spring.xml`로 명명하세요.
+* **customFields를 써야 할 때**:
+    * 배포 시점에 결정되는 정보 (서비스 이름, 버전, 서버 ID).
+    * `springProperty`로 가져온 값을 단순히 모든 로그에 박아넣고 싶을 때.
+    * **이유**: 설정 시점에 한 번만 해석되므로 성능상 유리합니다.
+
+* **pattern을 써야 할 때**:
+    * Logback 내부의 특수 기호(`%`)를 써서 값을 추출해야 할 때.
+    * 로그마다 값이 변하는 필드 (시간, 레벨, 메시지, MDC 등).
+    * JSON의 계층 구조(Nested)를 복잡하게 설계해야 할 때.
+
+---
+
+## 6. 요약

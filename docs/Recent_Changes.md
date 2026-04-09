@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-04-09 09:25 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback LoggingEventCompositeJsonEncoder 및 springProperty 활용 가이드 추가 |
+| 2026-04-09 09:31 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder의 customFields vs pattern 비교 및 활용 사례 추가 |
 | 2026-04-08 13:27 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecutor 거부 정책 주의사항 추가 |
 | 2026-04-08 13:00 | [Language/Java/ThreadPoolExecutor.md](Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Rejection Policy) 가이드 추가 |
 | 2026-04-08 10:50 | [Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 연동 방법 추가 |
