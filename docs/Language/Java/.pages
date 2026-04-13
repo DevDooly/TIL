@@ -10,6 +10,7 @@ nav:
   - Garbage Collection: Garbage_Collection.md
   - ThreadPoolExecutor & 거부 정책: ThreadPoolExecutor.md
   - 가상 스레드 여부 확인 방법: Check_Virtual_Thread.md
+  - Scoped Value (공유 데이터): Scoped_Value.md
   - Virtual Threads in K8s: Virtual_Threads_in_K8s.md
   - Virtual Threads FTP Pinning: Virtual_Threads_FTP_Pinning.md
 - Libraries:
