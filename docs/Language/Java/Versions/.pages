@@ -5,3 +5,4 @@ nav:
 - Java 11 (Standard LTS): Java11.md
 - Java 17 (Records & Sealed): Java17.md
 - Java 21 (Virtual Threads): Java21.md
+- Java 25 (LTS Stability): Java25.md

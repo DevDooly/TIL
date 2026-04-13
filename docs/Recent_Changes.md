@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-13 10:26 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
 | 2026-04-09 14:53 | [Language/Java/Check_Virtual_Thread.md](Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드 추가 |
 | 2026-04-08 13:27 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecutor 거부 정책 주의사항 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [Data/Database/SQL_Naming_Convention.md](Data/Database/SQL_Naming_Convention.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/fluentd.md](Data/Database/fluentd.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/ELK.md](Data/ELK.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

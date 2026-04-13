@@ -20,6 +20,7 @@
             * [Java 11: The Cloud Native LTS Standard](Language/Java/Versions/Java11.md)
             * [Java 17: Modernization and Productivity](Language/Java/Versions/Java17.md)
             * [Java 21: Next-Gen Concurrency and Performance](Language/Java/Versions/Java21.md)
+            * [Java 25: Enhanced Stability and Modern Productivity](Language/Java/Versions/Java25.md)
             * [Java 8: Modern Java의 시작](Language/Java/Versions/Java8.md)
         * **Functional**
             * [Java Functional Programming](Language/Java/Functional/README.md)
