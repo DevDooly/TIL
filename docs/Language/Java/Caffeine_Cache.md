@@ -52,7 +52,62 @@ DataObject data = cache.get("key2", k -> createData(k));
 
 ---
 
-## 4. Spring Boot 연동
+## 4. 실전 활용 예제: DB 데이터 캐싱 (Get-or-Compute)
+
+캐시에 데이터가 있으면 반환하고, 없으면 DB에서 조회하여 캐시에 저장한 뒤 반환하는 전형적인 패턴입니다. Caffeine의 `get` 메서드는 이 과정을 **원자적(Atomic)**으로 처리해 줍니다.
+
+### 4.1 구현 코드
+```java
+import com.github.benmanes.caffeine.cache.Cache;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+public class UserDataService {
+
+    // 1. 캐시 초기화 (최대 1000개, 10분 후 만료)
+    private final Cache<String, List<String>> userCache = Caffeine.newBuilder()
+            .maximumSize(1000)
+            .expireAfterWrite(10, TimeUnit.MINUTES)
+            .build();
+
+    public List<String> select(String key) {
+        // 2. get(key, mappingFunction) 호출
+        // - key가 존재하면 즉시 반환
+        // - key가 없으면 람다식(DB 조회) 실행 후 결과를 캐시에 넣고 반환
+        return userCache.get(key, this::fetchFromDatabase);
+    }
+
+    private List<String> fetchFromDatabase(String key) {
+        System.out.println("🔍 DB에서 데이터를 조회합니다: " + key);
+        
+        // 실제 DB 조회 로직 (예시 데이터)
+        if ("admin".equals(key)) {
+            return List.of("ROLE_ADMIN", "ROLE_USER", "DASHBOARD_ACCESS");
+        }
+        return List.of("ROLE_USER");
+    }
+
+    public static void main(String[] args) {
+        UserDataService service = new UserDataService();
+
+        // 첫 번째 호출: DB 조회 발생
+        System.out.println("Result 1: " + service.select("admin"));
+
+        // 두 번째 호출: 캐시 히트 (DB 조회 발생 안 함)
+        System.out.println("Result 2: " + service.select("admin"));
+    }
+}
+```
+
+### 4.2 주요 이점
+
+* **원자성 보장**: 동일한 키로 여러 스레드가 동시에 접근할 때, DB 조회가 중복으로 발생하지 않도록 Caffeine이 내부적으로 제어합니다.
+* **간결함**: `if (cache.get() == null)` 같은 복잡한 분기문 없이 한 줄로 로직을 완성할 수 있습니다.
+
+---
+
+## 5. Spring Boot 연동
 
 Spring Boot에서는 `@Cacheable` 추상화와 함께 사용하여 매우 간편하게 적용할 수 있습니다.
 

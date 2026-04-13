@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-13 15:34 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 | 2026-04-13 10:34 | [Scoped Value](docs/Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
 | 2026-04-13 10:26 | [Java25](docs/Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
 | 2026-04-09 14:53 | [Check Virtual Thread](docs/Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드...  |
 | 2026-04-08 13:27 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecuto...  |
-| 2026-04-08 13:00 | [ThreadPoolExecutor](docs/Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Reject...  |
 
 <!-- RECENT_CHANGES_END -->
 

@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-13 15:34 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 | 2026-04-13 10:34 | [Language/Java/Scoped_Value.md](Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
 | 2026-04-13 10:26 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
@@ -14,7 +15,6 @@
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md](Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
 | 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
-| 2026-04-07 13:25 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | fix: 최근 변경 사항 중복 제거 로직 추가 및 스크립트 고도화 |
 | 2026-04-07 13:10 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
 | 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
 | 2026-04-06 14:14 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
