@@ -95,13 +95,26 @@ dependencies {
 | **LoggingEventCompositeJsonEncoder** | **`<globalCustomFields>`** | `providers` 내부의 하위 프로바이더로 설정 |
 
 ### 4.1 LoggingEventCompositeJsonEncoder에서의 설정 (추천)
+
 복합 인코더를 쓸 때는 프로바이더 이름으로 `globalCustomFields`를 사용해야 합니다.
 
+
+
 * **공식 레퍼런스**: [Logstash Logback Encoder Javadoc - GlobalCustomFieldsJsonProvider](https://javadoc.io/static/net.logstash.logback/logstash-logback-encoder/7.4/net/logstash/logback/composite/GlobalCustomFieldsJsonProvider.html)
-* **특징**: 이 프로바이더는 설정 시점에 JSON 문자열을 한 번만 파싱하여 캐싱해 두었다가, 매 로그 이벤트마다 단순히 복사하여 넣기 때문에 성능상 매우 효율적입니다.
+
+* **동작 원리 (성능 이점)**: 
+
+    * 해당 라이브러리의 소스 코드([GitHub](https://github.com/logstash/logstash-logback-encoder/blob/main/src/main/java/net/logstash/logback/composite/GlobalCustomFieldsJsonProvider.java))를 보면, XML에 설정된 JSON 문자열은 프로바이더가 시작되는 **`start()` 단계에서 단 한 번만 파싱**되어 메모리에 객체 형태로 저장됩니다.
+
+    * 실제 로그가 기록되는 시점(`writeTo`)에는 이미 파싱된 객체를 출력 스트림에 쓰기만 하므로, 매 로그마다 JSON을 해석하는 오버헤드가 없어 정적 데이터 처리에 매우 최적화되어 있습니다.
+
+
 
 ```xml
+
 <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+
+
     <providers>
         <globalCustomFields>
             <customFields>

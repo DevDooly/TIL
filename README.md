@@ -8,7 +8,7 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-13 08:51 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드에 globalCustomFields...  |
+| 2026-04-13 09:12 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드에 globalCustomFields...  |
 | 2026-04-09 14:53 | [Check Virtual Thread](docs/Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드...  |
 | 2026-04-08 13:27 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecuto...  |
 | 2026-04-08 13:00 | [ThreadPoolExecutor](docs/Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Reject...  |

@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-04-13 08:51 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드에 globalCustomFields 공식 레퍼런스 추가 |
+| 2026-04-13 09:12 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드에 globalCustomFields 동작 원리 및 소스 코드 근거 보강 |
 | 2026-04-09 14:53 | [Language/Java/Check_Virtual_Thread.md](Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드 추가 |
 | 2026-04-08 13:27 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecutor 거부 정책 주의사항 추가 |
 | 2026-04-08 13:00 | [Language/Java/ThreadPoolExecutor.md](Language/Java/ThreadPoolExecutor.md) | docs: Java ThreadPoolExecutor 상세 분석 및 거부 정책(Rejection Policy) 가이드 추가 |
