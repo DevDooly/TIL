@@ -201,3 +201,9 @@ dependencies {
 ---
 
 ## 6. 요약
+
+1. **설정값 연동**: `application.yml`의 값을 가져올 때는 `<springProperty>`를 사용하고, 반드시 파일명을 **`logback-spring.xml`**로 설정해야 합니다.
+2. **구조 커스터마이징**: JSON 구조를 직접 설계하고 싶다면 유연성이 높은 **`LoggingEventCompositeJsonEncoder`**를 권장합니다.
+3. **정적 데이터 처리**: 서비스명, 버전 등 고정된 값은 **`globalCustomFields`**를 사용하세요. 초기화 시점에 단 한 번만 파싱되어 캐싱되므로 성능상 가장 유리합니다.
+4. **동적 데이터 처리**: 로그마다 변하는 레벨, 메시지, MDC 등은 **`pattern`** 프로바이더를 통해 정의하세요.
+5. **성능 최적화**: JSON 생성 및 I/O 부하를 고려하여 실운영 환경에서는 `AsyncAppender`와 함께 사용하는 것이 좋습니다.
