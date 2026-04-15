@@ -33,6 +33,10 @@
 
 * **[Kafka 최신 버전 Offset 불균형 문제](../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)**: Sticky 전략과 배치 메커니즘 충돌 해결 방안.
 
+* **[Kafka abortOnNewBatch와 파티션 쏠림](../Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)**: 커스텀 파티셔너 사용 시 특정 파티션으로 전송이 집중되는 이슈 분석.
+
+
+
 * **[Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)**: 특정 노드의 하드웨어 결함으로 인한 전체 분산 처리 성능 저하.
 
 * **[대량 파일 전송 용량 불일치 이슈](../Infrastructure/Linux/Large_File_Transfer.md#8-용량-불일치-트러블슈팅)**: rsync 복사 후 원본과 대상의 용량이 차이 나는 원인 분석.

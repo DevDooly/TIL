@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-15 13:58 | [AbortOnNewBatch Issue](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: Kafka abortOnNewBatch 매커니즘과 커스텀 파티셔너 쏠림 이슈 가...  |
 | 2026-04-13 15:34 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 | 2026-04-13 10:34 | [Scoped Value](docs/Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
 | 2026-04-13 10:26 | [Java25](docs/Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
 | 2026-04-09 14:53 | [Check Virtual Thread](docs/Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드...  |
-| 2026-04-08 13:27 | [JDBI VT Pinning Solution](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: JDBI 가상 스레드 Pinning 해결을 위한 ThreadPoolExecuto...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -205,6 +205,7 @@
   * [RabbitMQ vs Kafka](docs/Infrastructure/MessageBroker/RabbitMQ 그리고 Kafka.md)
   * **Kafka**
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
+    * [Kafka: abortOnNewBatch 매커니즘과 파티션 쏠림 이슈](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
     * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
     * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
@@ -287,6 +288,7 @@
   * [SLF4J addKeyValue를 ECS 로그에 포함하기](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
   * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+  * [Kafka abortOnNewBatch와 파티션 쏠림](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
   * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
   * [MinIO 버저닝 활성화 후 삭제 지연 이슈](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
   * [Oracle LOB Segment 공간 부족 (ORA-01692)](docs/Data/Database/Oracle_LOB_Segment.md)

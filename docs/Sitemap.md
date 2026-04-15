@@ -122,6 +122,7 @@
         * [RabbitMQ vs Kafka](Infrastructure/MessageBroker/RabbitMQ 그리고 Kafka.md)
         * **Kafka**
             * [Apache Kafka](Infrastructure/MessageBroker/Kafka/README.md)
+            * [Kafka: abortOnNewBatch 매커니즘과 파티션 쏠림 이슈](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
             * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
             * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
             * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
@@ -303,6 +304,7 @@
     * [SLF4J addKeyValue를 ECS 로그에 포함하기](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
     * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
     * [Kafka 최신 버전 Offset 불균형 문제](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+    * [Kafka abortOnNewBatch와 파티션 쏠림](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
     * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
     * [MinIO 버저닝 활성화 후 삭제 지연 이슈](Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
     * [Oracle LOB Segment 공간 부족 (ORA-01692)](Data/Database/Oracle_LOB_Segment.md)
