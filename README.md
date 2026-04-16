@@ -8,12 +8,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-16 09:58 | [Maven](docs/Tools/Build/Maven.md) | docs: Maven 가이드 및 pom.xml 주요 태그 설명 추가 |
 | 2026-04-15 13:58 | [AbortOnNewBatch Issue](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: Kafka abortOnNewBatch 매커니즘과 커스텀 파티셔너 쏠림 이슈 가...  |
 | 2026-04-13 15:34 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 | 2026-04-13 10:34 | [Scoped Value](docs/Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
 | 2026-04-13 10:26 | [Java25](docs/Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Logback JSON Composite Encoder](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
-| 2026-04-09 14:53 | [Check Virtual Thread](docs/Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -306,6 +306,8 @@
 
 ## Tools
 * [**Overview**](docs/Tools/README.md)
+* **Build**
+  * [Apache Maven: 자바 빌드 자동화 도구 가이드](docs/Tools/Build/Maven.md)
 * **Git**
   * [Monorepo vs Polyrepo](docs/Tools/Git/Monorepo_vs_Polyrepo.md)
   * [Git Remote Settings (원격 저장소 관리)](docs/Tools/Git/Remote_Settings.md)
