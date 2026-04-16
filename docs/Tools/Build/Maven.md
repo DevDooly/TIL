@@ -66,17 +66,59 @@ Maven은 정해진 순서대로 빌드 단계를 수행합니다.
 # 1. 빌드 결과물 삭제 및 새로 패키징
 mvn clean package
 
-# 2. 테스트를 건너뛰고 설치
-mvn install -DskipTests
-
-# 3. 특정 프로파일 적용하여 컴파일
+# 2. 특정 프로파일 적용하여 컴파일
 mvn compile -P production
 
-# 4. 의존성 트리 확인 (라이브러리 충돌 해결 시 유용)
+# 3. 의존성 트리 확인 (라이브러리 충돌 해결 시 유용)
 mvn dependency:tree
 ```
 
 ---
 
-## 5. 요약
+## 5. 실무 활용 팁 및 성능 최적화
+
+### 5.1 빌드 속도 개선 (Parallel Build)
+Maven은 기본적으로 싱글 스레드로 동작하지만, 멀티 코어 CPU를 활용하여 빌드 속도를 획기적으로 줄일 수 있습니다.
+
+* **`-T` (Threads) 옵션**:
+    ```bash
+    # 4개의 스레드 사용
+    mvn clean install -T 4
+
+    # 코어당 1.5개 스레드 사용 (자동 계산)
+    mvn clean install -T 1.5C
+    ```
+
+### 5.2 테스트 제외하고 빌드하기
+빠른 배포나 단순 패키징 확인을 위해 테스트를 건너뛰어야 할 때 사용합니다.
+
+* **`-DskipTests`**: 테스트 코드를 **컴파일은 하지만 실행만 안 함** (가장 많이 사용).
+    ```bash
+    mvn clean package -DskipTests
+    ```
+
+* **`-Dmaven.test.skip=true`**: 테스트 코드를 **컴파일도 안 하고 실행도 안 함**.
+    ```bash
+    mvn clean package -Dmaven.test.skip=true
+    ```
+
+### 5.3 멀티 모듈 프로젝트 부분 빌드
+거대한 프로젝트에서 특정 모듈만 빌드하고 싶을 때 유용합니다.
+
+* **`-pl` (Project List)**: 특정 모듈만 지정.
+* **`-am` (Also Make)**: 지정한 모듈을 빌드하기 위해 필요한 의존 모듈까지 함께 빌드.
+    ```bash
+    # core 모듈과 그 의존성들을 함께 빌드
+    mvn clean install -pl core -am
+    ```
+
+### 5.4 오프라인 모드
+인터넷 연결이 불안정하거나 이미 모든 라이브러리가 로컬에 있을 때 속도를 높입니다.
+```bash
+mvn clean package -o
+```
+
+---
+
+## 6. 요약
 Maven은 정해진 규칙(표준 구조 및 생명주기)을 통해 프로젝트 관리를 일관되게 유지해 줍니다. 특히 `pom.xml`을 통한 체계적인 의존성 관리는 자바 생태계의 표준으로 자리 잡고 있습니다.
