@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-20 16:46 | [Web/Concepts/OpenAPI_vs_Swagger.md](Web/Concepts/OpenAPI_vs_Swagger.md) | docs: OpenAPI와 Swagger 개념 차이 및 비교 가이드 추가 |
 | 2026-04-16 10:06 | [Tools/Build/Maven.md](Tools/Build/Maven.md) | docs: Maven 실무 팁(빌드 속도 개선, 테스트 스킵, 부분 빌드 등) 추가 |
 | 2026-04-15 13:58 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: Kafka abortOnNewBatch 매커니즘과 커스텀 파티셔너 쏠림 이슈 가이드 추가 |
 | 2026-04-13 15:34 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/MongoDB.md](Data/Database/MongoDB.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Oracle_LOB_Segment.md](Data/Database/Oracle_LOB_Segment.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

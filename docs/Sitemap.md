@@ -110,6 +110,7 @@
         * [Vuejs.md](Web/Framework/Vuejs.md)
     * **Concepts**
         * [Ajax 그리고 CSR, SSR.md](Web/Concepts/Ajax 그리고 CSR, SSR.md)
+        * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](Web/Concepts/OpenAPI_vs_Swagger.md)
         * [용어 #](Web/Concepts/WebRTC.md)
         * [Using shadow DOM](Web/Concepts/shadow DOM.md)
 
