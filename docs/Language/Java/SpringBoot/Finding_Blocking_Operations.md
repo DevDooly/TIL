@@ -47,6 +47,8 @@ dependencies {
 ```
 
 ### 2.2 설정
+
+**애플리케이션 메인에서 설정**:
 애플리케이션 시작 시점에 설치합니다.
 
 ```java
@@ -55,6 +57,26 @@ public static void main(String[] args) {
     SpringApplication.run(MyApplication.class, args);
 }
 ```
+
+**@SpringBootTest와 함께 사용**:
+통합 테스트 환경에서 특정 테스트 실행 시에만 BlockHound를 활성화하고 싶을 때 사용합니다.
+
+```java
+@SpringBootTest
+class MyIntegrationTest {
+
+    @BeforeAll
+    static void setUp() {
+        BlockHound.install();
+    }
+
+    @Test
+    void testNonBlocking() {
+        // 비동기 로직 검증
+    }
+}
+```
+*주의: `BlockHound.install()`은 JVM 내에서 한 번만 호출되면 충분하며, 이후의 모든 스레드에 영향을 미칩니다.*
 
 ### 2.3 동작 방식
 만약 `WebFlux` 로직 안에서 `Thread.sleep()`이나 `JDBC` 호출이 발생하면 다음과 같은 에러를 내뱉으며 프로세스를 중단시킵니다.
