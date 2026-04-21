@@ -46,6 +46,7 @@
             * [Spring Cloud Gateway vs Netflix Zuul: 아키텍처 비교 및 선택 가이드](Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md)
             * [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
             * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
+            * [Spring Cloud LoadBalancer: 현대적인 클라이언트 측 부하 분산 가이드](Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md)
             * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
             * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
             * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)

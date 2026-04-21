@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-21 13:10 | [Spring Cloud LoadBalancer](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Netflix Ribbon Guide](docs/Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개...  |
 | 2026-04-21 10:51 | [SCG vs Zuul Comparison](docs/Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md) | docs: Spring Cloud Gateway vs Netflix Zuul 아키텍처 비교...  |
 | 2026-04-21 10:49 | [Spring Cloud Gateway](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md) | docs: Spring Cloud Gateway (SCG) 개념 및 사용법 가이드 추가 |
 | 2026-04-21 10:38 | [Spring Cloud Zuul](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드...  |
 | 2026-04-21 10:38 | [Scalar UI](docs/Web/Concepts/Scalar_UI.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드...  |
-| 2026-04-20 16:46 | [OpenAPI vs Swagger](docs/Web/Concepts/OpenAPI_vs_Swagger.md) | docs: OpenAPI와 Swagger 개념 차이 및 비교 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -78,6 +78,7 @@
     * [Spring Cloud Gateway vs Netflix Zuul: 아키텍처 비교 및 선택 가이드](docs/Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
     * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
+    * [Spring Cloud LoadBalancer: 현대적인 클라이언트 측 부하 분산 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md)
     * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
     * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
     * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)

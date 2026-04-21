@@ -19,6 +19,7 @@ nav:
 - 'Logback: Composite JSON Encoder 활용': Logback_JSON_Composite_Encoder.md
 - Spring Cloud Zuul (API Gateway): Spring_Cloud_Zuul.md
 - Netflix Ribbon (Load Balancer): Netflix_Ribbon_Guide.md
+- Spring Cloud LoadBalancer: Spring_Cloud_LoadBalancer.md
 - Spring Cloud Gateway (SCG): Spring_Cloud_Gateway.md
 - SCG vs Zuul 상세 비교: SCG_vs_Zuul_Comparison.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
