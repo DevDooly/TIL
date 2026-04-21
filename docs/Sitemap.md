@@ -42,6 +42,7 @@
             * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
             * [Logstash Logback Encoder 사용 가이드](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md)
             * [Spring Boot OAuth2 Implementation](Language/Java/SpringBoot/OAuth2_Implementation.md)
+            * [Spring Cloud Gateway vs Netflix Zuul: 아키텍처 비교 및 선택 가이드](Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md)
             * [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
             * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
             * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
