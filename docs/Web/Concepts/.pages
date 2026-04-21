@@ -1,6 +1,7 @@
 title: Web Concepts
 nav:
 - OpenAPI vs Swagger: OpenAPI_vs_Swagger.md
+- Scalar UI: Scalar_UI.md
 - Ajax, CSR, SSR: Ajax 그리고 CSR, SSR.md
 - WebRTC: WebRTC.md
 - Shadow DOM: shadow DOM.md
