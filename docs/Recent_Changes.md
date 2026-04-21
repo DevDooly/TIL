@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-21 10:49 | [Language/Java/SpringBoot/Spring_Cloud_Gateway.md](Language/Java/SpringBoot/Spring_Cloud_Gateway.md) | docs: Spring Cloud Gateway (SCG) 개념 및 사용법 가이드 추가 |
 | 2026-04-21 10:38 | [Language/Java/SpringBoot/Spring_Cloud_Zuul.md](Language/Java/SpringBoot/Spring_Cloud_Zuul.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드 추가 |
 | 2026-04-21 10:38 | [Web/Concepts/Scalar_UI.md](Web/Concepts/Scalar_UI.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드 추가 |
 | 2026-04-20 16:46 | [Web/Concepts/OpenAPI_vs_Swagger.md](Web/Concepts/OpenAPI_vs_Swagger.md) | docs: OpenAPI와 Swagger 개념 차이 및 비교 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [Data/Database/Image_Storage_Management.md](Data/Database/Image_Storage_Management.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

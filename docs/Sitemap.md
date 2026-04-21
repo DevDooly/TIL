@@ -43,6 +43,7 @@
             * [Logstash Logback Encoder 사용 가이드](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md)
             * [Spring Boot OAuth2 Implementation](Language/Java/SpringBoot/OAuth2_Implementation.md)
             * [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
+            * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
             * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
             * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
             * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)

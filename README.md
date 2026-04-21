@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-21 10:49 | [Spring Cloud Gateway](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md) | docs: Spring Cloud Gateway (SCG) 개념 및 사용법 가이드 추가 |
 | 2026-04-21 10:38 | [Spring Cloud Zuul](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드...  |
 | 2026-04-21 10:38 | [Scalar UI](docs/Web/Concepts/Scalar_UI.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드...  |
 | 2026-04-20 16:46 | [OpenAPI vs Swagger](docs/Web/Concepts/OpenAPI_vs_Swagger.md) | docs: OpenAPI와 Swagger 개념 차이 및 비교 가이드 추가 |
 | 2026-04-16 10:06 | [Maven](docs/Tools/Build/Maven.md) | docs: Maven 실무 팁(빌드 속도 개선, 테스트 스킵, 부분 빌드 등) 추가 |
 | 2026-04-15 13:58 | [AbortOnNewBatch Issue](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: Kafka abortOnNewBatch 매커니즘과 커스텀 파티셔너 쏠림 이슈 가...  |
-| 2026-04-13 15:34 | [Caffeine Cache](docs/Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -75,6 +75,7 @@
     * [Logstash Logback Encoder 사용 가이드](docs/Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md)
     * [Spring Boot OAuth2 Implementation](docs/Language/Java/SpringBoot/OAuth2_Implementation.md)
     * [Spring Boot Introduction](docs/Language/Java/SpringBoot/SpringBoot_Intro.md)
+    * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
     * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
     * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
     * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)

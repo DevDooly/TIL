@@ -18,6 +18,7 @@ nav:
 - Logstash Logback Encoder 사용 가이드: Logstash_Logback_Encoder_Guide.md
 - 'Logback: Composite JSON Encoder 활용': Logback_JSON_Composite_Encoder.md
 - Spring Cloud Zuul (API Gateway): Spring_Cloud_Zuul.md
+- Spring Cloud Gateway (SCG): Spring_Cloud_Gateway.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
 - 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md
 - Web: Web
