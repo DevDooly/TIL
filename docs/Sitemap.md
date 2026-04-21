@@ -41,6 +41,7 @@
             * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
             * [Logback XML: logback-ecs-encoder를 이용한 정형 로깅 (ECS)](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md)
             * [Logstash Logback Encoder 사용 가이드](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md)
+            * [Netflix Ribbon: 클라이언트 측 부하 분산(Load Balancing) 가이드](Language/Java/SpringBoot/Netflix_Ribbon_Guide.md)
             * [Spring Boot OAuth2 Implementation](Language/Java/SpringBoot/OAuth2_Implementation.md)
             * [Spring Cloud Gateway vs Netflix Zuul: 아키텍처 비교 및 선택 가이드](Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md)
             * [Spring Boot Introduction](Language/Java/SpringBoot/SpringBoot_Intro.md)
