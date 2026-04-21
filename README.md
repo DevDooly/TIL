@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-21 13:32 | [Finding Blocking Operations](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: Netty 환경에서 Blocking 코드 및 라이브러리 찾는 방법 가이드 추가 |
 | 2026-04-21 13:29 | [Tomcat vs Netty](docs/Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Spring Cloud LoadBalancer](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Netflix Ribbon Guide](docs/Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개...  |
 | 2026-04-21 10:51 | [SCG vs Zuul Comparison](docs/Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md) | docs: Spring Cloud Gateway vs Netflix Zuul 아키텍처 비교...  |
 | 2026-04-21 10:49 | [Spring Cloud Gateway](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md) | docs: Spring Cloud Gateway (SCG) 개념 및 사용법 가이드 추가 |
-| 2026-04-21 10:38 | [Spring Cloud Zuul](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -67,6 +67,7 @@
     * [빈 후처리기 (BeanPostProcessor)](docs/Language/Java/SpringBoot/BeanPostProcessor.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
+    * [Netty 환경에서 Blocking 코드/라이브러리를 찾는 방법](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md)
     * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
     * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
     * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)

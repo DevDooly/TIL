@@ -22,6 +22,7 @@ nav:
 - Spring Cloud LoadBalancer: Spring_Cloud_LoadBalancer.md
 - Spring Cloud Gateway (SCG): Spring_Cloud_Gateway.md
 - Tomcat vs Netty 상세 비교: Tomcat_vs_Netty.md
+- 'Netty: Blocking 코드 찾는 방법': Finding_Blocking_Operations.md
 - SCG vs Zuul 상세 비교: SCG_vs_Zuul_Comparison.md
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
 - 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md

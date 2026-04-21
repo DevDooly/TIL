@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-21 13:32 | [Language/Java/SpringBoot/Finding_Blocking_Operations.md](Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: Netty 환경에서 Blocking 코드 및 라이브러리 찾는 방법 가이드 추가 |
 | 2026-04-21 13:29 | [Language/Java/SpringBoot/Tomcat_vs_Netty.md](Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md](Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Language/Java/SpringBoot/Netflix_Ribbon_Guide.md](Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개념 및 SCG 대체 기술 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [ComputerScience/Network/Subnetwork.md](ComputerScience/Network/Subnetwork.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/OperatingSystem/Endianness.md](ComputerScience/OperatingSystem/Endianness.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

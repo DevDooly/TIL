@@ -35,6 +35,7 @@
             * [빈 후처리기 (BeanPostProcessor)](Language/Java/SpringBoot/BeanPostProcessor.md)
             * [Spring Bean Lifecycle](Language/Java/SpringBoot/Bean_Lifecycle.md)
             * [Dependency Injection (DI) & Inversion of Control (IoC)](Language/Java/SpringBoot/DI_IoC.md)
+            * [Netty 환경에서 Blocking 코드/라이브러리를 찾는 방법](Language/Java/SpringBoot/Finding_Blocking_Operations.md)
             * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
             * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
             * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
