@@ -51,6 +51,7 @@
             * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
             * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)
             * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
+            * [Spring Boot: Tomcat vs Netty 비교 가이드](Language/Java/SpringBoot/Tomcat_vs_Netty.md)
             * [Java Virtual Thread: Kafka Consumer Pinning 이슈 분석](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
             * **JPA**
                 * [Spring Data JPA](Language/Java/SpringBoot/JPA/README.md)
