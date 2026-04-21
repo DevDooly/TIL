@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-21 15:21 | [Consumer Safe Shutdown](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드...  |
 | 2026-04-21 14:05 | [Finding Blocking Operations](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 | 2026-04-21 13:29 | [Tomcat vs Netty](docs/Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Spring Cloud LoadBalancer](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Netflix Ribbon Guide](docs/Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개...  |
 | 2026-04-21 10:51 | [SCG vs Zuul Comparison](docs/Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md) | docs: Spring Cloud Gateway vs Netflix Zuul 아키텍처 비교...  |
-| 2026-04-21 10:49 | [Spring Cloud Gateway](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md) | docs: Spring Cloud Gateway (SCG) 개념 및 사용법 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -218,6 +218,7 @@
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
     * [Kafka: abortOnNewBatch 매커니즘과 파티션 쏠림 이슈](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
+    * [Kafka: Consumer의 안전한 종료 (wakeup vs close)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
     * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
     * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
     * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
@@ -300,6 +301,7 @@
   * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
   * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
   * [Kafka abortOnNewBatch와 파티션 쏠림](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+  * [Kafka Consumer 종료 시 IllegalStateException](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
   * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
   * [MinIO 버저닝 활성화 후 삭제 지연 이슈](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
   * [Oracle LOB Segment 공간 부족 (ORA-01692)](docs/Data/Database/Oracle_LOB_Segment.md)

@@ -7,4 +7,5 @@ nav:
 - 파티셔너 진화와 불균형 해결: Partitioner_Evolution_and_Imbalance.md
 - abortOnNewBatch와 파티션 쏠림: AbortOnNewBatch_Issue.md
 - Offset 제어 (Java): Consumer_Offset_Control.md
+- Consumer 안전 종료 (wakeup/close): Consumer_Safe_Shutdown.md
 - Spring Kafka 테스트: Spring_Kafka_Test.md

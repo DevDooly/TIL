@@ -35,6 +35,10 @@
 
 * **[Kafka abortOnNewBatch와 파티션 쏠림](../Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)**: 커스텀 파티셔너 사용 시 특정 파티션으로 전송이 집중되는 이슈 분석.
 
+* **[Kafka Consumer 종료 시 IllegalStateException](../Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)**: 이미 종료된 Consumer에 접근할 때 발생하는 예외 해결 방법 (wakeup vs close).
+
+
+
 
 
 * **[Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)**: 특정 노드의 하드웨어 결함으로 인한 전체 분산 처리 성능 저하.

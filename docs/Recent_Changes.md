@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-21 15:21 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드 추가 |
 | 2026-04-21 14:05 | [Language/Java/SpringBoot/Finding_Blocking_Operations.md](Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 | 2026-04-21 13:29 | [Language/Java/SpringBoot/Tomcat_vs_Netty.md](Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md](Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/Subnetwork.md](ComputerScience/Network/Subnetwork.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/OperatingSystem/Endianness.md](ComputerScience/OperatingSystem/Endianness.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
