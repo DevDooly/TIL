@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-23 13:33 | [Spring Data JPA CrudRepository](docs/Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 ...  |
 | 2026-04-21 15:21 | [Consumer Safe Shutdown](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드...  |
 | 2026-04-21 14:05 | [Finding Blocking Operations](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 | 2026-04-21 13:29 | [Tomcat vs Netty](docs/Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Spring Cloud LoadBalancer](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Netflix Ribbon Guide](docs/Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개...  |
-| 2026-04-21 10:51 | [SCG vs Zuul Comparison](docs/Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md) | docs: Spring Cloud Gateway vs Netflix Zuul 아키텍처 비교...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -81,6 +81,7 @@
     * [Spring Cloud Gateway (SCG): 차세대 API Gateway 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Gateway.md)
     * [Spring Cloud LoadBalancer: 현대적인 클라이언트 측 부하 분산 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md)
     * [Spring Cloud Zuul: API Gateway 및 동적 라우팅 가이드](docs/Language/Java/SpringBoot/Spring_Cloud_Zuul.md)
+    * [Spring Data JPA: CrudRepository 가이드](docs/Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md)
     * [K8s 환경에서의 Spring 프로파일 및 설정 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
     * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)
     * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
