@@ -11,6 +11,7 @@ nav:
 - K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
 - JPA: JPA
 - 'Spring Data JPA: CrudRepository': Spring_Data_JPA_CrudRepository.md
+- '비교: SQL 직접 작성 vs JPA': Spring_Data_JPA_vs_JDBI.md
 - Testing: Testing
 - '가상 스레드: Kafka Pinning 이슈': Virtual_Thread_Pinning_Kafka.md
 - '가상 스레드: JDBI Pinning 해결 방법': JDBI_VT_Pinning_Solution.md
