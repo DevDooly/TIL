@@ -10,12 +10,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-28 09:35 | [Profile README Guide](docs/Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
 | 2026-04-23 13:36 | [Spring Data JPA vs JDBI](docs/Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudReposito...  |
 | 2026-04-23 13:33 | [Spring Data JPA CrudRepository](docs/Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 ...  |
 | 2026-04-21 15:21 | [Consumer Safe Shutdown](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드...  |
 | 2026-04-21 14:05 | [Finding Blocking Operations](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 | 2026-04-21 13:29 | [Tomcat vs Netty](docs/Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
-| 2026-04-21 13:10 | [Spring Cloud LoadBalancer](docs/Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -331,6 +331,7 @@
   * [Git Tips](docs/Tools/Git/Tips.md)
 * **Github**
   * [GitHub Actions MkDocs 배포 실패 (Plugin Missing)](docs/Tools/Github/Action_Deploy_Fail.md)
+  * [GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드](docs/Tools/Github/Profile_README_Guide.md)
 * **IDE**
   * [Intellij](docs/Tools/IDE/Intellij.md)
 * **Markdown**

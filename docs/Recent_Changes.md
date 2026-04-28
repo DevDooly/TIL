@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-04-28 09:35 | [Tools/Github/Profile_README_Guide.md](Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
 | 2026-04-23 13:36 | [Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md](Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudRepository) 비교 가이드 추가 |
 | 2026-04-23 13:33 | [Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md](Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 추가 |
 | 2026-04-21 15:21 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [ComputerScience/Math/Fourier transform.md](ComputerScience/Math/Fourier transform.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/OSI 7 Layer.md](ComputerScience/Network/OSI 7 Layer.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Network/RPC.md](ComputerScience/Network/RPC.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
