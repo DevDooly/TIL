@@ -55,7 +55,58 @@ git remote remove origin
    # origin  git@github.com:DevDooly/TIL.git (fetch)
    ```
 
-이제 `git push` 시 SSH 키를 통해 자동으로 인증된다.
+이제 `git push` 시 SSH 키를 통해 자동으로 인증된다. (단, 로컬에 생성된 SSH Public Key가 GitHub 계정에 등록되어 있어야 한다.)
+
+---
+
+## 3. 인증 자동화 상세 방법 (Seamless Push)
+
+매번 비밀번호(Token)를 입력하지 않고 편리하게 Push하기 위한 두 가지 핵심 방법을 정리한다.
+
+### 3.1 SSH 인증 설정 (가장 추천)
+원격 저장소 URL이 `git@github.com:...` 형식일 때 사용한다.
+
+1. **SSH 키 생성** (이미 있다면 건너뜀):
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   # 엔터를 계속 눌러 기본 경로에 저장
+   ```
+
+2. **Public Key 복사**:
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+3. **GitHub 등록**:
+   - GitHub 설정(Settings) -> **SSH and GPG keys** -> **New SSH key** 클릭.
+   - 복사한 내용을 붙여넣고 저장.
+
+### 3.2 HTTPS 방식에서 Credential Helper 사용
+이미 `https://...` URL을 사용 중이고 형식을 바꾸고 싶지 않을 때 사용한다.
+
+* **인증 정보 메모리에 임시 저장** (기본 15분):
+  ```bash
+  git config --global credential.helper cache
+  ```
+
+* **인증 정보 파일에 영구 저장** (보안상 주의):
+  ```bash
+  git config --global credential.helper store
+  ```
+
+  * 한 번 로그인(Token 입력)하면 이후부터는 묻지 않는다. 정보는 `~/.git-credentials` 파일에 평문으로 저장된다.
+
+### 3.3 GitHub CLI 활용 (가장 현대적인 방법)
+GitHub 공식 CLI 도구인 `gh`를 설치하면 로그인 한 번으로 모든 인증이 해결된다.
+```bash
+gh auth login
+# 안내에 따라 브라우저 인증 완료
+```
+
+---
+
+## 4. 활용 팁: 프로필 페이지 업데이트
+GitHub Profile 전용 저장소(자신의 ID와 동일한 이름)와 같이 빈번하게 Push가 발생하는 프로젝트의 경우, 위 인증 설정을 해두면 별도의 입력 없이 로컬 마크다운 수정 후 즉시 반영이 가능하여 작업 생산성이 비약적으로 향상된다.
 
 ## References
 
