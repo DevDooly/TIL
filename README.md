@@ -3,6 +3,43 @@
 
 🌐 **TIL Wiki**: [https://devdooly.github.io/TIL/](https://devdooly.github.io/TIL/)
 
+![Build Status](https://github.com/DevDooly/TIL/actions/workflows/ci.yml/badge.svg)
+![Last Commit](https://img.shields.io/github/last-commit/DevDooly/TIL)
+![License](https://img.shields.io/github/license/DevDooly/TIL)
+
+---
+
+## 🛠 Tech Stack
+
+### Documentation & Site
+![MkDocs](https://img.shields.io/badge/MkDocs-0094FF?style=flat-square&logo=mkdocs&logoColor=white)
+![Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=flat-square&logo=materialformkdocs&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
+![Mermaid](https://img.shields.io/badge/Mermaid-FF69B4?style=flat-square&logo=mermaid&logoColor=white)
+
+### Core Technologies (Documented)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Elastic Stack](https://img.shields.io/badge/Elastic_Stack-005571?style=flat-square&logo=elasticstack&logoColor=white)
+
+### Automation & DevTools
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+---
+
+## ✨ Key Features
+
+*   **Auto Indexing**: Python 스크립트를 통해 최근 변경 사항(`Recent_Changes.md`)과 사이트맵(`Sitemap.md`)을 자동으로 생성합니다.
+*   **Structured Navigation**: `awesome-pages` 플러그인을 사용하여 계층적이고 깔끔한 네비게이션을 제공합니다.
+*   **CI/CD Pipeline**: GitHub Actions를 통해 푸시 시 자동으로 MkDocs 빌드 및 GitHub Pages 배포가 이루어집니다.
+*   **Advanced UI**: Material 테마 기반의 다크 모드, 검색 기능, 그리고 Mermaid.js를 이용한 다이어그램 렌더링을 지원합니다.
+*   **Standardized Workflow**: 전용 배포 스크립트(`publish.sh`)를 통해 컨텐츠 정합성을 유지합니다.
+
 ---
 
 ## 🕒 최근 변경 사항 (Recent Changes)
