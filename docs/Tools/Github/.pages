@@ -1,4 +1,4 @@
 title: Github
 nav:
 - Profile README 꾸미기: Profile_README_Guide.md
-- '...': '*.md'
+- Github Action 배포 실패 트러블슈팅: Action_Deploy_Fail.md
