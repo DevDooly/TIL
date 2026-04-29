@@ -81,8 +81,50 @@ public class PythonApiService {
 
 ---
 
-## 5. 결론
+## 6. 수행 시간이 긴 로직 처리 전략 (Long-Running Tasks)
 
-현대적인 개발 환경에서는 **방법 2(HTTP API)** 방식을 가장 권장합니다. **FastAPI**는 파이썬에서 가장 빠르고 간결하게 API를 만들 수 있는 도구이며, Spring Boot와의 연동도 매우 직관적입니다. 
+Python 로직(AI 모델 추론, 대량 데이터 처리 등)이 수 초에서 수 분 이상 소요될 경우, 기존의 **동기식(Synchronous) 방식**은 심각한 문제를 야기할 수 있습니다.
 
-만약 파이썬 스크립트가 실행되는 환경과 자바 서버가 동일한 로컬 환경이라면 **ProcessBuilder**로 시작해 보시는 것도 좋은 출발점입니다.
+### ⚠️ 동기 호출 시 발생하는 문제
+
+* **스레드 차단(Thread Blocking)**: Spring Boot의 Tomcat 스레드가 Python 작업이 끝날 때까지 대기 상태가 되어, 동시 접속자가 많아질 경우 서버 전체가 응답 불능 상태에 빠질 수 있습니다.
+* **타임아웃 관리 어려움**: 네트워크나 프로세스 수준의 타임아웃 설정을 정교하게 관리하지 않으면, 좀비 프로세스가 생성되거나 연결이 강제로 끊길 수 있습니다.
+* **리소스 고갈**: 요청마다 프로세스를 생성하거나 긴 시간 스레드를 점유하는 것은 메모리와 CPU에 큰 부담을 줍니다.
+
+### ✅ 권장 해결 방안
+
+#### A. Spring `@Async`를 이용한 비동기 호출
+가장 간단한 방법으로, Spring의 스레드 풀을 사용하여 호출 자체를 비동기로 만듭니다.
+
+* **방식**: 클라이언트는 즉시 응답(202 Accepted)을 받고, 작업은 백그라운드에서 진행됩니다.
+* **코드 예시**:
+    ```java
+    @Async
+    public CompletableFuture<String> runLongPythonTask(String data) {
+        // ProcessBuilder 또는 WebClient 호출 로직
+        return CompletableFuture.completedFuture(result);
+    }
+    ```
+
+#### B. 비동기 작업 큐 (Python Side) + Polling/Webhook
+Python 서버(FastAPI/Flask) 내부에 **Celery**나 **RQ** 같은 작업 큐를 도입합니다.
+
+* **흐름**: Spring -> Python API (작업 등록) -> 즉시 Task ID 반환 -> Python 워커가 백그라운드 처리 -> Spring에서 상태 확인(Polling) 또는 Python이 결과 알림(Webhook).
+
+#### C. 메시지 큐(Message Queue) 도입 (가장 견고한 방식)
+Spring Boot와 Python 사이에 RabbitMQ, Kafka, Redis Pub/Sub 등을 둡니다.
+
+* **장점**: 두 서비스 간의 결합도가 가장 낮으며, Python 워커를 자유롭게 확장(Scale-out)할 수 있습니다.
+* **구조**: `[Spring Boot] --(Job)--> [RabbitMQ] --(Process)--> [Python Worker]`
+
+---
+
+## 7. 결론 및 요약
+
+| 상황 | 추천 방식 | 비고 |
+| :--- | :--- | :--- |
+| **짧은 작업 (1~2초 내)** | **HTTP API (FastAPI)** | 가장 직관적이고 표준적임 |
+| **긴 작업 (5초 이상)** | **비동기 큐 (Celery/RabbitMQ)** | 시스템 안정성을 위해 필수 |
+| **단발성/단순 실행** | **ProcessBuilder** | 오버헤드 주의 |
+
+단순히 "동작하는 것"이 목표라면 직접 호출도 가능하지만, **운영 환경과 확장성**을 고려한다면 **FastAPI를 이용한 HTTP API 방식**이나 **메시지 큐를 통한 비동기 처리**를 강력히 권장합니다.

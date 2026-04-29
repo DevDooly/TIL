@@ -47,7 +47,7 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-04-29 12:56 | [Spring Python Integration](docs/Language/Java/Spring_Python_Integration.md) | docs: Java/Spring Boot와 Python 연동 전략 가이드 추가 |
+| 2026-04-29 13:18 | [Spring Python Integration](docs/Language/Java/Spring_Python_Integration.md) | docs: Spring Boot와 Python 연동 시 긴 작업 처리 전략 추가 |
 | 2026-04-28 10:04 | [Remote Settings](docs/Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝...  |
 | 2026-04-28 09:35 | [Profile README Guide](docs/Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
 | 2026-04-23 13:36 | [Spring Data JPA vs JDBI](docs/Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudReposito...  |
