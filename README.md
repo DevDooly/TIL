@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-29 12:56 | [Spring Python Integration](docs/Language/Java/Spring_Python_Integration.md) | docs: Java/Spring Boot와 Python 연동 전략 가이드 추가 |
 | 2026-04-28 10:04 | [Remote Settings](docs/Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝...  |
 | 2026-04-28 09:35 | [Profile README Guide](docs/Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
 | 2026-04-23 13:36 | [Spring Data JPA vs JDBI](docs/Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudReposito...  |
 | 2026-04-23 13:33 | [Spring Data JPA CrudRepository](docs/Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 ...  |
 | 2026-04-21 15:21 | [Consumer Safe Shutdown](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드...  |
-| 2026-04-21 14:05 | [Finding Blocking Operations](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -89,6 +89,7 @@
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java Memory Structure (JVM Runtime Data Areas)](docs/Language/Java/Memory.md)
   * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](docs/Language/Java/Scoped_Value.md)
+  * [Java/Spring Boot와 Python 연동 가이드](docs/Language/Java/Spring_Python_Integration.md)
   * [Java ThreadPoolExecutor와 거부 정책(Rejection Policy)](docs/Language/Java/ThreadPoolExecutor.md)
   * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
   * [K8s 환경에서의 Java Virtual Thread 사용 분석](docs/Language/Java/Virtual_Threads_in_K8s.md)

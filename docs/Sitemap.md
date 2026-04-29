@@ -13,6 +13,7 @@
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
         * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](Language/Java/Scoped_Value.md)
+        * [Java/Spring Boot와 Python 연동 가이드](Language/Java/Spring_Python_Integration.md)
         * [Java ThreadPoolExecutor와 거부 정책(Rejection Policy)](Language/Java/ThreadPoolExecutor.md)
         * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](Language/Java/Virtual_Threads_FTP_Pinning.md)
         * [K8s 환경에서의 Java Virtual Thread 사용 분석](Language/Java/Virtual_Threads_in_K8s.md)
