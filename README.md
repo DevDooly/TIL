@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-04-30 08:57 | [Server Execution Methods](docs/Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
 | 2026-04-29 13:18 | [Spring Python Integration](docs/Language/Java/Spring_Python_Integration.md) | docs: Spring Boot와 Python 연동 시 긴 작업 처리 전략 추가 |
 | 2026-04-28 10:04 | [Remote Settings](docs/Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝...  |
 | 2026-04-28 09:35 | [Profile README Guide](docs/Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
 | 2026-04-23 13:36 | [Spring Data JPA vs JDBI](docs/Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudReposito...  |
 | 2026-04-23 13:33 | [Spring Data JPA CrudRepository](docs/Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 ...  |
-| 2026-04-21 15:21 | [Consumer Safe Shutdown](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -157,6 +157,7 @@
   * [PyQt5](docs/Language/Python/PyQt5.md)
   * [Imports](docs/Language/Python/Refactoring.md)
   * [SQLAlchemy](docs/Language/Python/SQLAlchemy.md)
+  * [Python Web Server 실행 방식 비교: `python main.py` vs CLI Runner](docs/Language/Python/Server_Execution_Methods.md)
   * [Socket Programming](docs/Language/Python/Socket Programming.md)
   * [orjson](docs/Language/Python/orjson.md)
   * [Retry](docs/Language/Python/retry.md)

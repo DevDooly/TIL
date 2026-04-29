@@ -81,6 +81,7 @@
         * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)
         * [SQLAlchemy](Language/Python/SQLAlchemy.md)
+        * [Python Web Server 실행 방식 비교: `python main.py` vs CLI Runner](Language/Python/Server_Execution_Methods.md)
         * [Socket Programming](Language/Python/Socket Programming.md)
         * [orjson](Language/Python/orjson.md)
         * [Retry](Language/Python/retry.md)
