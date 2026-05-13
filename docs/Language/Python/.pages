@@ -1,6 +1,11 @@
 title: Python
 nav:
 - Index: README.md
+- Environment & Execution:
+  - Conda vs Miniconda: Conda_Anaconda_Miniconda.md
+  - Basic Execution: Basic_Execution_Guide.md
+  - Server Execution Methods: Server_Execution_Methods.md
+  - Offline Installation: Offline_Installation_Guide.md
 - Core Concepts:
   - Comprehension: Comprehension.md
   - Static Method: 정적메소드.md
@@ -8,6 +13,7 @@ nav:
   - Designing Modules: Designing Modules in Python.md
   - Refactoring: Refactoring.md
 - Network & Web:
+  - FastAPI Concurrency: FastAPI_Concurrency_Mechanism.md
   - Socket Programming: Socket Programming.md
   - AIOHTTP vs Flask: AIOHTTP vs Flask.md
   - Celery: Celery.md
