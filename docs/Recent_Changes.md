@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-13 15:30 | [Language/Python/Gunicorn_vs_Uvicorn.md](Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:17 | [Language/Python/FastAPI_Concurrency_Mechanism.md](Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
 | 2026-05-13 15:14 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: Python 3.13, 3.14 비권장 사유 추가 및 3.12 추천 강화 |
 | 2026-05-13 14:33 | [Language/Python/Basic_Execution_Guide.md](Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [AI/TurboQuant.md](AI/TurboQuant.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/n8n.md](AI/n8n.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/Architecture/High_Availability.md](ComputerScience/Architecture/High_Availability.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/Architecture/Pipeline.md](ComputerScience/Architecture/Pipeline.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |

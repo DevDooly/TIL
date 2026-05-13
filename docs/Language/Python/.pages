@@ -5,6 +5,7 @@ nav:
   - Conda vs Miniconda: Conda_Anaconda_Miniconda.md
   - Basic Execution: Basic_Execution_Guide.md
   - Server Execution Methods: Server_Execution_Methods.md
+  - Gunicorn vs Uvicorn: Gunicorn_vs_Uvicorn.md
   - Offline Installation: Offline_Installation_Guide.md
 - Core Concepts:
   - Comprehension: Comprehension.md
