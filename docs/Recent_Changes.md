@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-05-13 15:09 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: 폐쇄망 환경 Python 설치 가이드 업데이트 (3.9 -&gt; 3.12) |
+| 2026-05-13 15:14 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: Python 3.13, 3.14 비권장 사유 추가 및 3.12 추천 강화 |
 | 2026-05-13 14:33 | [Language/Python/Basic_Execution_Guide.md](Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
 | 2026-05-13 14:28 | [Language/Python/Conda_Anaconda_Miniconda.md](Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
 | 2026-04-30 08:57 | [Language/Python/Server_Execution_Methods.md](Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
