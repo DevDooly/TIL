@@ -80,7 +80,7 @@
         * [Comprehension](Language/Python/Comprehension.md)
         * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](Language/Python/Conda_Anaconda_Miniconda.md)
         * [Designing Modules in Python (모듈 설계)](Language/Python/Designing Modules in Python.md)
-        * [폐쇄망 환경 Python 3.9 설치 가이드](Language/Python/Offline_Installation_Guide.md)
+        * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](Language/Python/Offline_Installation_Guide.md)
         * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)
         * [SQLAlchemy](Language/Python/SQLAlchemy.md)
