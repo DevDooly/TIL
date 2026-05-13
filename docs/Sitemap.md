@@ -75,6 +75,7 @@
     * **Python**
         * [Python](Language/Python/README.md)
         * [client.py](Language/Python/AIOHTTP vs Flask.md)
+        * [Python 스크립트 실행 가이드: `python3 main.py`](Language/Python/Basic_Execution_Guide.md)
         * [Celery](Language/Python/Celery.md)
         * [Comprehension](Language/Python/Comprehension.md)
         * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](Language/Python/Conda_Anaconda_Miniconda.md)

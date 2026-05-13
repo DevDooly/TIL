@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-05-13 14:33 | [Basic Execution Guide](docs/Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
 | 2026-05-13 14:28 | [Conda Anaconda Miniconda](docs/Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
 | 2026-04-30 08:57 | [Server Execution Methods](docs/Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
 | 2026-04-29 13:18 | [Spring Python Integration](docs/Language/Java/Spring_Python_Integration.md) | docs: Spring Boot와 Python 연동 시 긴 작업 처리 전략 추가 |
 | 2026-04-28 10:04 | [Remote Settings](docs/Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝...  |
 | 2026-04-28 09:35 | [Profile README Guide](docs/Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
-| 2026-04-23 13:36 | [Spring Data JPA vs JDBI](docs/Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudReposito...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -151,6 +151,7 @@
 * **Python**
   * [**Overview**](docs/Language/Python/README.md)
   * [client.py](docs/Language/Python/AIOHTTP vs Flask.md)
+  * [Python 스크립트 실행 가이드: `python3 main.py`](docs/Language/Python/Basic_Execution_Guide.md)
   * [Celery](docs/Language/Python/Celery.md)
   * [Comprehension](docs/Language/Python/Comprehension.md)
   * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](docs/Language/Python/Conda_Anaconda_Miniconda.md)
