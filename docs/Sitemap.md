@@ -80,6 +80,7 @@
         * [Comprehension](Language/Python/Comprehension.md)
         * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](Language/Python/Conda_Anaconda_Miniconda.md)
         * [Designing Modules in Python (모듈 설계)](Language/Python/Designing Modules in Python.md)
+        * [FastAPI의 동시성(Concurrency) 처리 메커니즘](Language/Python/FastAPI_Concurrency_Mechanism.md)
         * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](Language/Python/Offline_Installation_Guide.md)
         * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)
