@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-05-14 08:36 | [venv vs Conda](docs/Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:30 | [Gunicorn vs Uvicorn](docs/Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:17 | [FastAPI Concurrency Mechanism](docs/Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
 | 2026-05-13 15:14 | [Offline Installation Guide](docs/Language/Python/Offline_Installation_Guide.md) | docs: Python 3.13, 3.14 비권장 사유 추가 및 3.12 추천 강화 |
 | 2026-05-13 14:33 | [Basic Execution Guide](docs/Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
 | 2026-05-13 14:28 | [Conda Anaconda Miniconda](docs/Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
-| 2026-04-30 08:57 | [Server Execution Methods](docs/Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -167,6 +167,7 @@
   * [orjson](docs/Language/Python/orjson.md)
   * [Retry](docs/Language/Python/retry.md)
   * [Tokenizer](docs/Language/Python/tokenizer.md)
+  * [venv vs Conda: 어떤 가상환경을 선택해야 할까?](docs/Language/Python/venv_vs_Conda.md)
   * [MetaClass (메타클래스)](docs/Language/Python/메타클래스.md)
   * [정적메소드 (@staticmethod, @classmethod)](docs/Language/Python/정적메소드.md)
   * **Lib**

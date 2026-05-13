@@ -3,6 +3,7 @@ nav:
 - Index: README.md
 - Environment & Execution:
   - Conda vs Miniconda: Conda_Anaconda_Miniconda.md
+  - venv vs Conda: venv_vs_Conda.md
   - Basic Execution: Basic_Execution_Guide.md
   - Server Execution Methods: Server_Execution_Methods.md
   - Gunicorn vs Uvicorn: Gunicorn_vs_Uvicorn.md

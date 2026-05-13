@@ -91,6 +91,7 @@
         * [orjson](Language/Python/orjson.md)
         * [Retry](Language/Python/retry.md)
         * [Tokenizer](Language/Python/tokenizer.md)
+        * [venv vs Conda: 어떤 가상환경을 선택해야 할까?](Language/Python/venv_vs_Conda.md)
         * [MetaClass (메타클래스)](Language/Python/메타클래스.md)
         * [정적메소드 (@staticmethod, @classmethod)](Language/Python/정적메소드.md)
         * **pika**
