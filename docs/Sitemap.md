@@ -77,6 +77,7 @@
         * [client.py](Language/Python/AIOHTTP vs Flask.md)
         * [Celery](Language/Python/Celery.md)
         * [Comprehension](Language/Python/Comprehension.md)
+        * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](Language/Python/Conda_Anaconda_Miniconda.md)
         * [Designing Modules in Python (모듈 설계)](Language/Python/Designing Modules in Python.md)
         * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)

@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-13 14:28 | [Language/Python/Conda_Anaconda_Miniconda.md](Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
 | 2026-04-30 08:57 | [Language/Python/Server_Execution_Methods.md](Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
 | 2026-04-29 13:18 | [Language/Java/Spring_Python_Integration.md](Language/Java/Spring_Python_Integration.md) | docs: Spring Boot와 Python 연동 시 긴 작업 처리 전략 추가 |
 | 2026-04-28 10:04 | [Tools/Git/Remote_Settings.md](Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝트 활용 팁 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [ComputerScience/DesignPattern/StatePattern.md](ComputerScience/DesignPattern/StatePattern.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/FileSystem/FileSystem.md](ComputerScience/FileSystem/FileSystem.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [ComputerScience/FileSystem/HDF5.md](ComputerScience/FileSystem/HDF5.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md](ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
