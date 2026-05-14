@@ -18,18 +18,22 @@
 *주의: 설치 대상 서버와 OS(Linux/Windows) 및 Python 버전이 동일해야 합니다.*
 
 ### 💻 패키지 다운로드 명령어
+
+#### **Best Practice: 버전 명시 (Pinning)**
+단순히 패키지 이름만 적기보다, `pip freeze`를 통해 검증된 버전을 명시하는 것이 중요합니다.
 ```bash
-# 1. 프로젝트 디렉토리 이동 및 패키지 목록 작성
-mkdir my_project_pkgs
-echo "fastapi" >> requirements.txt
-echo "uvicorn" >> requirements.txt
+# 1. (외부망 개발환경) 테스트 완료 후 버전 박제
+pip freeze > requirements.txt
 
-# 2. 패키지 및 의존성 전체 다운로드 (-d 옵션으로 경로 지정)
+# 2. 박제된 목록으로 다운로드
 pip download -d ./my_project_pkgs -r requirements.txt
-
-# (선택 사항) pip 자체 업데이트가 필요할 경우를 대비하여 필수 도구도 지참
-pip download -d ./my_project_pkgs pip setuptools wheel
 ```
+
+| 표기법 | 의미 | 특징 |
+| :--- | :--- | :--- |
+| `fastapi==0.110.0` | 정확한 버전 | **폐쇄망 배포 시 강력 권장** |
+| `fastapi~=0.110.0` | 0.110.x 범위 내 최신 | 호환성을 유지하며 패치 수용 |
+| `fastapi>=0.100.0` | 최소 버전 지정 | 버전 미지정보다는 낫지만 위험함 |
 
 ---
 
