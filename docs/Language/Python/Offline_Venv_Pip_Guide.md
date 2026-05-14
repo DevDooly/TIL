@@ -80,12 +80,22 @@ pip download \
     -d ./my_project_pkgs -r requirements.txt
 ```
 
-### 🔹 "No matching distribution found" 에러
-이 에러는 주로 다음과 같은 상황에서 발생합니다.
+### 🔹 "No matching distribution found" 에러 (예: pandas==3.0.3)
+지정한 버전을 찾지 못해 다운로드에 실패하는 경우 다음 절차를 따르세요.
 
-* 의존성 중 하나가 누락되어 반입된 경우.
-* Python 버전이 맞지 않아 해당 버전에 맞는 `.whl` 파일이 없는 경우.
-* OS 아키텍처(x86_64 등)가 맞지 않는 경우.
+1. **실제 존재 여부 확인**: `pip index versions [패키지명]` 명령어로 PyPI에 해당 버전이 존재하는지 확인합니다. (오타 확인 필수)
+2. **Pip 업그레이드**: 오래된 pip는 최신 패키지를 찾지 못할 수 있습니다.
+    ```bash
+    python3 -m pip install --upgrade pip
+    ```
+
+3. **Python 버전 호환성 체크**: 최신 패키지는 구형 Python(예: 3.7 이하)을 지원하지 않을 수 있습니다. 대상 서버의 Python 버전과 호환되는지 확인하세요.
+4. **플랫폼 불일치 (Cross-Download)**: 현재 PC와 대상 서버의 OS가 다른 경우, `--platform` 옵션을 명시하지 않으면 해당 환경에 맞는 패키지를 찾지 못해 에러가 발생합니다.
+    ```bash
+    # 예: Linux용 pandas 3.0.3을 Windows에서 다운로드할 때
+    pip download --only-binary=:all: --platform manylinux1_x86_64 --python-version 3.12 -d ./pkgs pandas==3.0.3
+    ```
+
 
 ---
 
