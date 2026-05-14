@@ -47,7 +47,7 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-05-14 09:02 | [Offline Installation Guide](docs/Language/Python/Offline_Installation_Guide.md) | docs: CentOS 7 OpenSSL 버전 문제 해결 가이드 추가 |
+| 2026-05-14 09:05 | [Offline Installation Guide](docs/Language/Python/Offline_Installation_Guide.md) | docs: CentOS 7 OpenSSL 대응 가이드를 보안상 안전한 3.0(LTS) 버전...  |
 | 2026-05-14 08:36 | [venv vs Conda](docs/Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:30 | [Gunicorn vs Uvicorn](docs/Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:17 | [FastAPI Concurrency Mechanism](docs/Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
