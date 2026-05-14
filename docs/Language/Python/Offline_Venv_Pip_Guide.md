@@ -69,12 +69,17 @@ pip install --no-index --find-links=./my_project_pkgs -r requirements.txt
 ## 4. 트러블슈팅 및 팁
 
 ### 🔹 플랫폼이 다른 경우 (Cross-Platform)
-인터넷 PC는 Windows인데 폐쇄망은 Linux인 경우, 다운로드 시 플랫폼을 명시해야 합니다.
+인터넷 PC는 Windows인데 폐쇄망은 Linux(CentOS 7 등)인 경우, 다운로드 시 플랫폼을 정확히 명시해야 합니다.
+
+* **CentOS 7 권장 태그**: `manylinux2014_x86_64` (또는 `manylinux_2_17_x86_64`)
+* **구형 리눅스**: `manylinux1_x86_64` (최신 패키지는 지원 안 할 수 있음)
+
 ```bash
+# 예시: Windows에서 CentOS 7(Python 3.12)용 패키지 다운로드
 pip download \
     --only-binary=:all: \
-    --platform manylinux1_x86_64 \
-    --python-version 3.12 \
+    --platform manylinux2014_x86_64 \
+    --python-version 312 \
     --implementation cp \
     --abi cp312 \
     -d ./my_project_pkgs -r requirements.txt
