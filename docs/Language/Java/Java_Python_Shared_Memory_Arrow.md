@@ -45,22 +45,51 @@ try (FileOutputStream fos = new FileOutputStream(file);
 }
 ```
 
-### Step 2: Python에서 데이터 읽기 (Zero-Copy)
-Python은 `pyarrow`를 사용하여 해당 파일을 메모리 맵으로 엽니다.
+### Step 2: Java에서 Python 프로세스 호출
+데이터가 준비되면 Java는 `ProcessBuilder`를 사용하여 Python 스크립트를 실행합니다. 이때 생성한 `.arrow` 파일의 경로를 인자로 전달합니다.
+
+```java
+public void callPythonProcessor(String arrowFilePath) throws Exception {
+    // 1. 실행할 명령어 구성 (python3 script.py path/to/data.arrow)
+    ProcessBuilder pb = new ProcessBuilder("python3", "processor.py", arrowFilePath);
+    pb.inheritIO(); // Python의 로그를 Java 콘솔에서 바로 확인 가능
+
+    // 2. 프로세스 실행
+    Process process = pb.start();
+
+    // 3. 작업 완료 대기 (필요 시 타임아웃 설정 권장)
+    int exitCode = process.waitFor();
+    
+    if (exitCode == 0) {
+        System.out.println("Python 처리 완료. 결과를 읽습니다.");
+        // 결과 파일 또는 mmap 업데이트된 내용을 읽는 로직 수행
+    } else {
+        System.err.println("Python 처리 중 에러 발생. Exit Code: " + exitCode);
+    }
+}
+```
+
+### Step 3: Python에서 데이터 읽기 (Zero-Copy)
+Python은 전달받은 경로를 통해 메모리 맵으로 파일을 엽니다.
 
 ```python
+import sys
 import pyarrow as pa
 import pyarrow.ipc as ipc
 
-# 파일을 메모리 매핑으로 열기
-with pa.memory_map('data.arrow', 'r') as mmap:
-    # IPC 포맷으로 데이터 로드
-    table = ipc.open_file(mmap).read_all()
-    # Pandas로 변환 (복사 없이 뷰만 생성 가능)
-    df = table.to_pandas()
-    
-    # 처리 로직 수행
-    print(df.head())
+def main(file_path):
+    # 파일을 메모리 매핑으로 열기
+    with pa.memory_map(file_path, 'r') as mmap:
+        # IPC 포맷으로 데이터 로드
+        table = ipc.open_file(mmap).read_all()
+        df = table.to_pandas()
+        
+        # 처리 로직 수행 (예: AI 모델 추론 등)
+        print(f"데이터 {len(df)}건 처리 중...")
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        main(sys.argv[1])
 ```
 
 ---

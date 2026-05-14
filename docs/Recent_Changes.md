@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-05-14 16:09 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java-Python 간 Apache Arrow 및 mmap 활용 데이터 교환 가이드 추가 |
+| 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
 | 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
 | 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
 | 2026-05-14 08:36 | [Language/Python/venv_vs_Conda.md](Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
