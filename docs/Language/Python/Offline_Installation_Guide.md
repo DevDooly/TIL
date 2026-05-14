@@ -29,11 +29,12 @@ wget https://www.python.org/ftp/python/3.12.3/Python-3.12.3.tar.xz
 ```
 
 ### 🔹 필수 빌드 의존성 (OS ISO 등에서 준비)
-Python 3.12 빌드를 위해 다음 패키지들이 서버에 미리 설치되어 있어야 합니다.
+Python 3.12 및 OpenSSL 3.0 빌드를 위해 다음 패키지들이 서버에 미리 설치되어 있어야 합니다.
 
-* **필수**: `gcc`, `make`, `libffi-devel`, `zlib-devel`, `bzip2-devel`, `readline-devel`, `sqlite-devel`
-* **보안/네트워크**: `openssl-devel` (최소 1.1.1 이상 필요)
+* **필수**: `gcc`, `make`, `perl-core` (OpenSSL 3.0 빌드 시 필수), `libffi-devel`, `zlib-devel`, `bzip2-devel`, `readline-devel`, `sqlite-devel`
+* **보안/네트워크**: `openssl-devel` (시스템 기본용)
 * **기타**: `tk-devel`, `gdbm-devel`, `db4-devel`, `libpcap-devel`, `xz-devel`
+
 
 ---
 
@@ -136,6 +137,7 @@ sudo make altinstall
 
 ### 💡 기타 팁
 
+* **OpenSSL 빌드 시 Makefile 없음**: `./config` 실행 후 `Makefile`이 생기지 않는다면 대부분 **Perl(특히 perl-core)** 패키지가 설치되지 않아 설정이 중간에 실패한 것입니다. `./config`의 마지막 출력 메시지를 확인하여 에러 여부를 체크하세요.
 * **SQLite/SSL 임포트 에러**: 설치 후 `import ssl` 또는 `import sqlite3` 실행 시 에러가 난다면, 빌드 시점에 해당 개발 라이브러리(`devel`)가 없었기 때문입니다. 라이브러리 설치 후 `make` 과정부터 다시 진행해야 합니다.
 * **Conda Pack 활용**: 빌드 과정이 너무 복잡하다면, 동일 OS 환경의 외부망에서 Conda 환경을 만든 뒤 `conda-pack`으로 압축하여 옮기는 것이 가장 간편합니다.
 
