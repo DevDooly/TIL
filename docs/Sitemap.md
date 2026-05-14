@@ -11,6 +11,7 @@
         * [Java/Spring Boot: 현재 스레드가 가상 스레드인지 확인하는 방법](Language/Java/Check_Virtual_Thread.md)
         * [Java Garbage Collection (GC)](Language/Java/Garbage_Collection.md)
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
+        * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
         * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](Language/Java/Scoped_Value.md)
         * [Java/Spring Boot와 Python 연동 가이드](Language/Java/Spring_Python_Integration.md)

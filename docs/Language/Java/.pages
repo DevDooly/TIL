@@ -14,6 +14,7 @@ nav:
   - Virtual Threads in K8s: Virtual_Threads_in_K8s.md
   - Virtual Threads FTP Pinning: Virtual_Threads_FTP_Pinning.md
 - Spring-Python 연동 가이드: Spring_Python_Integration.md
+- Java-Python Shared Memory (Arrow): Java_Python_Shared_Memory_Arrow.md
 - Libraries:
   - Caffeine Cache: Caffeine_Cache.md
 - SpringBoot: SpringBoot
