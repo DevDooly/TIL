@@ -83,6 +83,7 @@
         * [FastAPI의 동시성(Concurrency) 처리 메커니즘](Language/Python/FastAPI_Concurrency_Mechanism.md)
         * [Gunicorn vs Uvicorn: 개념과 운영 환경 구축 전략](Language/Python/Gunicorn_vs_Uvicorn.md)
         * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](Language/Python/Offline_Installation_Guide.md)
+        * [오프라인 환경에서 `venv` 및 `pip` 패키지 설치 가이드](Language/Python/Offline_Venv_Pip_Guide.md)
         * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)
         * [SQLAlchemy](Language/Python/SQLAlchemy.md)

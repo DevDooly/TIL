@@ -8,6 +8,7 @@ nav:
   - Server Execution Methods: Server_Execution_Methods.md
   - Gunicorn vs Uvicorn: Gunicorn_vs_Uvicorn.md
   - Offline Installation: Offline_Installation_Guide.md
+  - Offline Venv & Pip Guide: Offline_Venv_Pip_Guide.md
 - Core Concepts:
   - Comprehension: Comprehension.md
   - Static Method: 정적메소드.md

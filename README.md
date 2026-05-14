@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-05-14 09:48 | [Offline Venv Pip Guide](docs/Language/Python/Offline_Venv_Pip_Guide.md) | docs: 오프라인 환경 venv 및 pip 설치 가이드 추가 |
 | 2026-05-14 09:27 | [Offline Installation Guide](docs/Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 3.0 빌드 시 Perl 의존성 및 Makefile 누락 해결 가...  |
 | 2026-05-14 08:36 | [venv vs Conda](docs/Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:30 | [Gunicorn vs Uvicorn](docs/Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
 | 2026-05-13 15:17 | [FastAPI Concurrency Mechanism](docs/Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
 | 2026-05-13 14:33 | [Basic Execution Guide](docs/Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
-| 2026-05-13 14:28 | [Conda Anaconda Miniconda](docs/Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -159,6 +159,7 @@
   * [FastAPI의 동시성(Concurrency) 처리 메커니즘](docs/Language/Python/FastAPI_Concurrency_Mechanism.md)
   * [Gunicorn vs Uvicorn: 개념과 운영 환경 구축 전략](docs/Language/Python/Gunicorn_vs_Uvicorn.md)
   * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](docs/Language/Python/Offline_Installation_Guide.md)
+  * [오프라인 환경에서 `venv` 및 `pip` 패키지 설치 가이드](docs/Language/Python/Offline_Venv_Pip_Guide.md)
   * [PyQt5](docs/Language/Python/PyQt5.md)
   * [Imports](docs/Language/Python/Refactoring.md)
   * [SQLAlchemy](docs/Language/Python/SQLAlchemy.md)
