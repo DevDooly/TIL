@@ -106,25 +106,25 @@ openssl version
 # OpenSSL 1.0.2k-fips  26 Jan 2017 -> (업데이트 필요)
 ```
 
-#### ② 해결 방법: OpenSSL 3.0 (LTS) 별도 빌드
-OpenSSL 1.1.1은 이미 지원이 종료(EOL)되었으므로, 보안상 **OpenSSL 3.0 이상**을 설치하는 것을 권장합니다. 폐쇄망 환경이라면 OpenSSL 3.0 소스(예: `openssl-3.0.13.tar.gz`)를 미리 반입합니다.
+#### ② 해결 방법: OpenSSL 1.1.1w 별도 빌드 (또는 기존 설치 경로 활용)
+보안상 3.0 이상이 권장되나, 특정 환경에 따라 1.1.1w 버전을 사용해야 할 경우 다음 경로를 기준으로 작업합니다. (예: `/opt/openssl-1.1.1`에 이미 설치된 경우)
 
 ```bash
-# OpenSSL 3.0 빌드 및 설치
-tar -xf openssl-3.0.13.tar.gz
-cd openssl-3.0.13
-./config --prefix=/usr/local/openssl3 --openssldir=/usr/local/openssl3 shared zlib
+# (새로 설치가 필요한 경우만 실행) OpenSSL 1.1.1w 빌드 및 설치
+tar -xf openssl-1.1.1w.tar.gz
+cd openssl-1.1.1w
+./config --prefix=/opt/openssl-1.1.1 --openssldir=/opt/openssl-1.1.1 shared zlib
 make -j $(nproc)
 sudo make install
 ```
 
 #### ③ Python 빌드 시 새 OpenSSL 연결
-Python `configure` 실행 시 위에서 설치한 OpenSSL 3.0 경로를 명시해야 합니다.
+Python `configure` 실행 시 설치된 OpenSSL 1.1.1w 경로(`/opt/openssl-1.1.1`)를 명시합니다.
 
 ```bash
 cd ../Python-3.12.3
 ./configure --enable-optimizations \
-            --with-openssl=/usr/local/openssl3 \
+            --with-openssl=/opt/openssl-1.1.1 \
             --with-openssl-rpath=auto \
             --prefix=/usr/local/python3.12
 
@@ -132,8 +132,9 @@ make -j $(nproc)
 sudo make altinstall
 ```
 
-* `--with-openssl`: 새로 빌드한 OpenSSL 3.0 경로 지정.
-* `--with-openssl-rpath=auto`: 실행 시 라이브러리 경로를 자동으로 찾도록 설정.
+* `--with-openssl`: `/opt/openssl-1.1.1` 경로를 지정하여 1.1.1w 버전을 사용하도록 설정.
+* `--with-openssl-rpath=auto`: 실행 시 라이브러리 경로를 수동으로 지정하지 않아도 자동으로 찾도록 설정.
+
 
 ### 💡 기타 팁
 
