@@ -94,8 +94,53 @@ pip3 install --no-index --find-links=./pkgs pandas fastapi uvicorn
 
 ---
 
-## 6. 주의사항 및 팁
+## 6. 주의사항 및 팁 (특히 CentOS 7 환경)
 
-* **OpenSSL 버전 확인**: Python 3.10 이상은 OpenSSL 1.1.1 이상이 필수입니다. 만약 OS(CentOS 7 등)의 OpenSSL 버전이 낮다면 OpenSSL도 별도로 컴파일하여 설치해야 합니다.
+### ⚠️ CentOS 7의 OpenSSL 버전 문제
+CentOS 7의 기본 OpenSSL 버전은 `1.0.2k`입니다. 하지만 **Python 3.10 이상은 OpenSSL 1.1.1 이상**을 요구하므로, 그대로 빌드하면 `_ssl` 모듈 임포트에 실패하거나 `make` 중 에러가 발생합니다.
+
+#### ① 현재 OpenSSL 버전 확인
+```bash
+openssl version
+# OpenSSL 1.0.2k-fips  26 Jan 2017 -> (업데이트 필요)
+```
+
+#### ② 해결 방법: OpenSSL 1.1.1 별도 빌드
+폐쇄망 환경이라면 OpenSSL 1.1.1 소스(예: `openssl-1.1.1w.tar.gz`)를 미리 반입해야 합니다.
+
+```bash
+# OpenSSL 1.1.1 빌드 및 설치
+tar -xf openssl-1.1.1w.tar.gz
+cd openssl-1.1.1w
+./config --prefix=/usr/local/openssl1.1.1 --openssldir=/usr/local/openssl1.1.1 shared zlib
+make -j $(nproc)
+sudo make install
+```
+
+#### ③ Python 빌드 시 새 OpenSSL 연결
+Python `configure` 실행 시 위에서 설치한 OpenSSL 경로를 명시해야 합니다.
+
+```bash
+cd ../Python-3.12.3
+./configure --enable-optimizations \
+            --with-openssl=/usr/local/openssl1.1.1 \
+            --with-openssl-rpath=auto \
+            --prefix=/usr/local/python3.12
+
+make -j $(nproc)
+sudo make altinstall
+```
+
+* `--with-openssl`: 새로 빌드한 OpenSSL 경로 지정.
+* `--with-openssl-rpath=auto`: 실행 시 라이브러리 경로를 자동으로 찾도록 설정.
+
+### 💡 기타 팁
+
 * **SQLite/SSL 임포트 에러**: 설치 후 `import ssl` 또는 `import sqlite3` 실행 시 에러가 난다면, 빌드 시점에 해당 개발 라이브러리(`devel`)가 없었기 때문입니다. 라이브러리 설치 후 `make` 과정부터 다시 진행해야 합니다.
 * **Conda Pack 활용**: 빌드 과정이 너무 복잡하다면, 동일 OS 환경의 외부망에서 Conda 환경을 만든 뒤 `conda-pack`으로 압축하여 옮기는 것이 가장 간편합니다.
+
+---
+
+## 7. 결론
+
+폐쇄망 환경의 Python 설치는 **사전 의존성 패키지 확보**가 성공의 90%를 결정합니다. 특히 CentOS 7과 같이 오래된 OS를 사용하는 경우 OpenSSL 버전을 반드시 미리 체크해야 합니다.
