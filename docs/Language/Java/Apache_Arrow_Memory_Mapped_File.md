@@ -228,7 +228,12 @@ public class AnalysisService {
     * **옵션**: `--add-opens=java.base/java.nio=ALL-UNNAMED`
     * **자동 설정 방법 (추천)**:
         * **환경 변수**: `JAVA_TOOL_OPTIONS`에 등록하면 모든 실행 시 자동 적용됩니다.
-        * **Maven 설정**: 프로젝트 루트에 `.mvn/jvm.config` 파일을 만들고 옵션을 적어두면 Maven 실행 시 자동 적용됩니다.
+        * **Maven 설정**: 프로젝트 루트에 `.mvn/jvm.config` 파일을 만들고 아래 내용을 입력하면 Maven 실행 시 자동 적용됩니다.
+            ```text
+            --add-opens=java.base/java.nio=ALL-UNNAMED
+            -XX:MaxDirectMemorySize=2G
+            ```
+
     * **이유**: JDK의 강한 캡슐화(Strong Encapsulation)로 인해 내부 API 접근이 차단되는 것을 허용하기 위함입니다.
 
 
