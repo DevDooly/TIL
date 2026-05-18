@@ -99,6 +99,50 @@ public class ArrowDataProducer {
 }
 ```
 
+### 💻 Data Consumer 클래스
+기록된 `.arrow` 파일을 `ArrowFileReader`를 통해 읽어 Java 객체(Vector)로 복원합니다.
+
+```java
+import org.apache.arrow.memory.BufferAllocator;
+import org.apache.arrow.memory.RootAllocator;
+import org.apache.arrow.vector.IntVector;
+import org.apache.arrow.vector.VarCharVector;
+import org.apache.arrow.vector.VectorSchemaRoot;
+import org.apache.arrow.vector.ipc.ArrowFileReader;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
+
+public class ArrowDataConsumer {
+
+    public void readArrowFile(String filePath) throws Exception {
+        File file = new File(filePath);
+        
+        try (BufferAllocator allocator = new RootAllocator();
+             FileInputStream fis = new FileInputStream(file);
+             ArrowFileReader reader = new ArrowFileReader(fis.getChannel(), allocator)) {
+
+            // 1. VectorSchemaRoot 로드 (스키마 정보 포함)
+            VectorSchemaRoot root = reader.getVectorSchemaRoot();
+            
+            // 2. 모든 레코드 배치(Record Batch) 순회
+            while (reader.loadNextBatch()) {
+                int rowCount = root.getRowCount();
+                IntVector idVector = (IntVector) root.getVector("id");
+                VarCharVector nameVector = (VarCharVector) root.getVector("name");
+
+                for (int i = 0; i < rowCount; i++) {
+                    int id = idVector.get(i);
+                    String name = new String(nameVector.get(i), StandardCharsets.UTF_8);
+                    System.out.println("ID: " + id + ", Name: " + name);
+                }
+            }
+        }
+    }
+}
+```
+
 ---
 
 ## 3. Python 처리기 구현 (`processor.py`)
