@@ -160,10 +160,24 @@ public class AnalysisService {
 }
 ```
 
----
+## 6. 트러블슈팅: FlatBuffers 버전 충돌
 
-## 5. 핵심 메모리 관리 팁
+### ⚠️ `FlatBufferBuilder.createString` 에러
+`ArrowFileWriter.write` 호출 시 `NoSuchMethodError: ... FlatBufferBuilder.createString(CharSequence)` 에러가 발생한다면, 이는 Arrow와 FlatBuffers 라이브러리 간의 버전 불일치 때문입니다.
 
-1. **RootAllocator**: Arrow는 JVM 힙(Heap)이 아닌 **Direct Memory(Off-heap)**를 사용합니다. 따라서 JVM 옵션에서 `-XX:MaxDirectMemorySize`를 충분히 확보해야 합니다.
-2. **Resource Closing**: `allocator`, `root`, `writer`는 모두 `AutoCloseable`을 구현하므로 `try-with-resources` 구문을 사용하여 반드시 닫아줘야 메모리 누수를 방지할 수 있습니다.
-3. **Netty Allocator**: `arrow-memory-netty`는 성능이 가장 뛰어나지만, 특정 환경에서 의존성 충돌이 날 경우 `arrow-memory-unsafe`를 대안으로 사용할 수 있습니다.
+* **원인**: Apache Arrow 18.x 버전은 내부적으로 **FlatBuffers 24.3.25** 버전에 의존합니다. 프로젝트의 다른 라이브러리나 명시적 선언으로 인해 25.x 이상의 최신 FlatBuffers가 로드되면 메서드 시그니처가 달라 에러가 발생합니다.
+* **해결**: `pom.xml`에서 FlatBuffers 버전을 **24.3.25**로 강제 고정하세요.
+
+```xml
+<dependency>
+    <groupId>com.google.flatbuffers</groupId>
+    <artifactId>flatbuffers-java</artifactId>
+    <version>24.3.25</version>
+</dependency>
+```
+
+### 💡 기타 팁
+
+1. **Direct Memory**: Arrow는 JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize` 설정을 잊지 마세요.
+2. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
+
