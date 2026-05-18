@@ -222,6 +222,14 @@ public class AnalysisService {
 
 ### 💡 기타 팁
 
-1. **Direct Memory**: Arrow는 JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize` 설정을 잊지 마세요.
-2. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
+1. **JVM 옵션 필수 설정 (Java 16+)**
+    Apache Arrow는 고성능 처리를 위해 JVM 내부의 `java.nio` 패키지에 접근해야 합니다. Java 16 이상을 사용한다면 실행 시 반드시 다음 옵션을 추가해야 합니다.
+
+    * **옵션**: `--add-opens=java.base/java.nio=ALL-UNNAMED`
+    * **전역 설정 (OS 환경변수)**: `JAVA_TOOL_OPTIONS`에 위 옵션을 등록하면 모든 프로젝트에 자동 적용됩니다.
+    * **이유**: JDK의 강한 캡슐화(Strong Encapsulation)로 인해 내부 API 접근이 차단되는 것을 허용하기 위함입니다.
+
+2. **Direct Memory**: JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize=2G`와 같이 설정을 잊지 마세요.
+3. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
+
 
