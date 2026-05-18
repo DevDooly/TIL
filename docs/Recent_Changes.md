@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-18 10:09 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 및 mmap 활용 Java-Python 데이터 교환 상세 가이드 추가 |
 | 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
 | 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
 | 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-03 10:38 | [AI/Ollama.md](AI/Ollama.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
 | 2026-04-03 10:38 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
-| 2026-04-03 10:38 | [AI/OpenCode.md](AI/OpenCode.md) | docs: 로깅 설정 트러블슈팅 가이드 수정 및 마크다운 자동 포맷팅 로직 근본적 강화 |
