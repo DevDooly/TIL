@@ -204,6 +204,55 @@ public class AnalysisService {
 }
 ```
 
+---
+
+## 5. 실무 패턴: 리소스 내 Python 스크립트 관리 및 실행
+
+Python 스크립트를 Java 프로젝트의 리소스(`src/main/resources/scripts/`)에 포함시켜 배포하고, 실행 시점에 파일 시스템으로 복사하여 호출하는 권장 패턴입니다.
+
+### 📂 프로젝트 구조
+```text
+src/main/resources/scripts/processor.py
+```
+
+### 💻 Java: 리소스 복사 및 호출 로직
+`ClassPathResource`를 통해 파일을 읽고, `user.dir` 내의 `work` 폴더로 복사하여 절대 경로를 확보합니다.
+
+```java
+@Service
+public class PythonScriptManager {
+    private String scriptPath;
+
+    @PostConstruct
+    public void prepareScript() throws Exception {
+        // 1. 리소스에서 파일 읽기
+        ClassPathResource resource = new ClassPathResource("scripts/processor.py");
+        
+        // 2. 작업 디렉토리 확보
+        Path workDir = Paths.get(System.getProperty("user.dir"), "work");
+        if (!Files.exists(workDir)) Files.createDirectories(workDir);
+
+        File targetFile = new File(workDir.toFile(), "processor.py");
+        this.scriptPath = targetFile.getAbsolutePath();
+
+        // 3. 파일 복사
+        try (InputStream is = resource.getInputStream();
+             OutputStream os = new FileOutputStream(targetFile)) {
+            StreamUtils.copy(is, os);
+        }
+    }
+
+    public void runAnalysis(String arrowDataPath) throws Exception {
+        // 복사된 스크립트의 절대 경로를 사용하여 호출
+        ProcessBuilder pb = new ProcessBuilder("python3", scriptPath, arrowDataPath);
+        pb.inheritIO();
+        pb.start().waitFor();
+    }
+}
+```
+
+---
+
 ## 6. 트러블슈팅: FlatBuffers 버전 충돌
 
 ### ⚠️ `FlatBufferBuilder.createString` 에러
