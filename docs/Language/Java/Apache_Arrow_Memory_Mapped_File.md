@@ -216,6 +216,8 @@ src/main/resources/scripts/processor.py
 ```
 
 ### 💻 Java: 리소스 복사 및 호출 로직
+
+#### Option A: Spring Boot 사용 시 (`ClassPathResource`)
 `ClassPathResource`를 통해 파일을 읽고, `user.dir` 내의 `work` 폴더로 복사하여 절대 경로를 확보합니다.
 
 ```java
@@ -225,21 +227,40 @@ public class PythonScriptManager {
 
     @PostConstruct
     public void prepareScript() throws Exception {
-        // 1. 리소스에서 파일 읽기
         ClassPathResource resource = new ClassPathResource("scripts/processor.py");
-        
-        // 2. 작업 디렉토리 확보
         Path workDir = Paths.get(System.getProperty("user.dir"), "work");
         if (!Files.exists(workDir)) Files.createDirectories(workDir);
 
         File targetFile = new File(workDir.toFile(), "processor.py");
         this.scriptPath = targetFile.getAbsolutePath();
 
-        // 3. 파일 복사
         try (InputStream is = resource.getInputStream();
              OutputStream os = new FileOutputStream(targetFile)) {
             StreamUtils.copy(is, os);
         }
+    }
+}
+```
+
+#### Option B: Pure Java 사용 시 (`ClassLoader`)
+Spring 의존성이 없는 환경에서는 JDK의 `ClassLoader`를 사용하여 동일한 기능을 구현할 수 있습니다.
+
+```java
+public class PureJavaPythonRunner {
+    private String scriptPath;
+
+    public void prepareScript() throws Exception {
+        // 1. ClassLoader를 통해 리소스 스트림 읽기
+        InputStream is = getClass().getClassLoader().getResourceAsStream("scripts/processor.py");
+        if (is == null) throw new FileNotFoundException("Script not found in resources");
+
+        // 2. 작업 디렉토리 설정 및 복사
+        Path targetPath = Paths.get(System.getProperty("user.dir"), "work", "processor.py");
+        Files.createDirectories(targetPath.getParent());
+
+        // 3. Files.copy를 사용하여 스트림을 파일로 저장 (REPLACE_EXISTING 옵션 권장)
+        Files.copy(is, targetPath, StandardCopyOption.REPLACE_EXISTING);
+        this.scriptPath = targetPath.toAbsolutePath().toString();
     }
 
     public void runAnalysis(String arrowDataPath) throws Exception {

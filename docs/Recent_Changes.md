@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-05-19 12:47 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Java 리소스 내 Python 스크립트 관리 및 실행 실무 패턴 추가 |
+| 2026-05-19 12:57 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Pure Java(ClassLoader) 환경의 리소스 복사 및 실행 예시 추가 |
 | 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
 | 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
 | 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
@@ -47,4 +47,3 @@
 | 2026-04-06 14:14 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
 | 2026-04-06 14:10 | [Language/Java/SpringBoot/Testing/Mockito_Guide.md](Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
 | 2026-04-06 12:50 | [Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작성 |
-| 2026-04-06 09:19 | [Language/Java/SpringBoot/temp.md](Language/Java/SpringBoot/temp.md) | temp 삭제 |
