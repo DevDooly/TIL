@@ -307,7 +307,25 @@ public class PureJavaPythonRunner {
     * **이유**: JDK의 강한 캡슐화(Strong Encapsulation)로 인해 내부 API 접근이 차단되는 것을 허용하기 위함입니다.
 
 
-2. **Direct Memory**: JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize=2G`와 같이 설정을 잊지 마세요.
+2. **메모리 할당 전략 (RootAllocator vs ChildAllocator)**
+    멀티스레드 환경에서 `RootAllocator`는 반드시 **`static`으로 선언하여 애플리케이션 전체에서 하나만 공유**하는 것이 권장됩니다.
+
+    * **이유**: 인스턴스마다 생성할 경우 Direct Memory 풀이 중복 생성되어 메모리 오버헤드가 크고, `MaxDirectMemorySize` 통제가 불가능해져 `OOM` 위험이 큽니다.
+    * **권장 패턴**:
+        ```java
+        // 전역 공유 할당자
+        private static final BufferAllocator ROOT_ALLOCATOR = new RootAllocator(2L * 1024 * 1024 * 1024);
+
+        // 스레드별 작업 시 자식 할당자 활용
+        try (BufferAllocator child = ROOT_ALLOCATOR.newChildAllocator("task-name", 0, Long.MAX_VALUE)) {
+            // 작업 수행
+        }
+        ```
+
+    * **주의**: 인스턴스 필드로 사용할 경우, 인스턴스 파괴 시 `close()`를 호출하지 않으면 심각한 **Direct Memory 누수**가 발생합니다.
+
+3. **Direct Memory**: JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize=2G`와 같이 설정을 잊지 마세요.
+
 3. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
 
 
