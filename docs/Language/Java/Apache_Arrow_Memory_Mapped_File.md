@@ -324,7 +324,18 @@ public class PureJavaPythonRunner {
 
     * **주의**: 인스턴스 필드로 사용할 경우, 인스턴스 파괴 시 `close()`를 호출하지 않으면 심각한 **Direct Memory 누수**가 발생합니다.
 
-3. **Direct Memory**: JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize=2G`와 같이 설정을 잊지 마세요.
+    3. **메모리 사용량 측정 및 리밋 최적화**
+    실제 로직이 얼마나 메모리를 쓰는지 측정하여 최적의 값을 찾아낼 수 있습니다.
+    ```java
+    // 사용량 측정 예시
+    long current = allocator.getAllocatedMemory();     // 현재 사용량
+    long peak = allocator.getPeakMemoryAllocation(); // 실행 중 최대 도달량
+
+    // 권장 설정: Peak 사용량의 1.2배(20% 여유) 수준으로 RootAllocator 리밋 설정
+    ```
+
+    4. **Direct Memory**: JVM Heap이 아닌 Off-heap을 사용하므로 `-XX:MaxDirectMemorySize=2G`와 같이 설정을 잊지 마세요.
+
 
 3. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
 

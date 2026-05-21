@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-05-21 16:56 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow RootAllocator 할당 전략 및 메모리 효율 가이드 추가 |
+| 2026-05-21 17:07 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
 | 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
 | 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
 | 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
