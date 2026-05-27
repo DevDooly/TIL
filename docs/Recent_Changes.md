@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-27 09:12 | [Language/Java/Optimizing_Java_Python_Execution.md](Language/Java/Optimizing_Java_Python_Execution.md) | docs: Java-Python 실행 성능 최적화 전략(FastAPI, Persistent Worker) 가이드 추가 |
 | 2026-05-22 10:14 | [Language/Java/Apache_Arrow_with_mmap.md](Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
 | 2026-05-21 17:07 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
 | 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
@@ -47,4 +48,3 @@
 | 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
 | 2026-04-06 14:14 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
 | 2026-04-06 14:10 | [Language/Java/SpringBoot/Testing/Mockito_Guide.md](Language/Java/SpringBoot/Testing/Mockito_Guide.md) | docs: DNS와 NameServer 개념 및 리눅스 설정 가이드 추가 |
-| 2026-04-06 12:50 | [Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md](Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | docs: Spring Boot Testing 섹션 추가 및 Mockito 활용 가이드 작성 |
