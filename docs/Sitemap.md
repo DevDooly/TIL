@@ -285,6 +285,7 @@
 * [Tools](Tools/README.md)
     * **Build**
         * [Apache Maven: 자바 빌드 자동화 도구 가이드](Tools/Build/Maven.md)
+        * [Maven Classifier와 Hive-JDBC Standalone 활용 가이드](Tools/Build/Maven_Classifier_and_Hive_JDBC.md)
         * [Maven Shade Plugin: Uber-JAR 생성 및 패키지 재배치](Tools/Build/Maven_Shade_Plugin.md)
     * **Github**
         * [GitHub Actions MkDocs 배포 실패 (Plugin Missing)](Tools/Github/Action_Deploy_Fail.md)

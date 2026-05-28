@@ -2,3 +2,4 @@ title: Build Tools
 nav:
 - Maven: Maven.md
 - Maven Shade Plugin: Maven_Shade_Plugin.md
+- Maven Classifier (Hive-JDBC): Maven_Classifier_and_Hive_JDBC.md
