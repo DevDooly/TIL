@@ -285,6 +285,7 @@
 * [Tools](Tools/README.md)
     * **Build**
         * [Apache Maven: 자바 빌드 자동화 도구 가이드](Tools/Build/Maven.md)
+        * [Maven Shade Plugin: Uber-JAR 생성 및 패키지 재배치](Tools/Build/Maven_Shade_Plugin.md)
     * **Github**
         * [GitHub Actions MkDocs 배포 실패 (Plugin Missing)](Tools/Github/Action_Deploy_Fail.md)
         * [GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드](Tools/Github/Profile_README_Guide.md)

@@ -1,3 +1,4 @@
 title: Build Tools
 nav:
 - Maven: Maven.md
+- Maven Shade Plugin: Maven_Shade_Plugin.md

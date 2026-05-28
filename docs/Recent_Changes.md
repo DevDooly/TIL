@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-28 09:07 | [Tools/Build/Maven_Shade_Plugin.md](Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
 | 2026-05-27 09:15 | [Language/Java/Optimizing_Java_Python_Execution.md](Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
 | 2026-05-22 10:14 | [Language/Java/Apache_Arrow_with_mmap.md](Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
 | 2026-05-21 17:07 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
@@ -46,4 +47,3 @@
 | 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 | 2026-04-07 13:10 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
 | 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
-| 2026-04-06 14:14 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: DNS와 NameServer 문서 마크다운 포맷 수정 |
