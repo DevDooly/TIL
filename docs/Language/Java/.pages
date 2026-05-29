@@ -15,6 +15,7 @@ nav:
   - Virtual Threads FTP Pinning: Virtual_Threads_FTP_Pinning.md
 - Spring-Python 연동 가이드: Spring_Python_Integration.md
 - Java-Python Shared Memory (Arrow): Java_Python_Shared_Memory_Arrow.md
+- Apache Arrow BufferAllocator 관리: Apache_Arrow_BufferAllocator_Management.md
 - Apache Arrow Memory Mapped File: Apache_Arrow_Memory_Mapped_File.md
 - Apache Arrow with mmap: Apache_Arrow_with_mmap.md
 - Java-Python 실행 최적화 가이드: Optimizing_Java_Python_Execution.md
