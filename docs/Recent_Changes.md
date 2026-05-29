@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-05-29 15:18 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드 추가 |
 | 2026-05-28 09:25 | [Tools/Build/Maven_Classifier_and_Hive_JDBC.md](Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가이드 추가 |
 | 2026-05-28 09:07 | [Tools/Build/Maven_Shade_Plugin.md](Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
 | 2026-05-27 09:15 | [Language/Java/Optimizing_Java_Python_Execution.md](Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
