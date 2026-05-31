@@ -3,3 +3,4 @@ nav:
 - Maven: Maven.md
 - Maven Shade Plugin: Maven_Shade_Plugin.md
 - Maven Classifier (Hive-JDBC): Maven_Classifier_and_Hive_JDBC.md
+- Spotless (코드 포맷팅): Spotless.md
