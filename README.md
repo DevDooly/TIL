@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-06-01 08:44 | [Spotless](docs/Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
 | 2026-05-29 15:18 | [Apache Arrow BufferAllocator Management](docs/Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가...  |
 | 2026-05-28 09:25 | [Maven Classifier and Hive JDBC](docs/Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가...  |
 | 2026-05-28 09:07 | [Maven Shade Plugin](docs/Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
 | 2026-05-27 09:15 | [Optimizing Java Python Execution](docs/Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
 | 2026-05-22 10:14 | [Apache Arrow with mmap](docs/Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
-| 2026-05-21 17:07 | [Apache Arrow Memory Mapped File](docs/Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -376,6 +376,7 @@
   * [Apache Maven: 자바 빌드 자동화 도구 가이드](docs/Tools/Build/Maven.md)
   * [Maven Classifier와 Hive-JDBC Standalone 활용 가이드](docs/Tools/Build/Maven_Classifier_and_Hive_JDBC.md)
   * [Maven Shade Plugin: Uber-JAR 생성 및 패키지 재배치](docs/Tools/Build/Maven_Shade_Plugin.md)
+  * [Spotless: 코드 스타일 자동화 도구](docs/Tools/Build/Spotless.md)
 * **Git**
   * [Monorepo vs Polyrepo](docs/Tools/Git/Monorepo_vs_Polyrepo.md)
   * [Git Remote Settings (원격 저장소 관리)](docs/Tools/Git/Remote_Settings.md)

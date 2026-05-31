@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-06-01 08:44 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
 | 2026-05-29 15:18 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드 추가 |
 | 2026-05-28 09:25 | [Tools/Build/Maven_Classifier_and_Hive_JDBC.md](Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가이드 추가 |
 | 2026-05-28 09:07 | [Tools/Build/Maven_Shade_Plugin.md](Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
@@ -48,4 +49,3 @@
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
 | 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |
 | 2026-04-07 13:10 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: Java Caffeine Cache 핵심 개념 및 사용 가이드 추가 |
-| 2026-04-06 17:14 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | fix: GitHub Actions 배포 실패 수정 (의존성 추가 및 권한 설정) |
