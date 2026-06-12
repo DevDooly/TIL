@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-06-12 09:36 | [Effectively Final](docs/Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
 | 2026-06-01 08:44 | [Spotless](docs/Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
 | 2026-05-29 15:18 | [Apache Arrow BufferAllocator Management](docs/Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가...  |
 | 2026-05-28 09:25 | [Maven Classifier and Hive JDBC](docs/Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가...  |
 | 2026-05-28 09:07 | [Maven Shade Plugin](docs/Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
 | 2026-05-27 09:15 | [Optimizing Java Python Execution](docs/Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
-| 2026-05-22 10:14 | [Apache Arrow with mmap](docs/Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -88,6 +88,7 @@
   * [Apache Arrow & mmap을 이용한 Zero-copy 데이터 공유](docs/Language/Java/Apache_Arrow_with_mmap.md)
   * [Caffeine Cache: 고성능 Java 로컬 캐시 가이드](docs/Language/Java/Caffeine_Cache.md)
   * [Java/Spring Boot: 현재 스레드가 가상 스레드인지 확인하는 방법](docs/Language/Java/Check_Virtual_Thread.md)
+  * [Java Effectively Final](docs/Language/Java/Effectively_Final.md)
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
   * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](docs/Language/Java/Java_Python_Shared_Memory_Arrow.md)

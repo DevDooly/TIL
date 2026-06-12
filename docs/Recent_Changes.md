@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-06-12 09:36 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
 | 2026-06-01 08:44 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
 | 2026-05-29 15:18 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드 추가 |
 | 2026-05-28 09:25 | [Tools/Build/Maven_Classifier_and_Hive_JDBC.md](Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가이드 추가 |
