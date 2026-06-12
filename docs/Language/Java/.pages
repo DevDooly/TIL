@@ -5,6 +5,7 @@ nav:
 - Functional Programming: Functional
 - Basic & Style:
   - Style Guide: Google_Java_Style_Guide.md
+  - Effectively Final: Effectively_Final.md
 - JVM Internals:
   - Memory Structure: Memory.md
   - Garbage Collection: Garbage_Collection.md
