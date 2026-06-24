@@ -9,3 +9,4 @@ nav:
 - Offset 제어 (Java): Consumer_Offset_Control.md
 - Consumer 안전 종료 (wakeup/close): Consumer_Safe_Shutdown.md
 - Spring Kafka 테스트: Spring_Kafka_Test.md
+- 메시지 최대 사이즈 확장 가이드: Kafka_Message_Size_Configuration.md
