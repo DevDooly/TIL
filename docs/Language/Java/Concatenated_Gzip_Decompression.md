@@ -82,26 +82,99 @@ public class GzipUtils {
     }
 
     /**
-     * 예제 사용법: 파일에서 Concatenated GZIP 압축 해제
+     * 주어진 InputStream이 Concatenated GZIP 형식인지 확인합니다.
+     * 즉, 첫 번째 GZIP 멤버 이후에 또 다른 GZIP 멤버가 존재하는지 확인합니다.
+     *
+     * @param inputStream GZIP 압축이 예상되는 InputStream
+     * @return 첫 번째 GZIP 멤버 이후에 또 다른 GZIP 멤버가 존재하면 true, 그렇지 않으면 false
+     * @throws IOException 입출력 오류 발생 시
+     */
+    public static boolean isConcatenatedGzip(InputStream inputStream) throws IOException {
+        // BufferedInputStream을 사용하여 mark/reset 기능을 활용합니다.
+        // GZIPInputStream의 close()가 하위 스트림을 닫는 것을 방지하기 위해 NoCloseInputStream으로 래핑합니다.
+        BufferedInputStream bufferedInput = new BufferedInputStream(inputStream);
+        
+        try (GZIPInputStream gzipInputStream = new GZIPInputStream(new NoCloseInputStream(bufferedInput))) {
+            // 첫 번째 GZIP 멤버의 데이터를 모두 소비합니다.
+            // (실제로 데이터를 읽을 필요는 없지만, 스트림 포인터를 끝까지 이동시킵니다.)
+            byte[] buffer = new byte[4096];
+            while (gzipInputStream.read(buffer) != -1) {
+                // 데이터를 읽어 스트림 포인터를 이동시킵니다.
+            }
+            // gzipInputStream은 여기서 닫히지만, NoCloseInputStream 덕분에 bufferedInput은 열려 있습니다.
+
+            // 첫 번째 GZIP 멤버가 끝난 후, 다음 바이트를 확인하여 GZIP 매직 넘버가 있는지 봅니다.
+            // GZIP 매직 넘버는 0x1f 0x8b 입니다.
+            bufferedInput.mark(2); // 다음 2바이트를 마크합니다.
+            int id1 = bufferedInput.read();
+            int id2 = bufferedInput.read();
+            bufferedInput.reset(); // 읽은 2바이트를 다시 스트림으로 되돌립니다.
+
+            // 스트림이 EOF가 아니고 (id1 != -1), 다음 2바이트가 GZIP 매직 넘버와 일치하면 Concatenated GZIP입니다.
+            return id1 != -1 && id1 == GZIPInputStream.GZIP_MAGIC && id2 == (GZIPInputStream.GZIP_MAGIC >>> 8);
+
+        } catch (IOException e) {
+            // GZIPInputStream 생성자가 IOException을 던졌다는 것은
+            // - 스트림이 아예 비어있거나
+            // - 유효한 GZIP 형식이 아니거나
+            // - 첫 번째 멤버가 끝나지 않았는데 스트림이 끝났다는 의미입니다.
+            // 이 경우 Concatenated GZIP이 아니라고 판단할 수 있습니다.
+            return false;
+        }
+    }
+
+    /**
+     * GZIPInputStream이 내부의 InputStream을 닫는 것을 방지하기 위한 헬퍼 클래스.
+     */
+    private static class NoCloseInputStream extends FilterInputStream {
+        public NoCloseInputStream(InputStream in) {
+            super(in);
+        }
+
+        @Override
+        public void close() throws IOException {
+            // 아무것도 하지 않아 하위 스트림을 닫지 않습니다.
+        }
+    }
+
+    /**
+     * 예제 사용법: 파일에서 Concatenated GZIP 압축 해제 및 Concatenated 여부 확인
      */
     public static void main(String[] args) {
-        // 테스트용 Concatenated GZIP 파일 생성 (실제 파일 경로로 변경 필요)
-        // 예를 들어, 터미널에서 다음 명령어를 실행하여 combined.gz 파일을 만들 수 있습니다:
-        // echo "Hello, World 1" | gzip > part1.gz
-        // echo "Hello, World 2" | gzip > part2.gz
-        // cat part1.gz part2.gz > combined.gz
-        // rm part1.gz part2.gz
+        // 테스트용 GZIP 파일 생성 (실제 파일 경로로 변경 필요)
+        // 1. 단일 GZIP 파일 생성:
+        //    echo "Single Gzip Content" | gzip > single.gz
+        // 2. Concatenated GZIP 파일 생성:
+        //    echo "First part of the data" | gzip > part1.gz
+        //    echo "Second part of the data" | gzip > part2.gz
+        //    cat part1.gz part2.gz > combined.gz
+        //    rm part1.gz part2.gz
 
-        String filePath = "combined.gz"; // Concatenated GZIP 파일 경로
+        String singleGzipPath = "single.gz"; // 단일 GZIP 파일 경로
+        String concatenatedGzipPath = "combined.gz"; // Concatenated GZIP 파일 경로
 
-        try (InputStream fileInputStream = new FileInputStream(filePath)) {
+        System.out.println("--- Concatenated GZIP 압축 해제 테스트 ---");
+        try (InputStream fileInputStream = new FileInputStream(concatenatedGzipPath)) {
             byte[] decompressedData = decompressConcatenatedGzip(fileInputStream);
             String result = new String(decompressedData, StandardCharsets.UTF_8);
-            System.out.println("압축 해제된 데이터:
-" + result);
+            System.out.println(concatenatedGzipPath + " 압축 해제된 데이터:\n" + result);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(concatenatedGzipPath + " 압축 해제 중 에러: " + e.getMessage());
         }
+
+        System.out.println("\n--- Concatenated GZIP 여부 확인 테스트 ---");
+        try (InputStream singleGzipStream = new FileInputStream(singleGzipPath)) {
+            System.out.println(singleGzipPath + "은 Concatenated GZIP인가? " + isConcatenatedGzip(singleGzipStream));
+        } catch (IOException e) {
+            System.err.println(singleGzipPath + " 확인 중 에러: " + e.getMessage());
+        }
+
+        try (InputStream concatenatedGzipStream = new FileInputStream(concatenatedGzipPath)) {
+            System.out.println(concatenatedGzipPath + "은 Concatenated GZIP인가? " + isConcatenatedGzip(concatenatedGzipStream));
+        } catch (IOException e) {
+            System.err.println(concatenatedGzipPath + " 확인 중 에러: " + e.getMessage());
+        }
+    }
     }
 }
 ```
