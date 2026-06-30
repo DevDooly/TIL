@@ -111,7 +111,7 @@ public class GzipUtils {
             bufferedInput.reset(); // 읽은 2바이트를 다시 스트림으로 되돌립니다.
 
             // 스트림이 EOF가 아니고 (id1 != -1), 다음 2바이트가 GZIP 매직 넘버와 일치하면 Concatenated GZIP입니다.
-            return id1 != -1 && id1 == GZIPInputStream.GZIP_MAGIC && id2 == (GZIPInputStream.GZIP_MAGIC >>> 8);
+            return id1 != -1 && id1 == (GZIPInputStream.GZIP_MAGIC & 0xFF) && id2 == ((GZIPInputStream.GZIP_MAGIC >>> 8) & 0xFF);
 
         } catch (IOException e) {
             // GZIPInputStream 생성자가 IOException을 던졌다는 것은
