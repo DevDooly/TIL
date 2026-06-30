@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-06-24 14:47 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
 | 2026-06-24 14:05 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
 | 2026-06-12 09:36 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
 | 2026-06-01 08:44 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
@@ -49,4 +50,3 @@
 | 2026-04-08 10:50 | [Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md](Language/Java/SpringBoot/Logstash_Logback_Encoder_Guide.md) | docs: Logstash Logback Encoder 사용 가이드 및 SLF4J 2.0 연동 방법 추가 |
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md](Language/Java/SpringBoot/ECS_Logging_KeyValuePairs.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
 | 2026-04-08 10:48 | [Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | fix: ECS 로깅 addKeyValue 미지원 사실 확인 및 대안(MDC, Logstash Encoder) 가이드 수정 |
-| 2026-04-07 14:51 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: JDBI @FetchSize 옵션 설명 및 가상 스레드 시너지 가이드 추가 |

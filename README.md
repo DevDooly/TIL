@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-06-24 14:47 | [Kafka Rolling Restart Guide](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
 | 2026-06-24 14:05 | [Kafka Message Size Configuration](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
 | 2026-06-12 09:36 | [Effectively Final](docs/Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
 | 2026-06-01 08:44 | [Spotless](docs/Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
 | 2026-05-29 15:18 | [Apache Arrow BufferAllocator Management](docs/Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가...  |
 | 2026-05-28 09:25 | [Maven Classifier and Hive JDBC](docs/Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가...  |
-| 2026-05-28 09:07 | [Maven Shade Plugin](docs/Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -274,6 +274,7 @@
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
     * [Kafka: Consumer의 안전한 종료 (wakeup vs close)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
     * [Kafka 메시지 최대 사이즈 확장 가이드 (Broker 재기동 없이)](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
+    * [Kafka Broker 롤링 재시작 가이드 (3대 HA 구성)](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md)
     * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
     * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
     * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
