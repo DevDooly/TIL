@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-06-30 13:08 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: Java Concatenated GZIP 압축 해제 가이드 추가 |
+| 2026-06-30 13:12 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: Java Concatenated GZIP 압축 해제 및 검사 메서드 업데이트 |
 | 2026-06-24 14:47 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
 | 2026-06-24 14:05 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
 | 2026-06-12 09:36 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
