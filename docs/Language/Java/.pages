@@ -6,6 +6,7 @@ nav:
 - Basic & Style:
   - Style Guide: Google_Java_Style_Guide.md
   - Effectively Final: Effectively_Final.md
+  - Collections.emptyList() vs List.of() 비교: Collections.emptyList_vs_List.of.md
 - JVM Internals:
   - Memory Structure: Memory.md
   - Garbage Collection: Garbage_Collection.md
