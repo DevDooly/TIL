@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-07-06 10:44 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy Oracle DB 접속 지연 진단 가이드 추가 |
 | 2026-07-01 10:15 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교 가이드 추가 |
 | 2026-06-30 13:45 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
 | 2026-06-24 14:47 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
