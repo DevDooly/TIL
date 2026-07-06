@@ -1,3 +1,4 @@
 title: Oracle Cloud
 nav:
 - Introduction: README.md
+- HAProxy를 통한 Oracle DB 접속 지연 진단 가이드: HAProxy_Oracle_Latency_Diagnosis.md
