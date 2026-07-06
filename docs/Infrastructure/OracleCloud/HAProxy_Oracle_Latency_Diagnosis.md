@@ -45,10 +45,24 @@ HAProxy 로그는 각 연결의 세부 정보를 제공하므로 지연이 발�
 
 ```ini
 global
-    log /dev/log    local0 notice  # syslog로 로그를 보냄 (OS 설정 필요)
-    # log global                   # syslog를 사용하는 경우
-    # log 127.0.0.1:514 local0 info  # 원격 syslog 서버를 사용하는 경우
+    log /dev/log    local0 notice  # syslog로 로그를 보냄 (아래 rsyslog 설정 참고)
+    log-send-hostname              # 로그에 HAProxy 호스트 이름 포함
 
+    # --- rsyslog 설정 가이드 ---
+    # HAProxy 로그를 rsyslog를 통해 별도 파일로 분리하여 관리하는 것이 효율적입니다.
+    # 1. /etc/rsyslog.d/ 디렉토리에 haproxy.conf 파일을 생성합니다:
+    #    sudo vi /etc/rsyslog.d/haproxy.conf
+    #
+    # 2. haproxy.conf 파일에 다음 내용을 추가합니다:
+    #    local0.* /var/log/haproxy.log
+    #
+    # 3. rsyslog 서비스를 재시작합니다:
+    #    sudo systemctl restart rsyslog
+    #
+    # 이제 HAProxy 로그는 /var/log/haproxy.log 파일에 기록됩니다.
+    #
+    # ---
+```
 defaults
     mode tcp                       # Oracle DB는 TCP 모드로 설정
     log global
