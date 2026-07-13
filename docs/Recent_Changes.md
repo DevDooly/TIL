@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-07-13 16:29 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | docs: Java 코드 포맷터 비교 가이드 추가 (Google, Palantir 등) |
 | 2026-07-06 12:55 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
 | 2026-07-01 10:15 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교 가이드 추가 |
 | 2026-06-30 13:45 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |

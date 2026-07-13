@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-07-13 16:29 | [Java Code Formatters Comparison](docs/Tools/Build/Java_Code_Formatters_Comparison.md) | docs: Java 코드 포맷터 비교 가이드 추가 (Google, Palantir 등) |
 | 2026-07-06 12:55 | [HAProxy Oracle Latency Diagnosis](docs/Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
 | 2026-07-01 10:15 | [Collections.emptyList vs List.of](docs/Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교...  |
 | 2026-06-30 13:45 | [Concatenated Gzip Decompression](docs/Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
 | 2026-06-24 14:47 | [Kafka Rolling Restart Guide](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
 | 2026-06-24 14:05 | [Kafka Message Size Configuration](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
-| 2026-06-12 09:36 | [Effectively Final](docs/Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -379,6 +379,7 @@
 ## Tools
 * [**Overview**](docs/Tools/README.md)
 * **Build**
+  * [Java 코드 포맷터 비교: google-java-format vs palantir-java-format](docs/Tools/Build/Java_Code_Formatters_Comparison.md)
   * [Apache Maven: 자바 빌드 자동화 도구 가이드](docs/Tools/Build/Maven.md)
   * [Maven Classifier와 Hive-JDBC Standalone 활용 가이드](docs/Tools/Build/Maven_Classifier_and_Hive_JDBC.md)
   * [Maven Shade Plugin: Uber-JAR 생성 및 패키지 재배치](docs/Tools/Build/Maven_Shade_Plugin.md)
