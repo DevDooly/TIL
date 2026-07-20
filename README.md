@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-07-13 16:29 | [Java Code Formatters Comparison](docs/Tools/Build/Java_Code_Formatters_Comparison.md) | docs: Java 코드 포맷터 비교 가이드 추가 (Google, Palantir 등) |
+| 2026-07-20 17:06 | [New Development Definition Template](docs/Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
+| 2026-07-13 16:44 | [Java Code Formatters Comparison](docs/Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경...  |
 | 2026-07-06 12:55 | [HAProxy Oracle Latency Diagnosis](docs/Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
 | 2026-07-01 10:15 | [Collections.emptyList vs List.of](docs/Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교...  |
 | 2026-06-30 13:45 | [Concatenated Gzip Decompression](docs/Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
 | 2026-06-24 14:47 | [Kafka Rolling Restart Guide](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
-| 2026-06-24 14:05 | [Kafka Message Size Configuration](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -437,6 +437,7 @@
 ## Templates
 * [**Overview**](docs/Templates/README.md)
 * [[양식] 기술 이슈 분석 및 리포트](docs/Templates/Issue_Report_Template.md)
+* [[양식] 신규 개발 정의 문서](docs/Templates/New_Development_Definition_Template.md)
 
 ## Life
 * [Development Trends](docs/Life/Trends.md)
