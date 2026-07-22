@@ -29,3 +29,4 @@ nav:
 - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
 - 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md
 - Web: Web
+- @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교: EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md
