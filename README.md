@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-07-22 17:42 | [EnableAutoConfiguration vs ConfigurationPropertiesScan](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @Con...  |
 | 2026-07-20 17:06 | [New Development Definition Template](docs/Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
 | 2026-07-13 16:44 | [Java Code Formatters Comparison](docs/Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경...  |
 | 2026-07-06 12:55 | [HAProxy Oracle Latency Diagnosis](docs/Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
 | 2026-07-01 10:15 | [Collections.emptyList vs List.of](docs/Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교...  |
 | 2026-06-30 13:45 | [Concatenated Gzip Decompression](docs/Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
-| 2026-06-24 14:47 | [Kafka Rolling Restart Guide](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -113,6 +113,7 @@
     * [빈 후처리기 (BeanPostProcessor)](docs/Language/Java/SpringBoot/BeanPostProcessor.md)
     * [Spring Bean Lifecycle](docs/Language/Java/SpringBoot/Bean_Lifecycle.md)
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
+    * [Spring Boot: @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md)
     * [Netty 환경에서 Blocking 코드/라이브러리를 찾는 방법](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md)
     * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
     * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
