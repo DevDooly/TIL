@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-07-26 16:16 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
+| 2026-07-26 16:16 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-22 17:42 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교 가이드 추가 |
 | 2026-07-20 17:06 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
 | 2026-07-13 16:44 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경 사항 반영 |
@@ -50,4 +52,3 @@
 | 2026-04-13 10:34 | [Language/Java/Scoped_Value.md](Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
 | 2026-04-13 10:26 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |
 | 2026-04-13 09:48 | [Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md) | docs: Logback JSON Encoder 가이드의 누락된 요약 섹션 보강 |
-| 2026-04-09 14:53 | [Language/Java/Check_Virtual_Thread.md](Language/Java/Check_Virtual_Thread.md) | docs: Java/Spring Boot 현재 스레드의 가상 스레드 여부 확인 방법 가이드 추가 |
