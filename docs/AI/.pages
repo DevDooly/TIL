@@ -1,6 +1,7 @@
 title: AI Tools & Agents
 nav:
 - Overview: README.md
+- LLM Development: LLM_Development
 - OpenCode: OpenCode.md
 - OpenClaw: OpenClaw.md
 - Gemini CLI: Gemini_CLI.md
