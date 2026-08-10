@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-10 14:37 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI DeepSeek 모델 연동 설정 가이드 문서 추가 |
 | 2026-08-10 12:53 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
 | 2026-07-26 16:16 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-26 16:16 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
@@ -51,4 +52,3 @@
 | 2026-04-15 13:58 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: Kafka abortOnNewBatch 매커니즘과 커스텀 파티셔너 쏠림 이슈 가이드 추가 |
 | 2026-04-13 15:34 | [Language/Java/Caffeine_Cache.md](Language/Java/Caffeine_Cache.md) | docs: Java Caffeine Cache 실전 활용 예제(DB 데이터 캐싱) 추가 |
 | 2026-04-13 10:34 | [Language/Java/Scoped_Value.md](Language/Java/Scoped_Value.md) | docs: Java 21 Scoped Value 개념 및 가상 스레드 활용 가이드 추가 |
-| 2026-04-13 10:26 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: Java 25(LTS) 신규 기능 및 변경점 가이드 추가 |

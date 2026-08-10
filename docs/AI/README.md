@@ -13,5 +13,8 @@
 ### [Gemini CLI](Gemini_CLI.md)
 터미널 기반 **대화형 AI 에이전트**입니다. 코드베이스 분석, 리팩토링, 버그 수정, 문서 작성 등 소프트웨어 엔지니어링 작업에 특화되어 있습니다.
 
+### [Claude CLI (DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
+Claude CLI(Claude Code)에서 `settings.json` 및 환경 변수를 활용하여 DeepSeek 등 서드파티 커스텀 모델을 연동하는 설정 가이드입니다.
+
 ### [n8n](n8n.md)
 확장성이 뛰어난 **워크플로우 자동화 도구**입니다. 노드 기반 인터페이스를 통해 다양한 앱과 AI 모델(OpenAI, LangChain 등)을 연결하여 강력한 자동화 시스템을 구축할 수 있습니다.
