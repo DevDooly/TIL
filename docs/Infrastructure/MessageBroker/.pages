@@ -2,6 +2,7 @@ title: Message Broker
 nav:
 - Overview: README.md
 - AMQP: AMQP.md
+- NATS: NATS.md
 - RabbitMQ: RabbitMQ
 - Kafka: Kafka
 - RabbitMQ vs Kafka: RabbitMQ 그리고 Kafka.md

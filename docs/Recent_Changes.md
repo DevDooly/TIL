@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-11 07:47 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: NATS 메시징 시스템 상세 가이드 추가 |
 | 2026-08-10 19:02 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: Qwen CLI API Key 재등록 및 설정 가이드 추가 |
 | 2026-08-10 14:56 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추가 |
 | 2026-08-10 14:40 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |

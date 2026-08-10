@@ -5,4 +5,5 @@
 ## 목차
 
 1. **[AMQP (Advanced Message Queuing Protocol)](AMQP.md)**: 메시징 표준 프로토콜
-2. **[RabbitMQ vs Kafka](RabbitMQ%20그리고%20Kafka.md)**: 대표적인 두 메시징 시스템의 비교 및 차이점
+2. **[NATS](NATS.md)**: 클라우드 네이티브 초경량/초고성능 분산 메시징 시스템
+3. **[RabbitMQ vs Kafka](RabbitMQ%20그리고%20Kafka.md)**: 대표적인 두 메시징 시스템의 비교 및 차이점
