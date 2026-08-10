@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-10 19:02 | [Qwen CLI Setup](docs/AI/Qwen_CLI_Setup.md) | docs: Qwen CLI API Key 재등록 및 설정 가이드 추가 |
 | 2026-08-10 14:56 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추...  |
 | 2026-08-10 14:40 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |
 | 2026-08-10 12:53 | [docker image versioning strategy](docs/Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
 | 2026-07-26 16:16 | [Backend Development Checklist](docs/LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-26 16:16 | [Web Development Checklist](docs/LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
-| 2026-07-22 17:42 | [EnableAutoConfiguration vs ConfigurationPropertiesScan](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @Con...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -377,6 +377,7 @@
 * [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
+* [Qwen CLI - API Key 재등록 및 설정 가이드](docs/AI/Qwen_CLI_Setup.md)
 * [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
 * [n8n (Nodemation)](docs/AI/n8n.md)
 

@@ -6,6 +6,7 @@ nav:
 - Gemini CLI: Gemini_CLI.md
 - Antigravity CLI: Antigravity_CLI_Configuration.md
 - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
+- Qwen CLI Setup: Qwen_CLI_Setup.md
 - n8n: n8n.md
 - Ollama: Ollama.md
 - Ollama Local Setup: Ollama_Local_Environment_Setup.md

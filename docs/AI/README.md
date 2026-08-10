@@ -19,5 +19,8 @@ Google Antigravity CLI(`agy`)에서 파일 생성, 수정 및 명령어 실행 �
 ### [Claude CLI (다중 모델 & DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
 Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 변수를 활용하여 DeepSeek 등 다중 모델을 연동하고 전환하는 설정 가이드입니다.
 
+### [Qwen CLI](Qwen_CLI_Setup.md)
+Qwen CLI 및 DashScope 환경에서 API Key를 재등록하거나 환경 변수를 재설정하는 가이드입니다.
+
 ### [n8n](n8n.md)
 확장성이 뛰어난 **워크플로우 자동화 도구**입니다. 노드 기반 인터페이스를 통해 다양한 앱과 AI 모델(OpenAI, LangChain 등)을 연결하여 강력한 자동화 시스템을 구축할 수 있습니다.
