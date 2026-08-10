@@ -1,88 +1,144 @@
-# Claude CLI - DeepSeek 모델 연동 가이드 (Windows)
+# Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)
 
-Windows 환경에서 `npm`으로 설치한 **Claude CLI (Claude Code)**에 DeepSeek의 API 및 커스텀 모델(`deepseek-v4-flash-0731` 등)을 연동하는 설정 방법입니다.
-
----
-
-## 1. 설정 파일 경로 (Windows)
-
-Claude CLI는 사용자 홈 디렉토리의 `.claude` 폴더에서 설정을 읽어옵니다.
-
-* **전역(Global) 설정 파일 경로**:
-  ```text
-  %USERPROFILE%\.claude\settings.json
-  # 실제 경로 예: C:\Users\<사용자명>\.claude\settings.json
-  ```
-* **프로젝트별(Local) 설정 파일 경로**:
-  ```text
-  <프로젝트_루트_디렉토리>\.claude\settings.json
-  ```
-
-> 폴더나 파일이 없다면 직접 `.claude` 폴더를 생성하고 `settings.json` 파일을 만들어주시면 됩니다.
+Windows 환경에서 `npm`으로 설치한 **Claude CLI (Claude Code)**를 사용할 때, 단일 모델뿐만 아니라 **DeepSeek, Claude 3.5 Sonnet, GPT-4o, 로컬 Ollama 등 여러 모델을 유연하게 전환하며 사용하는 방법**을 정리합니다.
 
 ---
 
-## 2. 심플 `settings.json` 설정 예시
+## 1. 다중 모델(Multi-Model) 관리 방식 비교
 
-### 기본 설정 (DeepSeek API 직접 연동)
+Claude CLI 환경에서 상황(빠른 질의, 비용 절감, 복잡한 리팩토링, 오프라인 개발 등)에 따라 모델을 다르게 사용할 수 있는 대표적인 4가지 접근 방식입니다.
 
-```json
-{
-  "env": {
-    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/v1",
-    "ANTHROPIC_API_KEY": "sk-your-deepseek-api-key"
-  },
-  "model": "deepseek-v4-flash-0731"
+```mermaid
+graph TD
+    User([사용자 실행]) --> Choice{관리 방식}
+    Choice -->|방법 1| PS[PowerShell Alias / 함수 분기]
+    Choice -->|방법 2| OR[OpenRouter / LiteLLM 프록시]
+    Choice -->|방법 3| Proj[프로젝트별 .claude/settings.json]
+    Choice -->|방법 4| Slash[CLI 세션 내 /model 전환]
+```
+
+---
+
+## 2. 방법별 상세 설정 및 사용법
+
+### 방법 1. PowerShell 함수/별칭(Alias) 등록 (가장 추천 ⭐)
+
+Windows PowerShell 프로필(`$PROFILE`)에 각 모델별 실행 함수를 만들어두면, 명령어 하나로 원하는 엔드포인트와 모델을 즉시 호출할 수 있습니다.
+
+#### 1) PowerShell 프로필 편집
+```powershell
+notepad $PROFILE
+```
+
+#### 2) 함수 추가
+```powershell
+# 1. DeepSeek 전용 실행
+function claude-deepseek {
+    $env:ANTHROPIC_BASE_URL = "https://api.deepseek.com/v1"
+    $env:ANTHROPIC_API_KEY  = "sk-your-deepseek-api-key"
+    claude --model deepseek-v4-flash-0731 @args
+}
+
+# 2. DeepSeek 추론(R1) 모델 실행
+function claude-r1 {
+    $env:ANTHROPIC_BASE_URL = "https://api.deepseek.com/v1"
+    $env:ANTHROPIC_API_KEY  = "sk-your-deepseek-api-key"
+    claude --model deepseek-reasoner @args
+}
+
+# 3. 공식 Anthropic Claude (기본)
+function claude-sonnet {
+    $env:ANTHROPIC_BASE_URL = $null
+    $env:ANTHROPIC_API_KEY  = "sk-ant-your-anthropic-key"
+    claude --model claude-3-5-sonnet-20241022 @args
 }
 ```
 
-### OpenAI 호환 / 커스텀 엔드포인트 형식
+#### 3) 사용 방법
+```powershell
+# 빠른 초안 및 질의 시
+claude-deepseek
 
-일부 CLI 패키지 또는 프록시를 사용할 경우 아래와 같은 키 구조를 사용할 수도 있습니다.
+# 깊은 논리 추론 및 알고리즘 설계 시
+claude-r1
 
-```json
-{
-  "apiKey": "sk-your-deepseek-api-key",
-  "baseUrl": "https://api.deepseek.com/v1",
-  "model": "deepseek-v4-flash-0731"
-}
+# 복잡한 아키텍처 및 고난도 코딩 시
+claude-sonnet
 ```
 
-### OpenRouter 등 프록시를 경유하는 경우
+---
 
-OpenRouter를 통해 DeepSeek 모델을 라우팅할 때의 예시입니다.
+### 방법 2. 통합 라우터(OpenRouter 또는 LiteLLM) 활용
 
+하나의 엔드포인트에서 모델 식별자 이름만 바꿔 모든 모델을 호출하는 방식입니다.
+
+#### A. OpenRouter 사용 시 (`settings.json`)
+OpenRouter API Key 하나로 수백 개의 모델을 즉시 사용할 수 있습니다.
+
+* **`%USERPROFILE%\.claude\settings.json`**:
 ```json
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api/v1",
-    "ANTHROPIC_API_KEY": "sk-or-your-openrouter-key"
+    "ANTHROPIC_API_KEY": "sk-or-v1-your-openrouter-key"
   },
   "model": "deepseek/deepseek-v4-flash-0731"
 }
 ```
-
----
-
-## 3. Windows PowerShell 환경 변수로 임시 실행
-
-`settings.json` 수정 없이 터미널 세션에서 즉시 실행하고자 할 때는 PowerShell에서 환경 변수를 설정 후 실행할 수 있습니다.
-
+* 모델 변경 실행:
 ```powershell
-# 1. API Key 및 Base URL 설정
-$env:ANTHROPIC_API_KEY="sk-your-deepseek-api-key"
-$env:ANTHROPIC_BASE_URL="https://api.deepseek.com/v1"
+claude --model deepseek/deepseek-chat
+claude --model anthropic/claude-3.5-sonnet
+claude --model openai/gpt-4o
+```
 
-# 2. 특정 모델을 지정하여 실행
-claude --model deepseek-v4-flash-0731
+#### B. LiteLLM 로컬 프록시 사용 시
+로컬에 LiteLLM 프록시(`litellm --port 4000`)를 띄우고 다양한 프로바이더를 단일 엔드포인트(`http://localhost:4000/v1`)로 묶을 수 있습니다.
+
+```yaml
+# litellm_config.yaml
+model_list:
+  - model_name: deepseek-flash
+    litellm_params:
+      model: deepseek/deepseek-v4-flash-0731
+      api_key: sk-your-deepseek-key
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o
+      api_key: sk-your-openai-key
 ```
 
 ---
 
-## 4. 주요 확인 사항 및 트러블슈팅
+### 방법 3. 프로젝트별(Local) `.claude/settings.json` 분리
 
-1. **API Key 유효성**: DeepSeek Open Platform에서 발급받은 `sk-`로 시작하는 유효한 API Key인지 확인합니다.
-2. **엔드포인트 URL**:
-   * 기본 DeepSeek 엔드포인트는 `https://api.deepseek.com` 또는 `https://api.deepseek.com/v1` 입니다.
-   * 클라이언트가 `/chat/completions` 또는 `/messages` 경로를 붙이는 방식에 맞춰 `v1` 포함 여부를 확인합니다.
-3. **토큰 및 모델명 매핑**: `deepseek-v4-flash-0731`과 같이 사용하려는 정확한 모델 식별자명을 입력했는지 확인합니다.
+전역 설정과 프로젝트별 설정을 분리하여, 저장소 특성에 맞게 기본 모델을 다르게 바인딩합니다.
+
+* **전역 설정 (`%USERPROFILE%\.claude\settings.json`)**:
+  * 비용이 저렴하고 빠른 `deepseek-v4-flash-0731`을 기본 모델로 설정
+* **특정 프로젝트 A (`D:\work\core-engine\.claude\settings.json`)**:
+  * 정확도가 최우선인 프로젝트에는 `claude-3-5-sonnet` 설정
+* **특정 프로젝트 B (`D:\work\docs-repo\.claude\settings.json`)**:
+  * 가벼운 문서 정리용 프로젝트에는 `deepseek-chat` 설정
+
+---
+
+### 방법 4. 대화 세션 내 명령어 전환 (`/model`)
+
+Claude CLI 대화 세션이 실행 중인 상태에서 모델을 변경할 때 사용합니다.
+
+```text
+> /model deepseek-v4-flash-0731
+Switched model to deepseek-v4-flash-0731
+```
+
+---
+
+## 3. 상황별 추천 사용 가이드
+
+| 사용 시나리오 | 권장 모델 | 추천 방식 |
+| :--- | :--- | :--- |
+| **빠른 질의 / 일상 코딩 / 초안 작성** | `deepseek-v4-flash-0731` / `deepseek-chat` | PowerShell 함수 (`claude-deepseek`) |
+| **복잡한 디버깅 / 알고리즘 추론** | `deepseek-reasoner` (R1) | PowerShell 함수 (`claude-r1`) |
+| **대규모 리팩토링 / 풀스택 코딩** | `claude-3-5-sonnet-20241022` | 공식 Anthropic API (`claude-sonnet`) |
+| **팀 단위 다양한 모델 통합 테스트** | 다중 모델 풀 | OpenRouter 또는 LiteLLM 프록시 |
