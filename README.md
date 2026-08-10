@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-10 14:56 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추...  |
 | 2026-08-10 14:40 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |
 | 2026-08-10 12:53 | [docker image versioning strategy](docs/Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
 | 2026-07-26 16:16 | [Backend Development Checklist](docs/LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-26 16:16 | [Web Development Checklist](docs/LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-22 17:42 | [EnableAutoConfiguration vs ConfigurationPropertiesScan](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @Con...  |
-| 2026-07-20 17:06 | [New Development Definition Template](docs/Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -370,6 +370,7 @@
 
 ## AI
 * [**Overview**](docs/AI/README.md)
+* [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](docs/AI/Antigravity_CLI_Configuration.md)
 * [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](docs/AI/Claude_CLI_DeepSeek_Setup.md)
 * [Gemini CLI](docs/AI/Gemini_CLI.md)
 * [Ollama](docs/AI/Ollama.md)
