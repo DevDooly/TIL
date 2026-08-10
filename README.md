@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-10 12:53 | [docker image versioning strategy](docs/Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
 | 2026-07-26 16:16 | [Backend Development Checklist](docs/LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-26 16:16 | [Web Development Checklist](docs/LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
 | 2026-07-22 17:42 | [EnableAutoConfiguration vs ConfigurationPropertiesScan](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @Con...  |
 | 2026-07-20 17:06 | [New Development Definition Template](docs/Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
 | 2026-07-13 16:44 | [Java Code Formatters Comparison](docs/Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경...  |
-| 2026-07-06 12:55 | [HAProxy Oracle Latency Diagnosis](docs/Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -226,6 +226,7 @@
   * [ArgoCD 사용 방법](docs/Infrastructure/ArgoCD/Usage.md)
 * **Docker**
   * [**Overview**](docs/Infrastructure/Docker/README.md)
+  * [Docker 이미지 버전 관리(Versioning) 전략](docs/Infrastructure/Docker/docker_image_versioning_strategy.md)
   * [Dockerfile](docs/Infrastructure/Docker/dockerfile.md)
   * [Docker: No space left on device 해결 방법](docs/Infrastructure/Docker/no space left on device.md)
 * **Hadoop**

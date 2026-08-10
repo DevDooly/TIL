@@ -2,4 +2,5 @@ title: Docker
 nav:
 - Index: README.md
 - Dockerfile: dockerfile.md
+- Image Versioning Strategy: docker_image_versioning_strategy.md
 - Troubleshooting: no space left on device.md
