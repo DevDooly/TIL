@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-19 16:43 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
 | 2026-08-19 16:19 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
 | 2026-08-19 16:19 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
 | 2026-08-11 07:47 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: NATS 메시징 시스템 상세 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-21 10:38 | [Language/Java/SpringBoot/Spring_Cloud_Zuul.md](Language/Java/SpringBoot/Spring_Cloud_Zuul.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드 추가 |
 | 2026-04-21 10:38 | [Web/Concepts/Scalar_UI.md](Web/Concepts/Scalar_UI.md) | docs: Spring Cloud Zuul (API Gateway) 개념 및 사용법 가이드 추가 |
 | 2026-04-20 16:46 | [Web/Concepts/OpenAPI_vs_Swagger.md](Web/Concepts/OpenAPI_vs_Swagger.md) | docs: OpenAPI와 Swagger 개념 차이 및 비교 가이드 추가 |
-| 2026-04-16 10:06 | [Tools/Build/Maven.md](Tools/Build/Maven.md) | docs: Maven 실무 팁(빌드 속도 개선, 테스트 스킵, 부분 빌드 등) 추가 |

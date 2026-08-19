@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-19 16:43 | [MinIO Client mc](docs/Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
 | 2026-08-19 16:19 | [Lifecycle](docs/Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
 | 2026-08-19 16:19 | [Versioning](docs/Infrastructure/MinIO/Versioning.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
 | 2026-08-11 07:47 | [NATS](docs/Infrastructure/MessageBroker/NATS.md) | docs: NATS 메시징 시스템 상세 가이드 추가 |
 | 2026-08-10 19:02 | [Qwen CLI Setup](docs/AI/Qwen_CLI_Setup.md) | docs: Qwen CLI API Key 재등록 및 설정 가이드 추가 |
 | 2026-08-10 14:56 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추...  |
-| 2026-08-10 14:40 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
