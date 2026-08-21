@@ -1,39 +1,51 @@
 # OpenCode
 
-**OpenCode**는 개발자를 위해 설계된 오픈소스 AI 코딩 어시스턴트입니다. 터미널, IDE, 또는 데스크탑 애플리케이션 형태로 동작하며, 로컬 개발 환경과 깊게 통합되어 강력한 기능을 제공합니다.
-
-## 💡 주요 특징
-
-### 1. 터미널 기반 인터페이스 (TUI)
-Go 언어로 작성된 CLI 애플리케이션으로, 터미널 내에서 바로 AI 모델과 상호작용할 수 있습니다. 개발자가 터미널을 떠나지 않고도 AI의 도움을 받을 수 있어 문맥 전환 비용을 줄여줍니다.
-
-### 2. 문맥 인식 (Context Awareness)
-단순한 챗봇과 달리, OpenCode는 **로컬 파일 시스템, Git 히스토리, 현재 작업 중인 코드의 문맥**을 이해합니다.
-
-- `opencode explain this function`과 같은 명령을 내리면 관련 코드를 자동으로 파악하여 답변합니다.
-
-### 3. 다양한 모델 지원
-
-- **Models.dev**를 통해 75개 이상의 LLM 제공업체와 연결됩니다.
-- **GitHub Copilot**, **ChatGPT Plus/Pro** 계정과 연동할 수 있습니다.
-- **Ollama** 등을 통해 로컬에서 실행되는 오픈소스 모델도 지원합니다.
-
-### 4. 에이전트 (Agents)
-단순한 질의응답을 넘어 특정 작업을 수행하는 에이전트 기능을 내장하고 있습니다.
-
-- **Build Agent:** 개발 빌드 관련 작업을 지원
-- **Plan Agent:** 코드 분석 및 탐색 계획 수립
+**OpenCode**는 개발자를 위해 설계된 모델 독립적(Model-agnostic) 오픈소스 AI 코딩 어시스턴트입니다. 터미널(TUI/CLI), IDE, 데스크탑 또는 **Paseo**와 같은 오케스트레이터의 백엔드 프로바이더로 동작하며, 로컬 파일과 Git 히스토리를 이해하여 코딩 작업을 돕습니다.
 
 ---
 
-## 🚀 설치 및 사용
+## 💡 주요 특징
 
-GitHub 저장소에서 소스를 받아 빌드하거나 바이너리를 설치하여 사용할 수 있습니다.
+### 1. 터미널 기반 인터페이스 (TUI) & Provider 모드
+CLI 인터페이스를 제공하여 터미널 내에서 바로 AI 모델과 상호작용하거나, Paseo와 같은 에이전트 제어 플레인의 실행 엔진으로 연동됩니다.
 
+### 2. 폭넓은 LLM 모델 지원 (Google Gemini, OpenAI, Claude, DeepSeek 등)
+* **Google Gemini 지원**: `GEMINI_API_KEY` 환경 변수 또는 Google AI Studio 계정 연동을 통해 **Gemini 3.7 Flash, 2.5 Pro, 2.0 Flash** 등 최신 제미나이 모델을 바로 사용 가능합니다.
+* **OpenAI / Anthropic**: GPT-4o, GPT-5 계열, Claude 3.5 Sonnet 등 지원
+* **Ollama**: 로컬에서 구동되는 오픈소스 LLM(DeepSeek R1, Llama 3 등) 연동 지원
+
+### 3. 문맥 인식 (Context Awareness)
+로컬 파일 시스템, Git 히스토리, 현재 작업 중인 코드의 문맥을 깊이 있게 분석하여 패치 및 리팩토링을 수행합니다.
+
+---
+
+## 🚀 설치 및 Gemini 연동
+
+### 1) 글로벌 설치 (Node.js / npm)
 ```bash
-# 설치 예시 (Go 필요)
-go install github.com/opencode-ai/opencode@latest
+npm install -g opencode-ai
 ```
+
+### 2) Gemini API Key 설정
+```bash
+# 환경 변수 등록
+export GEMINI_API_KEY="your-gemini-api-key"
+```
+
+### 3) 실행 예시
+```bash
+# CLI 직접 실행 (모델 지정)
+opencode --model google/gemini-3.7-flash
+
+# 또는 TUI 대화 모드
+opencode
+```
+
+---
+
+## 🔗 Paseo와의 연동
+
+Paseo 데몬을 구동하면 OpenCode가 자동으로 프로바이더로 등록되어, **스마트폰(Paseo 모바일 앱)에서 Provider를 OpenCode로 선택하고 Gemini 모델로 코딩 에이전트를 원격 제어**할 수 있습니다.
 
 ## References
 

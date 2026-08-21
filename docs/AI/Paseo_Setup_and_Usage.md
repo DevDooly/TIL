@@ -1,6 +1,6 @@
 # Paseo 설치 및 모바일 원격 제어 설정 가이드
 
-Paseo는 서버/PC에 데몬(Daemon)을 구동하고, 스마트폰(Android/iOS 앱), 웹 브라우저, CLI를 통해 외부 어디서든 AI 코딩 에이전트(Claude Code, Codex 등)를 모니터링하고 원격 제어할 수 있는 오픈소스 오케스트레이터입니다.
+Paseo는 서버/PC에 데몬(Daemon)을 구동하고, 스마트폰(Android/iOS 앱), 웹 브라우저, CLI를 통해 외부 어디서든 AI 코딩 에이전트(Claude Code, OpenCode, Codex 등)를 모니터링하고 원격 제어할 수 있는 오픈소스 오케스트레이터입니다.
 
 ---
 
@@ -44,19 +44,6 @@ paseo daemon start --listen 0.0.0.0:6767 --hostnames "devdooly.iptime.org,localh
 paseo daemon status
 ```
 
-출력 예시:
-```text
-KEY               VALUE                                          
-Server ID         srv_xxxxxxxxxxxx                               
-Local Daemon      running                                        
-Connected Daemon  reachable                                      
-Home              /home/user/.paseo                              
-Listen            0.0.0.0:6767                                   
-Relay             wss://relay.paseo.sh:443                       
-PID               1234567                                        
-Logs              /home/user/.paseo/daemon.log                   
-```
-
 ---
 
 ## 3. 스마트폰 (Android / iOS) 앱 페어링 방법
@@ -77,7 +64,42 @@ paseo daemon pair
 
 ---
 
-## 4. 유용한 Paseo CLI 관리 명령어
+## 4. Paseo에서 Google Gemini 모델 연동 방법 (OpenCode 활용)
+
+Paseo는 제어 플레인(Control Plane)이며, 다양한 LLM을 구동하기 위해 **Provider(에이전트 엔진)**를 사용합니다. **OpenCode** Provider를 통해 **Google Gemini (Gemini 3.7 Flash, 2.5 Pro, 2.0 Flash 등)**를 손쉽게 사용할 수 있습니다.
+
+### 4.1 OpenCode CLI 설치
+```bash
+npm install -g opencode-ai
+```
+
+### 4.2 Gemini API Key 설정
+Google AI Studio에서 발급받은 API 키를 환경 변수에 등록합니다.
+
+```bash
+# ~/.bashrc 또는 ~/.zshrc 에 추가
+export GEMINI_API_KEY="your-gemini-api-key-here"
+```
+
+*또는 `opencode auth login`을 통해 브라우저로 Google 계정 직접 로그인도 지원합니다.*
+
+### 4.3 Paseo 데몬 재시작 및 Provider 확인
+```bash
+paseo daemon restart
+paseo provider ls
+```
+`opencode`가 `available (Enabled)` 상태로 표시됩니다.
+
+### 4.4 모바일 앱 / CLI에서 Gemini 모델 사용
+* **모바일 앱**: 새 에이전트 생성 시 Provider를 **OpenCode**로 선택하고, Model 목록에서 **`google/gemini-3.7-flash`** 또는 **`google/gemini-2.5-pro`**를 선택합니다.
+* **CLI 실행 예시**:
+  ```bash
+  paseo run --provider opencode --model google/gemini-3.7-flash "프로젝트 버그 수정해줘"
+  ```
+
+---
+
+## 5. 유용한 Paseo CLI 관리 명령어
 
 | 작업 | 명령어 |
 | :--- | :--- |
@@ -87,13 +109,14 @@ paseo daemon pair
 | **데몬 재시작** | `paseo daemon restart` |
 | **데몬 정지** | `paseo daemon stop` |
 | **지원 프로바이더 조회** | `paseo provider ls` |
+| **특정 프로바이더 지원 모델 조회** | `paseo provider models opencode` |
 | **실행 중인 에이전트 목록** | `paseo ls` |
 | **새 에이전트 작업 실행** | `paseo run "작업 지시 내용"` |
 | **에이전트 세션 접속** | `paseo attach <AGENT_ID>` |
 
 ---
 
-## 5. systemd 서비스 등록 (서버 부팅 시 자동 실행 - 선택 사항)
+## 6. systemd 서비스 등록 (서버 부팅 시 자동 실행 - 선택 사항)
 
 서버 재부팅 시에도 Paseo 데몬이 자동으로 기동되도록 `systemd` 사용자 서비스를 등록할 수 있습니다.
 
