@@ -19,6 +19,9 @@ Google Antigravity CLI(`agy`)에서 파일 생성, 수정 및 명령어 실행 �
 ### [Antigravity CLI 스킬 및 확장 가이드](Antigravity_CLI_Skills_Guide.md)
 `agy`에서 생산성을 극대화하기 위한 추천 스킬 분류(리팩토링, 테스트, CI/CD, 문서화), 핵심 슬래시 커맨드(`/plan`, `/goal`, `/grill-me`), MCP 서버 연동 및 커스텀 스킬 제작 가이드입니다.
 
+### [Antigravity CLI (agy) vs OpenCode 비교](AGY_vs_OpenCode_Comparison.md)
+Google DeepMind의 고도화된 에이전트 플랫폼 **Antigravity CLI (`agy`)**와 가볍고 유연한 오픈소스 코딩 도구 **OpenCode (+ Gemini)**의 아키텍처, 기능, 장단점 및 상황별 선택 가이드입니다.
+
 ### [Claude CLI (다중 모델 & DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
 Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 변수를 활용하여 DeepSeek 등 다중 모델을 연동하고 전환하는 설정 가이드입니다.
 

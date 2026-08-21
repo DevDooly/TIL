@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-21 14:04 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: Antigravity CLI(agy)와 OpenCode(+Gemini) 비교 가이드 추가 |
 | 2026-08-21 13:54 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 스킬 설치, 디렉토리 구조 및 설정 방법 상세 보강 |
 | 2026-08-21 13:43 | [AI/OpenCode.md](AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
 | 2026-08-21 13:43 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-04-23 13:36 | [Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md](Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudRepository) 비교 가이드 추가 |
 | 2026-04-23 13:33 | [Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md](Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 추가 |
 | 2026-04-21 15:21 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드 추가 |
-| 2026-04-21 14:05 | [Language/Java/SpringBoot/Finding_Blocking_Operations.md](Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
