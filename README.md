@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-21 10:49 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: AI 코딩 에이전트 오케스트레이터 Orca 및 Paseo 개념, 비교 분석 및 ...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/Jenkins/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-19 16:43 | [MinIO Client mc](docs/Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
-| 2026-08-19 16:19 | [Lifecycle](docs/Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -371,6 +371,7 @@
 
 ## AI
 * [**Overview**](docs/AI/README.md)
+* [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
 * [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](docs/AI/Antigravity_CLI_Configuration.md)
 * [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](docs/AI/Claude_CLI_DeepSeek_Setup.md)
 * [Gemini CLI](docs/AI/Gemini_CLI.md)

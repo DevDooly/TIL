@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-21 10:49 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: AI 코딩 에이전트 오케스트레이터 Orca 및 Paseo 개념, 비교 분석 및 가이드 추가 |
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
 | 2026-08-20 10:01 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
@@ -53,4 +54,3 @@
 | 2026-04-21 13:29 | [Language/Java/SpringBoot/Tomcat_vs_Netty.md](Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md](Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
 | 2026-04-21 13:06 | [Language/Java/SpringBoot/Netflix_Ribbon_Guide.md](Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개념 및 SCG 대체 기술 가이드 추가 |
-| 2026-04-21 10:51 | [Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md](Language/Java/SpringBoot/SCG_vs_Zuul_Comparison.md) | docs: Spring Cloud Gateway vs Netflix Zuul 아키텍처 비교 가이드 추가 |
