@@ -47,7 +47,7 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-08-21 10:49 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: AI 코딩 에이전트 오케스트레이터 Orca 및 Paseo 개념, 비교 분석 및 ...  |
+| 2026-08-21 13:26 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 ...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
