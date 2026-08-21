@@ -25,5 +25,8 @@ Qwen CLI 및 DashScope 환경에서 API Key를 재등록하거나 환경 변수�
 ### [AI 코딩 에이전트 오케스트레이터 (Orca & Paseo)](AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
 Claude Code, Codex 등 다중 자율형 AI 코딩 에이전트를 병렬로 실행하고 조율하는 대표적인 오케스트레이터인 **Orca**(Git Worktree 격리 기반 ADE)와 **Paseo**(셀프 호스팅 데몬 기반 멀티 디바이스 제어 플레인)의 개념, 아키텍처 및 비교 분석 가이드입니다.
 
+### [Paseo 설치 및 모바일 연동](Paseo_Setup_and_Usage.md)
+Paseo CLI 및 데몬 설치, Relay 기반 외부 접속 설정 및 스마트폰(Android/iOS) 앱 페어링 가이드입니다.
+
 ### [n8n](n8n.md)
 확장성이 뛰어난 **워크플로우 자동화 도구**입니다. 노드 기반 인터페이스를 통해 다양한 앱과 AI 모델(OpenAI, LangChain 등)을 연결하여 강력한 자동화 시스템을 구축할 수 있습니다.

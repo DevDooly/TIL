@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-21 13:36 | [Paseo Setup and Usage](docs/AI/Paseo_Setup_and_Usage.md) | docs: Paseo 설치 및 모바일 원격 제어 설정 가이드 추가 |
 | 2026-08-21 13:26 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 ...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/Jenkins/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
-| 2026-08-19 16:43 | [MinIO Client mc](docs/Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -379,6 +379,7 @@
 * [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
 * [OpenClaw](docs/AI/OpenClaw.md)
 * [OpenCode](docs/AI/OpenCode.md)
+* [Paseo 설치 및 모바일 원격 제어 설정 가이드](docs/AI/Paseo_Setup_and_Usage.md)
 * [Qwen CLI - API Key 재등록 및 설정 가이드](docs/AI/Qwen_CLI_Setup.md)
 * [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
 * [n8n (Nodemation)](docs/AI/n8n.md)

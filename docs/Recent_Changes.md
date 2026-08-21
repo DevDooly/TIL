@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-21 13:36 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: Paseo 설치 및 모바일 원격 제어 설정 가이드 추가 |
 | 2026-08-21 13:26 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 보강 |
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
@@ -53,4 +54,3 @@
 | 2026-04-21 14:05 | [Language/Java/SpringBoot/Finding_Blocking_Operations.md](Language/Java/SpringBoot/Finding_Blocking_Operations.md) | docs: BlockHound를 @SpringBootTest와 함께 사용하는 방법 추가 |
 | 2026-04-21 13:29 | [Language/Java/SpringBoot/Tomcat_vs_Netty.md](Language/Java/SpringBoot/Tomcat_vs_Netty.md) | docs: Tomcat vs Netty 아키텍처 및 선택 기준 비교 가이드 추가 |
 | 2026-04-21 13:10 | [Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md](Language/Java/SpringBoot/Spring_Cloud_LoadBalancer.md) | docs: Spring Cloud LoadBalancer 개념 및 사용법 가이드 추가 |
-| 2026-04-21 13:06 | [Language/Java/SpringBoot/Netflix_Ribbon_Guide.md](Language/Java/SpringBoot/Netflix_Ribbon_Guide.md) | docs: Netflix Ribbon (Client-side Load Balancer) 개념 및 SCG 대체 기술 가이드 추가 |

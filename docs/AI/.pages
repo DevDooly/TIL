@@ -8,6 +8,7 @@ nav:
   - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
   - Qwen CLI Setup: Qwen_CLI_Setup.md
   - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
+  - Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md
   - n8n: n8n.md
   - Ollama: Ollama.md
   - Ollama Local Setup: Ollama_Local_Environment_Setup.md
