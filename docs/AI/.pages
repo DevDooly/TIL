@@ -4,7 +4,8 @@ nav:
   - OpenCode: OpenCode.md
   - OpenClaw: OpenClaw.md
   - Gemini CLI: Gemini_CLI.md
-  - Antigravity CLI: Antigravity_CLI_Configuration.md
+  - Antigravity CLI 설정: Antigravity_CLI_Configuration.md
+  - Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
   - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
   - Qwen CLI Setup: Qwen_CLI_Setup.md
   - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md

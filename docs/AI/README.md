@@ -13,8 +13,11 @@
 ### [Gemini CLI](Gemini_CLI.md)
 터미널 기반 **대화형 AI 에이전트**입니다. 코드베이스 분석, 리팩토링, 버그 수정, 문서 작성 등 소프트웨어 엔지니어링 작업에 특화되어 있습니다.
 
-### [Antigravity CLI](Antigravity_CLI_Configuration.md)
+### [Antigravity CLI 설정](Antigravity_CLI_Configuration.md)
 Google Antigravity CLI(`agy`)에서 파일 생성, 수정 및 명령어 실행 시 확인(Approval) 절차를 생략하고 자동 승인(Auto-approve)하는 설정 가이드입니다.
+
+### [Antigravity CLI 스킬 및 확장 가이드](Antigravity_CLI_Skills_Guide.md)
+`agy`에서 생산성을 극대화하기 위한 추천 스킬 분류(리팩토링, 테스트, CI/CD, 문서화), 핵심 슬래시 커맨드(`/plan`, `/goal`, `/grill-me`), MCP 서버 연동 및 커스텀 스킬 제작 가이드입니다.
 
 ### [Claude CLI (다중 모델 & DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
 Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 변수를 활용하여 DeepSeek 등 다중 모델을 연동하고 전환하는 설정 가이드입니다.

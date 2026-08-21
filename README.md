@@ -47,12 +47,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-08-21 13:49 | [Antigravity CLI Skills Guide](docs/AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 추천 스킬 및 확장 가이드 추가 |
 | 2026-08-21 13:43 | [OpenCode](docs/AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
 | 2026-08-21 13:43 | [Paseo Setup and Usage](docs/AI/Paseo_Setup_and_Usage.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
 | 2026-08-21 13:26 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 ...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
-| 2026-08-20 10:01 | [Examples](docs/Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -373,6 +373,7 @@
 * [**Overview**](docs/AI/README.md)
 * [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
 * [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](docs/AI/Antigravity_CLI_Configuration.md)
+* [Antigravity CLI (`agy`) 유용한 스킬 및 확장 가이드](docs/AI/Antigravity_CLI_Skills_Guide.md)
 * [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](docs/AI/Claude_CLI_DeepSeek_Setup.md)
 * [Gemini CLI](docs/AI/Gemini_CLI.md)
 * [Ollama](docs/AI/Ollama.md)
