@@ -22,17 +22,24 @@ paseo --version
 
 ---
 
-## 2. Paseo 데몬 실행 및 Relay 연결
+## 2. 외부 접속을 위한 데몬 실행 및 네트워크 설정 (중요)
 
-Paseo는 **E2E 암호화 Relay(릴레이)** 기술을 제공하므로, 포트포워딩이나 공인 IP, VPN 설정 없이도 외부에서 스마트폰 앱과 안전하게 통신할 수 있습니다.
+외부 도메인(DDNS)이나 모바일 앱에서 직접 접속(Direct IP/Domain) 및 Relay 접속이 가능하도록 설정합니다.
 
-### 2.1 데몬 백그라운드 시작
+### 2.1 로컬 방화벽 (UFW) 포트 허용
 ```bash
-# E2E 암호화 릴레이 및 Web UI 활성화 상태로 백그라운드 시작
-paseo daemon start --relay --web-ui
+sudo ufw allow 6767/tcp
 ```
 
-### 2.2 데몬 상태 확인
+### 2.2 데몬 백그라운드 시작 (외부 리슨 및 도메인 허용)
+기본 실행 시 `127.0.0.1`로만 바인딩되므로, 외부 접속을 허용하려면 `--listen 0.0.0.0:6767`과 호스트네임 허용(`--hostnames`) 옵션을 반드시 추가해야 합니다.
+
+```bash
+# 0.0.0.0 바인딩, 도메인 허용, Relay 및 Web UI 활성화
+paseo daemon start --listen 0.0.0.0:6767 --hostnames "devdooly.iptime.org,localhost,127.0.0.1,true" --relay --web-ui
+```
+
+### 2.3 데몬 상태 확인
 ```bash
 paseo daemon status
 ```
@@ -44,7 +51,7 @@ Server ID         srv_xxxxxxxxxxxx
 Local Daemon      running                                        
 Connected Daemon  reachable                                      
 Home              /home/user/.paseo                              
-Listen            127.0.0.1:6767                                 
+Listen            0.0.0.0:6767                                   
 Relay             wss://relay.paseo.sh:443                       
 PID               1234567                                        
 Logs              /home/user/.paseo/daemon.log                   
@@ -74,7 +81,7 @@ paseo daemon pair
 
 | 작업 | 명령어 |
 | :--- | :--- |
-| **데몬 시작** | `paseo daemon start --relay --web-ui` |
+| **데몬 시작 (외부 허용)** | `paseo daemon start --listen 0.0.0.0:6767 --hostnames "devdooly.iptime.org,localhost,true" --relay --web-ui` |
 | **데몬 상태 확인** | `paseo daemon status` |
 | **페어링 QR/링크 출력** | `paseo daemon pair` |
 | **데몬 재시작** | `paseo daemon restart` |
@@ -98,7 +105,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=%h/.nvm/versions/node/v24.12.0/bin/node %h/.nvm/versions/node/v24.12.0/bin/paseo daemon start --foreground --relay --web-ui
+ExecStart=%h/.nvm/versions/node/v24.12.0/bin/node %h/.nvm/versions/node/v24.12.0/bin/paseo daemon start --foreground --listen 0.0.0.0:6767 --hostnames "devdooly.iptime.org,localhost,true" --relay --web-ui
 Restart=always
 RestartSec=5
 

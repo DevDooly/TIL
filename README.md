@@ -47,7 +47,7 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-08-21 13:36 | [Paseo Setup and Usage](docs/AI/Paseo_Setup_and_Usage.md) | docs: Paseo 설치 및 모바일 원격 제어 설정 가이드 추가 |
+| 2026-08-21 13:38 | [Paseo Setup and Usage](docs/AI/Paseo_Setup_and_Usage.md) | docs: Paseo 외부 도메인 및 0.0.0.0 리슨/방화벽 설정 가이드 보강 |
 | 2026-08-21 13:26 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 ...  |
 | 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
 | 2026-08-20 10:01 | [Usage](docs/Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
