@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-08-21 13:49 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 추천 스킬 및 확장 가이드 추가 |
+| 2026-08-21 13:54 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 스킬 설치, 디렉토리 구조 및 설정 방법 상세 보강 |
 | 2026-08-21 13:43 | [AI/OpenCode.md](AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
 | 2026-08-21 13:43 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
 | 2026-08-21 13:26 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 보강 |
