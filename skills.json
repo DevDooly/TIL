@@ -1,0 +1,8 @@
+{
+  "skills": [
+    {
+      "name": "git-workflow",
+      "path": ".agents/skills/git-workflow"
+    }
+  ]
+}
