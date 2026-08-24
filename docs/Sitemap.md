@@ -2,15 +2,39 @@
 
 모든 기술 지식을 한눈에 확인하고 바로 이동할 수 있습니다.
 
+## 📁 Troubleshooting
+
+* [🛠️ 실전 엔지니어링 트러블슈팅 아카이브](Troubleshooting/README.md)
+    * [**분석 문서 보기**](Language/Java/Virtual_Threads_FTP_Pinning.md)
+    * [**분석 문서 보기**](Language/Java/Virtual_Threads_in_K8s.md)
+    * [**분석 문서 보기**](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+    * [**분석 문서 보기**](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+    * [**분석 문서 보기**](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+    * [**분석 문서 보기**](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
+    * [**분석 문서 보기**](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
+    * [**분석 문서 보기**](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+    * [**분석 문서 보기**](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+    * [**분석 문서 보기**](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+    * [**분석 문서 보기**](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+    * [**분석 문서 보기**](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+    * [**분석 문서 보기**](Infrastructure/Linux/Large_File_Transfer.md)
+    * [**분석 문서 보기**](Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
+    * [**분석 문서 보기**](Data/Database/Oracle_LOB_Segment.md)
+    * [**분석 문서 보기**](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+
 ## 📁 Language
 
-* [Language (프로그래밍 언어)](Language/README.md)
+* [☕ Language & Runtime Ecosystem](Language/README.md)
     * **Java**
-        * [Java](Language/Java/README.md)
+        * [☕ Java & JVM Ecosystem](Language/Java/README.md)
+        * [Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드](Language/Java/Apache_Arrow_BufferAllocator_Management.md)
         * [Apache Arrow를 이용한 Java-Python 고성능 데이터 공유 가이드](Language/Java/Apache_Arrow_Memory_Mapped_File.md)
         * [Apache Arrow & mmap을 이용한 Zero-copy 데이터 공유](Language/Java/Apache_Arrow_with_mmap.md)
         * [Caffeine Cache: 고성능 Java 로컬 캐시 가이드](Language/Java/Caffeine_Cache.md)
         * [Java/Spring Boot: 현재 스레드가 가상 스레드인지 확인하는 방법](Language/Java/Check_Virtual_Thread.md)
+        * [Java: Collections.emptyList() vs List.of() 비교](Language/Java/Collections.emptyList_vs_List.of.md)
+        * [Java: Concatenated GZIP 스트림 압축 해제 (Unzip)](Language/Java/Concatenated_Gzip_Decompression.md)
+        * [Java Effectively Final](Language/Java/Effectively_Final.md)
         * [Java Garbage Collection (GC)](Language/Java/Garbage_Collection.md)
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
         * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
@@ -35,11 +59,12 @@
             * [Optional](Language/Java/Functional/Optional.md)
             * [Stream API](Language/Java/Functional/Stream.md)
         * **SpringBoot**
-            * [Spring Boot](Language/Java/SpringBoot/README.md)
+            * [🍃 Spring Boot Framework](Language/Java/SpringBoot/README.md)
             * [Aspect-Oriented Programming (AOP)](Language/Java/SpringBoot/AOP.md)
             * [빈 후처리기 (BeanPostProcessor)](Language/Java/SpringBoot/BeanPostProcessor.md)
             * [Spring Bean Lifecycle](Language/Java/SpringBoot/Bean_Lifecycle.md)
             * [Dependency Injection (DI) & Inversion of Control (IoC)](Language/Java/SpringBoot/DI_IoC.md)
+            * [Spring Boot: @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md)
             * [Netty 환경에서 Blocking 코드/라이브러리를 찾는 방법](Language/Java/SpringBoot/Finding_Blocking_Operations.md)
             * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
             * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
@@ -75,24 +100,26 @@
     * **NodeJs**
         * [Node.js](Language/NodeJs/README.md)
         * [Yarn Berry (Yarn v2+)](Language/NodeJs/Yarn Berry.md)
-        * [Libuv](Language/NodeJs/libuv.md)
+        * [⚡ Libuv & Node.js 비동기 I/O 아키텍처](Language/NodeJs/libuv.md)
     * **Python**
-        * [Python](Language/Python/README.md)
+        * [🐍 Python Engineering & Concurrency](Language/Python/README.md)
         * [client.py](Language/Python/AIOHTTP vs Flask.md)
+        * [Stream](Language/Python/Asyncio_Streams.md)
         * [Python 스크립트 실행 가이드: `python3 main.py`](Language/Python/Basic_Execution_Guide.md)
         * [Celery](Language/Python/Celery.md)
         * [Comprehension](Language/Python/Comprehension.md)
         * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](Language/Python/Conda_Anaconda_Miniconda.md)
+        * [🐍 Python Decorator (데코레이터)](Language/Python/Decorator.md)
         * [Designing Modules in Python (모듈 설계)](Language/Python/Designing Modules in Python.md)
         * [FastAPI의 동시성(Concurrency) 처리 메커니즘](Language/Python/FastAPI_Concurrency_Mechanism.md)
         * [Gunicorn vs Uvicorn: 개념과 운영 환경 구축 전략](Language/Python/Gunicorn_vs_Uvicorn.md)
         * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](Language/Python/Offline_Installation_Guide.md)
         * [오프라인 환경에서 `venv` 및 `pip` 패키지 설치 가이드](Language/Python/Offline_Venv_Pip_Guide.md)
-        * [PyQt5](Language/Python/PyQt5.md)
         * [Imports](Language/Python/Refactoring.md)
         * [SQLAlchemy](Language/Python/SQLAlchemy.md)
         * [Python Web Server 실행 방식 비교: `python main.py` vs CLI Runner](Language/Python/Server_Execution_Methods.md)
         * [Socket Programming](Language/Python/Socket Programming.md)
+        * [socketserver](Language/Python/SocketServer.md)
         * [orjson](Language/Python/orjson.md)
         * [Retry](Language/Python/retry.md)
         * [Tokenizer](Language/Python/tokenizer.md)
@@ -103,70 +130,38 @@
             * [Pika](Language/Python/pika/README.md)
             * [RabbitMQ / Asynchronous consumer example](Language/Python/pika/Asynchronous consumer example.md)
             * [BlockingConnection](Language/Python/pika/BlockingConnection.md)
-        * **PyQt5**
-            * **Custom**
-        * **Library**
-            * [Keras](Language/Python/Library/Keras.md)
-        * **Study**
-            * [Decorator](Language/Python/Study/Decorator.md)
-            * [Python Study](Language/Python/Study/READMD.md)
-        * **Lib**
-            * [asyncio](Language/Python/Lib/asyncio.md)
-            * [socketserver](Language/Python/Lib/socketserver.md)
-            * **asyncio**
-                * [Stream](Language/Python/Lib/asyncio/streams.md)
         * **Troubleshooting**
             * [Python_Reinstall_Server_Failure.md](Language/Python/Troubleshooting/Python_Reinstall_Server_Failure.md)
-        * **sys**
-            * [sys](Language/Python/sys/README.md)
-            * [sys.setrecursionlimit(limit)](Language/Python/sys/sys.setrecursionlimit.md)
-        * **PySide6**
-            * [PySide](Language/Python/PySide6/README.md)
-
-## 📁 Web
-
-* [Web Development](Web/README.md)
-    * **Framework**
-        * [Chart.js #](Web/Framework/ChartJs.md)
-        * [Electron.md](Web/Framework/Electron.md)
-        * [Vuejs.md](Web/Framework/Vuejs.md)
-    * **Concepts**
-        * [Ajax 그리고 CSR, SSR.md](Web/Concepts/Ajax 그리고 CSR, SSR.md)
-        * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](Web/Concepts/OpenAPI_vs_Swagger.md)
-        * [Scalar: 현대적이고 아름다운 API 문서화 도구 가이드](Web/Concepts/Scalar_UI.md)
-        * [용어 #](Web/Concepts/WebRTC.md)
-        * [Using shadow DOM](Web/Concepts/shadow DOM.md)
 
 ## 📁 Infrastructure
 
-* [Infrastructure](Infrastructure/README.md)
+* [🏗️ Infrastructure & Cloud Native](Infrastructure/README.md)
     * **MessageBroker**
         * [Message Broker (메시지 브로커)](Infrastructure/MessageBroker/README.md)
         * [AMQP (Advanced Message Queuing Protocol)](Infrastructure/MessageBroker/AMQP.md)
+        * [NATS (Neural Autonomic Transport System)](Infrastructure/MessageBroker/NATS.md)
         * [RabbitMQ vs Kafka](Infrastructure/MessageBroker/RabbitMQ 그리고 Kafka.md)
         * **Kafka**
             * [Apache Kafka](Infrastructure/MessageBroker/Kafka/README.md)
             * [Kafka: abortOnNewBatch 매커니즘과 파티션 쏠림 이슈](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
             * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
             * [Kafka: Consumer의 안전한 종료 (wakeup vs close)](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+            * [Kafka 메시지 최대 사이즈 확장 가이드 (Broker 재기동 없이)](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
+            * [Kafka Broker 롤링 재시작 가이드 (3대 HA 구성)](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md)
             * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
             * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
             * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
             * [Kafka Producer: 파티셔너(Partitioner) 정책 및 설정](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
             * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
-        * **RabbitMQ**
-            * [RabbitMQ](Infrastructure/MessageBroker/RabbitMQ/README.md)
-            * [Editing RabbitMQ handle big message](Infrastructure/MessageBroker/RabbitMQ/Editing RabbitMQ handle big message.md)
-            * [설치](Infrastructure/MessageBroker/RabbitMQ/설치.md)
-            * **test**
     * **Jenkins**
         * [Jenkins (젠킨스)](Infrastructure/Jenkins/README.md)
-        * [Jenkins 사용 예시 (Pipeline)](Infrastructure/Jenkins/Examples.md)
+        * [Jenkins 실전 사용 예시 (Pipeline)](Infrastructure/Jenkins/Examples.md)
         * [Jenkins 설치 가이드](Infrastructure/Jenkins/Installation_Docker_Linux.md)
         * [Jenkins 설치 가이드 (Kubernetes)](Infrastructure/Jenkins/Installation_K8s.md)
-        * [Jenkins 사용 방법](Infrastructure/Jenkins/Usage.md)
+        * [Jenkins 사용 방법 및 실무 설정 가이드](Infrastructure/Jenkins/Usage.md)
     * **Docker**
         * [Docker](Infrastructure/Docker/README.md)
+        * [Docker 이미지 버전 관리(Versioning) 전략](Infrastructure/Docker/docker_image_versioning_strategy.md)
         * [Dockerfile](Infrastructure/Docker/dockerfile.md)
         * [Docker: No space left on device 해결 방법](Infrastructure/Docker/no space left on device.md)
     * **Kubernetes**
@@ -188,37 +183,35 @@
         * [Hadoop/Tez: 특정 노드 네트워크 RX Error로 인한 작업 지연 이슈](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
     * **OracleCloud**
         * [Oracle Cloud Free Tier (오라클 클라우드 프리티어)](Infrastructure/OracleCloud/README.md)
+        * [HAProxy를 통한 Oracle DB 접속 지연 진단 가이드](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md)
     * **Hazelcast**
         * [🌰 Hazelcast (IMDG)](Infrastructure/Hazelcast/README.md)
         * [인메모리 데이터베이스(IMDB) vs 인메모리 데이터 그리드(IMDG)](Infrastructure/Hazelcast/IMDB_vs_IMDG.md)
     * **MinIO**
         * [MinIO](Infrastructure/MinIO/README.md)
         * [MinIO Java Client 사용 예제](Infrastructure/MinIO/Java_Client_Examples.md)
-        * [MinIO 수명 주기 관리 (Lifecycle Management)](Infrastructure/MinIO/Lifecycle.md)
+        * [MinIO 수명 주기 관리 (Lifecycle / ILM)](Infrastructure/MinIO/Lifecycle.md)
         * [MinIO Client (mc) 설치 및 사용 가이드](Infrastructure/MinIO/MinIO_Client_mc.md)
         * [MinIO 버저닝 (Versioning)](Infrastructure/MinIO/Versioning.md)
     * **ArgoCD**
         * [ArgoCD](Infrastructure/ArgoCD/README.md)
-        * [ArgoCD 실전 사용 예시 (App of Apps)](Infrastructure/ArgoCD/Examples.md)
+        * [ArgoCD 실전 사용 예시 (App of Apps, Kustomize, ApplicationSet)](Infrastructure/ArgoCD/Examples.md)
         * [ArgoCD 설치 가이드](Infrastructure/ArgoCD/Installation.md)
-        * [ArgoCD 사용 방법](Infrastructure/ArgoCD/Usage.md)
+        * [ArgoCD 사용 방법 및 운영 가이드](Infrastructure/ArgoCD/Usage.md)
     * **Linux**
-        * [Linux (리눅스)](Infrastructure/Linux/README.md)
+        * [🐧 Linux Administration & Performance](Infrastructure/Linux/README.md)
         * [Fail2Ban](Infrastructure/Linux/Fail2Ban.md)
         * [Ubuntu Server 초기 셋팅 가이드](Infrastructure/Linux/Initial_Setup.md)
         * [대량 파일 전송 가이드 (rsync 활용)](Infrastructure/Linux/Large_File_Transfer.md)
         * [Logrotate (로그로테이트)](Infrastructure/Linux/Logrotate.md)
         * [POSIX (Portable Operating System Interface)](Infrastructure/Linux/POSIX.md)
-        * [Single Quote vs Double Quote (Bash)](Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md)
         * [Stdin, Stdout, Stderr (표준 스트림)](Infrastructure/Linux/Stdin, stdout, stderr.md)
         * [TL;DR (Too Long; Didn't Read)](Infrastructure/Linux/TL;DR.md)
         * [Crontab (크론탭)](Infrastructure/Linux/crontab.md)
-        * **Tips**
-            * [Mount OneDrive on Ubuntu](Infrastructure/Linux/Tips/Mount OneDrive on Ubuntu.md)
 
 ## 📁 Data
 
-* [Data & Database](Data/README.md)
+* [💾 Data Systems & Storage Architecture](Data/README.md)
 * [ELK Stack](Data/ELK.md)
 * [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](Data/Log_Collectors_Comparison.md)
     * **Database**
@@ -228,13 +221,37 @@
         * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](Data/Database/Locking_Strategy.md)
         * [MongoDB](Data/Database/MongoDB.md)
         * [Oracle LOB Segment 및 ORA-01692 에러 조치](Data/Database/Oracle_LOB_Segment.md)
-        * [Redis (Remote Dictionary Server)](Data/Database/Redis.md)
+        * [⚡ Redis (Remote Dictionary Server)](Data/Database/Redis.md)
         * [SQL Naming Convention (SQL 명명 규칙)](Data/Database/SQL_Naming_Convention.md)
         * [Fluentd](Data/Database/fluentd.md)
 
+## 📁 AI
+
+* [AI Tools & Agents](AI/README.md)
+* [Antigravity CLI (agy) vs OpenCode (with Gemini) 비교 가이드](AI/AGY_vs_OpenCode_Comparison.md)
+* [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
+* [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](AI/Antigravity_CLI_Configuration.md)
+* [Antigravity CLI (`agy`) 스킬 설치, 설정 및 활용 가이드](AI/Antigravity_CLI_Skills_Guide.md)
+* [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](AI/Claude_CLI_DeepSeek_Setup.md)
+* [Gemini CLI](AI/Gemini_CLI.md)
+* [Ollama](AI/Ollama.md)
+* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](AI/Ollama_Local_Environment_Setup.md)
+* [OpenClaw](AI/OpenClaw.md)
+* [OpenCode](AI/OpenCode.md)
+* [Paseo 설치 및 모바일 원격 제어 설정 가이드](AI/Paseo_Setup_and_Usage.md)
+* [Qwen CLI - API Key 재등록 및 설정 가이드](AI/Qwen_CLI_Setup.md)
+* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](AI/TurboQuant.md)
+* [n8n (Nodemation)](AI/n8n.md)
+
+## 📁 LLM_Development
+
+* [LLM Development Guide (LLM 개발 가이드)](LLM_Development/README.md)
+* [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](LLM_Development/Backend_Development_Checklist.md)
+* [Web Development with LLM (웹 개발 시 LLM 활용 가이드)](LLM_Development/Web_Development_Checklist.md)
+
 ## 📁 ComputerScience
 
-* [Computer Science](ComputerScience/README.md)
+* [🏛️ Computer Science & Fundamental Systems](ComputerScience/README.md)
     * **Security**
         * [Security (보안)](ComputerScience/Security/README.md)
         * [JWT (JSON Web Token) 및 인증 방식 비교](ComputerScience/Security/JWT.md)
@@ -255,9 +272,6 @@
         * [Architecture (시스템 아키텍처)](ComputerScience/Architecture/README.md)
         * [고가용성 (High Availability, HA)](ComputerScience/Architecture/High_Availability.md)
         * [파이프라인 (Pipeline)](ComputerScience/Architecture/Pipeline.md)
-    * **Math**
-        * [Math (수학)](ComputerScience/Math/README.md)
-        * [Fourier Transform (푸리에 변환)](ComputerScience/Math/Fourier transform.md)
     * **Network**
         * [Network (네트워크)](ComputerScience/Network/README.md)
         * [OSI 7 Layer (OSI 7 계층)](ComputerScience/Network/OSI 7 Layer.md)
@@ -269,39 +283,29 @@
     * **OperatingSystem**
         * [Endianness (엔디언)](ComputerScience/OperatingSystem/Endianness.md)
 
-## 📁 AI
+## 📁 Web
 
-* [AI Tools & Agents](AI/README.md)
-* [Gemini CLI](AI/Gemini_CLI.md)
-* [Ollama](AI/Ollama.md)
-* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](AI/Ollama_Local_Environment_Setup.md)
-* [OpenClaw](AI/OpenClaw.md)
-* [OpenCode](AI/OpenCode.md)
-* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](AI/TurboQuant.md)
-* [n8n (Nodemation)](AI/n8n.md)
+* [🌐 Web Technologies & Architecture](Web/README.md)
+    * **Framework**
+        * [Vuejs.md](Web/Framework/Vuejs.md)
+    * **Concepts**
+        * [Ajax 그리고 CSR, SSR.md](Web/Concepts/Ajax 그리고 CSR, SSR.md)
+        * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](Web/Concepts/OpenAPI_vs_Swagger.md)
+        * [Scalar: 현대적이고 아름다운 API 문서화 도구 가이드](Web/Concepts/Scalar_UI.md)
+        * [🌐 WebRTC (Web Real-Time Communication)](Web/Concepts/WebRTC.md)
 
 ## 📁 Tools
 
-* [Tools](Tools/README.md)
+* [⚙️ Engineering & Build Tools](Tools/README.md)
     * **Build**
+        * [Java 코드 포맷터 비교: google-java-format vs palantir-java-format](Tools/Build/Java_Code_Formatters_Comparison.md)
         * [Apache Maven: 자바 빌드 자동화 도구 가이드](Tools/Build/Maven.md)
         * [Maven Classifier와 Hive-JDBC Standalone 활용 가이드](Tools/Build/Maven_Classifier_and_Hive_JDBC.md)
         * [Maven Shade Plugin: Uber-JAR 생성 및 패키지 재배치](Tools/Build/Maven_Shade_Plugin.md)
+        * [Spotless: 코드 스타일 자동화 도구](Tools/Build/Spotless.md)
     * **Github**
         * [GitHub Actions MkDocs 배포 실패 (Plugin Missing)](Tools/Github/Action_Deploy_Fail.md)
         * [GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드](Tools/Github/Profile_README_Guide.md)
-    * **Productivity**
-        * [Impress.js](Tools/Productivity/Impress.js.md)
-        * [Qlib](Tools/Productivity/Qlib.md)
-        * [Slidev](Tools/Productivity/Slidev.md)
-        * [sentry](Tools/Productivity/sentry.md)
-        * [zapier](Tools/Productivity/zapier.md)
-        * **ReadtheDocs**
-            * [Read the Docs](Tools/Productivity/ReadtheDocs/README.md)
-    * **IDE**
-        * [Intellij](Tools/IDE/Intellij.md)
-    * **Markdown**
-        * [Languages Supported by Github Flavored Markdown.md](Tools/Markdown/Languages Supported by Github Flavored Markdown.md)
     * **Git**
         * [Monorepo vs Polyrepo](Tools/Git/Monorepo_vs_Polyrepo.md)
         * [Git Remote Settings (원격 저장소 관리)](Tools/Git/Remote_Settings.md)
@@ -314,61 +318,9 @@
         * [Terminal Tools](Tools/Terminal/README.md)
         * [Tmux (Terminal Multiplexer)](Tools/Terminal/Tmux.md)
 
-## 📁 Life
-
-* [Development Trends](Life/Trends.md)
-    * **Health**
-        * [🦶 족저근막염 (Plantar Fasciitis) 가이드](Life/Health/Plantar_Fasciitis.md)
-    * **Career**
-        * [Reference Check(평판 조회)](Life/Career/Reference Check.md)
-
-## 📁 Troubleshooting
-
-* [🛠️ 트러블슈팅 (Troubleshooting)](Troubleshooting/README.md)
-    * [Virtual Thread Pinning 이슈 (FTP/SFTP)](Language/Java/Virtual_Threads_FTP_Pinning.md)
-    * [K8s 환경의 Virtual Thread 주의사항](Language/Java/Virtual_Threads_in_K8s.md)
-    * [Kafka Consumer 가상 스레드 Pinning 이슈](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
-    * [JDBI 가상 스레드 Pinning 해결 패턴](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
-    * [K8s Spring 프로파일 우선순위 이슈](Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
-    * [로깅 설정 YAML to XML 전환 이슈](Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
-    * [SLF4J addKeyValue를 ECS 로그에 포함하기](Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
-    * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
-    * [Kafka 최신 버전 Offset 불균형 문제](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
-    * [Kafka abortOnNewBatch와 파티션 쏠림](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
-    * [Kafka Consumer 종료 시 IllegalStateException](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
-    * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
-    * [MinIO 버저닝 활성화 후 삭제 지연 이슈](Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
-    * [Oracle LOB Segment 공간 부족 (ORA-01692)](Data/Database/Oracle_LOB_Segment.md)
-    * [Avro 필드명 'result' 사용 시 hashCode 충돌](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
-
 ## 📁 Templates
 
 * [📋 문서 양식 (Templates)](Templates/README.md)
 * [[양식] 기술 이슈 분석 및 리포트](Templates/Issue_Report_Template.md)
-
-## 📁 History
-
-* [📜 역사 (History)](History/README.md)
-* [🇹🇼 대만의 역사 (History of Taiwan)](History/Taiwan.md)
-    * **Modern_Issues**
-        * [미국-이란 갈등: 중동의 화약고 분석](History/Modern_Issues/US_Iran_Conflict.md)
-
-## 📁 Travel
-
-* [✈️ 여행 (Travel)](Travel/README.md)
-    * **Central_Europe**
-        * [🇭🇺 부다페스트, 헝가리 (Budapest): 도나우의 진주 (7-9일차)](Travel/Central_Europe/Budapest.md)
-        * [🏰 중부 유럽의 봄: 제국의 흔적을 걷는 10일간의 여정](Travel/Central_Europe/Overview.md)
-        * [🇨🇿 프라하, 체코 (Prague): 중세 보헤미아의 낭만 (1-3일차)](Travel/Central_Europe/Prague.md)
-        * [🇦🇹 잘츠부르크, 오스트리아 (Salzburg): 알프스의 풍경과 모차르트 (3-5일차)](Travel/Central_Europe/Salzburg.md)
-        * [🇦🇹 비엔나, 오스트리아 (Vienna): 합스부르크의 영광과 예술 (5-7일차)](Travel/Central_Europe/Vienna.md)
-    * **Taiwan**
-        * [🇹🇼 대만 여행 (Taiwan Travel)](Travel/Taiwan/README.md)
-        * [🥃 카발란 증류소 (Kavalan Distillery)](Travel/Taiwan/Kavalan_Distillery.md)
-        * [💡 대만 여행 팁 (Travel Tips)](Travel/Taiwan/Tips.md)
-
-## 📁 RealEstate
-
-* [🏠 부동산 (Real Estate)](RealEstate/README.md)
-* [📏 국민평형(전용 85㎡) 초과 시 달라지는 세금 및 규제](RealEstate/Tax_85sqm_Rules.md)
+* [[양식] 신규 개발 정의 문서](Templates/New_Development_Definition_Template.md)
 

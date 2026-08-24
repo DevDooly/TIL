@@ -1,19 +1,15 @@
 nav:
-- index.md
-- 전체 목차 (Sitemap): Sitemap.md
-- Recent Changes: Recent_Changes.md
-- Language
-- Web
-- Infrastructure
-- Data
-- ComputerScience
-- AI
-- LLM Development: LLM_Development
-- Tools
-- Life
-- Architecture_Cookbook.md
-- Troubleshooting: Troubleshooting
-- Templates
-- History
-- Travel
-- RealEstate
+  - index.md
+  - 온라인 이력서 (Resume): Resume.md
+  - 실전 트러블슈팅: Troubleshooting
+  - Language
+  - Infrastructure
+  - Data
+  - AI
+  - LLM Development: LLM_Development
+  - ComputerScience
+  - Web
+  - Tools
+  - Templates
+  - Recent Changes: Recent_Changes.md
+  - 전체 목차 (Sitemap): Sitemap.md

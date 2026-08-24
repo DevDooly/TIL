@@ -1,7 +1,8 @@
-# TIL (Today I Learned)
-> 배운 내용을 정리하는 저장소입니다.
+# 👨‍💻 Dooly | Backend & Systems Engineering Portfolio & Tech Wiki
 
-🌐 **TIL Wiki**: [https://devdooly.github.io/TIL/](https://devdooly.github.io/TIL/)
+> **대용량 분산 시스템, 고성능 동시성 제어 및 클라우드 네이티브 아키텍처를 다루는 엔지니어링 포트폴리오 & 기술 위키입니다.**
+
+🌐 **Live Portfolio & Wiki**: [https://devdooly.github.io/TIL/](https://devdooly.github.io/TIL/)
 
 ![Build Status](https://github.com/DevDooly/TIL/actions/workflows/ci.yml/badge.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/DevDooly/TIL)
@@ -9,36 +10,43 @@
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack Overview
 
-### Documentation & Site
-![MkDocs](https://img.shields.io/badge/MkDocs-0094FF?style=flat-square&logo=mkdocs&logoColor=white)
-![Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=flat-square&logo=materialformkdocs&logoColor=white)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
-![Mermaid](https://img.shields.io/badge/Mermaid-FF69B4?style=flat-square&logo=mermaid&logoColor=white)
+### Core Backend & Concurrency
+![Java](https://img.shields.io/badge/Java_21+-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot_3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
-### Core Technologies (Documented)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+### Distributed Messaging & Storage
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![MinIO](https://img.shields.io/badge/MinIO-C72C48?style=flat-square&logo=minio&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle_DB-F80000?style=flat-square&logo=oracle&logoColor=white)
+![Apache Arrow](https://img.shields.io/badge/Apache_Arrow-E10079?style=flat-square&logo=apachearrow&logoColor=white)
+
+### Cloud Native & DevOps
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Elastic Stack](https://img.shields.io/badge/Elastic_Stack-005571?style=flat-square&logo=elasticstack&logoColor=white)
-
-### Automation & DevTools
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat-square&logo=argo&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
 ---
 
-## ✨ Key Features
+## 🎯 Key Highlights & Architecture Showcase
 
-*   **Auto Indexing**: Python 스크립트를 통해 최근 변경 사항(`Recent_Changes.md`)과 사이트맵(`Sitemap.md`)을 자동으로 생성합니다.
-*   **Structured Navigation**: `awesome-pages` 플러그인을 사용하여 계층적이고 깔끔한 네비게이션을 제공합니다.
-*   **CI/CD Pipeline**: GitHub Actions를 통해 푸시 시 자동으로 MkDocs 빌드 및 GitHub Pages 배포가 이루어집니다.
-*   **Advanced UI**: Material 테마 기반의 다크 모드, 검색 기능, 그리고 Mermaid.js를 이용한 다이어그램 렌더링을 지원합니다.
-*   **Standardized Workflow**: 전용 배포 스크립트(`publish.sh`)를 통해 컨텐츠 정합성을 유지합니다.
+* 📄 **[온라인 이력서 (Resume)](docs/Resume.md)**: 경력 요약, 프로젝트 수행 이력 및 핵심 역량 맵
+* 🛠️ **[실전 트러블슈팅 아카이브 (Troubleshooting)](docs/Troubleshooting/README.md)**: 
+  * Java 21 가상 스레드(Virtual Threads) Pinning 이슈 해결 (FTP, JDBI, Kafka)
+  * Apache Kafka Partitioner 쏠림 버그 및 셧다운 훅 안정화
+  * Java-Python 간 Apache Arrow mmap 기반 Zero-Copy 데이터 공유
+  * MinIO 버저닝 삭제 지연 및 스토리지 누수 해결
+* 🧠 **[AI 개발 환경 & 에이전트 오케스트레이션](docs/AI/README.md)**:
+  * Antigravity CLI(agy) 스킬 확장 및 자동화
+  * Multi-Agent Orchestrator(Orca, Paseo) 아키텍처 비교
 
 ---
 
@@ -47,12 +55,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-08-21 14:04 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: Antigravity CLI(agy)와 OpenCode(+Gemini) 비교 가...  |
-| 2026-08-21 13:54 | [Antigravity CLI Skills Guide](docs/AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 스킬 설치, 디렉토리 구조 및 설정 방법 ...  |
-| 2026-08-21 13:43 | [OpenCode](docs/AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
-| 2026-08-21 13:43 | [Paseo Setup and Usage](docs/AI/Paseo_Setup_and_Usage.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
-| 2026-08-21 13:26 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 ...  |
-| 2026-08-20 10:01 | [Examples](docs/Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인...  |
+| 2026-08-24 19:58 | [Architecture Cookbook](docs/Architecture_Cookbook.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Fourier transform](docs/ComputerScience/Math/Fourier transform.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Redis](docs/Data/Database/Redis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [US Iran Conflict](docs/History/Modern_Issues/US_Iran_Conflict.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Taiwan](docs/History/Taiwan.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Single Quotation vs Double Quotation in bash](docs/Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -60,7 +68,7 @@
 
 ---
 
-## 목차 (Table of Contents)
+## 📂 카테고리별 목차 (Table of Contents)
 
 <!-- TOC_START -->
 ### 📂 Categories
@@ -156,53 +164,38 @@
 * **NodeJs**
   * [**Overview**](docs/Language/NodeJs/README.md)
   * [Yarn Berry (Yarn v2+)](docs/Language/NodeJs/Yarn Berry.md)
-  * [Libuv](docs/Language/NodeJs/libuv.md)
+  * [⚡ Libuv & Node.js 비동기 I/O 아키텍처](docs/Language/NodeJs/libuv.md)
 * **Python**
   * [**Overview**](docs/Language/Python/README.md)
   * [client.py](docs/Language/Python/AIOHTTP vs Flask.md)
+  * [Stream](docs/Language/Python/Asyncio_Streams.md)
   * [Python 스크립트 실행 가이드: `python3 main.py`](docs/Language/Python/Basic_Execution_Guide.md)
   * [Celery](docs/Language/Python/Celery.md)
   * [Comprehension](docs/Language/Python/Comprehension.md)
   * [Anaconda vs Miniconda: 차이점과 환경 구축 가이드](docs/Language/Python/Conda_Anaconda_Miniconda.md)
+  * [🐍 Python Decorator (데코레이터)](docs/Language/Python/Decorator.md)
   * [Designing Modules in Python (모듈 설계)](docs/Language/Python/Designing Modules in Python.md)
   * [FastAPI의 동시성(Concurrency) 처리 메커니즘](docs/Language/Python/FastAPI_Concurrency_Mechanism.md)
   * [Gunicorn vs Uvicorn: 개념과 운영 환경 구축 전략](docs/Language/Python/Gunicorn_vs_Uvicorn.md)
   * [폐쇄망 환경 Python 3.12 설치 가이드 (최신 안정 버전)](docs/Language/Python/Offline_Installation_Guide.md)
   * [오프라인 환경에서 `venv` 및 `pip` 패키지 설치 가이드](docs/Language/Python/Offline_Venv_Pip_Guide.md)
-  * [PyQt5](docs/Language/Python/PyQt5.md)
   * [Imports](docs/Language/Python/Refactoring.md)
   * [SQLAlchemy](docs/Language/Python/SQLAlchemy.md)
   * [Python Web Server 실행 방식 비교: `python main.py` vs CLI Runner](docs/Language/Python/Server_Execution_Methods.md)
   * [Socket Programming](docs/Language/Python/Socket Programming.md)
+  * [socketserver](docs/Language/Python/SocketServer.md)
   * [orjson](docs/Language/Python/orjson.md)
   * [Retry](docs/Language/Python/retry.md)
   * [Tokenizer](docs/Language/Python/tokenizer.md)
   * [venv vs Conda: 어떤 가상환경을 선택해야 할까?](docs/Language/Python/venv_vs_Conda.md)
   * [MetaClass (메타클래스)](docs/Language/Python/메타클래스.md)
   * [정적메소드 (@staticmethod, @classmethod)](docs/Language/Python/정적메소드.md)
-  * **Lib**
-    * [asyncio](docs/Language/Python/Lib/asyncio.md)
-    * [socketserver](docs/Language/Python/Lib/socketserver.md)
-    * **asyncio**
-      * [Stream](docs/Language/Python/Lib/asyncio/streams.md)
-  * **Library**
-    * [Keras](docs/Language/Python/Library/Keras.md)
-  * **PyQt5**
-    * **Custom**
-  * **PySide6**
-    * [**Overview**](docs/Language/Python/PySide6/README.md)
-  * **Study**
-    * [Decorator](docs/Language/Python/Study/Decorator.md)
-    * [Python Study](docs/Language/Python/Study/READMD.md)
   * **Troubleshooting**
     * [Python Reinstall Server Failure](docs/Language/Python/Troubleshooting/Python_Reinstall_Server_Failure.md)
   * **pika**
     * [**Overview**](docs/Language/Python/pika/README.md)
     * [RabbitMQ / Asynchronous consumer example](docs/Language/Python/pika/Asynchronous consumer example.md)
     * [BlockingConnection](docs/Language/Python/pika/BlockingConnection.md)
-  * **sys**
-    * [**Overview**](docs/Language/Python/sys/README.md)
-    * [sys.setrecursionlimit(limit)](docs/Language/Python/sys/sys.setrecursionlimit.md)
 
 ## Web
 * [**Overview**](docs/Web/README.md)
@@ -210,11 +203,8 @@
   * [Ajax 그리고 CSR, SSR](docs/Web/Concepts/Ajax 그리고 CSR, SSR.md)
   * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](docs/Web/Concepts/OpenAPI_vs_Swagger.md)
   * [Scalar: 현대적이고 아름다운 API 문서화 도구 가이드](docs/Web/Concepts/Scalar_UI.md)
-  * [용어 #](docs/Web/Concepts/WebRTC.md)
-  * [Using shadow DOM](docs/Web/Concepts/shadow DOM.md)
+  * [🌐 WebRTC (Web Real-Time Communication)](docs/Web/Concepts/WebRTC.md)
 * **Framework**
-  * [Chart.js #](docs/Web/Framework/ChartJs.md)
-  * [Electron](docs/Web/Framework/Electron.md)
   * [Vuejs](docs/Web/Framework/Vuejs.md)
 
 ## Infrastructure
@@ -262,12 +252,9 @@
   * [대량 파일 전송 가이드 (rsync 활용)](docs/Infrastructure/Linux/Large_File_Transfer.md)
   * [Logrotate (로그로테이트)](docs/Infrastructure/Linux/Logrotate.md)
   * [POSIX (Portable Operating System Interface)](docs/Infrastructure/Linux/POSIX.md)
-  * [Single Quote vs Double Quote (Bash)](docs/Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md)
   * [Stdin, Stdout, Stderr (표준 스트림)](docs/Infrastructure/Linux/Stdin, stdout, stderr.md)
   * [TL;DR (Too Long; Didn't Read)](docs/Infrastructure/Linux/TL;DR.md)
   * [Crontab (크론탭)](docs/Infrastructure/Linux/crontab.md)
-  * **Tips**
-    * [Mount OneDrive on Ubuntu](docs/Infrastructure/Linux/Tips/Mount OneDrive on Ubuntu.md)
 * **MessageBroker**
   * [**Overview**](docs/Infrastructure/MessageBroker/README.md)
   * [AMQP (Advanced Message Queuing Protocol)](docs/Infrastructure/MessageBroker/AMQP.md)
@@ -285,11 +272,6 @@
     * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
     * [Kafka Producer: 파티셔너(Partitioner) 정책 및 설정](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
     * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
-  * **RabbitMQ**
-    * [**Overview**](docs/Infrastructure/MessageBroker/RabbitMQ/README.md)
-    * [Editing RabbitMQ handle big message](docs/Infrastructure/MessageBroker/RabbitMQ/Editing RabbitMQ handle big message.md)
-    * [설치](docs/Infrastructure/MessageBroker/RabbitMQ/설치.md)
-    * **test**
 * **MinIO**
   * [**Overview**](docs/Infrastructure/MinIO/README.md)
   * [MinIO Java Client 사용 예제](docs/Infrastructure/MinIO/Java_Client_Examples.md)
@@ -311,7 +293,7 @@
   * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
   * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
-  * [Redis (Remote Dictionary Server)](docs/Data/Database/Redis.md)
+  * [⚡ Redis (Remote Dictionary Server)](docs/Data/Database/Redis.md)
   * [SQL Naming Convention (SQL 명명 규칙)](docs/Data/Database/SQL_Naming_Convention.md)
   * [Fluentd](docs/Data/Database/fluentd.md)
 
@@ -329,9 +311,6 @@
   * [HDF5 (Hierarchical Data Format version 5)](docs/ComputerScience/FileSystem/HDF5.md)
   * [LMDB (Lightning Memory-Mapped Database)](docs/ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md)
   * [대량의 이미지를 파일시스템에 저장할 때](docs/ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md)
-* **Math**
-  * [**Overview**](docs/ComputerScience/Math/README.md)
-  * [Fourier Transform (푸리에 변환)](docs/ComputerScience/Math/Fourier transform.md)
 * **Network**
   * [**Overview**](docs/ComputerScience/Network/README.md)
   * [OSI 7 Layer (OSI 7 계층)](docs/ComputerScience/Network/OSI 7 Layer.md)
@@ -353,21 +332,22 @@
 
 ## Troubleshooting
 * [**Overview**](docs/Troubleshooting/README.md)
-  * [Virtual Thread Pinning 이슈 (FTP/SFTP)](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
-  * [K8s 환경의 Virtual Thread 주의사항](docs/Language/Java/Virtual_Threads_in_K8s.md)
-  * [Kafka Consumer 가상 스레드 Pinning 이슈](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
-  * [JDBI 가상 스레드 Pinning 해결 패턴](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
-  * [K8s Spring 프로파일 우선순위 이슈](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
-  * [로깅 설정 YAML to XML 전환 이슈](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
-  * [SLF4J addKeyValue를 ECS 로그에 포함하기](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
-  * [Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
-  * [Kafka 최신 버전 Offset 불균형 문제](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
-  * [Kafka abortOnNewBatch와 파티션 쏠림](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
-  * [Kafka Consumer 종료 시 IllegalStateException](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
-  * [Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
-  * [MinIO 버저닝 활성화 후 삭제 지연 이슈](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
-  * [Oracle LOB Segment 공간 부족 (ORA-01692)](docs/Data/Database/Oracle_LOB_Segment.md)
-  * [Avro 필드명 'result' 사용 시 hashCode 충돌](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
+  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_in_K8s.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+  * [**분석 문서 보기**](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+  * [**분석 문서 보기**](docs/Infrastructure/Linux/Large_File_Transfer.md)
+  * [**분석 문서 보기**](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
+  * [**분석 문서 보기**](docs/Data/Database/Oracle_LOB_Segment.md)
+  * [**분석 문서 보기**](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
 
 ## AI
 * [**Overview**](docs/AI/README.md)
@@ -403,46 +383,11 @@
 * **Github**
   * [GitHub Actions MkDocs 배포 실패 (Plugin Missing)](docs/Tools/Github/Action_Deploy_Fail.md)
   * [GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드](docs/Tools/Github/Profile_README_Guide.md)
-* **IDE**
-  * [Intellij](docs/Tools/IDE/Intellij.md)
-* **Markdown**
-  * [Languages Supported by Github Flavored Markdown.md](docs/Tools/Markdown/Languages Supported by Github Flavored Markdown.md)
 * **OpenSource**
   * [FFmpeg](docs/Tools/OpenSource/FFmpeg.md)
-* **Productivity**
-  * [Impress.js](docs/Tools/Productivity/Impress.js.md)
-  * [Qlib](docs/Tools/Productivity/Qlib.md)
-  * [Slidev](docs/Tools/Productivity/Slidev.md)
-  * [sentry](docs/Tools/Productivity/sentry.md)
-  * [zapier](docs/Tools/Productivity/zapier.md)
-  * **ReadtheDocs**
-    * [**Overview**](docs/Tools/Productivity/ReadtheDocs/README.md)
 * **Terminal**
   * [**Overview**](docs/Tools/Terminal/README.md)
   * [Tmux (Terminal Multiplexer)](docs/Tools/Terminal/Tmux.md)
-
-## History
-* [**Overview**](docs/History/README.md)
-* [🇹🇼 대만의 역사 (History of Taiwan)](docs/History/Taiwan.md)
-* **Modern_Issues**
-  * [미국-이란 갈등: 중동의 화약고 분석](docs/History/Modern_Issues/US_Iran_Conflict.md)
-
-## Travel
-* [**Overview**](docs/Travel/README.md)
-* **Central_Europe**
-  * [🇭🇺 부다페스트, 헝가리 (Budapest): 도나우의 진주 (7-9일차)](docs/Travel/Central_Europe/Budapest.md)
-  * [🏰 중부 유럽의 봄: 제국의 흔적을 걷는 10일간의 여정](docs/Travel/Central_Europe/Overview.md)
-  * [🇨🇿 프라하, 체코 (Prague): 중세 보헤미아의 낭만 (1-3일차)](docs/Travel/Central_Europe/Prague.md)
-  * [🇦🇹 잘츠부르크, 오스트리아 (Salzburg): 알프스의 풍경과 모차르트 (3-5일차)](docs/Travel/Central_Europe/Salzburg.md)
-  * [🇦🇹 비엔나, 오스트리아 (Vienna): 합스부르크의 영광과 예술 (5-7일차)](docs/Travel/Central_Europe/Vienna.md)
-* **Taiwan**
-  * [**Overview**](docs/Travel/Taiwan/README.md)
-  * [🥃 카발란 증류소 (Kavalan Distillery)](docs/Travel/Taiwan/Kavalan_Distillery.md)
-  * [💡 대만 여행 팁 (Travel Tips)](docs/Travel/Taiwan/Tips.md)
-
-## RealEstate
-* [**Overview**](docs/RealEstate/README.md)
-* [📏 국민평형(전용 85㎡) 초과 시 달라지는 세금 및 규제](docs/RealEstate/Tax_85sqm_Rules.md)
 
 ## Templates
 * [**Overview**](docs/Templates/README.md)
@@ -454,11 +399,12 @@
 * [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](docs/LLM_Development/Backend_Development_Checklist.md)
 * [Web Development with LLM (웹 개발 시 LLM 활용 가이드)](docs/LLM_Development/Web_Development_Checklist.md)
 
-## Life
-* [Development Trends](docs/Life/Trends.md)
-* **Career**
-  * [Reference Check(평판 조회)](docs/Life/Career/Reference Check.md)
-* **Health**
-  * [🦶 족저근막염 (Plantar Fasciitis) 가이드](docs/Life/Health/Plantar_Fasciitis.md)
-
 <!-- TOC_END -->
+
+---
+
+## ⚙️ 관리 및 자동화 스크립트
+
+* `python3 scripts/update_recent_changes.py`: Git 커밋 로그를 기반으로 최근 변경 사항(`docs/Recent_Changes.md`) 및 README 자동 동기화
+* `python3 scripts/generate_sitemap.py`: 전체 문서 계층 구조를 반영한 `docs/Sitemap.md` 자동 생성
+* `python3 scripts/validate_pages.py`: 모든 `.pages` 파일의 경로 유효성 자동 검증

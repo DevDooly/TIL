@@ -1,60 +1,51 @@
-# 🛠️ 트러블슈팅 (Troubleshooting)
+---
+title: Engineering Troubleshooting Archive
+---
 
-실무에서 발생한 기술적인 문제들과 그에 대한 원인 분석, 해결 과정을 정리한 공간입니다. 각 이슈의 상세 내용은 해당 기술 카테고리의 원본 문서를 연결합니다.
+# 🛠️ 실전 엔지니어링 트러블슈팅 아카이브
+
+실무 및 대규모 시스템 운영 환경에서 발생한 **기술적 장애, 병목, 예기치 않은 동작에 대한 원인 분석과 해결 과정(Root Cause Analysis & Resolution)**을 기록한 공간입니다.
+
+문제를 단순히 임기응변으로 때우는 것이 아니라, **내부 소스코드 분석, JVM/커널 레벨 동작 원리, 패킷/메모리 프로파일링**을 통해 근본 원인을 규명하고 최적화한 사례들입니다.
 
 ---
 
-## ☕ Java & Spring
+## ☕ 1. Java, JVM & Spring Ecosystem
 
-* **[Virtual Thread Pinning 이슈 (FTP/SFTP)](../Language/Java/Virtual_Threads_FTP_Pinning.md)**: 레거시 라이브러리의 `synchronized` 블록으로 인한 OS 스레드 고갈 문제.
-* **[K8s 환경의 Virtual Thread 주의사항](../Language/Java/Virtual_Threads_in_K8s.md)**: CPU Throttling 및 메모리 팽창 이슈 분석.
-* **[Kafka Consumer 가상 스레드 Pinning 이슈](../Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)**: KafkaClient 내부 `synchronized` 블록으로 인한 캐리어 스레드 고갈 문제.
-* **[JDBI 가상 스레드 Pinning 해결 패턴](../Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)**: 하이브리드 스레드 모델을 이용한 DB Blocking I/O 최적화.
-* **[K8s Spring 프로파일 우선순위 이슈](../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)**: 환경 변수와 실행 인자 간의 설정 덮어쓰기 문제 및 `BeanPostProcessor`를 이용한 프로그래밍 방식의 해결책.
-
-
-* **[로깅 설정 YAML to XML 전환 이슈](../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)**: 외부 SDK의 `logback.xml`과 `application.yml` 설정 충돌 해결 사례.
-
-
-* **[SLF4J addKeyValue를 ECS 로그에 포함하기](../Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)**: 커스텀 키가 ECS JSON 로그에 나타나지 않는 문제 해결 및 대안 제시.
-
-
-
-
-
-
-
-
-
-
-## 🎡 Infrastructure & Kafka
-
-* **[Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)](../Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)**: 특정 파티션으로 메시지가 쏠리는 버그 분석.
-
-* **[Kafka 최신 버전 Offset 불균형 문제](../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)**: Sticky 전략과 배치 메커니즘 충돌 해결 방안.
-
-* **[Kafka abortOnNewBatch와 파티션 쏠림](../Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)**: 커스텀 파티셔너 사용 시 특정 파티션으로 전송이 집중되는 이슈 분석.
-
-* **[Kafka Consumer 종료 시 IllegalStateException](../Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)**: 이미 종료된 Consumer에 접근할 때 발생하는 예외 해결 방법 (wakeup vs close).
-
-
-
-
-
-* **[Hadoop/Tez 네트워크 RX 에러로 인한 작업 지연](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)**: 특정 노드의 하드웨어 결함으로 인한 전체 분산 처리 성능 저하.
-
-* **[대량 파일 전송 용량 불일치 이슈](../Infrastructure/Linux/Large_File_Transfer.md#8-용량-불일치-트러블슈팅)**: rsync 복사 후 원본과 대상의 용량이 차이 나는 원인 분석.
-
-* **[MinIO 버저닝 활성화 후 삭제 지연 이슈](../Troubleshooting/MinIO_Versioning_Deletion_Issue.md)**: 삭제 마커로 인해 파일이 영구 삭제되지 않는 문제 및 버전별 삭제 처리 방법.
-
-
-
-
-
-## 🗄️ Database
-
-* **[Oracle LOB Segment 공간 부족 (ORA-01692)](../Data/Database/Oracle_LOB_Segment.md)**: 대용량 데이터 저장 시 발생하는 LOB 세그먼트 오류 조치.
-* **[Avro 필드명 'result' 사용 시 hashCode 충돌](../Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)**: Avro 자동 생성 코드의 지역 변수 이름 충돌 이슈 및 해결 방안.
+| Problem & Symptom | Root Cause | Solution & Impact | Deep-Dive Article |
+| :--- | :--- | :--- | :--- |
+| **FTP/SFTP 가상 스레드 Pinning** | Commons-Net 내부 `synchronized` 블록으로 인한 OS 캐리어 스레드 고갈 | `ReentrantLock` 교체 및 전용 I/O 스레드 풀 분리 | [**분석 문서 보기**](../Language/Java/Virtual_Threads_FTP_Pinning.md) |
+| **K8s 환경 Virtual Thread CPU 스로틀링** | K8s CPU CFS Quota와 대량 가상 스레드 생성 시 스케줄링 지연 충돌 | K8s 리소스 Limit 최적화 및 ForkJoinPool 병렬성 튜닝 | [**분석 문서 보기**](../Language/Java/Virtual_Threads_in_K8s.md) |
+| **Kafka Consumer Pinning 이슈** | `KafkaConsumer`의 폴링 루프 내 동기화 락 경합 | 컨슈머 전용 단일 플랫폼 스레드 + 가상 스레드 핸들러 구조화 | [**분석 문서 보기**](../Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) |
+| **JDBI DB Blocking I/O Pinning** | DB 커넥션 풀 및 드라이버 소켓 동기화 락 | 하이브리드 스레드 풀 및 FetchSize 스트리밍 최적화 | [**분석 문서 보기**](../Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) |
+| **K8s Spring 프로파일 우선순위 이슈** | 환경 변수와 CLI 인자 간의 프로파일 덮어쓰기 순서 불일치 | `BeanPostProcessor` 및 설정 주입 우선순위 표준화 | [**분석 문서 보기**](../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) |
+| **로깅 설정 YAML to XML 전환 충돌** | 외부 SDK 내부 `logback.xml`과 Spring YAML 설정 충돌 | Logback XML 전환 및 JoranConfigurator 로딩 순서 제어 | [**분석 문서 보기**](../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md) |
+| **SLF4J addKeyValue ECS 누락** | ECS JSON Encoder의 커스텀 MDC/KeyValue 직렬화 누락 | Composite Json Encoder 및 커스텀 프로바이더 구축 | [**분석 문서 보기**](../Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) |
 
 ---
-*💡 새로운 이슈가 해결될 때마다 이 목차에 추가하여 지식을 공유합니다.*
+
+## 🎡 2. Distributed Messaging & Infrastructure
+
+| Problem & Symptom | Root Cause | Solution & Impact | Deep-Dive Article |
+| :--- | :--- | :--- | :--- |
+| **Kafka RoundRobinPartitioner 불균형** | KAFKA-9965 버그로 인해 특정 파티션에만 레코드 집중 | Partitioner 업그레이드 및 파티션 키 할당 전략 수정 | [**분석 문서 보기**](../Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) |
+| **Sticky Partitioner 배치 쏠림** | Sticky Partitioner와 `linger.ms` 지연 간의 불일치 | 배치 크기 및 링거 타임 최적화를 통한 고른 부하 분산 | [**분석 문서 보기**](../Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) |
+| **커스텀 파티셔너 abortOnNewBatch 이슈** | 새 배치가 생성될 때 파티션 순환이 중단되는 현상 | 파티셔너 내부 상태 추적 로직 및 락 메커니즘 수정 | [**분석 문서 보기**](../Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) |
+| **Consumer 종료 시 IllegalStateException** | 멀티스레드 환경에서 `wakeup()`과 `close()`의 호출 순서 꼬임 | 안전한 컨슈머 셧다운 훅(Graceful Shutdown) 구현 | [**분석 문서 보기**](../Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) |
+| **Hadoop/Tez 분산 작업 급격한 지연** | 특정 워커 노드의 네트워크 NIC 패킷 RX 드롭 에러 | 하드웨어 결함 노드 격리 및 네트워크 버퍼 튜닝 | [**분석 문서 보기**](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) |
+| **대용량 파일 전송 후 용량 불일치** | Sparse File(희소 파일) 및 블록 크기 차이에 따른 rsync 계산 착오 | `--sparse` 옵션 적용 및 파일 체크섬 검증 자동화 | [**분석 문서 보기**](../Infrastructure/Linux/Large_File_Transfer.md) |
+| **MinIO 버저닝 삭제 지연 & 스토리지 누수** | Delete Marker 생성 후 실제 이전 버전 데이터 미삭제 | VersionId 명시 삭제 및 Expiration Lifecycle Rule 정립 | [**분석 문서 보기**](MinIO_Versioning_Deletion_Issue.md) |
+
+---
+
+## 🗄️ 3. Database, Serialization & Data Processing
+
+| Problem & Symptom | Root Cause | Solution & Impact | Deep-Dive Article |
+| :--- | :--- | :--- | :--- |
+| **Oracle LOB Segment 공간 부족 (ORA-01692)** | 대용량 LOB 컬럼 저장 시 테이블스페이스 자동 확장 한계 도달 | LOB 전용 테이블스페이스 분리 및 Chunk/Retention 최적화 | [**분석 문서 보기**](../Data/Database/Oracle_LOB_Segment.md) |
+| **Avro 'result' 필드명 컴파일 에러** | 생성된 `hashCode()` 메서드의 내부 변수명과 필드명 충돌 | 스키마 명명 규칙 개정 및 커스텀 템플릿 컴파일러 패치 | [**분석 문서 보기**](Avro_HashCode_Field_Naming_Conflict.md) |
+
+---
+
+> [!TIP]
+> 새로운 트러블슈팅 사례가 해결될 때마다 문제 원인과 함께 이 아카이브에 지속적으로 업데이트됩니다.

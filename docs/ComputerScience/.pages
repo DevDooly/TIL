@@ -1,10 +1,10 @@
-title: Computer Science (CS 기초)
+title: Computer Science
 nav:
-- OperatingSystem
-- Network
-- Security
-- DesignPattern
-- Architecture
-- FileSystem
-- Math
-- SoftwareEngineering
+  - Overview: README.md
+  - Architecture
+  - DesignPattern
+  - Network
+  - Security
+  - FileSystem
+  - OperatingSystem
+  - SoftwareEngineering

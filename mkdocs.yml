@@ -1,4 +1,4 @@
-site_name: My TIL Wiki
+site_name: Dooly | Engineering Portfolio & Tech Wiki
 site_url: https://devdooly.github.io/TIL/
 repo_url: https://github.com/devdooly/til
 edit_uri: edit/main/docs/
@@ -25,7 +25,7 @@ theme:
         icon: material/weather-night
         name: 라이트 모드로 전환
   features:
-    # - navigation.expand
+    - navigation.tabs
     - navigation.indexes
     - navigation.top
     - navigation.tracking
@@ -56,16 +56,3 @@ plugins:
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - javascripts/mermaid-init.js
-
-
-# 📌 네비게이션 경로 (모두 docs 폴더 내부 기준이어야 함)
-# nav:
-#   - TIL (Today I Learned): index.md
-#   - Language: Language/
-#   - Web: Web/
-#   - Infrastructure: Infrastructure/
-#   - Data: Data/
-#   - Computer Science: ComputerScience/
-#   - Tools: Tools/
-#   - Life: Life/
-#   - Architecture Cookbook: Architecture_Cookbook.md

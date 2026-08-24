@@ -1,46 +1,47 @@
-# Spring Boot
+---
+title: Spring Boot & Cloud Architecture
+---
 
-Spring Boot 관련 학습 내용을 정리합니다.
+# 🍃 Spring Boot Framework
 
-## 목차
+엔터프라이즈 마이크로서비스 및 고성능 백엔드 애플리케이션 구축을 위한 **Spring Boot 핵심 원리, Spring Cloud, 관찰 가능성(Logging/Metrics), 웹 계층(MVC/WebFlux) 및 데이터 접근 전략**을 다룹니다.
 
-* **[Spring Boot Introduction](SpringBoot_Intro.md)**: Spring Boot의 핵심 목표, 특징 및 Legacy Spring과의 차이점
-* **[DI & IoC](DI_IoC.md)**: 의존성 주입(DI)과 제어의 역전(IoC) 개념 및 주입 방식
-* **[AOP (Aspect Oriented Programming)](AOP.md)**: 관점 지향 프로그래밍과 Spring AOP 적용
-* **[Bean Lifecycle](Bean_Lifecycle.md)**: 스프링 빈의 생명주기와 콜백 메소드
-* **[OAuth2 Implementation](OAuth2_Implementation.md)**: Spring Security를 이용한 OAuth2 Client 및 Resource Server 구현
-* **[Spring MVC](SpringMVC.md)**: DispatcherServlet을 중심으로 한 MVC 패턴 구조 및 요청 처리 흐름
-* **[Spring WebFlux](Web/SpringWebFlux.md)**: 리액티브 프로그래밍(Non-blocking I/O) 모델과 Mono/Flux 개념 이해
-* **[Spring Data JPA](JPA/Persistence_Context.md)**: 영속성 컨텍스트와 JPA의 핵심 동작 원리
-* **[Mockito 활용 가이드](Testing/Mockito_Guide.md)**: 단위 테스트를 위한 Mock 객체 생성 및 검증 방법
+---
 
-## 학습 예정 (To-Be Added)
+## 📚 주요 기술 문서 목차
 
-### 1. Spring Data JPA (데이터 접근 계층)
+### 1. Spring Core & Internals
+* **[Spring Boot Introduction](SpringBoot_Intro.md)**: 자동 구성(Auto-Configuration) 및 스프링 부트 철학
+* **[DI & IoC](DI_IoC.md)**: 의존성 주입(DI)과 제어의 역전(IoC) 패턴
+* **[AOP (Aspect Oriented Programming)](AOP.md)**: 프록시 기반의 횡단 관심사 분리
+* **[Bean Lifecycle](Bean_Lifecycle.md)**: 빈 생성, 초기화 콜백 및 소멸 과정
+* **[BeanPostProcessor](BeanPostProcessor.md)**: 빈 인스턴스화 후처리 및 동적 빈 조작
+* **[@EnableAutoConfiguration vs @ConfigurationPropertiesScan](EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md)**: 프로퍼티 바인딩 및 자동 구성 메커니즘
+* **[ThreadPoolTaskScheduler](ThreadPoolTaskScheduler.md)**: 작업 예약 및 스케줄러 스레드 풀 튜닝
 
-* **JPA Persistence Context (영속성 컨텍스트)**: 1차 캐시, 더티 체킹의 원리.
-* **N+1 문제와 Fetch Join**: 실무 성능 최적화의 핵심.
-* **QueryDSL**: 복잡한 동적 쿼리 처리 방법.
-* **@Transactional**: 트랜잭션 전파 레벨(Propagation)과 격리 수준(Isolation) 설정.
+### 2. Concurrency & Performance Tuning
+* **[Finding Blocking Operations](Finding_Blocking_Operations.md)**: 블로킹 I/O 감지 및 진단 기법
+* **[JDBI Virtual Thread Pinning Solution](JDBI_VT_Pinning_Solution.md)**: DB 블로킹 I/O와 가상 스레드 조화
+* **[Virtual Thread Pinning in Kafka Consumer](Virtual_Thread_Pinning_Kafka.md)**: 카프카 컨슈머 폴링 루프 스레드 최적화
+* **[Tomcat vs Netty](Tomcat_vs_Netty.md)**: 전통적 멀티스레드 서블릿 컨테이너와 이벤트 기반 리액티브 엔진 비교
 
-### 2. Spring Security (보안)
+### 3. Web & Security
+* **[Spring MVC](Web/SpringMVC.md)**: DispatcherServlet 중심의 동기 요청 처리 흐름
+* **[Spring WebFlux](Web/SpringWebFlux.md)**: Project Reactor 기반 논블로킹 리액티브 웹 스택
+* **[Filter vs Interceptor](Web/Filter_vs_Interceptor.md)**: 서블릿 필터와 스프링 인터셉터의 라이프사이클 및 용도 차이
+* **[Servlet vs Servlet Container](Web/Servlet_vs_ServletContainer.md)**: 서블릿 명세와 톰캣 동작 원리
+* **[OAuth2 Implementation](OAuth2_Implementation.md)**: Spring Security 기반 OAuth2 Client 및 리소스 서버
 
-* **Spring Security Architecture**: FilterChainProxy와 인증/인가 프로세스.
-* **JWT 구현**: Spring Security Filter를 커스텀하여 JWT 인증 구현하기.
-* **OAuth2 Client**: 구글, 카카오 로그인 연동.
+### 4. Logging & Observability (Spring Boot 3.4+)
+* **[Spring Boot 3.4 Structured Logging](Structured_Logging_SpringBoot_3_4.md)**: Elastic Common Schema(ECS) 포맷 구조화 로깅
+* **[Logback JSON Composite Encoder](Logback_JSON_Composite_Encoder.md)**: 커스텀 JSON 로깅 인코더 구현
+* **[Logstash Logback Encoder Guide](Logstash_Logback_Encoder_Guide.md)**: ELK 연동을 위한 JSON 로깅
+* **[Logging Config Migration (YAML to XML)](Logging_Config_Migration_YAML_to_XML.md)**: 복잡한 로깅 설정 마이그레이션
 
-### 3. Testing (테스트)
+### 5. Spring Cloud & Microservices
+* **[Spring Cloud Gateway](Spring_Cloud_Gateway.md)**: 비동기 논블로킹 API 게이트웨이 라우팅
+* **[SCG vs Netflix Zuul](SCG_vs_Zuul_Comparison.md)**: 블로킹 vs 논블로킹 게이트웨이 아키텍처 비교
+* **[Spring Cloud LoadBalancer](Spring_Cloud_LoadBalancer.md)**: 클라이언트 사이드 로드 밸런싱
 
-* **Unit Test vs Integration Test**: `@SpringBootTest`와 `@WebMvcTest`, `@DataJpaTest`의 차이와 용도.
-* **RestDocs**: 테스트 코드를 기반으로 API 문서 자동화.
-
-### 4. Integration (인프라 연동)
-
-* **Spring Boot + Redis**: 캐싱 전략 (`@Cacheable`) 및 Session Clustering.
-* **Spring Boot + Message Broker**: RabbitMQ/Kafka 연동 및 이벤트 기반 아키텍처 구현.
-* **Scheduling & Batch**: 주기적인 작업(`@Scheduled`)과 대용량 배치 처리(Spring Batch).
-
-### 5. Observability (운영 및 모니터링)
-
-* **Actuator**: 애플리케이션 상태 모니터링 및 메트릭 수집.
-* **Prometheus & Grafana 연동**: Actuator 데이터를 시각화.
+### 6. Testing & Quality
+* **[Mockito 단위 테스트 활용 가이드](Testing/Mockito_Guide.md)**: 단위 테스트를 위한 Mockito 모킹 및 행위 검증

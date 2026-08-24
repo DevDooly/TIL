@@ -4,6 +4,47 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-08-24 19:58 | [Architecture_Cookbook.md](Architecture_Cookbook.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [ComputerScience/Math/Fourier transform.md](ComputerScience/Math/Fourier transform.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Data/Database/Redis.md](Data/Database/Redis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [History/Modern_Issues/US_Iran_Conflict.md](History/Modern_Issues/US_Iran_Conflict.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [History/Taiwan.md](History/Taiwan.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md](Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Infrastructure/Linux/Tips/Mount OneDrive on Ubuntu.md](Infrastructure/Linux/Tips/Mount OneDrive on Ubuntu.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Infrastructure/MessageBroker/RabbitMQ/Editing RabbitMQ handle big message.md](Infrastructure/MessageBroker/RabbitMQ/Editing RabbitMQ handle big message.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/NodeJs/libuv.md](Language/NodeJs/libuv.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Asyncio_Streams.md](Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Decorator.md](Language/Python/Decorator.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Lib/asyncio.md](Language/Python/Lib/asyncio.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Library/Keras.md](Language/Python/Library/Keras.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/PyQt5.md](Language/Python/PyQt5.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/SocketServer.md](Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Study/Decorator.md](Language/Python/Study/Decorator.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/Study/READMD.md](Language/Python/Study/READMD.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Language/Python/sys/sys.setrecursionlimit.md](Language/Python/sys/sys.setrecursionlimit.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Life/Career/Reference Check.md](Life/Career/Reference Check.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Life/Health/Plantar_Fasciitis.md](Life/Health/Plantar_Fasciitis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Life/Trends.md](Life/Trends.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [RealEstate/Tax_85sqm_Rules.md](RealEstate/Tax_85sqm_Rules.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Resume.md](Resume.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/IDE/Intellij.md](Tools/IDE/Intellij.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Markdown/Languages Supported by Github Flavored Markdown.md](Tools/Markdown/Languages Supported by Github Flavored Markdown.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Productivity/Impress.js.md](Tools/Productivity/Impress.js.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Productivity/Qlib.md](Tools/Productivity/Qlib.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Productivity/Slidev.md](Tools/Productivity/Slidev.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Productivity/sentry.md](Tools/Productivity/sentry.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Tools/Productivity/zapier.md](Tools/Productivity/zapier.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Central_Europe/Budapest.md](Travel/Central_Europe/Budapest.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Central_Europe/Overview.md](Travel/Central_Europe/Overview.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Central_Europe/Prague.md](Travel/Central_Europe/Prague.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Central_Europe/Salzburg.md](Travel/Central_Europe/Salzburg.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Central_Europe/Vienna.md](Travel/Central_Europe/Vienna.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Taiwan/Kavalan_Distillery.md](Travel/Taiwan/Kavalan_Distillery.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Travel/Taiwan/Tips.md](Travel/Taiwan/Tips.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Web/Concepts/shadow DOM.md](Web/Concepts/shadow DOM.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Web/Framework/ChartJs.md](Web/Framework/ChartJs.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Web/Framework/Electron.md](Web/Framework/Electron.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 | 2026-08-21 14:04 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: Antigravity CLI(agy)와 OpenCode(+Gemini) 비교 가이드 추가 |
 | 2026-08-21 13:54 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 스킬 설치, 디렉토리 구조 및 설정 방법 상세 보강 |
 | 2026-08-21 13:43 | [AI/OpenCode.md](AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
@@ -13,44 +54,3 @@
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
 | 2026-08-20 10:01 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
 | 2026-08-20 10:01 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
-| 2026-08-19 16:43 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
-| 2026-08-19 16:19 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
-| 2026-08-19 16:19 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
-| 2026-08-11 07:47 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: NATS 메시징 시스템 상세 가이드 추가 |
-| 2026-08-10 19:02 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: Qwen CLI API Key 재등록 및 설정 가이드 추가 |
-| 2026-08-10 14:56 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추가 |
-| 2026-08-10 14:40 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |
-| 2026-08-10 12:53 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
-| 2026-07-26 16:16 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
-| 2026-07-26 16:16 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
-| 2026-07-22 17:42 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교 가이드 추가 |
-| 2026-07-20 17:06 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
-| 2026-07-13 16:44 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경 사항 반영 |
-| 2026-07-06 12:55 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
-| 2026-07-01 10:15 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교 가이드 추가 |
-| 2026-06-30 13:45 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
-| 2026-06-24 14:47 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
-| 2026-06-24 14:05 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
-| 2026-06-12 09:36 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
-| 2026-06-01 08:44 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
-| 2026-05-29 15:18 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드 추가 |
-| 2026-05-28 09:25 | [Tools/Build/Maven_Classifier_and_Hive_JDBC.md](Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가이드 추가 |
-| 2026-05-28 09:07 | [Tools/Build/Maven_Shade_Plugin.md](Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
-| 2026-05-27 09:15 | [Language/Java/Optimizing_Java_Python_Execution.md](Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
-| 2026-05-22 10:14 | [Language/Java/Apache_Arrow_with_mmap.md](Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
-| 2026-05-21 17:07 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
-| 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
-| 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
-| 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
-| 2026-05-14 08:36 | [Language/Python/venv_vs_Conda.md](Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
-| 2026-05-13 15:30 | [Language/Python/Gunicorn_vs_Uvicorn.md](Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
-| 2026-05-13 15:17 | [Language/Python/FastAPI_Concurrency_Mechanism.md](Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
-| 2026-05-13 14:33 | [Language/Python/Basic_Execution_Guide.md](Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
-| 2026-05-13 14:28 | [Language/Python/Conda_Anaconda_Miniconda.md](Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |
-| 2026-04-30 08:57 | [Language/Python/Server_Execution_Methods.md](Language/Python/Server_Execution_Methods.md) | docs: Python 서버 실행 방식 비교(직접 실행 vs CLI Runner) 추가 |
-| 2026-04-29 13:18 | [Language/Java/Spring_Python_Integration.md](Language/Java/Spring_Python_Integration.md) | docs: Spring Boot와 Python 연동 시 긴 작업 처리 전략 추가 |
-| 2026-04-28 10:04 | [Tools/Git/Remote_Settings.md](Tools/Git/Remote_Settings.md) | docs: Git 인증 자동화(SSH, Credential Helper) 및 프로필 프로젝트 활용 팁 추가 |
-| 2026-04-28 09:35 | [Tools/Github/Profile_README_Guide.md](Tools/Github/Profile_README_Guide.md) | docs: GitHub 프로필 메인 페이지(Profile README) 꾸미기 가이드 추가 |
-| 2026-04-23 13:36 | [Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md](Language/Java/SpringBoot/Spring_Data_JPA_vs_JDBI.md) | docs: 직접 쿼리 작성(JDBI)과 Spring Data JPA(CrudRepository) 비교 가이드 추가 |
-| 2026-04-23 13:33 | [Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md](Language/Java/SpringBoot/Spring_Data_JPA_CrudRepository.md) | docs: Spring Data JPA CrudRepository 개념 및 사용법 가이드 추가 |
-| 2026-04-21 15:21 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: Kafka Consumer 안전 종료 방법(wakeup vs close) 가이드 추가 |
