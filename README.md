@@ -55,12 +55,12 @@
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-08-24 19:58 | [Architecture Cookbook](docs/Architecture_Cookbook.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Fourier transform](docs/ComputerScience/Math/Fourier transform.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 | 2026-08-24 19:58 | [Redis](docs/Data/Database/Redis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [US Iran Conflict](docs/History/Modern_Issues/US_Iran_Conflict.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Taiwan](docs/History/Taiwan.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Single Quotation vs Double Quotation in bash](docs/Infrastructure/Linux/Single Quotation vs Double Quotation in bash.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [libuv](docs/Language/NodeJs/libuv.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Asyncio Streams](docs/Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Decorator](docs/Language/Python/Decorator.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [SocketServer](docs/Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-08-24 19:58 | [Resume](docs/Resume.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -73,16 +73,14 @@
 <!-- TOC_START -->
 ### 📂 Categories
 - [**Language**](#language)
-- [**Web**](#web)
 - [**Infrastructure**](#infrastructure)
 - [**Data**](#data)
-- [**ComputerScience**](#computerscience)
-- [**Troubleshooting**](#troubleshooting)
 - [**AI**](#ai)
+- [**LLM_Development**](#llm_development)
+- [**ComputerScience**](#computerscience)
+- [**Web**](#web)
 - [**Tools**](#tools)
-- [**History**](#history)
-- [**Travel**](#travel)
-- [**RealEstate**](#realestate)
+- [**Troubleshooting**](#troubleshooting)
 - [**Templates**](#templates)
 
 ---
@@ -197,16 +195,6 @@
     * [RabbitMQ / Asynchronous consumer example](docs/Language/Python/pika/Asynchronous consumer example.md)
     * [BlockingConnection](docs/Language/Python/pika/BlockingConnection.md)
 
-## Web
-* [**Overview**](docs/Web/README.md)
-* **Concepts**
-  * [Ajax 그리고 CSR, SSR](docs/Web/Concepts/Ajax 그리고 CSR, SSR.md)
-  * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](docs/Web/Concepts/OpenAPI_vs_Swagger.md)
-  * [Scalar: 현대적이고 아름다운 API 문서화 도구 가이드](docs/Web/Concepts/Scalar_UI.md)
-  * [🌐 WebRTC (Web Real-Time Communication)](docs/Web/Concepts/WebRTC.md)
-* **Framework**
-  * [Vuejs](docs/Web/Framework/Vuejs.md)
-
 ## Infrastructure
 * [**Overview**](docs/Infrastructure/README.md)
 * **ArgoCD**
@@ -297,6 +285,28 @@
   * [SQL Naming Convention (SQL 명명 규칙)](docs/Data/Database/SQL_Naming_Convention.md)
   * [Fluentd](docs/Data/Database/fluentd.md)
 
+## AI
+* [**Overview**](docs/AI/README.md)
+* [Antigravity CLI (agy) vs OpenCode (with Gemini) 비교 가이드](docs/AI/AGY_vs_OpenCode_Comparison.md)
+* [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
+* [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](docs/AI/Antigravity_CLI_Configuration.md)
+* [Antigravity CLI (`agy`) 스킬 설치, 설정 및 활용 가이드](docs/AI/Antigravity_CLI_Skills_Guide.md)
+* [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](docs/AI/Claude_CLI_DeepSeek_Setup.md)
+* [Gemini CLI](docs/AI/Gemini_CLI.md)
+* [Ollama](docs/AI/Ollama.md)
+* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
+* [OpenClaw](docs/AI/OpenClaw.md)
+* [OpenCode](docs/AI/OpenCode.md)
+* [Paseo 설치 및 모바일 원격 제어 설정 가이드](docs/AI/Paseo_Setup_and_Usage.md)
+* [Qwen CLI - API Key 재등록 및 설정 가이드](docs/AI/Qwen_CLI_Setup.md)
+* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
+* [n8n (Nodemation)](docs/AI/n8n.md)
+
+## LLM_Development
+* [**Overview**](docs/LLM_Development/README.md)
+* [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](docs/LLM_Development/Backend_Development_Checklist.md)
+* [Web Development with LLM (웹 개발 시 LLM 활용 가이드)](docs/LLM_Development/Web_Development_Checklist.md)
+
 ## ComputerScience
 * [**Overview**](docs/ComputerScience/README.md)
 * **Architecture**
@@ -330,41 +340,15 @@
   * [Behavior-Driven Development (BDD)](docs/ComputerScience/SoftwareEngineering/BDD.md)
   * [소프트웨어 버저닝 (Software Versioning)](docs/ComputerScience/SoftwareEngineering/Versioning.md)
 
-## Troubleshooting
-* [**Overview**](docs/Troubleshooting/README.md)
-  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
-  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_in_K8s.md)
-  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
-  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
-  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
-  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
-  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
-  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
-  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
-  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
-  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
-  * [**분석 문서 보기**](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
-  * [**분석 문서 보기**](docs/Infrastructure/Linux/Large_File_Transfer.md)
-  * [**분석 문서 보기**](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
-  * [**분석 문서 보기**](docs/Data/Database/Oracle_LOB_Segment.md)
-  * [**분석 문서 보기**](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
-
-## AI
-* [**Overview**](docs/AI/README.md)
-* [Antigravity CLI (agy) vs OpenCode (with Gemini) 비교 가이드](docs/AI/AGY_vs_OpenCode_Comparison.md)
-* [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
-* [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](docs/AI/Antigravity_CLI_Configuration.md)
-* [Antigravity CLI (`agy`) 스킬 설치, 설정 및 활용 가이드](docs/AI/Antigravity_CLI_Skills_Guide.md)
-* [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](docs/AI/Claude_CLI_DeepSeek_Setup.md)
-* [Gemini CLI](docs/AI/Gemini_CLI.md)
-* [Ollama](docs/AI/Ollama.md)
-* [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](docs/AI/Ollama_Local_Environment_Setup.md)
-* [OpenClaw](docs/AI/OpenClaw.md)
-* [OpenCode](docs/AI/OpenCode.md)
-* [Paseo 설치 및 모바일 원격 제어 설정 가이드](docs/AI/Paseo_Setup_and_Usage.md)
-* [Qwen CLI - API Key 재등록 및 설정 가이드](docs/AI/Qwen_CLI_Setup.md)
-* [TurboQuant: 초거대 언어 모델(LLM) 최적화의 혁신](docs/AI/TurboQuant.md)
-* [n8n (Nodemation)](docs/AI/n8n.md)
+## Web
+* [**Overview**](docs/Web/README.md)
+* **Concepts**
+  * [Ajax 그리고 CSR, SSR](docs/Web/Concepts/Ajax 그리고 CSR, SSR.md)
+  * [OpenAPI vs Swagger: 개념 차이와 선택 가이드](docs/Web/Concepts/OpenAPI_vs_Swagger.md)
+  * [Scalar: 현대적이고 아름다운 API 문서화 도구 가이드](docs/Web/Concepts/Scalar_UI.md)
+  * [🌐 WebRTC (Web Real-Time Communication)](docs/Web/Concepts/WebRTC.md)
+* **Framework**
+  * [Vuejs](docs/Web/Framework/Vuejs.md)
 
 ## Tools
 * [**Overview**](docs/Tools/README.md)
@@ -389,15 +373,29 @@
   * [**Overview**](docs/Tools/Terminal/README.md)
   * [Tmux (Terminal Multiplexer)](docs/Tools/Terminal/Tmux.md)
 
+## Troubleshooting
+* [**Overview**](docs/Troubleshooting/README.md)
+  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
+  * [**분석 문서 보기**](docs/Language/Java/Virtual_Threads_in_K8s.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
+  * [**분석 문서 보기**](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+  * [**분석 문서 보기**](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+  * [**분석 문서 보기**](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+  * [**분석 문서 보기**](docs/Infrastructure/Linux/Large_File_Transfer.md)
+  * [**분석 문서 보기**](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
+  * [**분석 문서 보기**](docs/Data/Database/Oracle_LOB_Segment.md)
+  * [**분석 문서 보기**](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+
 ## Templates
 * [**Overview**](docs/Templates/README.md)
 * [[양식] 기술 이슈 분석 및 리포트](docs/Templates/Issue_Report_Template.md)
 * [[양식] 신규 개발 정의 문서](docs/Templates/New_Development_Definition_Template.md)
-
-## LLM_Development
-* [**Overview**](docs/LLM_Development/README.md)
-* [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](docs/LLM_Development/Backend_Development_Checklist.md)
-* [Web Development with LLM (웹 개발 시 LLM 활용 가이드)](docs/LLM_Development/Web_Development_Checklist.md)
 
 <!-- TOC_END -->
 

@@ -10,16 +10,14 @@ DOCS_DIR = "docs"
 # 대분류 표시 순서
 CATEGORY_ORDER = [
     "Language",
-    "Web",
     "Infrastructure",
     "Data",
-    "ComputerScience",
-    "Troubleshooting",
     "AI",
+    "LLM_Development",
+    "ComputerScience",
+    "Web",
     "Tools",
-    "History",
-    "Travel",
-    "RealEstate",
+    "Troubleshooting",
     "Templates"
 ]
 
@@ -50,9 +48,10 @@ def parse_log(lines, max_items=50):
             current_message = parts[2]
         else:
             file_path = line
-            # docs 내의 마크다운 파일만 대상 (관리 파일 제외)
+            # docs 내의 마크다운 파일만 대상 (관리 파일 제외 및 실제 존재하는 파일만)
             if (file_path.startswith("docs/") and 
                 file_path.endswith(".md") and 
+                os.path.exists(file_path) and
                 not any(x in file_path for x in ["Recent_Changes.md", "README.md", "Sitemap.md", "index.md"])):
                 
                 # 파일별로 가장 최근 수정 내역만 기록 (중복 제거)
@@ -122,8 +121,6 @@ def update_file_section(filepath, marker_name, new_content):
             print(f"Successfully updated section {marker_name} in {filepath}")
     except Exception as e:
         print(f"Error updating {filepath}: {e}")
-
-# ... (generate_toc_content 등 기존 함수 유지) ...
 
 def get_markdown_title(filepath):
     try:

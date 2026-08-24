@@ -1,4 +1,4 @@
-site_name: Dooly | Engineering Portfolio & Tech Wiki
+site_name: My TIL Wiki
 site_url: https://devdooly.github.io/TIL/
 repo_url: https://github.com/devdooly/til
 edit_uri: edit/main/docs/
@@ -25,7 +25,6 @@ theme:
         icon: material/weather-night
         name: 라이트 모드로 전환
   features:
-    - navigation.tabs
     - navigation.indexes
     - navigation.top
     - navigation.tracking

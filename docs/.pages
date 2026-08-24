@@ -1,6 +1,7 @@
 nav:
   - index.md
-  - 온라인 이력서 (Resume): Resume.md
+  - 전체 목차 (Sitemap): Sitemap.md
+  - Recent Changes: Recent_Changes.md
   - 실전 트러블슈팅: Troubleshooting
   - Language
   - Infrastructure
@@ -11,5 +12,4 @@ nav:
   - Web
   - Tools
   - Templates
-  - Recent Changes: Recent_Changes.md
-  - 전체 목차 (Sitemap): Sitemap.md
+  - 이력서 초안 (Resume): Resume.md
