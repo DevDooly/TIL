@@ -59,12 +59,19 @@ def validate_path(base_dir, path):
         EXIT_CODE = 1
 
 def process_pages_file(filepath):
+    global EXIT_CODE
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
             
-        if not data or 'nav' not in data:
+        if data is None:
             return
+        if not isinstance(data, dict):
+            raise ValueError('.pages must contain a YAML mapping')
+        if 'nav' not in data:
+            return
+        if not isinstance(data['nav'], list):
+            raise ValueError('nav must be a list')
 
         base_dir = os.path.dirname(filepath)
         nav = data['nav']
@@ -77,6 +84,7 @@ def process_pages_file(filepath):
             print(f"💾 Saved changes to {filepath}")
             
     except Exception as e:
+        EXIT_CODE = 1
         print(f"⚠️ Failed to parse or process {filepath}: {e}")
 
 def main():

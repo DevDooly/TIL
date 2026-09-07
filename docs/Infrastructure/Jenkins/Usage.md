@@ -31,11 +31,13 @@ graph LR
 ```
 
 ### 1) Declarative Pipeline (선언형 - 권장)
+
 * `pipeline { ... }` 블록으로 시작합니다.
 * 구조화되어 가독성이 높고, 에러 발생 시 어느 스테이지에서 실패했는지 직관적으로 파악할 수 있습니다.
 * `stages`, `stage`, `steps`, `environment`, `post`, `when` 등의 명시적 키워드를 사용합니다.
 
 ### 2) Scripted Pipeline (스크립트형)
+
 * `node { ... }` 블록으로 시작합니다.
 * 일반적인 Groovy 프로그래밍 언어의 모든 문법(루프, 예외 처리, 함수 정의 등)을 제약 없이 사용할 수 있습니다.
 * 복잡한 로직 구현이 가능하지만 코드가 길어지면 유지보수가 어려워집니다.
@@ -47,6 +49,7 @@ graph LR
 Git 토큰, Docker Registry 비밀번호, SSH Key, API Secret 등 민감한 정보는 `Jenkinsfile`에 직접 노출하지 않고 Jenkins 내부의 암호화된 Credential 저장소에 등록하여 사용합니다.
 
 ### 등록 절차
+
 1. **Jenkins 관리 (Manage Jenkins)** -> **Credentials** -> **System** -> **Global credentials (unrestricted)** 이동.
 2. **[Add Credentials]** 클릭 후 종류(Kind) 선택:
    * **Username with password**: Docker Hub, Nexus, 사내 레지스트리 계정 등
@@ -82,12 +85,14 @@ pipeline {
 코드가 Git에 Push되거나 Pull Request가 생성되었을 때 Jenkins 빌드가 즉시 자동으로 시작되도록 설정합니다.
 
 ### 1) Jenkins Job 설정
+
 1. 대상 Job의 설정 페이지로 이동합니다.
 2. **빌드 유발 (Build Triggers)** 섹션에서:
    * **GitHub hook trigger for GITScm polling** 체크 (GitHub 사용 시)
    * 또는 **Generic Webhook Trigger** 플러그인을 사용하여 세부 조건 필터링.
 
 ### 2) GitHub Repository 설정
+
 1. GitHub 저장소의 **Settings** -> **Webhooks** -> **[Add webhook]** 클릭.
 2. **Payload URL**: `http://<JENKINS_HOST>:<PORT>/github-webhook/` (끝에 슬래시 필수).
 3. **Content type**: `application/json` 선택.
@@ -122,6 +127,7 @@ sequenceDiagram
 ```
 
 ### 주요 장점
+
 * **리소스 효율성**: 빌드가 없을 때 인프라 자원을 점유하지 않아 비용 절감.
 * **빌드 격리성**: 각 빌드가 독립된 컨테이너 환경에서 실행되므로 환경 오염이나 파일 충돌 없음.
 * **다양한 빌드 툴 체인 지원**: Java, Node.js, Go, Python 등 프로젝트별로 최적화된 컨테이너 이미지를 에이전트로 동적 지정 가능.

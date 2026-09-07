@@ -97,11 +97,13 @@ Promise.resolve().then(() => console.log('4. Promise (Microtask)'));
    ```bash
    UV_THREADPOOL_SIZE=16 node server.js
    ```
+
 2. **메인 스레드 블로킹 금지 (Don't Block the Event Loop)**:
    정규표현식 ReDoS 공격, 대용량 동기 JSON 파싱, 동기 파일 I/O(`fs.readFileSync`)는 전체 이벤트 루프를 멈추게 하므로 반드시 비동기 또는 Worker Threads를 활용해야 합니다.
 
 ---
 
 ## 5. References
+
 * [libuv Design Overview](http://docs.libuv.org/en/v1.x/design.html)
-* [Node.js Event Loop, Timers, and process.nextTick() Guide](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+* [Node.js Event Loop, Timers, and process.nextTick() Guide](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)

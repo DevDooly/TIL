@@ -7,6 +7,7 @@ Paseo는 서버/PC에 데몬(Daemon)을 구동하고, 스마트폰(Android/iOS �
 ## 1. Paseo CLI 및 데몬 설치
 
 ### 1.1 사전 요구사항
+
 * Node.js (v18 이상 권장, v24 지원)
 * npm
 
@@ -58,6 +59,7 @@ paseo daemon pair
 터미널에 **QR 코드**와 함께 **Pairing link**가 출력됩니다.
 
 ### 3.2 안드로이드 앱에서 연결 절차
+
 1. 스마트폰에서 **Paseo 앱** 실행
 2. **Scan QR Code**를 눌러 터미널의 QR 코드를 스캔하거나, **Pairing Link** URL을 복사하여 입력
 3. 페어링이 완료되면 서버의 워크스페이스 및 에이전트 목록이 스마트폰 화면에 즉시 동기화됩니다.
@@ -91,6 +93,7 @@ paseo provider ls
 `opencode`가 `available (Enabled)` 상태로 표시됩니다.
 
 ### 4.4 모바일 앱 / CLI에서 Gemini 모델 사용
+
 * **모바일 앱**: 새 에이전트 생성 시 Provider를 **OpenCode**로 선택하고, Model 목록에서 **`google/gemini-3.7-flash`** 또는 **`google/gemini-2.5-pro`**를 선택합니다.
 * **CLI 실행 예시**:
   ```bash

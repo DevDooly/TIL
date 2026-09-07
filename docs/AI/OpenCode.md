@@ -10,6 +10,7 @@
 CLI 인터페이스를 제공하여 터미널 내에서 바로 AI 모델과 상호작용하거나, Paseo와 같은 에이전트 제어 플레인의 실행 엔진으로 연동됩니다.
 
 ### 2. 폭넓은 LLM 모델 지원 (Google Gemini, OpenAI, Claude, DeepSeek 등)
+
 * **Google Gemini 지원**: `GEMINI_API_KEY` 환경 변수 또는 Google AI Studio 계정 연동을 통해 **Gemini 3.7 Flash, 2.5 Pro, 2.0 Flash** 등 최신 제미나이 모델을 바로 사용 가능합니다.
 * **OpenAI / Anthropic**: GPT-4o, GPT-5 계열, Claude 3.5 Sonnet 등 지원
 * **Ollama**: 로컬에서 구동되는 오픈소스 LLM(DeepSeek R1, Llama 3 등) 연동 지원

@@ -19,10 +19,12 @@ Apache Arrow의 메모리 관리는 `BufferAllocator` 인터페이스를 중심�
 사용자께서 제시하신 `static final RootAllocator`와 `ShutdownHook` 조합은 다음과 같은 장단점이 있습니다.
 
 ### 장점
+
 * 애플리케이션 전체에서 하나의 할당자를 공유하므로 자원 관리가 일관됩니다.
 * 프로그램 종료 시점에 메모리 누수 여부를 확인할 수 있는 "최후의 보루" 역할을 합니다.
 
 ### 단점 및 위험요소
+
 * **누수 위치 추적 불가**: `RootAllocator` 하나만 사용하면 어떤 스레드나 어떤 작업에서 메모리를 해제하지 않았는지 알기 어렵습니다.
 * **실시간 대응 불가**: 프로그램이 종료되는 시점에만 문제를 알 수 있으므로, 장기 실행되는 서버 환경에서는 이미 메모리 고갈(OOM)이 발생한 뒤일 수 있습니다.
 * **엄격한 해제 요구**: Arrow는 명시적인 해제를 원칙으로 합니다. 단순히 종료 시점에 닫는 것보다 작업 단위로 해제하는 것이 안전합니다.
@@ -85,5 +87,6 @@ public class ArrowDataProcessor {
 ---
 
 ## 관련 문서
+
 * [Java-Python Shared Memory (Arrow)](Java_Python_Shared_Memory_Arrow.md)
 * [Java-Python 실행 최적화 가이드](Optimizing_Java_Python_Execution.md)

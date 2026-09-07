@@ -1,15 +1,15 @@
 nav:
-  - index.md
-  - 전체 목차 (Sitemap): Sitemap.md
-  - Recent Changes: Recent_Changes.md
-  - 실전 트러블슈팅: Troubleshooting
-  - Language
-  - Infrastructure
-  - Data
-  - AI
-  - LLM Development: LLM_Development
-  - ComputerScience
-  - Web
-  - Tools
-  - Templates
-  - 이력서 초안 (Resume): Resume.md
+- index.md
+- 전체 목차 (Sitemap): Sitemap.md
+- Recent Changes: Recent_Changes.md
+- 실전 트러블슈팅: Troubleshooting
+- Language
+- Infrastructure
+- Data
+- AI
+- LLM Development: LLM_Development
+- ComputerScience
+- Web
+- Tools
+- Templates
+- 이력서 초안 (Resume): Resume.md

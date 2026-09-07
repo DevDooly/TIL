@@ -34,6 +34,7 @@ flowchart TD
 ```
 
 ### (1) SemVer 2.0 사전 릴리즈 (Pre-release) 방식
+
 * **형식**: `MAJOR.MINOR.PATCH-<prerelease>` (예: `v1.0.0-dev.1`, `v1.0.0-alpha.2`, `v1.0.1-rc.1`)
 * **특징**:
   * Semantic Versioning(유의적 버전 2.0.0) 표준을 준수합니다.
@@ -41,6 +42,7 @@ flowchart TD
   * *주의 (OCI / Docker 규격)*: SemVer의 빌드 메타데이터 구분자인 `+`(예: `1.0.0+build.1`)는 Docker 태그 허용 문자(`[a-zA-Z0-9_.-]`)에 포함되지 않으므로, Docker에서는 `+` 대신 `.` 또는 `-`를 사용해야 합니다.
 
 ### (2) Git Commit SHA 기반 방식
+
 * **형식**: `dev-<short-sha>` 또는 `sha-<short-sha>` (예: `dev-a1b2c3d`, `sha-7f8a9b0`)
 * **특징**:
   * Git 커밋 해시와 1:1로 완벽히 매핑되어 코드 변경점을 즉시 파악할 수 있습니다.
@@ -48,6 +50,7 @@ flowchart TD
   * 단점: 태그 문자열만 보고는 어떤 기능이 추가되었는지, 버전의 전후 선후관계(시퀀스)를 직관적으로 알기 어렵습니다.
 
 ### (3) Git Describe 기반 동적 버저닝
+
 * **형식**: `git describe --tags --always` 결과 활용 (예: `v1.0.0-4-ga1b2c3d`)
   * `v1.0.0`: 가장 최근 Git Tag
   * `4`: 해당 태그 이후 추가된 커밋 수
@@ -57,12 +60,14 @@ flowchart TD
   * 기준이 되는 메이저/마이너 버전과 최근 커밋 거리를 동시에 알 수 있습니다.
 
 ### (4) 하이브리드 (SemVer + CI Build Number + Git SHA)
+
 * **형식**: `v{MAJOR}.{MINOR}.{PATCH}-dev.{BUILD_NUMBER}.{SHORT_SHA}` (예: `v1.0.0-dev.42.a1b2c3d`)
 * **특징**:
   * CI/CD 파이프라인 번호로 빌드 순서 정렬(Sortability)을 보장하고, Git SHA로 소스 코드 추적성을 보장합니다.
   * 대규모 엔터프라이즈 및 Kubernetes CD(ArgoCD, Flux) 환경에서 가장 널리 권장되는 방식입니다.
 
 ### (5) 다중 태깅 (Multi-tagging) 전략
+
 * 빌드 시 1개의 이미지를 만들고 **2개 이상의 태그**를 동시에 부여하는 전략:
   1. **불변 태그 (Immutable Tag)**: `v1.0.0-dev.42.a1b2c3d` 또는 `dev-a1b2c3d` (실제 배포, 롤백, 감사용)
   2. **가변/별칭 태그 (Floating Tag)**: `dev` 또는 `dev-latest` (로컬 테스트 및 빠른 참조용)
@@ -101,6 +106,7 @@ graph LR
 v<Next-Major.Minor.Patch>-dev.<CI_BUILD_NUM>-<SHORT_SHA>
 예: v1.0.0-dev.12-a1b2c3d
 ```
+
 * **장점**: 다음 목표 릴리즈 버전(`v1.0.0`)의 개발 진행 상황을 명확히 인지할 수 있고, 빌드 번호와 커밋 해시가 함께 있어 디버깅이 매우 쉽습니다.
 
 #### 2) PR / 기능(Feature) 브랜치 임시 테스트 데몬
@@ -108,9 +114,11 @@ v<Next-Major.Minor.Patch>-dev.<CI_BUILD_NUM>-<SHORT_SHA>
 pr-<PR_NUMBER>-<SHORT_SHA>
 예: pr-45-f9e8d7c
 ```
+
 * **장점**: 어떤 PR 검증을 위해 띄운 데몬인지 명확하며, PR이 머지되거나 닫히면 해당 이미지를 안전하게 가비지 컬렉션(GC)할 수 있습니다.
 
 #### 3) 프로덕션 승급 시 (Release Promotion)
+
 * 동일한 이미지를 재빌드하지 않고 Git Release Tag 시점에 프로덕션 태그를 추가:
 ```text
 Dev:  v1.0.0-dev.12-a1b2c3d

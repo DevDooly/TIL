@@ -1,5 +1,5 @@
 title: 트러블슈팅
 nav:
-  - Overview: README.md
-  - MinIO 버저닝 삭제 이슈: MinIO_Versioning_Deletion_Issue.md
-  - Avro hashCode 충돌: Avro_HashCode_Field_Naming_Conflict.md
+- Overview: README.md
+- MinIO 버저닝 삭제 이슈: MinIO_Versioning_Deletion_Issue.md
+- Avro hashCode 충돌: Avro_HashCode_Field_Naming_Conflict.md

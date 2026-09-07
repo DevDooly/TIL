@@ -9,6 +9,7 @@ Antigravity CLI(`agy`) 등 터미널 기반 AI 코딩 어시스턴트를 사용�
 CLI의 전역 설정 파일에서 도구별 또는 작업 유형별 자동 승인 권한(Permissions)을 부여할 수 있습니다.
 
 ### 설정 파일 위치
+
 * **Linux / macOS**: `~/.gemini/antigravity-cli/settings.json`
 * **Windows**: `%USERPROFILE%\.gemini\antigravity-cli\settings.json`
 

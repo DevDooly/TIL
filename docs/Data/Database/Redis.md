@@ -79,10 +79,12 @@ flowchart TD
 ```
 
 ### 1) Cache-Aside (Look-Aside)
+
 * **장점**: 캐시가 죽더라도 DB를 통해 서비스 지속 가능, 실제로 요청된 데이터만 캐싱되어 메모리 효율적.
 * **단점**: Cache Miss 시 DB 조회 및 캐시 갱신으로 인한 응답 지연 발생.
 
 ### 2) 캐시 스탬피드(Cache Stampede) 방지
+
 * TTL이 만료되는 순간 동일 키에 대한 대량의 동시 요청이 DB로 몰려 장애가 발생하는 현상.
 * **해결책**:
   * **Jitter (만료 시간에 무작위 오차 추가)**: `TTL = base_ttl + random(0, 60)`
@@ -107,5 +109,6 @@ flowchart TD
 ---
 
 ## 5. References
+
 * [Redis Documentation](https://redis.io/docs/)
 * [Redis Best Practices - Memory and Latency Optimization](https://redis.io/docs/management/optimization/)

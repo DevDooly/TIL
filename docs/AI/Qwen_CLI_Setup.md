@@ -28,6 +28,7 @@ qwen init
 CLI 실행 시 자동 생성된 설정 파일에서 잘못 입력된 키를 직접 수정할 수 있습니다.
 
 ### 설정 파일 위치
+
 * **Windows**:
   * `%USERPROFILE%\.qwen\config.json` (예: `C:\Users\<사용자명>\.qwen\config.json`)
   * `%USERPROFILE%\.dashscope\api_key`

@@ -1,122 +1,30 @@
-# K8s 환경에서의 Java Virtual Thread 사용 분석
+# Kubernetes에서 Virtual Thread 운영 시 확인할 것
 
-Java 21에서 정식 도입된 **Virtual Threads (Project Loom)**는 가볍고 효율적인 동시성 모델을 제공합니다. 특히 리소스 제한이 엄격한 Kubernetes 환경에서 가상 스레드가 미치는 영향과 최적의 사용 전략을 분석합니다.
+기준: JDK 21과 24 이후 차이를 구분, 2026-09-07.
 
----
+가상 스레드는 I/O를 기다리는 많은 작업을 표현하는 데 유용하다. CPU 계산 자체를 빠르게 하거나 같은 Pod에서 수십 배 처리량을 보장하지는 않는다. [Virtual Thread 도입 가이드](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
-## 1. 가상 스레드 도입의 장점 (K8s 환경)
+## CPU와 scheduler
 
-### 1.1 하드웨어 효율 극대화 (High Throughput)
+`jdk.virtualThreadScheduler.parallelism`은 정수 병렬성 설정이다. `500m`처럼 소수 CPU quota를 가진 Pod의 limit와 기계적으로 맞출 수 없고, 값을 맞춘다고 CPU throttling이 사라지지도 않는다.
 
-* **I/O 바운드 작업 최적화**: 기존 플랫폼 스레드는 I/O 대기 시 OS 스레드를 점유하여 자원을 낭비하지만, 가상 스레드는 대기 시 실제 OS 스레드(Carrier Thread)를 반납합니다.
-* **적은 리소스로 더 많은 요청 처리**: 동일한 Pod CPU/Memory 사양에서 기존보다 수십 배 이상의 동시 요청을 처리할 수 있어, 클러스터 전체의 비용을 절감할 수 있습니다.
+JVM이 인식한 processor 수, 실제 CPU 사용량, throttling, runnable 작업 수와 p99 지연을 함께 본다. CPU-bound 작업의 동시성을 무제한으로 늘리면 대기만 늘 수 있다. [Java 21 가상 스레드 스케줄링](https://openjdk.org/jeps/444), [Kubernetes 리소스 제한](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
-### 1.2 서버리스 및 마이크로서비스에 적합
+## 메모리 예산
 
-* 가볍고 빠른 생성 덕분에 트래픽 급증 시 Pod 단위의 스케일링(HPA) 외에도 **Pod 내부에서의 즉각적인 처리량 확장**이 가능합니다.
+가상 스레드 stack chunk는 Java heap에 있다. 따라서 `-Xmx` 바깥에 “가상 스레드 stack용 20–30%”를 따로 더하는 설명은 이중 계산이다.
 
----
+Pod 메모리는 heap 외에도 metaspace, code cache, direct buffer, 플랫폼 스레드 stack과 기타 native 메모리 등을 포함한다. heap 안에서도 대기 중 요청 본문과 ThreadLocal 값이 누적될 수 있다. RSS와 heap·native 지표를 구분해 측정한다. [JEP 444 메모리 설명](https://openjdk.org/jeps/444)
 
-## 2. K8s 환경에서의 핵심 고려사항 및 최적화
+## downstream과 종료
 
-### 2.1 CPU Throttling 및 스케줄링
+- DB connection 수, 외부 API 동시 호출 수, in-flight 요청 수에 상한을 둔다.
+- Semaphore로 실행 수를 제한해도 기다리는 요청 수가 무한하면 메모리는 증가한다. 대기 한도·timeout·거절 정책을 함께 둔다.
+- 종료 시 요청 유입을 중단하고 처리 중 작업을 정리한다. DB·Kafka·파일 작업의 완료와 재처리 범위를 정한다.
+- `terminationGracePeriodSeconds`와 애플리케이션 종료 시간을 맞추고 강제 종료도 테스트한다.
 
-* **Carrier Thread 병렬성**: 가상 스레드를 실행하는 실제 OS 스레드 수는 기본적으로 CPU 코어 수에 비례합니다. 
-* **최적화**: Pod의 `resources.limits.cpu` 설정과 `jdk.virtualThreadScheduler.parallelism` 값을 일치시켜, 불필요한 컨텍스트 스위칭과 CPU Throttling을 방지해야 합니다.
+## Pinning은 버전별로 확인
 
-### 2.2 메모리 관리 (Heap vs Native)
+JDK 21–23의 monitor 관련 제약과 JDK 24 이후 개선을 구분한다. 라이브러리 이름이나 `synchronized` 존재만으로 원인을 확정하지 않는다. [진단 절차와 JDK별 옵션](Virtual_Threads_FTP_Pinning.md)
 
-* **스택 위치**: 플랫폼 스레드는 Native Memory에 스택을 쌓지만, 가상 스레드는 **Java Heap**에 스택을 저장합니다.
-* **최적화**: 가상 스레드를 대량으로 사용할 경우 Heap 메모리 사용량이 급증할 수 있습니다. Pod의 `memory limit` 산정 시 `-Xmx` 외에 가상 스레드 스택용 여유 공간(약 20-30% 추가)을 고려해야 합니다.
-
----
-
-## 3. 주의사항 및 위험 요소
-
-### 3.1 Thread Pinning (스레드 고정 현상)
-
-* **원인**: `synchronized` 블록/메서드 내부에서 I/O 작업(네트워크 호출, DB 쿼리 등)을 수행하거나 Native 메서드(JNI)를 실행할 때 발생합니다.
-
-* **현상**: 가상 스레드가 I/O 대기 중임에도 실제 OS 스레드(Carrier Thread)를 반납하지 못하고 꽉 붙잡고 있게 됩니다. 이로 인해 스레드 풀이 고갈되어 전체 시스템이 응답 불능 상태에 빠질 수 있습니다.
-
-
-
-#### 🚫 Pinning 주의 라이브러리 및 사례
-
-* **JDBC 드라이버**: MySQL, PostgreSQL 등의 구형 JDBC 드라이버는 내부적으로 `synchronized`를 사용하여 네트워크 패킷을 읽습니다. 쿼리 실행 시 Pinning이 발생할 수 있습니다.
-
-* **Apache HttpClient**: 최신 5.x 버전 이전의 레거시 라이브러리들은 내부 임계 구역 처리에 `synchronized`를 광범위하게 사용합니다.
-
-* **파일 I/O**: Java 21 이전까지의 많은 파일 시스템 처리 API가 내부적으로 OS 레벨의 Blocking과 연동되어 Pinning과 유사한 효율 저하를 일으켰습니다.
-
-
-
-#### 💻 코드 예시: 개선 전 vs 개선 후
-
-```java
-
-// [Bad] Pinning 유발: synchronized 사용
-
-public synchronized String fetchData() {
-
-    return restTemplate.getForObject(url, String.class); // I/O 발생 시 OS 스레드 고정
-
-}
-
-
-
-// [Good] 가상 스레드 친화적: ReentrantLock 사용
-
-private final ReentrantLock lock = new ReentrantLock();
-
-public String fetchData() {
-
-    lock.lock();
-
-    try {
-
-        return restTemplate.getForObject(url, String.class); // I/O 시 OS 스레드 반납 가능
-
-    } finally {
-
-        lock.unlock();
-
-    }
-
-}
-
-```
-
-
-
-#### 🔍 Pinning 탐지 방법
-
-JVM 실행 옵션에 아래 설정을 추가하면 Pinning이 발생하는 지점의 스택 트레이스를 로그로 확인할 수 있습니다.
-
-* `-Djdk.tracePinnedThreads=full` (상세 출력)
-
-* `-Djdk.tracePinnedThreads=short` (요약 출력)
-
-
-
-### 3.2 배후 서비스 부하 (Stampede Effect)
-
-* 내부 처리량이 급증하면 연결된 데이터베이스나 외부 API에 평소보다 훨씬 많은 요청이 동시에 몰려 시스템 전체가 붕괴될 수 있습니다.
-* **해결책**: 세마포어(Semaphore) 등을 사용하여 배후 서비스로 향하는 동시 요청 수를 적절히 제한(Backpressure)해야 합니다.
-
----
-
-## 4. 결론: K8s에서 가상 스레드, 써야 할까?
-
-### ✅ 이런 경우에 강력 추천합니다 (Go!)
-
-* 애플리케이션이 주로 API 호출, DB 쿼리 등 **I/O 작업**을 수행하는 경우.
-* 적은 수의 Pod로 높은 동시 접속자를 처리하여 **인프라 비용을 절감**하고 싶은 경우.
-
-### ⚠️ 이런 경우는 주의가 필요합니다 (Wait)
-
-* **CPU 연산 위주**의 작업(이미지 처리, 복잡한 계산 등)은 성능 향상이 거의 없습니다.
-* 레거시 라이브러리에서 `synchronized`를 광범위하게 사용하여 **Pinning 이슈**가 예상되는 경우.
-
----
-*참고: 가상 스레드는 스레드 부족 문제를 해결해 줄 뿐, CPU나 메모리 자체의 물리적인 한계를 넘어서게 해주는 마법의 도구는 아닙니다. 도입 전 JFR(JDK Flight Recorder)을 통한 충분한 부하 테스트가 필수적입니다.*
+검증 시 Pod 수·limit·입력·DB 크기를 고정하고 처리량, p95/p99, 오류율, 큐 길이, RSS, GC, CPU throttling을 함께 기록한다. 개선율과 비용 절감은 측정 결과가 있을 때만 적는다.

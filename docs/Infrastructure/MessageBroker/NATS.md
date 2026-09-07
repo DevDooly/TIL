@@ -31,16 +31,19 @@ graph LR
 NATS는 별도의 복잡한 브로커 설정 없이 **서브젝트(Subject)** 기반 라우팅으로 다양한 패턴을 지원합니다.
 
 ### 1) Publish-Subscribe (1:N 브로드캐스트)
+
 * 발행자(Publisher)가 특정 서브젝트로 메시지를 보내면, 해당 서브젝트를 구독(Subscribe) 중인 모든 수신자에게 브로드캐스팅됩니다.
 * **와일드카드 지원**:
   * `*`: 단일 토큰 매칭 (`orders.*.created` -> `orders.kr.created` 매칭)
   * `>`: 다중/하위 토큰 전체 매칭 (`orders.>` -> `orders.kr.seoul.created` 매칭)
 
 ### 2) Request-Reply (초고속 동기식 RPC)
+
 * HTTP REST 통신 대신 메시지 기반으로 즉시 응답을 주고받는 패턴입니다.
 * NATS 내부의 `Inbox` 메커니즘을 통해 별도의 큐나 Correlation ID 관리 없이 고성능 RPC를 구현합니다.
 
 ### 3) Queue Groups (로드 밸런싱 / 분산 작업자)
+
 * 동일한 큐 그룹 이름(예: `workers`)을 가진 여러 구독자가 있을 경우, 메시지를 해당 그룹 내의 **오직 1개의 작업자에게만 로드 밸런싱(Round-Robin)**하여 전달합니다.
 * 워커 프로세스의 수평 확장(Scale-out) 시 유용합니다.
 

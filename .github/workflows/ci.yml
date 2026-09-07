@@ -7,6 +7,9 @@ on:
     paths:
       - 'mkdocs.yml'
       - 'docs/**'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/ci.yml'
 
 permissions:
   contents: write
@@ -39,6 +42,18 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Validate documentation and examples
+        run: |
+          python scripts/validate_markdown_lists.py
+          python scripts/validate_pages.py
+          python -m unittest discover -s scripts/tests -p 'test_*.py'
+          mkdocs build --strict
 
       - name: Deploy to gh-pages branch
         run: mkdocs gh-deploy --force

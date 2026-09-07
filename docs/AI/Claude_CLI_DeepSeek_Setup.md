@@ -85,6 +85,7 @@ OpenRouter API Key 하나로 수백 개의 모델을 즉시 사용할 수 있습
   "model": "deepseek/deepseek-v4-flash-0731"
 }
 ```
+
 * 모델 변경 실행:
 ```powershell
 claude --model deepseek/deepseek-chat

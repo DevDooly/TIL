@@ -14,7 +14,7 @@ title: Backend & Programming Languages
 
 <div class="grid cards" markdown>
 
--   :material-language-java: **[Java & Spring Ecosystem](Java/README.md)**
+- :material-language-java: **[Java & Spring Ecosystem](Java/README.md)**
 
     ---
 
@@ -25,7 +25,7 @@ title: Backend & Programming Languages
 
     [:octicons-arrow-right-24: Java 문서 보기](Java/README.md)
 
--   :material-language-python: **[Python & Asynchronous Web](Python/README.md)**
+- :material-language-python: **[Python & Asynchronous Web](Python/README.md)**
 
     ---
 
@@ -36,7 +36,7 @@ title: Backend & Programming Languages
 
     [:octicons-arrow-right-24: Python 문서 보기](Python/README.md)
 
--   :material-nodejs: **[Node.js & Runtime](NodeJs/README.md)**
+- :material-nodejs: **[Node.js & Runtime](NodeJs/README.md)**
 
     ---
 

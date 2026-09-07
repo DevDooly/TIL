@@ -53,6 +53,7 @@ graph TD
    ```bash
    mkdir -p .agents/skills/git-commit-helper
    ```
+
 2. `.agents/skills/git-commit-helper/SKILL.md` 파일을 생성하고 지침을 작성합니다:
    ```markdown
    ---

@@ -46,10 +46,12 @@ sequenceDiagram
 ## 2. 주요 개념 및 프로토콜
 
 ### 1) Signaling (시그널링)
+
 * WebRTC 표준 자체에는 시그널링 규격이 정의되어 있지 않으므로, 개발자가 WebSocket, Socket.io, SIP, HTTP 등을 통해 구현합니다.
 * **SDP (Session Description Protocol)**: 오디오/비디오 코덱, 해상도, 암호화 키, 네트워크 파라미터 등의 세션 메타데이터를 교환합니다.
 
 ### 2) NAT Traversal 기술 (STUN & TURN)
+
 * **NAT (Network Address Translation)**: 사설 IP 주소를 공인 IP 주소로 변환하는 기술입니다.
 * **STUN (Session Traversal Utilities for NAT)**:
   * 클라이언트가 자신의 공인 IP와 포트 번호를 파악하여 직접 P2P 연결을 수립할 수 있도록 돕는 경량 서버입니다.
@@ -59,6 +61,7 @@ sequenceDiagram
   * STUN, TURN, 로컬 네트워크 주소를 조합하여 최적의 연결 경로(Candidate)를 자동으로 탐색하고 결정하는 프레임워크입니다.
 
 ### 3) 전송 계층 프로토콜
+
 * **SRTP (Secure Real-time Transport Protocol)**: 음성 및 영상 미디어 스트림을 암호화하여 전송 (UDP 기반)
 * **SCTP (Stream Control Transmission Protocol)**: WebRTC DataChannel을 통해 신뢰성/비신뢰성 임의 데이터를 양방향 전송 (DTLS 암호화 적용)
 
@@ -84,6 +87,7 @@ Chrome 브라우저의 정책 설정을 통해 로컬 UDP 포트 범위를 지�
 ---
 
 ## 4. References
+
 * [W3C WebRTC 1.0: Real-Time Communication Between Browsers](https://www.w3.org/TR/webrtc/)
 * [MDN Web Docs - WebRTC API](https://developer.mozilla.org/ko/docs/Web/API/WebRTC_API)
 * [RFC 5245: Interactive Connectivity Establishment (ICE)](https://tools.ietf.org/html/rfc5245)

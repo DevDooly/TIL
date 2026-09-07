@@ -11,10 +11,13 @@ LLM 기반 개발은 기존의 확정적(Deterministic) 프로그래밍과는 �
 이 섹션은 LLM을 활용한 개발 여정의 각 단계별 필수 지식과 체크리스트를 다룹니다.
 
 ### 📝 개발 단계별 가이드
+
+- **[레거시 코드 개선과 검증 기록](Legacy_Code_Improvement.md)**: LLM을 활용한 알고리즘·시간 처리·코딩 스타일 개선의 검증 절차
 - **[Web Development Checklist](Web_Development_Checklist.md)**: 프론트엔드 UI/UX, 클라이언트 로직 개발 시 고려사항
 - **[Backend Development Checklist](Backend_Development_Checklist.md)**: 서버 로직, DB 설계, 보안 및 테스트 가이드
 
 ### 📚 핵심 주제 (예정)
+
 1. **LLM 개발 시 주의 사항 (Precautions)**
     - 할루시네이션(Hallucination) 관리
     - 보안 및 데이터 프라이버시 (API 키, 민감 정보 노출 방지)

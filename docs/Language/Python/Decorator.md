@@ -124,5 +124,6 @@ process_task("Task 2")
 ---
 
 ## 5. References
+
 * [Python Documentation - Decorators](https://docs.python.org/3/glossary.html#term-decorator)
 * [PEP 318 – Decorators for Functions and Methods](https://peps.python.org/pep-0318/)

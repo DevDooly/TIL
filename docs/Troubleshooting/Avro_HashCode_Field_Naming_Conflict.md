@@ -1,47 +1,37 @@
-# Apache Avro: 필드명 'result' 사용 시 hashCode() 메서드 충돌 이슈
+# Apache Avro: result 필드와 hashCode 지역 변수 충돌
 
-Apache Avro 라이브러리를 사용하여 Java 코드를 생성할 때, 필드(변수) 이름을 `result`로 지정하면 특정 버전에서 빌드 오류나 컴파일 에러가 발생할 수 있습니다. 이는 Avro가 생성하는 `hashCode()` 메서드의 내부 구현 방식과 충돌하기 때문입니다.
+공식 이슈 확인: 2026-09-07. 공개된 생성기 버그와 진단 방법을 정리하며, 개별 프로젝트의 적용 버전과 재현 로그는 별도로 기록한다.
 
----
+## 이슈와 버전
 
-## 1. 이슈 개요 (AVRO-3831)
+`AVRO-4183`은 Avro **1.12.1**의 생성된 `hashCode()`에서 지역 변수 `result`가 같은 이름의 필드를 가리는 문제다. 수정 버전은 **1.12.2**로 표기되어 있다. `AVRO-4201`은 중복 보고다. 기존 문서의 `AVRO-3831`, “1.11.2 발생 / 1.11.3 해결” 안내는 이 이슈의 근거와 맞지 않는다. [AVRO-4183](https://issues.apache.org/jira/browse/AVRO-4183), [AVRO-4201](https://issues.apache.org/jira/browse/AVRO-4201)
 
-* **현상**: Avro 스키마(`.avsc`) 정의 시 필드명을 `result`로 설정하고 Java 클래스를 생성하면, `hashCode()` 메서드 내에서 컴파일 에러가 발생함.
-* **발생 버전**: Apache Avro 1.11.2 및 일부 이전 버전.
-* **원인**: Avro가 자동 생성하는 `hashCode()` 메서드 내부에서 결과값을 담는 지역 변수 이름을 하드코딩된 `result`로 사용하는데, 사용자가 정의한 필드명 `result`와 이름이 겹쳐서 발생함.
+## this.result는 명확한 필드 참조다
 
----
-
-## 2. 상세 원인 분석
-
-Avro에 의해 생성된 Java 코드를 보면 다음과 같은 구조를 가집니다.
+핵심은 이름 자체가 아니라 **생성된 필드 참조에 `this.`가 빠졌는지**다. `result`는 Java 예약어가 아니다. 아래 축약 코드는 정상 컴파일된다.
 
 ```java
-// Avro가 생성한 코드 예시
-@Override 
-public int hashCode() {
-    int result = 1; // Avro 내부 지역 변수 이름이 'result'임
-    result = 31 * result + (this.result == null ? 0 : this.result.hashCode()); // 사용자의 필드명 'result'와 충돌!
-    return result;
+public final class AvroShadowing {
+    private String result;
+
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = 31 * result + (this.result == null ? 0 : this.result.hashCode());
+        return result;
+    }
 }
 ```
 
-위 코드에서 `int result = 1;` 선언과 사용자가 정의한 클래스 멤버 변수 `this.result`가 같은 메서드 스코프 내에서 모호함을 유발하거나, 자바 문법 규칙에 따라 지역 변수가 멤버 변수를 가리키는 방식을 방해하여 컴파일 오류를 일으킵니다.
+위 식의 `this.result`를 `result`로 바꾸면 지역 변수 `int result`를 참조한다. `int`를 `null`과 비교하거나 `hashCode()`를 호출하므로 컴파일 오류가 발생한다. 필드 타입과 생성 옵션에 따라 증상이 달라질 수 있으므로 실제 생성 파일을 확인한다. [Java 이름 가림 규칙](https://docs.oracle.com/javase/specs/jls/se21/html/jls-6.html#jls-6.4.1)
 
----
+## 수정과 검증
 
-## 3. 해결 방법
+1. runtime 외에 `avro-maven-plugin`, `avro-tools` 또는 Gradle 플러그인의 **생성기 버전**을 확인한다.
+2. `result` 필드가 있는 최소 스키마와 기존 생성 옵션으로 코드를 생성하고 컴파일 실패를 재현한다.
+3. 수정이 포함된 생성기로 올린 뒤 기존 생성물을 정리하고 다시 생성·컴파일한다.
+4. 직렬화 왕복, reader/writer 스키마 호환성, `equals/hashCode` 일관성을 확인한다.
 
-### 3.1 라이브러리 버전 업그레이드 (권장)
-이 이슈는 **Apache Avro 1.11.3 이상** 및 **1.12.0** 버전에서 해결되었습니다. 최신 버전에서는 내부 지역 변수 이름을 충돌 가능성이 낮은 이름(예: `res`)으로 변경하거나 구조를 개선했습니다.
+생성 파일의 수동 편집은 다음 빌드에서 사라진다. 템플릿을 패치한다면 재생성 테스트를 남긴다. 필드명 변경은 스키마 호환성에 영향을 줄 수 있으므로 단순 리팩토링으로 취급하지 않는다.
 
-### 3.2 필드명 변경
-버전 업그레이드가 어려운 경우, 스키마 정의에서 `result` 대신 다른 이름(예: `response`, `outcome`, `returnValue` 등)을 사용하는 것이 가장 간단한 우회 방법입니다.
-
-### 3.3 예약어 회피 규칙 준수
-Avro는 `result` 외에도 Java의 예약어나 내부적으로 사용하는 변수명과 충돌할 가능성이 있는 이름을 필드명으로 사용하는 것을 지양하도록 권고하고 있습니다.
-
----
-
-## 4. 요약
-Avro 1.11.2 버전까지는 `result`라는 필드명을 사용할 경우 `hashCode()` 생성 로직의 버그로 인해 컴파일 에러가 발생합니다. **버전을 1.11.3 이상으로 올리는 것**이 가장 깔끔한 해결책입니다.
+`python scripts/tests/test_java_examples.py`는 위 축약 코드의 컴파일 성공과 `this.` 제거 시 실패를 확인한다. Avro 생성기 전체를 실행하는 테스트와는 구분한다.

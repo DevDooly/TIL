@@ -1,17 +1,17 @@
 title: AI Tools & Agents
 nav:
-  - Overview: README.md
-  - OpenCode: OpenCode.md
-  - OpenClaw: OpenClaw.md
-  - Gemini CLI: Gemini_CLI.md
-  - Antigravity CLI 설정: Antigravity_CLI_Configuration.md
-  - Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
-  - AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
-  - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
-  - Qwen CLI Setup: Qwen_CLI_Setup.md
-  - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
-  - Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md
-  - n8n: n8n.md
-  - Ollama: Ollama.md
-  - Ollama Local Setup: Ollama_Local_Environment_Setup.md
-  - TurboQuant: TurboQuant.md
+- Overview: README.md
+- OpenCode: OpenCode.md
+- OpenClaw: OpenClaw.md
+- Gemini CLI: Gemini_CLI.md
+- Antigravity CLI 설정: Antigravity_CLI_Configuration.md
+- Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
+- AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
+- Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
+- Qwen CLI Setup: Qwen_CLI_Setup.md
+- 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
+- Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md
+- n8n: n8n.md
+- Ollama: Ollama.md
+- Ollama Local Setup: Ollama_Local_Environment_Setup.md
+- TurboQuant: TurboQuant.md

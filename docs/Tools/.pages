@@ -1,8 +1,8 @@
 title: Tools
 nav:
-  - Overview: README.md
-  - Build Tools: Build
-  - Git: Git
-  - Github: Github
-  - Terminal: Terminal
-  - Open Source: OpenSource
+- Overview: README.md
+- Build Tools: Build
+- Git: Git
+- Github: Github
+- Terminal: Terminal
+- Open Source: OpenSource

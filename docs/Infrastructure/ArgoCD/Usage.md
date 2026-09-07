@@ -72,6 +72,7 @@ argocd app create order-service \
 ## 2. 동기화(Sync) 정책 및 라이프사이클 제어
 
 ### 2.1 Sync Policy & Self-Healing
+
 * **Manual (수동 동기화)**:
   * Git에 변경사항이 푸시되어도 `OutOfSync` 상태만 표시되고 배포되지 않습니다. 운영자가 웹 UI나 CLI에서 승인 후 배포해야 하는 프로덕션 환경에 적합합니다.
 * **Automated (자동 동기화)**:

@@ -3,7 +3,7 @@ site_url: https://devdooly.github.io/TIL/
 repo_url: https://github.com/devdooly/til
 edit_uri: edit/main/docs/
 
-# 📌 404 방지 핵심 설정 (URL 뒤에 .html 붙임)
+# 디렉터리 URL 사용: 예) /Language/Java/문서/ → 해당 경로의 index.html
 use_directory_urls: true
 
 theme:

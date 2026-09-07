@@ -1,80 +1,86 @@
-# Kafka: Consumer의 안전한 종료 (wakeup vs close)
+# Kafka Consumer: wakeup과 close, 처리 완료 offset
 
-Java Kafka Consumer는 **스레드 세이프(Thread-safe)하지 않습니다.** 따라서 여러 스레드에서 동시에 접근하면 예기치 않은 예외가 발생합니다. 외부 스레드에서 Consumer를 안전하게 멈추고 리소스를 정리하는 올바른 방법을 정리합니다.
+기준: Kafka Java client 3.9, 2026-09-07.
 
----
+`KafkaConsumer`는 thread-safe하지 않다. 한 소유 스레드에서 subscribe·poll·commit·close를 수행하고, 외부 스레드는 종료 플래그와 `wakeup()`으로 종료를 요청하는 구조가 단순하다. [KafkaConsumer API](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
 
-## 1. wakeup() vs close() 차이점
+| API | 의미 |
+| :--- | :--- |
+| `wakeup()` | 외부 스레드에서 호출 가능. 현재 또는 다음 wakeup 가능한 작업이 `WakeupException`을 던지게 함 |
+| `close()` | 자원 정리. 동시 접근을 피해야 하며 wakeup으로 close를 중단할 수 없음 |
+| `commitSync()` | offset 저장. 애플리케이션의 처리 성공 범위를 기준으로 호출 |
 
-| 기능 | wakeup() | close() |
-| :--- | :--- | :--- |
-| **스레드 안전성** | **스레드 세이프 (Thread-safe)** | **스레드 안전하지 않음** |
-| **주요 역할** | 블로킹된 `poll()`을 즉시 중단시킴 | 오프셋 커밋 및 커넥션 종료, 리소스 해제 |
-| **결과** | `WakeupException` 발생 | Consumer 사용 불가 상태로 전환 |
-| **사용 시점** | 외부 스레드에서 종료 신호를 보낼 때 | 모든 로직이 끝난 후 리소스를 정리할 때 |
+`wakeup()`은 실행 중인 업무 처리나 SQL을 취소하지 않는다. `close()`의 자동 커밋도 `enable.auto.commit` 설정에 의존한다.
 
----
+## 동기 배치 처리 예제
 
-## 2. 왜 IllegalStateException이 발생했는가?
-
-질문하신 상황에서 `java.lang.IllegalStateException: This consumer has already been closed`가 발생한 이유는 다음과 같습니다.
-
-1. **스레드 경합**: 외부 스레드에서 `consumer.close()`를 호출했습니다.
-2. **동시 접근**: Consumer 루프를 돌고 있는 메인 스레드는 아직 `while` 문 내부에 있습니다.
-3. **종료 후 작업**: 메인 스레드가 다음 루프에서 `poll()`을 호출하려고 할 때, 이미 `close`된 객체이므로 Kafka 클라이언트가 예외를 던집니다.
-
-**핵심**: `close()`는 반드시 **Consumer 루프를 실행 중인 스레드 내에서 마지막에 한 번만 호출**되어야 합니다.
-
----
-
-## 3. Graceful Shutdown 표준 패턴 (추천)
-
-`wakeup()`을 활용하여 예외 없이 안전하게 종료하는 표준 코드 구조입니다.
+생성한 consumer에 **`enable.auto.commit=false`를 설정**하고 전달한다. handler는 레코드 처리가 완료된 뒤 반환해야 한다. 이 Runnable은 한 번만 실행한다.
 
 ```java
-public class MyConsumer implements Runnable {
-    private final KafkaConsumer<String, String> consumer;
-    private final AtomicBoolean closed = new AtomicBoolean(false);
+import java.time.Duration;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+import org.apache.kafka.clients.consumer.Consumer;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.errors.WakeupException;
 
+public final class ConsumerLoop implements Runnable {
+    private final Consumer<String, String> consumer;
+    private final List<String> topics;
+    private final java.util.function.Consumer<ConsumerRecord<String, String>> handler;
+    private final AtomicBoolean stopping = new AtomicBoolean();
+
+    public ConsumerLoop(Consumer<String, String> consumer,
+                        Collection<String> topics,
+                        java.util.function.Consumer<ConsumerRecord<String, String>> handler) {
+        this.consumer = consumer;
+        this.topics = List.copyOf(topics);
+        this.handler = handler;
+    }
+
+    @Override
     public void run() {
         try {
-            consumer.subscribe(List.of("my-topic"));
-            while (!closed.get()) {
-                // poll() 수행 중 외부에서 wakeup()이 호출되면 WakeupException이 발생함
-                ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(1000));
-                for (ConsumerRecord<String, String> record : records) {
-                    process(record);
+            consumer.subscribe(topics);
+            while (!stopping.get()) {
+                var records = consumer.poll(Duration.ofSeconds(1));
+                for (var record : records) {
+                    handler.accept(record);
+                }
+                if (!records.isEmpty()) {
+                    consumer.commitSync();
                 }
             }
         } catch (WakeupException e) {
-            // 종료 과정이므로 무시해도 됨
-            if (!closed.get()) throw e;
+            if (!stopping.get()) {
+                throw e;
+            }
         } finally {
-            // 실제 리소스 정리는 여기서 수행 (메인 스레드)
-            consumer.close();
+            consumer.close(Duration.ofSeconds(10));
         }
     }
 
-    // 외부 스레드(예: 런타임 셧다운 훅)에서 호출하는 메서드
     public void shutdown() {
-        closed.set(true);
-        // poll() 상태에 있는 Consumer를 깨워 WakeupException을 유발함
-        consumer.wakeup(); 
+        if (stopping.compareAndSet(false, true)) {
+            consumer.wakeup();
+        }
     }
 }
 ```
 
-### 동작 원리
+이 예제는 한 poll 배치를 동기 처리하고 커밋한다. 처리 실패나 커밋 중 wakeup·재균형이 발생하면 성공한 작업도 재전달될 수 있으므로, DB 갱신이나 외부 호출에 중복 처리 대책이 필요하다. 종료 신호만으로 마지막 offset 저장을 보장하지 않는다.
 
-1. 외부에서 `shutdown()`을 호출하면 `wakeup()`이 실행됩니다.
-2. 차단되어 있던 `poll()` 메서드가 즉시 `WakeupException`을 던지며 중단됩니다.
-3. `catch` 블록을 거쳐 `finally`로 이동합니다.
-4. 루프를 실행하던 스레드가 직접 `close()`를 호출하므로 **동시성 이슈 없이** 깔끔하게 종료됩니다.
+## 종료와 병렬 처리의 경계
 
----
+종료 요청 후 소유 스레드의 종료를 `join` 등으로 기다린다. 애플리케이션의 최대 처리 시간과 close 시간을 고려해 Kubernetes의 종료 유예 시간을 정한다. handler와 외부 I/O에도 timeout을 둔다.
 
-## 4. 요약
+가상 스레드 등으로 처리를 넘긴 뒤 즉시 commit하면 아직 끝나지 않은 레코드까지 커밋할 수 있다. 병렬 처리에는 다음 설계가 추가로 필요하다.
 
-* **외부 스레드**에서는 오직 **`wakeup()`**만 호출하세요.
-* **Consumer 실행 스레드**에서 `WakeupException`을 잡고 **`close()`**를 호출하세요.
-* 이렇게 하면 "이미 종료된 Consumer"라는 에러 없이 안전하게 오프셋을 커밋하고 종료할 수 있습니다.
+- 파티션별 완료 offset과 연속으로 완료된 구간 추적
+- 동일 파티션 처리 순서와 실패 시 재처리
+- 제한된 in-flight 작업 수와 pause/resume
+- revoke·종료 시 대기 중 작업 정리와 커밋 범위
+- `max.poll.interval.ms`와 실제 처리 시간의 관계
+
+이 항목은 위 동기 예제에 구현되어 있지 않다. [Consumer와 스레딩 모델](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)

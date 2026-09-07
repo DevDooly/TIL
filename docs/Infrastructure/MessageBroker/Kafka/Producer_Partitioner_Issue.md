@@ -1,45 +1,26 @@
-# Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)
+# Kafka Producer: RoundRobinPartitioner 불균형과 수정 버전
 
-Kafka Producer에서 메시지 분배를 위해 `RoundRobinPartitioner`를 설정했을 때, 기대와 달리 특정 파티션으로 메시지가 쏠리는 불균형(Uneven Distribution) 현상이 발생할 수 있습니다. 이는 특히 Kafka 2.4~3.3 버전 사이에서 두드러진 이슈입니다.
+공식 이슈 확인: 2026-09-07. 버전은 애플리케이션의 `kafka-clients` 기준이다.
 
----
+## 원인과 패치
 
-## 1. 이슈 개요 (KAFKA-9965)
+라운드 로빈 파티셔너는 호출할 때마다 카운터를 이동한다. 구형 producer 경로에서는 새 배치를 만들 때 한 레코드에 대해 `partition()`이 두 번 호출될 수 있었다. 실제 전송에 사용하지 않은 파티션까지 카운터가 진행해 일부 파티션을 건너뛸 수 있다.
 
-* **현상**: `partitioner.class`를 `RoundRobinPartitioner`로 설정했음에도 불구하고, 파티션 간 메시지 인입량이 균등하지 않고 불균형하게 분배됨.
-* **원인**: Kafka 2.4에 도입된 **KIP-480 (Sticky Partitioning)**과의 상호작용 버그.
-* **상태**: 해결됨 (KAFKA-17632로 통합 관리되어 패치됨).
+`KAFKA-17632`은 영향 버전에 **3.8.0**, 수정 버전에 **3.9.2 / 4.0.0**을 명시한다. 기존 문서의 “3.3.0 이상이면 해결”은 잘못된 안내다. 이 목록만으로 다른 모든 버전의 안전 여부를 단정하지 않는다. [KAFKA-17632](https://issues.apache.org/jira/browse/KAFKA-17632), [수정 PR #17620](https://github.com/apache/kafka/pull/17620)
 
----
+이전 보고 [KAFKA-9965](https://issues.apache.org/jira/browse/KAFKA-9965)도 참고하되, 적용 판단은 사용하는 client 버전과 패치 코드로 한다.
 
-## 2. 상세 원인 분석
+## 재현 시 고정할 조건
 
-### 2.1 Sticky Partitioning과의 충돌
-Kafka 2.4부터 Producer의 효율성을 높이기 위해 **Sticky Partitioning**이 도입되었습니다. 이는 메시지를 보낼 때 매번 파티션을 바꾸는 대신, 하나의 배치(Batch)가 찰 때까지 한 파티션에 머무르는 전략입니다.
+- client/JDK 버전, `partitioner.class`, 키 유무와 producer 수
+- 파티션 수, 레코드 수·직렬화 크기, `batch.size`와 `linger.ms`
+- send callback의 `RecordMetadata.partition()`별 성공 건수
+- 오류·재시도와 측정 구간, 브로커 상태
 
-### 2.2 중복 호출 문제
-`RoundRobinPartitioner`의 `partition()` 메서드가 내부적으로 메시지 배치 생성 시점에 **여러 번 호출**되는 경우가 발생했습니다.
+짝수 개 파티션에 동일 크기의 null-key 레코드를 보내 업그레이드 전후의 성공 레코드 분포를 비교한다. 단순 카운터로 만든 커스텀 파티셔너도 이중 호출에 영향받을 수 있다.
 
-1. 메시지를 보낼 파티션을 결정하기 위해 `partition()` 호출.
-2. 이때 새로운 배치가 필요하다고 판단되면, 내부 로직에 의해 `partition()`이 다시 호출됨.
-3. `RoundRobinPartitioner`는 호출될 때마다 내부 카운터를 증가시키는데, 한 레코드에 대해 카운터가 두 번 증가하면서 논리적인 순서가 꼬이게 됨.
+## 정책 선택과 운영 검증
 
----
+키 기반 순서가 필요하면 키의 분포와 파티션 수 변경 영향을 먼저 검토한다. 배치 효율을 원한다면 `partitioner.class`를 생략한 기본 전략을 기준으로 측정한다. RoundRobin의 레코드 개수 균등함이 바이트 수·처리 시간·consumer lag의 균등함을 뜻하지는 않는다.
 
-## 3. 해결 방법 및 권장 사항
-
-### 3.1 DefaultPartitioner 사용 (권장)
-Kafka 2.4 이후 버전이라면 `RoundRobinPartitioner`를 명시적으로 설정하기보다, **`DefaultPartitioner`**를 그대로 사용하는 것이 가장 좋습니다.
-
-* `DefaultPartitioner`는 키(Key)가 없을 때 자동으로 Sticky 전략을 사용하며, 전체적으로는 파티션 간 균등한 분배를 보장하면서도 처리량(Throughput)은 훨씬 높습니다.
-
-### 3.2 클라이언트 버전 업그레이드
-만약 반드시 `RoundRobinPartitioner`를 사용해야 한다면, 해당 버그가 수정된 **Kafka 3.3.0 이상** 버전의 클라이언트를 사용하는 것이 안전합니다.
-
-### 3.3 커스텀 Partitioner 구현
-특수하게 엄격한 라운드 로빈이 필요하다면, `Partitioner` 인터페이스를 직접 구현하여 배치 생성 시점의 중복 호출에 영향을 받지 않도록 카운팅 로직을 정교하게 설계해야 합니다.
-
----
-
-## 4. 요약
-`RoundRobinPartitioner`는 이름과 달리 현대적인 Kafka Producer 환경(배치 처리 및 Sticky 전략)에서 성능과 균등 분배 두 마리 토끼를 모두 놓칠 위험이 있습니다. 성능이 중요하다면 **Default 전략**을, 이슈 방지가 중요하다면 **최신 버전 업그레이드**를 선택하세요.
+업그레이드 후에도 hot key, 느린 브로커, consumer 처리 비용 차이로 쏠림이 남을 수 있다. [설정 예제](Producer_Partitioner_Policy.md), [정책 변화와 측정 기준](Partitioner_Evolution_and_Imbalance.md), [내부 호출 흐름](AbortOnNewBatch_Issue.md)

@@ -23,12 +23,12 @@ CATEGORY_ORDER = [
 
 def get_git_log(limit=100):
     cmd = [
-        "git", "log", "-n", str(limit),
+        "git", "-c", "core.quotepath=false", "log", "-n", str(limit),
         "--name-only",
         "--pretty=format:COMMIT_START|%ad|%s",
         "--date=format:%Y-%m-%d %H:%M"
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8')
+    result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', check=True)
     return result.stdout.splitlines()
 
 def parse_log(lines, max_items=50):
@@ -115,12 +115,15 @@ def update_file_section(filepath, marker_name, new_content):
         pattern = f"({start_marker})(.*?)({end_marker})"
         
         if re.search(pattern, content, re.DOTALL):
-            updated_content = re.sub(pattern, f"\\1{new_content}\\3", content, flags=re.DOTALL)
+            updated_content = re.sub(pattern, lambda m: m.group(1) + new_content + m.group(3), content, flags=re.DOTALL)
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(updated_content)
             print(f"Successfully updated section {marker_name} in {filepath}")
+        else:
+            raise ValueError(f'Missing {marker_name} markers in {filepath}')
     except Exception as e:
         print(f"Error updating {filepath}: {e}")
+        raise
 
 def get_markdown_title(filepath):
     try:
@@ -134,7 +137,7 @@ def get_markdown_title(filepath):
 
 def generate_toc_content():
     content = ""
-    content += "### 📂 Categories\n"
+    content += "### 📂 Categories\n\n"
     for cat in CATEGORY_ORDER:
         content += f"- [**{cat}**](#{cat.lower()})\n"
     content += "\n---\n\n"
@@ -144,7 +147,7 @@ def generate_toc_content():
         dir_path = os.path.join(DOCS_DIR, category)
         if os.path.exists(dir_path) and os.path.isdir(dir_path):
             existing_dirs.add(category)
-            content += f"## {category}\n"
+            content += f"## {category}\n\n"
             if category == "Troubleshooting":
                 content += build_troubleshooting_tree(dir_path)
             else:
@@ -156,7 +159,7 @@ def generate_toc_content():
             continue
         dir_path = os.path.join(DOCS_DIR, item)
         if os.path.isdir(dir_path):
-            content += f"## {item}\n"
+            content += f"## {item}\n\n"
             content += build_directory_tree(dir_path, level=0)
             content += "\n"
     return content

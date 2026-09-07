@@ -10,7 +10,9 @@
 
 ---
 
-## 🛠 Tech Stack Overview
+## 🛠 다루는 기술 주제
+
+실무 기록과 학습 주제를 포함한다. 실제 업무 범위는 [공개 경력 요약](docs/Resume.md)에 구분한다.
 
 ### Core Backend & Concurrency
 ![Java](https://img.shields.io/badge/Java_21+-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
@@ -40,27 +42,44 @@
 
 * 📄 **[온라인 이력서 (Resume)](docs/Resume.md)**: 경력 요약, 프로젝트 수행 이력 및 핵심 역량 맵
 * 🛠️ **[실전 트러블슈팅 아카이브 (Troubleshooting)](docs/Troubleshooting/README.md)**: 
-  * Java 21 가상 스레드(Virtual Threads) Pinning 이슈 해결 (FTP, JDBI, Kafka)
+  * JDK 버전별 Virtual Thread pinning 진단 (FTP, JDBI, Kafka)
   * Apache Kafka Partitioner 쏠림 버그 및 셧다운 훅 안정화
   * Java-Python 간 Apache Arrow mmap 기반 Zero-Copy 데이터 공유
-  * MinIO 버저닝 삭제 지연 및 스토리지 누수 해결
+  * MinIO 버전 보존과 객체 삭제 방식
+* 📝 **[LLM을 활용한 레거시 코드 개선과 검증](docs/LLM_Development/Legacy_Code_Improvement.md)**: 알고리즘·시간 처리·스타일 개선 기록
 * 🧠 **[AI 개발 환경 & 에이전트 오케스트레이션](docs/AI/README.md)**:
   * Antigravity CLI(agy) 스킬 확장 및 자동화
   * Multi-Agent Orchestrator(Orca, Paseo) 아키텍처 비교
 
 ---
 
+## 문서 검증과 반영
+
+Python의 `requirements.txt` 의존성, JDK 21 이상, Git과 Bash가 필요합니다. Windows에서는 Git Bash를 사용합니다.
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/validate_markdown_lists.py
+python scripts/validate_pages.py
+python -m unittest discover -s scripts/tests -p 'test_*.py'
+python -m mkdocs build --strict
+```
+
+Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리, Avro 이름 가림, 실행기 포화 동작을 확인합니다. Kafka·DB·etcd·MinIO의 실제 운영 환경 검증을 대신하지는 않습니다.
+
+내용을 검토한 뒤 `bash scripts/publish.sh "docs: 변경 내용"`으로 커밋·목차 생성·검증·amend·push를 순서대로 실행합니다. 기본 Python 명령은 `python3`이며, 다른 실행기를 쓰려면 `PYTHON` 환경 변수에 실행 파일 경로를 지정합니다. 검증 실패 시 로컬 커밋을 유지하고 원격 반영을 중단합니다.
+
 ## 🕒 최근 변경 사항 (Recent Changes)
 
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-08-24 19:58 | [Redis](docs/Data/Database/Redis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [libuv](docs/Language/NodeJs/libuv.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Asyncio Streams](docs/Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Decorator](docs/Language/Python/Decorator.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [SocketServer](docs/Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Resume](docs/Resume.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-09-07 22:10 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Antigravity CLI Skills Guide](docs/AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [OpenCode](docs/AI/OpenCode.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -72,6 +91,7 @@
 
 <!-- TOC_START -->
 ### 📂 Categories
+
 - [**Language**](#language)
 - [**Infrastructure**](#infrastructure)
 - [**Data**](#data)
@@ -86,6 +106,7 @@
 ---
 
 ## Language
+
 * [**Overview**](docs/Language/README.md)
 * **Java**
   * [**Overview**](docs/Language/Java/README.md)
@@ -95,7 +116,7 @@
   * [Caffeine Cache: 고성능 Java 로컬 캐시 가이드](docs/Language/Java/Caffeine_Cache.md)
   * [Java/Spring Boot: 현재 스레드가 가상 스레드인지 확인하는 방법](docs/Language/Java/Check_Virtual_Thread.md)
   * [Java: Collections.emptyList() vs List.of() 비교](docs/Language/Java/Collections.emptyList_vs_List.of.md)
-  * [Java: Concatenated GZIP 스트림 압축 해제 (Unzip)](docs/Language/Java/Concatenated_Gzip_Decompression.md)
+  * [Java: 연결된 GZIP 멤버 압축 해제](docs/Language/Java/Concatenated_Gzip_Decompression.md)
   * [Java Effectively Final](docs/Language/Java/Effectively_Final.md)
   * [Java Garbage Collection (GC)](docs/Language/Java/Garbage_Collection.md)
   * [Google Java Style Guide](docs/Language/Java/Google_Java_Style_Guide.md)
@@ -105,8 +126,8 @@
   * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](docs/Language/Java/Scoped_Value.md)
   * [Java/Spring Boot와 Python 연동 가이드](docs/Language/Java/Spring_Python_Integration.md)
   * [Java ThreadPoolExecutor와 거부 정책(Rejection Policy)](docs/Language/Java/ThreadPoolExecutor.md)
-  * [Java Virtual Threads: FTP/SFTP 사용 시 Pinning 이슈](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
-  * [K8s 환경에서의 Java Virtual Thread 사용 분석](docs/Language/Java/Virtual_Threads_in_K8s.md)
+  * [Virtual Thread: FTP 처리의 Pinning 진단](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
+  * [Kubernetes에서 Virtual Thread 운영 시 확인할 것](docs/Language/Java/Virtual_Threads_in_K8s.md)
   * **Functional**
     * [**Overview**](docs/Language/Java/Functional/README.md)
     * [Functional Interfaces (함수형 인터페이스)](docs/Language/Java/Functional/Functional_Interfaces.md)
@@ -121,7 +142,7 @@
     * [Dependency Injection (DI) & Inversion of Control (IoC)](docs/Language/Java/SpringBoot/DI_IoC.md)
     * [Spring Boot: @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교](docs/Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md)
     * [Netty 환경에서 Blocking 코드/라이브러리를 찾는 방법](docs/Language/Java/SpringBoot/Finding_Blocking_Operations.md)
-    * [JDBI & 가상 스레드: Pinning 이슈 해결을 위한 하이브리드 모델](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+    * [JDBI와 Virtual Thread: 진단 후 제한된 실행기로 격리하기](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
     * [Logback: LoggingEventCompositeJsonEncoder와 springProperty 활용 가이드](docs/Language/Java/SpringBoot/Logback_JSON_Composite_Encoder.md)
     * [Spring Boot: 로깅 설정 YAML에서 XML로의 전환 (SDK 충돌 해결)](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
     * [Spring Boot: SLF4J addKeyValue를 ECS 로그에 포함하기 (대안 가이드)](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
@@ -140,7 +161,7 @@
     * [Spring Boot 3.4: 정형 로깅(Structured Logging) 및 ECS 연동](docs/Language/Java/SpringBoot/Structured_Logging_SpringBoot_3_4.md)
     * [ThreadPoolTaskScheduler: Spring 작업 예약 및 스레드 풀 관리](docs/Language/Java/SpringBoot/ThreadPoolTaskScheduler.md)
     * [Spring Boot: Tomcat vs Netty 비교 가이드](docs/Language/Java/SpringBoot/Tomcat_vs_Netty.md)
-    * [Java Virtual Thread: Kafka Consumer Pinning 이슈 분석](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+    * [Kafka Consumer와 Virtual Thread: Pinning 진단 범위](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
     * **JPA**
       * [**Overview**](docs/Language/Java/SpringBoot/JPA/README.md)
       * [JPA Persistence Context (영속성 컨텍스트)](docs/Language/Java/SpringBoot/JPA/Persistence_Context.md)
@@ -157,7 +178,7 @@
     * [Java 11: The Cloud Native LTS Standard](docs/Language/Java/Versions/Java11.md)
     * [Java 17: Modernization and Productivity](docs/Language/Java/Versions/Java17.md)
     * [Java 21: Next-Gen Concurrency and Performance](docs/Language/Java/Versions/Java21.md)
-    * [Java 25: Enhanced Stability and Modern Productivity](docs/Language/Java/Versions/Java25.md)
+    * [Java 25: 정식 기능과 Preview 구분](docs/Language/Java/Versions/Java25.md)
     * [Java 8: Modern Java의 시작](docs/Language/Java/Versions/Java8.md)
 * **NodeJs**
   * [**Overview**](docs/Language/NodeJs/README.md)
@@ -196,6 +217,7 @@
     * [BlockingConnection](docs/Language/Python/pika/BlockingConnection.md)
 
 ## Infrastructure
+
 * [**Overview**](docs/Infrastructure/README.md)
 * **ArgoCD**
   * [**Overview**](docs/Infrastructure/ArgoCD/README.md)
@@ -227,7 +249,7 @@
     * [**Overview**](docs/Infrastructure/Kubernetes/CKA/README.md)
     * [0. CKA 시험 개요 및 팁 (Exam Overview & Tips)](docs/Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md)
     * [1. 클러스터 아키텍처 및 컴포넌트](docs/Infrastructure/Kubernetes/CKA/Cluster_Architecture.md)
-    * [1.2 ETCD 백업(Backup) 및 복원(Restore)](docs/Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
+    * [etcd 백업과 복원: etcdctl과 etcdutl 구분](docs/Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
     * [1.1 Kubeadm 클러스터 설치 및 업그레이드](docs/Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md)
     * [1.3 RBAC (Role-Based Access Control)](docs/Infrastructure/Kubernetes/CKA/RBAC_Authorization.md)
     * [2.3 리소스 제한 (Requests & Limits)](docs/Infrastructure/Kubernetes/CKA/Resource_Limits.md)
@@ -250,15 +272,15 @@
   * [RabbitMQ vs Kafka](docs/Infrastructure/MessageBroker/RabbitMQ 그리고 Kafka.md)
   * **Kafka**
     * [**Overview**](docs/Infrastructure/MessageBroker/Kafka/README.md)
-    * [Kafka: abortOnNewBatch 매커니즘과 파티션 쏠림 이슈](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+    * [Kafka: abortOnNewBatch와 파티셔너 중복 호출](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
     * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
-    * [Kafka: Consumer의 안전한 종료 (wakeup vs close)](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
-    * [Kafka 메시지 최대 사이즈 확장 가이드 (Broker 재기동 없이)](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
+    * [Kafka Consumer: wakeup과 close, 처리 완료 offset](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+    * [Kafka 메시지 크기 제한: Producer·Topic·Consumer 구분](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
     * [Kafka Broker 롤링 재시작 가이드 (3대 HA 구성)](docs/Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md)
     * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](docs/Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
-    * [Kafka 파티셔너의 진화와 불균형(Imbalance) 문제 해결](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
-    * [Kafka Producer: RoundRobinPartitioner 이슈 (KAFKA-9965)](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
-    * [Kafka Producer: 파티셔너(Partitioner) 정책 및 설정](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
+    * [Kafka Producer: 파티셔닝 변화와 불균형 진단](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+    * [Kafka Producer: RoundRobinPartitioner 불균형과 수정 버전](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+    * [Kafka Producer: 파티셔너 정책과 설정](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md)
     * [Spring Kafka: 테스트 코드에서 단일 메시지 소비](docs/Infrastructure/MessageBroker/Kafka/Spring_Kafka_Test.md)
 * **MinIO**
   * [**Overview**](docs/Infrastructure/MinIO/README.md)
@@ -271,13 +293,14 @@
   * [HAProxy를 통한 Oracle DB 접속 지연 진단 가이드](docs/Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md)
 
 ## Data
+
 * [**Overview**](docs/Data/README.md)
 * [ELK Stack](docs/Data/ELK.md)
 * [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](docs/Data/Log_Collectors_Comparison.md)
 * **Database**
   * [**Overview**](docs/Data/Database/README.md)
   * [이미지 저장 및 관리 전략](docs/Data/Database/Image_Storage_Management.md)
-  * [JDBI: @FetchSize 옵션과 가상 스레드(Virtual Thread) 최적화](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
+  * [JDBI FetchSize: 드라이버 힌트와 결과 보관량 구분](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
   * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
   * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
@@ -286,6 +309,7 @@
   * [Fluentd](docs/Data/Database/fluentd.md)
 
 ## AI
+
 * [**Overview**](docs/AI/README.md)
 * [Antigravity CLI (agy) vs OpenCode (with Gemini) 비교 가이드](docs/AI/AGY_vs_OpenCode_Comparison.md)
 * [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
@@ -303,11 +327,14 @@
 * [n8n (Nodemation)](docs/AI/n8n.md)
 
 ## LLM_Development
+
 * [**Overview**](docs/LLM_Development/README.md)
 * [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](docs/LLM_Development/Backend_Development_Checklist.md)
+* [LLM을 활용한 레거시 코드 개선과 검증 기록](docs/LLM_Development/Legacy_Code_Improvement.md)
 * [Web Development with LLM (웹 개발 시 LLM 활용 가이드)](docs/LLM_Development/Web_Development_Checklist.md)
 
 ## ComputerScience
+
 * [**Overview**](docs/ComputerScience/README.md)
 * **Architecture**
   * [**Overview**](docs/ComputerScience/Architecture/README.md)
@@ -341,6 +368,7 @@
   * [소프트웨어 버저닝 (Software Versioning)](docs/ComputerScience/SoftwareEngineering/Versioning.md)
 
 ## Web
+
 * [**Overview**](docs/Web/README.md)
 * **Concepts**
   * [Ajax 그리고 CSR, SSR](docs/Web/Concepts/Ajax 그리고 CSR, SSR.md)
@@ -351,6 +379,7 @@
   * [Vuejs](docs/Web/Framework/Vuejs.md)
 
 ## Tools
+
 * [**Overview**](docs/Tools/README.md)
 * **Build**
   * [Java 코드 포맷터 비교: google-java-format vs palantir-java-format](docs/Tools/Build/Java_Code_Formatters_Comparison.md)
@@ -374,25 +403,32 @@
   * [Tmux (Terminal Multiplexer)](docs/Tools/Terminal/Tmux.md)
 
 ## Troubleshooting
+
 * [**Overview**](docs/Troubleshooting/README.md)
-  * [**FTP/SFTP 가상 스레드 Pinning 이슈**](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
-  * [**K8s 환경 Virtual Threads 분석 & 스로틀링**](docs/Language/Java/Virtual_Threads_in_K8s.md)
-  * [**Kafka Consumer 가상 스레드 Pinning**](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
-  * [**JDBI 가상 스레드 Pinning 해결 패턴**](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
-  * [**K8s 환경 Spring 프로파일 우선순위 충돌**](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
-  * [**로깅 설정 YAML to XML 전환 충돌**](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
-  * [**SLF4J addKeyValue ECS 로그 누락 해결**](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
-  * [**Kafka RoundRobinPartitioner 불균형 (KAFKA-9965)**](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
-  * [**Kafka Sticky Partitioner 배치 쏠림 이슈**](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
-  * [**Kafka 커스텀 파티셔너 abortOnNewBatch 쏠림**](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
-  * [**Kafka Consumer 안전 종료 (Safe Shutdown)**](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
-  * [**Hadoop/Tez 네트워크 RX 에러 작업 지연**](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
-  * [**대용량 파일 전송 후 용량 불일치 디버깅**](docs/Infrastructure/Linux/Large_File_Transfer.md)
-  * [**MinIO 버저닝 삭제 지연 & 스토리지 누수**](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
-  * [**Oracle LOB Segment 공간 부족 (ORA-01692)**](docs/Data/Database/Oracle_LOB_Segment.md)
-  * [**Apache Avro 'result' 필드명 hashCode 충돌**](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+  * [FTP 처리와 Virtual Thread](docs/Language/Java/Virtual_Threads_FTP_Pinning.md)
+  * [Kubernetes의 Virtual Thread](docs/Language/Java/Virtual_Threads_in_K8s.md)
+  * [Kafka Consumer pinning](docs/Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md)
+  * [JDBI 실행기 격리](docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)
+  * [JDBI FetchSize](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
+  * [연결된 GZIP 해제](docs/Language/Java/Concatenated_Gzip_Decompression.md)
+  * [K8s Spring 프로파일](docs/Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md)
+  * [로깅 YAML/XML 전환](docs/Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md)
+  * [SLF4J key-value와 ECS](docs/Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md)
+  * [RoundRobin 불균형](docs/Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md)
+  * [파티셔너 변화](docs/Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md)
+  * [abortOnNewBatch](docs/Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
+  * [Consumer 종료](docs/Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+  * [메시지 크기 설정](docs/Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
+  * [Hadoop/Tez RX 오류](docs/Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
+  * [대용량 파일 전송](docs/Infrastructure/Linux/Large_File_Transfer.md)
+  * [MinIO 버전별 삭제](docs/Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
+  * [etcd 백업과 복원](docs/Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
+  * [Oracle LOB 공간](docs/Data/Database/Oracle_LOB_Segment.md)
+  * [Avro result 충돌](docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+  * [LLM을 활용한 레거시 개선](docs/LLM_Development/Legacy_Code_Improvement.md)
 
 ## Templates
+
 * [**Overview**](docs/Templates/README.md)
 * [[양식] 기술 이슈 분석 및 리포트](docs/Templates/Issue_Report_Template.md)
 * [[양식] 신규 개발 정의 문서](docs/Templates/New_Development_Definition_Template.md)

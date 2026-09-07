@@ -4,53 +4,53 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-08-24 19:58 | [Data/Database/Redis.md](Data/Database/Redis.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Language/NodeJs/libuv.md](Language/NodeJs/libuv.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
+| 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/OpenCode.md](AI/OpenCode.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/NodeJs/libuv.md](Language/NodeJs/libuv.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Language/Python/Decorator.md](Language/Python/Decorator.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Resume.md](Resume.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
+| 2026-09-07 22:10 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-08-24 19:58 | [Language/Python/Asyncio_Streams.md](Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Language/Python/Decorator.md](Language/Python/Decorator.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 | 2026-08-24 19:58 | [Language/Python/SocketServer.md](Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Resume.md](Resume.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-21 14:04 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: Antigravity CLI(agy)와 OpenCode(+Gemini) 비교 가이드 추가 |
-| 2026-08-21 13:54 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Antigravity CLI(agy) 스킬 설치, 디렉토리 구조 및 설정 방법 상세 보강 |
-| 2026-08-21 13:43 | [AI/OpenCode.md](AI/OpenCode.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
-| 2026-08-21 13:43 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: Paseo 및 OpenCode의 Google Gemini 모델 연동 가이드 추가 |
-| 2026-08-21 13:26 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 스마트폰 SSH+tmux 환경과 Paseo 비교 분석 및 하이브리드 워크플로우 보강 |
 | 2026-08-20 10:01 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
-| 2026-08-20 10:01 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
-| 2026-08-20 10:01 | [Infrastructure/Jenkins/Examples.md](Infrastructure/Jenkins/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
-| 2026-08-20 10:01 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |
-| 2026-08-19 16:43 | [Infrastructure/MinIO/MinIO_Client_mc.md](Infrastructure/MinIO/MinIO_Client_mc.md) | docs: MinIO Client(mc) 대용량 객체 용량/개수 고속 확인 팁 추가 |
-| 2026-08-19 16:19 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
-| 2026-08-19 16:19 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: MinIO 버저닝 및 수명주기(Lifecycle) 관리 정책 상세 내용 추가 |
-| 2026-08-11 07:47 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: NATS 메시징 시스템 상세 가이드 추가 |
-| 2026-08-10 19:02 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: Qwen CLI API Key 재등록 및 설정 가이드 추가 |
-| 2026-08-10 14:56 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: Antigravity CLI 자동 승인(Auto-Approve) 설정 가이드 추가 |
-| 2026-08-10 14:40 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Claude CLI 다중 모델 전환 및 관리 가이드 추가 |
-| 2026-08-10 12:53 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: Docker 이미지 dev 환경 버전 관리(Versioning) 전략 문서 추가 |
-| 2026-07-26 16:16 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
-| 2026-07-26 16:16 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: LLM 개발 가이드를 최상위 카테고리로 승격 및 세부 체크리스트 추가 |
-| 2026-07-22 17:42 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: Spring Boot @EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교 가이드 추가 |
-| 2026-07-20 17:06 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 신규 개발 정의 문서 템플릿 추가 |
-| 2026-07-13 16:44 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | fix: 이전 작업들의 README 및 .pages 파일 업데이트 누락 수정 및 모든 변경 사항 반영 |
-| 2026-07-06 12:55 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: HAProxy 로그 rsyslog 설정 가이드 추가 |
-| 2026-07-01 10:15 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: Java Collections.emptyList() vs List.of() 비교 가이드 추가 |
-| 2026-06-30 13:45 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | fix: Java Concatenated GZIP 검사 메서드 매직 넘버 비교 버그 수정 |
-| 2026-06-24 14:47 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: Kafka Broker 롤링 재시작 가이드 추가 |
-| 2026-06-24 14:05 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: Kafka 메시지 최대 사이즈 확장 가이드 추가 |
-| 2026-06-12 09:36 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: Java Effectively Final 개념 정리 추가 |
-| 2026-06-01 08:44 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: Spotless 코드 포맷팅 가이드 추가 |
-| 2026-05-29 15:18 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드 추가 |
-| 2026-05-28 09:25 | [Tools/Build/Maven_Classifier_and_Hive_JDBC.md](Tools/Build/Maven_Classifier_and_Hive_JDBC.md) | docs: Maven Classifier 및 Hive-JDBC standalone 활용 가이드 추가 |
-| 2026-05-28 09:07 | [Tools/Build/Maven_Shade_Plugin.md](Tools/Build/Maven_Shade_Plugin.md) | docs: Maven Shade Plugin 주요 기능 및 설정 가이드 추가 |
-| 2026-05-27 09:15 | [Language/Java/Optimizing_Java_Python_Execution.md](Language/Java/Optimizing_Java_Python_Execution.md) | docs: Apache Arrow와 FastAPI 결합 하이브리드 성능 최적화 전략 추가 |
-| 2026-05-22 10:14 | [Language/Java/Apache_Arrow_with_mmap.md](Language/Java/Apache_Arrow_with_mmap.md) | docs: Apache Arrow와 mmap을 이용한 고성능 데이터 공유 가이드 추가 |
-| 2026-05-21 17:07 | [Language/Java/Apache_Arrow_Memory_Mapped_File.md](Language/Java/Apache_Arrow_Memory_Mapped_File.md) | docs: Apache Arrow 메모리 사용량 측정 및 리밋 최적화 가이드 추가 |
-| 2026-05-14 17:15 | [Language/Java/Java_Python_Shared_Memory_Arrow.md](Language/Java/Java_Python_Shared_Memory_Arrow.md) | docs: Java에서 Python 호출 로직 및 아규먼트 전달 예시 추가 (Arrow/mmap) |
-| 2026-05-14 12:43 | [Language/Python/Offline_Installation_Guide.md](Language/Python/Offline_Installation_Guide.md) | docs: OpenSSL 1.1.1w 경로(/opt/openssl-1.1.1) 반영 및 가이드 업데이트 |
-| 2026-05-14 10:34 | [Language/Python/Offline_Venv_Pip_Guide.md](Language/Python/Offline_Venv_Pip_Guide.md) | docs: CentOS 7 호환 manylinux2014 태그 가이드 추가 |
-| 2026-05-14 08:36 | [Language/Python/venv_vs_Conda.md](Language/Python/venv_vs_Conda.md) | docs: venv vs Conda 비교 가이드 추가 및 메뉴 업데이트 |
-| 2026-05-13 15:30 | [Language/Python/Gunicorn_vs_Uvicorn.md](Language/Python/Gunicorn_vs_Uvicorn.md) | docs: Gunicorn vs Uvicorn 상세 가이드 추가 및 메뉴 업데이트 |
-| 2026-05-13 15:17 | [Language/Python/FastAPI_Concurrency_Mechanism.md](Language/Python/FastAPI_Concurrency_Mechanism.md) | docs: FastAPI 동시성 처리 메커니즘 상세 설명 추가 |
-| 2026-05-13 14:33 | [Language/Python/Basic_Execution_Guide.md](Language/Python/Basic_Execution_Guide.md) | docs: Python 기본 실행 가이드(python3 main.py) 추가 |
-| 2026-05-13 14:28 | [Language/Python/Conda_Anaconda_Miniconda.md](Language/Python/Conda_Anaconda_Miniconda.md) | docs: Anaconda vs Miniconda 비교 및 사용 가이드 추가 |

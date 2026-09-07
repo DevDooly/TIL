@@ -1,57 +1,44 @@
-# JDBI: @FetchSize 옵션과 가상 스레드(Virtual Thread) 최적화
+# JDBI FetchSize: 드라이버 힌트와 결과 보관량 구분
 
-JDBI 사용 시 `@FetchSize` 어노테이션을 통해 데이터 로딩 성능을 튜닝할 수 있습니다. 특히 Java 21의 가상 스레드 환경에서 이 옵션이 왜 중요한지 정리합니다.
+기준: JDBC / JDBI 3 API, 2026-09-07.
 
----
+`setFetchSize`와 JDBI의 `@FetchSize`는 결과를 가져오는 행 수에 대한 **드라이버 힌트**다. 모든 JDBC 드라이버의 기본값이 10이거나, 설정값대로 정확히 네트워크 왕복이 나뉜다고 일반화할 수 없다. [JDBC Statement API](https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Statement.html#setFetchSize(int)), [JDBI Query API](https://jdbi.org/releases/3.54.0/apidocs/org/jdbi/v3/core/statement/Query.html)
 
-## 1. @FetchSize란?
+## Fetch와 보관은 다른 단계다
 
-* **정의**: 데이터베이스에서 결과를 가져올 때, 한 번의 네트워크 왕복(Round-trip)으로 가져올 **행(Row)의 개수**를 지정하는 설정입니다.
-* **작동 원리**: 기본적으로 JDBC 드라이버는 매우 작은 단위(보통 10개)로 데이터를 가져옵니다. 1만 건의 데이터를 조회할 때 `FetchSize`가 10이라면 1,000번의 네트워크 요청이 발생하지만, 1,000으로 설정하면 10번의 요청으로 끝납니다.
+`@FetchSize(1000)`을 붙여도 반환형이 `List<User>`이면 최종적으로 모든 결과를 메모리에 보관한다. 메모리 부담을 줄이려면 다음 두 조건을 함께 확인한다.
 
----
+1. driver가 서버 cursor/부분 fetch를 실제 사용한다.
+2. 애플리케이션도 stream/iterator를 소비하면서 처리하고 전체 결과를 다시 모으지 않는다.
 
-## 2. 가상 스레드(Virtual Thread)와의 관계 및 이점
+예를 들어 pgJDBC의 cursor 기반 fetch는 auto-commit 해제, forward-only 결과, 양수 fetch size 등의 조건이 있다. Java `Stream`만 사용한다고 네트워크 스트리밍이 보장되지는 않는다. [pgJDBC 결과 처리 문서](https://jdbc.postgresql.org/documentation/query/)
 
-가상 스레드 환경에서 `@FetchSize(1000)`과 같은 설정은 단순한 속도 향상 이상의 의미를 갖습니다.
+## JDBI에서 자원 수명을 맞추기
 
-### 2.1 I/O 효율성 및 Unmounting 극대화
-
-* 가상 스레드는 I/O 작업 시 캐리어 스레드를 양보(Unmount)합니다.
-* `FetchSize`가 너무 작으면 빈번한 네트워크 I/O 발생으로 인해 가상 스레드의 컨텍스트 스위칭(Mount/Unmount) 오버헤드가 증가할 수 있습니다. 
-* 적절한 `FetchSize`는 **I/O 대기 시간을 집약**시켜 가상 스레드가 더 효율적으로 CPU 자원을 반납하고 재점유할 수 있게 돕습니다.
-
-### 2.2 메모리 점유 및 스택 관리
-
-* 가상 스레드는 수만 개가 동시에 실행될 수 있습니다. 
-* 만약 모든 가상 스레드가 `FetchSize`를 너무 크게(예: 10만) 설정하면, JVM 힙 메모리에 데이터가 급격히 쌓여 `OutOfMemoryError`가 발생할 수 있습니다.
-* 따라서 가상 스레드 환경에서는 **"속도(네트워크 횟수 감소)"와 "메모리(동시 실행 수 고려)" 사이의 균형**을 맞춘 적절한 `FetchSize`(예: 500~1000) 설정이 필수적입니다.
-
----
-
-## 3. 유사한 튜닝 옵션들
-
-JDBI 및 JDBC에서 함께 고려할 수 있는 옵션들입니다.
-
-* **`@MaxRows(n)`**: 결과 셋의 전체 최대 행 수를 제한합니다. (메모리 보호 용도)
-* **`@QueryTimeout(n)`**: 쿼리 실행 시간이 너무 길어질 경우 차단합니다. 가상 스레드가 특정 쿼리에 영원히 묶여 있는 것을 방지합니다.
-* **`Stream<T>` 반환**: JDBI에서 `ResultIterable.stream()`을 사용하면 전체 데이터를 메모리에 올리지 않고 `FetchSize` 단위로 읽으며 처리할 수 있어 가상 스레드와 궁합이 매우 좋습니다.
-
----
-
-## 4. 실무 권장 설정 예시
+아래는 이미 구성한 `Jdbi jdbi`를 사용하는 코드 조각이다. SQL과 driver의 cursor 조건은 해당 DB에 맞춰야 한다.
 
 ```java
-public interface UserDao {
-    @SqlQuery("SELECT * FROM users WHERE status = :status")
-    @FetchSize(1000) // 한 번에 1000개씩 읽어옴
-    @QueryTimeout(10) // 10초 타임아웃
-    List<User> findByStatus(@Bind("status") String status);
-}
+jdbi.useTransaction(handle -> {
+    try (var rows = handle.createQuery(
+            "select id from users where status = :status order by id")
+            .bind("status", "ACTIVE")
+            .setFetchSize(500)
+            .mapTo(Long.class)
+            .stream()) {
+        rows.forEach(id -> {
+            // 한 행씩 처리한다. 전체 List로 다시 수집하지 않는다.
+            System.out.println(id);
+        });
+    }
+});
 ```
 
----
+stream을 handle/transaction 범위 밖으로 반환하거나 다른 스레드로 전달하지 않는다. 대용량·장시간 조회는 connection과 transaction을 오래 점유하므로, 업무 요건에 따라 keyset pagination과 짧은 트랜잭션도 비교한다. [JDBI 매뉴얼](https://jdbi.org/releases/3.54.0/)
 
-## 5. 결론
+## Virtual Thread와의 관계
 
-가상 스레드를 사용한다면 **"동시성(Concurrency)"**이 비약적으로 높아지므로, 각 스레드가 사용하는 자원을 정교하게 제어해야 합니다. `@FetchSize`는 네트워크 비용을 줄이면서도 힙 메모리 폭발을 막는 중요한 **스로틀링(Throttling)** 장치 역할을 합니다.
+FetchSize는 동시 쿼리 수를 제한하는 장치가 아니다. 가상 스레드를 많이 생성할 수 있어도 connection pool, in-flight 요청 수와 대기 시간에는 한도가 필요하다.
+
+측정할 항목은 행 너비, 동시 조회 수, 결과 보관량, 왕복 지연, GC와 connection 점유 시간이다. 500이나 1000을 모든 시스템의 권장값으로 정하지 않는다. `@MaxRows`·`@QueryTimeout`도 byte 단위 메모리 상한이나 모든 네트워크 대기의 확실한 취소를 보장하지 않는다.
+
+Pinning 여부는 driver/JDK 버전과 stack으로 진단하고, 필요할 때만 [제한된 실행기 격리](../../Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md)를 비교한다.

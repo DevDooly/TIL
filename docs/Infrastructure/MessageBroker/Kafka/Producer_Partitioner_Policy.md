@@ -1,85 +1,53 @@
-# Kafka Producer: 파티셔너(Partitioner) 정책 및 설정
+# Kafka Producer: 파티셔너 정책과 설정
 
-Kafka Producer가 메시지를 발행할 때, 토픽의 여러 파티션 중 어느 곳으로 보낼지 결정하는 컴포넌트가 바로 **파티셔너(Partitioner)**입니다.
+기준: Java client 3.9.2 / 4.0 계열, 2026-09-07. Kafka client 의존성과 접근 가능한 브로커가 필요하다.
 
----
+## 기본 정책
 
-## 1. 파티셔너 정책의 진화
+명시적 partition이 있는 레코드는 그 파티션을 사용한다. 기본 내장 정책은 보통 키가 있으면 직렬화한 키의 해시를, null key에는 배치 효율을 고려한 분산을 사용한다. `partitioner.ignore.keys=true`는 기본 정책에서 키를 무시하는 설정이며 커스텀 파티셔너에 자동 적용되지 않는다. [Producer 설정](https://kafka.apache.org/39/configuration/producer-configs/)
 
-### 1.1 Kafka 2.4 이전 (Old Default)
-
-* **Key가 있는 경우**: Key의 해시값을 기반으로 특정 파티션에 고정적으로 할당.
-* **Key가 없는 경우**: **라운드 로빈(Round-Robin)** 방식으로 메시지를 하나씩 번갈아가며 파티션에 할당.
-* **문제점**: 메시지 하나당 하나의 배치가 생성되는 경우가 많아 네트워크 오버헤드가 크고 전송 효율이 낮았습니다.
-
-### 1.2 Kafka 2.4 이후 (Sticky Partitioning 도입)
-
-* **버전**: **Kafka 2.4.0 (KIP-480)**부터 기본 파티셔너 정책으로 채택되었습니다.
-* **동작 방식**: Key가 없는 메시지의 경우, 하나의 파티션을 선택해 해당 파티션의 배치가 찰 때까지(또는 `linger.ms` 도달 시까지) **한 파티션에 몰아넣습니다.** 배치가 전송된 후에는 다음 파티션으로 이동하여 다시 '스티키'하게 동작합니다.
-* **장점**: 배치 처리 효율이 극대화되어 지연 시간(Latency)이 감소하고 처리량(Throughput)이 대폭 향상됩니다.
-
----
-
-## 2. Java 설정 예제
-
-Producer 설정 시 `partitioner.class` 속성을 통해 원하는 정책을 선택할 수 있습니다.
-
-### 2.1 DefaultPartitioner 설정 (기본값)
-기본값이므로 별도로 설정하지 않아도 되지만, 명시적으로 적으려면 다음과 같이 합니다. (2.4 이상에서는 Sticky로 동작)
+`partitioner.class`를 생략한다. Kafka 4.0에서 제거된 `org.apache.kafka.clients.producer.internals.DefaultPartitioner`를 명시하지 않는다. [업그레이드 안내](https://kafka.apache.org/40/getting-started/upgrade/)
 
 ```java
-Properties props = new Properties();
-props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-// 명시적 설정 시
-props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "org.apache.kafka.clients.producer.internals.DefaultPartitioner");
+import java.util.Properties;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
 
-KafkaProducer<String, String> producer = new KafkaProducer<>(props);
-```
+public final class ProducerExample {
+    public static void main(String[] args) throws Exception {
+        Properties props = new Properties();
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 
-### 2.2 RoundRobinPartitioner 설정
-메시지를 파티션별로 정확히 하나씩 순차적으로 분배하고 싶을 때 사용합니다. (배치 효율은 낮아질 수 있음에 주의)
-
-```java
-Properties props = new Properties();
-props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-// RoundRobin 설정
-props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "org.apache.kafka.clients.producer.RoundRobinPartitioner");
-
-KafkaProducer<String, String> producer = new KafkaProducer<>(props);
-```
-
----
-
-## 3. 커스텀 파티셔너 (Custom Partitioner)
-
-특정한 비즈니스 로직(예: VIP 고객의 데이터는 특정 파티션으로 우선 배정)이 필요한 경우 직접 구현할 수 있습니다.
-
-### 3.1 Partitioner 인터페이스 구현
-```java
-public class MyCustomPartitioner implements Partitioner {
-    @Override
-    public int partition(String topic, Object key, byte[] keyBytes, Object value, byte[] valueBytes, Cluster cluster) {
-        // 원하는 로직 구현
-        return 0; // 특정 파티션 번호 반환
+        try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
+            // 단일 전송 확인용. 처리량 측정에서는 비동기 callback으로 집계한다.
+            var metadata = producer.send(
+                    new ProducerRecord<>("events", "device-001", "sample")).get();
+            System.out.println(metadata.partition());
+        }
     }
-
-    @Override
-    public void close() {}
-
-    @Override
-    public void configure(Map<String, ?> configs) {}
 }
 ```
 
-### 3.2 Producer 설정 반영
+## RoundRobin 선택
+
+producer 생성 전에 아래 설정을 추가한다.
+
 ```java
-props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "com.example.MyCustomPartitioner");
+props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG,
+        "org.apache.kafka.clients.producer.RoundRobinPartitioner");
 ```
 
----
+RoundRobin은 키 해시 기반 배정을 제공하지 않으므로 동일 키를 같은 파티션에 모아야 하는 요구와 충돌할 수 있다. [중복 호출 버그와 수정 버전](Producer_Partitioner_Issue.md), [분포 측정 기준](Partitioner_Evolution_and_Imbalance.md)을 확인한다.
 
-## 4. 요약 및 권장 사항
+## 커스텀 정책을 만들기 전에
 
-1. **기본 전략 유지**: 대부분의 경우 Kafka 2.4+ 버전의 기본 `DefaultPartitioner`(Sticky)가 가장 성능이 좋습니다.
-2. **RoundRobin 주의**: 파티션 간 부하 균등 분배가 절대적으로 중요하다면 사용할 수 있으나, 배치 전송 효율 저하와 이전 섹션에서 다룬 **KAFKA-9965** 이슈(불균형 버그)를 고려해야 합니다.
-3. **Key 활용**: 데이터의 순서 보장이 필요하다면 적절한 Key를 부여하여 해시 기반의 파티셔닝을 활용하세요.
+- 동일 키의 순서 범위와 파티션 증설 시 재배치 정책을 정의한다.
+- 없는 파티션을 반환하거나 모든 레코드를 0번에 고정하는 예제를 운영 코드로 사용하지 않는다.
+- 인스턴스별 상태, 동시 호출, 카운터 overflow를 검토한다.
+- 패치 전 [abortOnNewBatch 호출 흐름](AbortOnNewBatch_Issue.md)을 확인한다.
+
+순서는 파티션 단위이며 여러 producer 사이의 업무상 선후 관계까지 자동 보장하지 않는다. 재시도와 idempotence 설정도 함께 검토한다.

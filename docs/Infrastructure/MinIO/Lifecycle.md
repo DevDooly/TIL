@@ -67,6 +67,7 @@ mc ilm rule add --expire-days 30 myminio/mybucket
 ```
 
 #### 상황 B: Versioning 활성화 버킷 (완결형 권장 설정)
+
 * 현재 버전: 30일 경과 시 만료 (Delete Marker 생성)
 * 과거 버전: 과거 버전(Noncurrent)으로 전환된 후 7일 뒤 영구 삭제
 * 삭제 마커: 과거 버전이 모두 사라진 Delete Marker 자동 영구 삭제
