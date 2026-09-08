@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-08 14:59 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 비관적 락 vs 낙관적 락 동작 원리 및 동시성 제어 전략 상세 보강 |
 | 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-07 22:10 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-08-24 19:58 | [Language/Python/Asyncio_Streams.md](Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
 | 2026-08-24 19:58 | [Language/Python/SocketServer.md](Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-20 10:01 | [Infrastructure/ArgoCD/Examples.md](Infrastructure/ArgoCD/Examples.md) | docs: Jenkins 및 ArgoCD CI/CD 검토 가이드, 장단점, 실전 파이프라인 및 GitOps 연계 상세 보강 |

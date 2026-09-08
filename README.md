@@ -74,12 +74,12 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-09-08 14:59 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | docs: 비관적 락 vs 낙관적 락 동작 원리 및 동시성 제어 전략 상세 보강 |
 | 2026-09-07 22:10 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Skills Guide](docs/AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [OpenCode](docs/AI/OpenCode.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
