@@ -74,7 +74,7 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-09-08 18:34 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | docs: 비관적/낙관적 락 및 실무 동시성 제어 전략 심층 개편 |
+| 2026-09-08 18:40 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
 | 2026-09-07 22:10 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

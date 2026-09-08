@@ -55,9 +55,9 @@ sequenceDiagram
    git commit -m "docs: <작업 내용 요약>"
    ```
 
-2. **2단계: 최근 변경 이력 갱신 및 .pages 유효성 검증 스크립트 실행**
+2. **2단계: 마크다운 서식 검증, 최근 변경 이력 갱신 및 .pages 유효성 검증**
    ```bash
-   python3 scripts/update_recent_changes.py && python3 scripts/validate_pages.py
+   python3 scripts/validate_markdown_lists.py && python3 scripts/update_recent_changes.py && python3 scripts/validate_pages.py
    ```
 
 3. **3단계: 자동 갱신된 인덱스 파일 스테이징**
