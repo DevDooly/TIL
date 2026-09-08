@@ -74,7 +74,7 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
-| 2026-09-08 14:59 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | docs: 비관적 락 vs 낙관적 락 동작 원리 및 동시성 제어 전략 상세 보강 |
+| 2026-09-08 18:34 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | docs: 비관적/낙관적 락 및 실무 동시성 제어 전략 심층 개편 |
 | 2026-09-07 22:10 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
@@ -301,7 +301,7 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
   * [**Overview**](docs/Data/Database/README.md)
   * [이미지 저장 및 관리 전략](docs/Data/Database/Image_Storage_Management.md)
   * [JDBI FetchSize: 드라이버 힌트와 결과 보관량 구분](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
-  * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](docs/Data/Database/Locking_Strategy.md)
+  * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock) & 실무 동시성 제어 전략](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
   * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
   * [⚡ Redis (Remote Dictionary Server)](docs/Data/Database/Redis.md)

@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-09-08 14:59 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 비관적 락 vs 낙관적 락 동작 원리 및 동시성 제어 전략 상세 보강 |
+| 2026-09-08 18:34 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: 비관적/낙관적 락 및 실무 동시성 제어 전략 심층 개편 |
 | 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
