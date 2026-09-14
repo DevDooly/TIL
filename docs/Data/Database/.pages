@@ -7,6 +7,7 @@ nav:
   - JDBI FetchSize & Virtual Threads: JDBI_FetchSize_and_VirtualThreads.md
 - Specific Databases:
   - Oracle (LOB Segment): Oracle_LOB_Segment.md
+  - Oracle (JSON 컬럼 가이드): Oracle_JSON_Column_Guide.md
   - Redis: Redis.md
   - MongoDB: MongoDB.md
 - Management & Strategy:

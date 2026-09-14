@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-14 13:44 | [Data/Database/Oracle_JSON_Column_Guide.md](Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
 | 2026-09-08 18:40 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
 | 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-07 22:10 | [Troubleshooting/MinIO_Versioning_Deletion_Issue.md](Troubleshooting/MinIO_Versioning_Deletion_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-08-24 19:58 | [Language/Python/Asyncio_Streams.md](Language/Python/Asyncio_Streams.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |
-| 2026-08-24 19:58 | [Language/Python/SocketServer.md](Language/Python/SocketServer.md) | feat: 위키를 개인 포트폴리오 및 이력서 홈페이지로 전면 개편 |

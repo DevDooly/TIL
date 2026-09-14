@@ -74,12 +74,12 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
 <!-- RECENT_CHANGES_START -->
 | 날짜 | 문서 | 설명 |
 | :--- | :--- | :--- |
+| 2026-09-14 13:44 | [Oracle JSON Column Guide](docs/Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
 | 2026-09-08 18:40 | [Locking Strategy](docs/Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
 | 2026-09-07 22:10 | [AGY vs OpenCode Comparison](docs/AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI Coding Agent Orchestrators Orca Paseo](docs/AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Configuration](docs/AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Antigravity CLI Skills Guide](docs/AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Claude CLI DeepSeek Setup](docs/AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 
 <!-- RECENT_CHANGES_END -->
 
@@ -303,6 +303,7 @@ Java 검증은 문서의 코드 블록을 직접 컴파일해 GZIP 오류 처리
   * [JDBI FetchSize: 드라이버 힌트와 결과 보관량 구분](docs/Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
   * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock) & 실무 동시성 제어 전략](docs/Data/Database/Locking_Strategy.md)
   * [MongoDB](docs/Data/Database/MongoDB.md)
+  * [Oracle JSON 컬럼 저장 및 활용 가이드](docs/Data/Database/Oracle_JSON_Column_Guide.md)
   * [Oracle LOB Segment 및 ORA-01692 에러 조치](docs/Data/Database/Oracle_LOB_Segment.md)
   * [⚡ Redis (Remote Dictionary Server)](docs/Data/Database/Redis.md)
   * [SQL Naming Convention (SQL 명명 규칙)](docs/Data/Database/SQL_Naming_Convention.md)
