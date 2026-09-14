@@ -3,6 +3,22 @@
     {
       "name": "git-workflow",
       "path": ".agents/skills/git-workflow"
+    },
+    {
+      "name": "til-knowledge-write",
+      "path": ".agents/skills/til-knowledge-write"
+    },
+    {
+      "name": "til-knowledge-refresh",
+      "path": ".agents/skills/til-knowledge-refresh"
+    },
+    {
+      "name": "til-troubleshooting",
+      "path": ".agents/skills/til-troubleshooting"
+    },
+    {
+      "name": "til-doc-verify",
+      "path": ".agents/skills/til-doc-verify"
     }
   ]
 }

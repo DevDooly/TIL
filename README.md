@@ -55,6 +55,19 @@
 
 ## 문서 검증과 반영
 
+지식 업데이트용 프로젝트 스킬은 `.agents/skills/`에 있습니다. 현재 Gemini CLI 공식 문서는 이 경로를 [스킬 검색 경로](https://geminicli.com/docs/cli/creating-skills/#discovery-aliases)로 안내합니다. 기존 `skills.json` 목록에도 등록하며, 루트 `GEMINI.md`가 `.gemini/GEMINI.md`의 요청별 사용 지침을 불러옵니다.
+
+| 스킬 | 요청 예시 |
+| :--- | :--- |
+| `til-knowledge-write` | "Oracle JSON 인덱스 선택 기준을 공식 문서 근거로 TIL에 추가해줘" |
+| `til-knowledge-refresh` | "Virtual Thread 문서를 JDK 25 기준으로 확인하고 차이점을 반영해줘" |
+| `til-troubleshooting` | "이 오류 로그와 해결 과정을 트러블슈팅 문서로 정리해줘" |
+| `til-doc-verify` | "이번에 수정한 문서의 목차, 링크, 예제와 빌드를 검증해줘" |
+
+스킬 기능을 지원하는 Gemini CLI 세션에서는 `/skills reload` 후 `/skills list`로 검색 여부를 확인합니다([공식 관리 안내](https://geminicli.com/docs/cli/using-agent-skills/#in-session-management)). 구버전에서는 스킬 기능이 실험 설정에 묶여 있거나 `.agents/skills/` 검색을 지원하지 않을 수 있습니다. 이 경우 새 세션에서 프로젝트 지침에 따라 필요한 `SKILL.md`를 읽도록 요청합니다.
+
+예를 들어 "`.agents/skills/til-knowledge-refresh/SKILL.md`를 읽고 이 문서를 갱신해줘"라고 요청하면 됩니다. 최신 환경에서는 자연어로 요청하거나 스킬 이름을 지정할 수 있습니다. 선택한 모델을 바꿀 필요는 없습니다.
+
 Python의 `requirements.txt` 의존성, JDK 21 이상, Git과 Bash가 필요합니다. Windows에서는 Git Bash를 사용합니다.
 
 ```bash
