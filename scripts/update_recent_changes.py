@@ -1,25 +1,7 @@
 import subprocess
 import os
-import re
-import urllib.parse
 
 RECENT_CHANGES_FILE = "docs/Recent_Changes.md"
-README_FILE = "README.md"
-DOCS_DIR = "docs"
-
-# 대분류 표시 순서
-CATEGORY_ORDER = [
-    "Language",
-    "Infrastructure",
-    "Data",
-    "AI",
-    "LLM_Development",
-    "ComputerScience",
-    "Web",
-    "Tools",
-    "Troubleshooting",
-    "Templates"
-]
 
 def get_git_log(limit=100):
     cmd = [
@@ -77,145 +59,19 @@ def update_recent_changes_md(items):
         link_path = item['file_path'][5:] 
         # MkDocs는 내부 링크 해결을 위해 파일 시스템의 실제 경로를 필요로 하므로 인코딩하지 않음
         safe_link = link_path.replace(os.sep, '/')
-        safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
+        safe_msg = item['message'].replace("|", r"\|").replace("<", "&lt;").replace(">", "&gt;")
         content += f"| {item['date']} | [{link_path}]({safe_link}) | {safe_msg} |\n"
             
     with open(RECENT_CHANGES_FILE, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"Successfully generated {RECENT_CHANGES_FILE}")
 
-def update_readme_recent(items, max_display=6):
-    display_items = items[:max_display]
-    
-    new_content = "\n"
-    new_content += "| 날짜 | 문서 | 설명 |\n"
-    new_content += "| :--- | :--- | :--- |\n"
-    
-    for item in display_items:
-        link_path = item['file_path']
-        display_name = os.path.basename(link_path).replace(".md", "").replace("_", " ")
-        safe_link = link_path.replace(os.sep, '/')
-        safe_msg = item['message'].replace("|", "\|").replace("<", "&lt;").replace(">", "&gt;")
-        
-        if len(safe_msg) > 50:
-            safe_msg = safe_msg[:50] + "... "
-            
-        new_content += f"| {item['date']} | [{display_name}]({safe_link}) | {safe_msg} |\n"
-    new_content += "\n"
-
-    update_file_section(README_FILE, "RECENT_CHANGES", new_content)
-
-def update_file_section(filepath, marker_name, new_content):
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
-        
-        start_marker = f"<!-- {marker_name}_START -->"
-        end_marker = f"<!-- {marker_name}_END -->"
-        pattern = f"({start_marker})(.*?)({end_marker})"
-        
-        if re.search(pattern, content, re.DOTALL):
-            updated_content = re.sub(pattern, lambda m: m.group(1) + new_content + m.group(3), content, flags=re.DOTALL)
-            with open(filepath, "w", encoding="utf-8") as f:
-                f.write(updated_content)
-            print(f"Successfully updated section {marker_name} in {filepath}")
-        else:
-            raise ValueError(f'Missing {marker_name} markers in {filepath}')
-    except Exception as e:
-        print(f"Error updating {filepath}: {e}")
-        raise
-
-def get_markdown_title(filepath):
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                if line.strip().startswith('# '):
-                    return line.strip()[2:].strip()
-    except:
-        pass
-    return os.path.basename(filepath).replace(".md", "").replace("_", " ")
-
-def generate_toc_content():
-    content = ""
-    content += "### 📂 Categories\n\n"
-    for cat in CATEGORY_ORDER:
-        content += f"- [**{cat}**](#{cat.lower()})\n"
-    content += "\n---\n\n"
-
-    existing_dirs = set()
-    for category in CATEGORY_ORDER:
-        dir_path = os.path.join(DOCS_DIR, category)
-        if os.path.exists(dir_path) and os.path.isdir(dir_path):
-            existing_dirs.add(category)
-            content += f"## {category}\n\n"
-            if category == "Troubleshooting":
-                content += build_troubleshooting_tree(dir_path)
-            else:
-                content += build_directory_tree(dir_path, level=0)
-            content += "\n"
-            
-    for item in sorted(os.listdir(DOCS_DIR)):
-        if item in existing_dirs or item.startswith('.') or item in ["assets", "javascripts", "search", "stylesheets"]:
-            continue
-        dir_path = os.path.join(DOCS_DIR, item)
-        if os.path.isdir(dir_path):
-            content += f"## {item}\n\n"
-            content += build_directory_tree(dir_path, level=0)
-            content += "\n"
-    return content
-
-def build_troubleshooting_tree(dir_path):
-    text = ""
-    readme_path = os.path.join(dir_path, "README.md")
-    rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-    safe_path = rel_path.replace(os.sep, '/')
-    text += f"* [**Overview**]({safe_path})\n"
-    
-    if os.path.exists(readme_path):
-        try:
-            with open(readme_path, 'r', encoding='utf-8') as f:
-                for line in f:
-                    match = re.search(r'\[(.*?)\]\((.*?\.md)\)', line)
-                    if match:
-                        title, link = match.group(1), match.group(2)
-                        target_path = os.path.normpath(os.path.join(dir_path, link))
-                        rel_link = os.path.relpath(target_path, os.path.dirname(README_FILE))
-                        text += f"  * [{title}]({rel_link.replace(os.sep, '/')})\n"
-        except: pass
-    return text
-
-def build_directory_tree(root_path, level):
-    text = ""
-    indent = "  " * level
-    items = sorted(os.listdir(root_path))
-    files, dirs = [], []
-    for item in items:
-        if item.startswith('.') or item == "assets": continue
-        full_path = os.path.join(root_path, item)
-        if os.path.isdir(full_path): dirs.append(item)
-        elif item.endswith(".md") and item != "README.md" and item != ".pages": files.append(item)
-            
-    readme_path = os.path.join(root_path, "README.md")
-    if os.path.exists(readme_path):
-        rel_path = os.path.relpath(readme_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [**Overview**]({rel_path.replace(os.sep, '/')})\n"
-
-    for f in files:
-        full_path = os.path.join(root_path, f)
-        rel_path = os.path.relpath(full_path, os.path.dirname(README_FILE))
-        text += f"{indent}* [{get_markdown_title(full_path)}]({rel_path.replace(os.sep, '/')})\n"
-    for d in dirs:
-        text += f"{indent}* **{d}**\n"
-        text += build_directory_tree(os.path.join(root_path, d), level + 1)
-    return text
-
 def main():
     lines = get_git_log(100)
     items = parse_log(lines, 50)
+    # README는 직접 관리하고, 상세 변경 이력은 전용 문서에만 생성한다.
     update_recent_changes_md(items)
-    update_readme_recent(items, 6) 
-    toc_content = generate_toc_content()
-    update_file_section(README_FILE, "TOC", "\n" + toc_content)
+
 
 if __name__ == "__main__":
     main()

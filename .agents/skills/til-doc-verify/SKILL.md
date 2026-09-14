@@ -46,7 +46,7 @@ git diff --check
 
 ## 생성 파일과 원격 반영
 
-`README.md`의 `RECENT_CHANGES`·`TOC` 영역, `docs/Recent_Changes.md`, `docs/Sitemap.md`는 생성 결과다. 직접 날짜나 항목을 꾸며 넣지 않는다. 카테고리 `README.md`와 `.pages`의 수동 탐색 항목은 문서와 함께 편집한다.
+루트 `README.md`는 핵심 주제와 사용 안내를 직접 관리한다. 전체 파일 목록이나 변경 이력 표를 다시 넣지 않고 `docs/Sitemap.md`와 `docs/Recent_Changes.md`로 연결한다. 두 전용 문서는 생성 결과이므로 직접 날짜나 이력을 꾸며 넣지 않는다. 카테고리 `README.md`와 `.pages`의 탐색 항목은 문서와 함께 편집한다.
 
 `scripts/update_recent_changes.py`는 Git 이력을 읽으므로 게시 시 **콘텐츠 커밋 이후**에 실행되어야 한다. `git-workflow`의 `scripts/publish.sh`가 이 순서를 처리한다. 검증만 하려고 publish를 실행하지 않는다.
 

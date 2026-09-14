@@ -55,7 +55,7 @@ PYTHON=python bash scripts/publish.sh "docs: 변경 내용"
 4. 생성·수정 결과를 스테이징하고 방금 만든 커밋을 amend한다.
 5. 현재 브랜치의 설정된 upstream으로 `git push`한다.
 
-`update_recent_changes.py`가 Git 이력을 읽으므로 콘텐츠 커밋이 생성 작업보다 먼저 와야 한다. 생성되는 README 영역과 `docs/Recent_Changes.md`, `docs/Sitemap.md`는 수동으로 이력을 만들어 채우지 않는다.
+`update_recent_changes.py`가 Git 이력을 읽으므로 콘텐츠 커밋이 생성 작업보다 먼저 와야 한다. `docs/Recent_Changes.md`와 `docs/Sitemap.md`는 자동 생성한다. 루트 `README.md`는 직접 관리하며, 전체 파일 목록과 변경 이력은 전용 문서 링크로 안내한다.
 
 ## 실패와 완료 확인
 
