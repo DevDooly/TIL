@@ -160,7 +160,7 @@ class JavaExamplesTest(unittest.TestCase):
         cls.java = java_tool("java")
         cases = {
             "GzipStreams": "docs/Language/Java/Concatenated_Gzip_Decompression.md",
-            "AvroShadowing": "docs/Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md",
+            "AvroShadowing": "docs/Data/Avro_HashCode_Field_Naming_Conflict.md",
             "BoundedDbExecutor": "docs/Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md",
         }
         for name, doc in cases.items():

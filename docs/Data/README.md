@@ -25,3 +25,7 @@ title: Data Engineering & Storage Systems
 * **[ELK Stack (Elasticsearch, Logstash, Kibana)](ELK.md)**: 분산 로그 수집 및 대시보드 시각화
 * **[Log Collectors Comparison](Log_Collectors_Comparison.md)**: Fluentd, Logstash, Vector, Fluent Bit 성능 및 리소스 비교 분석
 * **[Fluentd](Database/fluentd.md)**: 플러그인 기반 로그 포워딩 파이프라인
+
+### 3. Data Serialization
+
+* **[Avro result 필드와 hashCode 지역 변수 충돌](Avro_HashCode_Field_Naming_Conflict.md)**: Java 코드 생성기의 필드 참조 문제와 검증 방법

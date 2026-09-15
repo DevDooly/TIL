@@ -31,7 +31,7 @@ title: Engineering Troubleshooting Archive
 | [메시지 크기 설정](../Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | producer/topic/consumer 설정과 fetch 예외 |
 | [Hadoop/Tez RX 오류](../Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md) | 네트워크 지표와 작업 지연 분석 |
 | [대용량 파일 전송](../Infrastructure/Linux/Large_File_Transfer.md) | 파일 크기와 디스크 사용량 비교 |
-| [MinIO 버전별 삭제](MinIO_Versioning_Deletion_Issue.md) | delete marker와 보존된 객체 버전 |
+| [MinIO 버전별 삭제](../Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | delete marker와 보존된 객체 버전 |
 | [etcd 백업과 복원](../Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | etcdctl/etcdutl과 복원 검증 |
 
 ## 데이터 · 개발 과정
@@ -39,5 +39,5 @@ title: Engineering Troubleshooting Archive
 | 문서 | 확인할 내용 |
 | :--- | :--- |
 | [Oracle LOB 공간](../Data/Database/Oracle_LOB_Segment.md) | LOB segment와 tablespace 확인 |
-| [Avro result 충돌](Avro_HashCode_Field_Naming_Conflict.md) | 생성기 버전과 필드/지역 변수 참조 |
+| [Avro result 충돌](../Data/Avro_HashCode_Field_Naming_Conflict.md) | 생성기 버전과 필드/지역 변수 참조 |
 | [LLM을 활용한 레거시 개선](../LLM_Development/Legacy_Code_Improvement.md) | 알고리즘·시간 로직·스타일 변경의 검증 기록 |

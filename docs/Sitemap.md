@@ -21,10 +21,10 @@
     * [메시지 크기 설정](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
     * [Hadoop/Tez RX 오류](Infrastructure/Hadoop/Tez_Job_Slowness_Network_RX.md)
     * [대용량 파일 전송](Infrastructure/Linux/Large_File_Transfer.md)
-    * [MinIO 버전별 삭제](Troubleshooting/MinIO_Versioning_Deletion_Issue.md)
+    * [MinIO 버전별 삭제](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md)
     * [etcd 백업과 복원](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
     * [Oracle LOB 공간](Data/Database/Oracle_LOB_Segment.md)
-    * [Avro result 충돌](Troubleshooting/Avro_HashCode_Field_Naming_Conflict.md)
+    * [Avro result 충돌](Data/Avro_HashCode_Field_Naming_Conflict.md)
     * [LLM을 활용한 레거시 개선](LLM_Development/Legacy_Code_Improvement.md)
 
 ## 📁 Language
@@ -209,6 +209,7 @@
         * [MinIO Java Client 사용 예제](Infrastructure/MinIO/Java_Client_Examples.md)
         * [MinIO 수명 주기 관리 (Lifecycle / ILM)](Infrastructure/MinIO/Lifecycle.md)
         * [MinIO Client (mc) 설치 및 사용 가이드](Infrastructure/MinIO/MinIO_Client_mc.md)
+        * [MinIO: 버저닝(Versioning) 활성화 후 파일이 영구 삭제되지 않는 이슈](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md)
         * [MinIO 버저닝 (Versioning)](Infrastructure/MinIO/Versioning.md)
     * **OracleCloud**
         * [Oracle Cloud Free Tier (오라클 클라우드 프리티어)](Infrastructure/OracleCloud/README.md)
@@ -217,14 +218,16 @@
 ## 📁 Data
 
 * [💾 Data Systems & Storage Architecture](Data/README.md)
+* [Apache Avro: result 필드와 hashCode 지역 변수 충돌](Data/Avro_HashCode_Field_Naming_Conflict.md)
 * [ELK Stack](Data/ELK.md)
 * [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](Data/Log_Collectors_Comparison.md)
     * **Database**
         * [Database (데이터베이스)](Data/Database/README.md)
         * [이미지 저장 및 관리 전략](Data/Database/Image_Storage_Management.md)
         * [JDBI FetchSize: 드라이버 힌트와 결과 보관량 구분](Data/Database/JDBI_FetchSize_and_VirtualThreads.md)
-        * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock)](Data/Database/Locking_Strategy.md)
+        * [비관적 락(Pessimistic Lock) vs 낙관적 락(Optimistic Lock) & 실무 동시성 제어 전략](Data/Database/Locking_Strategy.md)
         * [MongoDB](Data/Database/MongoDB.md)
+        * [Oracle JSON 컬럼 저장 및 활용 가이드](Data/Database/Oracle_JSON_Column_Guide.md)
         * [Oracle LOB Segment 및 ORA-01692 에러 조치](Data/Database/Oracle_LOB_Segment.md)
         * [⚡ Redis (Remote Dictionary Server)](Data/Database/Redis.md)
         * [SQL Naming Convention (SQL 명명 규칙)](Data/Database/SQL_Naming_Convention.md)
