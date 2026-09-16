@@ -22,6 +22,9 @@ Google Antigravity CLI(`agy`)에서 파일 생성, 수정 및 명령어 실행 �
 ### [Antigravity CLI (agy) vs OpenCode 비교](AGY_vs_OpenCode_Comparison.md)
 Google DeepMind의 고도화된 에이전트 플랫폼 **Antigravity CLI (`agy`)**와 가볍고 유연한 오픈소스 코딩 도구 **OpenCode (+ Gemini)**의 아키텍처, 기능, 장단점 및 상황별 선택 가이드입니다.
 
+### [MCP (Model Context Protocol) 서버 개발 가이드](MCP_Server_Development_Guide.md)
+AI 클라이언트(Claude, Cursor, AGY 등)와 외부 도구/데이터를 표준화된 방식으로 연결하는 **MCP 서버 개발 가이드**(Python FastMCP, TypeScript SDK, MCP Inspector 디버깅 및 실무 주의사항)입니다.
+
 ### [Claude CLI (다중 모델 & DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
 Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 변수를 활용하여 DeepSeek 등 다중 모델을 연동하고 전환하는 설정 가이드입니다.
 
