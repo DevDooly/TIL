@@ -17,6 +17,7 @@
 ### 2. Documentation Standards
 
 - **Language**: 문서는 **한국어**로 작성하는 것을 원칙으로 합니다.
+- **문체**: 한국어 문서를 작성·수정할 때 `.agents/skills/til-natural-writing/SKILL.md`를 함께 적용합니다. 구체적인 현상과 이유부터 설명하고, 관례적인 작성일·확인일과 반복적인 편집 지시는 본문에 붙이지 않습니다. 재현에 필요한 버전과 사건의 실제 날짜는 유지합니다.
 - **Structure**: 기존 디렉토리 구조(`docs/AI`, `docs/Tools` 등)를 준수하세요.
 - **MkDocs**: 새로운 섹션을 추가할 때는 `mkdocs.yml` 설정과 각 폴더의 `.pages` 파일을 확인해야 합니다.
 
@@ -29,6 +30,7 @@
 | 새 지식·비교·링크·메모를 TIL 문서로 저장 | `.agents/skills/til-knowledge-write/SKILL.md` |
 | 기존 문서의 최신성·버전·기술 설명 갱신 | `.agents/skills/til-knowledge-refresh/SKILL.md` |
 | 오류·장애·해결 과정·재현 결과 기록 | `.agents/skills/til-troubleshooting/SKILL.md` |
+| 한국어 문서 작성·수정의 문체, 딱딱한 표현과 불필요한 날짜 정리 | `.agents/skills/til-natural-writing/SKILL.md` |
 | 문서 편집 후 목차·링크·예제·빌드 검증 | `.agents/skills/til-doc-verify/SKILL.md` |
 | 커밋·원격 반영 | `.agents/skills/git-workflow/SKILL.md` |
 

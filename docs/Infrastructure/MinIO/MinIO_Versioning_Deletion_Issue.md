@@ -1,35 +1,18 @@
 # MinIO: 버저닝(Versioning) 활성화 후 파일이 영구 삭제되지 않는 이슈
 
-MinIO 버켓에 버저닝 기능을 활성화한 후, 기존 방식으로 파일을 삭제했음에도 불구하고 디스크 용량이 줄어들지 않거나 파일이 '삭제 마커(Delete Marker)' 상태로 남아있는 이슈와 해결 과정을 정리합니다.
+버저닝을 켠 버킷에서 파일을 지웠는데도 디스크 사용량이 그대로일 수 있다. Java Client의 `removeObject`나 `mc rm`으로 삭제해도 이전 버전이 남기 때문이다. 파일이 안 보이는 상태와 저장된 데이터가 모두 지워진 상태를 구분해서 봐야 한다.
 
-확인일: 2026-09-07. 버전 보존은 버저닝의 정상 동작이며, 그 자체를 스토리지 누수라고 단정하지 않습니다. 사용 중인 MinIO 서버와 SDK/CLI 버전을 함께 기록합니다.
+## 삭제했는데 용량이 줄지 않는 이유
 
----
+버전 ID 없이 삭제를 요청하면 MinIO는 기존 데이터를 지우는 대신 삭제 마커(Delete Marker)를 만든다. 일반 조회에서는 객체가 사라진 것처럼 보이지만, 이전 버전은 여전히 보관되어 있다. 버저닝이 켜진 버킷의 정상 동작이다.
 
-## 1. 이슈 배경 (Context)
+특정 버전을 영구 삭제하려면 그 버전의 ID를 지정해야 한다. 객체를 완전히 없애려면 남아 있는 모든 버전과 삭제 마커를 정리한다. 다만 보존 기간, Object Lock, 권한 때문에 삭제가 거절될 수 있다.
 
-* **상황**: 데이터 관리 정책에 따라 특정 디렉토리의 파일들을 삭제하려 함.
-* **환경**: MinIO 클러스터, Bucket Versioning 활성 상태.
-* **문제**: Java Client의 `removeObject` 또는 `mc rm` 명령어를 사용했으나, 파일이 실제로 삭제되지 않고 '이전 버전'으로 보관되거나 삭제 마커만 생성됨.
+## Java Client로 버전별 대상 확인하기
 
----
+Prefix 안의 모든 버전을 조회한 뒤 삭제할 대상을 정한다. SDK의 `listObjects(...includeVersions(true))`를 사용하면 버전 정보를 함께 얻을 수 있다. 사용하는 MinIO 서버와 SDK 버전도 확인해 둔다.
 
-## 2. 원인 분석 (Why)
-
-MinIO(및 S3 호환 스토리지)에서 버저닝이 활성화되면 삭제 동작이 다음과 같이 변경됩니다.
-
-1. **단순 삭제 요청**: 특정 버전 ID를 명시하지 않고 삭제를 요청하면, 실제 데이터를 지우는 대신 **삭제 마커(Delete Marker)**라는 특별한 포인터를 생성합니다. 
-    * 사용자 눈에는 파일이 삭제된 것처럼 보이지만, 실제 데이터는 여전히 디스크에 존재합니다.
-2. **버전별 삭제**: 특정 버전만 제거하려면 해당 Version ID를 지정합니다. 객체 전체를 없애려면 보존된 모든 버전과 삭제 마커를 정리해야 합니다. 보존 기간·Object Lock·권한에 따라 삭제가 거절될 수 있습니다.
-
----
-
-## 3. 해결 방법 (How)
-
-디렉토리(Prefix) 내의 모든 파일과 그에 딸린 모든 버전들을 조회하여 하나씩 영구 삭제하는 로직을 적용했습니다.
-
-### 3.1 Java Client를 이용한 조치
-Java SDK의 `listObjects(...includeVersions(true))`로 버전별 대상을 확인합니다. 아래 코드 조각은 기본적으로 목록만 출력합니다. 삭제는 되돌릴 수 없으므로 대상 prefix·보존 정책·백업을 확인한 후 별도 실행 단계에서 수행합니다.
+아래 코드는 구성된 `minioClient`를 사용하는 코드 조각이며, `dryRun = true` 상태에서는 목록만 출력한다. 삭제로 전환하기 전에 prefix, 보존 정책, 백업을 확인한다. 특정 버전을 영구 삭제하면 되돌릴 수 없다.
 
 ```java
 // 모든 버전 정보를 가져와서 삭제 목록 구성
@@ -67,27 +50,23 @@ for (Result<Item> result : results) {
 }
 ```
 
-### 3.2 MinIO Client(mc)를 이용한 조치
-CLI에서도 먼저 `--dry-run`으로 대상을 확인합니다. 설치한 `mc rm --help`에서 지원 옵션을 확인합니다.
+## mc로 대상 확인하기
+
+CLI에서도 먼저 `--dry-run`으로 범위를 확인한다. 설치된 버전이 옵션을 지원하는지는 `mc rm --help`에서 확인할 수 있다.
 
 ```bash
 # 조회 전용: 실제 삭제하지 않음
 mc rm --recursive --versions --force --dry-run myminio/my-bucket/path/to/directory/
 ```
 
----
+## 삭제 후 확인할 것
 
-## 4. 결과 및 제언
+버전 목록을 다시 조회해 남은 항목과 실패한 요청을 확인한다. 동시에 파일을 쓰는 작업이 있으면 조회와 삭제 사이에 새 버전이 생길 수 있어, prefix 전체가 한 번에 삭제된다고 볼 수는 없다. API 응답과 실제 디스크 사용량도 각각 확인한다.
 
-* **확인**: 버전 목록을 다시 조회해 삭제 결과와 실패 항목을 확인합니다. 동시 쓰기가 있으면 목록과 삭제 사이에 새 버전이 생길 수 있으므로 prefix 단위 삭제를 원자적 작업으로 간주하지 않습니다. API 성공과 실제 디스크 사용량 변화도 각각 관찰합니다.
-* **제언**: 
-    * **Lifecycle**에서 현재 버전 만료, noncurrent version 만료, expired delete marker 정리를 구분합니다. 현재 버전의 Expiration만으로 이전 버전이 모두 제거되지는 않습니다. 필요한 보존 기간에 맞춰 정책을 검증합니다.
-    * 수동 삭제 로직 작성 시 `includeVersions(true)` 옵션 사용 여부를 반드시 확인해야 합니다.
+주기적으로 정리할 데이터라면 [Lifecycle 정책](Lifecycle.md)을 사용하는 방법도 있다. 현재 버전의 만료, 이전 버전의 만료, 만료된 삭제 마커 정리는 서로 다른 설정이다. 현재 버전의 Expiration만 설정하면 이전 버전이 남을 수 있으므로 필요한 보존 기간에 맞춰 확인한다.
 
----
+## 참고 자료
 
-## 5. 관련 레퍼런스
-
-* [MinIO Object Versioning Documentation](https://min.io/docs/minio/linux/administration/object-management/object-versioning.html)
-* [MinIO mc rm 옵션](https://docs.min.io/aistor/reference/cli/mc-rm/) — 현재 AIStor 문서로 연결되므로 사용 중인 Community/AIStor 버전의 차이를 확인합니다.
-* [AWS S3: Deleting object versions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/DeletingObjectVersions.html)
+- [MinIO Object Versioning Documentation](https://min.io/docs/minio/linux/administration/object-management/object-versioning.html)
+- [MinIO mc rm 옵션](https://docs.min.io/aistor/reference/cli/mc-rm/): AIStor 문서이므로 Community 버전을 사용한다면 지원 옵션을 비교한다.
+- [AWS S3: Deleting object versions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/DeletingObjectVersions.html)

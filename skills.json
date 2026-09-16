@@ -19,6 +19,10 @@
     {
       "name": "til-doc-verify",
       "path": ".agents/skills/til-doc-verify"
+    },
+    {
+      "name": "til-natural-writing",
+      "path": ".agents/skills/til-natural-writing"
     }
   ]
 }

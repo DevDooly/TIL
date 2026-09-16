@@ -1,6 +1,6 @@
 # Kafka 메시지 크기 제한: Producer·Topic·Consumer 구분
 
-기준: Kafka 3.9 Java client / broker 설정, 2026-09-07. 메시지 본문 크기와 직렬화한 레코드·배치·요청 크기는 다르다.
+Kafka에서 큰 메시지가 거절되면 producer 설정만 바꿔서는 해결되지 않을 수 있다. Producer, topic, consumer가 제한하는 대상이 서로 다르기 때문이다. 아래는 Kafka 3.9 Java client와 broker 설정을 기준으로 설명한다.
 
 ## 설정 이름과 적용 범위
 
@@ -14,13 +14,13 @@
 | Broker 복제 | `replica.fetch.max.bytes` | 파티션별 replica fetch 예산 |
 | Broker 복제 | `replica.fetch.response.max.bytes` | replica fetch 응답 전체 예산 |
 
-현대 Java Consumer 설정은 `fetch.max.bytes`다. 토픽의 `max.message.bytes`와 브로커의 `message.max.bytes`는 철자가 다르다. [Producer 설정](https://kafka.apache.org/39/configuration/producer-configs/), [Consumer 설정](https://kafka.apache.org/39/configuration/consumer-configs/), [Broker 설정](https://kafka.apache.org/39/configuration/broker-configs/)
+메시지 본문 크기와 직렬화한 레코드·배치·요청 크기를 구분해서 봐야 한다. Consumer의 전체 fetch 예산은 `fetch.max.bytes`이며, 토픽의 `max.message.bytes`와 브로커의 `message.max.bytes`는 이름이 비슷해 혼동하기 쉽다. [Producer 설정](https://kafka.apache.org/39/configuration/producer-configs/), [Consumer 설정](https://kafka.apache.org/39/configuration/consumer-configs/), [Broker 설정](https://kafka.apache.org/39/configuration/broker-configs/)
 
 ## Fetch 크기는 절대적인 차단선이 아니다
 
-Kafka 3.9의 consumer/replica fetch 설정에는 진행을 보장하기 위해 **첫 번째 비어 있지 않은 파티션의 첫 배치가 한도를 넘더라도 반환하는 예외**가 있다. 따라서 “replica fetch가 1 MiB인데 2 MiB 배치를 허용하면 반드시 복제 실패”라는 설명은 틀리다.
+Kafka 3.9의 consumer/replica fetch에는 **첫 번째 비어 있지 않은 파티션의 첫 배치가 한도를 넘어도 반환하는 예외**가 있다. 큰 배치 하나 때문에 처리가 계속 멈추는 것을 막기 위한 동작이다. 그래서 replica fetch 한도가 1 MiB이고 배치가 2 MiB라는 이유만으로 복제가 반드시 실패하지는 않는다.
 
-그렇다고 메모리·네트워크 예산을 무시해도 된다는 뜻은 아니다. 큰 배치가 fetch 한도를 초과할 수 있고 여러 fetch가 동시에 진행될 수 있으므로, 이 값을 프로세스 메모리의 절대 상한으로 사용하지 않는다. [Consumer 설정](https://kafka.apache.org/39/configuration/consumer-configs/), [Replica fetch 설정](https://kafka.apache.org/39/configuration/broker-configs/#replica.fetch.max.bytes)
+이 예외와 동시에 진행되는 여러 fetch를 고려하면 실제 메모리 사용량은 설정값보다 커질 수 있다. 프로세스의 메모리와 네트워크 여유도 함께 확인해야 한다. [Consumer 설정](https://kafka.apache.org/39/configuration/consumer-configs/), [Replica fetch 설정](https://kafka.apache.org/39/configuration/broker-configs/#replica.fetch.max.bytes)
 
 ## 2 MiB payload 실험용 구성
 
@@ -55,7 +55,7 @@ kafka-configs.sh --bootstrap-server localhost:9092 \
 
 ## 동적 변경과 검증
 
-3.9의 `message.max.bytes`는 `cluster-wide` 동적 설정이다. 토픽 override가 재시작 없는 유일한 변경 방법은 아니다. 반면 `replica.fetch.max.bytes`는 `read-only` 설정이다. 운영 버전과 배포 도구가 지원하는 변경 방식을 확인한다. [Broker 설정과 Update Mode](https://kafka.apache.org/39/configuration/broker-configs/)
+Kafka 3.9에서 `message.max.bytes`는 `cluster-wide` 동적 설정이어서 토픽 override 외에도 재시작 없이 바꿀 수 있는 방법이 있다. 반면 `replica.fetch.max.bytes`는 `read-only` 설정이다. 실제 적용 방식은 사용하는 Kafka 버전과 배포 도구에서 확인한다. [Broker 설정과 Update Mode](https://kafka.apache.org/39/configuration/broker-configs/)
 
 1. 한도 직전·직후 payload를 보내 성공/실패의 경계를 확인한다.
 2. 수신 내용의 길이와 checksum을 검증한다.

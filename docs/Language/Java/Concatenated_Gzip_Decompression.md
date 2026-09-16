@@ -1,6 +1,6 @@
 # Java: 연결된 GZIP 멤버 압축 해제
 
-검증 기준: OpenJDK 21.0.9, 2026-09-07.
+아래 설명과 테스트는 OpenJDK 21.0.9를 기준으로 한다.
 
 여러 GZIP 파일을 이어 붙이면 여러 멤버를 가진 GZIP 스트림이 된다. Java 21의 `GZIPInputStream`은 연결된 멤버를 읽을 수 있으므로, 멤버마다 스트림을 새로 생성하는 반복문은 필요하지 않다. 구현은 멤버의 trailer를 읽은 뒤 다음 header를 처리한다. [OpenJDK 21 구현](https://github.com/openjdk/jdk21u/blob/jdk-21.0.9-ga/src/java.base/share/classes/java/util/zip/GZIPInputStream.java), [GZIP 형식](https://www.rfc-editor.org/rfc/rfc1952.html)
 
@@ -49,14 +49,14 @@ public final class GzipStreams {
 
 ## 오류와 자원 소유권
 
-- `EOFException`이나 `IOException`을 정상 종료로 바꾸지 않는다. CRC 오류나 잘린 데이터가 성공으로 처리될 수 있다.
+- `EOFException`이나 `IOException`을 잡아서 무시하면 CRC 오류나 잘린 데이터도 성공으로 처리될 수 있다. 호출자가 실패를 알 수 있도록 예외를 전달한다.
 - `GZIPInputStream.close()`는 감싼 입력도 닫는다. 같은 입력을 다음 멤버용 스트림에서 다시 사용하지 않는다.
 - 실패 전에 일부 결과를 출력했을 수 있다. 파일을 원자적으로 교체하려면 임시 파일에 쓰고 검증 완료 후 목적 파일로 이동한다.
 - 크기 제한과 별도로 네트워크 timeout과 작업 deadline을 설정한다.
 
 ## 형식 검증의 한계
 
-Java 21 구현은 정상 멤버 뒤의 일부 잘못된 header/trailing bytes를 스트림 종료로 간주할 수 있다. 이 예제의 성공이 모든 입력 바이트의 엄격한 GZIP 형식을 보증하지는 않는다.
+Java 21 구현은 정상 멤버 뒤에 붙은 일부 잘못된 헤더나 추가 바이트를 만나면 스트림이 끝난 것으로 처리할 수 있다. 압축 해제가 성공했어도 입력 전체가 올바른 GZIP 형식인지는 별도로 확인해야 하는 이유다.
 
 뒤에 붙은 비-GZIP 데이터도 오류로 처리해야 한다면 Apache Commons Compress의 `GzipCompressorInputStream`과 `setDecompressConcatenated(true)` 같은 명시적 정책을 검토한다. 버전을 고정하고 잘린 다음 header까지 테스트한다. [Commons Compress API](https://commons.apache.org/proper/commons-compress/apidocs/org/apache/commons/compress/compressors/gzip/GzipCompressorInputStream.html)
 

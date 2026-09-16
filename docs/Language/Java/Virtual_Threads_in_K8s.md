@@ -1,18 +1,16 @@
 # Kubernetes에서 Virtual Thread 운영 시 확인할 것
 
-기준: JDK 21과 24 이후 차이를 구분, 2026-09-07.
-
-가상 스레드는 I/O를 기다리는 많은 작업을 표현하는 데 유용하다. CPU 계산 자체를 빠르게 하거나 같은 Pod에서 수십 배 처리량을 보장하지는 않는다. [Virtual Thread 도입 가이드](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
+가상 스레드를 쓰면 I/O를 기다리는 작업을 많이 다루기 쉬워진다. 다만 Pod의 CPU와 메모리, DB 연결 수는 그대로이므로 동시 요청이 늘어날 때 어디서 병목이 생기는지 살펴봐야 한다. CPU 계산 자체가 빨라지는 것은 아니다. [Virtual Thread 도입 가이드](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
 ## CPU와 scheduler
 
-`jdk.virtualThreadScheduler.parallelism`은 정수 병렬성 설정이다. `500m`처럼 소수 CPU quota를 가진 Pod의 limit와 기계적으로 맞출 수 없고, 값을 맞춘다고 CPU throttling이 사라지지도 않는다.
+`jdk.virtualThreadScheduler.parallelism`은 정수로 설정한다. Pod의 CPU limit가 `500m`이라고 해서 이 값에 `0.5`를 넣을 수는 없다. 스케줄러 설정을 바꾸더라도 CPU 사용량이 제한을 넘으면 throttling은 발생한다.
 
 JVM이 인식한 processor 수, 실제 CPU 사용량, throttling, runnable 작업 수와 p99 지연을 함께 본다. CPU-bound 작업의 동시성을 무제한으로 늘리면 대기만 늘 수 있다. [Java 21 가상 스레드 스케줄링](https://openjdk.org/jeps/444), [Kubernetes 리소스 제한](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
 ## 메모리 예산
 
-가상 스레드 stack chunk는 Java heap에 있다. 따라서 `-Xmx` 바깥에 “가상 스레드 stack용 20–30%”를 따로 더하는 설명은 이중 계산이다.
+가상 스레드의 stack chunk는 Java heap에 들어간다. 이미 heap 예산에 포함되므로 `-Xmx` 바깥에 가상 스레드 스택용 공간을 따로 더하면 같은 메모리를 두 번 계산하게 된다.
 
 Pod 메모리는 heap 외에도 metaspace, code cache, direct buffer, 플랫폼 스레드 stack과 기타 native 메모리 등을 포함한다. heap 안에서도 대기 중 요청 본문과 ThreadLocal 값이 누적될 수 있다. RSS와 heap·native 지표를 구분해 측정한다. [JEP 444 메모리 설명](https://openjdk.org/jeps/444)
 
@@ -25,6 +23,6 @@ Pod 메모리는 heap 외에도 metaspace, code cache, direct buffer, 플랫폼 
 
 ## Pinning은 버전별로 확인
 
-JDK 21–23의 monitor 관련 제약과 JDK 24 이후 개선을 구분한다. 라이브러리 이름이나 `synchronized` 존재만으로 원인을 확정하지 않는다. [진단 절차와 JDK별 옵션](Virtual_Threads_FTP_Pinning.md)
+JDK 24에서는 monitor와 관련된 pinning 제약이 개선되었다. JDK 21–23에서 보던 증상이라도 업그레이드 후에는 달라질 수 있으므로, 실제 스택과 JFR 이벤트를 기준으로 판단한다. [진단 절차와 JDK별 옵션](Virtual_Threads_FTP_Pinning.md)
 
-검증 시 Pod 수·limit·입력·DB 크기를 고정하고 처리량, p95/p99, 오류율, 큐 길이, RSS, GC, CPU throttling을 함께 기록한다. 개선율과 비용 절감은 측정 결과가 있을 때만 적는다.
+변경 전후를 비교할 때는 Pod 수, 리소스 제한, 입력, DB 크기를 맞춘다. 처리량만 보면 지연이나 메모리 증가를 놓칠 수 있으므로 p95/p99, 오류율, 큐 길이, RSS, GC, CPU throttling도 함께 확인한다.

@@ -4,9 +4,26 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-16 13:55 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Resume.md](Resume.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
+| 2026-09-16 13:55 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:35 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: MCP(Model Context Protocol) 서버 개발 및 연동 가이드 추가 |
-| 2026-09-15 09:37 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문서를 기술별 목차로 재배치 |
-| 2026-09-15 09:37 | [Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | docs: 트러블슈팅 문서를 기술별 목차로 재배치 |
 | 2026-09-14 13:44 | [Data/Database/Oracle_JSON_Column_Guide.md](Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
 | 2026-09-08 18:40 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
 | 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
@@ -17,40 +34,23 @@
 | 2026-09-07 22:10 | [AI/OpenCode.md](AI/OpenCode.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/NodeJs/libuv.md](Language/NodeJs/libuv.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Language/Python/Decorator.md](Language/Python/Decorator.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Resume.md](Resume.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Web/Concepts/WebRTC.md](Web/Concepts/WebRTC.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

@@ -26,6 +26,8 @@
 
 Gemini로 필요한 주제를 요청하고, 프로젝트 스킬로 작성·갱신·검증합니다.
 
+작성과 수정에는 [문체 가이드](.agents/skills/til-natural-writing/SKILL.md)를 함께 적용해 반복적인 날짜·상투어를 줄이고, 구체적인 현상과 이유를 중심으로 설명합니다.
+
 [새 지식 작성](.agents/skills/til-knowledge-write/SKILL.md) · [기존 문서 갱신](.agents/skills/til-knowledge-refresh/SKILL.md) · [문제 해결 기록](.agents/skills/til-troubleshooting/SKILL.md) · [문서 검증](.agents/skills/til-doc-verify/SKILL.md)
 
 > 요청 예: “til-knowledge-refresh 스킬로 Virtual Thread 문서를 JDK 25 기준으로 확인하고 차이를 반영해줘.”

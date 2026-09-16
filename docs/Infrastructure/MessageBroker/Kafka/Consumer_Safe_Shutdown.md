@@ -1,8 +1,6 @@
 # Kafka Consumer: wakeup과 close, 처리 완료 offset
 
-기준: Kafka Java client 3.9, 2026-09-07.
-
-`KafkaConsumer`는 thread-safe하지 않다. 한 소유 스레드에서 subscribe·poll·commit·close를 수행하고, 외부 스레드는 종료 플래그와 `wakeup()`으로 종료를 요청하는 구조가 단순하다. [KafkaConsumer API](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+종료 신호를 받았다고 다른 스레드에서 바로 `consumer.close()`를 호출하면 poll 중인 스레드와 충돌할 수 있다. `KafkaConsumer`는 thread-safe하지 않으므로 subscribe·poll·commit·close는 한 스레드에서 맡고, 외부에서는 종료 플래그와 `wakeup()`으로 종료를 요청하는 구조가 다루기 쉽다. 아래 설명과 예제는 Kafka Java client 3.9를 기준으로 한다. [KafkaConsumer API](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
 
 | API | 의미 |
 | :--- | :--- |
@@ -69,7 +67,7 @@ public final class ConsumerLoop implements Runnable {
 }
 ```
 
-이 예제는 한 poll 배치를 동기 처리하고 커밋한다. 처리 실패나 커밋 중 wakeup·재균형이 발생하면 성공한 작업도 재전달될 수 있으므로, DB 갱신이나 외부 호출에 중복 처리 대책이 필요하다. 종료 신호만으로 마지막 offset 저장을 보장하지 않는다.
+이 예제는 한 poll 배치의 처리가 모두 끝난 뒤 커밋한다. 처리에 실패하거나 커밋 중 wakeup·리밸런싱이 발생하면 이미 처리한 레코드도 다시 전달될 수 있다. DB 갱신이나 외부 호출은 중복 실행되어도 문제가 없도록 준비해야 한다. 종료 신호를 받았더라도 마지막 offset을 저장하기 전에 종료될 수 있다.
 
 ## 종료와 병렬 처리의 경계
 
@@ -83,4 +81,4 @@ public final class ConsumerLoop implements Runnable {
 - revoke·종료 시 대기 중 작업 정리와 커밋 범위
 - `max.poll.interval.ms`와 실제 처리 시간의 관계
 
-이 항목은 위 동기 예제에 구현되어 있지 않다. [Consumer와 스레딩 모델](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+위 코드는 동기 처리 예제다. 병렬 처리로 바꿀 때는 이 항목들을 추가로 구현해야 한다. [Consumer와 스레딩 모델](https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)

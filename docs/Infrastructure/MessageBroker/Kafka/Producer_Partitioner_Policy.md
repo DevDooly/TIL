@@ -1,12 +1,12 @@
 # Kafka Producer: 파티셔너 정책과 설정
 
-기준: Java client 3.9.2 / 4.0 계열, 2026-09-07. Kafka client 의존성과 접근 가능한 브로커가 필요하다.
+Kafka producer의 파티셔닝 정책은 키의 처리 순서와 배치 효율을 함께 고려해 선택한다. 아래 예제는 Java client 3.9.2 / 4.0 계열을 기준으로 하며, 실행하려면 Kafka client 의존성과 접속 가능한 브로커가 필요하다.
 
 ## 기본 정책
 
 명시적 partition이 있는 레코드는 그 파티션을 사용한다. 기본 내장 정책은 보통 키가 있으면 직렬화한 키의 해시를, null key에는 배치 효율을 고려한 분산을 사용한다. `partitioner.ignore.keys=true`는 기본 정책에서 키를 무시하는 설정이며 커스텀 파티셔너에 자동 적용되지 않는다. [Producer 설정](https://kafka.apache.org/39/configuration/producer-configs/)
 
-`partitioner.class`를 생략한다. Kafka 4.0에서 제거된 `org.apache.kafka.clients.producer.internals.DefaultPartitioner`를 명시하지 않는다. [업그레이드 안내](https://kafka.apache.org/40/getting-started/upgrade/)
+기본 정책은 `partitioner.class`를 생략하면 사용된다. 예전 설정에 `org.apache.kafka.clients.producer.internals.DefaultPartitioner`가 들어 있다면 제거한다. 이 클래스는 Kafka 4.0에서 삭제되었다. [업그레이드 안내](https://kafka.apache.org/40/getting-started/upgrade/)
 
 ```java
 import java.util.Properties;
@@ -41,13 +41,13 @@ props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG,
         "org.apache.kafka.clients.producer.RoundRobinPartitioner");
 ```
 
-RoundRobin은 키 해시 기반 배정을 제공하지 않으므로 동일 키를 같은 파티션에 모아야 하는 요구와 충돌할 수 있다. [중복 호출 버그와 수정 버전](Producer_Partitioner_Issue.md), [분포 측정 기준](Partitioner_Evolution_and_Imbalance.md)을 확인한다.
+RoundRobin은 키의 해시로 파티션을 고르지 않는다. 같은 키의 레코드를 한 파티션에 모아 순서대로 처리해야 한다면 이 정책은 맞지 않을 수 있다. [중복 호출 버그와 수정 버전](Producer_Partitioner_Issue.md), [분포 측정 기준](Partitioner_Evolution_and_Imbalance.md)을 확인한다.
 
 ## 커스텀 정책을 만들기 전에
 
 - 동일 키의 순서 범위와 파티션 증설 시 재배치 정책을 정의한다.
-- 없는 파티션을 반환하거나 모든 레코드를 0번에 고정하는 예제를 운영 코드로 사용하지 않는다.
+- 반환하는 파티션이 실제로 존재하는지 확인한다. 모든 레코드를 0번에 보내는 예제는 분산 동작을 확인하는 데 쓸 수 없다.
 - 인스턴스별 상태, 동시 호출, 카운터 overflow를 검토한다.
 - 패치 전 [abortOnNewBatch 호출 흐름](AbortOnNewBatch_Issue.md)을 확인한다.
 
-순서는 파티션 단위이며 여러 producer 사이의 업무상 선후 관계까지 자동 보장하지 않는다. 재시도와 idempotence 설정도 함께 검토한다.
+Kafka가 제공하는 순서는 파티션 단위다. 여러 producer에서 보내는 이벤트의 업무상 선후 관계는 애플리케이션에서도 다뤄야 한다. 재시도와 idempotence 설정이 전송 순서에 미치는 영향도 확인한다.

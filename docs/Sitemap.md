@@ -242,6 +242,7 @@
 * [Antigravity CLI (`agy`) 스킬 설치, 설정 및 활용 가이드](AI/Antigravity_CLI_Skills_Guide.md)
 * [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](AI/Claude_CLI_DeepSeek_Setup.md)
 * [Gemini CLI](AI/Gemini_CLI.md)
+* [MCP (Model Context Protocol) 서버 개발 및 연동 가이드](AI/MCP_Server_Development_Guide.md)
 * [Ollama](AI/Ollama.md)
 * [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](AI/Ollama_Local_Environment_Setup.md)
 * [OpenClaw](AI/OpenClaw.md)
