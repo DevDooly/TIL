@@ -4,6 +4,20 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Ingress.md](Infrastructure/Kubernetes/CKA/Ingress.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md](Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md](Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Services.md](Infrastructure/Kubernetes/CKA/Services.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md](Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Storage_StorageClass.md](Infrastructure/Kubernetes/CKA/Storage_StorageClass.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
+| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
 | 2026-09-16 13:55 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
@@ -40,17 +54,3 @@
 | 2026-09-07 22:10 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/MessageBroker/NATS.md](Infrastructure/MessageBroker/NATS.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MinIO/Lifecycle.md](Infrastructure/MinIO/Lifecycle.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MinIO/Versioning.md](Infrastructure/MinIO/Versioning.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md](Infrastructure/OracleCloud/HAProxy_Oracle_Latency_Diagnosis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [LLM_Development/Backend_Development_Checklist.md](LLM_Development/Backend_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [LLM_Development/Web_Development_Checklist.md](LLM_Development/Web_Development_Checklist.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Apache_Arrow_BufferAllocator_Management.md](Language/Java/Apache_Arrow_BufferAllocator_Management.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Collections.emptyList_vs_List.of.md](Language/Java/Collections.emptyList_vs_List.of.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/Effectively_Final.md](Language/Java/Effectively_Final.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md](Language/Java/SpringBoot/EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/NodeJs/libuv.md](Language/NodeJs/libuv.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Language/Python/Decorator.md](Language/Python/Decorator.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Templates/New_Development_Definition_Template.md](Templates/New_Development_Definition_Template.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Tools/Build/Java_Code_Formatters_Comparison.md](Tools/Build/Java_Code_Formatters_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Tools/Build/Spotless.md](Tools/Build/Spotless.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

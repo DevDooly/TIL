@@ -2,6 +2,7 @@ title: CKA 시험 준비
 nav:
 - CKA 목차: README.md
 - 0. 시험 개요 및 팁: CKA_Exam_Tips.md
+- 📅 2주 단기 완성 로드맵: Study_Plan_2Weeks.md
 - 1. 클러스터 아키텍처: Cluster_Architecture.md
 - 1.1 설치 및 업그레이드: Kubeadm_Install_Upgrade.md
 - 1.2 ETCD 백업 및 복원: ETCD_Backup_Restore.md
@@ -9,3 +10,15 @@ nav:
 - 2.1 워크로드 기초: Workloads.md
 - 2.2 스케줄링 제어: Scheduling.md
 - 2.3 리소스 제한: Resource_Limits.md
+- 2.4 설정 관리: ConfigMaps_Secrets.md
+- 2.5 멀티 컨테이너 & 사이드카: Multi_Container_Pods.md
+- 3.1 서비스 네트워킹: Services.md
+- 3.2 인그레스 라우팅: Ingress.md
+- 3.3 네트워크 정책: Network_Policy.md
+- 4.1 PV & PVC 스토리지: Storage_PV_PVC.md
+- 4.2 StorageClass 동적 프로비저닝: Storage_StorageClass.md
+- 5.1 파드 트러블슈팅: Troubleshooting_Pods.md
+- 5.2 컨트롤 플레인 트러블슈팅: Troubleshooting_Cluster.md
+- 5.3 노드 및 네트워크 트러블슈팅: Troubleshooting_Nodes_Network.md
+- 부록 - JSONPath 치트시트: JSONPath_Cheatsheet.md
+- 부록 - Killer.sh 공략: Killer_sh_Strategy.md

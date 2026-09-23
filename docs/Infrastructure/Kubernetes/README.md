@@ -17,3 +17,4 @@ Kubernetes(K8s)는 컨테이너화된 애플리케이션의 배포, 확장 및 �
 Certified Kubernetes Administrator 시험 출제 범위에 맞춘 실전 지침과 기술들을 정리합니다.
 
 * **[CKA 준비 메인](CKA/README.md)**: 시험 개요 및 도메인별 상세 목차
+* **[📅 CKA 2주 단기 완성 로드맵 (하루 1~2시간)](CKA/Study_Plan_2Weeks.md)**: 14일차 일일 체크리스트 및 실전 전략
