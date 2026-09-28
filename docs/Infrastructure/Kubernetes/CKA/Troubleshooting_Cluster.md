@@ -95,7 +95,9 @@ kubectl get nodes
 kubectl get pods -n kube-system -o wide
 ```
 
-API 서버 응답뿐 아니라 정적 파드 상태와 로그, 대상 워크로드의 생성·스케줄링·Ready 상태까지 확인한다. etcd 데이터 복구가 필요한 경우에는 [ETCD 백업 및 복원](ETCD_Backup_Restore.md)의 중지·복원·재기동 순서를 따른다.
+API 서버 응답뿐 아니라 정적 파드 상태와 로그, 대상 워크로드의 생성·스케줄링·Ready 상태까지 확인한다.
+
+운영 중 etcd 데이터 복구가 필요한 경우에는 [운영 참고: etcd 백업과 복원](ETCD_Backup_Restore.md)의 중지·복원·재기동 순서를 따른다. CKA 학습에서는 [개편된 역량 목록](CKA_Exam_Tips.md#curriculum-2025)에 맞춰 컴포넌트 상태·로그·연결·설정 오류 진단을 먼저 연습한다.
 
 ## 참고 자료
 

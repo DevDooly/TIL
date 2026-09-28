@@ -4,24 +4,24 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/RBAC_Authorization.md](Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
+| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Ingress.md](Infrastructure/Kubernetes/CKA/Ingress.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md](Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md](Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/RBAC_Authorization.md](Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Resource_Limits.md](Infrastructure/Kubernetes/CKA/Resource_Limits.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Scheduling.md](Infrastructure/Kubernetes/CKA/Scheduling.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Services.md](Infrastructure/Kubernetes/CKA/Services.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md](Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_StorageClass.md](Infrastructure/Kubernetes/CKA/Storage_StorageClass.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Workloads.md](Infrastructure/Kubernetes/CKA/Workloads.md) | docs: CKA 문법과 실습 절차 수정 |

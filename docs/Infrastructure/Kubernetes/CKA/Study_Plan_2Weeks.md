@@ -4,6 +4,8 @@
 
 시험 시간·허용 자료·작업 호스트 지침은 [0. 시험 개요 및 팁](CKA_Exam_Tips.md)을 따른다. 문서 번호는 [CKA 목차](README.md)와 같으며 일자별로 필요한 내용을 묶었다.
 
+[2025년 개편](CKA_Exam_Tips.md#curriculum-2025)을 기준으로 학습한다. etcd 백업·복원 상세 실습은 기본 14일 일정에서 분리해 마지막의 운영 참고로 두었다.
+
 ## 1주차: 구성과 리소스 관리
 
 ### Day 1. 시험 환경과 클러스터 구성
@@ -15,19 +17,19 @@
 - [ ] 런타임·패키지 준비 → init → kubeconfig → CNI → 워커 join → Ready 확인 순서로 실습한다.
 - [ ] CRI·CNI·CSI 역할과 추가 컨트롤 플레인의 HA 조건을 구분한다.
 
-### Day 2. 백업·복원과 업그레이드
+### Day 2. 클러스터 업그레이드와 HA 구성
 
-관련 문서: [1.1 설치 및 업그레이드](Kubeadm_Install_Upgrade.md), [1.2 etcd 백업 및 복원](ETCD_Backup_Restore.md)
+관련 문서: [1.1 설치 및 업그레이드](Kubeadm_Install_Upgrade.md), [HA 컨트롤 플레인 공식 절차](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
 
-- [ ] 변경 전에 etcd snapshot을 저장하고 상태를 확인한다.
-- [ ] 단일 멤버 실습에서 API server·etcd 중지 → 새 경로 복원 → 설정 확인 → etcd·API server 재기동 → 리소스 검증을 진행한다.
+- [ ] 변경 전 현재 상태·목표 버전·노드 수용 용량과 복구 수단을 확인한다.
 - [ ] 첫 컨트롤 플레인: kubeadm 갱신 → `upgrade plan` → `upgrade apply` → drain → kubelet 갱신·재시작 → Ready 확인 → uncordon.
 - [ ] 추가 컨트롤 플레인과 워커: kubeadm 갱신 → `upgrade node` → drain → kubelet 갱신·재시작 → Ready 확인 → uncordon.
 - [ ] 첫 컨트롤 플레인 → 나머지 컨트롤 플레인 → 워커 순서와 목표 버전의 패키지 저장소를 확인한다.
+- [ ] HA 구성의 안정적인 API endpoint, 추가 컨트롤 플레인 join과 etcd quorum 조건을 확인한다.
 
 ### Day 3. 권한·워크로드·설정
 
-관련 문서: [1.3 RBAC](RBAC_Authorization.md), [2.1 워크로드](Workloads.md), [2.4 ConfigMap과 Secret](ConfigMaps_Secrets.md)
+관련 문서: [1.2 RBAC](RBAC_Authorization.md), [2.1 워크로드](Workloads.md), [2.4 ConfigMap과 Secret](ConfigMaps_Secrets.md)
 
 - [ ] namespace·ServiceAccount → Role → RoleBinding → `auth can-i` 순서로 검증한다.
 - [ ] Deployment 생성 → 이미지 변경 → rollout 확인 → rollback을 실습한다.
@@ -127,6 +129,10 @@
 관련 문서: [0. 시험 개요 및 팁](CKA_Exam_Tips.md), [응시 체크리스트](Killer_sh_Strategy.md)
 
 - [ ] 공식 신분증·시스템 검사·시험 공간 요건을 확인한다.
-- [ ] 자주 틀린 명령과 업그레이드·복원 순서를 다시 설명해 본다.
+- [ ] 자주 틀린 명령과 업그레이드·장애 진단 순서를 다시 설명해 본다.
 - [ ] 허용 문서 위치와 작업 호스트 이동 방법을 확인한다.
 - [ ] 시험 예약 시간과 접속 절차를 확인한다.
+
+## 선택 실습: 운영 백업과 복구
+
+실제 클러스터 운영·복구까지 연습하려면 [etcd 백업과 복원](ETCD_Backup_Restore.md)을 별도 일정으로 진행한다. 백업 저장과 상태 확인, 단일 멤버 복원, API·리소스 검증을 실습한다. 운영 환경에서 업그레이드하기 전에는 시험 학습 우선순위와 관계없이 백업과 복구 계획을 준비한다.

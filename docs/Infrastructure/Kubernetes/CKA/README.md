@@ -4,6 +4,8 @@
 
 공식 출제 영역에 맞춰 문서를 묶었다. 아래 문서에서 다루지 않는 항목은 [보충 학습](#additional-topics)의 공식 문서를 함께 확인한다.
 
+[2025년 개편](CKA_Exam_Tips.md#curriculum-2025)에 따라 etcd 백업·복원은 운영 참고 부록으로 분류했다. 시험 학습은 개편된 역량 목록을 우선한다.
+
 !!! tip "학습 순서"
 
     [CKA 2주 학습 계획](Study_Plan_2Weeks.md)은 Kubernetes 기초 경험이 있는 사람을 위한 복습 일정이다. 실습에 걸리는 시간에 맞춰 기간을 조정한다.
@@ -21,8 +23,7 @@
 
 * **[1. 클러스터 아키텍처 및 컴포넌트](Cluster_Architecture.md)**: Control Plane & Worker Node 컴포넌트 역할
 * **[1.1 Kubeadm 클러스터 설치 및 업그레이드](Kubeadm_Install_Upgrade.md)**: 클러스터 초기화(init), 워커 조인(join), drain/uncordon 및 버전 업그레이드
-* **[1.2 ETCD 백업 및 복원](ETCD_Backup_Restore.md)**: etcd 3.6 기준 `etcdctl`(백업)과 `etcdutl`(복원) 분리 운영 실습
-* **[1.3 RBAC (Role-Based Access Control)](RBAC_Authorization.md)**: Role, ClusterRole, RoleBinding 및 `can-i` 권한 검증
+* **[1.2 RBAC (Role-Based Access Control)](RBAC_Authorization.md)**: Role, ClusterRole, RoleBinding 및 `can-i` 권한 검증
 
 ### 2. 워크로드 및 스케줄링 (Workloads & Scheduling) - 15%
 
@@ -53,6 +54,7 @@
 
 * **[부록: JSONPath 및 명령형 치트시트](JSONPath_Cheatsheet.md)**: jsonpath 필터링, custom-columns, --sort-by, 필수 단축키
 * **[부록: Killer.sh 모의고사 공략 및 시험 체크리스트](Killer_sh_Strategy.md)**: 2회 세션 활용법, 타임어택 전략, 응시 환경 체크리스트
+* **[부록: etcd 백업과 복원 (운영 참고)](ETCD_Backup_Restore.md)**: etcd 3.6의 `etcdctl`·`etcdutl`과 복구 실습
 
 ## 예제를 실행하기 전에
 

@@ -30,7 +30,7 @@ sudo kubeadm token create --print-join-command
 ## 2. 업그레이드 전 확인
 
 - 현재 버전·노드 상태와 목표 버전을 확인한다. minor 버전을 건너뛰지 않고 목표 버전의 kubeadm 문서와 version skew 정책을 따른다.
-- [etcd 백업](ETCD_Backup_Restore.md)과 필요한 애플리케이션 데이터를 보관한다.
+- 운영 환경에서는 업그레이드 전에 [etcd 백업](ETCD_Backup_Restore.md)과 필요한 애플리케이션 데이터를 보관하고 복구 절차를 확인한다.
 - 목표 minor 버전의 `pkgs.k8s.io` 저장소를 설정하고 `apt-cache madison kubeadm`으로 **정확한 패키지 버전**을 확인한다. 예전 `-00` 접미사를 고정해서 쓰지 않는다.
 - 노드를 한 대씩 처리한다. drain 전에 다른 노드의 수용 용량과 PodDisruptionBudget(PDB)을 확인한다.
 

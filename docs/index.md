@@ -14,7 +14,7 @@ Java·Spring Boot 백엔드 개발, 데이터 처리, Kubernetes 운영 과정�
 | Kafka | [파티셔너 불균형과 수정 버전](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) |
 | 데이터 처리 | [Java 연결된 GZIP 스트림 처리](Language/Java/Concatenated_Gzip_Decompression.md) |
 | JVM | [Virtual Thread pinning 진단](Language/Java/Virtual_Threads_FTP_Pinning.md) |
-| Kubernetes / CKA 학습 | [etcd 백업과 복원](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) |
+| Kubernetes / CKA 학습 | [개편된 시험 범위와 학습 목차](Infrastructure/Kubernetes/CKA/README.md) |
 | Java 버전 학습 | [Java 25 정식 기능과 Preview](Language/Java/Versions/Java25.md) |
 
 ## 카테고리

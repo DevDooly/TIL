@@ -2,7 +2,21 @@
 
 CKA는 터미널에서 Kubernetes 관리 작업을 수행하는 실습 시험이다. 문제에 지정된 작업 호스트·클러스터·namespace와 결과 저장 경로를 먼저 확인하고, 변경 후 실제 상태까지 검증한다.
 
-## 1. 시험 환경과 허용 자료
+<a id="curriculum-2025"></a>
+
+## 1. 2025년 개편과 etcd 학습 범위
+
+개편된 역량 목록은 **2025년 2월 18일 00:00 UTC 이후 응시하는 시험**에 적용된다. 구매일이나 재응시 여부가 아니라 응시일이 기준이다. [Linux Foundation 변경 안내](https://training.linuxfoundation.org/certified-kubernetes-administrator-cka-program-changes/)
+
+개편 전 [CNCF v1.31 커리큘럼](https://github.com/cncf/curriculum/blob/master/old-versions/CKA_Curriculum_v1.31.pdf)에 있던 **etcd 백업·복원 구현 항목은 개편된 역량 목록에서 삭제되었다.** [v1.35 커리큘럼](https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.35.pdf)에도 별도 항목으로 명시되어 있지 않다.
+
+따라서 시험 준비에서는 kubeadm 클러스터 관리·수명 주기, HA 컨트롤 플레인과 장애 진단을 먼저 연습한다. etcd의 역할·quorum·API 서버 연결은 이 주제들을 이해하는 데 필요하다. 백업·복원 독립 항목의 삭제를 etcd 관련 장애 진단까지 모두 제외되었다는 의미로 확대하지 않는다.
+
+개편 안내는 Helm·Kustomize, 확장 인터페이스(CNI·CSI·CRI), CRD·Operator, 워크로드 자동 확장과 Gateway API도 명시한다. Ingress도 계속 포함된다. 학습 경로는 [목차의 보충 학습](README.md#additional-topics)을 참고한다.
+
+[etcd 백업·복원 예제](ETCD_Backup_Restore.md)는 운영 참고 부록으로 제공한다. 이 문서의 etcd 3.6 도구 설명은 시험 개편과 별개의 버전 차이다.
+
+## 2. 시험 환경과 허용 자료
 
 - 시험 시간은 **2시간**, 합격 기준은 **66% 이상**이다. 문항 수와 개별 배점은 시험 화면을 따른다. [Linux Foundation FAQ](https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks)
 - 문제의 안내 상자에 지정된 **호스트로 SSH 접속**해서 작업한다. 완료 후 `exit`으로 `base`에 돌아온다. 중첩 SSH는 지원하지 않으며 `base`를 재부팅하지 않는다.
@@ -11,7 +25,7 @@ CKA는 터미널에서 Kubernetes 관리 작업을 수행하는 실습 시험이
 
 학습 문서에 연결한 모든 외부 사이트가 시험에서도 허용되는 것은 아니다. 시험 Kubernetes 버전은 공식 FAQ와 접속한 환경의 `kubectl version`으로 확인한다.
 
-## 2. 문제를 시작하는 순서
+## 3. 문제를 시작하는 순서
 
 ```bash
 # base에서 문제에 지정된 호스트로 이동한다.
@@ -28,7 +42,7 @@ kubectl get namespaces
 
 조회·수정 명령에는 문제에서 요구한 `-n <namespace>`를 붙인다. 노드의 systemd·패키지를 수정하는 문제라면 그 노드가 실제 작업 호스트인지도 확인한다. 다른 호스트로 이동할 때는 먼저 `exit`으로 base에 돌아온다.
 
-## 3. 터미널 설정
+## 4. 터미널 설정
 
 이미 설정되어 있는 항목은 그대로 사용한다. 다음은 Bash에서 필요한 경우 추가하는 예다.
 
@@ -50,7 +64,7 @@ set ts=2 sw=2 sts=2 et
 
 원격 Linux 터미널의 복사·붙여넣기는 `Ctrl+Shift+C` / `Ctrl+Shift+V`를 사용한다. 환경별 단축키는 시험 UI 안내를 우선한다.
 
-## 4. 풀이와 검증
+## 5. 풀이와 검증
 
 1. 문제의 요구사항과 기존 리소스를 조회한다.
 2. 명령형 생성 또는 공식 YAML 예제로 변경 내용을 준비한다.

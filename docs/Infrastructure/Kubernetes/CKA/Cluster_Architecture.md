@@ -16,7 +16,7 @@ Kubernetes 클러스터는 시스템을 관리하는 **Control Plane**과 실제
 ### 1.2 etcd
 
 * **역할**: Kubernetes API 리소스의 상태를 저장하는 **Key-Value 저장소**입니다. 애플리케이션이 PV에 쓴 데이터까지 저장하지는 않습니다.
-* **중요**: 백업·복원과 quorum을 이해해야 하는 상태 저장 컴포넌트입니다.
+* **학습 범위**: quorum과 API 서버 연결은 HA 구성·장애 진단과 함께 학습합니다. 백업·복원 상세 절차는 [운영 참고 부록](ETCD_Backup_Restore.md)에 정리했습니다.
 
 ### 1.3 kube-scheduler
 

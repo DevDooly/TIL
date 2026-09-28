@@ -1,4 +1,4 @@
-# 1.3 RBAC (Role-Based Access Control)
+# 1.2 RBAC (Role-Based Access Control)
 
 RBAC은 **'누가(Subject)'**, **'어디서(Namespace)'**, **'어떤 권한(Verb)'**을 가지고 **'어떤 자원(Resource)'**에 접근할 수 있는지 결정하는 쿠버네티스의 핵심 보안 메커니즘입니다.
 
