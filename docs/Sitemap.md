@@ -42,6 +42,7 @@
         * [Java Effectively Final](Language/Java/Effectively_Final.md)
         * [Java Garbage Collection (GC)](Language/Java/Garbage_Collection.md)
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
+        * [JDK 25 Docker Base 이미지 선택: Virtual Thread Pinning 해결 및 마이그레이션](Language/Java/JDK25_Docker_Base_Image_Selection.md)
         * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
         * [Java-Python 실행 성능 최적화 가이드](Language/Java/Optimizing_Java_Python_Execution.md)

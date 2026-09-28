@@ -27,7 +27,7 @@ jfr print --events jdk.VirtualThreadPinned recording.jfr
 ## 원인을 확인한 뒤 바꿀 것
 
 1. 증상이 재현되는 driver/library/JDK 조합을 고정한다.
-2. 실제 수정이 포함된 버전으로 변경하고 동일 입력으로 비교한다.
+2. 실제 수정이 포함된 버전으로 변경하고 동일 입력으로 비교한다. 컨테이너 환경에서는 [JDK 25 Docker Base 이미지 선택](JDK25_Docker_Base_Image_Selection.md)을 참고해 적합한 이미지를 구성한다.
 3. 애플리케이션 lock 범위를 줄일 수 있는지 검토한다. lock을 통째로 제거하기 전에 공유 상태의 불변식을 확인한다.
 4. 업그레이드가 어렵다면 확인된 경로만 [제한된 플랫폼 실행기](SpringBoot/JDBI_VT_Pinning_Solution.md)로 격리한다.
 

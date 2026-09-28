@@ -16,6 +16,7 @@ nav:
   - Scoped Value (공유 데이터): Scoped_Value.md
   - Virtual Threads in K8s: Virtual_Threads_in_K8s.md
   - Virtual Threads FTP Pinning: Virtual_Threads_FTP_Pinning.md
+  - JDK 25 Docker Base 이미지 선택: JDK25_Docker_Base_Image_Selection.md
 - Spring-Python 연동 가이드: Spring_Python_Integration.md
 - Java-Python Shared Memory (Arrow): Java_Python_Shared_Memory_Arrow.md
 - Apache Arrow BufferAllocator 관리: Apache_Arrow_BufferAllocator_Management.md
