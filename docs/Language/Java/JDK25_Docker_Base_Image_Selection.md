@@ -2,7 +2,9 @@
 
 `openjdk:22-oraclelinux9`에서 JDK 25로 전환하면 JDK 24의 JEP 491에 포함된 monitor 관련 가상 스레드 pinning 개선을 사용할 수 있다. JDK 25는 2025년 9월 출시된 LTS 버전이며, 배포판의 업데이트 정책과 컨테이너의 기반 OS를 함께 선택해야 한다.
 
-기존 RPM 패키지 작업을 유지하려면 **`amazoncorretto:25-al2023`을 우선 검증할 후보**로 잡을 수 있다. OS 패키지 의존성이 적거나 Ubuntu 운영 경험이 있다면 **`eclipse-temurin:25-jdk-noble`**도 후보가 된다. 실제 Dockerfile과 네이티브 라이브러리를 확인한 뒤 결정하며, Oracle Linux 9 유지가 필수인 경우는 별도로 다룬다.
+Kubernetes에서 일반적인 Java 서비스를 옮긴다면 **`eclipse-temurin:25-jdk-noble`로 먼저 검증**하는 것을 권한다. glibc 환경과 JDK 진단 도구를 유지하면서 전환하고, 런타임에 JDK 도구가 필요 없다고 확인되면 `25-jre-noble`로 줄인다. RPM 패키지 운영을 유지해야 하는 경우에는 Corretto AL2023, 조직의 UBI 표준이 있는 경우에는 Temurin UBI 10을 검토한다.
+
+노드가 Amazon Linux나 RHEL이라는 이유로 컨테이너도 같은 배포판을 쓸 필요는 없다. 컨테이너는 자체 사용자 공간을 포함하고 호스트 커널을 공유한다. 이미지의 OS·CPU 아키텍처, 커널·런타임 호환성과 애플리케이션의 네이티브 의존성을 확인한다. [Kubernetes 컨테이너 개념](https://kubernetes.io/docs/concepts/containers/)
 
 ## 1. 기존 이미지에서 바뀌는 것
 
@@ -141,8 +143,117 @@ jfr print --events jdk.VirtualThreadPinned /tmp/vt-check.jfr
 
 `jdk.VirtualThreadPinned`의 기본 임계값은 20ms다. 이벤트가 없을 때도 기록 설정과 임계값을 확인하고, native 코드 내부의 블로킹 등 이 이벤트만으로 확인하기 어려운 경로는 스레드 덤프·프로파일링과 대조한다. 업그레이드 효과는 실제 지연·오류율과 함께 판단한다. [JDK 25 Virtual Threads 진단](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
+## 7. Kubernetes 상황별 추천
+
+| 상황 | 먼저 검증할 이미지 | 선택 이유와 조건 |
+| :--- | :--- | :--- |
+| 일반적인 Spring Boot/JAR 서비스의 첫 JDK 25 전환 | `eclipse-temurin:25-jdk-noble` | glibc 기반. `jcmd` 등 진단 도구를 확보한 상태에서 호환성과 부하를 확인한다. |
+| 빌드와 실행을 분리했고 운영 컨테이너에 JDK 도구가 필요 없음 | `eclipse-temurin:25-jre-noble` | 런타임 구성을 줄인다. 에이전트·동적 컴파일·장애 진단 도구 의존성을 먼저 확인한다. |
+| OpenShift 또는 조직에서 UBI를 표준으로 사용 | `eclipse-temurin:25-jdk-ubi10-minimal` | 모든 대상 노드의 CPU 요구 사항과 UBI 저장소 패키지를 검증한다. OpenShift가 허용하는 UID/GID 범위도 맞춘다. |
+| 오래된 x86 노드 또는 CPU 세대를 파악하지 못함 | `eclipse-temurin:25-jdk-noble` | UBI 10의 x86-64-v3 조건을 확인하기 전에는 Noble부터 기동 시험한다. Noble도 해당 노드에서 직접 확인한다. |
+| amd64·arm64 노드가 섞임 | Noble의 JDK 또는 JRE | 두 아키텍처용 베이스와 최종 앱 이미지를 모두 제공한다. JNI/APM도 각 아키텍처에서 검증한다. |
+| 이미지 크기가 중요하고 musl 검증을 마침 | `eclipse-temurin:25-jre-alpine` | 네이티브 라이브러리·DNS·폰트·인증서를 포함한 서비스 테스트 통과 후 선택한다. |
+| 기존 RPM 패키지·Amazon Linux 운영 절차 의존성이 큼 | `amazoncorretto:25-al2023` | `dnf` 기반 후보. EKS 사용 자체가 이 이미지를 선택해야 하는 이유는 아니다. |
+| Oracle Linux 9 유지 또는 Oracle JDK 지원 계약이 필수 | `container-registry.oracle.com/java/jdk-no-fee-term:25-oraclelinux9` | OS와 계약 조건을 우선하고, 앞 절의 업데이트·라이선스 계획을 적용한다. |
+
+Noble의 `25-jdk-noble`·`25-jre-noble`, Alpine의 `25-jdk-alpine`·`25-jre-alpine`은 조회한 manifest에서 Linux amd64와 arm64를 제공했다. 실제 배포할 태그와 최종 앱 이미지의 manifest도 확인한다. 혼합 아키텍처 클러스터에서는 여러 아키텍처를 묶은 image index의 digest와 특정 아키텍처의 digest를 구분해야 한다. 특정 아키텍처 이미지만 빌드했다면 Pod의 스케줄링도 그 아키텍처로 제한한다. [Temurin 공식 태그와 Dockerfile](https://github.com/docker-library/official-images/blob/master/library/eclipse-temurin)
+
+### Temurin 적용 전에 확인할 Pod 설정
+
+- **실행 사용자와 쓰기 경로**: 숫자 UID/GID 또는 플랫폼이 배정한 UID로 실행한다. 읽기 전용 root filesystem을 쓰면 `/tmp`에 쓰기 가능한 볼륨을 두고, 업로드·캐시·JFR·heap dump 경로의 권한과 용량도 확인한다. `emptyDir`은 Pod 삭제 시 사라지므로 보존해야 하는 진단 파일은 따로 수집한다.
+- **CA와 시작 명령**: Kubernetes의 `command`는 이미지의 `ENTRYPOINT`를 대체한다. Temurin의 CA 처리를 사용할 때는 기본 entrypoint를 유지하고 실행 인자는 `args`로 전달한다. `USE_SYSTEM_CA_CERTS`와 `/certificates`를 쓴다면 비루트 환경에서 생성하는 truststore와 `/tmp` 쓰기 권한을 확인한다. 기존 Helm chart의 `command`도 살펴본다.
+- **메모리와 CPU**: 실제 적용된 requests/limits와 JVM이 인식하는 cgroup 값을 대조한다. heap 외에 metaspace, direct buffer, 스레드 stack, 에이전트의 native 메모리를 남긴다. `-Xmx`와 `MaxRAMPercentage`를 함께 지정했다면 실제 최대 heap을 확인하며, 모든 서비스에 같은 비율을 적용하지 않는다.
+- **준비 상태와 종료**: `startupProbe`·`readinessProbe`를 새 기동 시간에 맞추고, SIGTERM을 받은 뒤 `terminationGracePeriodSeconds` 안에 요청·파일·메시지 처리를 마치는지 확인한다. 이미지 기동 성공만으로 DB·FTP·TLS 연동이나 graceful shutdown이 검증되지는 않는다.
+
+[Kubernetes 보안 컨텍스트](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/), [command와 args](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/), [리소스 제한](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/), [Temurin CA 처리](https://hub.docker.com/_/eclipse-temurin)
+
+## 8. Kubernetes 점검 스크립트
+
+저장소의 [`scripts/check_temurin_k8s.py`](https://github.com/DevDooly/TIL/blob/main/scripts/check_temurin_k8s.py)는 Python 3.10 이상과 `kubectl`을 사용한다. Docker Engine, `jq`, 추가 Python 패키지는 필요 없다. **스크립트는 조회와 로컬 파일 생성만 수행한다.** 생성한 Job은 아래 명령으로 별도 실행한다.
+
+### 기존 설정 조회
+
+예제의 context, namespace, Deployment와 컨테이너 이름은 실제 환경에 맞게 바꾼다. `--context`를 명시해야 하므로 현재 선택된 클러스터가 바뀌어도 다른 클러스터를 묵시적으로 조회하지 않는다.
+
+```bash
+python scripts/check_temurin_k8s.py \
+  --context my-cluster --namespace app-namespace \
+  --workload deployment/my-app --container app
+```
+
+스크립트는 다음을 출력한다.
+
+- 노드 OS·아키텍처·Ready 상태·cordon 여부·커널·컨테이너 런타임
+- workload의 `nodeSelector`에 해당하는 노드와 추가 스케줄링 확인 필요 여부
+- 실행 UID/GID, `runAsNonRoot`, 읽기 전용 rootfs와 `/tmp` 마운트
+- Temurin entrypoint를 덮어쓰는 `command`, 사용자 지정 `JAVA_HOME`·JVM 옵션 유무
+- CPU·메모리 requests/limits, startup/readiness probe 유무
+
+Secret 리소스는 조회하지 않고 환경변수 값과 시작 명령 내용도 출력하지 않는다. admission webhook이나 LimitRange가 변경한 Pod 설정은 실제 실행 중인 `--workload pod/실제-pod-이름`으로도 확인한다. `envFrom`으로 주입되는 실제 값은 이 조회로 확인되지 않으므로 별도로 점검한다. `--container`는 sidecar가 있는 경우 필수다.
+
+`--node-selector nodepool=java`처럼 `key=value` 조건을 추가할 수 있다. workload의 `nodeSelector`와 교집합으로 적용하며 서로 충돌하면 중단한다. affinity·taint·리소스까지 계산하는 스케줄러 시뮬레이션은 아니므로, 목록에 있다고 실제 배치가 가능한 것은 아니다.
+
+외부에서 받은 JSON으로도 점검할 수 있다. JSON은 기존에 실행한 `kubectl get nodes -o json`과 `kubectl get deployment/my-app -o json`의 결과를 사용한다.
+
+```bash
+python scripts/check_temurin_k8s.py \
+  --nodes-json nodes.json --workload-json deployment.json --container app
+```
+
+종료 코드 `0`은 보고서 생성 성공, `2`는 인자·조회·입력·파일 생성 오류다. `CHECK`·`WARN`이 남아 있거나 보고서 생성에 성공했다고 해서 이미지 호환성 검증을 통과한 것은 아니다.
+
+### 대상 노드마다 베이스 이미지 기동 시험
+
+같은 명령에 `--emit-probes`를 추가하면 Ready 상태이고 cordon되지 않은 Linux 노드마다 진단 Job을 생성할 명세를 저장한다. 출력 파일이 이미 있으면 덮어쓰지 않는다.
+
+```bash
+python scripts/check_temurin_k8s.py \
+  --context my-cluster --namespace app-namespace \
+  --workload deployment/my-app --container app \
+  --node-selector nodepool=java \
+  --image eclipse-temurin:25-jdk-noble \
+  --emit-probes temurin-noble-jobs.json
+```
+
+`nodepool=java`는 예시다. 실제 노드 풀 label로 바꾸거나, workload의 `nodeSelector`만 사용하려면 생략한다. UBI 10을 비교할 때는 `--image eclipse-temurin:25-jdk-ubi10-minimal`과 다른 출력 파일명을 지정한다. 운영에서 사용할 정확한 패치 태그나 digest, 사내 미러 경로도 지정할 수 있다.
+
+생성한 Job은 다음 조건으로 실행된다.
+
+- 기본 UID/GID `10001`, 비루트, 읽기 전용 rootfs, capability 제거, `RuntimeDefault` seccomp
+- 쓰기 가능한 `/tmp`용 `emptyDir`과 서비스 계정 토큰 자동 마운트 비활성화
+- Job당 CPU `100m`/`500m`, 메모리 `128Mi`/`512Mi`의 request/limit
+- 원래 `nodeSelector`·node affinity·tolerations·RuntimeClass를 유지하고, 각 노드에 대한 affinity 추가
+- 재시도 없음, 최대 실행 시간 180초, 종료 후 1시간 뒤 Job·Pod 자동 정리
+
+OpenShift 등에서 UID/GID 범위가 정해져 있다면 `--uid`와 `--gid`로 허용된 값을 지정한다. 앱의 ServiceAccount, 환경변수, 볼륨, imagePullSecrets는 복사하지 않는다. 사내 이미지 인증이 필요하면 **진단 namespace에 있는** Secret 이름을 `--pull-secret registry-credentials`로 지정한다. pod affinity·anti-affinity·topology spread, 앱 label 기반 NetworkPolicy, 앱 인증서와 사용자 JVM 옵션도 자동 복제하지 않는다.
+
+아래 명령은 Bash 기준이다. 파일의 namespace·이미지·대상 노드·Job 수를 확인하고 실행한다. 모든 Job이 함께 생성되므로 큰 노드 풀은 `--node-selector`로 범위를 나눌 수 있다.
+
+```bash
+CHECK_ID=$(python -c 'import json; print(json.load(open("temurin-noble-jobs.json"))["items"][0]["metadata"]["labels"]["til.dev/check-id"])')
+
+kubectl --context my-cluster --namespace app-namespace create -f temurin-noble-jobs.json
+kubectl --context my-cluster --namespace app-namespace wait \
+  --for=condition=complete job -l "til.dev/check-id=$CHECK_ID" --timeout=240s
+
+kubectl --context my-cluster --namespace app-namespace get pods \
+  -l "til.dev/check-id=$CHECK_ID" -o wide
+kubectl --context my-cluster --namespace app-namespace logs \
+  -l "til.dev/check-id=$CHECK_ID" -c check --prefix --tail=-1
+
+# 결과를 확인한 뒤 이번 파일에 포함된 Job만 정리한다.
+kubectl --context my-cluster --namespace app-namespace delete -f temurin-noble-jobs.json
+```
+
+**생성한 모든 Job의 `Complete` 상태와 모든 대상 노드의 `TIL_TEMURIN_PROBE_OK` 로그**를 확인한다. 로그에는 OS, 아키텍처, UID, `/tmp` 쓰기 결과, JVM 버전과 cgroup CPU·메모리 인식값, 진단 도구 유무가 나온다. UBI 10의 CPU 명령어 조건, 이미지 아키텍처·pull 문제, 비루트 기동 문제를 찾는 데 사용할 수 있다.
+
+`wait`가 실패하거나 시간이 초과되면 같은 context·namespace에서 Job과 Pod의 상태·이벤트를 확인한다. Pod가 생성되지 않았다면 `kubectl --context my-cluster --namespace app-namespace describe job 실제-job-이름`으로 admission 거부 등을 찾는다. Pod가 있다면 같은 명령의 `job`을 `pod`로 바꿔 taint/affinity 불일치, 자원 부족, `ImagePullBackOff`를 확인하고, JVM 기동 오류는 컨테이너 로그로 확인한다. Pending·권한 오류·생성 대상에서 빠진 노드는 통과로 집계하지 않는다. [노드 배치 제약](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/), [Job 종료 후 정리](https://kubernetes.io/docs/concepts/workloads/controllers/ttlafterfinished/)
+
+이 시험은 **Temurin 베이스 이미지의 기동 확인**이다. 샘플 자원 제한으로 출력한 heap·processor 값은 실제 앱 Pod의 값과 다를 수 있다. 이후 Temurin으로 빌드한 최종 애플리케이션 이미지를 실제 보안 설정·볼륨·CA·리소스 제한으로 staging에 배포해 JNI/APM, 외부 연동, 부하, 종료를 확인한다. autoscaling으로 추가될 노드 풀과 다른 아키텍처도 검증 범위에 포함한다.
+
 ## 관련 문서
 
 - [Virtual Thread: FTP 처리의 Pinning 진단](Virtual_Threads_FTP_Pinning.md)
 - [JDBI와 Virtual Thread: Bounded Executor 격리](SpringBoot/JDBI_VT_Pinning_Solution.md)
 - [Java 25 주요 기능 및 정식/Preview 구분](Versions/Java25.md)
+- [Kubernetes에서 Virtual Thread 운영 시 확인할 것](Virtual_Threads_in_K8s.md)

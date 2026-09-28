@@ -4,7 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-09-28 10:22 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
+| 2026-09-28 11:07 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
+| 2026-09-28 11:07 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
 | 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
@@ -35,7 +36,6 @@
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Resume.md](Resume.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:35 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: MCP(Model Context Protocol) 서버 개발 및 연동 가이드 추가 |

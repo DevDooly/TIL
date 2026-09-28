@@ -19,7 +19,7 @@ title: Java & Spring Engineering
 ### 2. Modern Java & Concurrency (Java 21+)
 
 * **[Java Virtual Threads: FTP Pinning 진단](Virtual_Threads_FTP_Pinning.md)**: JDK별 진단 방법과 실제 실행 경로 확인
-* **[JDK 25 Docker Base 이미지 선택 가이드](JDK25_Docker_Base_Image_Selection.md)**: 이미지 태그·OS·라이선스 비교와 업그레이드 및 pinning 검증
+* **[JDK 25 Docker Base 이미지 선택 가이드](JDK25_Docker_Base_Image_Selection.md)**: Kubernetes 상황별 추천, Temurin 점검 스크립트와 업그레이드 검증
 * **[K8s 환경 Virtual Threads 분석](Virtual_Threads_in_K8s.md)**: CPU quota, 메모리와 downstream 동시성 제한
 * **[Check Virtual Thread](Check_Virtual_Thread.md)**: 런타임에 현재 스레드가 가상 스레드인지 확인하는 방법
 * **[Scoped Value](Scoped_Value.md)**: ThreadLocal의 한계를 극복하는 가상 스레드 시대의 불변 데이터 공유 메커니즘

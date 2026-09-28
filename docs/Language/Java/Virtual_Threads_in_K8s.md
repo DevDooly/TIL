@@ -2,6 +2,8 @@
 
 가상 스레드를 쓰면 I/O를 기다리는 작업을 많이 다루기 쉬워진다. 다만 Pod의 CPU와 메모리, DB 연결 수는 그대로이므로 동시 요청이 늘어날 때 어디서 병목이 생기는지 살펴봐야 한다. CPU 계산 자체가 빨라지는 것은 아니다. [Virtual Thread 도입 가이드](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
+JDK 컨테이너를 교체할 때는 [JDK 25 이미지 선택과 Kubernetes 점검 스크립트](JDK25_Docker_Base_Image_Selection.md)를 사용해 노드 아키텍처, Pod 보안 설정과 JVM 기동을 먼저 확인한다.
+
 ## CPU와 scheduler
 
 `jdk.virtualThreadScheduler.parallelism`은 정수로 설정한다. Pod의 CPU limit가 `500m`이라고 해서 이 값에 `0.5`를 넣을 수는 없다. 스케줄러 설정을 바꾸더라도 CPU 사용량이 제한을 넘으면 throttling은 발생한다.
