@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-09-28 09:58 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | docs: JDK 25 Docker Base 이미지 선택 가이드 추가 (Virtual Thread Pinning 해결) |
+| 2026-09-28 10:08 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | docs: Oracle Linux/JDK 라이선스 및 업데이트 리스크 반영하여 Base 이미지 권장안 수정 |
 | 2026-09-28 09:58 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 Docker Base 이미지 선택 가이드 추가 (Virtual Thread Pinning 해결) |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
