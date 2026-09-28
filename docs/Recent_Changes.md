@@ -4,8 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-28 13:44 | [Language/Java/Java_Resource_Sizing_in_K8s.md](Language/Java/Java_Resource_Sizing_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
+| 2026-09-28 13:44 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
 | 2026-09-28 11:07 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
-| 2026-09-28 11:07 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
 | 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
 | 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
@@ -53,4 +54,3 @@
 | 2026-09-07 22:10 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

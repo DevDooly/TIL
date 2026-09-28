@@ -44,6 +44,7 @@
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
         * [JDK 25 Docker Base 이미지 선택과 업그레이드 검증](Language/Java/JDK25_Docker_Base_Image_Selection.md)
         * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
+        * [Kubernetes Java 데몬 리소스 산정: CPU, JVM, Virtual Thread](Language/Java/Java_Resource_Sizing_in_K8s.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
         * [Java-Python 실행 성능 최적화 가이드](Language/Java/Optimizing_Java_Python_Execution.md)
         * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](Language/Java/Scoped_Value.md)

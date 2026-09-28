@@ -10,6 +10,7 @@ nav:
 - JVM Internals:
   - Memory Structure: Memory.md
   - Garbage Collection: Garbage_Collection.md
+  - Kubernetes Java 리소스 산정: Java_Resource_Sizing_in_K8s.md
   - ThreadPoolExecutor & 거부 정책: ThreadPoolExecutor.md
   - 가상 스레드 여부 확인 방법: Check_Virtual_Thread.md
   - Concatenated GZIP 스트림 압축 해제: Concatenated_Gzip_Decompression.md

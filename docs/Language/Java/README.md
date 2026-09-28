@@ -14,6 +14,7 @@ title: Java & Spring Engineering
 
 * **[Java Memory Structure](Memory.md)**: JVM Runtime Data Areas (Stack, Heap, Metaspace, Direct Memory) 심층 분석
 * **[Garbage Collection (GC)](Garbage_Collection.md)**: Generational GC 원리, ZGC/G1GC 튜닝 및 GC 동작 메커니즘
+* **[Kubernetes Java 리소스 산정 가이드](Java_Resource_Sizing_in_K8s.md)**: CPU request/limit, ActiveProcessorCount, 가상 스레드 동시성, 메모리와 HPA
 * **[ThreadPoolExecutor & Rejection Policy](ThreadPoolExecutor.md)**: 스레드 풀 생성 전략 및 과부하 시 작업 거부 정책
 
 ### 2. Modern Java & Concurrency (Java 21+)

@@ -2,6 +2,8 @@
 
 가상 스레드를 쓰면 I/O를 기다리는 작업을 많이 다루기 쉬워진다. 다만 Pod의 CPU와 메모리, DB 연결 수는 그대로이므로 동시 요청이 늘어날 때 어디서 병목이 생기는지 살펴봐야 한다. CPU 계산 자체가 빨라지는 것은 아니다. [Virtual Thread 도입 가이드](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
+CPU request/limit과 `ActiveProcessorCount`를 정하는 순서, 메모리 예산, HPA와 상주 워커의 종료 조건은 [Kubernetes Java 리소스 산정 가이드](Java_Resource_Sizing_in_K8s.md)에서 다룬다.
+
 JDK 컨테이너를 교체할 때는 [JDK 25 이미지 선택과 Kubernetes 점검 스크립트](JDK25_Docker_Base_Image_Selection.md)를 사용해 노드 아키텍처, Pod 보안 설정과 JVM 기동을 먼저 확인한다.
 
 ## CPU와 scheduler
