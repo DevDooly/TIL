@@ -16,7 +16,7 @@
 | JDK 24 이후 | JEP 491로 monitor 관련 pinning 개선. native/foreign 호출 등 남는 경로 확인 |
 | 공통 | JFR 이벤트 지속 시간과 전송 지연·CPU·lock 대기 시점을 대조 |
 
-JDK 24부터는 `jdk.tracePinnedThreads` 속성이 제거되었으므로 JDK 21에서 쓰던 옵션을 그대로 사용할 수 없다. [JEP 491](https://openjdk.org/jeps/491), [JDK 21 진단](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html), [JDK 25 진단](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
+JDK 24부터는 `jdk.tracePinnedThreads` 속성이 제거되어 해당 옵션을 지정해도 효과가 없다. [JEP 491](https://openjdk.org/jeps/491), [JDK 21 진단](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html), [JDK 25 진단](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)
 
 JFR 파일에서 pinning 이벤트만 보려면 다음 명령을 사용한다. 이벤트가 보이지 않을 때는 기록 설정과 임계값도 확인한다. 다른 이유로 블로킹된 작업은 이 이벤트에 나타나지 않을 수 있다.
 
