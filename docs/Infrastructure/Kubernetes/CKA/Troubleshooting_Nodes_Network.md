@@ -1,106 +1,102 @@
-# 5.3 노드 및 네트워크 트러블슈팅 (Node & Network Troubleshooting)
+# 5.3 노드 및 네트워크 트러블슈팅
 
-워커 노드가 `NotReady` 상태에 빠지거나, 파드 간 또는 클러스터 내부 도메인(DNS) 통신이 실패하는 상황을 해결하는 절차를 정리합니다.
+노드 상태를 확인하고, 영향을 받은 노드의 로그를 읽은 다음 원인을 수정한다. 노드가 Ready로 돌아온 뒤에도 애플리케이션 통신과 DNS가 복구되었는지 확인한다.
 
----
+## 1. NotReady 노드 진단
 
-## 1. 워커 노드 NotReady 장애 해결
-
-워커 노드가 `NotReady` 상태로 표시되면 해당 노드에 실행 중인 파드들이 정상 동작하지 않거나 스케줄링이 중단됩니다.
+`NotReady`는 kubelet이 정상 상태를 보고하지 못한다는 의미다. 기존 컨테이너가 계속 실행될 수도 있으므로 모든 파드가 중단되었다고 단정하지 않는다.
 
 ```bash
-# 1. 노드 상태 및 조건(Conditions) 확인
 kubectl get nodes
 kubectl describe node <node-name>
+kubectl get pods -A -o wide --field-selector spec.nodeName=<node-name>
 ```
 
-`describe node` 출력의 `Conditions` 섹션을 확인합니다:
+`Ready: False`와 `Ready: Unknown`, 마지막 상태 보고 시각, `MemoryPressure`, `DiskPressure`, `PIDPressure`와 관련 이벤트를 확인한다. `Unknown`이면 kubelet 중단뿐 아니라 노드와 API 서버 사이의 통신 문제도 살핀다.
 
-- `Ready: False` 또는 `Ready: Unknown`
-- `MemoryPressure`, `DiskPressure`, `PIDPressure`가 `True`인지 확인
+### 로그 수집 → 원인 수정 → 필요한 서비스 재시작
 
-### 워커 노드 복구 3단계 절차
+대상 노드에 SSH로 접속해 상태와 로그를 먼저 수집한다. 아래 런타임 예시는 containerd이며, CRI-O 등 다른 런타임은 실제 서비스 이름을 사용한다.
+
 ```bash
-# 해당 노드로 SSH 접속
 ssh <node-name>
-
-# 1단계: kubelet 데몬 상태 확인
-sudo systemctl status kubelet
-
-# 만약 죽어있다면 시작 및 부팅 시 자동실행 등록
-sudo systemctl daemon-reload
-sudo systemctl restart kubelet
-sudo systemctl enable kubelet
-
-# 2단계: 여전히 실패한다면 journalctl로 시스템 로그 분석
-sudo journalctl -u kubelet -n 50 --no-pager
-
-# 3단계: 컨테이너 런타임(containerd) 상태 점검
-sudo systemctl status containerd
-sudo systemctl restart containerd
+sudo systemctl status kubelet containerd --no-pager
+sudo journalctl -u kubelet -n 100 --no-pager
+sudo journalctl -u containerd -n 100 --no-pager
+sudo crictl info
 ```
 
-### 자주 발생하는 노드 장애 원인
+| 확인 결과 | 조치 |
+| --- | --- |
+| kubelet이 중지됨 | 중지 원인을 확인한 뒤 `sudo systemctl start kubelet` |
+| kubelet 설정 오류 | 실제 설정 파일을 수정하고 kubelet 재시작 |
+| systemd unit·drop-in 수정 | `daemon-reload` 후 해당 서비스 재시작 |
+| cgroup 드라이버 불일치 | kubelet과 런타임의 설정·자동 감지 지원을 확인해 일치시킴. `systemd` 자체는 잘못된 값이 아님 |
+| 인증서·kubeconfig 오류 | 경로·권한·유효기간·CA와 API 서버 주소 확인 |
+| 디스크·메모리·PID 압박 | 사용량과 원인 프로세스·로그·이미지 등을 조사하고 용량 또는 워크로드 조정 |
+| CRI 런타임 오류 | 런타임 로그와 설정을 먼저 확인하고 원인 수정 후 필요한 경우에만 재시작 |
 
-1. **kubelet 서비스가 중지되어 있음**: `systemctl start kubelet`으로 해결.
-2. **kubelet 설정 오타**: `/var/lib/kubelet/config.yaml` 파일 내의 오타 또는 잘못된 cgroup 드라이버(`cgroupDriver: systemd`).
-3. **인증서 또는 kubelet.conf 누락**: `/etc/kubernetes/kubelet.conf` 경로가 잘못되었거나 클러스터 CA가 변경된 경우.
+`systemctl enable`은 부팅 시 자동 시작 설정이며 현재 장애 원인을 고치지 않는다. 모든 장애에서 런타임을 함께 재시작할 필요는 없다.
 
----
-
-## 2. CoreDNS 및 클러스터 도메인 해석 장애
-
-파드 내부에서 서비스 이름(예: `http://my-service`)으로 접속을 시도할 때 `Could not resolve host` 에러가 난다면 DNS 계층의 문제입니다.
-
-### 2.1 CoreDNS 진단 순서
-```bash
-# 1. CoreDNS 파드가 정상 실행 중인지 확인
-kubectl get pods -n kube-system -l k8s-app=kube-dns
-
-# 2. CoreDNS 서비스의 ClusterIP 확인
-kubectl get svc -n kube-system -l k8s-app=kube-dns
-
-# 3. CoreDNS 로그 확인 (에러 및 재시작 원인 추적)
-kubectl logs -n kube-system -l k8s-app=kube-dns
-```
-
-### 2.2 파드 내부 DNS 설정 점검
-파드가 올바른 DNS 서버(kube-dns의 ClusterIP)를 바라보고 있는지 확인합니다.
-```bash
-# 파드 내부의 resolv.conf 확인
-kubectl exec -it <pod-name> -- cat /etc/resolv.conf
-# nameserver <kube-dns-cluster-ip> 가 적혀 있어야 함
-
-# nslookup 도메인 질의 테스트
-kubectl exec -it <pod-name> -- nslookup kubernetes.default
-```
-
-### 2.3 CoreDNS ConfigMap 점검
-CoreDNS의 설정 파일은 ConfigMap으로 관리됩니다.
-```bash
-kubectl describe configmap coredns -n kube-system
-```
-
-- upstream DNS 서버 포워딩 설정(`/etc/resolv.conf`)이나 도메인 존 설정에 문법 오류가 없는지 점검합니다.
-
----
-
-## 3. CNI 네트워크 플러그인 장애
-
-모든 노드가 `NotReady`이고 `describe node`에서 `NetworkPluginNotReady` 메시지가 뜬다면 CNI(Calico, Flannel 등) 플러그인이 배포되지 않았거나 중단된 상태입니다.
+수정 후 베이스 노드로 돌아가 문제에서 지정한 kubectl 작업 호스트에 접속한다. 중첩 SSH를 피하고 다음을 확인한다.
 
 ```bash
-# CNI 데몬셋 파드 상태 확인
-kubectl get pods -n kube-system | grep -E "calico|flannel|weave|cilium"
-
-# CNI 설정 파일 위치 확인
-ls -l /etc/cni/net.d/
+kubectl wait --for=condition=Ready node/<node-name> --timeout=120s
+kubectl get pods -A -o wide --field-selector spec.nodeName=<node-name>
 ```
 
----
+## 2. DNS 장애 진단
 
-## 💡 CKA 시험 실전 팁
+먼저 실제 Service 이름과 네임스페이스를 확인한다. 짧은 이름 `my-service`는 보통 호출 파드의 네임스페이스에서 찾는다. 다른 네임스페이스라면 `my-service.<namespace>` 또는 클러스터 도메인을 포함한 이름을 사용한다.
 
-1. 노드 문제 해결 지시가 나오면 우선 **`ssh <node-name>`**으로 접속해야 합니다.
-2. 접속 후 가장 빠른 1순위 조치는 **`systemctl status kubelet`**과 **`journalctl -u kubelet -e`**입니다.
-3. 작업 완료 후 노드에서 빠져나와(`exit`) 마스터 노드에서 **`kubectl get nodes`**로 `Ready` 상태로 복구되었는지 반드시 확인하세요!
+### 2.1 파드의 DNS 설정과 질의 결과
+
+```bash
+kubectl exec <pod-name> -- cat /etc/resolv.conf
+kubectl exec <pod-name> -- nslookup kubernetes.default
+kubectl get pod <pod-name> -o yaml
+```
+
+컨테이너에 `nslookup`이 없다면 허용된 진단용 파드를 사용한다. 멀티 컨테이너 파드는 `-c`로 대상을 지정한다.
+
+`dnsPolicy`, `dnsConfig`, `hostNetwork`와 `/etc/resolv.conf`를 함께 확인한다. NodeLocal DNSCache를 사용하는 클러스터는 nameserver가 kube-dns의 ClusterIP 대신 로컬 캐시 주소일 수 있다. `hostNetwork` 파드에서 클러스터 DNS가 필요하다면 `ClusterFirstWithHostNet` 설정을 확인한다.
+
+### 2.2 CoreDNS와 kube-dns Service
+
+```bash
+kubectl get pods -n kube-system -l k8s-app=kube-dns -o wide
+kubectl get svc kube-dns -n kube-system
+kubectl get endpointslices -n kube-system -l kubernetes.io/service-name=kube-dns
+kubectl logs -n kube-system -l k8s-app=kube-dns --tail=100
+kubectl get configmap coredns -n kube-system -o yaml
+```
+
+DNS 파드의 Ready 상태, Service 주소와 EndpointSlice, Corefile의 문법·upstream 설정을 확인한다. 외부 도메인만 실패한다면 upstream 연결과 forward 설정을 살핀다.
+
+Egress를 제한한 파드는 DNS 서버로의 UDP·TCP 53번 포트도 허용되어야 한다. 실제 DNS 경로와 적용된 NetworkPolicy를 확인한다.
+
+## 3. CNI와 서비스 통신
+
+`NetworkPluginNotReady`는 해당 노드의 CNI 초기화 문제를 조사할 단서다. 일부 노드에서만 발생할 수도 있다.
+
+```bash
+kubectl get daemonsets,pods -A -o wide
+```
+
+설치된 CNI의 실제 네임스페이스·파드를 선택해 Events와 로그를 읽는다. CNI가 항상 `kube-system`에 설치되는 것은 아니다. 문제가 있는 노드에서 런타임이 사용하는 CNI 설정·바이너리 경로도 확인한다. 흔히 사용하는 설정 경로는 `/etc/cni/net.d/`이다.
+
+DNS 해석은 성공하는데 Service 접속이 실패하면 다음 순서로 범위를 좁힌다.
+
+1. Service selector, port·targetPort와 EndpointSlice를 확인한다.
+2. 대상 파드가 Ready이며 해당 포트에서 수신하는지 확인한다.
+3. 출발·도착 파드에 적용되는 NetworkPolicy와 노드 네트워크를 확인한다.
+4. 클러스터 구성에 따라 kube-proxy 또는 이를 대체하는 CNI의 서비스 처리 기능을 확인한다.
+
+복구 후에는 같은 노드·다른 노드의 파드 통신, Service 접속과 DNS 질의를 다시 시험한다.
+
+## 참고 자료
+
+- [Kubernetes: Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug/debug-cluster/)
+- [Kubernetes: Debugging DNS Resolution](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
+- [Kubernetes: NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/)
+- [서비스 진단](Services.md), [네트워크 정책](Network_Policy.md)

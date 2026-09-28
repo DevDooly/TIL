@@ -8,13 +8,13 @@
 
 파드 내부의 컨테이너 스펙(spec)에 정의합니다.
 
-* **Requests (요청량)**: 
-    * 컨테이너가 실행되기 위해 **최소한으로 보장받아야 하는 자원량**.
-    * 스케줄러는 노드의 남은 자원이 Requests보다 클 때만 해당 파드를 배치합니다. (예약의 개념)
+* **Requests (요청량)**:
+    * 스케줄링에 사용하는 **자원 요청량**. CPU 경합 시 배분에도 영향을 주며 실제 사용량 상한은 아닙니다.
+    * 스케줄러는 실제 순간 사용량이 아니라 노드 allocatable과 이미 배치된 파드들의 requests로 수용 가능성을 판단합니다.
 * **Limits (제한량)**:
     * 컨테이너가 사용할 수 있는 **최대 자원량**.
     * **CPU**: 한도를 넘게 쓰려고 하면 스로틀링(Throttling)이 발생하여 느려집니다. (파드가 죽지는 않음)
-    * **Memory**: 한도를 넘게 쓰면 **OOMKilled** (Out Of Memory Killed) 에러가 발생하며 파드가 강제 종료(재시작)됩니다.
+    * **Memory**: 메모리 압력으로 컨테이너 프로세스가 **OOMKilled**될 수 있습니다. 재시작 여부는 restartPolicy 등에 따르며 Pod 전체가 항상 삭제되는 것은 아닙니다.
 
 ---
 
@@ -59,3 +59,10 @@ spec:
       memory: 256Mi
     type: Container
 ```
+
+LimitRange는 생성 시 기본값과 제한을 적용합니다. 새로 만들거나 수정해도 기존 파드의 requests·limits를 소급 변경하지 않습니다. 위 예제는 기본 메모리 값만 설정하며 최소·최대 범위까지 제한하려면 `min`·`max`를 별도로 지정합니다. 네임스페이스 전체의 자원 합계 제한은 ResourceQuota를 사용합니다.
+
+## 참고 자료
+
+- [Kubernetes: Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+- [Kubernetes: Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)

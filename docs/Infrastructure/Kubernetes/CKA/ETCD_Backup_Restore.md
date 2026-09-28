@@ -1,4 +1,4 @@
-# etcd 백업과 복원: etcdctl과 etcdutl 구분
+# 1.2 etcd 백업과 복원: etcdctl과 etcdutl 구분
 
 etcd 3.6에서는 백업을 만드는 도구와 복원하는 도구가 다르다. 백업은 `etcdctl`, 파일 상태 확인과 복원은 `etcdutl`을 사용한다. CKA 실습 환경이 다른 버전이라면 설치된 도구와 클러스터 구성부터 확인한다.
 
@@ -20,7 +20,7 @@ etcdutl snapshot restore --help
 
 ## 백업과 상태 확인
 
-다음은 kubeadm에서 자주 사용하는 경로를 가정한 예다. `endpoints`·`cacert`·`cert`·`key` 네 항목은 실제 static Pod manifest와 인증 설정에 맞춘다.
+다음은 kubeadm에서 자주 사용하는 경로를 가정한 예다. `endpoints`·`cacert`·`cert`·`key` 네 항목은 실제 static Pod manifest와 인증 설정에 맞춘다. 인증서·키를 읽고 백업·복원 경로에 쓸 수 있는 계정에서 실행한다. kubeadm 노드에서는 보통 root 권한이 필요하다.
 
 ```bash
 etcdctl \

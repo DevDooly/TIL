@@ -1,54 +1,67 @@
-# 0. CKA 시험 개요 및 팁 (Exam Overview & Tips)
+# 0. CKA 시험 개요 및 팁
 
-CKA 시험은 이론보다는 **실습(Performance-based)** 위주의 시험입니다. 실제 터미널 환경에서 문제를 해결해야 하므로, 시간 관리와 정확한 명령어 사용이 합격의 핵심입니다.
+CKA는 터미널에서 Kubernetes 관리 작업을 수행하는 실습 시험이다. 문제에 지정된 작업 호스트·클러스터·namespace와 결과 저장 경로를 먼저 확인하고, 변경 후 실제 상태까지 검증한다.
 
----
+## 1. 시험 환경과 허용 자료
 
-## 1. 시험 환경 및 유의사항
+- 시험 시간은 **2시간**, 합격 기준은 **66% 이상**이다. 문항 수와 개별 배점은 시험 화면을 따른다. [Linux Foundation FAQ](https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks)
+- 문제의 안내 상자에 지정된 **호스트로 SSH 접속**해서 작업한다. 완료 후 `exit`으로 `base`에 돌아온다. 중첩 SSH는 지원하지 않으며 `base`를 재부팅하지 않는다.
+- 지정 호스트의 `kubectl`과 `k` alias·자동완성이 준비되어 있는지 확인한다. `base`에 같은 도구가 있다고 가정하지 않는다. context 전환 명령이 제공되면 실행하고 현재 context·namespace도 확인한다. [공식 기술 지침](https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad)
+- VM 안의 브라우저에서 Kubernetes 문서·블로그, Helm 문서, CKA용 Gateway API 문서와 문제의 Quick Reference 자료를 사용할 수 있다. 허용 문서 내부 검색은 가능하지만 외부 검색 결과는 열지 않는다. 응시 전 [허용 자료 목록](https://docs.linuxfoundation.org/tc-docs/certification/certification-resources-allowed)을 다시 확인한다.
 
-* **플랫폼**: Killer.sh와 유사한 원격 데스크톱(Remote Desktop) 환경에서 진행됩니다.
-* **브라우저 탭**: 시험 중에는 공식 문서(kubernetes.io/docs) 탭 하나만 추가로 띄울 수 있습니다.
-* **컨텍스트(Context)**: 문제마다 작업해야 할 클러스터가 다를 수 있습니다. 문제 상단에 제공되는 `kubectl config use-context ...` 명령어를 **반드시** 먼저 실행해야 합니다.
+학습 문서에 연결한 모든 외부 사이트가 시험에서도 허용되는 것은 아니다. 시험 Kubernetes 버전은 공식 FAQ와 접속한 환경의 `kubectl version`으로 확인한다.
 
----
+## 2. 문제를 시작하는 순서
 
-## 2. 터미널 생산성 향상 (필수 설정)
-
-시험 시작 직후, 시간을 아끼기 위해 아래 설정들을 터미널에 적용하는 것을 권장합니다.
-
-### 2.1 kubectl Alias 및 자동완성
 ```bash
-source <(kubectl completion bash) # bash-completion 패키지가 설치되어 있음
+# base에서 문제에 지정된 호스트로 이동한다.
+ssh <task-host>
+
+# 접속한 호스트에서 확인한다.
+hostname
+kubectl config current-context
+
+# 문제에서 context 전환을 지시한 경우에 실행한다.
+kubectl config use-context <required-context>
+kubectl get namespaces
+```
+
+조회·수정 명령에는 문제에서 요구한 `-n <namespace>`를 붙인다. 노드의 systemd·패키지를 수정하는 문제라면 그 노드가 실제 작업 호스트인지도 확인한다. 다른 호스트로 이동할 때는 먼저 `exit`으로 base에 돌아온다.
+
+## 3. 터미널 설정
+
+이미 설정되어 있는 항목은 그대로 사용한다. 다음은 Bash에서 필요한 경우 추가하는 예다.
+
+```bash
+source <(kubectl completion bash)
 alias k=kubectl
 complete -F __start_kubectl k
-```
-
-### 2.2 자주 쓰는 환경변수
-```bash
 export do="--dry-run=client -o yaml"
-# 사용 예: k run nginx --image=nginx $do > pod.yaml
+
+# 클러스터에 생성하지 않고 YAML 뼈대 저장
+k run nginx --image=nginx $do > pod.yaml
 ```
 
-### 2.3 Vim 설정 (`~/.vimrc`)
-YAML 파일을 편집할 때 들여쓰기 오류를 방지하기 위한 최소한의 설정입니다.
+YAML 편집용 `~/.vimrc` 설정:
+
 ```vim
 set ts=2 sw=2 sts=2 et
 ```
 
----
+원격 Linux 터미널의 복사·붙여넣기는 `Ctrl+Shift+C` / `Ctrl+Shift+V`를 사용한다. 환경별 단축키는 시험 UI 안내를 우선한다.
 
-## 3. 실전 문제 풀이 팁
+## 4. 풀이와 검증
 
-1. **Dry-run 활용**: YAML 파일을 처음부터 작성하지 마세요. `kubectl ... --dry-run=client -o yaml > file.yaml` 명령어로 뼈대를 만들고 수정하는 것이 훨씬 빠르고 정확합니다.
-2. **시간 관리**: 배점이 높고 쉬운 문제(예: ETCD 백업, 가벼운 트러블슈팅)부터 먼저 푸세요. 모르는 문제는 `flag` 표시를 하고 과감히 넘어갑니다.
-3. **공식 문서 검색 키워드**: 검색창에 `pv pvc`, `network policy`, `ingress` 등 핵심 키워드를 입력하여 예제 코드를 빠르게 찾는 연습이 필요합니다.
-4. **원격 데스크톱 복사/붙여넣기 단축키**:
-   - 시험 환경(XFCE) 터미널 복사: `Ctrl + Shift + C`
-   - 시험 환경 터미널 붙여넣기: `Ctrl + Shift + V`
-   - 브라우저 및 문제 본문 복사: 일반 `Ctrl + C` / `Ctrl + V`
+1. 문제의 요구사항과 기존 리소스를 조회한다.
+2. 명령형 생성 또는 공식 YAML 예제로 변경 내용을 준비한다.
+3. 이름·namespace·selector·포트·파일 경로를 확인하고 적용한다.
+4. `get`, `describe`, `rollout status`, 실제 통신 등 요구사항에 맞는 방법으로 검증한다.
+5. 파일 저장 문제는 지정 경로의 내용을 확인한다. 완료하면 SSH 세션에서 나온다.
 
----
+배점과 예상 소요 시간으로 풀이 순서를 정한다. 특정 문제가 반드시 출제된다고 전제하거나 외운 배점을 기준으로 시간을 배분하지 않는다.
 
-## 4. 2주 단기 합격 커리큘럼
+## 관련 문서
 
-하루 1~2시간씩 14일간 준비하여 시험에 응시할 수 있는 상세 플랜은 **[📅 CKA 2주 단기 완성 로드맵](Study_Plan_2Weeks.md)**을 참고하세요. 일자별 학습 목표와 체크리스트가 준비되어 있습니다.
+- [CKA 2주 학습 계획](Study_Plan_2Weeks.md)
+- [JSONPath와 명령형 명령 치트시트](JSONPath_Cheatsheet.md)
+- [Killer.sh 활용과 응시 준비](Killer_sh_Strategy.md)

@@ -2,7 +2,7 @@ title: CKA 시험 준비
 nav:
 - CKA 목차: README.md
 - 0. 시험 개요 및 팁: CKA_Exam_Tips.md
-- 📅 2주 단기 완성 로드맵: Study_Plan_2Weeks.md
+- 2주 학습 계획: Study_Plan_2Weeks.md
 - 1. 클러스터 아키텍처: Cluster_Architecture.md
 - 1.1 설치 및 업그레이드: Kubeadm_Install_Upgrade.md
 - 1.2 ETCD 백업 및 복원: ETCD_Backup_Restore.md

@@ -4,27 +4,33 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Ingress.md](Infrastructure/Kubernetes/CKA/Ingress.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md](Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md](Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/RBAC_Authorization.md](Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Resource_Limits.md](Infrastructure/Kubernetes/CKA/Resource_Limits.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Scheduling.md](Infrastructure/Kubernetes/CKA/Scheduling.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Services.md](Infrastructure/Kubernetes/CKA/Services.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md](Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_StorageClass.md](Infrastructure/Kubernetes/CKA/Storage_StorageClass.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
+| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Workloads.md](Infrastructure/Kubernetes/CKA/Workloads.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 13:44 | [Language/Java/Java_Resource_Sizing_in_K8s.md](Language/Java/Java_Resource_Sizing_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
 | 2026-09-28 13:44 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
 | 2026-09-28 11:07 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
 | 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Ingress.md](Infrastructure/Kubernetes/CKA/Ingress.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md](Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md](Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Services.md](Infrastructure/Kubernetes/CKA/Services.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md](Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Storage_StorageClass.md](Infrastructure/Kubernetes/CKA/Storage_StorageClass.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
-| 2026-09-23 09:18 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md) | docs: CKA 2주 단기 합격 공부 로드맵 및 영역별 가이드 문서 구축 |
 | 2026-09-16 13:55 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
@@ -48,9 +54,3 @@
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/OpenCode.md](AI/OpenCode.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Data/Database/Redis.md](Data/Database/Redis.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/ArgoCD/Usage.md](Infrastructure/ArgoCD/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/Docker/docker_image_versioning_strategy.md](Infrastructure/Docker/docker_image_versioning_strategy.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [Infrastructure/Jenkins/Usage.md](Infrastructure/Jenkins/Usage.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

@@ -1,95 +1,104 @@
-# 5.2 컨트롤 플레인 트러블슈팅 (Control Plane Troubleshooting)
+# 5.2 컨트롤 플레인 트러블슈팅
 
-컨트롤 플레인 컴포넌트(`kube-apiserver`, `etcd`, `kube-scheduler`, `kube-controller-manager`)에 문제가 생기면 클러스터 전체가 마비되거나 신규 파드 스케줄링이 중단됩니다. 특히 API 서버가 다운되면 `kubectl` 명령어 자체가 동작하지 않으므로 저수준 런타임 도구를 활용한 진단법을 익혀야 합니다.
+API 서버가 응답하지 않으면 `kubectl`만으로 진단하기 어렵다. 접속 설정을 확인한 뒤 대상 노드의 kubelet과 컨테이너 런타임 로그를 읽는다.
 
----
+## 1. 정적 파드의 동작
 
-## 1. 정적 파드 (Static Pods)의 이해
+kubeadm 클러스터의 API 서버, 스케줄러, 컨트롤러 매니저는 보통 `/etc/kubernetes/manifests/`의 매니페스트로 실행된다. 로컬 etcd를 사용하는 구성에는 `etcd.yaml`도 있다. 외부 etcd 구성은 별도로 확인한다.
 
-kubeadm으로 구축된 클러스터에서 컨트롤 플레인 핵심 컴포넌트들은 **Static Pod**로 실행됩니다.
+컨트롤 플레인 노드의 kubelet이 `staticPodPath`를 주기적으로 검사해 정적 파드를 관리한다. API 서버 없이도 실행할 수 있으며, kubelet이 잠시 중지되어도 이미 실행 중인 컨테이너가 즉시 모두 종료되는 것은 아니다.
 
-- **매니페스트 위치**: `/etc/kubernetes/manifests/`
-  - `kube-apiserver.yaml`
-  - `etcd.yaml`
-  - `kube-controller-manager.yaml`
-  - `kube-scheduler.yaml`
-- **동작 방식**: 마스터 노드의 `kubelet` 데몬이 이 디렉터리를 실시간으로 감시하며, 파일이 수정되거나 추가되면 API 서버 없이도 직접 컨테이너를 생성/재시작합니다.
+!!! warning "백업은 감시 디렉터리 밖에 저장"
 
----
+    kubelet은 점으로 시작하는 파일을 제외하고 확장자와 관계없이 디렉터리의 파일을 읽는다. `kube-apiserver.yaml.bak`도 읽힐 수 있다. 같은 이름의 정적 파드 정의가 둘이면 동작이 정의되지 않아 이전 설정이 반영되는 등의 문제가 생길 수 있다.
 
-## 2. API 서버 다운 시 진단 절차 (`The connection was refused`)
+    백업은 홈 디렉터리 등 `staticPodPath` 밖에 저장한다.
 
-`kubectl` 명령 실행 시 다음과 같은 에러가 발생한다면 API 서버가 기동하지 못하고 있는 상태입니다:
+## 2. API 서버 접속 실패 진단
+
 ```text
 The connection to the server 192.168.1.10:6443 was refused - did you specify the right host or port?
 ```
 
-### 1단계: 마스터 노드로 SSH 접속
+이 메시지는 지정한 주소·포트로 연결하지 못했다는 뜻이다. API 서버 중단 외에도 잘못된 kubeconfig, 엔드포인트·로드밸런서 또는 네트워크 문제를 확인해야 한다.
+
+### 1단계: 현재 작업 위치와 접속 설정 확인
+
 ```bash
-ssh controlplane
+hostname
+kubectl config current-context
+kubectl config view --minify
 ```
 
-### 2단계: kubelet 데몬 상태 확인
-Static Pod를 실행하는 주체는 `kubelet`이므로 kubelet이 죽어있다면 아무것도 뜨지 않습니다.
+문제가 지정한 호스트·클러스터와 일치하는지 확인한다. 필요한 경우 베이스 노드로 `exit`한 뒤 대상 컨트롤 플레인으로 SSH 접속한다. 시험에서는 중첩 SSH를 피한다.
+
+### 2단계: kubelet 상태와 로그 확인
+
+대상 노드에서 실행한다.
+
 ```bash
-systemctl status kubelet
-journalctl -u kubelet -n 50 --no-pager
+sudo systemctl status kubelet --no-pager
+sudo journalctl -u kubelet -n 100 --no-pager
 ```
 
-### 3단계: 컨테이너 런타임 도구(`crictl`)로 실패한 컨테이너 추적
-`kubectl`이 안 되므로 컨테이너 런타임 CLI인 **`crictl`**을 사용합니다.
-```bash
-# 실행 중이거나 비정상 종료된 apiserver 컨테이너 검색
-sudo crictl ps -a | grep apiserver
+로그의 설정 파일 경로, 인증서, 런타임 연결 오류를 확인한다. 원인을 확인하기 전에 서비스를 반복 재시작하지 않는다.
 
-# 가장 최근에 종료된 컨테이너 로그 확인 (에러 원인 직격!)
+### 3단계: 런타임에서 컨테이너와 로그 확인
+
+`crictl`은 노드의 CRI 런타임 소켓을 사용하도록 설정되어 있어야 한다. `/etc/crictl.yaml`과 실제 런타임 엔드포인트를 확인한다.
+
+```bash
+sudo crictl ps -a
 sudo crictl logs <container-id>
 ```
 
----
+최근에 종료된 API 서버와 etcd 컨테이너를 각각 확인한다. 컨테이너 생성 전 오류는 kubelet 또는 런타임 로그에만 있을 수 있다.
 
-## 3. 컨트롤 플레인 빈출 장애 원인 BEST 3
+## 3. 로그에 따른 수정
 
-### 1. 인증서 파일 경로 또는 파일명 오타
+### 인증서 경로·마운트 오류
 
-- **로그 메시지**: `cannot load certificate /etc/kubernetes/pki/apiserver-etcd-clien.crt: no such file or directory`
-- **해결**: `/etc/kubernetes/manifests/kube-apiserver.yaml`을 열어 오타 수정. 저장하면 kubelet이 수초 내에 자동으로 다시 띄웁니다.
+`cannot load certificate ... no such file or directory`이면 매니페스트의 인자와 volumeMounts·hostPath를 비교한다. 컨테이너 내부 경로와 호스트 경로를 구분하고 파일 존재 여부·권한도 확인한다.
 
-### 2. etcd 서버 주소/포트 불일치
+### etcd 접속 실패
 
-- **로그 메시지**: `context deadline exceeded` 또는 `connection refused (port 2379)`
-- **해결**: apiserver 매니페스트의 `--etcd-servers=https://127.0.0.1:2379` 설정과 etcd 매니페스트의 listen 포트가 일치하는지 확인.
+`context deadline exceeded`나 `connection refused`이면 API 서버의 `--etcd-servers`, etcd의 listen 주소·포트, 실제 실행 상태를 비교한다. TLS 인증서·CA 불일치와 네트워크 문제도 로그로 구분한다. `127.0.0.1:2379`는 같은 노드의 로컬 etcd를 쓰는 구성에 해당한다.
 
-### 3. Static Pod 매니페스트 경로 설정 누락
+### 정적 파드 경로 오류
 
-- **증상**: `/etc/kubernetes/manifests/`에 파일이 다 있는데 파드가 전혀 안 뜸.
-- **원인**: `/var/lib/kubelet/config.yaml` 파일에서 `staticPodPath`가 누락되었거나 엉뚱한 경로로 지정됨.
-- **해결**:
-  ```yaml
-  # /var/lib/kubelet/config.yaml
-  staticPodPath: /etc/kubernetes/manifests
-  ```
-  수정 후 `systemctl restart kubelet` 실행.
+실제로 사용하는 kubelet 설정 파일의 `staticPodPath`를 확인한다. kubeadm의 일반적인 설정 예시는 다음과 같다.
 
----
-
-## 4. 스케줄러 & 컨트롤러 매니저 장애 진단
-
-API 서버는 살아있지만 파드를 만들어도 계속 `Pending` 상태로 머물고 이벤트에 아무것도 안 나온다면 `kube-scheduler`가 다운되었을 가능성이 큽니다.
-
-```bash
-# kube-system 네임스페이스의 시스템 파드 상태 확인
-kubectl get pods -n kube-system
-
-# 스케줄러 로그 확인
-kubectl logs kube-scheduler-controlplane -n kube-system
+```yaml
+# /var/lib/kubelet/config.yaml의 일부
+staticPodPath: /etc/kubernetes/manifests
 ```
 
----
+정적 파드 매니페스트만 바꾸었다면 kubelet의 다음 검사와 컨테이너 재생성을 기다리며 로그를 확인한다. kubelet 설정 파일을 바꾸었다면 `sudo systemctl restart kubelet`으로 다시 읽게 한다. systemd unit이나 drop-in을 변경한 경우에는 먼저 `sudo systemctl daemon-reload`가 필요하다.
 
-## 💡 CKA 시험 실전 팁
+## 4. 스케줄러와 컨트롤러 매니저
 
-1. 마스터 노드 컴포넌트 수정 시 **절대로 매니페스트 파일을 `/etc/kubernetes/manifests/` 디렉터리 안에 그대로 둔 채 백업하지 마세요.**
-   - 잘못된 예: `cp kube-apiserver.yaml kube-apiserver.yaml.bak` $\rightarrow$ kubelet이 `.bak` 파일도 정적 파드로 인식하여 포트 충돌로 다운됩니다!
-   - 올바른 예: 백업은 반드시 `/tmp/`나 홈 디렉터리로 복사해두세요 (`cp kube-apiserver.yaml /tmp/`).
-2. YAML 수정 후 10~20초 정도 기다리거나, 급한 경우 `systemctl restart kubelet`을 실행하여 즉시 반영시킵니다.
+API 서버는 응답하지만 새 파드가 배치되지 않으면 스케줄러를, 원하는 수의 파드가 생성되지 않으면 소유 컨트롤러와 컨트롤러 매니저를 확인한다. Pending에는 리소스·PVC·스케줄링 조건 등 여러 원인이 있으므로 이벤트도 함께 읽는다.
+
+```bash
+kubectl get pods -n kube-system -o wide
+kubectl logs -n kube-system <scheduler-pod-name>
+kubectl logs -n kube-system <controller-manager-pod-name>
+```
+
+HA 구성이라면 리더 선출 상태도 확인한다. 실제 파드 이름은 조회 결과에서 선택한다.
+
+## 5. 복구 확인
+
+```bash
+kubectl get --raw='/readyz?verbose'
+kubectl get nodes
+kubectl get pods -n kube-system -o wide
+```
+
+API 서버 응답뿐 아니라 정적 파드 상태와 로그, 대상 워크로드의 생성·스케줄링·Ready 상태까지 확인한다. etcd 데이터 복구가 필요한 경우에는 [ETCD 백업 및 복원](ETCD_Backup_Restore.md)의 중지·복원·재기동 순서를 따른다.
+
+## 참고 자료
+
+- [Kubernetes: Static Pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
+- [Kubernetes: Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug/debug-cluster/)
+- [Kubernetes: Debugging Kubernetes nodes with crictl](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
