@@ -16,6 +16,7 @@ MinIO는 Amazon S3와 호환되는 고성능 오픈소스 객체 스토리지(Ob
 
 ## 관련 문서
 
+* [MinIO와 Goroutine 아키텍처 (동시성 모델)](MinIO_and_Goroutine.md)
 * [버저닝 (Versioning)](Versioning.md)
 * [버저닝 활성화 후 파일이 영구 삭제되지 않는 이슈](MinIO_Versioning_Deletion_Issue.md)
 * [수명 주기 관리 (Lifecycle)](Lifecycle.md)

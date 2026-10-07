@@ -1,6 +1,7 @@
 title: MinIO
 nav:
 - Overview: README.md
+- MinIO와 Goroutine 아키텍처: MinIO_and_Goroutine.md
 - 버저닝 (Versioning): Versioning.md
 - 버저닝 삭제 이슈: MinIO_Versioning_Deletion_Issue.md
 - Java Client 예제: Java_Client_Examples.md
