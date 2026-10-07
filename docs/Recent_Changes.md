@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-08 08:07 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: AI Agent 개발 직군의 의미와 실전 엔지니어링 가이드 추가 |
 | 2026-10-07 13:42 | [Infrastructure/MinIO/MinIO_and_Goroutine.md](Infrastructure/MinIO/MinIO_and_Goroutine.md) | docs: MinIO와 Goroutine 아키텍처 및 동시성 연관관계 가이드 추가 |
 | 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
 | 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
@@ -53,4 +54,3 @@
 | 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
-| 2026-09-07 22:10 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

@@ -253,6 +253,7 @@
 
 * [AI Tools & Agents](AI/README.md)
 * [Antigravity CLI (agy) vs OpenCode (with Gemini) 비교 가이드](AI/AGY_vs_OpenCode_Comparison.md)
+* [AI Agent 개발 직군의 의미와 실전 엔지니어링 가이드](AI/AI_Agent_Developer_Role_and_Engineering.md)
 * [AI 코딩 에이전트 오케스트레이터: Orca vs Paseo](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md)
 * [Antigravity CLI - 자동 승인(Auto-Approve) 및 권한 설정 가이드](AI/Antigravity_CLI_Configuration.md)
 * [Antigravity CLI (`agy`) 스킬 설치, 설정 및 활용 가이드](AI/Antigravity_CLI_Skills_Guide.md)

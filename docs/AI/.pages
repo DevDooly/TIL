@@ -1,6 +1,7 @@
 title: AI Tools & Agents
 nav:
 - Overview: README.md
+- AI Agent 개발 직군 및 엔지니어링: AI_Agent_Developer_Role_and_Engineering.md
 - OpenCode: OpenCode.md
 - OpenClaw: OpenClaw.md
 - Gemini CLI: Gemini_CLI.md

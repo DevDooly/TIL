@@ -2,7 +2,10 @@
 
 인공지능(AI) 기술이 발전함에 따라 개발 생산성을 높이고 작업을 자동화하는 다양한 AI 도구와 에이전트들이 등장하고 있습니다. 이 섹션에서는 오픈소스로 제공되는 유용한 AI 도구들을 정리합니다.
 
-## 🤖 Featured Tools
+## 🤖 Featured Tools & Guides
+
+### [AI Agent 개발 직군 및 엔지니어링 가이드](AI_Agent_Developer_Role_and_Engineering.md)
+채용 시장에서 요구하는 **AI Agent 개발자의 역할과 의미**, 챗봇과의 차이점, 4대 핵심 아키텍처(Brain, Planning, Memory, Tools), LangGraph 기반 상태 머신 설계, 결정론적 가드레일 및 Observability(Eval) 파이프라인 실무 가이드입니다.
 
 ### [OpenCode](OpenCode.md)
 개발자를 위한 **오픈소스 AI 코딩 어시스턴트**입니다. 터미널(CLI/TUI) 기반으로 동작하며, 로컬 파일과 Git 히스토리를 이해하여 코딩 작업을 돕습니다.
