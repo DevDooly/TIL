@@ -4,8 +4,10 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-10-08 08:07 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: AI Agent 개발 직군의 의미와 실전 엔지니어링 가이드 추가 |
-| 2026-10-07 13:42 | [Infrastructure/MinIO/MinIO_and_Goroutine.md](Infrastructure/MinIO/MinIO_and_Goroutine.md) | docs: MinIO와 Goroutine 아키텍처 및 동시성 연관관계 가이드 추가 |
+| 2026-10-08 09:24 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
+| 2026-10-08 09:24 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
+| 2026-10-08 09:24 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
+| 2026-10-08 09:24 | [Infrastructure/MinIO/MinIO_and_Goroutine.md](Infrastructure/MinIO/MinIO_and_Goroutine.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
 | 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
 | 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
 | 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
@@ -47,10 +49,8 @@
 | 2026-09-16 13:55 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Resume.md](Resume.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:35 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: MCP(Model Context Protocol) 서버 개발 및 연동 가이드 추가 |
 | 2026-09-14 13:44 | [Data/Database/Oracle_JSON_Column_Guide.md](Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
 | 2026-09-08 18:40 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
-| 2026-09-07 22:10 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
 | 2026-09-07 22:10 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |

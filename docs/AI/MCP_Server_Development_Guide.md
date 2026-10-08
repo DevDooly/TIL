@@ -256,7 +256,7 @@ npx @modelcontextprotocol/inspector npx tsx src/index.ts
 ```
 
 ### 3) Cursor 연동
-`Cursor Settings` $\rightarrow$ `Features` $\rightarrow$ `MCP`에서 `+ Add New MCP Server`를 누르고, Type을 `command`로 설정한 뒤 명령어를 입력합니다.
+`Cursor Settings` → `Features` → `MCP`에서 `+ Add New MCP Server`를 누르고, Type을 `command`로 설정한 뒤 명령어를 입력합니다.
 
 ---
 

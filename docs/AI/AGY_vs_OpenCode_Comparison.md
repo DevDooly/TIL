@@ -57,7 +57,7 @@ flowchart TD
 
 ### 3) 모델 유연성 및 자율도
 
-- **OpenCode**: 특정 빅테크 생태계에 락인되지 않고, 작업 성격에 따라 모델을 Gemini $\leftrightarrow$ Claude $\leftrightarrow$ 로컬 DeepSeek 등으로 유연하게 변경할 수 있다는 점이 가장 큰 강점입니다.
+- **OpenCode**: 특정 빅테크 생태계에 락인되지 않고, 작업 성격에 따라 모델을 Gemini ↔ Claude ↔ 로컬 DeepSeek 등으로 유연하게 변경할 수 있다는 점이 가장 큰 강점입니다.
 - **AGY**: Google Gemini의 최신 추론 역량(Thinking), 대규모 컨텍스트 윈도우, 정확한 도구 호출(Tool Calling)에 완벽히 정렬되어 있어 일관된 고품질 출력을 보장합니다.
 
 ---
