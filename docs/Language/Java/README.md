@@ -52,3 +52,7 @@ title: Java & Spring Engineering
 ### 6. Java Version Release Notes
 
 * **[Java Versions Overview](Versions/README.md)**: Java 8부터 최신 LTS(Java 11, 17, 21, 25)까지의 주요 변경점
+
+### 7. 코딩테스트 준비
+
+* **[올리브영 HackerRank Java 코딩테스트 준비](HackerRank_Coding_Test_Preparation.md)**: 공개 후기의 적용 범위, Java 자료구조 복습, 7일 공개 문제 연습과 응시 환경 점검
