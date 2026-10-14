@@ -4,7 +4,7 @@ title: Java 코딩테스트 1일차부터 5일차 연습문제와 풀이
 
 # Java 코딩테스트 1일차부터 5일차 연습문제와 풀이
 
-HackerRank에 접속하지 않고 1~5일차 학습 주제를 연습할 수 있도록 자체 문제 9개를 구성했다. 각 문제의 조건과 예시를 읽고 먼저 구현한 뒤, 접힌 **정답과 Java 풀이 펼치기** 영역에서 풀이 방법·코드·복잡도·경계 조건을 확인한다.
+HackerRank에 접속하지 않고 1~5일차 학습 주제를 연습할 수 있도록 자체 문제 9개를 구성했다. 각 문제의 조건과 예시를 읽고 **문제지 펼치기 · IDE에 복사**에서 Java 코드를 복사해 구현한다. 그다음 **정답과 Java 풀이 펼치기**에서 풀이 방법·코드·복잡도·경계 조건을 확인한다. 문제지와 정답은 모두 기본으로 접혀 있다.
 
 기존 계획의 공개 문제와 같은 자료구조·알고리즘을 연습하되 상황·입력 조건·예시·함수 계약을 새로 구성했다. 원문은 표의 참고 링크에서 볼 수 있으며, 아래 클래스와 반환형은 이 페이지의 연습용 계약이다.
 
@@ -24,14 +24,18 @@ HackerRank에 접속하지 않고 1~5일차 학습 주제를 연습할 수 있�
 
 ## 풀이 코드 실행 방법
 
-각 정답에는 외부 라이브러리 없이 실행할 수 있는 `Exercise01`~`Exercise09` 클래스와 예시용 `main`이 있다. 클래스 이름과 같은 파일명으로 저장한다. 예를 들어 01번 코드는 `Exercise01.java`에 저장하고 다음과 같이 실행한다.
+각 문제지에는 구현할 메서드와 예시용 `main`이 있다. 문제지를 펼치면 코드 오른쪽 위에 나타나는 **복사 버튼**으로 전체 코드를 복사하고, IDE에서 클래스 이름과 같은 Java 파일에 붙여 넣는다. 예를 들어 01번 문제지는 `Exercise01.java`에 붙여 넣는다.
+
+`TODO` 주석이 있는 메서드의 `throw new UnsupportedOperationException(...)` 줄을 지우고 자신의 구현으로 채운다. 구현 전에 실행하면 이 예외가 발생한다. 구현 후 `main`을 실행하고 주석의 기대 출력과 비교한다. 필요한 import나 보조 메서드는 추가해도 된다.
+
+터미널에서는 다음과 같이 실행한다.
 
 ```sh
 javac -encoding UTF-8 Exercise01.java
 java Exercise01
 ```
 
-풀이 코드는 Java 8 문법과 표준 라이브러리를 사용한다. 입력은 각 `main`의 배열·문자열을 바꿔 확인할 수 있으며, 표준 입력을 읽는 코드는 포함하지 않는다. 함수는 문제에 명시한 유효 입력을 받는다고 가정한다.
+문제지와 정답 코드는 Java 8 문법과 표준 라이브러리를 사용한다. 입력은 각 `main`의 배열·문자열을 바꿔 확인할 수 있으며, 표준 입력을 읽는 코드는 포함하지 않는다. 함수는 문제에 명시한 유효 입력을 받는다고 가정한다.
 
 ## 1일차 큰 정수와 문자열과 스택
 
@@ -68,6 +72,29 @@ java Exercise01
 | --- | --- |
 | 입력 | `[]` |
 | 반환값 | `0` |
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise01.java`
+
+    ```java
+    public class Exercise01 {
+        public static long total(long[] adjustments) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // 3500000000
+            // 0
+            System.out.println(total(new long[] {
+                2_400_000_000L, 1_700_000_000L, -600_000_000L
+            }));
+            System.out.println(total(new long[0]));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -133,6 +160,27 @@ java Exercise01
 | `first` | `""` |
 | `second` | `"signal"` |
 | 반환값 | `false` |
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise02.java`
+
+    ```java
+    public class Exercise02 {
+        public static boolean hasCommonCharacter(String first, String second) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // true
+            // false
+            System.out.println(hasCommonCharacter("orbit", "voice"));
+            System.out.println(hasCommonCharacter("", "signal"));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -201,6 +249,27 @@ java Exercise01
 | 반환값 | `false` |
 
 `)`가 등장하는 시점에 가장 최근에 열린 괄호는 `{`이므로 잘못된 순서이다. 괄호 개수가 같다는 사실만으로는 충분하지 않다.
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise03.java`
+
+    ```java
+    public class Exercise03 {
+        public static boolean isBalanced(String text) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // true
+            // false
+            System.out.println(isBalanced("{[()()]()}"));
+            System.out.println(isBalanced("[({)]}"));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -296,6 +365,34 @@ java Exercise01
 | 반환값 | `[0, 0]` |
 
 처음의 제거 연산은 무시한다. 나중에 `4`를 추가했다가 제거한 뒤에도 기록함은 비어 있으므로 두 조회 모두 `0`이다.
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise04.java`
+
+    ```java
+    import java.util.List;
+
+    public class Exercise04 {
+        public static List<Integer> processQueries(int[][] operations) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // [1, 0, 1]
+            // [0, 0]
+            System.out.println(processQueries(new int[][] {
+                {1, 7}, {1, 7}, {1, 9}, {3, 2},
+                {2, 7}, {3, 2}, {3, 1}
+            }));
+            System.out.println(processQueries(new int[][] {
+                {2, 4}, {3, 1}, {1, 4}, {2, 4}, {3, 1}
+            }));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -401,6 +498,27 @@ java Exercise01
 
 예제 1에서는 가격이 `8`, `13`, `13`인 센서 세 개를 구매할 수 있다. 총가격은 `34`다. 가장 저렴한 네 개의 총가격도 `61`이므로 네 개를 구매하는 방법은 없다.
 
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise05.java`
+
+    ```java
+    public class Exercise05 {
+        public static int maxItems(long[] prices, long budget) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // 3
+            // 0
+            System.out.println(maxItems(new long[] {27, 13, 45, 13, 8}, 50));
+            System.out.println(maxItems(new long[] {5, 12}, 0));
+        }
+    }
+    ```
+
 ??? success "정답과 Java 풀이 펼치기"
 
     **접근**
@@ -488,6 +606,28 @@ java Exercise01
 | 예제 2 | `[0, 1000000000000]` | `1000000000000` | `1` |
 
 예제 1의 쌍은 `(3, 9)`, `(9, 15)`, `(18, 24)`이다. 값 `9`는 두 쌍에 포함되지만, 각각 다른 두 값을 고른 결과이므로 두 쌍 모두 센다.
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise06.java`
+
+    ```java
+    public class Exercise06 {
+        public static long countPairs(long[] values, long k) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // 3
+            // 1
+            System.out.println(countPairs(new long[] {24, 9, 18, 3, 15}, 6));
+            System.out.println(countPairs(
+                    new long[] {0, 1_000_000_000_000L}, 1_000_000_000_000L));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -595,6 +735,34 @@ java Exercise01
 | 예제 2 | `4` | `[[2,2], [2,3], [2,3]]` | `2` | `[-1, -1, 0, 1, -1]` |
 
 예제 1에서 `3`번 구역은 `1 → 2 → 3`으로 이동하면 두 번 만에 도착한다. `6`, `7`번 구역은 시작점과 연결되어 있지 않는다. 예제 2에서 자기 자신으로 가는 통로와 중복 통로는 최소 거리를 바꾸지 않는다.
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise07.java`
+
+    ```java
+    import java.util.Arrays;
+
+    public class Exercise07 {
+        public static int[] distances(int n, int[][] edges, int start) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // [-1, 0, 1, 2, 1, 2, -1, -1]
+            // [-1, -1, 0, 1, -1]
+            int[][] firstEdges = {
+                {1, 2}, {1, 4}, {2, 3}, {4, 5}, {5, 3}, {6, 7}
+            };
+            int[][] secondEdges = {{2, 2}, {2, 3}, {2, 3}};
+
+            System.out.println(Arrays.toString(distances(7, firstEdges, 1)));
+            System.out.println(Arrays.toString(distances(4, secondEdges, 2)));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 
@@ -725,6 +893,27 @@ target = 4
 
 배열 길이가 2이므로 길이 3인 구간을 만들 수 없다. 배열 전체의 합이 목표값과 같아도 세지 않는다.
 
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise08.java`
+
+    ```java
+    public class Exercise08 {
+        public static long countWindows(long[] values, int width, long target) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // 2
+            // 0
+            System.out.println(countWindows(new long[] {2, -2, 2, -2, 2}, 3, 2L));
+            System.out.println(countWindows(new long[] {7, -3}, 3, 4L));
+        }
+    }
+    ```
+
 ??? success "정답과 Java 풀이 펼치기"
 
     **접근**
@@ -827,6 +1016,27 @@ threshold = 1
 ```
 
 두 모듈을 합쳐도 점수는 `0`이다. 모듈이 한 개만 남아 기준을 달성할 수 없다.
+
+??? example "문제지 펼치기 · IDE에 복사"
+
+    파일명: `Exercise09.java`
+
+    ```java
+    public class Exercise09 {
+        public static int minimumMerges(long[] values, long threshold) {
+            // TODO: 문제 조건에 맞게 구현해주세요.
+            throw new UnsupportedOperationException("TODO: 구현해주세요");
+        }
+
+        public static void main(String[] args) {
+            // 구현 후 기대 출력 (위에서부터):
+            // 2
+            // -1
+            System.out.println(minimumMerges(new long[] {2, 4, 9, 16}, 10L));
+            System.out.println(minimumMerges(new long[] {0, 0}, 1L));
+        }
+    }
+    ```
 
 ??? success "정답과 Java 풀이 펼치기"
 

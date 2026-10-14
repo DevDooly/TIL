@@ -4,8 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-14 09:25 | [Language/Java/Java_Coding_Test_Practice.md](Language/Java/Java_Coding_Test_Practice.md) | docs: 코딩테스트 문제지와 IDE 복사 안내 추가 |
 | 2026-10-14 09:10 | [Language/Java/HackerRank_Coding_Test_Preparation.md](Language/Java/HackerRank_Coding_Test_Preparation.md) | docs: Java 코딩테스트 연습문제와 접힌 풀이 추가 |
-| 2026-10-14 09:10 | [Language/Java/Java_Coding_Test_Practice.md](Language/Java/Java_Coding_Test_Practice.md) | docs: Java 코딩테스트 연습문제와 접힌 풀이 추가 |
 | 2026-10-08 09:24 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
 | 2026-10-08 09:24 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
 | 2026-10-08 09:24 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |

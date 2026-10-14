@@ -1,4 +1,4 @@
-"""Compile the published solutions and compare with independent small-input oracles."""
+"""Check copyable worksheets and published solutions against independent oracles."""
 from pathlib import Path
 import re
 import subprocess
@@ -10,6 +10,46 @@ from test_java_examples import java_tool
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCUMENT = ROOT / "docs/Language/Java/Java_Coding_Test_Practice.md"
+
+
+def exercise_snippets(text, kind):
+    """Read complete exercise classes only from the selected collapsible block."""
+    pattern = (r'^([?]{3}[+]?) ' + re.escape(kind) + r' "[^"\n]+"\n'
+               r'((?:(?:[ \t]{4}.*|[ \t]*)\n)*)')
+    snippets = {}
+    for match in re.finditer(pattern, text, re.MULTILINE):
+        blocks = re.findall(r"^[ \t]*```java\s*\n(.*?)^[ \t]*```",
+                            match.group(2), re.MULTILINE | re.DOTALL)
+        for block in blocks:
+            source = textwrap.dedent(block)
+            declaration = re.search(r"public (?:final )?class (Exercise\d{2})\b", source)
+            if not declaration:
+                continue
+            name = declaration.group(1)
+            if name in snippets:
+                raise AssertionError(f"Duplicate {kind} exercise class: {name}")
+            snippets[name] = {
+                "source": source, "position": match.start(),
+                "expanded": match.group(1).endswith("+"),
+            }
+    return snippets
+
+
+def public_signatures(source):
+    return [" ".join(signature.split()) for signature in re.findall(
+        r"public\s+static\s+([^\n{]+\([^)]*\))\s*\{", source)]
+
+
+def main_statements(source):
+    # The copied main is the final method; expected-output comments may differ.
+    match = re.search(
+        r"public\s+static\s+void\s+main\s*\(String\[\]\s+args\)\s*\{(.*)\}\s*\}\s*$",
+        source, re.DOTALL)
+    if not match:
+        raise AssertionError("Standalone exercise main is missing")
+    body = re.sub(r"//[^\n]*", "", match.group(1))
+    return "\n".join(line.strip() for line in body.splitlines() if line.strip())
+
 
 HARNESS = r"""
 import java.math.BigInteger;
@@ -252,20 +292,14 @@ class CodingPracticeTest(unittest.TestCase):
         cls.addClassCleanup(cls.tmp.cleanup)
         cls.directory = Path(cls.tmp.name)
         cls.java = java_tool("java")
-        text = DOCUMENT.read_text(encoding="utf-8")
-        blocks = re.findall(r"^[ \t]*```java\s*\n(.*?)^[ \t]*```", text, re.MULTILINE | re.DOTALL)
-        names = set()
-        for block in blocks:
-            source = textwrap.dedent(block)
-            match = re.search(r"public (?:final )?class (Exercise\d{2})\b", source)
-            if match:
-                name = match.group(1)
-                if name in names:
-                    raise AssertionError(f"Duplicate exercise class: {name}")
-                names.add(name)
-                (cls.directory / f"{name}.java").write_text(source, encoding="utf-8")
-        if names != {f"Exercise{i:02d}" for i in range(1, 10)}:
-            raise AssertionError(f"Expected nine complete published solutions, found {names}")
+        cls.text = DOCUMENT.read_text(encoding="utf-8")
+        cls.solutions = exercise_snippets(cls.text, "success")
+        cls.worksheets = exercise_snippets(cls.text, "example")
+        cls.exercise_names = {f"Exercise{i:02d}" for i in range(1, 10)}
+        if set(cls.solutions) != cls.exercise_names:
+            raise AssertionError(f"Expected nine published solutions, found {set(cls.solutions)}")
+        for name, snippet in cls.solutions.items():
+            (cls.directory / f"{name}.java").write_text(snippet["source"], encoding="utf-8")
         (cls.directory / "PracticeChecks.java").write_text(HARNESS, encoding="utf-8")
         result = subprocess.run(
             [java_tool("javac"), "--release", "8", "-encoding", "UTF-8",
@@ -273,6 +307,41 @@ class CodingPracticeTest(unittest.TestCase):
             capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60)
         if result.returncode:
             raise AssertionError(result.stdout + result.stderr)
+
+    def test_closed_worksheets_precede_matching_answers(self):
+        self.assertEqual(set(self.worksheets), self.exercise_names)
+        for number in range(1, 10):
+            name = f"Exercise{number:02d}"
+            with self.subTest(exercise=name):
+                worksheet = self.worksheets[name]
+                solution = self.solutions[name]
+                anchor = self.text.index(f'<a id="exercise-{number:02d}"></a>')
+                next_anchor = (self.text.index(f'<a id="exercise-{number + 1:02d}"></a>')
+                               if number < 9 else len(self.text))
+                self.assertLess(anchor, worksheet["position"])
+                self.assertLess(worksheet["position"], solution["position"])
+                self.assertLess(solution["position"], next_anchor)
+                self.assertFalse(worksheet["expanded"])
+                self.assertFalse(solution["expanded"])
+                self.assertEqual(public_signatures(worksheet["source"]),
+                                 public_signatures(solution["source"]))
+                self.assertEqual(main_statements(worksheet["source"]),
+                                 main_statements(solution["source"]))
+                self.assertRegex(worksheet["source"],
+                                 r'throw new UnsupportedOperationException\("TODO: [^"]+"\);')
+
+    def test_worksheets_compile_as_standalone_java8(self):
+        self.assertEqual(set(self.worksheets), self.exercise_names)
+        for name, snippet in self.worksheets.items():
+            with self.subTest(exercise=name):
+                directory = self.directory / "worksheets" / name
+                directory.mkdir(parents=True)
+                path = directory / f"{name}.java"
+                path.write_text(snippet["source"], encoding="utf-8")
+                result = subprocess.run(
+                    [java_tool("javac"), "--release", "8", "-encoding", "UTF-8", str(path)],
+                    capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=30)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def run_check(self, case):
         result = subprocess.run(
