@@ -36,6 +36,8 @@ HackerRank에서 Java 코딩테스트를 준비할 때는 자료구조를 선택
 
 다음 문제는 HackerRank에 공개된 연습문제다. 올리브영 시험의 출제 목록을 뜻하지 않는다.
 
+HackerRank 접속이 어려운 환경에서는 [1~5일차 자체 연습문제와 접힌 Java 풀이](Java_Coding_Test_Practice.md)로 같은 주제를 연습할 수 있다. 각 일차의 문제·예시·정답을 TIL에서 바로 읽을 수 있다.
+
 | 일정 | 연습 내용 | 문제와 완료 목표 |
 | :--- | :--- | :--- |
 | 1일차 | 환경 적응과 현재 수준 점검 | [A Very Big Sum](https://www.hackerrank.com/challenges/a-very-big-sum/problem), [Two Strings](https://www.hackerrank.com/challenges/two-strings/problem), [Balanced Brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem). 각각 15·25·40분을 잡고 남은 시간에 복기한다. |

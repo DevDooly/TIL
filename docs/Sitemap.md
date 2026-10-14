@@ -44,6 +44,7 @@
         * [Google Java Style Guide](Language/Java/Google_Java_Style_Guide.md)
         * [올리브영 HackerRank Java 코딩테스트 준비](Language/Java/HackerRank_Coding_Test_Preparation.md)
         * [JDK 25 Docker Base 이미지 선택과 업그레이드 검증](Language/Java/JDK25_Docker_Base_Image_Selection.md)
+        * [Java 코딩테스트 1일차부터 5일차 연습문제와 풀이](Language/Java/Java_Coding_Test_Practice.md)
         * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
         * [Kubernetes Java 데몬 리소스 산정: CPU, JVM, Virtual Thread](Language/Java/Java_Resource_Sizing_in_K8s.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)

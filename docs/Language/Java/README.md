@@ -56,3 +56,4 @@ title: Java & Spring Engineering
 ### 7. 코딩테스트 준비
 
 * **[올리브영 HackerRank Java 코딩테스트 준비](HackerRank_Coding_Test_Preparation.md)**: 공개 후기의 적용 범위, Java 자료구조 복습, 7일 공개 문제 연습과 응시 환경 점검
+* **[Java 코딩테스트 연습문제와 풀이](Java_Coding_Test_Practice.md)**: 1~5일차 자체 문제 9개, 접힌 Java 정답과 경계 조건
