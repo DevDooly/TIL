@@ -23,6 +23,7 @@
     * [대용량 파일 전송](Infrastructure/Linux/Large_File_Transfer.md)
     * [MinIO 버전별 삭제](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md)
     * [etcd 백업과 복원](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md)
+    * [fsGroup·SGID와 Java readiness 초기화](Troubleshooting/FsGroup_Setgid_Java_Readiness.md)
     * [Oracle LOB 공간](Data/Database/Oracle_LOB_Segment.md)
     * [Avro result 충돌](Data/Avro_HashCode_Field_Naming_Conflict.md)
     * [LLM을 활용한 레거시 개선](LLM_Development/Legacy_Code_Improvement.md)

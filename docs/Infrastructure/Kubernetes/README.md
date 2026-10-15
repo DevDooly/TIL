@@ -12,6 +12,7 @@ Kubernetes(K8s)는 컨테이너화된 애플리케이션의 배포, 확장 및 �
 
 * **[Operator 패턴](Operator_Pattern.md)**: 복잡한 애플리케이션 관리를 자동화하는 설계 패턴
 * **[Java 데몬 리소스 산정](../../Language/Java/Java_Resource_Sizing_in_K8s.md)**: CPU request/limit과 JVM CPU 인식, 가상 스레드·메모리·HPA 운영 기준
+* **[fsGroup·SGID와 Java readiness 초기화](../../Troubleshooting/FsGroup_Setgid_Java_Readiness.md)**: emptyDir 부모의 SGID 상속과 엄격한 0700 검사 충돌, Linux 재현과 수정 범위
 
 ### 2. CKA 자격증 준비 (CKA Study Guide)
 

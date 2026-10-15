@@ -2,3 +2,4 @@ title: 트러블슈팅 모음
 collapse: true
 nav:
 - 트러블슈팅 모음: README.md
+- fsGroup·SGID와 Java readiness: FsGroup_Setgid_Java_Readiness.md

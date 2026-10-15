@@ -33,6 +33,7 @@ title: Engineering Troubleshooting Archive
 | [대용량 파일 전송](../Infrastructure/Linux/Large_File_Transfer.md) | 파일 크기와 디스크 사용량 비교 |
 | [MinIO 버전별 삭제](../Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | delete marker와 보존된 객체 버전 |
 | [etcd 백업과 복원](../Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | etcdctl/etcdutl과 복원 검증 |
+| [fsGroup·SGID와 Java readiness 초기화](FsGroup_Setgid_Java_Readiness.md) | 0700 요청 뒤 02700 상속, 별도 생성자 진단과 새 inode만의 권한 교정 |
 
 ## 데이터 · 개발 과정
 

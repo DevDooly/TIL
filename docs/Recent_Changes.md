@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-16 07:00 | [Troubleshooting/FsGroup_Setgid_Java_Readiness.md](Troubleshooting/FsGroup_Setgid_Java_Readiness.md) | docs: fsGroup SGID와 worker 준비 상태 검증 기록 |
 | 2026-10-15 21:27 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
 | 2026-10-15 21:27 | [LLM_Development/UTC_Window_Analysis_Case.md](LLM_Development/UTC_Window_Analysis_Case.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
 | 2026-10-14 09:25 | [Language/Java/Java_Coding_Test_Practice.md](Language/Java/Java_Coding_Test_Practice.md) | docs: 코딩테스트 문제지와 IDE 복사 안내 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-16 13:55 | [Resume.md](Resume.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-14 13:44 | [Data/Database/Oracle_JSON_Column_Guide.md](Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
-| 2026-09-08 18:40 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
