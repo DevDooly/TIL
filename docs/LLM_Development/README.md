@@ -13,6 +13,7 @@ LLM 기반 개발은 기존의 확정적(Deterministic) 프로그래밍과는 �
 ### 📝 개발 단계별 가이드
 
 - **[레거시 코드 개선과 검증 기록](Legacy_Code_Improvement.md)**: LLM을 활용한 알고리즘·시간 처리·코딩 스타일 개선의 검증 절차
+- **[UTC 구간 계산의 AI 제안 검증](UTC_Window_Analysis_Case.md)**: 독립 oracle·시간대 회귀·실제 JMH 측정을 연결한 공개 합성 사례
 - **[Web Development Checklist](Web_Development_Checklist.md)**: 프론트엔드 UI/UX, 클라이언트 로직 개발 시 고려사항
 - **[Backend Development Checklist](Backend_Development_Checklist.md)**: 서버 로직, DB 설계, 보안 및 테스트 가이드
 

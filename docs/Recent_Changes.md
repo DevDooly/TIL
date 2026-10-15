@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-15 21:27 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
+| 2026-10-15 21:27 | [LLM_Development/UTC_Window_Analysis_Case.md](LLM_Development/UTC_Window_Analysis_Case.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
 | 2026-10-14 09:25 | [Language/Java/Java_Coding_Test_Practice.md](Language/Java/Java_Coding_Test_Practice.md) | docs: 코딩테스트 문제지와 IDE 복사 안내 추가 |
 | 2026-10-14 09:10 | [Language/Java/HackerRank_Coding_Test_Preparation.md](Language/Java/HackerRank_Coding_Test_Preparation.md) | docs: Java 코딩테스트 연습문제와 접힌 풀이 추가 |
 | 2026-10-08 09:24 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
@@ -44,7 +46,6 @@
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Policy.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-16 13:55 | [Templates/Issue_Report_Template.md](Templates/Issue_Report_Template.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-14 13:44 | [Data/Database/Oracle_JSON_Column_Guide.md](Data/Database/Oracle_JSON_Column_Guide.md) | docs: Oracle JSON 컬럼 저장 및 활용 가이드 추가 |
 | 2026-09-08 18:40 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | fix: 마크다운 리스트 서식 수정 및 git-workflow 검증 절차 강화 |
-| 2026-09-07 22:10 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: 기술 설명 정정 및 레거시 개선 가이드 추가 |
