@@ -29,3 +29,7 @@ title: Data Engineering & Storage Systems
 ### 3. Data Serialization
 
 * **[Avro result 필드와 hashCode 지역 변수 충돌](Avro_HashCode_Field_Naming_Conflict.md)**: Java 코드 생성기의 필드 참조 문제와 검증 방법
+
+### 4. Lakehouse 실측 사례
+
+* **[Iceberg snapshot 만료와 공유 파일 보존](Iceberg_Snapshot_Expiration_Lab.md)**: 새 합성 warehouse에서 만료 대상·공유 파일·객체 GET·Spark/Trino 조회 범위를 분리해 확인한 개인 Lab 사례

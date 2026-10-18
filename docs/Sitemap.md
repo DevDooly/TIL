@@ -239,6 +239,7 @@
 * [💾 Data Systems & Storage Architecture](Data/README.md)
 * [Apache Avro: result 필드와 hashCode 지역 변수 충돌](Data/Avro_HashCode_Field_Naming_Conflict.md)
 * [ELK Stack](Data/ELK.md)
+* [Iceberg snapshot 만료와 공유 data 파일 보존을 따로 검증하기](Data/Iceberg_Snapshot_Expiration_Lab.md)
 * [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](Data/Log_Collectors_Comparison.md)
     * **Database**
         * [Database (데이터베이스)](Data/Database/README.md)

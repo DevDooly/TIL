@@ -6,3 +6,4 @@ nav:
   - 로그 수집기 비교 (Fluent-bit): Log_Collectors_Comparison.md
 - Database: Database
 - Avro result 필드 충돌: Avro_HashCode_Field_Naming_Conflict.md
+- Iceberg snapshot 만료·공유 파일 보존: Iceberg_Snapshot_Expiration_Lab.md
