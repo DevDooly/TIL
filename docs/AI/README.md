@@ -16,6 +16,9 @@
 ### [Gemini CLI](Gemini_CLI.md)
 터미널 기반 **대화형 AI 에이전트**입니다. 코드베이스 분석, 리팩토링, 버그 수정, 문서 작성 등 소프트웨어 엔지니어링 작업에 특화되어 있습니다.
 
+### [Gemini 4 Argon 추론 단계(Low · Medium · High) 비교](Gemini_4_Argon_Reasoning_Levels.md)
+`gemini-4-argon` 모델의 `thinking_level`(`low`, `medium`, `high`) 설정별 추론 토큰 소비량, 응답 지연 시간, 과금 구조와 `max_output_tokens`·Long Decode 설정 기준을 정리합니다.
+
 ### [Antigravity CLI 설정](Antigravity_CLI_Configuration.md)
 Google Antigravity CLI(`agy`)에서 파일 생성, 수정 및 명령어 실행 시 확인(Approval) 절차를 생략하고 자동 승인(Auto-approve)하는 설정 가이드입니다.
 

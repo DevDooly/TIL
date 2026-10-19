@@ -5,6 +5,7 @@ nav:
 - OpenCode: OpenCode.md
 - OpenClaw: OpenClaw.md
 - Gemini CLI: Gemini_CLI.md
+- Gemini 4 Argon 추론 단계 비교: Gemini_4_Argon_Reasoning_Levels.md
 - Antigravity CLI 설정: Antigravity_CLI_Configuration.md
 - Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
 - AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
