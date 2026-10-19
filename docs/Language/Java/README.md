@@ -47,6 +47,7 @@ title: Java & Spring Engineering
 * **[Java Functional Programming](Functional/README.md)**: Lambda, Stream API, Optional, 표준 함수형 인터페이스
 * **[Effectively Final](Effectively_Final.md)**: 람다/익명 클래스 내 변수 캡처링 제약과 원리
 * **[Collections.emptyList() vs List.of()](Collections.emptyList_vs_List.of.md)**: 불변 컬렉션 인스턴스 생성 시 메모리 및 불변성 차이
+* **[HttpClient · HttpRequest · HttpResponse JSON REST API 예제](HttpClient_REST_API_JSON_Example.md)**: 표준 `HttpClient`를 활용한 동기·비동기 REST API 호출, Jackson·Gson·단일 파일 JSON 처리 및 페이지네이션 집계 예제
 * **[Google Java Style Guide](Google_Java_Style_Guide.md)**: 사내 표준 코드 품질 유지를 위한 구글 자바 스타일 가이드
 
 ### 6. Java Version Release Notes

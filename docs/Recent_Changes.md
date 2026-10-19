@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-19 16:24 | [Language/Java/HttpClient_REST_API_JSON_Example.md](Language/Java/HttpClient_REST_API_JSON_Example.md) | docs: Java HttpClient 기반 JSON REST API 예제 추가 |
 | 2026-10-19 09:22 | [AI/Gemini_4_Argon_Reasoning_Levels.md](AI/Gemini_4_Argon_Reasoning_Levels.md) | docs: Gemini 4 Argon 추론 단계 성능 비교 추가 |
 | 2026-10-19 01:26 | [Data/Iceberg_Snapshot_Expiration_Lab.md](Data/Iceberg_Snapshot_Expiration_Lab.md) | docs: Iceberg snapshot 만료와 공유 파일 보존 사례 추가 (#2) |
 | 2026-10-16 07:00 | [Troubleshooting/FsGroup_Setgid_Java_Readiness.md](Troubleshooting/FsGroup_Setgid_Java_Readiness.md) | docs: fsGroup SGID와 worker 준비 상태 검증 기록 |
@@ -53,4 +54,3 @@
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/Versions/Java25.md](Language/Java/Versions/Java25.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Resume.md](Resume.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
