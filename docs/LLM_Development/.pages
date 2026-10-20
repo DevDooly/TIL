@@ -1,6 +1,7 @@
 title: LLM Development
 nav:
 - Overview: README.md
+- AI 명령 설계 및 방법론 운영 가이드: AI_Command_and_Prompting_Methodology.md
 - Web Development: Web_Development_Checklist.md
 - Backend Development: Backend_Development_Checklist.md
 - 레거시 코드 개선과 검증: Legacy_Code_Improvement.md

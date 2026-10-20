@@ -12,6 +12,7 @@ LLM 기반 개발은 기존의 확정적(Deterministic) 프로그래밍과는 �
 
 ### 📝 개발 단계별 가이드
 
+- **[AI 명령 설계(Prompting · Context · Harness) 방법론 및 주기적 운영 가이드](AI_Command_and_Prompting_Methodology.md)**: AI에게 명확하게 명령을 내리는 5대 원칙, Before/After 사례 카탈로그, 그리고 지시 패턴을 주기적으로 규칙·스킬(`SKILL.md`)로 승격하는 운영 체계
 - **[레거시 코드 개선과 검증 기록](Legacy_Code_Improvement.md)**: LLM을 활용한 알고리즘·시간 처리·코딩 스타일 개선의 검증 절차
 - **[UTC 구간 계산의 AI 제안 검증](UTC_Window_Analysis_Case.md)**: 독립 oracle·시간대 회귀·실제 JMH 측정을 연결한 공개 합성 사례
 - **[Web Development Checklist](Web_Development_Checklist.md)**: 프론트엔드 UI/UX, 클라이언트 로직 개발 시 고려사항

@@ -280,6 +280,7 @@
 ## 📁 LLM_Development
 
 * [LLM Development Guide (LLM 개발 가이드)](LLM_Development/README.md)
+* [AI 명령 설계(Prompting · Context · Harness) 방법론 및 주기적 운영 가이드](LLM_Development/AI_Command_and_Prompting_Methodology.md)
 * [Backend Development with LLM (백엔드 개발 시 LLM 활용 가이드)](LLM_Development/Backend_Development_Checklist.md)
 * [LLM을 활용한 레거시 코드 개선과 검증 기록](LLM_Development/Legacy_Code_Improvement.md)
 * [AI가 제안한 UTC 구간 계산을 테스트와 JMH로 확인하기](LLM_Development/UTC_Window_Analysis_Case.md)
