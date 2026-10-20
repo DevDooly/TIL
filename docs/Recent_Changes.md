@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-10-20 15:59 | [Language/Java/Jenv_and_JEP_Guide.md](Language/Java/Jenv_and_JEP_Guide.md) | docs: Java jenv 버전 관리와 JEP 정리 문서 복원 |
 | 2026-10-20 15:16 | [AI/TypeSafe_AI_Jev.md](AI/TypeSafe_AI_Jev.md) | docs: TypeSafe AI Jev 의사결정 모델(System One) 문서 추가 |
 | 2026-10-19 16:24 | [Language/Java/HttpClient_REST_API_JSON_Example.md](Language/Java/HttpClient_REST_API_JSON_Example.md) | docs: Java HttpClient 기반 JSON REST API 예제 추가 |
 | 2026-10-19 09:22 | [AI/Gemini_4_Argon_Reasoning_Levels.md](AI/Gemini_4_Argon_Reasoning_Levels.md) | docs: Gemini 4 Argon 추론 단계 성능 비교 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-16 13:55 | [Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md](Infrastructure/MinIO/MinIO_Versioning_Deletion_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/Concatenated_Gzip_Decompression.md](Language/Java/Concatenated_Gzip_Decompression.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md](Language/Java/SpringBoot/JDBI_VT_Pinning_Solution.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md](Language/Java/SpringBoot/Virtual_Thread_Pinning_Kafka.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |

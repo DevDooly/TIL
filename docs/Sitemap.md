@@ -49,6 +49,7 @@
         * [Java 코딩테스트 1일차부터 5일차 연습문제와 풀이](Language/Java/Java_Coding_Test_Practice.md)
         * [Java와 Python의 대용량 데이터 교환: Apache Arrow & mmap](Language/Java/Java_Python_Shared_Memory_Arrow.md)
         * [Kubernetes Java 데몬 리소스 산정: CPU, JVM, Virtual Thread](Language/Java/Java_Resource_Sizing_in_K8s.md)
+        * [Java 버전 관리 도구 `jenv`와 `JEP`(JDK Enhancement Proposal) 정리](Language/Java/Jenv_and_JEP_Guide.md)
         * [Java Memory Structure (JVM Runtime Data Areas)](Language/Java/Memory.md)
         * [Java-Python 실행 성능 최적화 가이드](Language/Java/Optimizing_Java_Python_Execution.md)
         * [Java: Scoped Value - 가상 스레드 시대를 위한 새로운 데이터 공유 메커니즘](Language/Java/Scoped_Value.md)
