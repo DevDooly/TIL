@@ -53,7 +53,6 @@ title: Java & Spring Engineering
 ### 6. Java Version Release Notes
 
 * **[Java Versions Overview](Versions/README.md)**: Java 8부터 최신 LTS(Java 11, 17, 21, 25)까지의 주요 변경점
-* **[jenv 버전 관리 도구와 JEP(JDK Enhancement Proposal) 정리](Jenv_and_JEP_Guide.md)**: 로컬 다중 JDK 버전 전환(`jenv` vs `SDKMAN!`), `JAVA_HOME` 연동 주의점 및 OpenJDK JEP 단계(Incubator·Preview·Standard) 정리
 
 ### 7. 코딩테스트 준비
 

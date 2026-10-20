@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-10-20 15:11 | [Language/Java/Jenv_and_JEP_Guide.md](Language/Java/Jenv_and_JEP_Guide.md) | docs: Java jenv 버전 관리와 JEP 정리 추가 |
+| 2026-10-20 15:16 | [AI/TypeSafe_AI_Jev.md](AI/TypeSafe_AI_Jev.md) | docs: TypeSafe AI Jev 의사결정 모델(System One) 문서 추가 |
 | 2026-10-19 16:24 | [Language/Java/HttpClient_REST_API_JSON_Example.md](Language/Java/HttpClient_REST_API_JSON_Example.md) | docs: Java HttpClient 기반 JSON REST API 예제 추가 |
 | 2026-10-19 09:22 | [AI/Gemini_4_Argon_Reasoning_Levels.md](AI/Gemini_4_Argon_Reasoning_Levels.md) | docs: Gemini 4 Argon 추론 단계 성능 비교 추가 |
 | 2026-10-19 01:26 | [Data/Iceberg_Snapshot_Expiration_Lab.md](Data/Iceberg_Snapshot_Expiration_Lab.md) | docs: Iceberg snapshot 만료와 공유 파일 보존 사례 추가 (#2) |

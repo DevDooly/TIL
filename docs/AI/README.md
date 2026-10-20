@@ -7,6 +7,9 @@
 ### [AI Agent 개발 직군 및 엔지니어링 가이드](AI_Agent_Developer_Role_and_Engineering.md)
 채용 시장에서 요구하는 **AI Agent 개발자의 역할과 의미**, 챗봇과의 차이점, 4대 핵심 아키텍처(Brain, Planning, Memory, Tools), LangGraph 기반 상태 머신 설계, 결정론적 가드레일 및 Observability(Eval) 파이프라인 실무 가이드입니다.
 
+### [TypeSafe AI Jev (`jev.`) - System One 의사결정 모델](TypeSafe_AI_Jev.md)
+2026년 9월 TypeSafe AI가 공개한 **비생성형 인공지능 의사결정 모델(System One Model)**로, 텍스트 생성 없이 단일 병렬 패스로 `Choice`(범주 선택), `Score`(척도 평가), `Noul`(참/거짓 확률)을 반환하는 아키텍처와 활용법을 다룹니다.
+
 ### [OpenCode](OpenCode.md)
 개발자를 위한 **오픈소스 AI 코딩 어시스턴트**입니다. 터미널(CLI/TUI) 기반으로 동작하며, 로컬 파일과 Git 히스토리를 이해하여 코딩 작업을 돕습니다.
 
