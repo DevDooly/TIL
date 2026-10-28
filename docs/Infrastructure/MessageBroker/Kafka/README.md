@@ -14,4 +14,5 @@ Kafka는 실시간 데이터 파이프라인 및 스트리밍 애플리케이션
 4. **Kafka Consumer (Java)**: [특정 Offset 재소비 및 제어](Consumer_Offset_Control.md)
 5. **Spring Kafka**: 스프링 프레임워크와의 연동
    - [테스트 코드에서 단일 메시지 소비 예제](Spring_Kafka_Test.md)
+   - [DLQ(Dead Letter Queue) 개념, 메시지 확인 및 구현 가이드](Kafka_DLQ_Guide.md)
 6. **운영 및 트러블슈팅**: Lag 모니터링 및 성능 최적화

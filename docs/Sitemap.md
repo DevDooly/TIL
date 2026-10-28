@@ -158,6 +158,7 @@
             * [Kafka: abortOnNewBatch와 파티셔너 중복 호출](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md)
             * [Kafka Consumer: 특정 Offset 재소비 (Seek API)](Infrastructure/MessageBroker/Kafka/Consumer_Offset_Control.md)
             * [Kafka Consumer: wakeup과 close, 처리 완료 offset](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md)
+            * [Kafka DLQ(Dead Letter Queue) 개념, 메시지 확인 및 구현 가이드](Infrastructure/MessageBroker/Kafka/Kafka_DLQ_Guide.md)
             * [Kafka 메시지 크기 제한: Producer·Topic·Consumer 구분](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md)
             * [Kafka Broker 롤링 재시작 가이드 (3대 HA 구성)](Infrastructure/MessageBroker/Kafka/Kafka_Rolling_Restart_Guide.md)
             * [Kafka 파티션 전략: 개수 산정과 증가 시 고려사항](Infrastructure/MessageBroker/Kafka/Partition_Strategy.md)
