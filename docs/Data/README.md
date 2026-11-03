@@ -30,6 +30,7 @@ title: Data Engineering & Storage Systems
 
 * **[Avro result 필드와 hashCode 지역 변수 충돌](Avro_HashCode_Field_Naming_Conflict.md)**: Java 코드 생성기의 필드 참조 문제와 검증 방법
 
-### 4. Lakehouse 실측 사례
+### 4. Lakehouse 실측 사례 및 파이프라인 설계
 
+* **[Java Avro 저장부터 Spark Iceberg(Parquet) 변환·Trino 조회까지의 파이프라인 설계 및 챕터별 진행 계획](Avro_Spark_Iceberg_Trino_Pipeline_Plan.md)**: Avro 수집 파일에서 Iceberg(Parquet) 테이블 적재 및 Trino 조회까지 5개 챕터로 나누어 구현·검증하는 실행 로드맵과 예제 코드
 * **[Iceberg snapshot 만료와 공유 파일 보존](Iceberg_Snapshot_Expiration_Lab.md)**: 새 합성 warehouse에서 만료 대상·공유 파일·객체 GET·Spark/Trino 조회 범위를 분리해 확인한 개인 Lab 사례

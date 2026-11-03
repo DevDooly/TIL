@@ -241,6 +241,7 @@
 
 * [💾 Data Systems & Storage Architecture](Data/README.md)
 * [Apache Avro: result 필드와 hashCode 지역 변수 충돌](Data/Avro_HashCode_Field_Naming_Conflict.md)
+* [Java Avro 저장부터 Spark Iceberg(Parquet) 변환·Trino 조회까지의 파이프라인 설계 및 챕터별 진행 계획](Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md)
 * [ELK Stack](Data/ELK.md)
 * [Iceberg snapshot 만료와 공유 data 파일 보존을 따로 검증하기](Data/Iceberg_Snapshot_Expiration_Lab.md)
 * [로그 수집기 비교: Logstash vs Fluentd vs Fluent-bit](Data/Log_Collectors_Comparison.md)
