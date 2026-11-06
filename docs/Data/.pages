@@ -7,4 +7,5 @@ nav:
 - Database: Database
 - Avro result 필드 충돌: Avro_HashCode_Field_Naming_Conflict.md
 - Avro · Spark · Iceberg · Trino 파이프라인 설계: Avro_Spark_Iceberg_Trino_Pipeline_Plan.md
+- Chapter 1. Avro 스키마 및 공통 인프라: Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md
 - Iceberg snapshot 만료·공유 파일 보존: Iceberg_Snapshot_Expiration_Lab.md
