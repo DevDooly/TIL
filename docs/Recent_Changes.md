@@ -4,8 +4,9 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-11-07 08:39 | [Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md](Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 1 스키마 설계 및 공통 인프라 가이드 추가 |
-| 2026-11-07 08:39 | [Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md](Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 1 스키마 설계 및 공통 인프라 가이드 추가 |
+| 2026-11-10 18:03 | [Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md](Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 2 Java Avro 파일 생성 및 검증 가이드 추가 |
+| 2026-11-10 18:03 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 2 Java Avro 파일 생성 및 검증 가이드 추가 |
+| 2026-11-10 18:03 | [Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md](Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 2 Java Avro 파일 생성 및 검증 가이드 추가 |
 | 2026-10-28 17:32 | [Infrastructure/MessageBroker/Kafka/Kafka_DLQ_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_DLQ_Guide.md) | docs: Kafka DLQ 확인 및 구현 가이드 추가 |
 | 2026-10-20 16:40 | [LLM_Development/AI_Command_and_Prompting_Methodology.md](LLM_Development/AI_Command_and_Prompting_Methodology.md) | docs: AI 명령 설계 및 방법론 주기적 운영 가이드 추가 |
 | 2026-10-20 15:59 | [Language/Java/Jenv_and_JEP_Guide.md](Language/Java/Jenv_and_JEP_Guide.md) | docs: Java jenv 버전 관리와 JEP 정리 문서 복원 |
@@ -53,4 +54,3 @@
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md](Infrastructure/MessageBroker/Kafka/Consumer_Safe_Shutdown.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md](Infrastructure/MessageBroker/Kafka/Kafka_Message_Size_Configuration.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md](Infrastructure/MessageBroker/Kafka/Partitioner_Evolution_and_Imbalance.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md](Infrastructure/MessageBroker/Kafka/Producer_Partitioner_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |

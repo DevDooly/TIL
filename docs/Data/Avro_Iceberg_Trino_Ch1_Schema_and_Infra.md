@@ -281,4 +281,4 @@ docker exec -it trino-iceberg trino --execute "SHOW SCHEMAS IN iceberg;"
 ## 5. 다음 단계
 
 * **전체 파이프라인 로드맵**: [Java Avro 저장부터 Spark Iceberg(Parquet) 변환·Trino 조회까지의 파이프라인 설계](Avro_Spark_Iceberg_Trino_Pipeline_Plan.md)
-* **다음 챕터 (Chapter 2)**: 위에서 정의한 `schemas/order_event.avsc`를 사용해 Java 애플리케이션에서 Apache Avro 라이브러리(`DataFileWriter` / `DataFileReader`)로 `data/landing/*.avro` 컨테이너 파일을 생성하고 검증한다.
+* **다음 챕터 (Chapter 2)**: [[Chapter 2] Java에서 Apache Avro로 `.avro` 컨테이너 파일 생성 및 검증](Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) — `schemas/order_event.avsc`를 사용해 `DataFileWriter` / `DataFileReader`로 `data/landing/*.avro` 컨테이너 파일을 생성하고 검증한다.

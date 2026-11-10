@@ -47,7 +47,7 @@ flowchart LR
 | 챕터 | 주제 | 핵심 작업 | 완료 검증 기준 (Definition of Done) | 권장 TIL 문서 제목(안) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Chapter 1** | 스키마 설계 및 공통 인프라 구성 | Avro `.avsc` 스키마 정의, 공유 스토리지(Local/S3) 및 Iceberg 카탈로그(PostgreSQL JDBC/REST), Spark·Trino 컨테이너 설계 | `docker compose ps` 정상 기동 및 스키마 JSON 유효성 통과 | [Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md](Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md) |
-| **Chapter 2** | Java에서 Apache Avro 파일 생성 및 검증 | Java `DataFileWriter`로 `.avro` 파일 생성(Snappy 압축), `DataFileReader`로 역직렬화 테스트 | 생성된 `.avro` 파일 헤더에서 스키마가 읽히고 건수가 일치함 | `02_Java_Apache_Avro_파일_직렬화_가이드.md` |
+| **Chapter 2** | Java에서 Apache Avro 파일 생성 및 검증 | Java `DataFileWriter`로 `.avro` 파일 생성(Snappy 압축), `DataFileReader`로 역직렬화 테스트 | 생성된 `.avro` 파일 헤더에서 스키마가 읽히고 건수가 일치함 | [Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) |
 | **Chapter 3** | Spark로 Avro를 읽어 Iceberg(Parquet)로 변환 | `spark-avro`로 `.avro` 로드 후 Iceberg 테이블(`USING iceberg`)에 적재 | Warehouse 경로에 `data/*.parquet`와 `metadata/*.metadata.json` 생성 확인 | `03_Spark_Avro_to_Iceberg_Parquet_변환.md` |
 | **Chapter 4** | Trino에서 Iceberg 카탈로그 연동 및 조회 | Trino `iceberg.properties` 설정 후 일반 쿼리 및 `$files`, `$snapshots` 메타데이터 조회 | Spark에서 적재한 건수·컬럼 타입이 Trino에서 동일하게 조회됨 | `04_Trino_Iceberg_카탈로그_연동과_메타데이터_조회.md` |
 | **Chapter 5** | 운영 심화: 스키마 진화·Compaction·스냅샷 만료 | Avro 컬럼 추가 후 파이프라인 재실행, 소파일 병합(`rewrite_data_files`), 스냅샷 정리 | 기존 데이터 재작성 없이 신규 컬럼 조회 및 파일 수 감소 확인 | `05_Iceberg_스키마_진화와_운영_최적화.md` |
