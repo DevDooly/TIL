@@ -9,4 +9,7 @@ nav:
 - Avro · Spark · Iceberg · Trino 파이프라인 설계: Avro_Spark_Iceberg_Trino_Pipeline_Plan.md
 - Chapter 1. Avro 스키마 및 공통 인프라: Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md
 - Chapter 2. Java Avro 파일 생성 및 검증: Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md
+- Chapter 3. Spark Avro → Iceberg 적재: Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md
+- Chapter 4. Trino Iceberg 조회 및 검증: Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md
+- Chapter 5. 스키마 진화 및 운영 최적화: Avro_Iceberg_Trino_Ch5_Schema_Evolution_and_Maintenance.md
 - Iceberg snapshot 만료·공유 파일 보존: Iceberg_Snapshot_Expiration_Lab.md

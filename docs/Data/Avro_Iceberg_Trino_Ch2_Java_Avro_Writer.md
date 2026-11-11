@@ -365,4 +365,4 @@ docker exec -it spark-iceberg ls -lh /data/landing/orders_20261107.avro
 * **전체 파이프라인 로드맵**: [Java Avro 저장부터 Spark Iceberg(Parquet) 변환·Trino 조회까지의 파이프라인 설계](Avro_Spark_Iceberg_Trino_Pipeline_Plan.md)
 * **이전 챕터 (Chapter 1)**: [Avro 스키마 설계 및 Spark·Trino 로컬 레이크하우스 공통 인프라 구성](Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md)
 * **참고 트러블슈팅**: [Avro result 필드와 hashCode 지역 변수 충돌](Avro_HashCode_Field_Naming_Conflict.md)
-* **다음 챕터 (Chapter 3)**: Spark(`spark-avro` + `iceberg-spark-runtime`)에서 `/data/landing/orders_20261107.avro`를 읽어 `lakehouse.commerce.order_events` Iceberg(Parquet) 테이블로 적재하고 생성된 메타데이터·Parquet 파일을 분석한다.
+* **다음 챕터 (Chapter 3)**: [[Chapter 3] Apache Spark로 Avro 파일을 읽어 Iceberg(Parquet) 테이블로 변환·적재](Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md) — Spark(`spark-avro` + `iceberg-spark-runtime`)에서 `/data/landing/orders_20261107.avro`를 읽어 `lakehouse.commerce.order_events` Iceberg(Parquet) 테이블로 적재하고 생성된 메타데이터·Parquet 파일을 분석한다.
