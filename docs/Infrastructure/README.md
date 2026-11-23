@@ -48,6 +48,7 @@ title: Cloud, DevOps & Infrastructure Architecture
   * **[NameNode High Availability (HA)](Hadoop/NameNode_HA.md)**: QJM(Quorum Journal Manager) 기반 이중화
   * **[Tez Job Slowness (Network RX Issue)](Hadoop/Tez_Job_Slowness_Network_RX.md)**: 네트워크 패킷 손실로 인한 성능 저하 디버깅
 * **[Hazelcast IMDG](Hazelcast/README.md)**: 인메모리 데이터 그리드 아키텍처 (IMDB vs IMDG)
+* **[Edge Computing (엣지 컴퓨팅 아키텍처)](../ComputerScience/Architecture/Edge_Computing.md)**: 클라우드·포그·엣지 계층 구조, 경량 Kubernetes(K3s/KubeEdge), CDN Edge, Store-and-Forward 연동 설계
 
 ### 5. Linux Kernel & System Administration
 

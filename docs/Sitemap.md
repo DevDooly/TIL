@@ -314,6 +314,7 @@
         * [대량의 이미지를 파일시스템에 저장할 때](ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md)
     * **Architecture**
         * [Architecture (시스템 아키텍처)](ComputerScience/Architecture/README.md)
+        * [엣지 컴퓨팅 (Edge Computing)](ComputerScience/Architecture/Edge_Computing.md)
         * [고가용성 (High Availability, HA)](ComputerScience/Architecture/High_Availability.md)
         * [파이프라인 (Pipeline)](ComputerScience/Architecture/Pipeline.md)
     * **Network**

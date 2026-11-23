@@ -15,6 +15,7 @@ title: Computer Science & Systems Engineering
 * **[Architecture Overview](Architecture/README.md)**: 시스템 아키텍처 원칙
   * **[High Availability (고가용성)](Architecture/High_Availability.md)**: 무중단 서비스를 위한 이중화 및 장애 복구 전략
   * **[Pipeline Architecture](Architecture/Pipeline.md)**: 데이터 파이프라인 패턴
+  * **[Edge Computing (엣지 컴퓨팅)](Architecture/Edge_Computing.md)**: 클라우드·포그·엣지 계층 구조, Edge K8s(K3s/KubeEdge)·CDN Edge·MEC·Edge AI 기술 스택 및 연동 설계 패턴
 * **[Design Pattern](DesignPattern/README.md)**:
   * **[State Pattern (상태 패턴)](DesignPattern/StatePattern.md)**: 상태 전이 캡슐화 및 OCP 준수
 

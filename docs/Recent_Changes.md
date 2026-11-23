@@ -4,6 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-11-23 09:20 | [ComputerScience/Architecture/Edge_Computing.md](ComputerScience/Architecture/Edge_Computing.md) | docs: 엣지 컴퓨팅(Edge Computing) 아키텍처 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md](Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md](Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
 | 2026-09-16 13:55 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
 | 2026-09-16 13:55 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md](Infrastructure/MessageBroker/Kafka/AbortOnNewBatch_Issue.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
