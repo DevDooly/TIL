@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-11-23 10:01 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Obsidian_Claude_Code_DeepSeek_Guide.md](AI/Obsidian_Claude_Code_DeepSeek_Guide.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 09:20 | [ComputerScience/Architecture/Edge_Computing.md](ComputerScience/Architecture/Edge_Computing.md) | docs: 엣지 컴퓨팅(Edge Computing) 아키텍처 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md](Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
@@ -52,5 +54,3 @@
 | 2026-09-28 13:44 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
 | 2026-09-28 11:07 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
 | 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
-| 2026-09-16 13:55 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |
-| 2026-09-16 13:55 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: 트러블슈팅 문체 정리 및 자연스러운 작성 스킬 추가 |

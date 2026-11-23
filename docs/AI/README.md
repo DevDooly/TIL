@@ -37,6 +37,9 @@ AI 클라이언트(Claude, Cursor, AGY 등)와 외부 도구/데이터를 표준
 ### [Claude CLI (다중 모델 & DeepSeek 연동)](Claude_CLI_DeepSeek_Setup.md)
 Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 변수를 활용하여 DeepSeek 등 다중 모델을 연동하고 전환하는 설정 가이드입니다.
 
+### [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](Obsidian_Claude_Code_DeepSeek_Guide.md)
+Windows 환경에서 DeepSeek API가 연결된 Claude Code를 Obsidian Vault에 연동하여 `CLAUDE.md` 규칙 정의, Obsidian 내장 터미널 구성, 커스텀 슬래시 명령어(`/summarize`, `/inbox`, `/weekly`)로 문서를 자동 요약·분류·정리하는 실전 가이드입니다.
+
 ### [Qwen CLI](Qwen_CLI_Setup.md)
 Qwen CLI 및 DashScope 환경에서 API Key를 재등록하거나 환경 변수를 재설정하는 가이드입니다.
 

@@ -274,6 +274,7 @@
 * [Gemini 4 Argon 추론 단계(Low · Medium · High) 성능 및 비용 비교](AI/Gemini_4_Argon_Reasoning_Levels.md)
 * [Gemini CLI](AI/Gemini_CLI.md)
 * [MCP (Model Context Protocol) 서버 개발 및 연동 가이드](AI/MCP_Server_Development_Guide.md)
+* [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](AI/Obsidian_Claude_Code_DeepSeek_Guide.md)
 * [Ollama](AI/Ollama.md)
 * [🖥️ 현재 PC (Ubuntu) Ollama 설치 및 API 설정 가이드](AI/Ollama_Local_Environment_Setup.md)
 * [OpenClaw](AI/OpenClaw.md)

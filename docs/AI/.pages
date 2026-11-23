@@ -12,6 +12,7 @@ nav:
 - AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
 - MCP 서버 개발 가이드: MCP_Server_Development_Guide.md
 - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
+- Obsidian · Claude Code 연동 가이드: Obsidian_Claude_Code_DeepSeek_Guide.md
 - Qwen CLI Setup: Qwen_CLI_Setup.md
 - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
 - Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md

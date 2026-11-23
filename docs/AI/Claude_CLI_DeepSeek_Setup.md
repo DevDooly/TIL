@@ -143,3 +143,9 @@ Switched model to deepseek-v4-flash-0731
 | **복잡한 디버깅 / 알고리즘 추론** | `deepseek-reasoner` (R1) | PowerShell 함수 (`claude-r1`) |
 | **대규모 리팩토링 / 풀스택 코딩** | `claude-3-5-sonnet-20241022` | 공식 Anthropic API (`claude-sonnet`) |
 | **팀 단위 다양한 모델 통합 테스트** | 다중 모델 풀 | OpenRouter 또는 LiteLLM 프록시 |
+
+---
+
+## 4. 관련 활용 가이드
+
+* [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](Obsidian_Claude_Code_DeepSeek_Guide.md) — 위에서 연동한 DeepSeek 기반 Claude Code를 Obsidian 보관함(Vault)에 연결해 노트를 자동 요약·분류·정리하는 방법
