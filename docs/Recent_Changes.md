@@ -4,53 +4,53 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-11-24 09:14 | [AI/MCP_Selection_Guide.md](AI/MCP_Selection_Guide.md) | docs: 상황별 MCP 선택과 연결 가이드 추가 |
+| 2026-11-23 10:01 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Antigravity_CLI_Configuration.md](AI/Antigravity_CLI_Configuration.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Antigravity_CLI_Skills_Guide.md](AI/Antigravity_CLI_Skills_Guide.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 10:01 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Gemini_4_Argon_Reasoning_Levels.md](AI/Gemini_4_Argon_Reasoning_Levels.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Gemini_CLI.md](AI/Gemini_CLI.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 10:01 | [AI/Obsidian_Claude_Code_DeepSeek_Guide.md](AI/Obsidian_Claude_Code_DeepSeek_Guide.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
-| 2026-11-23 09:20 | [ComputerScience/Architecture/Edge_Computing.md](ComputerScience/Architecture/Edge_Computing.md) | docs: 엣지 컴퓨팅(Edge Computing) 아키텍처 가이드 추가 |
-| 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
-| 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md](Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
-| 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md](Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
-| 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch5_Schema_Evolution_and_Maintenance.md](Data/Avro_Iceberg_Trino_Ch5_Schema_Evolution_and_Maintenance.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
-| 2026-11-11 16:00 | [Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md](Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
-| 2026-11-10 18:03 | [Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md](Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 2 Java Avro 파일 생성 및 검증 가이드 추가 |
-| 2026-10-28 17:32 | [Infrastructure/MessageBroker/Kafka/Kafka_DLQ_Guide.md](Infrastructure/MessageBroker/Kafka/Kafka_DLQ_Guide.md) | docs: Kafka DLQ 확인 및 구현 가이드 추가 |
-| 2026-10-20 16:40 | [LLM_Development/AI_Command_and_Prompting_Methodology.md](LLM_Development/AI_Command_and_Prompting_Methodology.md) | docs: AI 명령 설계 및 방법론 주기적 운영 가이드 추가 |
-| 2026-10-20 15:59 | [Language/Java/Jenv_and_JEP_Guide.md](Language/Java/Jenv_and_JEP_Guide.md) | docs: Java jenv 버전 관리와 JEP 정리 문서 복원 |
-| 2026-10-20 15:16 | [AI/TypeSafe_AI_Jev.md](AI/TypeSafe_AI_Jev.md) | docs: TypeSafe AI Jev 의사결정 모델(System One) 문서 추가 |
-| 2026-10-19 16:24 | [Language/Java/HttpClient_REST_API_JSON_Example.md](Language/Java/HttpClient_REST_API_JSON_Example.md) | docs: Java HttpClient 기반 JSON REST API 예제 추가 |
-| 2026-10-19 09:22 | [AI/Gemini_4_Argon_Reasoning_Levels.md](AI/Gemini_4_Argon_Reasoning_Levels.md) | docs: Gemini 4 Argon 추론 단계 성능 비교 추가 |
-| 2026-10-19 01:26 | [Data/Iceberg_Snapshot_Expiration_Lab.md](Data/Iceberg_Snapshot_Expiration_Lab.md) | docs: Iceberg snapshot 만료와 공유 파일 보존 사례 추가 (#2) |
-| 2026-10-16 07:00 | [Troubleshooting/FsGroup_Setgid_Java_Readiness.md](Troubleshooting/FsGroup_Setgid_Java_Readiness.md) | docs: fsGroup SGID와 worker 준비 상태 검증 기록 |
-| 2026-10-15 21:27 | [LLM_Development/Legacy_Code_Improvement.md](LLM_Development/Legacy_Code_Improvement.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
-| 2026-10-15 21:27 | [LLM_Development/UTC_Window_Analysis_Case.md](LLM_Development/UTC_Window_Analysis_Case.md) | docs: AI UTC 구간 계산 검증 사례 추가 |
-| 2026-10-14 09:25 | [Language/Java/Java_Coding_Test_Practice.md](Language/Java/Java_Coding_Test_Practice.md) | docs: 코딩테스트 문제지와 IDE 복사 안내 추가 |
-| 2026-10-14 09:10 | [Language/Java/HackerRank_Coding_Test_Preparation.md](Language/Java/HackerRank_Coding_Test_Preparation.md) | docs: Java 코딩테스트 연습문제와 접힌 풀이 추가 |
-| 2026-10-08 09:24 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
-| 2026-10-08 09:24 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
-| 2026-10-08 09:24 | [AI/MCP_Server_Development_Guide.md](AI/MCP_Server_Development_Guide.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
-| 2026-10-08 09:24 | [Infrastructure/MinIO/MinIO_and_Goroutine.md](Infrastructure/MinIO/MinIO_and_Goroutine.md) | docs: 마크다운 렌더링 깨짐 방지를 위해 LaTeX 화살표 문법을 유니코드 화살표로 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md](Infrastructure/Kubernetes/CKA/CKA_Exam_Tips.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Cluster_Architecture.md](Infrastructure/Kubernetes/CKA/Cluster_Architecture.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md](Infrastructure/Kubernetes/CKA/ETCD_Backup_Restore.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md](Infrastructure/Kubernetes/CKA/Kubeadm_Install_Upgrade.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/RBAC_Authorization.md](Infrastructure/Kubernetes/CKA/RBAC_Authorization.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md](Infrastructure/Kubernetes/CKA/Study_Plan_2Weeks.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:10 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Cluster.md) | docs: CKA 개편에 따른 etcd 학습 범위 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md](Infrastructure/Kubernetes/CKA/ConfigMaps_Secrets.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Ingress.md](Infrastructure/Kubernetes/CKA/Ingress.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md](Infrastructure/Kubernetes/CKA/JSONPath_Cheatsheet.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md](Infrastructure/Kubernetes/CKA/Killer_sh_Strategy.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Resource_Limits.md](Infrastructure/Kubernetes/CKA/Resource_Limits.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Scheduling.md](Infrastructure/Kubernetes/CKA/Scheduling.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Services.md](Infrastructure/Kubernetes/CKA/Services.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md](Infrastructure/Kubernetes/CKA/Storage_PV_PVC.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Storage_StorageClass.md](Infrastructure/Kubernetes/CKA/Storage_StorageClass.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Nodes_Network.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md](Infrastructure/Kubernetes/CKA/Troubleshooting_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Workloads.md](Infrastructure/Kubernetes/CKA/Workloads.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 13:44 | [Language/Java/Java_Resource_Sizing_in_K8s.md](Language/Java/Java_Resource_Sizing_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
-| 2026-09-28 13:44 | [Language/Java/Virtual_Threads_in_K8s.md](Language/Java/Virtual_Threads_in_K8s.md) | docs: Kubernetes Java 리소스 산정 가이드 추가 |
-| 2026-09-28 11:07 | [Language/Java/JDK25_Docker_Base_Image_Selection.md](Language/Java/JDK25_Docker_Base_Image_Selection.md) | feat: Kubernetes Temurin 점검 스크립트 추가 |
-| 2026-09-28 10:22 | [Language/Java/Virtual_Threads_FTP_Pinning.md](Language/Java/Virtual_Threads_FTP_Pinning.md) | docs: JDK 25 이미지 선택 근거와 호환성 안내 수정 |
+| 2026-11-23 10:01 | [AI/Ollama.md](AI/Ollama.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Ollama_Local_Environment_Setup.md](AI/Ollama_Local_Environment_Setup.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/OpenClaw.md](AI/OpenClaw.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/OpenCode.md](AI/OpenCode.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Paseo_Setup_and_Usage.md](AI/Paseo_Setup_and_Usage.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/Qwen_CLI_Setup.md](AI/Qwen_CLI_Setup.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/TurboQuant.md](AI/TurboQuant.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/TypeSafe_AI_Jev.md](AI/TypeSafe_AI_Jev.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [AI/n8n.md](AI/n8n.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Architecture/Edge_Computing.md](ComputerScience/Architecture/Edge_Computing.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Architecture/High_Availability.md](ComputerScience/Architecture/High_Availability.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Architecture/Pipeline.md](ComputerScience/Architecture/Pipeline.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/DesignPattern/StatePattern.md](ComputerScience/DesignPattern/StatePattern.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/FileSystem/FileSystem.md](ComputerScience/FileSystem/FileSystem.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/FileSystem/HDF5.md](ComputerScience/FileSystem/HDF5.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md](ComputerScience/FileSystem/LMDB (Sysmas Lightning Memory-mapped Database).md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md](ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Network/DNS/DNS_and_NameServer.md](ComputerScience/Network/DNS/DNS_and_NameServer.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Network/OSI 7 Layer.md](ComputerScience/Network/OSI 7 Layer.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Network/RPC.md](ComputerScience/Network/RPC.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Network/Socket.md](ComputerScience/Network/Socket.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Network/Subnetwork.md](ComputerScience/Network/Subnetwork.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/OperatingSystem/Endianness.md](ComputerScience/OperatingSystem/Endianness.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Security/JWT.md](ComputerScience/Security/JWT.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Security/OAuth2.md](ComputerScience/Security/OAuth2.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/Security/OIDC.md](ComputerScience/Security/OIDC.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/SoftwareEngineering/BDD.md](ComputerScience/SoftwareEngineering/BDD.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [ComputerScience/SoftwareEngineering/Versioning.md](ComputerScience/SoftwareEngineering/Versioning.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_HashCode_Field_Naming_Conflict.md](Data/Avro_HashCode_Field_Naming_Conflict.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md](Data/Avro_Iceberg_Trino_Ch1_Schema_and_Infra.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md](Data/Avro_Iceberg_Trino_Ch3_Spark_Avro_to_Iceberg.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md](Data/Avro_Iceberg_Trino_Ch4_Trino_Query_and_Metadata.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Iceberg_Trino_Ch5_Schema_Evolution_and_Maintenance.md](Data/Avro_Iceberg_Trino_Ch5_Schema_Evolution_and_Maintenance.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md](Data/Avro_Spark_Iceberg_Trino_Pipeline_Plan.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Database/Image_Storage_Management.md](Data/Database/Image_Storage_Management.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Database/JDBI_FetchSize_and_VirtualThreads.md](Data/Database/JDBI_FetchSize_and_VirtualThreads.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Database/Locking_Strategy.md](Data/Database/Locking_Strategy.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
+| 2026-11-23 10:01 | [Data/Database/MongoDB.md](Data/Database/MongoDB.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |

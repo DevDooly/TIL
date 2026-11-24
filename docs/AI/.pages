@@ -10,6 +10,7 @@ nav:
 - Antigravity CLI 설정: Antigravity_CLI_Configuration.md
 - Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
 - AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
+- 상황별 MCP 선택과 빠른 연결: MCP_Selection_Guide.md
 - MCP 서버 개발 가이드: MCP_Server_Development_Guide.md
 - Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
 - Obsidian · Claude Code 연동 가이드: Obsidian_Claude_Code_DeepSeek_Guide.md
