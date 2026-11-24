@@ -216,4 +216,3 @@ npx -y @mobilenext/mobile-mcp@latest
 Kafka 전용 후보로는 [Confluent MCP](https://github.com/confluentinc/mcp-confluent) **171★**, [Aiven MCP](https://github.com/Aiven-Open/mcp-aiven) **28★**가 있다. 각각 해당 관리 서비스를 사용하는 경우에 살펴볼 후보이며, 현재 셀프 호스팅 Kafka에 그대로 연결하는 공통 도구로 가정하지 않는다.
 
 MCP를 직접 만들고 싶다면 [MCP 서버 개발 가이드](MCP_Server_Development_Guide.md)를 이어서 보면 된다.
-

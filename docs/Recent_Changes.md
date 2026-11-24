@@ -4,7 +4,7 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
-| 2026-11-24 09:14 | [AI/MCP_Selection_Guide.md](AI/MCP_Selection_Guide.md) | docs: 상황별 MCP 선택과 연결 가이드 추가 |
+| 2026-11-24 09:16 | [AI/MCP_Selection_Guide.md](AI/MCP_Selection_Guide.md) | docs: MCP 가이드 문서 끝 공백 정리 |
 | 2026-11-23 10:01 | [AI/AGY_vs_OpenCode_Comparison.md](AI/AGY_vs_OpenCode_Comparison.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 10:01 | [AI/AI_Agent_Developer_Role_and_Engineering.md](AI/AI_Agent_Developer_Role_and_Engineering.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 10:01 | [AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md](AI/AI_Coding_Agent_Orchestrators_Orca_Paseo.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
