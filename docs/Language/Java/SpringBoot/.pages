@@ -1,32 +1,38 @@
 title: Spring Boot
 nav:
 - Overview: README.md
-- SpringBoot Intro: SpringBoot_Intro.md
-- DI & IoC: DI_IoC.md
-- AOP: AOP.md
-- Bean Lifecycle: Bean_Lifecycle.md
-- BeanPostProcessor: BeanPostProcessor.md
-- ThreadPoolTaskScheduler: ThreadPoolTaskScheduler.md
-- OAuth2 Implementation: OAuth2_Implementation.md
-- K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
-- JPA: JPA
-- 'Spring Data JPA: CrudRepository': Spring_Data_JPA_CrudRepository.md
-- '비교: SQL 직접 작성 vs JPA': Spring_Data_JPA_vs_JDBI.md
-- Testing: Testing
-- '가상 스레드: Kafka Pinning 이슈': Virtual_Thread_Pinning_Kafka.md
-- '가상 스레드: JDBI Pinning 해결 방법': JDBI_VT_Pinning_Solution.md
-- Spring Boot 3.4 정형 로깅 (ECS): Structured_Logging_SpringBoot_3_4.md
-- SLF4J addKeyValue를 ECS 로그에 포함하기: Logging_ECS_KeyValue_Support.md
-- Logstash Logback Encoder 사용 가이드: Logstash_Logback_Encoder_Guide.md
-- 'Logback: Composite JSON Encoder 활용': Logback_JSON_Composite_Encoder.md
-- Spring Cloud Zuul (API Gateway): Spring_Cloud_Zuul.md
-- Netflix Ribbon (Load Balancer): Netflix_Ribbon_Guide.md
-- Spring Cloud LoadBalancer: Spring_Cloud_LoadBalancer.md
-- Spring Cloud Gateway (SCG): Spring_Cloud_Gateway.md
-- Tomcat vs Netty 상세 비교: Tomcat_vs_Netty.md
-- 'Netty: Blocking 코드 찾는 방법': Finding_Blocking_Operations.md
-- SCG vs Zuul 상세 비교: SCG_vs_Zuul_Comparison.md
-- 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
-- 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md
-- Web: Web
-- '@EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교': EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md
+- Core & Configuration:
+  - SpringBoot Intro: SpringBoot_Intro.md
+  - DI & IoC: DI_IoC.md
+  - AOP: AOP.md
+  - Bean Lifecycle: Bean_Lifecycle.md
+  - BeanPostProcessor: BeanPostProcessor.md
+  - '@EnableAutoConfiguration vs @ConfigurationPropertiesScan 비교': EnableAutoConfiguration_vs_ConfigurationPropertiesScan.md
+  - K8s 프로파일 우선순위 이슈: Spring_Profile_Priority_in_K8s.md
+- Web & Server Engine:
+  - Web: Web
+  - Tomcat vs Netty 상세 비교: Tomcat_vs_Netty.md
+  - 'Netty: Blocking 코드 찾는 방법': Finding_Blocking_Operations.md
+  - OAuth2 Implementation: OAuth2_Implementation.md
+- Concurrency & Virtual Threads:
+  - ThreadPoolTaskScheduler: ThreadPoolTaskScheduler.md
+  - '가상 스레드: Kafka Pinning 이슈': Virtual_Thread_Pinning_Kafka.md
+  - '가상 스레드: JDBI Pinning 해결 방법': JDBI_VT_Pinning_Solution.md
+- Data Access (JPA & JDBI):
+  - JPA: JPA
+  - 'Spring Data JPA: CrudRepository': Spring_Data_JPA_CrudRepository.md
+  - '비교: SQL 직접 작성 vs JPA': Spring_Data_JPA_vs_JDBI.md
+- Spring Cloud (Gateway & LoadBalancer):
+  - Spring Cloud Gateway (SCG): Spring_Cloud_Gateway.md
+  - Spring Cloud Zuul (API Gateway): Spring_Cloud_Zuul.md
+  - SCG vs Zuul 상세 비교: SCG_vs_Zuul_Comparison.md
+  - Spring Cloud LoadBalancer: Spring_Cloud_LoadBalancer.md
+  - Netflix Ribbon (Load Balancer): Netflix_Ribbon_Guide.md
+- Structured Logging (Logback & ECS):
+  - Spring Boot 3.4 정형 로깅 (ECS): Structured_Logging_SpringBoot_3_4.md
+  - 'Logback XML: ECS Encoder 활용': Logging_ECS_XML_Encoder.md
+  - Logstash Logback Encoder 사용 가이드: Logstash_Logback_Encoder_Guide.md
+  - 'Logback: Composite JSON Encoder 활용': Logback_JSON_Composite_Encoder.md
+  - 로깅 설정 YAML to XML 전환: Logging_Config_Migration_YAML_to_XML.md
+- Testing:
+  - Testing: Testing

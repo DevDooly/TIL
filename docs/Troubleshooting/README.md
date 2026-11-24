@@ -18,7 +18,7 @@ title: Engineering Troubleshooting Archive
 | [연결된 GZIP 해제](../Language/Java/Concatenated_Gzip_Decompression.md) | 멤버 처리, 크기 제한과 손상 입력 |
 | [K8s Spring 프로파일](../Language/Java/SpringBoot/Spring_Profile_Priority_in_K8s.md) | 설정 우선순위 분석 |
 | [로깅 YAML/XML 전환](../Language/Java/SpringBoot/Logging_Config_Migration_YAML_to_XML.md) | 설정 파일과 로딩 경로 |
-| [SLF4J key-value와 ECS](../Language/Java/SpringBoot/Logging_ECS_KeyValue_Support.md) | 구조화 로그 필드 확인 |
+| [SLF4J key-value와 ECS](../Language/Java/SpringBoot/Logging_ECS_XML_Encoder.md) | 구조화 로그 필드 확인 및 MDC·Logstash 인코더 대안 |
 
 ## Kafka · 인프라
 

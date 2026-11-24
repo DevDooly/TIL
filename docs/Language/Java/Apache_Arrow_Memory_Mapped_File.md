@@ -339,4 +339,29 @@ public class PureJavaPythonRunner {
 
 3. **Resource Closing**: `allocator`, `root` 등은 반드시 `try-with-resources`로 닫아야 합니다.
 
+---
+
+## 7. 리눅스 `/dev/shm` 공유 메모리 활용 및 전송 방식 비교
+
+### 1) `/dev/shm` (RAM 디스크) 경로 활용
+리눅스 환경에서 Java와 Python이 동일한 호스트(또는 공유 메모리 볼륨을 마운트한 동일 Pod) 안에서 동작한다면 파일 경로를 `/tmp/data.arrow` 대신 **`/dev/shm/data.arrow`**로 지정한다.
+
+* **동작 원리**: `/dev/shm`은 디스크가 아니라 물리 RAM 위에 마운트된 `tmpfs` 파일 시스템이므로 디스크 I/O가 전혀 발생하지 않고 메모리 속도 그대로 공유된다.
+* **주의점**: 사용이 끝난 `.arrow` 파일은 명시적으로 삭제(`Files.deleteIfExists`)해 공유 메모리가 고갈되지 않도록 관리해야 한다.
+
+### 2) 데이터 교환 방식별 비교
+
+| 비교 항목 | JSON / REST API | gRPC / Protobuf | Apache Arrow + mmap |
+| :--- | :--- | :--- | :--- |
+| **직렬화·파싱 비용** | 텍스트 파싱 비용 매우 높음 | 바이너리 직렬화/역직렬화 발생 | **거의 없음 (메모리 레이아웃 직접 참조)** |
+| **메모리 복사** | 송수신 양쪽 Heap 복사 발생 | 소켓 버퍼 및 객체 변환 복사 | **Zero-Copy (OS 가상 메모리 매핑)** |
+| **권장 데이터 규모** | 수 MB 이하 일반 API | 서버 간 원격 RPC 통신 | **동일 호스트 내 수백 MB ~ 수 GB 대용량 분석/추론** |
+
+---
+
+## 관련 문서
+
+* [Apache Arrow BufferAllocator 관리 및 멀티스레드 활용 가이드](Apache_Arrow_BufferAllocator_Management.md)
+* [Java/Spring Boot와 Python 연동 및 실행 최적화 가이드](Spring_Python_Integration.md)
+
 

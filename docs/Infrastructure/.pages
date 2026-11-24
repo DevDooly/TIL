@@ -1,13 +1,13 @@
 title: Infrastructure
 nav:
 - Overview: README.md
-- Linux
-- OracleCloud
-- ArgoCD
+- Kubernetes
 - Docker
+- ArgoCD
 - Jenkins
 - MessageBroker
-- Hadoop
 - MinIO
-- Kubernetes
+- Hadoop
 - Hazelcast
+- Linux
+- OracleCloud

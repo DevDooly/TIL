@@ -2,31 +2,27 @@ title: Python
 nav:
 - Index: README.md
 - Environment & Deployment:
-  - Conda vs Miniconda: Conda_Anaconda_Miniconda.md
-  - venv vs Conda: venv_vs_Conda.md
-  - Basic Execution: Basic_Execution_Guide.md
-  - Server Execution Methods: Server_Execution_Methods.md
+  - venv vs Conda (Miniconda · Anaconda): venv_vs_Conda.md
+  - Server & Script Execution Methods: Server_Execution_Methods.md
   - Gunicorn vs Uvicorn: Gunicorn_vs_Uvicorn.md
-  - Offline Installation: Offline_Installation_Guide.md
+  - Offline Python 3.12 Installation: Offline_Installation_Guide.md
   - Offline Venv & Pip Guide: Offline_Venv_Pip_Guide.md
-- Advanced Core:
+- Core & Object Model:
   - Decorator: Decorator.md
   - Comprehension: Comprehension.md
-  - Static Method: 정적메소드.md
-  - Meta Class: 메타클래스.md
+  - Static & Class Method: 정적메소드.md
+  - MetaClass: 메타클래스.md
   - Designing Modules: Designing Modules in Python.md
   - Refactoring: Refactoring.md
-- Network, Async & Web:
+- Async, Network & Web:
   - FastAPI Concurrency: FastAPI_Concurrency_Mechanism.md
+  - AIOHTTP vs Flask: AIOHTTP vs Flask.md
   - Asyncio Streams: Asyncio_Streams.md
   - Socket Programming: Socket Programming.md
   - SocketServer: SocketServer.md
-  - AIOHTTP vs Flask: AIOHTTP vs Flask.md
-  - Celery: Celery.md
 - Libraries & Messaging:
-  - pika: pika
+  - Pika (RabbitMQ AMQP): pika
   - SQLAlchemy: SQLAlchemy.md
   - orjson: orjson.md
-  - Tokenizer: tokenizer.md
   - Retry: retry.md
-- Troubleshooting: Troubleshooting
+  - Tokenizer: tokenizer.md

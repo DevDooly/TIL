@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "/home/rudy/.nvm/versions/node/v24.12.0/bin/node",
+      "args": [
+        "/home/rudy/.nvm/versions/node/v24.12.0/bin/context7-mcp"
+      ]
+    },
+    "github": {
+      "command": "/home/rudy/.nvm/versions/node/v24.12.0/bin/node",
+      "args": [
+        "/home/rudy/.nvm/versions/node/v24.12.0/bin/mcp-server-github"
+      ]
+    }
+  }
+}

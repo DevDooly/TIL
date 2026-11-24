@@ -1,17 +1,12 @@
 title: Database
 nav:
 - Index: README.md
-- General:
+- Design & Concurrency:
   - SQL Naming Convention: SQL_Naming_Convention.md
-- Tuning & Optimization:
+  - Locking Strategy (비관적 락 vs 낙관적 락): Locking_Strategy.md
   - JDBI FetchSize & Virtual Threads: JDBI_FetchSize_and_VirtualThreads.md
-- Specific Databases:
-  - Oracle (LOB Segment): Oracle_LOB_Segment.md
-  - Oracle (JSON 컬럼 가이드): Oracle_JSON_Column_Guide.md
+- RDBMS & NoSQL:
+  - Oracle JSON 컬럼 가이드: Oracle_JSON_Column_Guide.md
+  - Oracle LOB Segment (ORA-01692): Oracle_LOB_Segment.md
   - Redis: Redis.md
   - MongoDB: MongoDB.md
-- Management & Strategy:
-  - Locking Strategy: Locking_Strategy.md
-  - Image Storage: Image_Storage_Management.md
-- Tools:
-  - Fluentd: fluentd.md

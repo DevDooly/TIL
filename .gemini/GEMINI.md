@@ -31,6 +31,8 @@
 | 기존 문서의 최신성·버전·기술 설명 갱신 | `.agents/skills/til-knowledge-refresh/SKILL.md` |
 | 오류·장애·해결 과정·재현 결과 기록 | `.agents/skills/til-troubleshooting/SKILL.md` |
 | 한국어 문서 작성·수정의 문체, 딱딱한 표현과 불필요한 날짜 정리 | `.agents/skills/til-natural-writing/SKILL.md` |
+| AI 한글 초안의 정밀 진단·윤문(85개 패턴 + 115개 어휘 레이어) | `.agents/skills/humanize-korean/SKILL.md` |
+| 한글 커밋 메시지의 번역투·사무적 어휘 자연화 | `.agents/skills/commit-ko/SKILL.md` |
 | 문서 편집 후 목차·링크·예제·빌드 검증 | `.agents/skills/til-doc-verify/SKILL.md` |
 | 커밋·원격 반영 | `.agents/skills/git-workflow/SKILL.md` |
 

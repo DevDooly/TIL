@@ -23,6 +23,34 @@ public String executePython(String inputData) throws Exception {
 * **장점**: 설정이 매우 단순함.
 * **단점**: 매번 프로세스를 띄워야 하므로 오버헤드가 큼. 대량 요청 처리에 부적합.
 
+### 왜 `ProcessBuilder` 단발 호출은 느린가?
+`python3 script.py`를 매번 새로 실행할 때마다 OS와 인터프리터는 다음 과정을 반복한다.
+
+1. **OS 프로세스 생성(Fork/Exec)** 및 메모리 할당
+2. **Python 인터프리터 초기화**
+3. **무거운 외부 라이브러리 로드**: `import pandas`, `import torch` 등의 모듈 로딩에만 호출당 **0.5초~2초 이상**이 소요된다.
+
+### 대안 1-A: 영구 실행 워커 패턴 (Persistent Worker)
+네트워크 포트를 열기 어려운 환경에서 프로세스 기동 오버헤드를 없애려면, Python 프로세스를 한 번만 띄워 두고 **표준 입출력(`stdin` / `stdout`) 파이프로 JSON 메시지를 주고받는 상주 워커 방식**을 사용한다.
+
+```python
+# worker.py: 무거운 라이브러리를 최초 1회만 로드하고 표준 입력을 대기
+import sys
+import json
+import pandas as pd
+
+while True:
+    line = sys.stdin.readline()
+    if not line:
+        break
+    payload = json.loads(line)
+    # 비즈니스 로직 수행 후 줄바꿈과 함께 flush=True로 즉시 반환
+    print(json.dumps({"status": "ok", "echo": payload}), flush=True)
+```
+
+### 대안 1-B: Apache Arrow(mmap) + FastAPI 하이브리드
+수백 MB 이상의 대용량 데이터를 Python에 넘겨야 한다면 **데이터 본문은 [Apache Arrow 메모리 맵 파일](Apache_Arrow_Memory_Mapped_File.md)(`/dev/shm/data.arrow`)로 공유**하고, **FastAPI에는 해당 파일 경로만 HTTP로 전달(`POST /analyze?path=...`)**하는 하이브리드 구조가 기동 오버헤드와 직렬화 비용을 동시에 제거한다.
+
 ---
 
 ## 2. HTTP API 연동 (가장 추천)

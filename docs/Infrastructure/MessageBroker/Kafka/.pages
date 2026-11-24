@@ -1,14 +1,17 @@
 title: Kafka
 nav:
 - Overview: README.md
-- 파티션 전략 및 산정: Partition_Strategy.md
-- 파티셔너 정책 및 설정: Producer_Partitioner_Policy.md
-- RoundRobin 불균형과 수정 버전: Producer_Partitioner_Issue.md
-- 파티셔너 진화와 불균형 해결: Partitioner_Evolution_and_Imbalance.md
-- abortOnNewBatch와 파티션 쏠림: AbortOnNewBatch_Issue.md
-- Offset 제어 (Java): Consumer_Offset_Control.md
-- Consumer 안전 종료 (wakeup/close): Consumer_Safe_Shutdown.md
-- DLQ(Dead Letter Queue) 확인 및 구현 가이드: Kafka_DLQ_Guide.md
-- Spring Kafka 테스트: Spring_Kafka_Test.md
-- 메시지 최대 사이즈 확장 가이드: Kafka_Message_Size_Configuration.md
-- Broker 롤링 재시작 가이드: Kafka_Rolling_Restart_Guide.md
+- Architecture & Broker Operations:
+  - 파티션 전략 및 산정: Partition_Strategy.md
+  - 메시지 최대 사이즈 확장 가이드: Kafka_Message_Size_Configuration.md
+  - Broker 롤링 재시작 가이드: Kafka_Rolling_Restart_Guide.md
+- Producer & Partitioning:
+  - 파티셔너 정책 및 설정: Producer_Partitioner_Policy.md
+  - 파티셔너 진화와 불균형 해결: Partitioner_Evolution_and_Imbalance.md
+  - RoundRobin 불균형과 수정 버전: Producer_Partitioner_Issue.md
+  - abortOnNewBatch와 파티션 쏠림: AbortOnNewBatch_Issue.md
+- Consumer & Reliability (DLQ):
+  - Offset 제어 (Seek API): Consumer_Offset_Control.md
+  - Consumer 안전 종료 (wakeup/close): Consumer_Safe_Shutdown.md
+  - DLQ(Dead Letter Queue) 확인 및 구현 가이드: Kafka_DLQ_Guide.md
+  - Spring Kafka 테스트: Spring_Kafka_Test.md

@@ -1,5 +1,6 @@
 scripts/sync_remote.sh
 site/
+_workspace/
 .idea/
 *.pyc
 __pycache__/

@@ -74,6 +74,36 @@ flask run --reload
 
 ---
 
-## 5. 결론
+## 5. 일반 스크립트 실행 옵션 및 백그라운드 구동 (`nohup`)
+
+웹 서버가 아닌 배치·유틸리티 스크립트를 `python3 main.py`로 직접 실행할 때 자주 사용하는 인자·환경 변수·백그라운드 실행 패턴이다.
+
+### 1) 명령행 인자(`sys.argv`)와 일회성 환경 변수(`os.environ`) 전달
+
+```bash
+# 환경 변수(DB_URL)와 명령행 인자("batch-01")를 함께 전달
+DB_URL="postgresql://localhost:5432/app" python3 main.py "batch-01"
+```
+
+```python
+import os
+import sys
+
+db_url = os.environ.get("DB_URL")
+job_name = sys.argv[1] if len(sys.argv) > 1 else "default"
+```
+
+### 2) 터미널 종료 후에도 유지되는 백그라운드 실행 (`nohup`)
+
+```bash
+# 표준 출력과 표준 에러(2>&1)를 모두 output.log에 기록하며 백그라운드(&) 실행
+nohup python3 -u main.py > output.log 2>&1 &
+```
+
+* `-u` 옵션을 함께 주면 Python의 표준 출력 버퍼링이 비활성화되어 `output.log`에 로그가 실시간으로 기록된다.
+
+---
+
+## 6. 결론
 
 `python main.py`는 **"내가 서버를 라이브러리로서 부리는 것"**이고, `uvicorn` 등은 **"전문 서버 엔진에 내 코드를 탑재하는 것"**입니다. 개발 시에는 편리한 CLI 옵션을 제공하는 후자를 주로 사용하되, 정밀한 디버깅이 필요할 때만 전자를 사용하는 것이 효율적입니다.

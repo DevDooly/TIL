@@ -38,6 +38,10 @@
 
 * Fluent-bit은 Fluentd와 같은 에코시스템에 속해 있습니다.
 * 각 노드에서 경량인 **Fluent-bit이 로그를 수집(Aggregator)**하여 중앙의 **Fluentd로 전달(Processor)**하는 계층형 구조(Tiered Architecture)를 쉽게 구축할 수 있습니다.
+* 중앙 **Fluentd**는 설정 파일에서 다음 3단계 파이프라인 지시자로 데이터를 라우팅하고 버퍼링(Memory/File) 및 재시도(Retry)를 담당합니다:
+  1. **Input (`<source>`)**: 수집 소스 정의 (Forward, HTTP, Tail, Syslog 등)
+  2. **Filter (`<filter>`)**: JSON 필드 파싱, 마스킹, 불필요 로그 필터링
+  3. **Output (`<match>`)**: 태그 매칭 기반 목적지 전송 (Elasticsearch, S3/MinIO, Kafka 등)
 
 ---
 

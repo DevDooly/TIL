@@ -86,6 +86,24 @@ dependencies {
 
 ---
 
-## 5. 결론
+## 5. SLF4J 2.0 `addKeyValue()` 사용 시 주의점과 대안
 
-Spring Boot 3.4 이상의 단순한 환경이라면 YAML 설정을 권장하지만, 로그를 파일과 콘솔에 동시에 다른 포맷으로 출력하거나 특정 패키지만 별도의 ECS 속성을 부여해야 한다면 **`logback-ecs-encoder`**를 통한 XML 설정이 가장 강력한 대안입니다.
+Spring Boot 3.x(SLF4J 2.0+)에서 제공하는 Fluent Logging API(`log.atInfo().addKeyValue("order_id", 123).log()`)를 사용할 때, `logback-ecs-encoder`(v1.5~1.6 기준)는 `addKeyValue`로 넣은 키-값 쌍을 자동으로 JSON 루트 필드로 추출하지 못하는 제약이 있다. 이를 해결하려면 다음 두 가지 방법 중 하나를 선택한다.
+
+### 방법 1: `MDC.putCloseable()` 사용 (`logback-ecs-encoder` 유지 시)
+`EcsEncoder`는 MDC(Mapped Diagnostic Context)를 기본 지원하므로 `<includeMdc>true</includeMdc>`를 켜고 `MDC.putCloseable`로 컨텍스트를 주입한다.
+
+```java
+try (var ignored = org.slf4j.MDC.putCloseable("order_id", "12345")) {
+    log.info("주문 처리를 시작합니다.");
+}
+```
+
+### 방법 2: `logstash-logback-encoder`로 전환 (`addKeyValue` 네이티브 지원)
+SLF4J 2.0의 `addKeyValue()`와 `StructuredArguments`를 코드 변경 없이 JSON 필드에 자동 반영하려면 [Logstash Logback Encoder](Logstash_Logback_Encoder_Guide.md)(`net.logstash.logback:logstash-logback-encoder`) 또는 [Composite JSON Encoder](Logback_JSON_Composite_Encoder.md)를 사용하는 편이 유리하다.
+
+---
+
+## 6. 결론
+
+Spring Boot 3.4 이상의 단순한 환경이라면 YAML 설정을 권장하지만, 로그를 파일과 콘솔에 동시에 다른 포맷으로 출력하거나 특정 패키지만 별도의 ECS 속성을 부여해야 한다면 **`logback-ecs-encoder`**를 통한 XML 설정을 사용한다.

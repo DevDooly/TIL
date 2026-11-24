@@ -53,13 +53,40 @@ pip install fastapi uvicorn
 # 설치된 패키지 목록 저장
 pip freeze > requirements.txt
 
-# 저장된 목록으로부터 패키지 설치
+#설치된 목록으로부터 패키지 설치
 pip install -r requirements.txt
 ```
 
 ---
 
-## 5. 결론: 무엇을 쓸까?
+## 5. Conda 배포판 비교(Anaconda vs Miniconda) 및 필수 명령어
+
+데이터 과학이나 C/CUDA 의존성이 있는 프로젝트에서 Conda를 선택했다면, 불필요한 패키지(3GB+)가 포함된 **Anaconda** 대신 최소 필수 도구(약 400MB)만 포함된 **Miniconda**를 설치해 필요한 패키지만 구성하는 편이 훨씬 가볍다.
+
+| 구분 | Anaconda | Miniconda (권장) |
+| :--- | :--- | :--- |
+| **설치 용량** | 약 3GB 이상 (250개+ 과학 패키지 기본 포함) | 약 400MB (Python + Conda 코어만 포함) |
+| **주 용도** | 초기 설정 없이 바로 실습하는 입문·교육 환경 | 서버 배포, 컨테이너 빌드, 실무 개발 환경 |
+
+### 주요 Conda 가상환경 및 `conda-forge` 설정 명령어
+
+```bash
+# 1. 커뮤니티 표준 채널(conda-forge) 추가 및 엄격한 우선순위 설정
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
+# 2. 특정 Python 버전으로 가상환경 생성 및 활성화
+conda create -n myenv python=3.12
+conda activate myenv
+
+# 3. 패키지 설치 및 가상환경 목록 확인
+conda install numpy pandas
+conda env list
+```
+
+---
+
+## 6. 결론: 무엇을 쓸까?
 
 * **간단한 API 서버, 마이크로서비스, 웹 앱**을 만든다면 고민하지 말고 **`venv`**를 사용하세요.
 * **GPU를 사용한 딥러닝, 복잡한 데이터 분석, 라이브러리 간의 C-Extension 충돌**이 우려되는 환경이라면 **`Miniconda`**가 답입니다.

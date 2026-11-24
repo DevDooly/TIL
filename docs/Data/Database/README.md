@@ -11,5 +11,3 @@
 5. **[Oracle JSON 컬럼 가이드](Oracle_JSON_Column_Guide.md)**: Oracle JSON 저장 표준(CHECK IS JSON vs 네이티브 JSON), 쿼리 함수 및 인덱스 전략
 6. **[Redis](Redis.md)**: 고성능 인메모리 Key-Value 저장소
 7. **[MongoDB](MongoDB.md)**: 문서 지향 NoSQL 데이터베이스
-8. **[Fluentd](fluentd.md)**: 통합 데이터 수집기 (Log Collector)
-9. **[Image Storage Management](Image_Storage_Management.md)**: 효율적인 이미지 저장 및 관리 전략

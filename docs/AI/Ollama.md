@@ -101,6 +101,30 @@ curl http://localhost:11434/api/chat -d '{
 }'
 ```
 
+### 외부 원격 접속 및 CORS 허용 설정 (Systemd)
+
+Ollama는 보안상 기본적으로 로컬호스트(`127.0.0.1:11434`)에서만 API 요청을 수신한다. 다른 PC나 Docker 컨테이너(n8n, Open WebUI 등)에서 접속해야 한다면 systemd 서비스에 환경 변수를 추가한다.
+
+```bash
+sudo systemctl edit ollama.service
+```
+
+편집기에 아래 내용을 추가한 뒤 저장한다.
+
+```ini
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_ORIGINS=*"
+```
+
+데몬 설정을 다시 읽고 서비스를 재시작한 뒤 모델 목록 API(`/api/tags`)로 확인한다.
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart ollama
+curl http://localhost:11434/api/tags
+```
+
 ---
 
 ## 5. 자주 쓰는 모델 목록

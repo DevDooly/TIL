@@ -19,8 +19,7 @@ title: Python Engineering & Concurrency
 
 ### 2. Distributed Messaging & Async I/O
 
-* **[Pika (RabbitMQ) 비동기 컨슈머 구현 가이드](pika/Asynchronous%20consumer%20example.md)**: `SelectConnection` 기반의 고성능 논블로킹 이벤트 루프 컨슈머
-* **[Pika BlockingConnection](pika/BlockingConnection.md)**: 동기 방식 메시지 큐 통신 및 재연결 패턴
+* **[Pika (RabbitMQ / AMQP 0-9-1) 클라이언트 가이드](pika/README.md)**: 동기식 `BlockingConnection`(Manual Ack·Prefetch) vs 비동기 `SelectConnection` 콜백 체인 및 자동 재연결 패턴
 * **[Asyncio Streams](Asyncio_Streams.md)**: TCP 고수준 스트림을 활용한 비동기 소켓 클라이언트/서버
 * **[Socket Programming](Socket%20Programming.md)**: 저수준 소켓 통신 기본 원리
 
@@ -37,5 +36,4 @@ title: Python Engineering & Concurrency
 
 * **[폐쇄망 환경 Python 3.12 설치 가이드](Offline_Installation_Guide.md)**: 외부망이 차단된 서버에서 소스 컴파일 및 RPM 의존성 패키징
 * **[오프라인 venv 및 pip 패키지 설치 가이드](Offline_Venv_Pip_Guide.md)**: Wheel 번들링을 통한 완전 오프라인 환경 배포 자동화
-* **[venv vs Conda](venv_vs_Conda.md)**: 시스템 라이브러리 의존성과 가상 환경 선택 기준
-* **[Conda, Anaconda, Miniconda](Conda_Anaconda_Miniconda.md)**: 가상환경 아키텍처 비교
+* **[venv vs Conda (Miniconda · Anaconda)](venv_vs_Conda.md)**: 가상환경 선택 기준, 배포판 차이 및 `conda-forge` 설정 가이드

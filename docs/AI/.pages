@@ -1,23 +1,26 @@
 title: AI Tools & Agents
 nav:
 - Overview: README.md
-- AI Agent 개발 직군 및 엔지니어링: AI_Agent_Developer_Role_and_Engineering.md
-- TypeSafe AI Jev (System One 모델): TypeSafe_AI_Jev.md
-- OpenCode: OpenCode.md
-- OpenClaw: OpenClaw.md
-- Gemini CLI: Gemini_CLI.md
-- Gemini 4 Argon 추론 단계 비교: Gemini_4_Argon_Reasoning_Levels.md
-- Antigravity CLI 설정: Antigravity_CLI_Configuration.md
-- Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
-- AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
-- 상황별 MCP 선택과 빠른 연결: MCP_Selection_Guide.md
-- MCP 서버 개발 가이드: MCP_Server_Development_Guide.md
-- Claude CLI Setup: Claude_CLI_DeepSeek_Setup.md
-- Obsidian · Claude Code 연동 가이드: Obsidian_Claude_Code_DeepSeek_Guide.md
-- Qwen CLI Setup: Qwen_CLI_Setup.md
-- 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
-- Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md
-- n8n: n8n.md
-- Ollama: Ollama.md
-- Ollama Local Setup: Ollama_Local_Environment_Setup.md
-- TurboQuant: TurboQuant.md
+- AI Architecture & Models:
+  - AI Agent 개발 직군 및 엔지니어링: AI_Agent_Developer_Role_and_Engineering.md
+  - Gemini 4 Argon 추론 단계 비교: Gemini_4_Argon_Reasoning_Levels.md
+  - TypeSafe AI Jev (System One 모델): TypeSafe_AI_Jev.md
+  - TurboQuant (LLM 양자화 최적화): TurboQuant.md
+- AI Coding CLI & Agents:
+  - Antigravity CLI 설정: Antigravity_CLI_Configuration.md
+  - Antigravity CLI 스킬 및 확장 가이드: Antigravity_CLI_Skills_Guide.md
+  - AGY vs OpenCode 비교: AGY_vs_OpenCode_Comparison.md
+  - Claude CLI (다중 모델 & DeepSeek): Claude_CLI_DeepSeek_Setup.md
+  - Obsidian · Claude Code 연동 가이드: Obsidian_Claude_Code_DeepSeek_Guide.md
+  - Gemini CLI: Gemini_CLI.md
+  - Qwen CLI Setup: Qwen_CLI_Setup.md
+  - OpenCode: OpenCode.md
+  - OpenClaw: OpenClaw.md
+- Orchestration, MCP & Automation:
+  - 상황별 MCP 선택과 빠른 연결: MCP_Selection_Guide.md
+  - MCP 서버 개발 가이드: MCP_Server_Development_Guide.md
+  - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md
+  - Paseo 설치 및 모바일 연동: Paseo_Setup_and_Usage.md
+  - n8n 워크플로우 자동화: n8n.md
+- Local LLM Runtime:
+  - Ollama 설치 및 API 설정: Ollama.md

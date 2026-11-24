@@ -27,10 +27,9 @@ title: Java & Spring Engineering
 
 ### 3. High-Performance & Data Exchange
 
-* **[Apache Arrow & mmap을 이용한 Zero-Copy 데이터 공유](Apache_Arrow_with_mmap.md)**: IPC 오버헤드 없는 프로세스 간 고속 데이터 전달
-* **[Java-Python Shared Memory with Arrow](Java_Python_Shared_Memory_Arrow.md)**: Java 백엔드와 Python ML/분석 프로세스 간 대용량 데이터 연동
-* **[Apache Arrow Memory Mapped File 가이드](Apache_Arrow_Memory_Mapped_File.md)**: 실전 코드 예제 및 메모리 해제 라이프사이클
-* **[Apache Arrow BufferAllocator 관리](Apache_Arrow_BufferAllocator_Management.md)**: 멀티스레드 환경에서의 Direct Buffer 메모리 누수 방지
+* **[Java/Spring Boot와 Python 연동 및 실행 최적화 가이드](Spring_Python_Integration.md)**: `ProcessBuilder`, 상주 워커(Persistent Worker), FastAPI 및 비동기 큐 연동 비교
+* **[Apache Arrow & mmap을 이용한 Java-Python 고성능 데이터 공유 가이드](Apache_Arrow_Memory_Mapped_File.md)**: Zero-Copy 메모리 맵 파일(`/dev/shm` 포함) 기반 대용량 데이터 교환 및 FlatBuffers 충돌 해결
+* **[Apache Arrow BufferAllocator 관리](Apache_Arrow_BufferAllocator_Management.md)**: 멀티스레드 환경에서의 Direct Buffer 메모리 누수 방지 (`RootAllocator` vs `ChildAllocator`)
 * **[Concatenated GZIP 스트림 압축 해제](Concatenated_Gzip_Decompression.md)**: 다중 멤버 처리, 크기 제한과 손상 입력 검증
 * **[Caffeine Cache](Caffeine_Cache.md)**: W-TinyLFU 알고리즘 기반 초고성능 로컬 캐시 활용법
 

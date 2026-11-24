@@ -88,5 +88,5 @@ public class ArrowDataProcessor {
 
 ## 관련 문서
 
-* [Java-Python Shared Memory (Arrow)](Java_Python_Shared_Memory_Arrow.md)
-* [Java-Python 실행 최적화 가이드](Optimizing_Java_Python_Execution.md)
+* [Apache Arrow를 이용한 Java-Python 고성능 데이터 공유 가이드](Apache_Arrow_Memory_Mapped_File.md)
+* [Java/Spring Boot와 Python 연동 및 실행 최적화 가이드](Spring_Python_Integration.md)
