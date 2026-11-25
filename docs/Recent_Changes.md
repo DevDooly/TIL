@@ -4,6 +4,8 @@
 
 | 수정 날짜 | 문서 경로 | 커밋 메시지 |
 | :--- | :--- | :--- |
+| 2026-11-25 09:31 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: 사내 Local LLM 다중 API 키 로드밸런싱 및 에이전트 병렬 실행 가이드 추가 |
+| 2026-11-25 09:31 | [AI/Local_LLM_Multi_Key_Parallel_Execution_Guide.md](AI/Local_LLM_Multi_Key_Parallel_Execution_Guide.md) | docs: 사내 Local LLM 다중 API 키 로드밸런싱 및 에이전트 병렬 실행 가이드 추가 |
 | 2026-11-24 10:09 | [AI/Ollama.md](AI/Ollama.md) | docs: 중복·미완성 TIL 문서 통합 정리, 테마별 목차 재정렬 및 윤문·MCP 설정 반영 |
 | 2026-11-24 10:09 | [ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md](ComputerScience/FileSystem/대량의 이미지를 파일시스템에 저장할 때.md) | docs: 중복·미완성 TIL 문서 통합 정리, 테마별 목차 재정렬 및 윤문·MCP 설정 반영 |
 | 2026-11-24 10:09 | [Data/Log_Collectors_Comparison.md](Data/Log_Collectors_Comparison.md) | docs: 중복·미완성 TIL 문서 통합 정리, 테마별 목차 재정렬 및 윤문·MCP 설정 반영 |
@@ -14,7 +16,6 @@
 | 2026-11-24 10:09 | [Language/Python/Server_Execution_Methods.md](Language/Python/Server_Execution_Methods.md) | docs: 중복·미완성 TIL 문서 통합 정리, 테마별 목차 재정렬 및 윤문·MCP 설정 반영 |
 | 2026-11-24 10:09 | [Language/Python/venv_vs_Conda.md](Language/Python/venv_vs_Conda.md) | docs: 중복·미완성 TIL 문서 통합 정리, 테마별 목차 재정렬 및 윤문·MCP 설정 반영 |
 | 2026-11-24 09:16 | [AI/MCP_Selection_Guide.md](AI/MCP_Selection_Guide.md) | docs: MCP 가이드 문서 끝 공백 정리 |
-| 2026-11-23 10:01 | [AI/Claude_CLI_DeepSeek_Setup.md](AI/Claude_CLI_DeepSeek_Setup.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 10:01 | [AI/Obsidian_Claude_Code_DeepSeek_Guide.md](AI/Obsidian_Claude_Code_DeepSeek_Guide.md) | docs: Windows 환경 Obsidian과 Claude Code(DeepSeek API) 연동 가이드 추가 |
 | 2026-11-23 09:20 | [ComputerScience/Architecture/Edge_Computing.md](ComputerScience/Architecture/Edge_Computing.md) | docs: 엣지 컴퓨팅(Edge Computing) 아키텍처 가이드 추가 |
 | 2026-11-11 16:00 | [Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md](Data/Avro_Iceberg_Trino_Ch2_Java_Avro_Writer.md) | docs: Avro-Iceberg-Trino 파이프라인 Chapter 3~5 가이드 추가 |
@@ -53,4 +54,3 @@
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md](Infrastructure/Kubernetes/CKA/Multi_Container_Pods.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Network_Policy.md](Infrastructure/Kubernetes/CKA/Network_Policy.md) | docs: CKA 문법과 실습 절차 수정 |
 | 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Resource_Limits.md](Infrastructure/Kubernetes/CKA/Resource_Limits.md) | docs: CKA 문법과 실습 절차 수정 |
-| 2026-09-28 20:04 | [Infrastructure/Kubernetes/CKA/Scheduling.md](Infrastructure/Kubernetes/CKA/Scheduling.md) | docs: CKA 문법과 실습 절차 수정 |

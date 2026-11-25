@@ -148,4 +148,5 @@ Switched model to deepseek-v4-flash-0731
 
 ## 4. 관련 활용 가이드
 
+* [사내 Local LLM 다중 API 키 로드밸런싱 및 에이전트 병렬 실행 가이드](Local_LLM_Multi_Key_Parallel_Execution_Guide.md) — 사내 Local LLM에서 여러 개의 API 키를 LiteLLM 프록시로 묶고 Claude Code 서브에이전트·Orca로 병렬 실행해 처리 시간을 단축하는 방법
 * [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](Obsidian_Claude_Code_DeepSeek_Guide.md) — 위에서 연동한 DeepSeek 기반 Claude Code를 Obsidian 보관함(Vault)에 연결해 노트를 자동 요약·분류·정리하는 방법

@@ -260,6 +260,7 @@
 * [Claude CLI - 다중 모델(Multi-Model) 및 DeepSeek 연동 가이드 (Windows)](AI/Claude_CLI_DeepSeek_Setup.md)
 * [Gemini 4 Argon 추론 단계(Low · Medium · High) 성능 및 비용 비교](AI/Gemini_4_Argon_Reasoning_Levels.md)
 * [Gemini CLI](AI/Gemini_CLI.md)
+* [사내 Local LLM 다중 API 키 로드밸런싱 및 에이전트 병렬 실행 가이드](AI/Local_LLM_Multi_Key_Parallel_Execution_Guide.md)
 * [상황별 MCP 선택과 빠른 연결](AI/MCP_Selection_Guide.md)
 * [MCP (Model Context Protocol) 서버 개발 및 연동 가이드](AI/MCP_Server_Development_Guide.md)
 * [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](AI/Obsidian_Claude_Code_DeepSeek_Guide.md)

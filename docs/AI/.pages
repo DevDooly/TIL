@@ -17,6 +17,7 @@ nav:
   - OpenCode: OpenCode.md
   - OpenClaw: OpenClaw.md
 - Orchestration, MCP & Automation:
+  - 사내 Local LLM 다중 키 병렬 실행 가이드: Local_LLM_Multi_Key_Parallel_Execution_Guide.md
   - 상황별 MCP 선택과 빠른 연결: MCP_Selection_Guide.md
   - MCP 서버 개발 가이드: MCP_Server_Development_Guide.md
   - 에이전트 오케스트레이터 (Orca & Paseo): AI_Coding_Agent_Orchestrators_Orca_Paseo.md

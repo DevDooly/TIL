@@ -44,6 +44,9 @@ Claude CLI(Claude Code)에서 `settings.json`, PowerShell 프로필 및 환경 �
 ### [Windows에서 Obsidian과 Claude Code(DeepSeek API) 연동 및 AI 문서 정리 가이드](Obsidian_Claude_Code_DeepSeek_Guide.md)
 Windows 환경에서 DeepSeek API가 연결된 Claude Code를 Obsidian Vault에 연동하여 `CLAUDE.md` 규칙 정의, Obsidian 내장 터미널 구성, 커스텀 슬래시 명령어(`/summarize`, `/inbox`, `/weekly`)로 문서를 자동 요약·분류·정리하는 실전 가이드입니다.
 
+### [사내 Local LLM 다중 API 키 로드밸런싱 및 에이전트 병렬 실행 가이드](Local_LLM_Multi_Key_Parallel_Execution_Guide.md)
+단일 응답 속도가 느린 사내 Local LLM 환경에서 여러 개의 API 키를 발급받아 로컬 LiteLLM Proxy(`least-busy` 라우팅)로 묶고, Claude Code 내장 병렬 서브에이전트(`Task`)나 Orca(Git Worktree 격리), PowerShell 다중 키 함수로 작업을 병렬 처리해 대기 시간을 단축하는 방법입니다.
+
 ### [Qwen CLI](Qwen_CLI_Setup.md)
 Qwen CLI 및 DashScope 환경에서 API Key를 재등록하거나 환경 변수를 재설정하는 가이드입니다.
 
